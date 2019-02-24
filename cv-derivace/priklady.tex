@@ -1,0 +1,177 @@
+\documentclass{article}
+
+\usepackage[czech]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsfonts,mathtools,multicol, url, booktabs}
+\usepackage[a6paper, margin=20pt, landscape]{geometry}
+\usepackage{graphicx, xcolor}
+\usepackage{wrapfig}
+\parskip 10pt
+\everymath{\displaystyle}
+\parindent 0 pt
+
+\newcommand\obrazek[2][pixabay.com]{
+  \clearpage
+\begin{wrapfigure}{R}{0.45\linewidth}
+  \begin{minipage}{1.0\linewidth}\parskip 0 pt
+  \includegraphics[width=\linewidth]{#2}
+
+  \vspace*{-10pt}
+  \null\hfill{\color{gray}\footnotesize Zdroj: #1}
+    
+  \end{minipage}
+\end{wrapfigure}
+}
+
+\let\oldtextbf\textbf
+\def\textbf#1{%\newpage
+  \oldtextbf{\color{red} #1}}
+
+
+\def\stranka{\newpage}
+
+\begin{document}
+
+\section{Cvičení 28.2.2019}
+
+
+\def\der #1.{$f(x)=#1$}
+\textbf{Výpočet derivace.}
+Určete derivace následujících funkcí, kde $a,b,\mu\in\mathbb{R}$.
+\begin{multicols}3
+\begin{enumerate}
+\item \der x^3+2x^2-1.
+\item \der \frac{x}{x^2+6}.
+\item \der \frac{ax}{x+b}.
+\item \der x\ln x.
+\item \der \frac {2x^3}{x^2+1}.
+\item \der 1-e^{bx}.
+\item \der \frac{1}{\sqrt \pi}e^{ax^2}.
+\item   \der \frac{a}{(\mu x+b)^2}.
+\item \der (x^2-1)^4.
+\item \der x\sqrt{x^2+1}.
+\end{enumerate}
+\end{multicols}
+
+\def\der #1.#2.{$f(#1)=#2$}
+\textbf{Výpočet derivace.}
+Určete derivace následujících funkcí, kde $a,b\in\mathbb{R}$.
+\begin{multicols}3
+\begin{enumerate}
+\item \der r. \frac 43\pi r^3. 
+\item \der r. \pi r^2.
+\item \der a. 6a^2.
+\item \der v. \frac 12 mv^2.
+\item \der r. \frac {a}{r^2}.  
+\item \der y. ae^{by}.
+\end{enumerate}
+\end{multicols}
+
+
+% Jiří Kameníček, https://brnensky.denik.cz
+\obrazek{vate_pisky.jpg}
+\textbf{Rychlost s jakou roste obsahu kruhu.}  Váté písky je bezlesý
+pruh podél železniční trati nedaleko Bzence, kde je extrémní sucho
+(Moravská Sahara). Rostou zde cenné rostliny a dobrovolníci, včetně
+přednášejícího, zde od osmdesátých let pravidelně vysekávali náletové
+borovice. V dřívějších dobách byly v pruhu podél železnice velmi časté
+požáry kvůli provozu parních vlaků. Předpokládejme, že požár se ve
+vysušené louce šíří ve tvaru kruhu. V určitém okamžiku je poloměr $50$
+metrů a roste rychlostí $1.5$ metrů za minutu. Zapište zadání pomocí
+derivací a určete jak rychle roste plocha zasažená ohněm.
+
+
+
+\obrazek{room.jpg}
+\textbf{Tepelná výměna.}  Teplota v místnosti kde se přestalo topit se mění
+tepelnou výměnnou s okolím. Rychlost, s jakou teplota v zimě klesá je
+úměrná rozdílu teplot v místnosti a venku. Sestavte matematický model
+popisující pokles teploty v této místnosti.
+
+
+\obrazek{mladata.jpg}
+\textbf{Model růstu úměrného velikosti chybějícího množství.}
+Mnoho živočichů roste tak, že mohou dorůstat jisté maximální
+délky a rychlost jejich růstu je úměrná délce, která jim do této
+maximální délky chybí (tj. kolik ještě musí do této maximální
+délky dorůst).
+
+
+\obrazek{kontaminace.jpg}
+\textbf{Kontaminace a čištění.}
+%Hughes
+Znečišťující látky se v kontaminované oblasti rozkládají rychlostí
+$8\%$ za den. Kromě toho pracovníci odstraňují látky rychlostí $30$
+galonů denně. Vyjádřete tento proces kvantitativně pomocí vhodného
+modelu.
+
+\obrazek{nemoc.jpg}
+\textbf{Hrubý model chřipkové epidemie.}  Počet nemocných chřipkou $y$ v kraji o počtu obyvatel $M$ je úměrný současně počtu nemocných a počtu zdravých
+jedinců. Sestavte model takovéto šíření chřipky.
+
+
+\obrazek{lov.jpg}
+\textbf{Model drancování přírodních zdrojů.}
+Při modelování růstu populace často pracujeme s populací žijící v prostředí s omezenou úživností. Často používáme model
+$$\frac{\mathrm d x}{\mathrm dt}=rx\left(1-\frac Kx\right),$$
+kde $r$ a $K$ jsou parametry modelu (reálné konstanty).
+Nakreslete graf funkce $f(x)=rx\left(1-\frac Kx\right)$ a ověřte, že
+pro velká $x$ je $f(x)$ záporné a velikost populace proto klesá. Pokud
+populaci lovíme konstantní rychlostí, sníží se pravá strana o konstantu, kterou označíme $h$. Ukažte, že pro intenzivní lov bude
+pravá strana rovnice pořád záporná a intenzivní lov tak způsobí
+vyhubení populace.
+
+\obrazek{kafe.jpg}
+\textbf{Dokončování bakalářské práce.} Při dokončování bakalářské
+práce roste spotřeba kávy při prosezených hodinách u počítače. Student
+postupně zvyšuje svou denní spotřebu kávy rychlostí $0.5$ litru za
+týden. Bohužel, situace na trhu se vyvinula tak, že roste i cena
+jednoho litru kávy, a to rychlostí $0.20$ Kč za týden. Vyjádřete tato
+pozorování pomocí derivací a určete, jak rychle rostou celkové výdaje
+za kávu. Pokud nemáte všechny informace, rozhodněte, jaké další
+informace jsou nutné pro to, aby úlohu bylo možno vyřešit.
+
+\obrazek{kluzak.jpg}
+\textbf{Rychlost klesání kluzáku.}
+Teplota klesá s výškou o $2^\circ \mathrm C$ na kilometr. Pilot
+kluzáku vidí, že teplota v okolí jeho kluzáku klesá rychlostí
+$10^{-4}{}^\circ \mathrm C/\mathrm{s}$. Vyjádřete tato pozorování pomocí
+derivací a určete, jak rychle ztrácí kluzák výšku.
+
+\obrazek{autobus.jpg}
+\textbf{Změna tlaku a lupání v uších.}
+V dopravním prostředku, který se pohybuje do
+kopce nebo z kopce, se mění tlak. Při rychlé změně nestihnou Tím vznikne tlakový rozdíl mezi
+vnějším tlakem a tlakem ve středním uchu. Vyrovnání tlaku se projeví
+lupnutím v uších.  Lupnutí nastane, pokud se vnější tlak mění rychle,
+tj. derivace $\frac {\mathrm d p}{\mathrm dt}$ je velká. (Velká v absolutní hodnotě, tj. numericky hodně kladná nebo hodně záporná.)
+Tuto veličinu však je těžké měřit. Umíme měřit změnu nadmořské výšky
+$h$ a víme, jak se tlak $p$ mění s nadmořskou výškou. Nechť například
+$\frac{\mathrm dp}{\mathrm
+  du}=-0.12\,\mathrm{g}\mathrm{cm}^{-2}\mathrm{m}^{-1}$ (údaj
+meteorologů) a vezměme
+$ \frac{\mathrm du}{\mathrm
+  dt}=-3\,\mathrm{m}\,\mathrm{s}^{-1}$. Okomentujte význam toho, že
+derivace jsou záporné a určete rychlost, s jakou rychlostí se mění tlak vzduchu.
+
+\stranka
+
+\textbf{Derivace objemu koule a souvislost s povrchem. Derivace obsahu
+  kružnice.}  Určete, jak souvisí rychlost změny poloměru kruhu
+s rychlostí, jakou roste obsah kruhu. Měli byste vypozorovat, že
+rychlost změny obsahu je rovna obvodu násobenému rychlostí změny
+poloměru. Platí analogické tvrzení i pro obsah čtverce a délku strany
+čtverce? Nakreslete si i obrázek pro vysvětlení tohoto
+pozorování. Poté stejně prozkoumejte vztah mezi objemem koule,
+povrchem koule a rychlostí změny poloměru koule. Zjistěte, jestli
+anaogický vztah platí i pro objem krychle, povrch krychle a rychlost
+změny délky hrany krychle.
+
+
+
+
+\end{document}
+
+
+% hughes - hallet, gleason, Lock, Applied calculus
