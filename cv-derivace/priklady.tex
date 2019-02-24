@@ -35,6 +35,49 @@
 
 \section{Cvičení 28.2.2019}
 
+\def\tg{\mathop{\mathrm{tg}}}
+\def\cotg{\mathop{\mathrm{cotg}}}
+\def\arctg{\mathop{\mathrm{arctg}}}
+
+\def\derivace#1;#2\par{$\displaystyle{(#1)'=\frac{\mathrm d}{\mathrm dx}(#1)=#2}$\par\smallskip}
+Základní elementární funkce derivujeme pomocí následujících vzorců.
+
+\hbox to \hsize{\begin{minipage}{0.5\linewidth}
+\derivace c;0
+
+\derivace x^n;n x^{n-1}
+
+\derivace e^x;e^x
+
+\derivace \sin x;\cos x
+
+\derivace \cos x;-\sin x
+
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+\derivace \tg x;\frac 1{\cos^2 x}
+
+\derivace \ln x;\frac 1x
+
+\derivace \arcsin x;\frac{1}{\sqrt {1-x^2}}
+
+\derivace \arccos x;-\frac{1}{\sqrt {1-x^2}}
+
+\derivace \arctg x;\frac 1{1+x^2}
+
+\end{minipage}} Zde $c\in\mathbb R$ je konstanta a zbytek jsou vzorce,
+které platí vždy, když je výraz napravo definovaný.
+
+  Nechť $f$, $g$ jsou funkce a $c\in\mathbb R$ konstanta. Platí
+  \begin{align*} 
+    {\left[cf(x)\right]}'&=cf'(x),\\
+    {\left[f(x)\pm g(x)\right]}'&=f'(x)\pm g'(x),\\
+    {\left[f(x)g(x)\right]}'&=f(x)g'(x)+f'(x)g(x),\\
+    {\Bigl[\frac{f(x)}{g(x)}\Bigr]}'&=\frac{f'(x)g(x)-g'(x)f(x)}{g^2(x)},\\
+    \bigl[f(g(x))\bigr]'&=\frac{\mathrm df}{\mathrm dg}\frac{\mathrm dg}{\mathrm dx}=f'(g(x))g'(x)
+  \end{align*}
+
+
 
 \def\der #1.{$f(x)=#1$}
 \textbf{Výpočet derivace.}
@@ -91,11 +134,11 @@ popisující pokles teploty v této místnosti.
 
 
 \obrazek{mladata.jpg}
-\textbf{Model růstu úměrného velikosti chybějícího množství.}
-Mnoho živočichů roste tak, že mohou dorůstat jisté maximální
-délky a rychlost jejich růstu je úměrná délce, která jim do této
-maximální délky chybí (tj. kolik ještě musí do této maximální
-délky dorůst).
+\textbf{Model růstu úměrného velikosti chybějícího množství.}  Mnoho
+živočichů roste tak, že mohou dorůstat jisté maximální délky a
+rychlost jejich růstu je úměrná délce, která jim do této maximální
+délky chybí (tj. kolik ještě musí do této maximální délky
+dorůst). Sestavte matematický model popisující takovýto růst.
 
 
 \obrazek{kontaminace.jpg}
@@ -108,19 +151,21 @@ modelu.
 
 \obrazek{nemoc.jpg}
 \textbf{Hrubý model chřipkové epidemie.}  Počet nemocných chřipkou $y$ v kraji o počtu obyvatel $M$ je úměrný současně počtu nemocných a počtu zdravých
-jedinců. Sestavte model takovéto šíření chřipky.
+jedinců. Sestavte model takového šíření chřipky.
 
 
 \obrazek{lov.jpg}
 \textbf{Model drancování přírodních zdrojů.}
 Při modelování růstu populace často pracujeme s populací žijící v prostředí s omezenou úživností. Často používáme model
 $$\frac{\mathrm d x}{\mathrm dt}=rx\left(1-\frac Kx\right),$$
-kde $r$ a $K$ jsou parametry modelu (reálné konstanty).
-Nakreslete graf funkce $f(x)=rx\left(1-\frac Kx\right)$ a ověřte, že
-pro velká $x$ je $f(x)$ záporné a velikost populace proto klesá. Pokud
-populaci lovíme konstantní rychlostí, sníží se pravá strana o konstantu, kterou označíme $h$. Ukažte, že pro intenzivní lov bude
-pravá strana rovnice pořád záporná a intenzivní lov tak způsobí
-vyhubení populace.
+kde $r$ a $K$ jsou parametry modelu (reálné konstanty).  Nakreslete
+graf funkce $f(x)=rx\left(1-\frac Kx\right)$ a ověřte, že pro velká
+$x$ je $f(x)$ záporné a velikost populace proto klesá. Pokud populaci
+lovíme konstantní rychlostí, sníží se pravá strana o konstantu, kterou
+označíme $h$. Ukažte, že pro intenzivní lov bude pravá strana rovnice
+pořád záporná a intenzivní lov tak způsobí vyhubení populace. Dá se
+najít kritická hodnota lovu oddělující vyhynutí populace a její
+trvalé přežívání?
 
 \obrazek{kafe.jpg}
 \textbf{Dokončování bakalářské práce.} Při dokončování bakalářské
@@ -135,25 +180,26 @@ informace jsou nutné pro to, aby úlohu bylo možno vyřešit.
 \obrazek{kluzak.jpg}
 \textbf{Rychlost klesání kluzáku.}
 Teplota klesá s výškou o $2^\circ \mathrm C$ na kilometr. Pilot
-kluzáku vidí, že teplota v okolí jeho kluzáku klesá rychlostí
+kluzáku vidí, že teplota v okolí jeho kluzáku roste rychlostí
 $10^{-4}{}^\circ \mathrm C/\mathrm{s}$. Vyjádřete tato pozorování pomocí
 derivací a určete, jak rychle ztrácí kluzák výšku.
 
-\obrazek{autobus.jpg}
-\textbf{Změna tlaku a lupání v uších.}
-V dopravním prostředku, který se pohybuje do
-kopce nebo z kopce, se mění tlak. Při rychlé změně nestihnou Tím vznikne tlakový rozdíl mezi
-vnějším tlakem a tlakem ve středním uchu. Vyrovnání tlaku se projeví
-lupnutím v uších.  Lupnutí nastane, pokud se vnější tlak mění rychle,
-tj. derivace $\frac {\mathrm d p}{\mathrm dt}$ je velká. (Velká v absolutní hodnotě, tj. numericky hodně kladná nebo hodně záporná.)
-Tuto veličinu však je těžké měřit. Umíme měřit změnu nadmořské výšky
-$h$ a víme, jak se tlak $p$ mění s nadmořskou výškou. Nechť například
+\obrazek{autobus.jpg} \textbf{Změna tlaku a lupání v uších.}
+V dopravním prostředku, který se pohybuje do kopce nebo z kopce, se
+mění tlak. Tím vznikne tlakový rozdíl mezi vnějším tlakem a tlakem ve
+středním uchu. Vyrovnání tlaku při rychlé změně se projeví lupnutím
+v uších.  Lupnutí tedy nastane, pokud je derivace
+$\frac {\mathrm d p}{\mathrm dt}$ velká. (Velká v absolutní hodnotě,
+tj. numericky hodně kladná nebo hodně záporná.)  Tuto veličinu však je
+těžké měřit. Umíme měřit změnu nadmořské výšky $h$ a víme, jak se tlak
+$p$ mění s nadmořskou výškou. Nechť například
 $\frac{\mathrm dp}{\mathrm
   du}=-0.12\,\mathrm{g}\mathrm{cm}^{-2}\mathrm{m}^{-1}$ (údaj
 meteorologů) a vezměme
 $ \frac{\mathrm du}{\mathrm
   dt}=-3\,\mathrm{m}\,\mathrm{s}^{-1}$. Okomentujte význam toho, že
-derivace jsou záporné a určete rychlost, s jakou rychlostí se mění tlak vzduchu.
+derivace jsou záporné a určete rychlost, s jakou rychlostí se mění
+tlak vzduchu.
 
 \stranka
 
