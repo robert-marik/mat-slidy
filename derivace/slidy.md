@@ -8,7 +8,7 @@
 
 <div class='obtekat'>
 
-![Rychlost chápeme v různých kontextech. Podle kontextu se mění i jednotky, ve kterých rychlost určujeme.](rychlost.jpg)
+![Rychlost chápeme v různých kontextech. Podle kontextu se mění i jednotky, ve kterých rychlost určujeme.  Zdroj: pixabay.com](rychlost.jpg)
 
 </div>
 
@@ -29,7 +29,7 @@
 
 <div class='obtekat'>
 
-![Průměr za kratší interval dává podrobnější informaci.](mikroskop.jpg)
+![Průměr za kratší interval dává podrobnější informaci.  Zdroj: pixabay.com](mikroskop.jpg)
 
 </div>
 
@@ -158,15 +158,18 @@ dT}{\mathrm dt}=k(T_0-T),$$ kde $k$ je konstanta úměrnosti. Neznámou v
 této rovnici je funkce a v rovnici figuruje derivace této
 funkce. Takové rovnice se naučíme řešit později.
 
-# Narozeniny - datování pomocí uhlíku 
+# Narozeniny - uhlík 14C
 
 <div class='obtekat'>
 
-![Narozeniny uhlík 14, hojně používaný v matematických modelech.](dort.jpg)
+![Narozeniny uhlík 14, hojně používaný v matematických modelech.  Zdroj: pixabay.com](dort.jpg)
 
 </div>
 
-Dne 27.2.1940 (zítra 79 let) byl objeven uhlík $^{14}C$. Jedná se o radioaktivní prvek s mnoha skvělými vlastnostmi. Jednou z nich je vhodná rychlost rozpadu, která jej činí vhodným pro datování  archeologických nálezů pozůstatků živých organismů
+Dne 27.2.1940 (zítra 79 let) byl objeven uhlík $^{14}C$. Jedná se o
+radioaktivní prvek s mnoha skvělými vlastnostmi. Jednou z nich je
+vhodná rychlost rozpadu, která jej činí vhodným pro datování
+archeologických nálezů pozůstatků živých organismů
 
 * Rychlost, s jakou se mění množství (a tedy i koncentrace $y$ v daném
   vzorku) nerozpadnutého radioaktivního materiálu je popsána rovnicí
@@ -175,10 +178,7 @@ Dne 27.2.1940 (zítra 79 let) byl objeven uhlík $^{14}C$. Jedná se o radioakti
   důsledkem toho, že pro daný nestabilní izotop mají všechny atomy
   stejnou pravděpodobnost, že u nich dojde k rozpadu a tato
   pravděpodobnost se s časem nemění.
-* Vhodný radioaktivní prvek vybereme podle toho, jak starý vzorek
-  chceme datovat. Nejčastěji měříme množství radioaktivního uhlíku
-  $^{14}C$ vztažené k množství stabilního $^{12}C$. 
-
+* Uhlík je na datování vhodný, protože jej během života absorbují živé organismy.
 
 # Výpočet derivace
 
