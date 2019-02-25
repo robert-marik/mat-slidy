@@ -215,11 +215,11 @@ zvětší o $3\,\mathrm{cm}$.
 
 > Poznámka. Proč nepočítáme přesně? Stačila by selská logika a změna
 funkce $s=\frac k{h^3}$ by byla
-$$\Delta s=\frac k{(h+\Delta h)^3}-\frac k{h^3}.\tag{1}$$ Odpověď je
+$$\Delta s=\frac k{(h+\Delta h)^3}-\frac k{h^3}.\tag{♠}$$ Odpověď je
 překvapivá: pomocí derivací je vyjádření změny v naprosté většině
 případů jednodušší. V tomto našem případě máme
 $$\Delta s\approx -\frac{3k}{h^4}\Delta h,$$ což je na další práci
-mnohem příjemnější výraz, než rozdíl dvou zlomků (1). Skutečnost, že platí
+mnohem příjemnější výraz, než rozdíl dvou zlomků (♠). Skutečnost, že platí
 pouze pro malé $\Delta h$ nás nijak neomezuje. Většinou se tento
 aparát používá tam, kde se chyba limitním přechodem "stáhne na
 nulu".
