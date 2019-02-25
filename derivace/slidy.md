@@ -205,7 +205,7 @@ probrání Taylorova polynomu, kdy se použije o něco obecnější postup.
 **Řešení.** Relevantními veličinami jsou $s$ a $h$ a vzorec je tedy
 možno shrnout do tvaru $$s=\frac k{h^3},$$ kde $k$ je konstanta
 charakterizující danou situaci. Pro zadané hodnoty výšky a průhybu
-vychází konstanta $$k=s h^3=10\times 20^3=80 ,000.$$ Vzorec (♣) tedy
+vychází konstanta $$k=s h^3=10\times 20^3=80\,000.$$ Vzorec (♣) tedy
 redukujeme na $$s={80\,000}{h^{-3}}.$$ Derivovávním obdržíme
 $$\frac{\mathrm ds}{\mathrm dh}=80\,000\times(-3)
 h^{-4}=-\frac{3\times 80\,000}{h^4}.$$ Změna výšky nosníku je $$\Delta
