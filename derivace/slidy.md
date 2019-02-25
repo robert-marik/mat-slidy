@@ -158,6 +158,27 @@ dT}{\mathrm dt}=k(T_0-T),$$ kde $k$ je konstanta úměrnosti. Neznámou v
 této rovnici je funkce a v rovnici figuruje derivace této
 funkce. Takové rovnice se naučíme řešit později.
 
+# Narozeniny - datování pomocí uhlíku 
+
+<div class='obtekat'>
+
+![Narozeniny uhlík 14, hojně používaný v matematických modelech.](dort.jpg)
+
+</div>
+
+Dne 27.2.1940 (zítra 79 let) byl objeven uhlík $^{14}C$. Jedná se o radioaktivní prvek s mnoha skvělými vlastnostmi. Jednou z nich je vhodná rychlost rozpadu, která jeji činí vhodným pro datování  archeologických nálezů pozůstatků živých organismů
+
+* Rychlost, s jakou se mění množství (a tedy i koncentrace $y$ v daném
+  vzorku) nerozpadnutého radioaktivního materiálu je popsána rovnicí
+  $$\frac{\mathrm dy}{\mathrm dt}=-\lambda y,$$
+  kde $\lambda$ je konstanta úměrnosti. Tato rovnice je přirozeným
+  důsledkem toho, že pro daný nestabilní izotop mají všechny atomy
+  stejnou pravděpodobnost, že u nich dojde k rozpadu a tato
+  pravděpodobnost se s časem nemění.
+* Vhodný radioaktivní prvek vybereme podle toho, jak starý vzorek
+  chceme datovat. Nejčastěji měříme množství radioaktivního uhlíku
+  $^{14}C$ vztažené k množství stabilního $^{12}C$. 
+
 
 # Výpočet derivace
 
@@ -174,7 +195,23 @@ například i na tom, jak se funkce "vzpírá" tomu, být aproximována
 výrazem úměrným $\Delta x$. Přesněji tuto podmínku zformulujeme po
 probrání Taylorova polynomu, kdy se použije o něco obecnější postup.
 
-**Příklad.** $s=\frac {F L^3}{4Ebh^3}$ Viz přednáška.
+**Příklad.** Nosník výšky $h$, šířky $a$ a délky $L$ je uprostřed
+  zatížený silou $F$. Průhyb $s$ uprostřed nosníku je dán vztahem
+  $$s=\frac {F L^3}{4Ebh^3},\tag{♣}$$ kde $E$ je materiálová
+  konstanta. Pro $h=20\,\mathrm{cm}$ je průhyb
+  $s=10\,\mathrm{cm}$. Jak se průhyb změní, pokud se $h$ sníží na
+  $18\,\mathrm{cm}$?
+
+**Řešení.** Relevantními veličinami jsou $s$ a $h$ a vzorec je tedy
+možno shrnout do tvaru $$s=\frac k{h^3},$$ kde $k$ je konstanta
+charakterizující danou situaci. Pro zadané hodnoty výšky a průhybu
+vychází konstanta $$k=s h^3=10\times 20^3=80 ,000.$$ Vzorec (♣) tedy
+redukujeme na $$s={80\,000}{h^{-3}}.$$ Derivovávním obdržíme
+$$\frac{\mathrm ds}{\mathrm dh}=80\,000\times(-3)
+h^{-4}=-\frac{3\times 80\,000}{h^4}.$$ Změna výšky nosníku je $$\Delta
+h=18-20=-2\,\mathrm{cm}$$ a tomu odpovídá změna průhybu $$\Delta
+s=-\frac{3\times 80\,000}{(20)^4}(-2)=3\,\mathrm{cm}.$$ Průhyb se tedy
+zvětší o $3\,\mathrm{cm}$.
 
 > Poznámka. Proč nepočítáme přesně? Stačila by selská logika a změna
 funkce $s=\frac k{h^3}$ by byla
