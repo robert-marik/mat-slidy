@@ -166,7 +166,7 @@ funkce. Takové rovnice se naučíme řešit později.
 
 </div>
 
-Dne 27.2.1940 (zítra 79 let) byl objeven uhlík $^{14}C$. Jedná se o radioaktivní prvek s mnoha skvělými vlastnostmi. Jednou z nich je vhodná rychlost rozpadu, která jeji činí vhodným pro datování  archeologických nálezů pozůstatků živých organismů
+Dne 27.2.1940 (zítra 79 let) byl objeven uhlík $^{14}C$. Jedná se o radioaktivní prvek s mnoha skvělými vlastnostmi. Jednou z nich je vhodná rychlost rozpadu, která jej činí vhodným pro datování  archeologických nálezů pozůstatků živých organismů
 
 * Rychlost, s jakou se mění množství (a tedy i koncentrace $y$ v daném
   vzorku) nerozpadnutého radioaktivního materiálu je popsána rovnicí
