@@ -1,19 +1,45 @@
-cp slidy.md slidy_kopie.md
-sed -i 's/\\iffalse//' slidy_kopie.md
-sed -i 's/\\fi//' slidy_kopie.md
 
-pandoc -t slidy -V slidy-url=../ --css ../my.css --template ../my.slidy -s slidy_kopie.md -o index.html --mathjax=http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML 
-sed -i -e :a -e '/<blockquote>$/N; s/<blockquote>\n/<blockquote>/; ta' index.html 
-sed -i 's/<blockquote><p>Definice (\([^\.]*\))./<blockquote class="definice"><p class="definicename">Definice (\1).<\/p><p>/' index.html
-sed -i 's/<blockquote><p>Věta./<blockquote class="veta"><p class="vetaname">Věta.<\/p><p>/' index.html
-sed -i 's/<blockquote><p>Poznámka./<blockquote class="poznamka"><p class="poznamkaname">Poznámka.<\/p><p>/' index.html
+kde=$1
 
-#pandoc -t html --css my.css -s slidy.md -o index_p.html --mathjax=http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML 
-#pandoc -t slidy -V slidy-url=../ --css ../my.css --template ../my.deck -s slidy_kopie.md -o index_d.html --mathjax=http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+if [ -z $kde ]
+then
+   kde="derivace"
+   echo '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> 
+<html> <head> 
 
-pandoc -t html  --css ../my.css -s slidy.md -o index_h.html --mathjax=http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+<meta content="text/html; charset=utf-8" http-equiv="content-type">
+<link rel="stylesheet" type="text/css" href="styl.css" ></head><html>' > index.html
+   echo '<h1>Prezentace z přednášek z Matematiky</h1><p>Tato stránka obsauje prezentace z předmětu <a href="http://user.mendelu.cz/marik/mt/">Matematika</a>. Každá přednáška je v několika formátech pro pohodlí a větší možnost volby uživatele.</p>' >> index.html
+   echo '<div class="CSSTableGenerator"><table>'>>index.html
+   echo '<tr><td>Název</td><td>html</td><td>Prezentace slidy.js</td><td>PDF</td><td>markdown</td></tr>'>>index.html
 
-sed -i -e :a -e '/<blockquote>$/N; s/<blockquote>\n/<blockquote>/; ta' index_h.html 
-sed -i 's/<blockquote><p>Definice (\([^\.]*\))./<blockquote class="definice"><p class="definicename">Definice (\1).<\/p><p>/' index_h.html
-sed -i 's/<blockquote><p>Věta./<blockquote class="veta"><p class="vetaname">Věta.<\/p><p>/' index_h.html
-sed -i 's/<blockquote><p>Poznámka./<blockquote class="poznamka"><p class="poznamkaname">Poznámka.<\/p><p>/' index_h.html
+   for j in $kde
+   do
+       k=`head -n1 $j/slidy.md | cut -d% -f2`
+       echo "<tr><td>$k</td><td><a href='$j/index_h.html' target='_blank'>otevřít</a></td><td><a href='$j/index.html' target='_blank'>otevřít</a></td><td><a href='$j.pdf'  target='_blank'>otevřít</a></td><td><a href='$j/slidy.md'>otevřít</a></td></tr>"  >> index.html
+
+   done
+   echo '</table></div></html>' >> index.html
+
+   #scp index.html cornus.mendelu.cz:html/am/slidy/
+fi  
+
+for i in $kde
+do
+  echo $i
+  #cp my.css $i/
+  cp prikaz_pandoc $i/prikaz
+  cd $i
+  bash prikaz
+  cd ..
+  #scp -r $i kiwi.mendelu.cz:html/am/slidy
+  #rsync -av $i kiwi.mendelu.cz:html/am/slidy
+  #rsync -e "ssh -o StrictHostKeyChecking=no" -av $i cornus.mendelu.cz:html/am/slidy
+done
+
+#rsync -e "ssh -o StrictHostKeyChecking=no" -av my.css cornus.mendelu.cz:html/am/slidy
+#rsync -e "ssh -o StrictHostKeyChecking=no"  -av mydeck.css cornus.mendelu.cz:html/am/slidy
+#rsync -e "ssh -o StrictHostKeyChecking=no"  -av facebox cornus.mendelu.cz:html/am/slidy
+#rsync -e "ssh -o StrictHostKeyChecking=no"  -av styles cornus.mendelu.cz:html/am/slidy
+#rsync -e "ssh -o StrictHostKeyChecking=no"  -av scripts cornus.mendelu.cz:html/am/slidy
+#rsync -e "ssh -o StrictHostKeyChecking=no"  -av deck cornus.mendelu.cz:html/am/slidy
