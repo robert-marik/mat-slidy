@@ -46,9 +46,9 @@ Počítáme-li průměr přes stále kratší interval, nevýhoda průměrné
 rychlosti mizí. Cílem je počítat průměr přes interval prakticky
 nerozlišitelný od nuly. To by dalo okamžitou rychlost.
 
-Pokud průměrujeme za stále kratší čas, čitatel i jmenovatel jdou k
-nule a jsou potíže s interpretací zlomku. Nulou není možné
-dělit. Musíme vytvořit koncept který umožní sledovat, co se děje s
+Pokud průměrujeme za stále kratší čas, čitatel i jmenovatel se blíží k
+nule a jsou potíže s interpretací zlomku. Nulou totiž není možné
+dělit. Musíme vytvořit koncept, který umožní sledovat, co se děje s
 funkčními hodnotami funkce, pokud se vstupními daty jdeme "na krev" ke
 kraji definičního oboru.
 
@@ -95,19 +95,21 @@ spojitosti.
 
 > Poznámka. Body, v jejichž okolí je funkce ohraničená, ale je zde porušena spojitost, jsou například následující.
 > 
-skok
+**skok**
 : Na jeho odhalení stačí zvolit toleranci v definici limity menší, než je výška skoku. Například $f(x)=\frac{|x|+x}{2x}$ je jednotkový skok v nule.
 >
-odstranitelná nespojitost
-: Tato nespojitost nás zajímá nejvíce. Například funkce $$f(x)=
+**odstranitelná nespojitost**
+: Tato nespojitost nás zajímá nejvíce. Je to nespojitost, která zmizí pokud vhodně dodefinujeme funkční hodnotu v bodě nespojitosti. Například funkce $$f(x)=
 \begin{cases}
   \frac {\sin x}{x}& x\neq 0\\
   1& x=0
 \end{cases}
 $$
-je spojitým rozšířením funkce $\frac{\sin x}x$, která má odstranitelnou nespojitost v bodě $x=0$.
+je spojitá funkce. Vznikla doplněním jedné funkční hodnoty do definice funkce $\frac{\sin x}x$, která má odstranitelnou nespojitost v bodě $x=0$.
 >
 > [Grafy.](https://sagecell.sagemath.org/?z=eJxL06jQtNWo0NZITCoGMjU19TWMtCo0ebnSQRLFmXlASr-ClyvA0DZNryAnv0RDo0JH11THVBOoJsDINh1VUEchOT8nv8hWvSg1RR2kwlA7wAgAMsAaHQ==&lang=sage)
+
+
 
 # Derivace
 
@@ -116,7 +118,7 @@ intervalu, jehož délka je nerozlišitelná od nuly.
 
 Buď $y=f(x)$ funkce definovaná na nějakém otevřeném intervalu.
 
-> Definice (derivace). Derivací funkce $f$ v bodě $x$ rozumíme
+> Definice (derivace). *Derivací* funkce $f$ v bodě $x$ rozumíme
 limitu
 $$\frac{\mathrm df}{\mathrm dx}=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h},$$
 pokud tato limita existuje a je konečná.
@@ -206,7 +208,7 @@ probrání Taylorova polynomu, kdy se použije o něco obecnější postup.
 možno shrnout do tvaru $$s=\frac k{h^3},$$ kde $k$ je konstanta
 charakterizující danou situaci. Pro zadané hodnoty výšky a průhybu
 vychází konstanta $$k=s h^3=10\times 20^3=80\,000.$$ Vzorec (♣) tedy
-redukujeme na $$s={80\,000}{h^{-3}}.$$ Derivovávním obdržíme
+redukujeme na $$s={80\,000}{h^{-3}}.$$ Derivováním obdržíme
 $$\frac{\mathrm ds}{\mathrm dh}=80\,000\times(-3)
 h^{-4}=-\frac{3\times 80\,000}{h^4}.$$ Změna výšky nosníku je $$\Delta
 h=18-20=-2\,\mathrm{cm}$$ a tomu odpovídá změna průhybu $$\Delta
@@ -351,7 +353,7 @@ jakým směrem působí síla uvádějící příslušnou stavovou veličinu do
 pohybu.
 
 > Definice (gradient). Buď $f(x,y)$ funkce dvou proměnných, která má
-parciální derivace. Gradientem fuknce $f$ rozumíme
+parciální derivace. *Gradientem* funkce $f$ rozumíme
 vektor
 $$\mathop{\text{grad}}f=\left(\frac{\partial f}{\partial
     x},\frac{\partial f}{\partial y}\right).$$

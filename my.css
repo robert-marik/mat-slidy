@@ -101,3 +101,5 @@ blockquote p {padding: 2px;}
 .poznamka {background-color:#eeeeee; border-color:#006131;}
 
 li ul li { font-size: 85%; font-style: normal; }
+
+.poznamka {font-style: normal; }
