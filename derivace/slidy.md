@@ -321,10 +321,10 @@ tomto bodě "zůstane" a kolik tepla odteče dále.* Tedy potřebuji vědět, ja
 roste rychlost toku podél tyče je $\frac{\partial q}{\partial x}$. My pro kladný ohřev
 potřebujeme pokles toku tepla, tedy násobíme záporným znaménkem a dostáváme
 $-\frac{\partial q}{\partial x}$.
-* *Víme, kolik tepla se v daném místě spotřebuje na zvýšení teploty a tuto hodnotu musíme převést na změnu teploty. Opět se jedná o jakési překalibrování, které ještě souvisí s dalšími fyzikálními vlastnostmi jak tepelná kapacita a hmotnost v daném místě. Tedy přesněji hustota hmotnosti.* Teplo $-\frac{\partial q}{\partial x}$ je teplo, které každou časovou jednotku "zůstává" v
+* *Víme, kolik tepla se v daném místě spotřebuje na zvýšení teploty a tuto hodnotu musíme převést na změnu teploty. Opět se jedná o jakési překalibrování, které ještě souvisí s dalšími fyzikálními vlastnostmi jako je tepelná kapacita a hmotnost v daném místě. Tedy přesněji hustota hmotnosti.* Teplo $-\frac{\partial q}{\partial x}$ je teplo, které každou časovou jednotku "zůstává" v
 bodě $x$. Toto teplo se "použije" na zvýšení teploty. Vztažením
 rovnice (**) na jednotku délky  a času dostáváme
-$$\frac{Q}{\Delta x\Delta t}=\frac {m}{\Delta x} c\frac{\Delta T}{\Delta t}$$ a v bodě $x$ ("nekonečně malá oblast" a "nekonečně krátký časový interval" ) proto platí
+$$\frac{Q}{\Delta x\Delta t}=\frac {m}{\Delta x} c\frac{\Delta T}{\Delta t}$$ a v bodě $x$ a v čase $t$ ("nekonečně malá oblast" a "nekonečně krátký časový interval" ) proto platí
 $$-\frac {\partial q}{\partial x}=S\rho c\frac{\partial T}{\partial t}.$$ Zde jsme navíc využili hustotu (přesněji objemovou hustotu hmotnosti) $\rho = \frac mV =\frac{m}{S\Delta x}$.
 * Po dosazení za $q$ dostáváme
 $$-\frac{\partial}{\partial x}\left(-kS\frac{\partial T}{\partial x}\right)=S\rho c\frac{\partial T}{\partial t}.$$
