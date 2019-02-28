@@ -70,10 +70,10 @@ které platí vždy, když je výraz napravo definovaný.
 
   Nechť $f$, $g$ jsou funkce a $c\in\mathbb R$ konstanta. Platí
   \begin{align*} 
-    {\left[cf(x)\right]}'&=cf'(x),\\
-    {\left[f(x)\pm g(x)\right]}'&=f'(x)\pm g'(x),\\
-    {\left[f(x)g(x)\right]}'&=f(x)g'(x)+f'(x)g(x),\\
-    {\Bigl[\frac{f(x)}{g(x)}\Bigr]}'&=\frac{f'(x)g(x)-g'(x)f(x)}{g^2(x)},\\
+    {\left[cf\right]}'&=cf',\\
+    {\left[f\pm g\right]}'&=f'\pm g',\\
+    {\left[fg\right]}'&=f'g+fg',\\
+    {\Bigl[\frac{f}{g}\Bigr]}'&=\frac{f'g-g'f}{g^2},\\
     \bigl[f(g(x))\bigr]'&=\frac{\mathrm df}{\mathrm dg}\frac{\mathrm dg}{\mathrm dx}=f'(g(x))g'(x)
   \end{align*}
 
@@ -99,7 +99,7 @@ Určete derivace následujících funkcí, kde $a,b,\mu\in\mathbb{R}$.
 
 \def\der #1.#2.{$f(#1)=#2$}
 \textbf{Výpočet derivace.}
-Určete derivace následujících funkcí, kde $a,b\in\mathbb{R}$.
+Určete derivace následujících funkcí jedné proměnné. Ostatní proměnné označují parametry.
 \begin{multicols}3
 \begin{enumerate}
 \item \der r. \frac 43\pi r^3. 
@@ -149,10 +149,10 @@ $8\%$ za den. Kromě toho pracovníci odstraňují látky rychlostí $30$
 galonů denně. Vyjádřete tento proces kvantitativně pomocí vhodného
 modelu.
 
-\obrazek{nemoc.jpg} \textbf{Hrubý model chřipkové epidemie.}  Počet
-nemocných chřipkou $y$ v kraji o počtu obyvatel $M$ je úměrný současně
-počtu nemocných a počtu zdravých jedinců. Sestavte model takového
-šíření chřipky.
+\obrazek{nemoc.jpg} \textbf{Hrubý model chřipkové epidemie.}  Rychlost
+s jakou roste počet nemocných chřipkou je úměrný současně počtu
+nemocných a počtu zdravých jedinců. Sestavte model takového šíření
+chřipky. 
 
 
 \obrazek{lov.jpg}
@@ -214,8 +214,6 @@ pozorování. Poté stejně prozkoumejte vztah mezi objemem koule,
 povrchem koule a rychlostí změny poloměru koule. Zjistěte, jestli
 anaogický vztah platí i pro objem krychle, povrch krychle a rychlost
 změny délky hrany krychle.
-
-
 
 
 \end{document}
