@@ -78,7 +78,7 @@ tj. derivace derivace.
 # Taylorův polynom (polynomiální aproximace) v 1D a derivace vyšších řádů.
 
 > Definice (druhá a další vyšší derivace).
-Druhou derivací rozumíme derivaci derivace. Označujeme $f''(x)$ nebo $\frac{\mathrm d^2 f}{\mathrm dx^2}$. Podobně $k$-tou derivací rozumíme derivaci $(k-1)$-ní derivace. Označujeme $f^{(k)}(x)$ nebo $\frac{\mathrm d^k f}{\mathrm dx^k}$. Platí tedy $$\frac {\mathrm d^2}{\mathrm dx^2}=\frac {\mathrm d}{\mathrm dx} \left(\frac {\mathrm d^2}{\mathrm dx^2}\right),\quad  
+Druhou derivací rozumíme derivaci derivace. Označujeme $f''(x)$ nebo $\frac{\mathrm d^2 f}{\mathrm dx^2}$. Podobně $k$-tou derivací rozumíme derivaci $(k-1)$-ní derivace. Označujeme $f^{(k)}(x)$ nebo $\frac{\mathrm d^k f}{\mathrm dx^k}$. Platí tedy $$\frac {\mathrm d^2}{\mathrm dx^2}=\frac {\mathrm d}{\mathrm dx} \left(\frac {\mathrm d}{\mathrm dx}\right),\quad  
 \frac {\mathrm d^k}{\mathrm dx^k}=\frac {\mathrm d}{\mathrm dx}
 \left(\frac {\mathrm d^{k-1}}{\mathrm dx^{k-1}}\right).  $$
 
