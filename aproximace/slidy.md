@@ -78,11 +78,20 @@ tj. derivace derivace.
 # Taylorův polynom (polynomiální aproximace) v 1D a derivace vyšších řádů.
 
 > Definice (druhá a další vyšší derivace).
-Druhou derivací rozumíme derivaci derivace. Označujeme $f''(x)$ nebo $\frac{\mathrm d^2 f}{\mathrm dx^2}$. Podobně $k$-tou derivací rozumíme derivaci $(k-1)$-ní derivace. Označujeme $f^{(k)}(x)$ nebo $\frac{\mathrm d^k f}{\mathrm dx^k}$. Platí tedy $$\frac {\mathrm d^2}{\mathrm dx^2}=\frac {\mathrm d}{\mathrm dx} \left(\frac {\mathrm d}{\mathrm dx}\right),\quad  
-\frac {\mathrm d^k}{\mathrm dx^k}=\frac {\mathrm d}{\mathrm dx}
-\left(\frac {\mathrm d^{k-1}}{\mathrm dx^{k-1}}\right).  $$
+>
+>* Druhou derivací rozumíme derivaci derivace. Označujeme $f''(x)$ nebo $\frac{\mathrm d^2 f}{\mathrm dx^2}$. 
+>* Podobně $k$-tou derivací rozumíme derivaci $(k-1)$-ní derivace. Označujeme $f^{(k)}(x)$ nebo $\frac{\mathrm d^k f}{\mathrm dx^k}$. 
+>
+>Platí tedy $$\frac {\mathrm d^2 f}{\mathrm dx^2}=\frac {\mathrm d}{\mathrm dx} \left(\frac {\mathrm d f}{\mathrm dx}\right),\quad  
+\frac {\mathrm d^kf}{\mathrm dx^k}=\frac {\mathrm d}{\mathrm dx}
+\left(\frac {\mathrm d^{k-1}f}{\mathrm dx^{k-1}}\right)  $$
+aneb
+$$f''=(f')', 
+\quad f'''=(f'')', \quad f^{(k)}={(f^{(k-1)})'}.$$
 
-**Příklad.** Exponenciální funkce $e^x$ má všechny derivace stejné. U
-mocninné funkce se každým derivováním sníží exponent. Je-li exponentem
-přirozené číslo, od určitého řádu bude derivace nulová. Polynomy tedy
-mají všechny derivace od jistého řádu rovny nule.
+**Příklad.** 
+
+* Exponenciální funkce $e^x$ má všechny derivace stejné. 
+* U mocninné funkce se každým derivováním sníží exponent. Je-li exponentem
+přirozené číslo, od určitého řádu bude derivace nulová. 
+* Polynomy mají všechny derivace od jistého řádu rovny nule.
