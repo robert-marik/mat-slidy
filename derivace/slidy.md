@@ -89,7 +89,7 @@ spojitosti.
   nazývají *elementární funkce*.
 
 
-> Věta. Všechny elementární funkce jsou spojité v každém vnitřním
+> Věta (spojitost elementárních funkcí). Všechny elementární funkce jsou spojité v každém vnitřním
   bodě svého definičního oboru.
 
 
@@ -139,9 +139,9 @@ Derivace $f'(x)$ udává, jak se mění veličina $f$ při změnách veličiny
 $x$. Interpretace derivace v nematematických disciplínách je okamžitá
 rychlost s jakou veličina $f$ reaguje na změny veličiny $x$.
 
-> Věta. Má-li funkce $f$ derivaci na intervalu $I$, je na tomto intervalu spojitá.
+> Věta (existence derivace implikuje spojitost). Má-li funkce $f$ derivaci na intervalu $I$, je na tomto intervalu spojitá.
 
-> Věta.
+> Věta (znaménko derivace implikuje monotonii).
 >
 * Má-li funkce $f$ kladnou derivaci na intervalu $I$, je na tomto intervalu rostoucí.
 * Má-li funkce $f$ zápornou derivaci na intervalu $I$, je na tomto intervalu klesající.
