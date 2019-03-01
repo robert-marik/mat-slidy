@@ -127,9 +127,9 @@ $$
 Konstanta $-1$ je nezajímavá, souvisí s nulovou hladinou potenciálu a nulovou hladinu potenciálu si můžeme volit libovolně.
 
 Lineární člen chybí a kvadratický člen je analogický potenciální
-energii pružiny o thusti $k$ ve tvaru $$U=\frac 12 kx^2.$$ Molekuly či
+energii pružiny o tuhosti $k$ ve tvaru $$U=\frac 12 kx^2.$$ Molekuly či
 atomy popsané tímto potenciálem se chovají jako tělesa na pružině o
-tuhosti $k$. Pro atom o hmotnosti $m$ tedy například platí vzorec pro
+tuhosti $k=72$. Pro atom o hmotnosti $m$ tedy například platí vzorec pro
 úhlovou frekvenci oscilací $\omega = \sqrt{\frac km}$, odvozený
 původně pro těleso na pružině. Veličina $r-1$ je výchylka z
 rovnovážného stavu.
