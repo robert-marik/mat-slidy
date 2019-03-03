@@ -237,8 +237,8 @@ Bolzanova věta je poměrně názorné tvrzení. Hlavním přínosem pražského
 matematika Bernarda Bolzana bylo, že si uvědomil, že toto tvrzení není
 snadným důsledkem definice spojitosti a že přes názornost tohoto
 tvrzení je nutno podat jeho přesný důkaz, který rozhodně není
-jednoduchý. Jiná, zdánlivě jasná tvrzení, však být zřejmá
-nemusí. Bolzano například našel funkci, která je spojitá, ale její
+jednoduchý. Jiná, zdánlivě nevinná tvrzení, však pravdivá být
+nemusí. Zde se nabízí souvislost se spojitostí funkce a nakreslitelností jedním tahem. Bolzano například našel funkci, která je spojitá, ale její
 graf je tak komplikovaný, že se nedá nakreslit.
 
 Podmínka $f(a)f(b)<0$ v následující větě znamená, že funkční hodnoty
