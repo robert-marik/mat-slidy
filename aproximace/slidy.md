@@ -57,6 +57,14 @@ potenciálu a vzhledem k libovolnosti volby nulové hladiny je tato
 hodnota nepodstatná. Veličina $g=GMR^{-2}$ je tíhové zrychlení
 vyjádřené pomocí gravitační konstanty $G$ a parametrů Země. Veličina $gh$ je potenciál v tíhovém poli Země. Tuto veličinu známe lépe ze vzorce pro potenciální energii tělesa o hmotnosti $m$, který má tvar $$E=mgh.$$
 
+**Poznámka.** Lineární aproximace funkce je vlastně aproximace tečnou. Protože tento
+pojem ze střední školy chápeme jenom intuitivně, můžeme pomocí
+derivace tečnu dokonce definovat. Z geometrického pohledu je to přímka
+bodem $[x_0,f(x_0)]$, která má směrnici $f'(x_0)$. Proto se o derivaci
+často mluví jako o směrnici tečny.
+
+> Definice (tečna). Nechť $f$ je funkce, která má v bodě $x_0$ derivaci $f(x_0)$. Přímka $$y=f(x_0)+f'(x_0)(x-x_0)$$ se nazývá *tečna ke grafu funkce* $f$ v bodě $x_0$.
+
 # Motivace: Je možné chtít více než je lineární aproximace?
 
 <div class='obtekat'>
