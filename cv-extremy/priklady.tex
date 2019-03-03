@@ -1,0 +1,201 @@
+\documentclass{article}
+
+\usepackage[czech]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsfonts,mathtools,multicol, url, booktabs}
+\usepackage[a6paper, margin=20pt, landscape]{geometry}
+\usepackage{graphicx, xcolor}
+\usepackage{wrapfig, enumerate}
+\parskip 10pt
+\everymath{\displaystyle}
+\parindent 0 pt
+
+\def\zlomek{0.45}
+
+\newcommand\obrazek[2][pixabay.com]{
+  \clearpage
+\begin{wrapfigure}{R}{\zlomek\linewidth}
+  \begin{minipage}{1.0\linewidth}\parskip 0 pt
+  \includegraphics[width=\linewidth]{#2}
+
+  \vspace*{-10pt}
+  \null\hfill{\color{gray}\footnotesize Zdroj: #1}
+
+  \mezera
+  \end{minipage}
+\end{wrapfigure}
+}
+
+\let\oldtextbf\textbf
+\def\textbf#1{%\newpage
+  \oldtextbf{\color{red} #1}}
+
+\def\mezera{\vspace*{-40pt}}
+
+\def\stranka{\newpage}
+
+\begin{document}
+
+\rightskip 0 pt plus 1 em
+\title{Cvičení Matematika LDF, bak. 1. ročník, 7.3.2019}
+\date{}
+\maketitle
+
+\newpage
+
+\def\tg{\mathop{\mathrm{tg}}}
+\def\cotg{\mathop{\mathrm{cotg}}}
+\def\arctg{\mathop{\mathrm{arctg}}}
+
+\textbf{Základní lineární aproximace.}
+Najděte lineární aproximace funkcí $\sin x$, $\cos x$ a~${(1+x)^n}$ v okolí nuly. Tím dokážete platnost následujících přibližných vzorců platných pro $x$ blízko nuly.
+\begin{align*}
+\sin x&\approx  x\\
+\cos x&\approx  1\\
+(1+x)^n&\approx  1+nx
+\end{align*}
+První dvě aproximace využijeme později pro odvození tvaru matice malých rotací, což je důležité při studiu deformace materiálů. Poslední můžeme využít například pro to, abychom z relativistického vzorce pro  celkovou energii extrahovali část závislou na rychlosti, tj. kinetickou energii.
+\begin{multline*}
+  E=mc^2=\frac{m_0}{\sqrt{1-\frac {v^2}{c^2}}}c^2=m_0c^2\left(1-\frac {v^2}{c^2}\right)^{-\frac 12}\\
+  \approx m_0 c^2 \left(1+\left(-\frac 12\right)\left(-\frac{v^2}{c^2}\right)\right)=
+m_0 c^2 \left(1+\frac 12\frac{v^2}{c^2}\right)
+  =m_0c^2+\frac 12 m_0v^2
+\end{multline*}
+Toto je klasický případ, kdy přesný těžkopádný vzorec ($E=mc^2$) nahrazujeme příjemnějším přibližným vyjádřením ($E_k=\frac 12 mv^2$).
+
+
+\textbf{Kinetika chemických reakcích pro malé koncentrace.} Rychlost mnoha chemických reakcí je dána vzorcem
+\begin{equation}\label{1}
+  f(x)=\frac {ax}{b+x},
+\end{equation}
+kde $x$ je koncentrace substrátu a $a$, $b$ jsou parametry (konstanty). Tento vzorec se nazývá kinetika  Michaelise a Mentenové. {\color{blue}Funkci můžeme přepsat do tvaru
+\begin{equation*}
+  f(x)=x\frac {a}{b+x}.
+\end{equation*}
+Pro malé koncentrace je $x$ ve jmenovateli zanedbatelné proti konstantě $b$ a proto
+\begin{equation}\label{2}
+  f(x)\approx x\frac {a}{b}.
+\end{equation}
+}Ve cvičení 28.2.2019 jsme vypočítali derivaci
+\begin{equation*}
+  \frac{\mathrm df}{\mathrm dx}=\frac{ab}{(b+x)^2}.
+\end{equation*}
+Použijte tento výpočet k lineární aproximaci funkce \eqref{1} a
+ukažte, že vzorec \eqref{2} opravdu platí. Modře vyznačená úvaha,
+která se zdá býti poněkud vágní, je tedy korektní. Po trošce
+zkušeností se člověk, který to potřebuje často, naučí podobné vhodné
+aproximace ``sypat z rukávu'' v okamžiku potřeby i bez diferenciálního
+počtu. Vždy však je k~dispozici i přesný postup, založený na
+derivacích.
+
+
+{
+\def\zlomek{0.6}
+\obrazek[vlastní]{krabicka.jpg}
+\textbf{Krabička z papíru.}  V každém rohu papíru A4 vystřihneme
+čtverec a zbylý papír podél stran poohýbáme nahoru, aby vznikla (až se
+to slepí) krabička bez horního víka. Jak velké čtverce musíme
+odstříhat a jaký bude objem krabičky, pokud chceme, aby výsledná
+krabička měla co největší objem.
+
+
+}
+
+\obrazek{plot.jpg} \textbf{Plot ze tří stran pozemku.}  Chceme oplotit
+pozemek obdélníkového tvaru, jehož jedna strana je rovná přirozená
+hranice. Stavíme plot tedy jenom na zbylých třech stranách.
+\begin{enumerate}[(1)]
+\item Jaký tvar pozemku zvolit, pokud je dána délka pletiva a chceme mít plochu pozemku co největší?
+\item Jaký tvar pozemku zvolit, pokud je dána plocha pozemku a chceme mít co nejmenší spotřebu pletiva?
+\end{enumerate}
+Než začnete řešit, tak si zkuste tipnout jestli optimální je čtverec
+nebo obdélník. Pokud obdélník, tak zda podél přirozené hranice nebo
+kolmo na ni. Také si zkuste tipnout, zda je řešení obou úloh stejné
+(tj. stejný tvar obdélníku, například stejný poměr stran). Úlohy řešte
+s co nejmenším množstvím parametrů. Uvažujte tedy, že máte jednu
+délkovou jednotku pletiva v~prvním případě a že chcete oplotit pozemek
+o jednotkovém obsahu v~případě druhém.
+
+
+\def\mezera{\vspace*{-20pt}} \obrazek{pstruh.jpg} \textbf{Ryba
+  migrující proti proudu.}  Ryba ve vodě vydává za časovou jednotku
+energii úměrnou třetí mocnině rychlosti vzhledem k vodě. Pro překonání
+určité vzdálenosti proti proudu o rychlosti $v$ je proto potřeba
+energie $$E= k \frac 1x (x+v)^3,$$ kde $x$ je rychlost ryby vzhledem
+ke břehu a $x+v$ rychlost vzhledem k vodě. Najděte pro rybu optimální
+cestovní rychlost při migraci na dlouhé vzdálenosti, tj. rychlost, při
+které je minimalizován nutný energetický výdaj.
+
+Než začnete řešit, uvědomte si, že pokud měříme rychlosti v
+jednotkách rychlosti vody v řece, platí $v=1$ a že vhodnou volbou
+jednotek ve kterých měříme energii můžeme dosáhnout toho, že hledáme lokální minimum funkce
+\begin{equation*}
+  \frac{(x+1)^3}x.
+\end{equation*}
+
+
+
+(Podle Stewart, Day: Biocalculus. Calculus for the life siences.)
+
+\newpage
+
+Pozorování potvrdila, že migrující ryby ``znají'' řešení předchozího
+příkladu a proto plavou proti proudu rychlostí o polovinu větší než
+rychlost proudu. Vzhledem ke břehu je tedy jejich ``cestovní rychlost
+proti proudu'' poloviční jako je rychlost proudu. Mimo jiné, v rychlé
+vodě plavou rychle a v pomalejší pomaleji.
+
+Příklad typu jaký jsme řešili u migrace ryb se ale ve skutečnosti
+často objevuje naopak. Například následovně.
+
+\begin{itemize}
+\item Pozorujeme specifické chování ryb. Někdo si to toho nevšímá,
+  někdo to bere jako fakt, ale někomu to vrtá hlavou. Proč to tak je?
+  Asi si přirozeně minimalizují energii.
+\item Jakou musíme učinit hypotézu aby tato hypotéza vedla k
+  pozorovanému jevu? Jaká musí být souvislost energie s rychlostí, aby
+  minimalizace energie vedla k tomu, co pozorujeme?
+\item Po nalezení odpovědi na předchozí otázku je přirozené
+  předpokládat, že jsme našli podstatu jevu. Tedy třeba, že energie je
+  úměrná třetí mocnině rychlosti. V tomto smyslu matematika
+  zviditelnila neviditelné.
+\item Někdy je potřeba při konfrontaci s jinými pozorováními hypotézu
+  poopravit, zpřesnit nebo bohužel zamítnout. To však je přirozené při
+  poznávání světa.
+\end{itemize}
+
+\newpage
+\textbf{Lokální extrémy bez slovního zadání.} V úlohách z praxe často
+víme, že existuje optimální řešení a studovaná funkce má jediný bod s
+nulovou derivací. Pokud studujeme funkci bez jakéhokoliv kontextu,
+musíme posuzovat to, zda v daném bodě opravdu extrém je a
+jaký. Nejlépe tak, že současně určíme i intervaly monotonie. Za
+povšimnutí stojí, že při hledání bodů, kde jsou lokální extrémy,
+vlastně ani nemusíme znát původní funkci. Stačí nám o ní informace
+týkající se spojitosti a poté stačí znát derivaci. I~s~takovým
+případem se v praxi setkáváme.
+
+
+Najděte lokální extrémy a intervaly monotonie následujících funkcí. Spolu s funkcí je zadána i její derivace.
+
+\begin{multicols}2
+
+\def\priklad #1.#2. {$y=#1$, $y'=#2$}
+
+\begin{enumerate}[(1)]
+  \setlength\itemsep{20pt}
+\item \priklad \frac x{(x+1)^2}.\frac{1-x}{(x+1)^3}.
+\item \priklad \frac{x^2}{x+1}.\frac{x(x+2)}{(x+1)^2}.
+  \item \priklad \frac{x^2}{x^2+1}.\frac{2x}{(x^2+1)^2}.
+  \item \priklad (5-x)\sqrt x.\frac{1}{2\sqrt x}(5-3x).
+  \item \priklad x^2 e^{-x}.-(x - 2)xe^{-x}.
+  \item $y$ je spojitá na $\mathbb R\setminus\{2\}$,\\ $y'=\frac{(x^2+3)(x^2-3)}{2-x}$
+  \end{enumerate}
+\end{multicols}
+
+\end{document}
+
+
+
+% hughes - hallet, gleason, Lock, Applied calculus
