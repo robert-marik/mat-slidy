@@ -275,8 +275,8 @@ vnější síly.
 
 Lineární aproximaci funkce jedné proměnné můžeme zapsat ve tvaru
 $$f(x+\Delta x)\approx f+\frac{\mathrm df}{\mathrm dx}\Delta x,$$
-kde na pravé straně pro stručnost nevypisiujme závislost na
-$x$. Podobně můžeme zapsat lineární aproximaxi pro funkci dvou
+kde na pravé straně pro stručnost nevypisujme závislost na
+$x$. Podobně můžeme zapsat lineární aproximaci pro funkci dvou
 proměnných $x_{1}$ a $x_{2}$ ve tvaru
 $$
 f(x_{1}+\Delta x_{1}, x_{2})\approx f +\frac{\partial f}{\partial x_{1}},\qquad
