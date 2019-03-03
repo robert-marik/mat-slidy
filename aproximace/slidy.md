@@ -8,11 +8,11 @@
 
 <div class='obtekat'>
 
-![Pokud má funkce derivaci, dokážeme předvídat její chování. Nevidíme však daleko dopředu nebo dozadu, informace platí jenom v lokálně.  Zdroj: pixabay.com](tarot-3691074_640.jpg)
+![Pokud má funkce derivaci, dokážeme předvídat její chování. Nevidíme však daleko dopředu nebo dozadu, informace platí jenom v lokálně. Naše předpověď je prostě poněkud nejistá. Zdroj: pixabay.com](tarot-3691074_640.jpg)
 
 </div>
 
-V minulé přednášce jsme si ukázali, že pokud má funkce $f$  a pokud se veličina $x$ změní z hodnoty $x_0$ o hodnotu $\Delta x$ (tj. nová hodnota je $x_0+\Delta x$), potom se $f$ mění přibližně o $f'(x_0)\Delta x$. 
+V minulé přednášce jsme si ukázali, že pokud má funkce $f$ v bodě $x_0$ derivaci $f'(x_0)$ a pokud se veličina $x$ změní z hodnoty $x_0$ o hodnotu $\Delta x$ (tj. nová hodnota je $x_0+\Delta x$), potom se $f$ mění přibližně o $f'(x_0)\Delta x$. 
 
 Nyní tento koncept rozšíříme. Nejprve se budeme snažit aproximovat celou funkci (a ne jenom její změnu) a poté budeme aproximaci zpřesňovat.
 
@@ -33,8 +33,9 @@ Výše uvedený vzorec není těžké rozšifrovat.
 
 **Příklad (růst stromu).** Strom má v roce 2019 výšku 3 metry a roste rychlostí 0.5 metru za rok. V roce $x$ je jeho výška dána vzorcem $$h(x)=3+0.5(x-2019).$$
 
-**Příklad (aproximace důležitých funkcí v okolí nuly).** Ve cvičení ukážeme platnost následujících přiližných vzorců, které platí pro $x$ blízké k nule.
+**Příklad (aproximace důležitých funkcí v okolí nuly).** Ve cvičení ukážeme platnost následujících přibližných vzorců, které platí pro $x$ blízké k nule.
 $$\sin x\approx x, \quad \cos x\approx 1,\qquad (1+x)^n=1+nx.$$
+První dva vzorce využijeme později při popisu malých rotací v rovině.
  
 <div class='obtekat'>
 
@@ -70,8 +71,10 @@ poklesu) se příliš nemění. Někdy můžeme mít dodatečnou informaci o to
 zpomalovat, bude skutečná hodnota funkce menší než lineární
 aproximace. 
 
-Zajímá nás tedy přirozeně rychlost s jakou se mění rychlost,
-tj. derivace derivace.
+Je otázka, zda a jak je možné informaci o tom, jak rychle roste
+rychlost, případně jak rychle roste rychlost růstu rychlosti, využít.
+To znamená že budeme studovat derivaci derivace, derivaci derivace
+derivace atd.
 
 
 
@@ -153,42 +156,54 @@ pouze na určitém intervalu, třeba i krátkém).
 >* Řekneme, že $f$ má v bodě $x_0$ *lokální minimum*, pokud platí $$f(x)\geq f(x_0)$$ pro všechna $x$ z nějakého okolí bodu $x_0$.
 >* Řekneme, že $f$ má v bodě $x_0$ *lokální extrém*, pokud v tomto bodě má buď lokální maximum nebo lokální minimum.
 
-Přímo z definice lokálních extrémů a rostoutí a klesající funkce plyne, že funkce nemůže mít lokální extrém v bodě, kde je rostoucí nebo kde je klesající. Tuto skutečnost vyjadřuje pomocí derivací následující věta.
+Přímo z definice lokálních extrémů a rostoucí a klesající funkce plyne, že funkce nemůže mít lokální extrém v bodě, kde je rostoucí nebo kde je klesající. Tuto skutečnost vyjadřuje pomocí derivací následující věta.
 
 >Věta (Fermatova o lokálním extrému). Má-li funkce $f$ v bodě $x_0$ lokální extrém, potom je derivace funkce $f$ v bodě $x_0$ nulová, nebo neexistuje. 
 
+Předchozí věta eliminuje obrovské množství bodů z definičního oboru
+funkce. V prakticky využitelných případech nám po této eliminaci často
+zůstane jenom jediný bod, podobně jako v následující úloze.
 
 **Příklad.** Z kulatiny o průměru $d$ chceme vyříznout nosník
 obdélníkového tvaru, který se při zatížení co nejméně prohýbá. Z
 fyzikálních úvah plyne, že musí být maximální součin $bh^3$, kde $b$
 je šířka a $h$ výška nosníku.
 
-*Trik 1: Budeme měřit jednotky v násobcích průměru.* Proto je $d=1$. Můžeme tedy bez újmy na obecnosti předpokládat, že kulatina má jednotkový průměr.
+*Trik 1: Budeme měřit jednotky v násobcích průměru.* Proto je
+$d=1$. Můžeme tedy bez újmy na obecnosti předpokládat, že kulatina má
+jednotkový průměr.
 
 Z Pythagorovy věty (nakreslete si průřez, tj. obdélník vepsaný do
 kružnice) plyne $b=\sqrt{1-h^2}$ a snažíme se tedy řešit úlohu
-$$bh^3=\sqrt{1-h^2}h^3\to \mathrm{MAX},$$
+$$bh^3=h^3 \sqrt{1-h^2}\to \mathrm{MAX},$$
 která má fyzikální smysl na intervalu $(0,\infty)$.
 
 *Trik 2: Protože uvažujeme jenom 
 kladné délky, je funkce kladná a bude maximální tam, kde bude
 maximální její druhé mocnina.* Je tedy možné studovat ekvivalentní
-úlohu $$(bh^3)^2=(1-h^2)h^6=h^6-h^8\to \mathrm{MAX}$$ na intervalu $(0,\infty)$. Výhoda je
-zřejmá: místo součinu dvou funkcí, z nichž jedna je navíc složená,
-studujeme dvoučlenný polynom. Pro funkci $$f(h)=h^6-h^8$$ dostáváme
+úlohu
+$$(bh^3)^2=h^6(1-h^2)=h^6-h^8\to \mathrm{MAX}$$
+na intervalu $(0,\infty)$. Výhoda je zřejmá: místo součinu dvou
+funkcí, z nichž jedna je navíc složená, studujeme dvoučlenný
+polynom. Pro funkci $$f(h)=h^6-h^8$$ dostáváme
 $$ \frac{\mathrm df}{\mathrm dh}=6h^5-8h^7=2h^5(3-4h^2).$$
 Tato derivace je nulová pro 
 $$h^2=\frac 34$$
-tj. $$h=\frac{\sqrt 3}2.$$ Šířka  bude 
+tj. $$h=\frac{\sqrt 3}2.$$ Pro tuto výšku bude mít nosník maximální
+hodnotu tuhosti. Šířka nosníku bude
 $$b=\sqrt{1-h^2}=\sqrt{1-\frac 34}=\sqrt{\frac 14}=\frac 12.$$
-Poměr výšky a šířky u nosníku maximální tuhosti tedy bude $\sqrt{3}:1$ a šířka bude rovna polovině průměru.
+Poměr výšky a šířky u nosníku maximální tuhosti tedy bude $\sqrt{3}:1$
+a šířka bude rovna polovině průměru.
 
 [Online výpočet.](https://sagecell.sagemath.org/?z=eJwrSyzSUM9QSFHX5OVK08jQtM2IM9YqLiwq0UiJM9LNiDMCihdn5JdrpOmlZKaBVGAI6BXn55SlgmQAYWkWzQ==&lang=sage)
 
 
 **Poznámka.** Někdy se při studiu lokálních extrémů hodí dva následující triky.
 
-1. Vhodnou volbou jednotek dokážeme eliminovat některé parametry. Přesněji, vhodnou volnou jednotek dokážeme některým parametrům dát numerikou hodnotu. Vyšetřovaná funkce je potom často jednodušší.
+1. Vhodnou volbou jednotek dokážeme eliminovat některé
+parametry. Přesněji, vhodnou volnou jednotek dokážeme některým
+parametrům dát konkrétní numerickou hodnotu. Vyšetřovaná funkce je
+potom často jednodušší.
 1. Je-li $g$ rostoucí, potom z definice rostoucí funkce plynou ekvivalence
 $$
 \begin{gathered}
@@ -196,48 +211,82 @@ $$
     f(x)\geq f(x_0) \iff   g(f(x))\geq g(f(x_0))
 \end{gathered}
 $$
-a proto funkce $f(x)$ a $g(f(x))$ mají stejné lokální extrémy. Toho je možné využít, pokud vidíme, že při vhodné volbě funkce $g$ by byla funkce $g(f(x))$ vhodnější pro hledání lokálních extrémů. Podobně je možné uvažovat i pro klesající funkce $g$, ale protože klesající funkce obrací směr nerovností, mění se lokální maximum na lokální minimum a naopak.
+a proto funkce $f(x)$ a $g(f(x))$ mají lokální extrémy ve stejných
+bodech. Toho je možné využít, pokud vidíme, že při vhodné volbě funkce
+$g$ by byla funkce $g(f(x))$ vhodnější pro hledání lokálních
+extrémů. Podobně je možné uvažovat i pro klesající funkce $g$, ale
+protože klesající funkce obrací směr nerovností, mění se lokální
+maximum na lokální minimum a naopak.
 
-Pokud řešíme úlohu s praktickým zadáním, je z povahy úlohy často zřejmé, že lokální extrém požadovaného typu existuje a často to bývá jediný bod, kde je derivace nulová. Pokud takových bodů máme více, nebo pokud je situace méně zřejmá, můžeme existenci lokálního extrému posoudit pomocí následující věty.
+Pokud řešíme úlohu s praktickým zadáním, je z povahy úlohy často
+zřejmé, že lokální extrém požadovaného typu existuje a často to bývá
+jediný bod, kde je derivace nulová. Pokud takových bodů máme více,
+nebo pokud je situace méně zřejmá, můžeme existenci lokálního extrému
+posoudit pomocí následující věty.
 
 > Věta (postačující podmínka pro lokální extrémy). Je-li $f$ spojitá v bodě $x_0$ a mění-li se v bodě $x_0$ funkce $f$ z rostoucí na klesající, má funkce $f$ v bodě $x_0$ lokální maximum. Analogicky, lokální minimum nastává při změně z klesající na rostoucí.
 
-Podle této věty jsou inervaly monotonie zásadní informací pro nalezení
-lokálních extrémů. Vzhledem k souvislosti monotonie s derivací je tedy nutné se věnovat nalezení intervalů, kde má funkce kladnou derivaci a intervalů, kde má funkce zápornou derivaci.
+Podle této věty jsou intervaly monotonie zásadní informací pro
+nalezení lokálních extrémů. Vzhledem k souvislosti monotonie s
+derivací je tedy nutné se věnovat nalezení intervalů, kde má funkce
+kladnou derivaci a intervalů, kde má funkce zápornou derivaci.
 
 # Bolzanova věta
 
-Bolzanova věta je poměrně názorné tvrzení. Hlavním přínosem pražského matematika Bernarda Bolzana bylo, že si uvědomil, že toto tvrzení není snadným důsledkem definice spojitosti a že přes názornost tohoto tvrzení je nutno podat jeho přesný důkaz, který rozhodně není jednoduchý. Jiná, zdánlivě jasná tvrzení, však být zřejmá nemusí. Bolzano například našel funkci, která je spojitá, ale její graf je tak komplikovaný, že se nedá nakreslit.
+Bolzanova věta je poměrně názorné tvrzení. Hlavním přínosem pražského
+matematika Bernarda Bolzana bylo, že si uvědomil, že toto tvrzení není
+snadným důsledkem definice spojitosti a že přes názornost tohoto
+tvrzení je nutno podat jeho přesný důkaz, který rozhodně není
+jednoduchý. Jiná, zdánlivě jasná tvrzení, však být zřejmá
+nemusí. Bolzano například našel funkci, která je spojitá, ale její
+graf je tak komplikovaný, že se nedá nakreslit.
 
-Podmínka $f(a)f(b)<0$ v následující větě znamená, že funkční hodnoty funkce $f$ v bodech $a$ a $b$ se liší znaménkem.
+Podmínka $f(a)f(b)<0$ v následující větě znamená, že funkční hodnoty
+funkce $f$ v bodech $a$ a $b$ se liší znaménkem.
 
 > Věta (Bolzanova věta). Nechť $f$ je spojitá funkce na intervalu $[a,b]$ a $f(a)f(b)<0$. Potom existuje $c$ na intervalu $[a,b]$ takové, že platí $f(c)=0.$
 
 **Důsledek.**
 
-* Na intervalu, kde je funkce spojitá a různá od nuly, se zachovává znaménko funkce, tj. funkce je zde buď pořád kladná nebo pořád záporná.
-* Na intervalu, kde má funkce spojitou a od nuly různou derivaci, se zachovává monotonie funkce, tj. funkce je zde buď pořád rostoucí nebo pořád klesající.
+* Na intervalu, kde je funkce spojitá a různá od nuly, se zachovává
+znaménko funkce, tj. funkce je zde buď pořád kladná nebo pořád
+záporná.
+* Na intervalu, kde má funkce spojitou a od nuly různou derivaci, se
+zachovává monotonie funkce, tj. funkce je zde buď pořád rostoucí nebo
+pořád klesající.
 
-**Poznámka.** Lokální extrém nastává tam, kde je funkce spojitá a kde se mění monotonie. Nenastává tam, kde se monotonie spojité funkce nemění. Přirozeně nenastává ani tam, kde funkce není definována.
+**Poznámka.** Lokální extrém nastává tam, kde je funkce spojitá a kde
+se mění monotonie. Nenastává tam, kde se monotonie spojité funkce
+nemění. Přirozeně nenastává ani tam, kde funkce není definována.
 
 **Příklady** budou na přednášce a ve cvičení.
 
 
 # Lineární aproximace rovinné transformace
 
-Tyto pasáže rozšiřují lineární aproximaci na případ, kdy chceme popsat
-transformaci roviny. To využijeme při popisu matematikého namáhání při odvození veličin, na nichž je založen obecný Hookův zákon.
+Následující pasáže rozšiřují lineární aproximaci na případ, kdy chceme
+popsat transformaci roviny. Protože v tomto případě pracujeme se dvěma
+souřadnicemi, je nutno uvažovat dvě funkce (pro každou souřadnici
+jednu funkci) a každá funkce závisí na dvou proměnných (na obou
+souřadnicích). Popis, který si představíme, využijeme při popisu
+matematického namáhání při odvození veličin, na nichž je založen obecný
+Hookův zákon dávající do souvislosti deformaci materálu a působení
+vnější síly.
 
-Lineární aproximaci funkce jedné proměnné můžeme zapsat ve tvaru $$f(x+\Delta x)\approx f+\frac{\mathrm df}{\mathrm dx}\Delta x,$$
-kde na pravé straně pro stručnost nevypisiujme závislost na $x$. Podobně můžeme zapsat lineární aproximaxi pro funkci dvou proměnných $x_{1}$ a $x_{2}$ ve tvaru
-$$f(x_{1}+\Delta x_{1}, x_{2})\approx f +\frac{\partial f}{\partial x_{1}},\qquad
+Lineární aproximaci funkce jedné proměnné můžeme zapsat ve tvaru
+$$f(x+\Delta x)\approx f+\frac{\mathrm df}{\mathrm dx}\Delta x,$$
+kde na pravé straně pro stručnost nevypisiujme závislost na
+$x$. Podobně můžeme zapsat lineární aproximaxi pro funkci dvou
+proměnných $x_{1}$ a $x_{2}$ ve tvaru
+$$
+f(x_{1}+\Delta x_{1}, x_{2})\approx f +\frac{\partial f}{\partial x_{1}},\qquad
 f(x_{1}, x_{2}+\Delta x_{2})\approx f +\frac{\partial f}{\partial x_{2}}.
 $$
 
 Uvažujme nyní mechanické namáhání, kdy se těleso posunuje, rotuje a
 deformuje vlivem působení vnější síly a bod $(x_{1}, x_{2})$ se
 transformuje na bod $(u_{1}(x_{1},x_{2}),u_{2}(x_{1},x_{2})).$
-Obdélník $ABCD$ se zobrazí na obrazec $A'B'C'D'$. Pomocí lineárních
+Čtverec $ABCD$ na obrázku se zobrazí na obrazec $A'B'C'D'$. Pomocí lineárních
 aproximací
 $$
 \begin{aligned}
@@ -250,16 +299,23 @@ $$
   \end{aligned}
 $$
 dostáváme aproximace polohy bodů $B'$, $C'$ a $D'$ založené na
-relativní poloze bodů $B$, $C$ a $D$ vzhledem k $A$. Bod $C$ je od
-bodu $A$ vzdálen o $\Delta x_{1}$ ve vodorovném směru a o
-$\Delta x_{2}$ ve svislém směru. Bod $C'$ je vzhledem k bodu $A'$
-umístěn o
-$\frac{\partial u_{1}}{x_{1}}\Delta x_{1}+\frac{\partial
-  u_{1}}{x_{2}}\Delta x_{2}$ doprava a
-$\frac{\partial u_{2}}{x_{1}}\Delta x_{1}+\frac{\partial u_{2}}
-{x_{2}}\Delta x_{2}$ nahoru. Při transformraci ve $3D$ je situace
-podobná, jenom jsou zde další členy od třetích souřadnic. Aby se
-situace nestala nepřehlednou, je klasický způsob zápisu
-neudržitelný. Nástroj pro přehlednou formulaci lineární aproximace
-dostaneme k dispozici později po probrání maticového počtu a
-maticového násobení.
+relativní poloze bodů $B$, $C$ a $D$ vzhledem k $A$ a na změně polohy
+bodu $A$. Bod $C$ je od bodu $A$ vzdálen o $\Delta x_{1}$ ve
+vodorovném směru a o $\Delta x_{2}$ ve svislém směru. Bod $C'$ je
+vzhledem k bodu $A'$ umístěn o $\frac{\partial u_{1}}{\partial
+x_{1}}\Delta x_{1}+\frac{\partial u_{1}}{\partial x_{2}}\Delta x_{2}$
+doprava a $\frac{\partial u_{2}}{\partial x_{1}}\Delta
+x_{1}+\frac{\partial u_{2}} {\partial x_{2}}\Delta x_{2}$ nahoru. Při
+transformaci ve $3D$ je situace podobná, jenom jsou zde další členy
+od třetích souřadnic. Aby se situace nestala nepřehlednou, je klasický
+způsob zápisu neudržitelný. Nástroj pro přehlednou formulaci lineární
+aproximace dostaneme k dispozici později po probrání maticového počtu
+a maticového násobení. Poté budeme díky lineární aproximaci schopni zformulovat souvislost mezi deformací a působením vnější síly.
+
+Za výše uvedenou lineární aproximaci však platíme jistou daň. Lineární
+zobrazení mimo jiné transformuje přímky na přímky a rovnoběžky na
+rovnoběžky. Deformaci nakreslenou na obrázku tím pádem nemůžeme
+podchytit. Lineární aproximace je přesná jenom pro relativně malé
+deformace. Proto se také výsledný produkt nazývá tenzor malých
+deformací.
+

@@ -3,7 +3,7 @@ kde=$1
 
 if [ -z $kde ]
 then
-   kde="derivace"
+   kde="derivace aproximace"
    echo '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> 
 <html> <head> 
 
