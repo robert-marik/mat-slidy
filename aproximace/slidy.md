@@ -57,6 +57,8 @@ potenciálu a vzhledem k libovolnosti volby nulové hladiny je tato
 hodnota nepodstatná. Veličina $g=GMR^{-2}$ je tíhové zrychlení
 vyjádřené pomocí gravitační konstanty $G$ a parametrů Země. Veličina $gh$ je potenciál v tíhovém poli Země. Tuto veličinu známe lépe ze vzorce pro potenciální energii tělesa o hmotnosti $m$, který má tvar $$E=mgh.$$
 
+[Online výpočet tíhového zrychlení](https://sagecell.sagemath.org/?z=eJxNjrEKgzAUAPdA_uFBB6Ngmlir7fDGji4OjoVHRQ22Rp6p31916nhwHDfSPBMWuihzc0usearU2hjgBD3T6oLzE73h5acl0BSkqLG4lNYYsytMrfsu4Dt4EIdBigqv-l5mRyfLj8yHln-DcSVWEUexFI3iGNNxP0iq8wYgRY-Nbl3XbaQY683qf4UjLIo=&lang=sage)
+
 **Poznámka.** Lineární aproximace funkce je vlastně aproximace tečnou. Protože 
 pojem tečna ze střední školy chápeme jenom intuitivně, můžeme nyní pomocí
 derivace tečnu dokonce definovat. Z geometrického pohledu je tečna přímka
@@ -145,7 +147,18 @@ atomy popsané tímto potenciálem se chovají jako tělesa na pružině o tuho
 úhlovou frekvenci oscilací $\omega = \sqrt{\frac km}$, odvozený
 původně pro těleso na pružině. Veličina $r-1$ je výchylka z rovnovážného stavu.
 
+[Online výpočet a obrázek.](https://sagecell.sagemath.org/?z=eJxljkEKwjAQRfeF3GF2SXCMzVi6yy1KlkJQQaE1YSya3t7JQjfuHv-_-cwrsdGsreoiBPAHPnmCPZDAqLpJsujWtM2ZDaNHErEu9wfWJVUpe3dEUl3xwmXOq4mGLYK4P8vKSaFvP_33COcs-0Hz9dIeed7y28jiDgohbKIEj9D80LuxUUvcYD-S5jQL&lang=sage)
+
 # Motivace: Jak najít minimum potenciálu?
+
+
+<div class='obtekat'>
+
+![Znalost minima potenciální energie je často zásadní pro nalezení stabilní konfigurace systému. Od molekul po soustavy těles. Musíme mít univerzální postup, jak tato minima hledat.](taylor.png)
+
+</div>
+
+
 
 V příkladě s aproximací potenciálu pomocí Taylorova polynomu se nám
 povedlo potenciál aproximovat pomocí kvadratické funkce v okolí
@@ -241,6 +254,13 @@ kladnou derivaci a intervalů, kde má funkce zápornou derivaci.
 
 # Bolzanova věta
 
+
+<div class='obtekat'>
+
+![Bolzanova věta je jedna z těch, které člověka nepřekvapí.](bolzano.png)
+
+</div>
+
 Bolzanova věta je poměrně názorné tvrzení. Hlavním přínosem pražského
 matematika Bernarda Bolzana bylo, že si uvědomil, že toto tvrzení není
 snadným důsledkem definice spojitosti a že přes názornost tohoto
@@ -252,7 +272,7 @@ graf je tak komplikovaný, že se nedá nakreslit.
 Podmínka $f(a)f(b)<0$ v následující větě znamená, že funkční hodnoty
 funkce $f$ v bodech $a$ a $b$ se liší znaménkem.
 
-> Věta (Bolzanova věta). Nechť $f$ je spojitá funkce na intervalu $[a,b]$ a $f(a)f(b)<0$. Potom existuje $c$ na intervalu $[a,b]$ takové, že platí $f(c)=0.$
+> Věta (Bolzanova věta). Nechť $f$ je spojitá funkce na intervalu $[a,b]$ a $f(a)f(b)<0$. Potom existuje $c$ na intervalu $(a,b)$ takové, že platí $f(c)=0.$
 
 **Důsledek.**
 
@@ -271,6 +291,14 @@ nemění. Přirozeně nenastává ani tam, kde funkce není definována.
 
 
 # Lineární aproximace rovinné transformace
+
+
+
+<div class='obtekat'>
+
+![Působením síly se element materiálu může posunout, rotovat, deformovat. Tunto změnu potřebujeme zachytit.](deformace.png)
+
+</div>
 
 Následující pasáže rozšiřují lineární aproximaci na případ, kdy chceme
 popsat transformaci roviny. Protože v tomto případě pracujeme se dvěma
@@ -318,12 +346,13 @@ transformaci ve $3D$ je situace podobná, jenom jsou zde další členy
 od třetích souřadnic. Aby se situace nestala nepřehlednou, je klasický
 způsob zápisu neudržitelný. Nástroj pro přehlednou formulaci lineární
 aproximace dostaneme k dispozici později po probrání maticového počtu
-a maticového násobení. Poté budeme díky lineární aproximaci schopni zformulovat souvislost mezi deformací a působením vnější síly.
+a maticového násobení. Poté budeme díky lineární aproximaci schopni
+zformulovat souvislost mezi deformací a působením vnější síly.
 
 Za výše uvedenou lineární aproximaci však platíme jistou daň. Lineární
 zobrazení mimo jiné transformuje přímky na přímky a rovnoběžky na
 rovnoběžky. Deformaci nakreslenou na obrázku tím pádem nemůžeme
 podchytit. Lineární aproximace je přesná jenom pro relativně malé
-deformace. Proto se také výsledný produkt nazývá tenzor malých
-deformací.
+deformace. Proto se také výsledný produkt, ke kterému se v průběhu
+semestru dopracujeme, nazývá tenzor malých deformací.
 
