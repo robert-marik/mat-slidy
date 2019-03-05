@@ -1,20 +1,82 @@
-% Derivace & friends II
+% Integrál na druhou
 % Robert Mařík
 % 2019
 
-\iffalse
+Uvedeme si dva druhy integrálu. Jeden je představíme jako opak
+derivace, druhý jako náhrada součtu pro přiípad, kdy potřebujeme
+sčítat nekonečně mnoho příspěvků, z nichž každý má v podstatě nulovou
+hodnotu.
 
-# Motivace: Derivace dělá funkci předvídatelnou
+
+
+
+# Motivace:  Jak z rychlosti změny vypočítat změnu?
+
+
+<style>
+table, th, td {
+   border: 2px solid green;
+} 
+table {width:97%;}
+td {padding:10px}
+tr td:first-child {color:green; background: #E9E9E9;}
+table {
+    border-collapse: collapse;
+}
+</style>
+
+<style>
+table, th, td {
+   border: 2px solid green;
+} 
+table {width:97%;}
+td {padding:10px}
+tr td:first-child {color:green; background: #E9E9E9;}
+table {
+    border-collapse: collapse;
+}
+
+th {
+    background-color: green;
+    color: white;
+    border-color: gray;
+}
+
+th {text-align: center;}
+</style>
+
+Derivace umožní z veličiny v prvním sloupci získat veličinu v
+pravém sloupci. Pohledem na tyto příklady věříme, že bude fungovat i
+něco, co naopak z rychlosti zrekonstruje původní veličinu, která se
+touto rychlostí mění.
+
+
+Závislá proměnná|Nezávislá proměnná|Derivace|
+|------------------------|-----------------------|------------------------|
+|veličina $x$|čas|rychlost růstu veličiny $x$|
+|výška stromu|čas|rychlost růstu do výšky|
+|objem kmene stromu (smrk)|čas|rychlost růstu ve smyslu přírůstu dřevní hmoty|
+|dráha při pohybu při pohybu po přímce i vzdálenost od referečního bodu|čas doba od začátku pohybu nebo od referečního okamžiku|rychlost|
+|rychlost|čas|zrychlení|
+|teplota v místě tyče (např. stěna, což je v podstatě extrémně krátká a široká tyč)|poloha|gradient teploty, veličina udávající intenzitu toku tepla tyčí resp. stěnou|
+|hmotnost části tyče (např od zvoleného bodu doleva)|poloha na tyči (např. vzdálenost od levého konce)|lineární hustota tyče|
+|všeobecná cenová hladina (cca náklady na živobytí)|čas|inflace|
+|náklady na výrobu zboží|množství zboží|mezní náklady|
+|nadmořská výška na trase treku|poloha|stoupání trasy|
+|graf funkce $f(x)$|$x$|růst grafu (směrnice tečny)|
+|potenciální energie tělesa v radiálním silovém poli|vzdálenost od středu|působící síla vynásobená faktorem $-1$|
+
+
+
+# Motivace: Jak z vlastnosti křivky získat celou křivku
+
 
 <div class='obtekat'>
 
-![Pokud má funkce derivaci, dokážeme předvídat její chování. Nevidíme však daleko dopředu nebo dozadu, informace platí jenom v lokálně. Naše předpověď je prostě poněkud nejistá. Zdroj: pixabay.com](tarot-3691074_640.jpg)
+![Zavěšený most na Hauraki Rail Trail (Nový Zéland). Tyto traily byly otevřeny v květnu  2012 a získaly Winer Timber Design Award v kategorii Sustainability
+ Zdroj: nzwood.co.nz](zaveseny_most.jpg)
 
 </div>
-
-V minulé přednášce jsme si ukázali, že pokud má funkce $f$ v bodě $x_0$ derivaci $f'(x_0)$ a pokud se veličina $x$ změní z hodnoty $x_0$ o hodnotu $\Delta x$ (tj. nová hodnota je $x_0+\Delta x$), potom se $f$ mění přibližně o $f'(x_0)\Delta x$. 
-
-Nyní tento koncept rozšíříme. Nejprve se budeme snažit aproximovat celou funkci (a ne jenom její změnu) a poté budeme aproximaci zpřesňovat.
 
 \fi
 
@@ -99,11 +161,6 @@ derivace atd.
 aneb
 $$f''=(f')', 
 \quad f'''=(f'')', \quad f^{(k)}={(f^{(k-1)})'}.$$
-
-Označení derivací pomocí čárek se nazývá Lagrangeova notace, označení
-pomocí podílu diferenciálů Leibnizova notace. Ještě se někdy používá i
-Eulerova notace, používající $\mathrm Df$, $\mathrm D^2 f$ a $\mathrm
-D^k f$ pro první, druhou a $k$-tou derivaci.
 
 **Příklad.** 
 
