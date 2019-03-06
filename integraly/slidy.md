@@ -1,22 +1,108 @@
-% Derivace & friends II
+% Integrál na druhou
 % Robert Mařík
 % 2019
 
-\iffalse
+Uvedeme si dva druhy integrálu. Jeden je představíme jako opak
+derivace, druhý jako náhrada součtu pro případ, kdy potřebujeme
+sčítat nekonečně mnoho příspěvků, z nichž každý má v podstatě nulovou
+hodnotu.
 
-# Motivace: Derivace dělá funkci předvídatelnoulnou
+
+
+
+# Motivace:  Jak z rychlosti změny vypočítat změnu?
+
+
+<style>
+table, th, td {
+   border: 2px solid green;
+} 
+table {width:97%;}
+td {padding:10px}
+tr td:first-child {color:green; background: #E9E9E9;}
+table {
+    border-collapse: collapse;
+}
+</style>
+
+<style>
+table, th, td {
+   border: 2px solid green;
+} 
+table {width:97%;}
+td {padding:10px}
+tr td:first-child {color:green; background: #E9E9E9;}
+table {
+    border-collapse: collapse;
+}
+
+th {
+    background-color: green;
+    color: white;
+    border-color: gray;
+}
+
+th {text-align: center;}
+</style>
+
+Derivace umožní z veličiny v prvním sloupci získat veličinu v
+pravém sloupci. Pohledem na tyto příklady věříme, že bude fungovat i
+něco, co naopak z rychlosti zrekonstruje původní veličinu, která se
+touto rychlostí mění.
+
+
+Závislá proměnná|Nezávislá proměnná|Derivace|
+|------------------------|-----------------------|------------------------|
+|veličina $x$|čas|rychlost růstu veličiny $x$|
+|výška stromu|čas|rychlost růstu do výšky|
+|objem kmene stromu (smrk)|čas|rychlost růstu ve smyslu přírůstu dřevní hmoty|
+|dráha při pohybu při pohybu po přímce i vzdálenost od referečního bodu|čas doba od začátku pohybu nebo od referečního okamžiku|rychlost|
+|rychlost|čas|zrychlení|
+|teplota v místě tyče (např. stěna, což je v podstatě extrémně krátká a široká tyč)|poloha|gradient teploty, veličina udávající intenzitu toku tepla tyčí resp. stěnou|
+|hmotnost části tyče (např od zvoleného bodu doleva)|poloha na tyči (např. vzdálenost od levého konce)|lineární hustota tyče|
+|všeobecná cenová hladina (cca náklady na živobytí)|čas|inflace|
+|náklady na výrobu zboží|množství zboží|mezní náklady|
+|nadmořská výška na trase treku|poloha|stoupání trasy|
+|graf funkce $f(x)$|$x$|růst grafu (směrnice tečny)|
+|potenciální energie tělesa v radiálním silovém poli|vzdálenost od středu|působící síla vynásobená faktorem $-1$|
+
+
+
+# Motivace: Jak z vlastnosti křivky získat celou křivku
+
 
 <div class='obtekat'>
 
-![Pokud má funkce derivaci, dokážeme předvídat její chování. Nevidíme však daleko dopředu nebo dozadu, informace platí jenom v lokálně. Naše předpověď je prostě poněkud nejistá. Zdroj: pixabay.com](tarot-3691074_640.jpg)
+![Zavěšený most na Hauraki Rail Trail (Nový Zéland). Tyto traily byly otevřeny v květnu  2012 a získaly Winer Timber Design Award v kategorii Sustainability
+ Zdroj: nzwood.co.nz](zaveseny_most.jpg)
+
+![Zavěšený most na Hauraki Rail Trail (Nový Zéland). Tyto traily byly otevřeny v květnu  2012 a získaly Winer Timber Design Award v kategorii Sustainability
+ Zdroj: nzwood.co.nz](zaveseny_most.jpg)
 
 </div>
 
-V minulé přednášce jsme si ukázali, že pokud má funkce $f$ v bodě $x_0$ derivaci $f'(x_0)$ a pokud se veličina $x$ změní z hodnoty $x_0$ o hodnotu $\Delta x$ (tj. nová hodnota je $x_0+\Delta x$), potom se $f$ mění přibližně o $f'(x_0)\Delta x$. 
+U zavěšeného mostu lano nese hmotnost rovnoměrně rozloženou ve
+vodorovném směru. Je potřeba zvolit vhodnoudélku svislých lan tak, aby
+síla působící na nosné lano byla vždy ve směru tohoto lana. Potom
+je systém nejstabilnější. 
 
-Nyní tento koncept rozšíříme. Nejprve se budeme snažit aproximovat celou funkci (a ne jenom její změnu) a poté budeme aproximaci zpřesňovat.
+Díky symetrii stačí uvažovat jenom půlku lana. Na část lana nad
+intervalem $[0,x]$ působí následující síly.
 
-\fi
+* Tahová síla lana v minimu ($x=0$) o velikosti $T$ doleva.
+* Gravitační síla o velikosti $\mu x g$ směrem dolů, kde $\mu$ je
+  lineární hustota a $\mu x$ je hmotnost části mostu, odpovdající
+  intervalu $[0,x]$.
+* Tahová síla doprava nahoru na pravém konci. Její velikost a směr
+  jsou takové, aby součet všech sil působících na uvažovaný element
+  byl roven nule. Chceme, aby v tomto bodě směr síly určoval směr
+  lana, tj. aby síla byla tečná k nosnému lanu.
+  
+Všechny tři síly tedy tvoří pravoůhlý trojúhelník (protože vektorový
+součet má být nulový) a poměr odvěsen $\frac{\mu g x}{T}$ udává
+směrnici přepony. Křivka udávájící směr nosného lana tedy musí mít
+tvar funkce, která splňuje $$y'=\frac{\mu g}{T} x,$$ kde $\mu$, $g$, a
+$T$ jsou pro danou úlohu konstanty.
 
 # Lineární aproximace v 1D
 
@@ -57,11 +143,9 @@ potenciálu a vzhledem k libovolnosti volby nulové hladiny je tato
 hodnota nepodstatná. Veličina $g=GMR^{-2}$ je tíhové zrychlení
 vyjádřené pomocí gravitační konstanty $G$ a parametrů Země. Veličina $gh$ je potenciál v tíhovém poli Země. Tuto veličinu známe lépe ze vzorce pro potenciální energii tělesa o hmotnosti $m$, který má tvar $$E=mgh.$$
 
-[Online výpočet tíhového zrychlení](https://sagecell.sagemath.org/?z=eJxNjrEKgzAUAPdA_uFBB6Ngmlir7fDGji4OjoVHRQ22Rp6p31916nhwHDfSPBMWuihzc0usearU2hjgBD3T6oLzE73h5acl0BSkqLG4lNYYsytMrfsu4Dt4EIdBigqv-l5mRyfLj8yHln-DcSVWEUexFI3iGNNxP0iq8wYgRY-Nbl3XbaQY683qf4UjLIo=&lang=sage)
-
-**Poznámka.** Lineární aproximace funkce je vlastně aproximace tečnou. Protože 
-pojem tečna ze střední školy chápeme jenom intuitivně, můžeme nyní pomocí
-derivace tečnu dokonce definovat. Z geometrického pohledu je tečna přímka
+**Poznámka.** Lineární aproximace funkce je vlastně aproximace tečnou. Protože tento
+pojem ze střední školy chápeme jenom intuitivně, můžeme pomocí
+derivace tečnu dokonce definovat. Z geometrického pohledu je to přímka
 bodem $[x_0,f(x_0)]$, která má směrnici $f'(x_0)$. Proto se o derivaci
 často mluví jako o směrnici tečny.
 
@@ -101,11 +185,6 @@ derivace atd.
 aneb
 $$f''=(f')', 
 \quad f'''=(f'')', \quad f^{(k)}={(f^{(k-1)})'}.$$
-
-Označení derivací pomocí čárek se nazývá Lagrangeova notace, označení
-pomocí podílu diferenciálů Leibnizova notace. Ještě se někdy používá i
-Eulerova notace, používající $\mathrm Df$, $\mathrm D^2 f$ a $\mathrm
-D^k f$ pro první, druhou a $k$-tou derivaci.
 
 **Příklad.** 
 
@@ -152,18 +231,7 @@ atomy popsané tímto potenciálem se chovají jako tělesa na pružině o tuho
 úhlovou frekvenci oscilací $\omega = \sqrt{\frac km}$, odvozený
 původně pro těleso na pružině. Veličina $r-1$ je výchylka z rovnovážného stavu.
 
-[Online výpočet a obrázek.](https://sagecell.sagemath.org/?z=eJxljkEKwjAQRfeF3GF2SXCMzVi6yy1KlkJQQaE1YSya3t7JQjfuHv-_-cwrsdGsreoiBPAHPnmCPZDAqLpJsujWtM2ZDaNHErEu9wfWJVUpe3dEUl3xwmXOq4mGLYK4P8vKSaFvP_33COcs-0Hz9dIeed7y28jiDgohbKIEj9D80LuxUUvcYD-S5jQL&lang=sage)
-
 # Motivace: Jak najít minimum potenciálu?
-
-
-<div class='obtekat'>
-
-![Znalost minima potenciální energie je často zásadní pro nalezení stabilní konfigurace systému. Od molekul po soustavy těles. Musíme mít univerzální postup, jak tato minima hledat.](taylor.png)
-
-</div>
-
-
 
 V příkladě s aproximací potenciálu pomocí Taylorova polynomu se nám
 povedlo potenciál aproximovat pomocí kvadratické funkce v okolí
@@ -189,14 +257,6 @@ Přímo z definice lokálních extrémů a rostoucí a klesající funkce plyne,
 Předchozí věta eliminuje obrovské množství bodů z definičního oboru
 funkce. V prakticky využitelných případech nám po této eliminaci často
 zůstane jenom jediný bod, podobně jako v následující úloze.
-
-
-<div class='obtekat'>
-
-![K problému vyřezání co nejtužšího nosníku.](nosnik.png)
-
-</div>
-
 
 **Příklad.** Z kulatiny o průměru $d$ chceme vyříznout nosník
 obdélníkového tvaru, který se při zatížení co nejméně prohýbá. Z
@@ -267,13 +327,6 @@ kladnou derivaci a intervalů, kde má funkce zápornou derivaci.
 
 # Bolzanova věta
 
-
-<div class='obtekat'>
-
-![Bolzanova věta je jedna z těch, které člověka nepřekvapí.](bolzano.png)
-
-</div>
-
 Bolzanova věta je poměrně názorné tvrzení. Hlavním přínosem pražského
 matematika Bernarda Bolzana bylo, že si uvědomil, že toto tvrzení není
 snadným důsledkem definice spojitosti a že přes názornost tohoto
@@ -285,39 +338,25 @@ graf je tak komplikovaný, že se nedá nakreslit.
 Podmínka $f(a)f(b)<0$ v následující větě znamená, že funkční hodnoty
 funkce $f$ v bodech $a$ a $b$ se liší znaménkem.
 
-> Věta (Bolzanova věta). Nechť $f$ je spojitá funkce na intervalu $[a,b]$ a $f(a)f(b)<0$. Potom existuje $c$ na intervalu $(a,b)$ takové, že platí $f(c)=0.$
+> Věta (Bolzanova věta). Nechť $f$ je spojitá funkce na intervalu $[a,b]$ a $f(a)f(b)<0$. Potom existuje $c$ na intervalu $[a,b]$ takové, že platí $f(c)=0.$
 
 **Důsledek.**
 
 * Na intervalu, kde je funkce spojitá a různá od nuly, se zachovává
 znaménko funkce, tj. funkce je zde buď pořád kladná nebo pořád
-záporná. Mezi oběma variantami se můžeme rozhodnout testováním
-znaménka funkce v jednom libovolném bodě intervalu.
+záporná.
 * Na intervalu, kde má funkce spojitou a od nuly různou derivaci, se
 zachovává monotonie funkce, tj. funkce je zde buď pořád rostoucí nebo
-pořád klesající. Mezi oběma variantami se můžeme rozhodnout testováním
-monotonie (tj. znaménka derivace) v jednom libovolném bodě intervalu.
+pořád klesající.
 
 **Poznámka.** Lokální extrém nastává tam, kde je funkce spojitá a kde
 se mění monotonie. Nenastává tam, kde se monotonie spojité funkce
 nemění. Přirozeně nenastává ani tam, kde funkce není definována.
 
-**Příklad.** Najděte lokální extrém funkce $y=\frac x{x^2+1}$. Derivace je $y'=\frac{(1+x)(1-x)}{(x^2+1)^2}$. 
-
-**Příklad.** Najděte lokální extrém funkce $y=\frac{x^3}{x+2}$. Derivace je $y'=\frac{2(x+3)x^2}{(x+2)^2}$.
-
-Řešení příkladů bude na přednášce. Další příklady ve cvičení.
+**Příklady** budou na přednášce a ve cvičení.
 
 
 # Lineární aproximace rovinné transformace
-
-
-
-<div class='obtekat'>
-
-![Působením síly se element materiálu může posunout, rotovat, deformovat. Tunto změnu potřebujeme zachytit.](deformace.png)
-
-</div>
 
 Následující pasáže rozšiřují lineární aproximaci na případ, kdy chceme
 popsat transformaci roviny. Protože v tomto případě pracujeme se dvěma
@@ -365,13 +404,12 @@ transformaci ve $3D$ je situace podobná, jenom jsou zde další členy
 od třetích souřadnic. Aby se situace nestala nepřehlednou, je klasický
 způsob zápisu neudržitelný. Nástroj pro přehlednou formulaci lineární
 aproximace dostaneme k dispozici později po probrání maticového počtu
-a maticového násobení. Poté budeme díky lineární aproximaci schopni
-zformulovat souvislost mezi deformací a působením vnější síly.
+a maticového násobení. Poté budeme díky lineární aproximaci schopni zformulovat souvislost mezi deformací a působením vnější síly.
 
 Za výše uvedenou lineární aproximaci však platíme jistou daň. Lineární
 zobrazení mimo jiné transformuje přímky na přímky a rovnoběžky na
 rovnoběžky. Deformaci nakreslenou na obrázku tím pádem nemůžeme
 podchytit. Lineární aproximace je přesná jenom pro relativně malé
-deformace. Proto se také výsledný produkt, ke kterému se v průběhu
-semestru dopracujeme, nazývá tenzor malých deformací.
+deformace. Proto se také výsledný produkt nazývá tenzor malých
+deformací.
 

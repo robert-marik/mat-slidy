@@ -125,7 +125,7 @@ pokud tato limita existuje a je konečná.
 
 Derivaci funkce $f$ v bodě $x_0$ označujeme $f'(x_0)$ nebo
 $\frac{\mathrm df(x_0)}{\mathrm dx}$. Derivaci v libovolném bodě potom
-$f'$, $f'(x)$ nebo $\frac{\mathrm df}{\mathrm dx}$.
+$f'$, $f'(x)$ nebo $\frac{\mathrm df}{\mathrm dx}$. Zápis $\frac{\mathrm df}{\mathrm dx}$ je Leibnizova notace, zápis $f'$ je Lagrangeova notace. 
 
 > Poznámka. Rozšifrování definice derivace:
 >
