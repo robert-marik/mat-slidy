@@ -3,7 +3,7 @@
 % 2019
 
 Uvedeme si dva druhy integrálu. Jeden je představíme jako opak
-derivace, druhý jako náhrada součtu pro přiípad, kdy potřebujeme
+derivace, druhý jako náhrada součtu pro případ, kdy potřebujeme
 sčítat nekonečně mnoho příspěvků, z nichž každý má v podstatě nulovou
 hodnotu.
 
@@ -76,9 +76,33 @@ Závislá proměnná|Nezávislá proměnná|Derivace|
 ![Zavěšený most na Hauraki Rail Trail (Nový Zéland). Tyto traily byly otevřeny v květnu  2012 a získaly Winer Timber Design Award v kategorii Sustainability
  Zdroj: nzwood.co.nz](zaveseny_most.jpg)
 
+![Zavěšený most na Hauraki Rail Trail (Nový Zéland). Tyto traily byly otevřeny v květnu  2012 a získaly Winer Timber Design Award v kategorii Sustainability
+ Zdroj: nzwood.co.nz](zaveseny_most.jpg)
+
 </div>
 
-\fi
+U zavěšeného mostu lano nese hmotnost rovnoměrně rozloženou ve
+vodorovném směru. Je potřeba zvolit vhodnoudélku svislých lan tak, aby
+síla působící na nosné lano byla vždy ve směru tohoto lana. Potom
+je systém nejstabilnější. 
+
+Díky symetrii stačí uvažovat jenom půlku lana. Na část lana nad
+intervalem $[0,x]$ působí následující síly.
+
+* Tahová síla lana v minimu ($x=0$) o velikosti $T$ doleva.
+* Gravitační síla o velikosti $\mu x g$ směrem dolů, kde $\mu$ je
+  lineární hustota a $\mu x$ je hmotnost části mostu, odpovdající
+  intervalu $[0,x]$.
+* Tahová síla doprava nahoru na pravém konci. Její velikost a směr
+  jsou takové, aby součet všech sil působících na uvažovaný element
+  byl roven nule. Chceme, aby v tomto bodě směr síly určoval směr
+  lana, tj. aby síla byla tečná k nosnému lanu.
+  
+Všechny tři síly tedy tvoří pravoůhlý trojúhelník (protože vektorový
+součet má být nulový) a poměr odvěsen $\frac{\mu g x}{T}$ udává
+směrnici přepony. Křivka udávájící směr nosného lana tedy musí mít
+tvar funkce, která splňuje $$y'=\frac{\mu g}{T} x,$$ kde $\mu$, $g$, a
+$T$ jsou pro danou úlohu konstanty.
 
 # Lineární aproximace v 1D
 
