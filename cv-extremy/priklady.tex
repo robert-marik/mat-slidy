@@ -62,8 +62,9 @@ První dvě aproximace využijeme později pro odvození tvaru matice malých ro
 m_0 c^2 \left(1+\frac 12\frac{v^2}{c^2}\right)
   =m_0c^2+\frac 12 m_0v^2
 \end{multline*}
-Toto je klasický případ, kdy přesný těžkopádný vzorec ($E=mc^2$) nahrazujeme příjemnějším přibližným vyjádřením ($E_k=\frac 12 mv^2$).
+% Toto je klasický případ, kdy přesný těžkopádný vzorec ($E=mc^2$) nahrazujeme příjemnějším přibližným vyjádřením ($E_k=\frac 12 mv^2$).
 
+\newpage
 
 \textbf{Kinetika chemických reakcích pro malé koncentrace.} Rychlost mnoha chemických reakcí je dána vzorcem
 \begin{equation}\label{1}
@@ -89,6 +90,37 @@ aproximace ``sypat z rukávu'' v okamžiku potřeby i bez diferenciálního
 počtu. Vždy však je k~dispozici i přesný postup, založený na
 derivacích.
 
+
+\newpage
+\textbf{Lokální extrémy bez slovního zadání.} V úlohách z praxe často
+víme, že existuje optimální řešení a studovaná funkce má jediný bod s
+nulovou derivací. Pokud studujeme funkci bez jakéhokoliv kontextu,
+musíme posuzovat to, zda v daném bodě opravdu extrém je a
+jaký. Nejlépe tak, že současně určíme i intervaly monotonie. Za
+povšimnutí stojí, že při hledání bodů, kde jsou lokální extrémy,
+vlastně ani nemusíme znát původní funkci. Stačí nám o ní informace
+týkající se spojitosti a poté stačí znát derivaci. I~s~takovým
+případem se v praxi setkáváme.
+
+
+Najděte lokální extrémy a intervaly monotonie následujících funkcí. Spolu s funkcí je zadána i její derivace.
+
+\begin{multicols}2
+
+\def\priklad #1.#2. {$y=#1$, $y'=#2$}
+
+\begin{enumerate}[(1)]
+  \setlength\itemsep{20pt}
+\item \priklad \frac x{(x+1)^2}.\frac{1-x}{(x+1)^3}.
+\item \priklad \frac{x^2}{x+1}.\frac{x(x+2)}{(x+1)^2}.
+  \item \priklad \frac{x^2}{x^2+1}.\frac{2x}{(x^2+1)^2}.
+  \item \priklad (5-x)\sqrt x.\frac{1}{2\sqrt x}(5-3x).
+  \item \priklad x^2 e^{-x}.-(x - 2)xe^{-x}.
+  \item $y$ je spojitá na $\mathbb R\setminus\{2\}$,\\ $y'=\frac{(x^2+3)(x^2-3)}{2-x}$
+  \end{enumerate}
+\end{multicols}
+
+\newpage
 
 {
 \def\zlomek{0.6}
@@ -164,35 +196,6 @@ Příklad typu jaký jsme řešili u migrace ryb se ale ve skutečnosti
   poopravit, zpřesnit nebo bohužel zamítnout. To však je přirozené při
   poznávání světa.
 \end{itemize}
-
-\newpage
-\textbf{Lokální extrémy bez slovního zadání.} V úlohách z praxe často
-víme, že existuje optimální řešení a studovaná funkce má jediný bod s
-nulovou derivací. Pokud studujeme funkci bez jakéhokoliv kontextu,
-musíme posuzovat to, zda v daném bodě opravdu extrém je a
-jaký. Nejlépe tak, že současně určíme i intervaly monotonie. Za
-povšimnutí stojí, že při hledání bodů, kde jsou lokální extrémy,
-vlastně ani nemusíme znát původní funkci. Stačí nám o ní informace
-týkající se spojitosti a poté stačí znát derivaci. I~s~takovým
-případem se v praxi setkáváme.
-
-
-Najděte lokální extrémy a intervaly monotonie následujících funkcí. Spolu s funkcí je zadána i její derivace.
-
-\begin{multicols}2
-
-\def\priklad #1.#2. {$y=#1$, $y'=#2$}
-
-\begin{enumerate}[(1)]
-  \setlength\itemsep{20pt}
-\item \priklad \frac x{(x+1)^2}.\frac{1-x}{(x+1)^3}.
-\item \priklad \frac{x^2}{x+1}.\frac{x(x+2)}{(x+1)^2}.
-  \item \priklad \frac{x^2}{x^2+1}.\frac{2x}{(x^2+1)^2}.
-  \item \priklad (5-x)\sqrt x.\frac{1}{2\sqrt x}(5-3x).
-  \item \priklad x^2 e^{-x}.-(x - 2)xe^{-x}.
-  \item $y$ je spojitá na $\mathbb R\setminus\{2\}$,\\ $y'=\frac{(x^2+3)(x^2-3)}{2-x}$
-  \end{enumerate}
-\end{multicols}
 
 \end{document}
 

@@ -185,6 +185,14 @@ Předchozí věta eliminuje obrovské množství bodů z definičního oboru
 funkce. V prakticky využitelných případech nám po této eliminaci často
 zůstane jenom jediný bod, podobně jako v následující úloze.
 
+
+<div class='obtekat'>
+
+![K problému vyřezání co nejtužšího nosníku.](nosnik.png)
+
+</div>
+
+
 **Příklad.** Z kulatiny o průměru $d$ chceme vyříznout nosník
 obdélníkového tvaru, který se při zatížení co nejméně prohýbá. Z
 fyzikálních úvah plyne, že musí být maximální součin $bh^3$, kde $b$
@@ -278,16 +286,22 @@ funkce $f$ v bodech $a$ a $b$ se liší znaménkem.
 
 * Na intervalu, kde je funkce spojitá a různá od nuly, se zachovává
 znaménko funkce, tj. funkce je zde buď pořád kladná nebo pořád
-záporná.
+záporná. Mezi oběma variantami se můžeme rozhodnout testováním
+znaménka funkce v jednom libovolném bodě intervalu.
 * Na intervalu, kde má funkce spojitou a od nuly různou derivaci, se
 zachovává monotonie funkce, tj. funkce je zde buď pořád rostoucí nebo
-pořád klesající.
+pořád klesající. Mezi oběma variantami se můžeme rozhodnout testováním
+monotonie (tj. znaménka derivace) v jednom libovolném bodě intervalu.
 
 **Poznámka.** Lokální extrém nastává tam, kde je funkce spojitá a kde
 se mění monotonie. Nenastává tam, kde se monotonie spojité funkce
 nemění. Přirozeně nenastává ani tam, kde funkce není definována.
 
-**Příklady** budou na přednášce a ve cvičení.
+**Příklad.** Najděte lokální extrém funkce $y=\frac x{x^2+1}$. Derivace je $y'=\frac{(1+x)(1-x)}{(x^2+1)^2}$. 
+
+**Příklad.** Najděte lokální extrém funkce $y=\frac{x^3}{x+2}$. Derivace je $y'=\frac{2(x+3)x^2}{(x+2)^2}$.
+
+Řešení příkladů bude na přednášce. Další příklady ve cvičení.
 
 
 # Lineární aproximace rovinné transformace
