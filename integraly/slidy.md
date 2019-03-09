@@ -114,11 +114,13 @@ intervalem $[0,x]$ působí následující síly.
   byl roven nule. Chceme, aby v tomto bodě směr síly určoval směr
   lana, tj. aby síla byla tečná k nosnému lanu.
   
-Všechny tři síly tedy tvoří pravoúhlý trojúhelník (protože vektorový
-součet má být nulový) a poměr odvěsen $\frac{\mu g x}{T}$ udává
+Vektorový součet sil musí být nulový a proto všechny tři síly tvoří
+pravoúhlý trojúhelník. Poměr odvěsen $\frac{\mu g x}{T}$ udává
 směrnici přepony. Křivka udávající směr nosného lana tedy musí mít
-tvar funkce, která splňuje $$y'=\frac{\mu g}{T} x,$$ kde $\mu$, $g$,
-a $T$ jsou pro danou úlohu konstanty.
+tvar funkce, která splňuje $$y'=\frac{\mu g}{T} x,$$ kde $\mu$, $g$, a
+$T$ jsou pro danou úlohu konstanty.
+
+<hr>
 
 Máme tedy křivku danou pomocí derivace a tuto křivku musíme
 najít. Formálně to je stejný problém, jako když máme rychlost změny
@@ -132,7 +134,7 @@ se libovolně. Přesně to je úkol pro neurčitý integrál.
 
 # Neurčitý integrál
 
-Představíme se nástroj, který nám umožní odpovědět na následující otázky.
+Představíme si nástroj, který nám umožní odpovědět na následující otázky.
 
 * Je znám směr křivky v každém bodě (tj. směr tečny, derivace). Jaká
 je rovnice křivky?
@@ -453,7 +455,7 @@ příspěvků" a proto sčítáme integrálem.
 Budeme studovat rotaci tyče o hmotnosti $m$ a délce $L$ okolo osy
 kolmé k tyči. Nechť je tyč položena podél osy $x$ a rotuje okolo osy
 $y$. Kousek tyče o délce $\Delta x$ má hmotnost $\frac{\Delta x}{L}m$
-a protože je jeho vzdálenost od osy $y$ rovna $x$, příspěvek k celkovému
+a pokud je jeho vzdálenost od osy $y$ rovna $x$, příspěvek k celkovému
 momentu setrvačnosti je $$\Delta J=  \frac{\Delta x}{L}m x^2 =\frac{m}{L}
 x^2\Delta x.$$ Celkový moment setrvačnosti je dán integrálem, ale závisí na poloze tyče vzhledem k ose otáčení.
 
