@@ -24,6 +24,8 @@ hodnotu (**Riemannův určitý integrál**).
 
 Intervalem $I$ budeme rozumět otevřený interval.
 
+\iffalse 
+
 # Motivace:  Jak z rychlosti změny vypočítat změnu?
 
 
@@ -74,7 +76,7 @@ Závislá proměnná|Nezávislá proměnná|Derivace|
 |rychlost|čas|zrychlení|
 |všeobecná cenová hladina (cca náklady na živobytí)|čas|inflace|
 
-
+\fi
 
 # Motivace: Jak z derivace křivky získat rovnici křivky?
 
@@ -253,13 +255,9 @@ ještě znát počáteční hodnotu teploty a našli jsme teplotu jako funkci
 Nyní zapojíme určitý integrál. Nepotřebujeme informaci o počáteční
 teplotě, ale zato jsme schopni určit jenom změnu teploty za daný
 časový interval. Například za první hodinu bude změna teploty
-$$\int_0^{60} - 0.1 e^{-0.01t} \,\mathrm dt=\left[10 e^{-0.01t}\right]_0^{60}=
-10 e^{-0.01\cdot 60} - 10 e^{-0.01\cdot 0}\approx  -4.5 ^\circ \mathrm C.
-$$
+\dm$$\int_0^{60} - 0.1 e^{-0.01t} \,\mathrm dt=\left[10 e^{-0.01t}\right]_0^{60}= 10 e^{-0.01\cdot 60} - 10 e^{-0.01\cdot 0}\approx  -4.5 ^\circ \mathrm C.$$
 Za druhou hodinu bude změna teploty
-$$\int_{60}^{120} - 0.1 e^{-0.01t} \,\mathrm dt=\left[10 e^{-0.01t}\right]_{60}^{120}=
-10 e^{-0.01\cdot 120} - 10 e^{-0.01\cdot 60}\approx  -2.5 ^\circ \mathrm C.
-$$
+\dm$$\int_{60}^{120} - 0.1 e^{-0.01t} \,\mathrm dt=\left[10 e^{-0.01t}\right]_{60}^{120}= 10 e^{-0.01\cdot 120} - 10 e^{-0.01\cdot 60}\approx  -2.5 ^\circ \mathrm C. $$
 
 [Online výpočet.](https://sagecell.sagemath.org/?z=eJwrSyzSUC9R1-TlStMo0VSwVdA10DNU0FJIrSjQADINDLVKgHIFRZl5JQpAnJpelFiSqgFSq6NRomOgY2agiUfezEDH0AioAgB6XhvR&lang=sage)
 
@@ -403,9 +401,7 @@ konstantní. Myšlenkově tedy stěnu rozřežeme na vodorovné pásky.
    příspěvků je nekonečně mnoho, sečteme je integrálem
 $$F=\int_0^H L\rho gx\,\mathrm dx.$$
 4. Po výpočtu dostáváme
-$$F=\int_0^H L\rho gx\,\mathrm dx=L\rho g\int_0^H x\,\mathrm dx
-=L\rho g \left[\frac 12 x^2\right]_0^H=L\rho g \left[\frac 12 H^2-\frac 12 0^2\right]=\frac 12 LH^2 \rho g.
-$$
+\dm $$F=\int_0^H L\rho gx\,\mathrm dx=L\rho g\int_0^H x\,\mathrm dx =L\rho g \left[\frac 12 x^2\right]_0^H=L\rho g \left[\frac 12 H^2-\frac 12 0^2\right]=\frac 12 LH^2 \rho g. $$
 Tento vztah je stejný, jako kdyby na celou plochu o
 velikosti $LH$ působila tlaková síla vyvolaná tlakem
 $\frac 12 H\rho g$, tj. tlakem v poloviční hloubce.
@@ -484,11 +480,7 @@ x^2\Delta x.$$ Celkový moment setrvačnosti je dán integrálem, ale závisí n
 $$J=\int_0^L \frac{m}{L} x^2\,\mathrm dx=\frac mL \left[\frac 13 x^3\right]_0^L= \frac mL \frac 13 L^3=\frac 13 mL^2.
 $$
 1. Pro tyč umístěnou středem v počátku dostáváme moment vzhledem k ose procházející středem ve tvaru
-$$J=\int_{-\frac L2}^{\frac L2} \frac{m}{L} x^2\,\mathrm dx=\frac mL \left[\frac 13 x^3\right]_{-\frac L2} ^{-\frac L2} =
-\frac mL \left[\frac 13 \frac {L^3}8 - \frac 13 (-1)^3 \frac {L^3}8\right]
-=
-\frac 1{12} mL^2.
-$$
+\dm$$J=\int_{-\frac L2}^{\frac L2} \frac{m}{L} x^2\,\mathrm dx=\frac mL \left[\frac 13 x^3\right]_{-\frac L2} ^{-\frac L2} = \frac mL \left[\frac 13 \frac {L^3}8 - \frac 13 (-1)^3 \frac {L^3}8\right] = \frac 1{12} mL^2. $$
 
 **Závěr.**
 
@@ -509,3 +501,4 @@ provazochodci nosí na laně dlouhou tyč a proto při extrémních výkonech,
 jako je přechod Grand Canyon, bývá použita extrémně dlouhá tyč (pro
 Grand Canyon 9.1 metrů a 20 kilogramů, viz [Nik
 Wallenda](https://en.wikipedia.org/wiki/Nik_Wallenda#Canyon_walk)).
+
