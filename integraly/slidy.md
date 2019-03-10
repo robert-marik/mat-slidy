@@ -72,11 +72,7 @@ Závislá proměnná|Nezávislá proměnná|Derivace|
 |objem kmene stromu (smrk)|čas|rychlost růstu ve smyslu přírůstu dřevní hmoty|
 |dráha při pohybu při pohybu po přímce i vzdálenost od referenčního bodu|čas doba od začátku pohybu nebo od referenčního okamžiku|rychlost|
 |rychlost|čas|zrychlení|
-|teplota v místě tyče (např. stěna, což je v podstatě extrémně krátká a široká tyč)|poloha|gradient teploty, veličina udávající intenzitu toku tepla tyčí resp. stěnou|
-|hmotnost části tyče (např od zvoleného bodu doleva)|poloha na tyči (např. vzdálenost od levého konce)|lineární hustota tyče|
 |všeobecná cenová hladina (cca náklady na živobytí)|čas|inflace|
-|nadmořská výška na trase treku|poloha|stoupání trasy|
-|graf funkce $f(x)$|$x$|růst grafu (směrnice tečny)|
 
 
 
@@ -94,8 +90,8 @@ Závislá proměnná|Nezávislá proměnná|Derivace|
 
 Na této úloze si připomeneme další roli derivace (směrnice tečny) a
 představíme si úžasný druh mostů -- mosty zavěšené na nosných lanech,
-které mohou překlenout neuvěřitelně dlouhou vzdálenost v porovnání s
-jinými konstrukcemi mostů.
+které mohou překlenout (v porovnání s
+jinými konstrukcemi mostů) neuvěřitelně dlouhou vzdálenost .
 
 U zavěšeného mostu lano nese hmotnost rovnoměrně rozloženou ve
 vodorovném směru. Je potřeba zvolit vhodnou délku svislých lan tak, aby
@@ -109,10 +105,11 @@ intervalem $[0,x]$ působí následující síly.
 * Gravitační síla o velikosti $G=\mu x g$ směrem dolů, kde $\mu$ je
   lineární hustota (hmotnost jednotkové délky mostu) a $\mu x$ je
   hmotnost části mostu, odpovídající intervalu $[0,x]$.
-* Tahová síla $F$ doprava nahoru na pravém konci. Její velikost a směr
-  jsou takové, aby součet všech sil působících na uvažovaný element
-  byl roven nule. Chceme, aby v tomto bodě směr síly určoval směr
-  lana, tj. aby síla byla tečná k nosnému lanu.
+* Tahová síla $F$ doprava nahoru na pravém konci. Protože je most v
+  klidu. velikost a směr této síly jsou takové, aby součet všech sil
+  působících na uvažovaný element byl roven nule. Jako stavitelé mostu
+  chceme, aby směr síly souhlasil se směrem lana, tj. aby síla byla
+  tečná k nosnému lanu.
   
 Vektorový součet sil musí být nulový a proto všechny tři síly tvoří
 pravoúhlý trojúhelník. Poměr odvěsen $\frac{\mu g x}{T}$ udává
@@ -122,26 +119,27 @@ $T$ jsou pro danou úlohu konstanty.
 
 <hr>
 
-Máme tedy křivku danou pomocí derivace a tuto křivku musíme
-najít. Formálně to je stejný problém, jako když máme rychlost změny
-funkce a chceme najít časový průběh této funkce. Mechanickým modelem
-může být například pohyb zadanou rychlostí a úloha určit dráhu tohoto
-pohybu. Tento problém se na základní škole redukuje na případ pohybu
-konstantní rychlostí ($s=vt$) a na střední škole rozšiřuje na
-rychlost, která se mění jako lineární funkce ($s=\frac 12 at^2$). Nyní
-stojíme před úkolem, jak si poradit v případě obecné rychlosti, měnící
-se libovolně. Přesně to je úkol pro neurčitý integrál.
+Z rozboru vidíme, že máme dánu křivku danou pomocí derivace a tuto
+křivku musíme najít. Formálně to je stejný problém, jako když máme
+rychlost změny funkce a chceme najít časový průběh této
+funkce. Mechanickým modelem může být například pohyb zadanou rychlostí
+a úloha určit dráhu tohoto pohybu. Tento problém se na základní škole
+redukuje na případ pohybu konstantní rychlostí ($s=vt$) a na střední
+škole rozšiřuje na rychlost, která se mění jako lineární funkce
+($s=\frac 12 at^2$). Nyní stojíme před úkolem, jak si poradit v
+případě obecné rychlosti, měnící se libovolně. Přesně to je úkol pro
+neurčitý integrál.
 
 # Neurčitý integrál
 
-Představíme si nástroj, který nám umožní odpovědět na následující otázky.
+Představíme nástroj, který nám umožní odpovědět na následující otázky.
 
 * Je znám směr křivky v každém bodě (tj. směr tečny, derivace). Jaká
 je rovnice křivky?
 * Je známa rychlost, s jakou se mění veličina $f$. Jaká je rovnice
 udávající závislost veličiny $f$ na čase?
 
-> Definice (neurčitý integrál). Řekneme, že funkce $F$ je *primitivní funkcí* k funki $f$ na intervalu $I$, jestliže platí $$F'(x)=f(x)$$ na intervalu $I$. Množina všech primitivních funkcí k funkci $f$ se nazývá *neurčitý integrál* funkce $f$ a značí $$\int f(x)\,\mathrm dx.$$
+> Definice (neurčitý integrál). Řekneme, že funkce $F$ je *primitivní funkcí* k funkci $f$ na intervalu $I$, jestliže platí $$F'(x)=f(x)$$ na intervalu $I$. Množina všech primitivních funkcí k funkci $f$ se nazývá *neurčitý integrál* funkce $f$ a značí $$\int f(x)\,\mathrm dx.$$
 
 Otázkou existence primitivní funkce se budeme zabývat na další
 přednášce. Otázku (ne-)jednoznačnosti řeší následující věta.
@@ -159,7 +157,7 @@ přednášce. Otázku (ne-)jednoznačnosti řeší následující věta.
 
 <div style='column-count: 2;background-color:lightgray;padding-top:1ex'>
 
-**Vzorce.**
+**Vzorce.** 
 
 1. $\int c\,\mathrm dx=cx+C$
 1. $\int  x^n\,\mathrm dx= \frac{x^{n+1}}{n+1}+C$
@@ -197,9 +195,9 @@ funkce času je dána integrálem $$T=\int - 0.1 e^{-0.01t} \,\mathrm
 dt=10 e^{-0.01t}+C.$$ Hodnota $C$ souvisí s počáteční teplotou. Je-li
 například počáteční teplota $28 ^\circ \mathrm{C}$, dosadíme do vztahu
 pro $T$ hodnoty $T=28 ^\circ \mathrm{C}$ a $t=0$ a ze vzniklé rovnice
-určíme $C$. Dostáváme tedy podmínku $$28=10 e^0 +C,$$ která implikuje
+určíme $C$. Dostáváme takto podmínku $$28=10 e^0 +C,$$ která implikuje
 $C=18 ^\circ \mathrm C$. Funkce udávající závislost
-teploty místnosti na čase je tedy $$T=\left(18+10 e^{-0.01
+teploty místnosti na čase je $$T=\left(18+10 e^{-0.01
 t}\right)\,{}^\circ \mathrm C.$$
 
 **Příklad.** Na jednom z předchozích slidů jsme viděli, že křivka,
@@ -220,10 +218,14 @@ funkce na zadaném intervalu.
 > Definice (Newtonův určitý integrál). Buď $f$ funkce a $F$ její primitivní funkce na intervalu $I$. Buď $[a,b]\subset I$ podinterval v $I$. *Určitým integrálem funkce $f$ na intervalu $[a,b]$* rozumíme veličinu označenou a definovanou vztahem
 $$\int_a^b f(x)\mathrm dx:=F(b)-F(a).$$
 
-**Označení.** Výraz $F(b)-F(a)$, tj. změnu funkce $F(x)$ na intervalu $[a,b]$, označujeme také $[F(x)]_a^b$. Tento zápis se často používá jako mezivýpočet při výpočtu určitého integrálu.
+**Označení.** Výraz $F(b)-F(a)$, tj. změnu funkce $F(x)$ na intervalu
+$[a,b]$, označujeme také $[F(x)]_a^b$. Tento zápis se často používá
+jako mezivýpočet při výpočtu určitého integrálu.
 $$\int_0^1 x^2 \,\mathrm dx=\left[\frac 13 x^3\right]_0^1=\frac 13 (1)^3 -\frac 13 (0)^3=\frac 13$$
 
-> Věta (linearita určitého integrálu). Určitý integrál zachovává součet a násobení konstantou. Tedy pro libovolné funkce $f$, $g$ a libovolnou konstantu $c$ platí $$
+> Věta (linearita určitého integrálu). Určitý integrál zachovává
+> součet a násobení konstantou. Tedy pro libovolné funkce $f$, $g$ a
+> libovolnou konstantu $c$ platí $$
 \begin{aligned}
   \int_a^b f+g\,\mathrm dx&=\int_a^b f\,\mathrm dx + \int_a^b g\,\mathrm dx,\\
   \int_a^b cf\,\mathrm dx&=c\int_a^b f\,\mathrm dx.
@@ -268,9 +270,10 @@ Ze středoškolské fyziky dobře známe vzorce pro dráhu, práci a tlakovou
 sílu. Ovšem jenom v extrémně pěkných případech.
 
 * Dráha rovnoměrného pohybu je určena vzorcem $$s=vt.\tag{1}$$ Tento
-vzorec není použitelný pro pohyb proměnnou rychlostí. Už víme, že
-obecný vzorec je $$s=\int v\,\mathrm dt.\tag{2}$$ Pokud je $v$
-konstantní, vzorec (1) je důsledkem vzorce (2).
+vzorec není použitelný pro pohyb proměnnou rychlostí. Z kapitoly o
+neurčitém interálu víme, že obecný vzorec je $$s=\int v\,\mathrm
+dt.\tag{2}$$ Pokud je $v$ konstantní, vzorec (1) je důsledkem vzorce
+(2).
 * Hydrostatická tlaková síla $F$ působící ve vodě v hloubce $h$ na
 plochu o velikosti $S$ se určí podle vztahu $$F=Sh\rho g,$$ kde $\rho$
 je hustota vody a $g$ tíhové zrychlení. Tento vzorec však není možné
@@ -285,10 +288,17 @@ nás zajímá práce nutná k vyčerpání vodní nádrže, musíme každý litr
 vody, který je na dně, "tahat" po delší dráze než každý litr vody,
 který je na hladině a proto se mění dráha. Vzorec (3) selhává v obou
 případech. Jednou kvůli nekonstantní síle, podruhé kvůli dráze.
+
+<div class='obtekat'>
+
+![Obsah pod konstantní funkcí.](1.png)
+
+</div>
+
 * Obsah obrazce mezi konstantní funkcí $f$ a osou $x$ nad intervalem
 $[a,b]$ se vypočte snadno, protože se jedná o obdélník se stranami $f$
-a $s=b-a$. Proto
-$$S=f\cdot s.$$ Tento přístup však není možné použít, pokud se funkce
+a $\Delta x=b-a$. Proto
+$$S=f\cdot \Delta x.$$ Tento přístup však není možné použít, pokud se funkce
 $f$ na intervalu $[a,b]$ mění. Formálně je tato úloha stejná jako
 ostatní úlohy výše, má však snadnou geometrickou interpretaci. Právě tuto
 interpretaci využijeme v následujícím k definici druhého typu určitého integrálu
@@ -317,18 +327,20 @@ zobecnit na libovolný počet intervalů a pro libovolnou po částech
 konstantní funkci.
 
 Prostředky matematické analýzy je možné "zjemňovat dělení do
-nekonečna" a namísto po částech spojité funkce bude postup fungovat i
-pro velmi obecné funkce. Výsledným produktem je Riemannův
-integrál. Tento integrál je velmi názorný, ale poměrně obtížně se
-počítá, pokud postupujeme přímo podle definice. Pokud však je funkce v
-určitém smyslu pěkná (má primitivní funkci na intervalu, který uvnitř
-obsahuje interval $[a,b]$) jsou Riemannův a Newtonův integrál
-stejné. Proto mezi nimi nerozlišujeme, používáme jeden pojem **určitý
-integrál** a počítáme jej pomocí definice Newtonova integrálu. Obsah obrazce pod křivkou $f(x)$ je roven $$S=\int_a^b f(x)\,\mathrm dx.$$
+nekonečna". Díky tomu není nutné se omezovat na po částech konstantní
+funkce, ale postup bude fungovat i pro velmi obecné funkce. Výsledným
+produktem je Riemannův integrál. Tento integrál je velmi názorný, ale
+poměrně obtížně se počítá, pokud postupujeme přímo podle
+definice. Pokud však je funkce v určitém smyslu pěkná (má primitivní
+funkci na intervalu, který uvnitř obsahuje interval $[a,b]$) jsou
+Riemannův a Newtonův integrál stejné. Proto mezi nimi nerozlišujeme,
+používáme jeden pojem **určitý integrál** a počítáme jej pomocí
+definice Newtonova integrálu. Obsah obrazce pod křivkou $f(x)$ je
+roven $$S=\int_a^b f(x)\,\mathrm dx.$$
 
 V teorii Riemannova integrálu má vzorec
 $$\int_a^b f(x)\mathrm dx=\left[F(x)\right]_a^b=F(b)-F(a)$$
-postavení věty nazývané **Newtonova Leibnizova věta** a je to věta
+postavení věty nazývané **Newtonova–Leibnizova věta** a je to věta
 udávající, jak vypočteme určitý integrál pomocí neurčitého. Zajímavé
 je, že v některých případech je vhodné postupovat naopak a určit
 neurčitý integrál pomocí integrálu určitého, což si ukážeme v
@@ -380,17 +392,22 @@ označíme $H$.
 1. Tlaková síla na rovinnou plochu o obsahu $S$ vyvolaná tlakem $p$ je rovna $$F=pS.$$ Tlak v hloubce $h$ je dán vzorcem $$p=h\rho g,$$
 kde $\rho$ je hustota vody a $g$ tíhové zrychlení.
 1. Myšlenkově rozdělíme celou stěnu na části. Tlaková síla na celou
-stěnu je rovna součtu tlakových sil, které působí na jednotlivé části. Má smysl
-volit části tak, aby na nich byl tlak konstantní. Myšlenkově tedy stěnu
-rozřežeme na vodorovné pásky.
-2. Na myšlený vodorovný pás, který má výšku $\Delta x$ a je v hloubce $x$, působí tlak $p=x\rho g$. Obsah pásu je podle vzorce pro obsah obdélníka $\Delta S=L\Delta x$. Celková síla působící na tento pás je $$\Delta F=p\Delta S=L\rho g x\Delta x.$$
-3. Celkovou sílu na celou stěnu najdeme sečtením všech příspěvků. Formálně $$F=\sum L\rho g x\Delta x.$$ Protože těchto příspěvků je nekonečně mnoho, sečteme je integrálem
+stěnu je rovna součtu tlakových sil, které působí na jednotlivé
+části. Má smysl volit části tak, aby na nich byl tlak
+konstantní. Myšlenkově tedy stěnu rozřežeme na vodorovné pásky.
+2. Na myšlený vodorovný pás, který má výšku $\Delta x$ a je v hloubce
+   $x$, působí tlak $p=x\rho g$. Obsah pásu je podle vzorce pro obsah
+   obdélníka $\Delta S=L\Delta x$. Celková síla působící na tento pás
+   je $$\Delta F=p\Delta S=L\rho g x\Delta x.$$
+3. Celkovou sílu na celou stěnu najdeme sečtením všech
+   příspěvků. Formálně $$F=\sum L\rho g x\Delta x.$$ Protože těchto
+   příspěvků je nekonečně mnoho, sečteme je integrálem
 $$F=\int_0^H L\rho gx\,\mathrm dx.$$
 4. Po výpočtu dostáváme
 $$F=\int_0^H L\rho gx\,\mathrm dx=L\rho g\int_0^H x\,\mathrm dx
 =L\rho g \left[\frac 12 x^2\right]_0^H=L\rho g \left[\frac 12 H^2-\frac 12 0^2\right]=\frac 12 LH^2 \rho g.
 $$
-Formálně je tento vztah stejný, jako kdyby na celou plochu o
+Tento vztah je stejný, jako kdyby na celou plochu o
 velikosti $LH$ působila tlaková síla vyvolaná tlakem
 $\frac 12 H\rho g$, tj. tlakem v poloviční hloubce.
 
@@ -399,32 +416,31 @@ $\frac 12 H\rho g$, tj. tlakem v poloviční hloubce.
 
 <div class='obtekat'>
 
-![Zatopený Mojžíšův most. Zdroj: http://veryhungryexplorer.com/the-day-i-nearly-walked-on-water/](mojzisuv_most_pod_vodou.jpg)
+![Mojžíšův most je z obou stran chráněný přehradou umožňující regulací výšky vody v okolí mostu, vzhledem k charakteru krajiny v Holandsku však není překvapení, že může být i zatopený. Zdroj: http://veryhungryexplorer.com/the-day-i-nearly-walked-on-water/](mojzisuv_most_pod_vodou.jpg)
 
 </div>
 
-
 Pokud potřebujeme vyčerpat vodu z rezervoáru, musíme ji dopravit za
 stěnu. Představme si, že po opadnutí vody v okolí Mojžíšova mostu
-zůstane uvnitř voda o výšce hladiny, kterou je potřeba vyčerpat. Tím
-se most proměnil v nádrž o hloubce $H$. Povrch hladiny ve chvíli, kdy
-je voda $x$ jednotek délky pod okrajem mostu označme $S$. (Pro nádrž
-ve tvaru kvádru by $S$ bylo konstantní a rovno obsahu dna.)
+zůstane uvnitř voda, kterou je potřeba vyčerpat. Tím se most proměnil
+v nádrž o hloubce $H$. Povrch hladiny ve chvíli, kdy je voda $x$
+jednotek délky pod okrajem mostu označme $S$. (Pro nádrž ve tvaru
+kvádru by $S$ bylo konstantní a rovno obsahu dna.)
 
 1. Pro vyzvednutí tělesa o hmotnosti $m$ o výšku $h$ musíme vykonat
 práci $W=mgh,$ abychom vykompenzovali nárůst potenciální energie.
 2. Vodu v nádrži rozdělíme na vodorovné vrstvy o výšce $\Delta
 x$. Hmotnost vrstvy o výšce $\Delta x$ v hloubce $x$ pod okrajem
-nádrže každé vrstvy tedy bude $\Delta m=S\Delta x\rho$ a abychom vodu
+nádrže bude $\Delta m=S\Delta x\rho$ a abychom vodu
 dostali přes okraj, musíme vykonat práci
 $$\Delta W=\Delta m gx=S\Delta x\rho gx.$$
 3. Celková práce na vyčerpání vody se vypočte jako součet jednotlivých
-příspěvků, tedy pro spojitě se měnící veličinu integrálem
+příspěvků. Spojitě se měnící veličinu sčítáme integrálem, což vede na vztah
 $$W=\int_0^H S\rho gx \,\mathrm dx=\rho g\int_0^H Sx \,\mathrm dx.$$
 4. Pro nádrže ve tvaru kvádru by
 veličina $S$ byla konstantní a integrál by vycházel
-$$W=S\rho g\int_0^H x\,\mathrm dx=S\rho g\frac 12 H^2=(SH\rho)\frac 12
-H.$$ Výraz $SH\rho$ je celková hmotnost a práce je tedy stejná, jako
+$$W=S\rho g\int_0^H x\,\mathrm dx=S\rho g\left[\frac 12 x^2\right]_0^H=S\rho g\frac 12 H^2=(SH\rho)\frac 12
+H.$$ Výraz $SH\rho$ je celková hmotnost. Práce je tedy stejná, jako
 kdybychom těleso o stejné hmotnosti jako je hmotnost vodní masy zvedli
 z poloviční hloubky pod hladinou na úroveň hladiny. Je to stejná práce,
 jakou bychom vykonali, kdyby všechna voda byla stlačena v těžišti a my
@@ -460,11 +476,11 @@ momentu setrvačnosti je $$\Delta J=  \frac{\Delta x}{L}m x^2 =\frac{m}{L}
 x^2\Delta x.$$ Celkový moment setrvačnosti je dán integrálem, ale závisí na poloze tyče vzhledem k ose otáčení.
 
 1. Pro tyč umístěnou levým koncem v počátku dostáváme moment vzhledem k ose procházející koncem tyče ve tvaru
-$$J=\int_0^L \frac{m}{L} x^2\,\mathrm dx=\frac mL \left[\frac 13 x^3\right]_0^L= \frac 13 mL^2.
+$$J=\int_0^L \frac{m}{L} x^2\,\mathrm dx=\frac mL \left[\frac 13 x^3\right]_0^L= \frac mL \frac 13 L^3=\frac 13 mL^2.
 $$
 1. Pro tyč umístěnou středem v počátku dostáváme moment vzhledem k ose procházející středem ve tvaru
 $$J=\int_{-\frac L2}^{\frac L2} \frac{m}{L} x^2\,\mathrm dx=\frac mL \left[\frac 13 x^3\right]_{-\frac L2} ^{-\frac L2} =
-\frac mL \left[\frac 13 \frac {L^3}8 + \frac 13 \frac {L^3}8\right]
+\frac mL \left[\frac 13 \frac {L^3}8 - \frac 13 (-1)^3 \frac {L^3}8\right]
 =
 \frac 1{12} mL^2.
 $$
