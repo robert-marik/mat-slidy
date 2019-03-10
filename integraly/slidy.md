@@ -89,9 +89,8 @@ Závislá proměnná|Nezávislá proměnná|Derivace|
 </div>
 
 Na této úloze si připomeneme další roli derivace (směrnice tečny) a
-představíme si úžasný druh mostů -- mosty zavěšené na nosných lanech,
-které mohou překlenout (v porovnání s
-jinými konstrukcemi mostů) neuvěřitelně dlouhou vzdálenost .
+představíme si úžasný druh mostů – mosty zavěšené na nosných lanech,
+které mohou překlenout obrovské vzdálenosti.
 
 U zavěšeného mostu lano nese hmotnost rovnoměrně rozloženou ve
 vodorovném směru. Je potřeba zvolit vhodnou délku svislých lan tak, aby
@@ -420,12 +419,13 @@ $\frac 12 H\rho g$, tj. tlakem v poloviční hloubce.
 
 </div>
 
-Pokud potřebujeme vyčerpat vodu z rezervoáru, musíme ji dopravit za
-stěnu. Představme si, že po opadnutí vody v okolí Mojžíšova mostu
-zůstane uvnitř voda, kterou je potřeba vyčerpat. Tím se most proměnil
-v nádrž o hloubce $H$. Povrch hladiny ve chvíli, kdy je voda $x$
-jednotek délky pod okrajem mostu označme $S$. (Pro nádrž ve tvaru
-kvádru by $S$ bylo konstantní a rovno obsahu dna.)
+Pokud potřebujeme vyčerpat vodu z rezervoáru, nádrže, rybníka nebo
+jezera, musíme ji dopravit za stěnu (za hráz, dostat na břeh, ...). Představme si, že po opadnutí
+vody v okolí Mojžíšova mostu zůstane uvnitř voda, kterou je potřeba
+vyčerpat. Tím se most proměnil v nádrž o hloubce $H$. Povrch hladiny
+ve chvíli, kdy je voda $x$ jednotek délky pod okrajem mostu označme
+$S$. (Pro nádrž ve tvaru kvádru by $S$ bylo konstantní a rovno obsahu
+dna.)
 
 1. Pro vyzvednutí tělesa o hmotnosti $m$ o výšku $h$ musíme vykonat
 práci $W=mgh,$ abychom vykompenzovali nárůst potenciální energie.
@@ -447,7 +447,18 @@ jakou bychom vykonali, kdyby všechna voda byla stlačena v těžišti a my
 bychom tuto vodu zvedli na úroveň okraje nádrže.
 
 
-# Aplikace určitého integrálu (moment setrvačnosti tyče)
+# Aplikace určitého integrálu (moment setrvačnosti tyče nebo trámu)
+
+<div class='obtekat'>
+
+![Při posuzování stability rozhledny hraje moment setrvačnosti
+ústřední roli. Moment setrvačnosti je možné získat součtem momentů
+setrvačnosti jednotlivých trámů. Rozhledna Bodanka. Zdroj:
+http://tvstav.cz](bohdanka.jpg)
+
+![Tyč rotující okolo kolmé osy.](4.png)
+
+</div>
 
 * Kinetická energie tělesa o hmotnosti $m$ pohybujícího se posuvným
 pohybem rychlostí $v$ je dána vztahem $E=\frac 12 mv^2$. Kinetická
@@ -459,12 +470,6 @@ otáčení vzdálené $r$ od tohoto bodu je $J=mr^2$. Pro soustavu hmotných
 bodů stačí příspěvky sečíst. Pro případ tělesa se spojitě rozloženou
 hmotností bychom museli "sečíst nekonečně mnoho nekonečně malých
 příspěvků" a proto sčítáme integrálem.
-
-<div class='obtekat'>
-
-![Tyč rotující okolo kolmé osy.](4.png)
-
-</div>
 
 
 
