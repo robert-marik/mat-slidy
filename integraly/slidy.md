@@ -76,7 +76,7 @@ Závislá proměnná|Nezávislá proměnná|Derivace|
 
 
 
-# Motivace: Jak z vlastnosti křivky získat celou křivku
+# Motivace: Jak z derivace křivky získat rovnici křivky?
 
 
 <div class='obtekat'>
