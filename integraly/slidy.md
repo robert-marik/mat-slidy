@@ -1,12 +1,12 @@
 % Integrál, integrál a integrál
 % Robert Mařík
-% 2019
+% 12.3.2019
 
 
 Naučili jsme se pracovat s derivacemi, tedy s rychlostí změny.
 Známe-li funkci a zderivujeme ji, dostaneme rychlost změny. Pokud potom
 původní funkci "ztratíme" a zůstane nám jenom derivace, je otázka,
-jestli dokážeme původní funkci najít z derivace. Odpověď je zní, že v
+jestli dokážeme původní funkci z této derivace najít. Odpověď je zní, že v
 jistém smyslu ano. Spojení "v jistém smyslu" naznačuje, že souvislost
 nebude tak snadná jako je souvislost u navzájem inverzních
 funkcí. Derivováním totiž můžeme ztratit aditivní konstanty, které v

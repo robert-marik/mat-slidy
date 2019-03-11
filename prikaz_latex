@@ -1,0 +1,16 @@
+
+kde="derivace aproximace integraly"
+
+for i in $kde
+do
+  echo $i
+  cd $i
+  pandoc --template ../default.latex slidy.md -o slidy.tex
+  sed -i 's/♣/\\ensuremath{\\clubsuit}/g' slidy.tex
+  sed -i 's/♠/\\ensuremath{\\spadesuit}/g' slidy.tex	
+  pdflatex slidy.tex
+  pdflatex slidy.tex
+  mv slidy.pdf ../$i.pdf
+  cd ..
+done
+

@@ -9,14 +9,14 @@ then
 
 <meta content="text/html; charset=utf-8" http-equiv="content-type">
 <link rel="stylesheet" type="text/css" href="styl.css" ></head><html>' > index.html
-   echo '<h1>Prezentace z přednášek z Matematiky</h1><p>Tato stránka obsauje prezentace z předmětu <a href="http://user.mendelu.cz/marik/mt/">Matematika</a>. Každá přednáška je v několika formátech pro pohodlí a větší možnost volby uživatele.</p>' >> index.html
+   echo '<h1>Prezentace z přednášek z Matematiky</h1><p>Tato stránka obsahuje prezentace z předmětu <a href="http://user.mendelu.cz/marik/mt/">Matematika</a>. Každá přednáška je v několika formátech pro pohodlí a větší možnost volby uživatele. Pro tisk je nejlepší PDF, pro prohlížení na tabletu html, pro transformaci do široké škály výstupů (programem Pandoc) formát markdown.  Cvičení jsou na <a href='http://user.mendelu.cz/marik/mt/cviceni/'>jiném místě</a>.</p>' >> index.html
    echo '<div class="CSSTableGenerator"><table>'>>index.html
-   echo '<tr><td>Název</td><td>html</td><td>Prezentace slidy.js</td><td>markdown</td></tr>'>>index.html
+   echo '<tr><td>Název</td><td>Webová stránka html</td><td>Webová prezentace slidy.js</td><td>Tisk v PDF</td><td>markdown</td></tr>'>>index.html
 
    for j in $kde
    do
        k=`head -n1 $j/slidy.md | cut -d% -f2`
-       echo "<tr><td>$k</td><td><a href='$j/index_h.html' target='_blank'>otevřít</a></td><td><a href='$j/index.html' target='_blank'>otevřít</a></td><td><a href='$j/slidy.md'>otevřít</a></td></tr>"  >> index.html
+       echo "<tr><td>$k</td><td><a href='$j/index_h.html' target='_blank'>otevřít</a></td><td><a href='$j/index.html' target='_blank'>otevřít</a></td><td><a href='$j.pdf'>otevřít</a></td><td><a href='$j/slidy.md'>otevřít</a></td></tr>"  >> index.html
 
    done
    echo '</table></div></html>' >> index.html
