@@ -28,34 +28,47 @@ $$f(x)\approx f(x_0)+ \frac{\mathrm df(x_0)}{\mathrm dx}(x-x_0).$$
 Výše uvedený vzorec není těžké rozšifrovat.
 
 * Veličina $f(x)$ je funkční hodnota v bodě $x$, tu chceme odhadnout.
-* Veličina $f(x_0)$ je známá funkční hodnota v bodě $x_0$, to je výchozí bod pro odhad.
-* veličina $f'(x_0)(x-x_0)$ je odhad změny veličiny $f$ vyvolané změnou veličiny $x$ z $x_0$ o $\Delta x=x-x_0$ tak, jak jsme jej  používali v minulé přednášce.
+* Veličina $f(x_0)$ je známá funkční hodnota v bodě $x_0$, to je
+  výchozí bod pro odhad.
+* veličina $f'(x_0)(x-x_0)$ je odhad změny veličiny $f$ vyvolané
+  změnou veličiny $x$ z $x_0$ o $\Delta x=x-x_0$ tak, jak jsme jej
+  používali v minulé přednášce.
 
-**Příklad (růst stromu).** Strom má v roce 2019 výšku 3 metry a roste rychlostí 0.5 metru za rok. V roce $x$ je jeho výška dána vzorcem $$h(x)=3+0.5(x-2019).$$
+**Příklad (růst stromu).** Strom má v roce 2019 výšku 3 metry a roste
+  rychlostí 0.5 metru za rok. V roce $x$ je jeho výška dána vzorcem
+  $$h(x)=3+0.5(x-2019).$$
 
-**Příklad (aproximace důležitých funkcí v okolí nuly).** Ve cvičení ukážeme platnost následujících přibližných vzorců, které platí pro $x$ blízké k nule.
-$$\sin x\approx x, \quad \cos x\approx 1,\qquad (1+x)^n=1+nx.$$
-První dva vzorce využijeme později při popisu malých rotací v rovině.
+**Příklad (aproximace důležitých funkcí v okolí nuly).** Ve cvičení
+ukážeme platnost následujících přibližných vzorců, které platí pro $x$
+blízké k nule.  $$\sin x\approx x, \quad \cos x\approx 1,\qquad
+(1+x)^n=1+nx.$$ První dva vzorce využijeme později při popisu malých
+rotací v rovině.
  
 <div class='obtekat'>
 
-![Vrcholek hory Chimborazo je místo nejvzdálenější od středu Země. Roli hraje nadmořská výška a zploštění Země. Gravitační zrychlení zde je nejmenší.  Zdroj: pixabay.com](chimborazo.jpg)
+![Vrcholek hory Chimborazo je místo nejvzdálenější od středu
+ Země. Roli hraje nadmořská výška a zploštění Země. Gravitační
+ zrychlení zde je nejmenší.  Zdroj: pixabay.com](chimborazo.jpg)
 
 </div>
 
 **Příklad (gravitační potenciál v malých výškách nad zemí).**
-Gravitační potenciál $V$ ve vzdálenosti $r$ od středu koule o hmotnosti $M$ je dán vztahem $$V(r)=-G\frac Mr=-GMr^{-1},$$ kde $G$ je gravitační konstanta. Najdeme lineární aproximaci v bodě $R$.
+Gravitační potenciál $V$ ve vzdálenosti $r$ od středu koule
+o hmotnosti $M$ je dán vztahem $$V(r)=-G\frac Mr=-GMr^{-1},$$ kde $G$
+je gravitační konstanta. Najdeme lineární aproximaci v bodě $R$.
 
-Dosazením obdržíme $$V(R)=-GMR^{-1}$$ a derivováním
-$$\frac{\mathrm dV}{\mathrm dr}=GMr^{-2}, \quad \frac{\mathrm
-dV(R)}{\mathrm dr}=GMR^{-2}.  $$ Odsud poté získáme lineární
-aproximaci $$V(r)\approx -GMR^{-1}+GMR^{-2}(r-R)$$ Pro Zemi jako kouli
-o poloměru $R$ je $r-R$ výška nad Zemí $h$ a aproximaci je možno po
-přeznačení napsat ve tvaru $$V(r)\approx V_0 +gh.$$ V tomto označení
-je $V_0=-GMR^{-1}$ konstanta související s volbou nulové hladiny
-potenciálu a vzhledem k libovolnosti volby nulové hladiny je tato
-hodnota nepodstatná. Veličina $g=GMR^{-2}$ je tíhové zrychlení
-vyjádřené pomocí gravitační konstanty $G$ a parametrů Země. Veličina $gh$ je potenciál v tíhovém poli Země. Tuto veličinu známe lépe ze vzorce pro potenciální energii tělesa o hmotnosti $m$, který má tvar $$E=mgh.$$
+Dosazením obdržíme $$V(R)=-GMR^{-1}$$ a derivováním $$\frac{\mathrm
+dV}{\mathrm dr}=GMr^{-2}, \quad \frac{\mathrm dV(R)}{\mathrm
+dr}=GMR^{-2}.  $$ Odsud poté získáme lineární aproximaci $$V(r)\approx
+-GMR^{-1}+GMR^{-2}(r-R)$$ Pro Zemi jako kouli o poloměru $R$ je $r-R$
+výška nad Zemí $h$ a aproximaci je možno po přeznačení napsat ve tvaru
+$$V(r)\approx V_0 +gh.$$ V tomto označení je $V_0=-GMR^{-1}$ konstanta
+související s volbou nulové hladiny potenciálu a vzhledem
+k libovolnosti volby nulové hladiny je tato hodnota
+nepodstatná. Veličina $g=GMR^{-2}$ je tíhové zrychlení vyjádřené
+pomocí gravitační konstanty $G$ a parametrů Země. Veličina $gh$ je
+potenciál v tíhovém poli Země. Tuto veličinu známe lépe ze vzorce pro
+potenciální energii tělesa o hmotnosti $m$, který má tvar $$E=mgh.$$
 
 [Online výpočet tíhového zrychlení](https://sagecell.sagemath.org/?z=eJxNjrEKgzAUAPdA_uFBB6Ngmlir7fDGji4OjoVHRQ22Rp6p31916nhwHDfSPBMWuihzc0usearU2hjgBD3T6oLzE73h5acl0BSkqLG4lNYYsytMrfsu4Dt4EIdBigqv-l5mRyfLj8yHln-DcSVWEUexFI3iGNNxP0iq8wYgRY-Nbl3XbaQY683qf4UjLIo=&lang=sage)
 

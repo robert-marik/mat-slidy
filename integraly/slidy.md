@@ -1,6 +1,6 @@
 % Integrál, integrál a integrál
 % Robert Mařík
-% 12.3.2019
+% 12. 3. 2019
 
 
 Naučili jsme se pracovat s derivacemi, tedy s rychlostí změny.
@@ -16,7 +16,7 @@ poněkud obecněji, uvedeme si dokonce hned tři různé "protijedy" na
 derivování.
 
 
-Jeden je představíme jako opak derivace (**neurčitý integrál**), druhý
+Jeden představíme jako opak derivace (**neurčitý integrál**), druhý
 jako změnu funkce vypočtenou ze zadané rychlosti změny (**Newtonův určitý
 integrál**) a třetí jako náhradu součtu pro případ, kdy potřebujeme
 sčítat nekonečně mnoho příspěvků, z nichž každý má v podstatě nulovou
@@ -67,14 +67,14 @@ něco, co naopak z rychlosti zrekonstruuje původní veličinu, která se
 touto rychlostí mění.
 
 
-Závislá proměnná|Nezávislá proměnná|Derivace|
-|------------------------|-----------------------|------------------------|
-|veličina $x$|čas|rychlost růstu veličiny $x$|
-|výška stromu|čas|rychlost růstu do výšky|
-|objem kmene stromu (smrk)|čas|rychlost růstu ve smyslu přírůstu dřevní hmoty|
-|dráha při pohybu při pohybu po přímce i vzdálenost od referenčního bodu|čas doba od začátku pohybu nebo od referenčního okamžiku|rychlost|
-|rychlost|čas|zrychlení|
-|všeobecná cenová hladina (cca náklady na živobytí)|čas|inflace|
+Závislá proměnná|Derivace podle času|
+|------------------------|------------------------|
+|veličina $x$|rychlost růstu veličiny $x$|
+|výška stromu|rychlost růstu do výšky|
+|objem kmene stromu (smrk)|rychlost růstu ve smyslu přírůstu dřevní hmoty|
+|dráha|rychlost|
+|rychlost|zrychlení|
+|všeobecná cenová hladina (cca náklady na živobytí)|inflace|
 
 \fi
 
@@ -94,12 +94,12 @@ Na této úloze si připomeneme další roli derivace (směrnice tečny) a
 představíme si úžasný druh mostů – mosty zavěšené na nosných lanech,
 které mohou překlenout obrovské vzdálenosti.
 
-U zavěšeného mostu lano nese hmotnost rovnoměrně rozloženou ve
-vodorovném směru. Je potřeba zvolit vhodnou délku svislých lan tak, aby
-síla působící na nosné lano byla vždy ve směru tohoto lana. Potom
-je systém nejstabilnější. 
+U zavěšeného mostu lano nese prostřednictvím svislých lan hmotnost
+rovnoměrně rozloženou ve vodorovném směru. Je potřeba zvolit vhodnou
+délku svislých lan tak, aby síla působící na nosné lano byla vždy ve
+směru tohoto nosného lana. Potom je systém nejstabilnější a nejpevnější.
 
-Díky symetrii stačí uvažovat jenom půlku lana. Na část lana nad
+Díky symetrii stačí uvažovat jenom půlku mostu. Na část lana nad
 intervalem $[0,x]$ působí následující síly.
 
 * Tahová síla lana v minimu ($x=0$) o velikosti $T$ doleva.
@@ -107,8 +107,8 @@ intervalem $[0,x]$ působí následující síly.
   lineární hustota (hmotnost jednotkové délky mostu) a $\mu x$ je
   hmotnost části mostu, odpovídající intervalu $[0,x]$.
 * Tahová síla $F$ doprava nahoru na pravém konci. Protože je most v
-  klidu. velikost a směr této síly jsou takové, aby součet všech sil
-  působících na uvažovaný element byl roven nule. Jako stavitelé mostu
+  klidu, velikost a směr této síly jsou takové, aby součet všech sil
+  působících na uvažovanou část mostu byl roven nule. Jako stavitelé mostu
   chceme, aby směr síly souhlasil se směrem lana, tj. aby síla byla
   tečná k nosnému lanu.
   
@@ -202,7 +202,7 @@ teploty místnosti na čase je $$T=\left(18+10 e^{-0.01
 t}\right)\,{}^\circ \mathrm C.$$
 
 **Příklad.** Na jednom z předchozích slidů jsme viděli, že křivka,
-která je přirozená pro nosné lano zavěšeného mostu splňuje rovnici
+která je přirozená pro nosné lano zavěšeného mostu, splňuje rovnici
 $$y'=\frac{\mu g}{T}x.$$ Pouze za této podmínky bude lano namáháno ve
 směru své nejvyšší pevnosti, tj. v podélném směru, ve směru své
 osy. Integrací získáme $$y=\int \frac{\mu g}{T}x\,\mathrm dx=\frac{\mu
@@ -216,8 +216,11 @@ Představíme si mírnou modifikaci neurčitého integrálu. Rychlost změny
 nebudeme používat k hledání předpisu funkce, ale budeme hledat změnu
 funkce na zadaném intervalu.
 
-> Definice (Newtonův určitý integrál). Buď $f$ funkce a $F$ její primitivní funkce na intervalu $I$. Buď $[a,b]\subset I$ podinterval v $I$. *Určitým integrálem funkce $f$ na intervalu $[a,b]$* rozumíme veličinu označenou a definovanou vztahem
-$$\int_a^b f(x)\mathrm dx:=F(b)-F(a).$$
+> Definice (Newtonův určitý integrál). Buď $f$ funkce a $F$ její
+primitivní funkce na intervalu $I$. Buď $[a,b]\subset I$ podinterval v
+$I$. *Určitým integrálem funkce $f$ na intervalu $[a,b]$* rozumíme
+veličinu označenou a definovanou vztahem $$\int_a^b f(x)\mathrm
+dx:=F(b)-F(a).$$
 
 **Označení.** Výraz $F(b)-F(a)$, tj. změnu funkce $F(x)$ na intervalu
 $[a,b]$, označujeme také $[F(x)]_a^b$. Tento zápis se často používá
@@ -267,24 +270,25 @@ Ze středoškolské fyziky dobře známe vzorce pro dráhu, práci a tlakovou
 sílu. Ovšem jenom v extrémně pěkných případech.
 
 * Dráha rovnoměrného pohybu je určena vzorcem $$s=vt.\tag{1}$$ Tento
-vzorec není použitelný pro pohyb proměnnou rychlostí. Z kapitoly o
-neurčitém interálu víme, že obecný vzorec je $$s=\int v\,\mathrm
-dt.\tag{2}$$ Pokud je $v$ konstantní, vzorec (1) je důsledkem vzorce
-(2).
+  vzorec není použitelný pro pohyb proměnnou rychlostí. Z kapitoly o
+  neurčitém interálu víme, že obecný vzorec je $$s=\int v\,\mathrm
+  dt.\tag{2}$$ Pokud je $v$ konstantní, vzorec (1) je důsledkem vzorce
+  (2).
 * Hydrostatická tlaková síla $F$ působící ve vodě v hloubce $h$ na
-plochu o velikosti $S$ se určí podle vztahu $$F=Sh\rho g,$$ kde $\rho$
-je hustota vody a $g$ tíhové zrychlení. Tento vzorec však není možné
-použít, pokud různé části plochy jsou v různých hloubkách. Například
-není možné pomocí tohoto vzorce určit celkovou sílu na svislou stěnu
-reprezentující hráz přehrady.
+  plochu o velikosti $S$ se určí podle vztahu $$F=Sh\rho g,$$ kde
+  $\rho$ je hustota vody a $g$ tíhové zrychlení. Tento vzorec však
+  není možné použít, pokud různé části plochy jsou v různých
+  hloubkách. Například není možné pomocí tohoto vzorce určit celkovou
+  sílu na svislou stěnu reprezentující hráz přehrady.
 * Práce vykonaná konstantní silou $F$ po dráze $s$ je $$W=Fs.\tag{3}$$
-Co když se ale síla nebo dráha mění? Pokud nás zajímá práce nutná k
-navinutí visícího řetězu na rumpál, síla se během namotávání plynule
-zmenšuje, protože visící kus řetězu se při namotávání zkracuje. Pokud
-nás zajímá práce nutná k vyčerpání vodní nádrže, musíme každý litr
-vody, který je na dně, "tahat" po delší dráze než každý litr vody,
-který je na hladině a proto se mění dráha. Vzorec (3) selhává v obou
-případech. Jednou kvůli nekonstantní síle, podruhé kvůli dráze.
+  Co když se ale síla nebo dráha mění? Pokud nás zajímá práce nutná k
+  navinutí visícího řetězu na rumpál, síla se během namotávání plynule
+  zmenšuje, protože visící kus řetězu se při namotávání
+  zkracuje. Pokud nás zajímá práce nutná k vyčerpání vodní nádrže,
+  musíme každý litr vody, který je na dně, "tahat" po delší dráze než
+  každý litr vody, který je na hladině a proto se mění dráha. Vzorec
+  (3) selhává v obou případech. Jednou kvůli nekonstantní síle,
+  podruhé kvůli dráze.
 
 <div class='obtekat'>
 
@@ -293,13 +297,13 @@ případech. Jednou kvůli nekonstantní síle, podruhé kvůli dráze.
 </div>
 
 * Obsah obrazce mezi konstantní funkcí $f$ a osou $x$ nad intervalem
-$[a,b]$ se vypočte snadno, protože se jedná o obdélník se stranami $f$
-a $\Delta x=b-a$. Proto
-$$S=f\cdot \Delta x.$$ Tento přístup však není možné použít, pokud se funkce
-$f$ na intervalu $[a,b]$ mění. Formálně je tato úloha stejná jako
-ostatní úlohy výše, má však snadnou geometrickou interpretaci. Právě tuto
-interpretaci využijeme v následujícím k definici druhého typu určitého integrálu
-(Riemannova).
+  $[a,b]$ se vypočte snadno, protože se jedná o obdélník se stranami
+  $f$ a $\Delta x=b-a$. Proto $$S=f\cdot \Delta x.$$ Tento přístup
+  však není možné použít, pokud se funkce $f$ na intervalu $[a,b]$
+  mění. Formálně je tato úloha stejná jako ostatní úlohy výše, má však
+  snadnou geometrickou interpretaci. Právě tuto interpretaci využijeme
+  v následujícím k definici druhého typu určitého integrálu
+  (Riemannova).
 
 # Určitý integrál (Riemannův)
 
@@ -352,17 +356,19 @@ následující přednášce.
 </div>
 
 
-1. Těleso pohybující se po dobu $\Delta t$ konstantní rychlostí $v$ po přímce  urazí dráhu $$s=v\Delta t.$$
+1. Těleso pohybující se po dobu $\Delta t$ konstantní rychlostí $v$ po
+   přímce urazí dráhu $$s=v\Delta t.$$
 1. Těleso pohybující se po dobu $\Delta t_1$ konstantní rychlostí
-$v_1$ po přímce a poté po dobu $\Delta t_2$ rychlostí $v_2$ urazí
-celkovou dráhu $$s=v_1\Delta t_1+v_2\Delta t_2.$$ Toto je možné
-zobecnit na libovolný pohyb skládající se z konečného počtu úseků, kdy
-se těleso pohybuje konstantní rychlostí.  $$s=v_1\Delta t_1+v_2\Delta
-t_2+\cdots v_k t_k=\sum_{i=1}^k v_i\Delta t_i$$ Příspěvek za každou
-část pohybu, kdy je rychlost konstantní, je $$\Delta s=v\Delta t, $$
-kde $v$ a $\Delta t$ jsou příslušná rychlost a doba pohybu, po kterou
-je rychlost konstantní.
-1. Pokud se rychlost mění spojitě a $a$ a $b$ jsou počáteční a koncový okamžik pohybu, platí $$s=\int_a^b v(t)\,\mathrm dt.$$
+   $v_1$ po přímce a poté po dobu $\Delta t_2$ rychlostí $v_2$ urazí
+   celkovou dráhu $$s=v_1\Delta t_1+v_2\Delta t_2.$$ Toto je možné
+   zobecnit na libovolný pohyb skládající se z konečného počtu úseků,
+   kdy se těleso pohybuje konstantní rychlostí.  $$s=v_1\Delta
+   t_1+v_2\Delta t_2+\cdots v_k t_k=\sum_{i=1}^k v_i\Delta t_i$$
+   Příspěvek za každou část pohybu, kdy je rychlost konstantní, je
+   $$\Delta s=v\Delta t, $$ kde $v$ a $\Delta t$ jsou příslušná
+   rychlost a doba pohybu, po kterou je rychlost konstantní.
+1. Pokud se rychlost mění spojitě a $a$ a $b$ jsou počáteční a koncový
+   okamžik pohybu, platí $$s=\int_a^b v(t)\,\mathrm dt.$$
 
 
 # Aplikace určitého integrálu (tlaková síla)
@@ -370,15 +376,21 @@ je rychlost konstantní.
 
 <div class='obtekat'>
 
-![Celkovou sílu působící na jednu stěnu Mojžíšova mostu podle obrázku není možné určit středoškolským vzorcem, protože tlak není podél celé stěny konstantní, ale mění se s hloubkou. Zdroj: https://www.flickr.com/photos/huphtur](mojzisuv_most.jpg)
+![Celkovou sílu působící na jednu stěnu Mojžíšova mostu podle obrázku
+ není možné určit středoškolským vzorcem, protože tlak není podél celé
+ stěny konstantní, ale mění se s hloubkou. Zdroj:
+ https://www.flickr.com/photos/huphtur](mojzisuv_most.jpg)
 
-![Celkovou sílu působící na jednu stěnu mostu získáme jako součet sil na myšlené vodorovné pásy dělící tuto stěnu.](prehrada.png)
+![Celkovou sílu působící na jednu stěnu mostu získáme jako součet sil
+ na myšlené vodorovné pásy dělící tuto stěnu.](prehrada.png)
 
 </div>
 
-[Mojžíšův most](http://www.netherlands.cz/mkportal/modules/wiki/index.php/Moj%C5%BE%C3%AD%C5%A1%C5%AFv_most) (Holandsko, pevnost Fort de Roovere) je v celosvětovém
-měřítku unikátním mostem. Je postavený ze dřeva a zanořený do vodního
-příkopu okolo pevnosti tak, aby splýval s krajinou. Představme si
+[Mojžíšův
+most](http://www.netherlands.cz/mkportal/modules/wiki/index.php/Moj%C5%BE%C3%AD%C5%A1%C5%AFv_most)
+(Holandsko, pevnost Fort de Roovere) je v celosvětovém měřítku
+unikátním mostem. Je postavený ze dřeva a zanořený do vodního příkopu
+okolo pevnosti tak, aby splýval s krajinou. Představme si
 zjednodušeně, že vodní masu drží svislá dřevěná stěna a budeme se
 snažit najít celkovou sílu působící na tuto stěnu tlakem vodní
 masy. (Ve skutečnosti most leží na dně a dno se zvedá směrem ke stěnám
@@ -386,61 +398,67 @@ mostu. Google umí najít stavební plán mostu.) Délku mostu označíme
 $L$, výšku stěny (přesněji vzdálenost ode dna po hladinu vody)
 označíme $H$.
 
-1. Tlaková síla na rovinnou plochu o obsahu $S$ vyvolaná tlakem $p$ je rovna $$F=pS.$$ Tlak v hloubce $h$ je dán vzorcem $$p=h\rho g,$$
-kde $\rho$ je hustota vody a $g$ tíhové zrychlení.
+1. Tlaková síla na rovinnou plochu o obsahu $S$ vyvolaná tlakem $p$ je
+   rovna $$F=pS.$$ Tlak v hloubce $h$ je dán vzorcem $$p=h\rho g,$$
+   kde $\rho$ je hustota vody a $g$ tíhové zrychlení.
 1. Myšlenkově rozdělíme celou stěnu na části. Tlaková síla na celou
-stěnu je rovna součtu tlakových sil, které působí na jednotlivé
-části. Má smysl volit části tak, aby na nich byl tlak
-konstantní. Myšlenkově tedy stěnu rozřežeme na vodorovné pásky.
-2. Na myšlený vodorovný pás, který má výšku $\Delta x$ a je v hloubce
+   stěnu je rovna součtu tlakových sil, které působí na jednotlivé
+   části. Má smysl volit části tak, aby na nich byl tlak
+   konstantní. Myšlenkově tedy stěnu rozřežeme na vodorovné pásky.
+1. Na myšlený vodorovný pás, který má výšku $\Delta x$ a je v hloubce
    $x$, působí tlak $p=x\rho g$. Obsah pásu je podle vzorce pro obsah
    obdélníka $\Delta S=L\Delta x$. Celková síla působící na tento pás
    je $$\Delta F=p\Delta S=L\rho g x\Delta x.$$
-3. Celkovou sílu na celou stěnu najdeme sečtením všech
+1. Celkovou sílu na celou stěnu najdeme sečtením všech
    příspěvků. Formálně $$F=\sum L\rho g x\Delta x.$$ Protože těchto
    příspěvků je nekonečně mnoho, sečteme je integrálem
-$$F=\int_0^H L\rho gx\,\mathrm dx.$$
-4. Po výpočtu dostáváme
-\dm $$F=\int_0^H L\rho gx\,\mathrm dx=L\rho g\int_0^H x\,\mathrm dx =L\rho g \left[\frac 12 x^2\right]_0^H=L\rho g \left[\frac 12 H^2-\frac 12 0^2\right]=\frac 12 LH^2 \rho g. $$
-Tento vztah je stejný, jako kdyby na celou plochu o
-velikosti $LH$ působila tlaková síla vyvolaná tlakem
-$\frac 12 H\rho g$, tj. tlakem v poloviční hloubce.
+   $$F=\int_0^H L\rho gx\,\mathrm dx.$$
+1. Po výpočtu dostáváme
+   \dm $$F=\int_0^H L\rho gx\,\mathrm dx=L\rho g\int_0^H x\,\mathrm dx =L\rho g \left[\frac 12 x^2\right]_0^H=L\rho g \left[\frac 12 H^2-\frac 12 0^2\right]=\frac 12 LH^2 \rho g. $$
+   Tento vztah je stejný, jako kdyby na celou plochu o velikosti $LH$
+   působila tlaková síla vyvolaná tlakem $\frac 12 H\rho g$,
+   tj. tlakem v poloviční hloubce.
 
 
 # Aplikace určitého integrálu (práce při čerpání vody)
 
 <div class='obtekat'>
 
-![Mojžíšův most je z obou stran chráněný přehradou umožňující regulací výšky vody v okolí mostu, vzhledem k charakteru krajiny v Holandsku však není překvapení, že může být i zatopený. Zdroj: http://veryhungryexplorer.com/the-day-i-nearly-walked-on-water/](mojzisuv_most_pod_vodou.jpg)
+![Mojžíšův most je z obou stran chráněný přehradou umožňující regulací
+ výšky vody v okolí mostu, vzhledem k charakteru krajiny v Holandsku
+ však není překvapení, že může být i zatopený. Zdroj:
+ http://veryhungryexplorer.com/the-day-i-nearly-walked-on-water/](mojzisuv_most_pod_vodou.jpg)
 
 </div>
 
 Pokud potřebujeme vyčerpat vodu z rezervoáru, nádrže, rybníka nebo
-jezera, musíme ji dopravit za stěnu (za hráz, dostat na břeh, ...). Představme si, že po opadnutí
-vody v okolí Mojžíšova mostu zůstane uvnitř voda, kterou je potřeba
-vyčerpat. Tím se most proměnil v nádrž o hloubce $H$. Povrch hladiny
-ve chvíli, kdy je voda $x$ jednotek délky pod okrajem mostu označme
-$S$. (Pro nádrž ve tvaru kvádru by $S$ bylo konstantní a rovno obsahu
-dna.)
+jezera, musíme ji dopravit za stěnu (za hráz, dostat na břeh,
+...). Představme si, že po opadnutí vody v okolí Mojžíšova mostu
+zůstane uvnitř voda, kterou je potřeba vyčerpat. Tím se most proměnil
+v nádrž o hloubce $H$. Povrch hladiny ve chvíli, kdy je voda $x$
+jednotek délky pod okrajem mostu označme $S$. (Pro nádrž ve tvaru
+kvádru by $S$ bylo konstantní a rovno obsahu dna.)
 
 1. Pro vyzvednutí tělesa o hmotnosti $m$ o výšku $h$ musíme vykonat
-práci $W=mgh,$ abychom vykompenzovali nárůst potenciální energie.
+   práci $W=mgh,$ abychom vykompenzovali nárůst potenciální energie.
 2. Vodu v nádrži rozdělíme na vodorovné vrstvy o výšce $\Delta
-x$. Hmotnost vrstvy o výšce $\Delta x$ v hloubce $x$ pod okrajem
-nádrže bude $\Delta m=S\Delta x\rho$ a abychom vodu
-dostali přes okraj, musíme vykonat práci
-$$\Delta W=\Delta m gx=S\Delta x\rho gx.$$
+   x$. Hmotnost vrstvy o výšce $\Delta x$ v hloubce $x$ pod okrajem
+   nádrže bude $\Delta m=S\Delta x\rho$ a abychom vodu dostali přes
+   okraj, musíme vykonat práci $$\Delta W=\Delta m gx=S\Delta x\rho
+   gx.$$
 3. Celková práce na vyčerpání vody se vypočte jako součet jednotlivých
-příspěvků. Spojitě se měnící veličinu sčítáme integrálem, což vede na vztah
-$$W=\int_0^H S\rho gx \,\mathrm dx=\rho g\int_0^H Sx \,\mathrm dx.$$
-4. Pro nádrže ve tvaru kvádru by
-veličina $S$ byla konstantní a integrál by vycházel
-$$W=S\rho g\int_0^H x\,\mathrm dx=S\rho g\left[\frac 12 x^2\right]_0^H=S\rho g\frac 12 H^2=(SH\rho)\frac 12
-H.$$ Výraz $SH\rho$ je celková hmotnost. Práce je tedy stejná, jako
-kdybychom těleso o stejné hmotnosti jako je hmotnost vodní masy zvedli
-z poloviční hloubky pod hladinou na úroveň hladiny. Je to stejná práce,
-jakou bychom vykonali, kdyby všechna voda byla stlačena v těžišti a my
-bychom tuto vodu zvedli na úroveň okraje nádrže.
+   příspěvků. Spojitě se měnící veličinu sčítáme integrálem, což vede
+   na vztah $$W=\int_0^H S\rho gx \,\mathrm dx=\rho g\int_0^H Sx
+   \,\mathrm dx.$$
+4. Pro nádrže ve tvaru kvádru by veličina $S$ byla konstantní a
+   integrál by vycházel $$W=S\rho g\int_0^H x\,\mathrm dx=S\rho
+   g\left[\frac 12 x^2\right]_0^H=S\rho g\frac 12 H^2=(SH\rho)\frac 12
+   H.$$ Výraz $SH\rho$ je celková hmotnost. Práce je tedy stejná, jako
+   kdybychom těleso o stejné hmotnosti jako je hmotnost vodní masy
+   zvedli z poloviční hloubky pod hladinou na úroveň hladiny. Je to
+   stejná práce, jakou bychom vykonali, kdyby všechna voda byla
+   stlačena v těžišti a my bychom tuto vodu zvedli na úroveň okraje
+   nádrže.
 
 
 # Aplikace určitého integrálu (moment setrvačnosti tyče nebo trámu)
@@ -448,7 +466,7 @@ bychom tuto vodu zvedli na úroveň okraje nádrže.
 <div class='obtekat'>
 
 ![Při posuzování stability rozhledny hraje moment setrvačnosti
-ústřední roli. Moment setrvačnosti je možné získat součtem momentů
+ústřední roli. Moment setrvačnosti rozhledny je možné získat součtem momentů
 setrvačnosti jednotlivých trámů. Rozhledna Bodanka. Zdroj:
 http://tvstav.cz](bohdanka.jpg)
 
@@ -457,48 +475,57 @@ http://tvstav.cz](bohdanka.jpg)
 </div>
 
 * Kinetická energie tělesa o hmotnosti $m$ pohybujícího se posuvným
-pohybem rychlostí $v$ je dána vztahem $E=\frac 12 mv^2$. Kinetická
-energie tělesa o momentu setrvačnosti $J$ pohybujícího se otáčivým
-pohybem úhlovou rychlostí $\omega$ je dána vztahem $E=\frac 12 J\omega
-^2$. 
+  pohybem rychlostí $v$ je dána vztEnergie potřebná k vyvolání
+  rotačního pohybu je úměrná momentu setrvačnosti. Moment setrvačnosti
+  je tedy jakousi mírou odolnosti vůči silám, které se jej snaží uvést
+  do rotačního pohybu. Větší ahem $E=\frac 12 mv^2$. Kinetická energie
+  tělesa o momentu setrvačnosti $J$ pohybujícího se otáčivým pohybem
+  úhlovou rychlostí $\omega$ je dána vztahem $E=\frac 12 J\omega
+  ^2$. Odsud vidíme, že energie potřebná k vyvolání rotačního pohybu
+  je úměrná momentu setrvačnosti. Moment setrvačnosti je tedy jakousi
+  mírou odolnosti tělesa vůči silám, které se jej snaží uvést do
+  rotačního pohybu. Zjednodušeně, větší moment setrvačnosti znamená,
+  že těleso je stabilnější.
 * Moment setrvačnosti hmotného bodu o hmotnosti $m$ vzhledem k ose
-otáčení vzdálené $r$ od tohoto bodu je $J=mr^2$. Pro soustavu hmotných
-bodů stačí příspěvky sečíst. Pro případ tělesa se spojitě rozloženou
-hmotností bychom museli "sečíst nekonečně mnoho nekonečně malých
-příspěvků" a proto sčítáme integrálem.
-
-
+  otáčení vzdálené $r$ od tohoto bodu je $J=mr^2$. Pro soustavu
+  hmotných bodů stačí příspěvky sečíst. Pro případ tělesa se spojitě
+  rozloženou hmotností bychom museli "sečíst nekonečně mnoho nekonečně
+  malých příspěvků" a proto sčítáme integrálem.
 
 Budeme studovat rotaci tyče o hmotnosti $m$ a délce $L$ okolo osy
 kolmé k tyči. Nechť je tyč položena podél osy $x$ a rotuje okolo osy
 $y$. Kousek tyče o délce $\Delta x$ má hmotnost $\frac{\Delta x}{L}m$
 a pokud je jeho vzdálenost od osy $y$ rovna $x$, příspěvek k celkovému
-momentu setrvačnosti je $$\Delta J=  \frac{\Delta x}{L}m x^2 =\frac{m}{L}
-x^2\Delta x.$$ Celkový moment setrvačnosti je dán integrálem, ale závisí na poloze tyče vzhledem k ose otáčení.
+momentu setrvačnosti je $$\Delta J= \frac{\Delta x}{L}m x^2
+=\frac{m}{L} x^2\Delta x.$$ Celkový moment setrvačnosti je dán
+integrálem, ale závisí na poloze tyče vzhledem k ose otáčení.
 
-1. Pro tyč umístěnou levým koncem v počátku dostáváme moment vzhledem k ose procházející koncem tyče ve tvaru
-$$J=\int_0^L \frac{m}{L} x^2\,\mathrm dx=\frac mL \left[\frac 13 x^3\right]_0^L= \frac mL \frac 13 L^3=\frac 13 mL^2.
-$$
-1. Pro tyč umístěnou středem v počátku dostáváme moment vzhledem k ose procházející středem ve tvaru
-\dm$$J=\int_{-\frac L2}^{\frac L2} \frac{m}{L} x^2\,\mathrm dx=\frac mL \left[\frac 13 x^3\right]_{-\frac L2} ^{-\frac L2} = \frac mL \left[\frac 13 \frac {L^3}8 - \frac 13 (-1)^3 \frac {L^3}8\right] = \frac 1{12} mL^2. $$
+1. Pro tyč umístěnou levým koncem v počátku dostáváme moment vzhledem
+   k ose procházející koncem tyče ve tvaru $$J=\int_0^L \frac{m}{L}
+   x^2\,\mathrm dx=\frac mL \left[\frac 13 x^3\right]_0^L= \frac mL
+   \frac 13 L^3=\frac 13 mL^2.  $$
+1. Pro tyč umístěnou středem v počátku dostáváme moment vzhledem k ose
+   procházející středem ve tvaru
+   \dm$$J=\int_{-\frac L2}^{\frac L2} \frac{m}{L} x^2\,\mathrm dx=\frac mL \left[\frac 13 x^3\right]_{-\frac L2} ^{-\frac L2} = \frac mL \left[\frac 13 \frac {L^3}8 - \frac 13 (-1)^3 \frac {L^3}8\right] = \frac 1{12} mL^2. $$
 
 **Závěr.**
 
 <div class='obtekat'>
 
-![Provazochodec při přechodu přes Grand Canyon. Zdroj: cbsnews.com](wallenda.jpg)
+![Provazochodec při přechodu přes Grand Canyon. Zdroj:
+ cbsnews.com](wallenda.jpg)
 
 </div>
 
-
-* Tyč se otáčí mnohem hůře okolo konce než okolo středu. Přesněji čtyřikrát hůře. (Z praxe
-známe při manipulaci s dlouhým žebříkem.)
+* Na roztočení tyče okolo konce je potřeba více energie, než na
+  roztočení okolo středu. Čtyřikrát více. (Z praxe víme, že s dlouhým
+  žebřem se manipuluje nejlépe, pokud jej držíme uprostřed.)
 * Tyč o konstantní délkové hustotě $\tau$ (dané použitým průřezem a
-materiálem) má hmotnost $m=\tau L$ a moment setrvačnosti vzhledem ke
-středu $$J=\frac1{12}\tau L^3.$$ Vidíme, že moment setrvačnosti roste
-dramaticky při zvětšování délky, s třetí mocninou. Proto
-provazochodci nosí na laně dlouhou tyč a proto při extrémních výkonech,
-jako je přechod Grand Canyon, bývá použita extrémně dlouhá tyč (pro
-Grand Canyon 9.1 metrů a 20 kilogramů, viz [Nik
-Wallenda](https://en.wikipedia.org/wiki/Nik_Wallenda#Canyon_walk)).
+  materiálem) má hmotnost $m=\tau L$ a moment setrvačnosti vzhledem ke
+  středu $$J=\frac1{12}\tau L^3.$$ Vidíme, že moment setrvačnosti
+  roste dramaticky při zvětšování délky, s třetí mocninou. Proto
+  provazochodci nosí na laně dlouhou tyč a proto při extrémních
+  výkonech, jako je přechod Grand Canyon, bývá použita extrémně dlouhá
+  tyč (pro Grand Canyon 9.1 metrů a 20 kilogramů, viz [Nik
+  Wallenda](https://en.wikipedia.org/wiki/Nik_Wallenda#Canyon_walk)).
 

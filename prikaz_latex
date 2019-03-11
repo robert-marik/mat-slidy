@@ -6,6 +6,7 @@ do
   echo $i
   cd $i
   pandoc --template ../default.latex slidy.md -o slidy.tex
+  vlna slidy.tex
   sed -i 's/♣/\\ensuremath{\\clubsuit}/g' slidy.tex
   sed -i 's/♠/\\ensuremath{\\spadesuit}/g' slidy.tex	
   pdflatex slidy.tex
