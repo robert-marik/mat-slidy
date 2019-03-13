@@ -13,14 +13,19 @@
 
 \def\zlomek{0.45}
 
+\def\nic{}
+
 \newcommand\obrazek[2][pixabay.com]{
   \clearpage
+  \def\test{#1}
 \begin{wrapfigure}{R}{\zlomek\linewidth}
   \begin{minipage}{1.0\linewidth}\parskip 0 pt
   \includegraphics[width=\linewidth]{#2}
 
   \vspace*{-10pt}
+  \ifx\test\nic\else
   \null\hfill{\color{gray}\footnotesize Zdroj: #1}
+  \fi
 
   \mezera
   \end{minipage}
@@ -31,7 +36,7 @@
 \def\textbf#1{%\newpage
   \oldtextbf{\color{red} #1}}
 
-\def\mezera{\vspace*{-20pt}}
+\def\mezera{\vspace*{10pt}}
 
 \def\stranka{\newpage}
 
@@ -42,7 +47,10 @@
 \date{2019--03--14 (14. března slavíme $\pi$-day)}
 \maketitle
 
-
+14. března matematikové slaví narozeniny Alberta Einsteina a
+$\pi$-day. Doporučované občerstvení je kulatý koláč
+(angl. \textit{pie}, zní stejně jako anglický výslovnost písmene
+$\pi$) nebo alespoň jídla kruhového tvaru --- pizza apod.
 
 \newpage
 
@@ -87,6 +95,24 @@ $x$, je nutno působit silou $kx$, kde $k$ je konstanta (tuhost
 pružiny). Vypočtěte práci nutnou k natažení pružiny o jednotkovou
 délku a poté o délku $l$.
 
+Po obecném výpočtu vypočtěte práci pro pružinu o zadané tuhosti $k$ a
+deformaci $\Delta x$. Výpočet proveďte určitým integrálem třikrát,
+postupně pro jednotku délky centimetr, decimetr a metr. Až po
+dokončení výpočtu převeďte na joule (newton krát metr).
+
+$$k=10 \,\mathrm{N}/\mathrm{cm}=100 \,\mathrm{N}/\mathrm{dm}=1000 \,\mathrm{N}/\mathrm{m}$$
+
+$$\Delta x=10\,\mathrm{cm}=1\,\mathrm{dm}=0.1\,\mathrm{m}$$
+
+Všimněte si, že v každém případě se integruje jiná funkce a v jiných
+mezích. Protože však všechny výpočty charakterizují stejnou situaci,
+výsledky jsou po převedení na stejné jednotky stejné, což je
+očekávané.
+
+Změna jednotek je speciální případ substituce, kdy proměnnou podle
+které integrujeme nahradíme proměnnou jinou. Tuto metodu si pro
+integrál představíme příští týden.
+
 
 \newpage
 
@@ -119,23 +145,54 @@ které k hodnotě $\pi$ konvergují mnohem rychleji.
 
 \newpage
 
-\obrazek{slovnik.jpg}
+\obrazek[]{slovnik.jpg}
 
 \textbf{Napouštění nádrže.} Chemikálie teče do nádrže rychlostí
-$180+3t$ litrů za minutu, kde $t\in [0,60]$. Určete, kolik chemikálie
+$180+3t$ litrů za minutu, kde $t\in [0,60]$ je čas v minutách. Určete, kolik chemikálie
 nateče do nádrže během prvních 20 minut. (Podle Stewart: Calculus.)
 
 \textbf{Prasklá kanalizace }způsobila znečištění jezera v rekreační
 oblasti. Koncentrace bakterií $C(t)$ (v bakteriích na kubický
-centimetr) se po ošetření úniku pro $t\in[0,6]$ vyvíjí
+centimetr, $t$ je čas ve dnech) se po ošetření úniku pro $t\in[0,6]$  vyvíjí
 rychlostí $$C'(t)=10^3(t-7).$$ Jaká je změna koncentrace bakterií mezi
-čvrtým a šestým dnem? (Podle Mardsen, Weinstein: Calculus I.)
+čtvrtým a šestým dnem? (Podle Mardsen, Weinstein: Calculus I.)
 
 \textbf{Rychlost učení.} Nechť $W(t)$ je počet francouzských slovíček,
-které se naučíme po $t$ minutách. Typicky může být
-$$W(0)=0\quad \text {a} \quad W'(t)=\frac{4t}{100}-3\left (\frac  t{100}\right)^2.$$ Najděte pomocí inetgrálu funkci $W(t)$. (Podle Mardsen, Weinstein: Calculus I.)
+které se naučíme po $t$ minutách. Typicky může být (pro první dvě hodiny učení)
+$$W(0)=0\quad \text {a} \quad W'(t)=\frac{4t}{100}-3\left (\frac  t{100}\right)^2.$$ Najděte pomocí integrálu funkci $W(t)$. (Podle Mardsen, Weinstein: Calculus I.)
 
 
+\newpage
+
+\def\mezera{\vspace*{-30pt}}
+
+\obrazek[Wikipedie]{kojal.jpg}
+
+
+\textbf{Vysílač Kojál.} Moravský vysílač Kojál je třetí nejvyšší
+stavbou v ČR a má přibližně tvar hranolu o výšce 340 metrů. Jeho
+dvojče, vysílač Krašov je ještě o dva metry vyšší a od roku 2018 tvoří
+současně i hlavní součást největších slunečních hodin na světě.
+
+Odhadněte hmotnost vzduchového sloupce, který by zaujímal místo
+vysílače. Pro tyto potřeby budeme vysílač uvažovat jako
+hranol. Půdorys odhadneme jako rovnostranný trojúhelník o straně tři
+metry, což je poměrně realistický model
+(\texttt{http://www.dxradio.cz/jidxc/kojal.htm}). Hustota vzduchu se
+mění s výškou $h$ (v metrech) podle vzorce
+$$\rho(h)=\rho_0 e^{-\rho_0 g h /p_0},$$ kde
+$\rho_0=1.225 \,\mathrm{kg}\,\mathrm{m}^{-3}$ je hustota vzduchu u země,
+$p_0=101325\,\mathrm{Pa}$ normální tlak vzduchu a
+$g=9.81\,\mathrm{kg}\,\mathrm{m}\,\mathrm{s}^{-2}$ je tíhové zrychlení (podle Wikipedie).
+Porovnejte výsledek s výsledkem, který byste dostali, kdybyste
+ignorovali změnu hustoty s výškou a použili pro hustotu konstantu
+$\rho_0.$
+
+\newpage
+
+\textbf{Určení parametru tak, aby integrál měl zadanou hodnotu.}
+Určete hodnotu reálného parametru $a$ tak, aby byl integrál $$\int_0^{10} a e^{0.1 x}\,\mathrm dx$$
+roven hodnotě 2019. 
 \end{document}
 
 

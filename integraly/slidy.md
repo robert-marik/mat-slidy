@@ -363,7 +363,7 @@ následující přednášce.
    celkovou dráhu $$s=v_1\Delta t_1+v_2\Delta t_2.$$ Toto je možné
    zobecnit na libovolný pohyb skládající se z konečného počtu úseků,
    kdy se těleso pohybuje konstantní rychlostí.  $$s=v_1\Delta
-   t_1+v_2\Delta t_2+\cdots v_k t_k=\sum_{i=1}^k v_i\Delta t_i$$
+   t_1+v_2\Delta t_2+\cdots +v_k \Delta t_k=\sum_{i=1}^k v_i\Delta t_i$$
    Příspěvek za každou část pohybu, kdy je rychlost konstantní, je
    $$\Delta s=v\Delta t, $$ kde $v$ a $\Delta t$ jsou příslušná
    rychlost a doba pohybu, po kterou je rychlost konstantní.
@@ -467,7 +467,7 @@ kvádru by $S$ bylo konstantní a rovno obsahu dna.)
 
 ![Při posuzování stability rozhledny hraje moment setrvačnosti
 ústřední roli. Moment setrvačnosti rozhledny je možné získat součtem momentů
-setrvačnosti jednotlivých trámů. Rozhledna Bodanka. Zdroj:
+setrvačnosti jednotlivých trámů. Rozhledna Bohdanka. Zdroj:
 http://tvstav.cz](bohdanka.jpg)
 
 ![Tyč rotující okolo kolmé osy.](4.png)
@@ -506,7 +506,7 @@ integrálem, ale závisí na poloze tyče vzhledem k ose otáčení.
    \frac 13 L^3=\frac 13 mL^2.  $$
 1. Pro tyč umístěnou středem v počátku dostáváme moment vzhledem k ose
    procházející středem ve tvaru
-   \dm$$J=\int_{-\frac L2}^{\frac L2} \frac{m}{L} x^2\,\mathrm dx=\frac mL \left[\frac 13 x^3\right]_{-\frac L2} ^{-\frac L2} = \frac mL \left[\frac 13 \frac {L^3}8 - \frac 13 (-1)^3 \frac {L^3}8\right] = \frac 1{12} mL^2. $$
+   \dm$$J=\int_{-\frac L2}^{\frac L2} \frac{m}{L} x^2\,\mathrm dx=\frac mL \left[\frac 13 x^3\right]_{-\frac L2} ^{\frac L2} = \frac mL \left[\frac 13 \frac {L^3}8 - \frac 13 (-1)^3 \frac {L^3}8\right] = \frac 1{12} mL^2. $$
 
 **Závěr.**
 
