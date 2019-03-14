@@ -13,6 +13,8 @@
 
 \def\zlomek{0.45}
 
+\let\rho\varrho
+
 \def\nic{}
 
 \newcommand\obrazek[2][pixabay.com]{
@@ -49,7 +51,7 @@
 
 14. března matematikové slaví narozeniny Alberta Einsteina a
 $\pi$-day. Doporučované občerstvení je kulatý koláč
-(angl. \textit{pie}, zní stejně jako anglický výslovnost písmene
+(angl. \textit{pie}, zní stejně jako anglická výslovnost písmene
 $\pi$) nebo alespoň jídla kruhového tvaru --- pizza apod.
 
 \newpage
@@ -164,15 +166,16 @@ $$W(0)=0\quad \text {a} \quad W'(t)=\frac{4t}{100}-3\left (\frac  t{100}\right)^
 
 \newpage
 
-\def\mezera{\vspace*{-30pt}}
+\def\mezera{\vspace*{-20pt}}
 
 \obrazek[Wikipedie]{kojal.jpg}
 
 
-\textbf{Vysílač Kojál.} Moravský vysílač Kojál je třetí nejvyšší
-stavbou v ČR a má přibližně tvar hranolu o výšce 340 metrů. Jeho
-dvojče, vysílač Krašov je ještě o dva metry vyšší a od roku 2018 tvoří
-současně i hlavní součást největších slunečních hodin na světě.
+\textbf{Vysílač Kojál.} Moravský vysílač Kojál nedaleko Vyškova
+je třetí nejvyšší stavbou v ČR a má přibližně tvar hranolu o výšce 340
+metrů. (Jeho dvojče, vysílač Krašov je ještě o~ dva metry vyšší a od
+roku 2018 tvoří i hlavní součást největších slunečních hodin na
+světě. Nejvyšší stavbou v ČR je vysílač Liblice B s~ 355 metry.)
 
 Odhadněte hmotnost vzduchového sloupce, který by zaujímal místo
 vysílače. Pro tyto potřeby budeme vysílač uvažovat jako
@@ -191,10 +194,30 @@ $\rho_0.$
 \newpage
 
 \textbf{Určení parametru tak, aby integrál měl zadanou hodnotu.}
-Určete hodnotu reálného parametru $a$ tak, aby byl integrál $$\int_0^{10} a e^{0.1 x}\,\mathrm dx$$
+Určete hodnotu reálného parametru $a$ tak, aby byl integrál $$\int_0^{10} a \sqrt x\,\mathrm dx$$
 roven hodnotě 2019. 
 \end{document}
 
 
 
 % hughes - hallet, gleason, Lock, Applied calculus
+
+
+
+H=340 # vyska vysilace
+rho0=1.225 # https://en.wikipedia.org/wiki/Density_of_air
+p0=101325
+g=9.81
+rho(h)=rho0*exp(-rho0*g*h/p0) # https://cs.wikipedia.org/wiki/Atmosf%C3%A9rick%C3%BD_tlak
+S=3^2*sqrt(3.0)/2 # odhad pudorysu
+print integrate(S*rho(h),(h,0,H))  # integrace
+print S*H*rho0  # vypocet bez zmeny hustoty
+S*p0/g*(1-exp(-rho0*g*H/p0))  # kontrola rucne pocitaneho vysledku
+
+
+
+var('t')
+print integrate(180+3*x,(x,0,20))
+print integrate(10^3*(t-7),(t,4,6))
+print integrate(4*t/100-3*(t/100)^2,t)
+print integrate(3*2019/(20*sqrt(10))*sqrt(x),(x,0,10))
