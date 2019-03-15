@@ -16,6 +16,10 @@ kdy parametry úlohy nejsou konstantní. Dokážeme tak počítat dráhu
 pohybu proměnnou rychlostí, tlak vody na plochu ponořenou napříč
 různými hloubkami a podobně.
 
+V následujícím textu rozvineme některé poznatky o integrálu, odvodíme
+si některé pokročilejší metody pro výpočet, ukážeme si, že každá
+spojitá funkce má primitivní funkcni a také otevřeme cestu k
+definování funkcí, které nejsou elementární.
 
 # Vlastnosti integrálu
 
@@ -24,7 +28,7 @@ tj. zachovává součet funkcí a násobení konstantou.
 
 Následující dvě věty nejsou překvapivé. Vyjadřují následující intuitivně zřejmá fakta.
 
-* Pokud ve veličina mění rychleji, výsledná změna je větší.
+* Pokud se veličina mění rychleji, výsledná změna je větší.
 * Pokud sledujeme změnu veličiny za určitý čas, můžeme sledovat změnu
   do nějakého mezičasu a poté od mezičasu do konce a obě částečné
   změny poté sečíst.
@@ -43,6 +47,8 @@ Věta o aditivitě vzledem k integračnímu oboru je například pro
 Newtonovu definici integrálu důsledkem zřejmého
 vztahu $$[F(b)-F(c)]+[F(c)-F(a)]=F(b)-F(a).$$
 
+# Střední hodnota
+
 Určitou souvislost s monotonií vzhledem k funkci má otázka, zda je
 možné funkci definovanou na intervalu $[a,b]$ nahradit funkcí
 konstantní tak, aby obě funkce měly stejný integrál. V praxi to
@@ -57,7 +63,35 @@ zadaném intervalu.
 
 > Definice (střední hodnota). Nechť $f$ je funkce definovaná na uzavřeném intervalu $[a,b]$. Číslo $\mu$ definované vztahem $$\mu=\frac 1{b-a}\int_a^b f(x)\,\mathrm dx$$ se nazývá *střední hodnota*  funkce $f$ na intervalu $[a,b]$.
 
+Geometricky je střední hodnota výška obdélníka, který má jednu stranu
+tvořenou intervalem $[a,b]$ a obsah je roven integrálu
+$\int_a^b f(x)\,\mathrm dx.$ Pokud je funkce $f(x)$ kladná a lineární,
+je tento integrál roven obsahu lichoběžníka o základnách $f(a)$ a
+$f(b)$ a výšce $b-a$. Tedy
+$$\int_a^b f(x)\,\mathrm dx=(b-a)\frac{f(a)+f(b)}2$$ a střední hodnota je tedy průměrem hodnoty na začátku a na konci intervalu.
 
+**Příklad.** Střední hodnota funkce $y=2x^2-1$ na intervalu $[0,2]$ je
+$$\frac 12 \int_0^2 2x^2-1 \,\mathrm dx=\frac 12 \left[\frac 23 x^3-x\right]_0^2=\frac 12 \left[\frac 23 8-2 - 0\right]=\frac 53.$$
+
+[Online výpočet.](https://sagecell.sagemath.org/?z=eJwz1DfSyswrSU0vSixJ1TDSqogz0jXU0ajQMdAx0tQEAIuACEI=&lang=sage)
+
+
+<div class='obtekat'>
+
+![Graf počtu nemocných chřipkou. Čárkovaně je dlouhodobý trend, okolo kterého počet nemocných osciluje s krátkou periodou. Zelená plná křivka je pětiletý průměr začínající v daném roce. Minimum této křivky je vhodný okamžik pro začátek plošné vakcinace.](graf.png)
+
+</div>
+
+
+**Příklad.** (Podle Leah Edelstein-Keshet: Integral Calculus with Applications to the
+Life Sciences) Health Canada dlouhodobě monitoruje chřipku. Ze získaných dat vyplývá, že existuje sezonní cyklus s krátkou periodou a dlouhodobý dvacetiletý cyklus s dlouhou periodou. Je-li $t$ čas v měsících, je počet nemocných (ve stotisících jedinců) dobře aproximován funkcí $$I(t)=\cos\left(\frac \pi 6 t\right)+\cos\left(\frac \pi {120} t\right)+2.$$ Health Canada má snahu chřipku eliminovat z populace očkováním. Odhaduje se, že je nutné pětileté období intenzivní vakcinace. Pro co nejnižší náklady je vhodné vakcinaci začít v období, kdy je virus na pětiletém minimu. Střední hodnota za pětileté období počínající časem $t_0$ je $$\overline I(t_0)=\frac 1{12\times 5}\int_{t_0}^{t_0+12\times 5} I(t)\,\mathrm dt.$$
+
+Pro výpočet minima funkce $\overline I(t_0)$ je nutné umět derivovat
+funkce, které jsou vyjádřeny integrálem a proměnná je v mezi tohoto
+integrálu. To se naučíme v dalších částech přednášky a poté se k
+tomuto příkladu vrátíme.
+
+[Online výpočet.](https://sagecell.sagemath.org/?z=eJxtjs0KgzAQhO-C75BbNj9iErG3XD3nFcTGIAQjcSn27du0pT_Q2-x8M8xexgwUKaurGZDZKe2wLe2JIxMvrY0ql6mr8JX4uENxdQva8J4RTpYVfcgjepjhYBIOiRJFz7Vh95W6ctpuMeGbKtkrVZAzTxB-gCRTiilbmv2ZShKX1e94jd7Spilvu-7ZGv63QvZ-feS0cEa47gb9BD-U&lang=sage)
 
 # Integrace metodou per partés
 
@@ -173,13 +207,24 @@ Věta o integrálu jako funkci horní meze dokonce udává tvar
   problém nalézt neurčitý integrál i k funkci tak jednoduché, jako je
   například $e^{-x^2}$ je neřešitelný ve třídě elementárních
   funkcí. Totéž platí pro další "nevinně vyhlížející" funkce jako
-  $\int \sin (x^2)\,\mathrm dx$ nebo $\int \frac{\sin x}{x}\,\mathrm dx$. Nyní máme možnost zapsat primitivní funkci vztahem
+  $\int \sin (x^2)\,\mathrm dx$ nebo $\int \frac{\sin x}{x}\,\mathrm dx$. Věta o integrálu jako funkci horní meze  nabízí možnost zapsat primitivní funkci vztahem
   $$\int e^{-x^2}\,\mathrm dx=c+\int_0^x e^{-t^2}\,\mathrm dt.$$
   Následující ukázka demonstruje, že i s takovýmto tvarem je možné
   jistým způsobem pracovat.
 
 
 # Ukázka funkce definované pomocí integrálu
+
+\iffalse
+
+<div class='obtekat'>
+
+![Součin se na součet mění například u logaritmického pravítka.
+ Zdroj: pixabay.com](slide-rule.jpg)
+
+</div>
+
+\fi
 
 Uvažujme funkci $f(x)=\int_1^x\frac 1t\,\mathrm dt.$ Ukážeme si, že tento tvar umožňuje odvodit některé vlastnosti funkce $f$. Dokážeme například, že funkce $f$ mění násobení na sčítání, tj. že platí $$f(ab)=f(a)+f(b).$$
 Podle definice je
@@ -198,7 +243,7 @@ Pokud si všimneme, že integrál v definici funkce $f$ je možné
 vypočítat a že funkce $f$ je vlastně funkce $\ln x$, není tento
 výsledek nijak překvapivý. Pro nás však bylo důležité, že v důkaze
 jsme použili jenom definici funkce $f$ pomocí integrálu a pravidla pro
-práci s integrály. Nemuseli jsme nijak používat ani vlasnosti
+práci s integrály. Nemuseli jsme nijak používat ani vlastnosti
 logaritmu, ani vlastnosti funkce k logaritmu inverzní, což bývá
 základem středoškolského odvození tohoto vzorce. Vidíme, že integrál
 je možné použít k definici funkce a s touto funkcí je možné dále
@@ -209,3 +254,68 @@ $$f(a^r)=\int_1^{a^r}\frac 1t\,\mathrm dt=
 \int _1^a \frac 1{s^r}rs^{r-1}\,\mathrm ds=
 r\int _1^a\frac 1s\,\mathrm ds=rf(a).$$
 
+# Numerická aproximace určitého integrálu
+
+
+# Model eliminace chřipky
+
+
+# Práce při vytahování řetězu (přímý výpočet)
+
+<div class='obtekat'>
+
+![Visící řetěz. Při vytahování na střechu se zmenšuje síla, kterou je nutno překonávat.
+ Zdroj: pixabay.com](chain.jpg)
+
+</div>
+
+
+
+Ze střechy budovy o výšce $50$ metrů visí řetěz dlouhý $30$
+metrů. Jeden metr řetězu váží dva kilogramy. Vypočítáme práci
+potřebnou pro povytažení řetězu o deset metrů a poté práci potřebnou
+pro úplné vytažení řetězu.
+
+Z fyziky víme, že na těleso o hmotnosti $m$ působí síla $mg$, kde $g$ je tíhové zrychlení a práce konaná silou $F$ po dráze $s$ je rovna součinu $Fs.$
+
+Pokud z budovy visí $h$ metrů řetězu o lineární hustotě $\tau=2\,\mathrm{kg}/\mathrm m$, je nutné při vytahování řetězu vyvinout sílu $$F=h\tau g.$$ Při vytahování řetězu se délka visící části zkracuje a změna délky $\Delta h$ je záporná. Při povytažení řetězu o délku $|\Delta h|=-\Delta h$ je nutné vykonat práci $$\Delta W=F|\Delta h|=-h\tau g \Delta h.$$
+
+Při povytažení o 10 metrů řetěz vytahujeme spojitě od $h_1=30$ po $h_2=20$. Celková práce je
+$$\begin{aligned}W&=\int_{h_1}^{h_2}-h\tau g\,\mathrm dh=\tau g\int_{h_2}^{h_1}h\,\mathrm dh
+=\tau g\left[\frac 12 h^2\right]_{h_2}^{h_1}\\&
+=\tau g\left[\frac 12 h_1^2 - \frac 12 h_2^2\right]=\frac 12 \tau g (h_1^2-h_2^2)
+\\&=\frac 12 \tau g (h_1-h_2)(h_1+h_2).
+\end{aligned}
+$$
+Pro $\tau =2\,\mathrm{kg}\,\mathrm m^{-1}$ a $g=9.81\, \mathrm{kg}\,\mathrm{m}\,\mathrm {s}^{-2}$ dostáváme $W=4905\,\mathrm J.$ Formálně je tento výsledek stejný, jako bychom hmotnost dolních $h_1-h_2$ metrů řetězu soustředili do středu tohoto úseku (tedy do úrovně $\frac 12 (h_1+h_2)$ metrů pod střechu) a poté tento hmotný bod přemístili konstantní silou po dráze $\frac 12 (h_1+h_2)$ na střechu.
+
+Práci pro vytažení celého řetězu dostaneme volbou $h_2=0$. Tedy
+$$W=\frac 12 \tau g h_1^2$$ a numericky $W=8829\,\mathrm J.$
+
+[Online výpočet.](https://sagecell.sagemath.org/?z=eJwrSyzSUC9JLFVIV8hQyDBUyDBS1-TlKs7IL9fIzCtJTS9KLElV0NDN0AKq0UrX0cjQyTDUyTDS1CROlUaGka0BsWqBArZGOum2lnoWQBFDW2MDoLitEYX6wdoBxXNBdg==&lang=sage)
+
+
+# Řetěz jinak (pomocí změny potenciální energie)
+
+Vypočítáme předchozí příklad tak, že určíme změnu potenciální
+energie. Práci vykonanou při vyzvednutí tělesa o hmotnosti $m$ o výšku
+$h$ vypočteme jako změnu potenciální energie v tíhovém poli Země,
+tj. $mgh$. Komplikace v tomto případě je, že každou část řetězu
+vytahujeme z jiné hloubky. Část řetězu délky $\Delta h$ váží
+$m=\tau\Delta h$ kilogramů a při vytažení z hloubky $h$ na úroveň
+střechy je změna potenciální energie (a vykonaná práce)
+$$\Delta W=mgh=\tau\Delta h g h.$$ Součet těchto příspěvků pro dolní
+část, od $h_2=20\,\mathrm m$ po $h_1=30\,\mathrm m$
+je $$W=\int_{h_2}^{h_1}\tau g h\,\mathrm dh.$$ Tím výpočet přechází ve
+stejný integrál jako v předchozím přístupu a výsledky jsou tedy
+stejné.
+
+Že práce vykonaná při vytažení celého řetězu je stejná jako změna
+potenciální energie je zřejmé.  Za zmínku ještě stojí úvaha, proč je
+povytažení řetězu o 10 metrů ekvivalentní změně potenciální energie
+dolních 10 metrů při vytažení této části řetězu na střechu. Stačí
+uvážit, že bychom řetěz přetočili vzhůru nohama, povytáhli o 10 metrů,
+rozpojili a znovu otočili vzhůru nohama. Otočení vzhůru nohama není spojeno s konáním práce, stejně tak rozpojení a případné opětovné
+napojení. Práce se tedy koná jenom tak, že řetěz vytahujeme o 10
+metrů. Výsledek však je stejný, jako kdybychom řetěz nepřetáčeli,
+jenom odpojili dolních 10 metrů a tuto část zvedli nahoru.
