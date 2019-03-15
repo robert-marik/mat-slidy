@@ -290,11 +290,15 @@ sílu. Ovšem jenom v extrémně pěkných případech.
   (3) selhává v obou případech. Jednou kvůli nekonstantní síle,
   podruhé kvůli dráze.
 
+\iffalse
+
 <div class='obtekat'>
 
 ![Obsah pod konstantní funkcí.](1.png)
 
 </div>
+
+\fi
 
 * Obsah obrazce mezi konstantní funkcí $f$ a osou $x$ nad intervalem
   $[a,b]$ se vypočte snadno, protože se jedná o obdélník se stranami

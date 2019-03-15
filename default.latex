@@ -211,8 +211,12 @@ $endif$
 \def\caption#1{{\oldcaption{\footnotesize \itshape  #1}}}
 \renewenvironment{quote}{\par\medskip\zahlavi}{\par\medskip}
 \def\pismenoV{V}
-\def\uloztoken#1#2;;;;{\def\ulozene{#1}}
-\def\zahlavi #1.{\uloztoken #1;;;;\noindent\textbf{\ignorespaces #1.} \ifx\ulozene\pismenoV\itshape\fi}
+\def\pismenoD{D}
+\def\pismenoE{e}
+\def\uloztoken#1#2#3;;;;{\def\ulozene{#1}\def\ulozeneB{#2}}
+\def\zahlavi #1.{\uloztoken #1;;;;\noindent\textbf{\ignorespaces #1.}
+\ifx\ulozene\pismenoD\ifx\ulozeneB\pismenoE\else\let\ulozene\pismenoV\fi\fi
+\ifx\ulozene\pismenoV\itshape\fi}
 \def\dm\[#1\]{\begin{dmath*} #1\end{dmath*}}
 
 $for(header-includes)$
