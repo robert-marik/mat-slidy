@@ -43,9 +43,11 @@ Je však důležité vědět, že platí pro libovolné integrovatelné funkce.
 > Věta (aditivita vzhledem k integračnímu oboru).
 Platí $$\int_a^b f(x)\,\mathrm dx= \int_a^c f(x)\,\mathrm dx + \int_c^b f(x)\,\mathrm dx.$$
 
-Věta o aditivitě vzledem k integračnímu oboru je například pro
+Věta o aditivitě vzhledem k integračnímu oboru je například pro
 Newtonovu definici integrálu důsledkem zřejmého
-vztahu $$[F(b)-F(c)]+[F(c)-F(a)]=F(b)-F(a).$$
+vztahu $$[F(b)-F(c)]+[F(c)-F(a)]=F(b)-F(a).$$ Graficky i fyzikálně je
+názorný případ, kdy $c$ leží v intervalu $[a,b]$, avšak vzorec platí v
+plné obecnosti pro libovolné uspořádní mezí podle velikosti.
 
 # Střední hodnota
 
@@ -92,6 +94,84 @@ integrálu. To se naučíme v dalších částech přednášky a poté se k
 tomuto příkladu vrátíme.
 
 [Online výpočet.](https://sagecell.sagemath.org/?z=eJxtjs0KgzAQhO-C75BbNj9iErG3XD3nFcTGIAQjcSn27du0pT_Q2-x8M8xexgwUKaurGZDZKe2wLe2JIxMvrY0ql6mr8JX4uENxdQva8J4RTpYVfcgjepjhYBIOiRJFz7Vh95W6ctpuMeGbKtkrVZAzTxB-gCRTiilbmv2ZShKX1e94jd7Spilvu-7ZGv63QvZ-feS0cEa47gb9BD-U&lang=sage)
+
+
+# Numerická aproximace určitého integrálu
+
+Následující myšlenka se si týká výlučně určitého integrálu, ale dále v
+dnešní přednášce si představíme nástroj, který umožní ji použít i pro
+integrál neurčitý.
+
+Někdy se stane, že neumíme nebo nepotřebujeme určitý integrál
+vypořítat přesně. Nebo že ani nemáme dostatek informací pro přesný
+výpočet, například funkce může být známa jenom v několika bodech,
+které jsou výsledkem měření a mimo tyto body nejsou žádné informace o
+funkčních hodnotách. To je přesně situace pro numerickou aproximaci určitého integrálu. Mechanický model následujících myšlenek je shrnut v něklika bodech.
+
+* Představme si, že máme určit dráhu pohybu ale v zadaném časovém intervalu máme pouze několik záznamů hodnoty rychlosti z tachometru. Mimo tyto záznamy se mohlo dít v podstatě cokoliv.
+* Budeme však doufat, že rychlost se měnila spíše pozvolna.
+* Základní taktika odhadu dráhy může být taková, že mezi každými zaznamenanými hodnotami rychlosti na tachometru nahradíme pohyb rovnoměrným pohybem rychlostí, která je průměrem krajních hodnot.
+* Předchozí postup aplikovaný na libovolnou funkci odpovídá tomu, že mezi každými dvěma hodnotami nahradíme funkci funkcí lineární a poté interál vypočítáme pro tuto lineární funkci. Tento postup (lichoběžníkové pravidlo) je možné modifikovat nebo vylepšit. Například je možné použít pro aproximaci části parabol místo přímek (Simpsonovo pravidlo). U funkce, která je rostoucí, je možné například použít funkční hodnotu v dolní mezi a tím dostaneme dolní odhad pro výsledý integrál.
+
+**Příklad.** 
+Zahradnická firma vytáhla pařez a maloktraktorem jej odtáhla o 20
+metrů bokem. Vzhledem k nepravidelnému tvaru a tažení po různých druzích povrchu
+po cestě se síla měnila. Pracovníkovi se podařilo odhadnout sílu během
+pohybu. Závislost síly na dráze zachycuje následující
+tabulka. 
+
+
+<style>
+table, th, td {
+   border: 2px solid green;
+} 
+td {padding:10px}
+tr td:first-child {color:green; background: #E9E9E9;}
+table {
+    border-collapse: collapse;
+}
+</style>
+
+<style>
+table, th, td {
+   border: 2px solid green;
+} 
+td {padding:10px}
+tr td:first-child {color:green; background: #E9E9E9;}
+table {
+    border-collapse: collapse;
+}
+
+th {
+    background-color: green;
+    color: white;
+    border-color: gray;
+}
+
+th {text-align: center;}
+</style>
+
+|$s$[m]|0|5|10|15|20|
+|-|-|-|-|-|-|
+|$F$[kN]|2.3|1.5|2.1|3.1|2.0|
+
+
+Odhadneme celkovou vykonanou práci.
+\dm$$W=5 \frac{2.3+1.5}2 +5 \frac{1.5+2.1}2 +5 \frac{2.1+3.1}2 +5 \frac{3.1+2.0}2=44.25 \,\mathrm{kN}\,\mathrm {m} = 44.25\,\mathrm{kJ}$$
+
+
+**Poznámka.** V předchozím příkladě byla funkce dána v pravidelných intervalech. Proto se ve všech členech objevuje faktor $\frac 52$, který je možné vytknout. Po vytknutí zůstane v závorce součet, kde se hodnoty funkce v dolní a horní mezi objeví jednou a ostatní dvakrát. To v obecném případě vede k následujícímu vzorci.
+
+> Věta (lichoběžníkové pravidlo). Nechť je funkce $f$  spojitá na
+  intervalu $[a,b]$. Rozdělme interval $[a,b]$ na $n$ intervalů
+  stejné délky $h$, tj. platí $h=\frac{b-a}n$. Krajní body
+  těchto intervalů označme po řadě $x_0$, $x_1$, ..., $x_n$ a jim
+  odpovídající funkční hodnoty funkce $f$ po řadě $y_0$, $y_1$, ..., $y_n$. Platí
+$$
+    \int_a^bf(x)\,\mathrm dx\approx \frac h2\Bigl(
+    {y_0}+2y_1+2y_2+\cdots+2y_{n-1}+{y_n}\Bigr).
+$$
+
 
 # Integrace metodou per partés
 
@@ -158,7 +238,7 @@ Například
 **Příklad.** Substituce $ax+b=t$ vede na vztah mezi diferenciály ve
 tvaru $a\,\mathrm dx=\mathrm dt$. Odsud je možné odvodit vzorec, který
 již známe ve tvaru
-$$\int  f(ax+b)\,\mathrm dx=\frac 1a F(ax+b)+C,$$ kde $F(x)=\int f(x)\,\mathrm dx.$
+$$\int  f(ax+b)\,\mathrm dx= \int  \frac 1af(t)\,\mathrm dt= \frac 1a F(t)= \frac 1a F(ax+b)+C,$$ kde $F(x)=\int f(x)\,\mathrm dx.$
 
 
 Vztah (2) je základní vztah pro substituci v neurčitém
@@ -180,7 +260,9 @@ horní.
 
 # Integrál jako funkce meze
 
-Pomocí integrálu můžeme definovat další funkce. Umožní nám to následující věta.
+Integrál může být součástí definice funkce. Tím se můžeme dostat mimo
+množinu elementárních funkcí a značně tak rozšířit třídu funkcí, se
+kterými umíme pracovat.
 
 
 > Věta (integrál jako funkce horní meze). Buď $f$ spojitá funkce na intervalu $I$ a $a\in I$. Funkce
@@ -254,10 +336,68 @@ $$f(a^r)=\int_1^{a^r}\frac 1t\,\mathrm dt=
 \int _1^a \frac 1{s^r}rs^{r-1}\,\mathrm ds=
 r\int _1^a\frac 1s\,\mathrm ds=rf(a).$$
 
-# Numerická aproximace určitého integrálu
-
 
 # Model eliminace chřipky
+
+V příkladě u střední hodnoty jsme se zabývali problémem eliminace chřipky a zjistili, že potřebujeme najít minimum funkce
+$$\overline I(t_0)=\frac 1{12\times 5}\int_{t_0}^{t_0+12\times 5} I(t)\,\mathrm dt.$$
+Protože jsme se zabývali připadem, kdy je proměnná jenom v horní mezi a naše funkce má proměnnou v horní i v dolní mezi, můžeme využít aditivitu
+integrálu vzhledem k mezi a psát
+$$
+\begin{aligned}
+\overline I(t_0)&=
+\frac 1{12\times 5}\int_{t_0}^{0} I(t)\,\mathrm dt +
+\frac 1{12\times 5}\int_{0}^{t_0+12\times 5} I(t)\,\mathrm dt
+\\&=
+-\frac 1{60}\int_{0}^{t_0} I(t)\,\mathrm dt +
+\frac 1{60}\int_{0}^{t_0+60} I(t)\,\mathrm dt
+.
+\end{aligned}
+$$
+Derivací podle $t_0$ nyní dostáváme podle věty o integrálu jako funkci horní meze a podle pravidla o derivování součtu a složené funkce
+$$\begin{aligned}\frac{\mathrm d\overline I}{\mathrm dt_0}
+&=-\frac 1{60} I(t_0)+
+\frac 1{60} I(t_0+60) \frac{\mathrm d}{\mathrm dt_0}(t_0+60)
+\\&=-\frac 1{60}I(t_0)+\frac 1{60}I(t_0+60)
+\\&=\frac 1{60} \Bigl(I(t_0+60)-I(t_0)\Bigr)
+\end{aligned}
+$$
+Minimum tedy najdeme z podmínky $I(t_0)=I(t_0+60).$ Po dosazení vztahu pro funkci $I$ tedy řešíme rovnici
+\dm $$ \cos\left(\frac \pi 6 t\right)+\cos\left(\frac \pi {120} t\right)+2 = \cos\left(\frac \pi 6 (t+60)\right)+\cos\left(\frac \pi {120} (t+60)\right)+2 $$
+tj. (následující výpočty jsou sice dlouhé, ale jedná se běžnou středoškolskou matematiku a práci s goniometrickými funkcemi)
+$$
+\cos\left(\frac \pi 6 t\right)+\cos\left(\frac \pi {120} t\right)
+=
+\cos\left(\frac \pi 6 t+ 10\pi\right)+\cos\left(\frac \pi {120} t+\frac 12\pi\right)
+$$
+$$
+\cos\left(\frac \pi 6 t\right)+\cos\left(\frac \pi {120} t\right)
+=
+\cos\left(\frac \pi 6 t\right)+\cos\left(\frac \pi {120} t+\frac 12\pi\right)
+$$
+$$
+\cos\left(\frac \pi {120} t\right)
+=
+\cos\left(\frac \pi {120} t+\frac 12\pi\right)
+$$
+$$
+\cos\left(\frac \pi {120} t\right)
+=
+-\sin\left(\frac \pi {120} t\right)
+$$
+$$
+\tan\left(\frac \pi {120} t\right)
+=
+-1
+$$
+Tato rovnice má řešení $\frac \pi {120} t=\frac 34\pi +k\pi$ tj.
+$t=90+120k$. Vzhledem k povaze problému se střídají maxima a minima
+funkce $\overline I(t_0)$. Toto je ještě nutné rozvážit, abychom s
+očkováním nezačali v době, kdy by byly náklady naopak
+maximální. Vzhledem ke snadné praktické interpretaci je však zřejmé,
+že minimum pětiletého průměru bude v době, jejíž začátek o něco
+předchází dlouhodobé minimum výskytu chřipky. Odsud snadno rozlišíme,
+kdy se jedná o minimum pětiletého průměru a kdy o maximum.
 
 
 # Práce při vytahování řetězu (přímý výpočet)
