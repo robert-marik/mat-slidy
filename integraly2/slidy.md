@@ -23,6 +23,14 @@ definování funkcí, které nejsou elementární.
 
 # Vlastnosti integrálu
 
+
+<div class='obtekat'>
+
+![Monotonie a aditivia vzhledem k mezi pro určitý integrál.](int_vlastnosti.png)
+
+</div>
+
+
 Z minulé přednášky víme, že integrál (určitý i neurčitý) je lineární,
 tj. zachovává součet funkcí a násobení konstantou.
 
@@ -68,14 +76,18 @@ konečného počtu hodnot, ale z hodnot rozložených spojitě na
 zadaném intervalu.
 
 Definice střední hodnoty je snadným důsledkem toho, že hledáme hodnotu
-$\mu$ takovou, že $$\int_a^b f(x)\,\mathrm dx=\int_a^b \mu\,\mathrm
-dx=\mu \int_a^b \mathrm
-dx=\mu(b-a).$$
+$\mu$ s vlastností $$\int_a^b f(x)\,\mathrm dx=\int_a^b \mu\,\mathrm dx=\mu \int_a^b \mathrm dx=\mu(b-a).$$
 
 > Definice (střední hodnota). Nechť $f$ je funkce definovaná a
   integrovatelná na uzavřeném intervalu $[a,b]$. Číslo $\mu$
   definované vztahem $$\mu=\frac 1{b-a}\int_a^b f(x)\,\mathrm dx$$ se
   nazývá *střední hodnota* funkce $f$ na intervalu $[a,b]$.
+
+<div class='obtekat'>
+
+![Střední hodnota lineární a obecné funkce.](mean.png)
+
+</div>
 
 Geometricky je střední hodnota výška obdélníka, který má jednu stranu
 tvořenou intervalem $[a,b]$ a obsah je roven integrálu $\int_a^b
@@ -537,13 +549,14 @@ kdybychom řetěz nepřetáčeli, jenom odpojili dolních 10 metrů a tuto
 </div>
 
 Ještě možná stojí za rozvážení fakt, že při otočení řetězu okolo
-středu se nekoná práce. Tato skutečnost se dá opět dokázat rozdělením
-řetězu na kousky sečíst práci nutnou pro přemístění těchto kousků. Ta
-bude kladná pro kousky pod těžištěm, záporná pro kousky nad těžištěm a
-výsledný součet bude nulový. Na podobném principu pracuje lodní výtah
-Falkrik Wheel. Práce potřebná pro otočení výtahu a vytažení lodě
-nahoru (nebo spuštění dolů nebo obojí současně) je překvapivě malá --
-stačí jenom vykompenzovat třecí síly v mechanismu. V minulosti zde
-byla soustava 11 zdymadel a lodě touto soustavou proplouvaly celý den.
+středu se nekoná práce. Tato skutečnost se dá opět dokázat myšlenkovým
+rozdělením řetězu na kousky a sečtením práce nutné pro přemístění těchto
+kousků. Ta bude kladná pro kousky pod těžištěm, záporná pro kousky nad
+těžištěm a výsledný součet bude nulový. Na podobném principu pracuje
+lodní výtah Falkrik Wheel. Práce potřebná pro otočení výtahu a
+vytažení lodě nahoru (nebo spuštění dolů nebo obojí současně) je
+překvapivě malá -- stačí jenom vykompenzovat třecí síly v
+mechanismu. V minulosti zde byla soustava 11 zdymadel a lodě touto
+soustavou proplouvaly celý den.
 
 \fi
