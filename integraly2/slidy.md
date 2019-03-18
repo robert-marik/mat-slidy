@@ -389,7 +389,7 @@ $$f(ab)
 =f(a)+\int_1^{b}\frac 1{s} \,\mathrm ds
 =f(a)+f(b).$$
 
-Pokud si všimneme, že integrál \tag{*} v definici funkce $f$ je možné
+Pokud si všimneme, že integrál (*) v definici funkce $f$ je možné
 vypočítat a že funkce $f$ je vlastně funkce $\ln x$, není vlastnost,
 že funkce mění násobení na sčítání nijak překvapivá. Pro nás však bylo
 důležité, že v důkaze jsme použili jenom definici funkce $f$ pomocí
