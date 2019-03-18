@@ -34,15 +34,16 @@ definování funkcí, které nejsou elementární.
 Z minulé přednášky víme, že integrál (určitý i neurčitý) je lineární,
 tj. zachovává součet funkcí a násobení konstantou.
 
-Následující dvě věty nejsou překvapivé. Vyjadřují následující intuitivně zřejmá fakta.
+Následující dvě věty nejsou překvapivé. Vyjadřují dvě intuitivně
+zřejmá fakta.
 
 * Pokud se veličina mění rychleji, výsledná změna je větší.
 * Pokud sledujeme změnu veličiny za určitý čas, můžeme sledovat změnu
   do nějakého mezičasu a poté od mezičasu do konce a obě částečné
   změny poté sečíst.
 
-Je však důležité vědět, že platí pro libovolné integrovatelné funkce a
-proto zformulujeme následující věty.
+Je však důležité vědět, že tyto myšlenky platí pro libovolné
+integrovatelné funkce a proto zformulujeme následující věty.
 
 > Věta (monotonie vzhledem k funkci). Je-li $f(x)\geq g(x)$ na
   intervalu $[a,b]$, platí $$\int_a^b f(x)\,\mathrm dx\geq \int_a^b
@@ -56,10 +57,10 @@ Platí $$\int_a^b f(x)\,\mathrm dx= \int_a^c f(x)\,\mathrm dx + \int_c^b f(x)\,\
 
 Věta o aditivitě vzhledem k integračnímu oboru je například pro
 Newtonovu definici integrálu důsledkem zřejmého vztahu
-$$[F(b)-F(c)]+[F(c)-F(a)]=F(b)-F(a)$$ pro libovolnou primitivní
-funkci $F$. Graficky i fyzikálně je názorný případ, kdy $c$ leží v
-intervalu $[a,b]$, avšak vzorec platí v plné obecnosti pro libovolné
-uspořádání mezí podle velikosti.
+$$[F(b)-F(c)]+[F(c)-F(a)]=F(b)-F(a)$$ pro libovolnou primitivní funkci
+$F$. Graficky i fyzikálně je názorný případ, kdy $c$ leží v intervalu
+$[a,b]$. Vzorec však platí pro libovolné uspořádání mezí podle
+velikosti.
 
 # Střední hodnota
 
@@ -143,16 +144,17 @@ vypočítat přesně. Nebo že ani nemáme dostatek informací pro přesný
 výpočet, například funkce může být známa jenom v několika bodech,
 které jsou výsledkem měření a mimo tyto body nejsou žádné informace o
 funkčních hodnotách. To je přesně situace pro numerickou aproximaci
-určitého integrálu. Mechanický model následujících myšlenek je shrnut
-v několika bodech.
+určitého integrálu. Mechanický model základních myšlenek aproximace je
+shrnut v několika následujících bodech.
 
 * Představme si, že máme určit dráhu pohybu, ale v zadaném časovém
   intervalu máme pouze několik záznamů hodnoty rychlosti z
-  tachometru. Mimo tyto záznamy se mohlo dít v podstatě cokoliv.
-* Budeme však doufat, že rychlost se měnila spíše pozvolna.
+  tachometru. 
+* Mimo tyto záznamy se mohlo dít v podstatě cokoliv.
+  Budeme však doufat, že rychlost se měnila spíše pozvolna.
 * Základní taktika odhadu dráhy může být taková, že mezi každými
   zaznamenanými hodnotami rychlosti na tachometru nahradíme pohyb
-  rovnoměrným pohybem rychlostí,která je průměrem krajních hodnot.
+  rovnoměrným pohybem rychlostí, která je průměrem krajních hodnot.
 * Předchozí postup aplikovaný na libovolnou funkci odpovídá tomu, že
   mezi každými dvěma hodnotami nahradíme funkci funkcí lineární a poté
   integrál vypočítáme pro tuto lineární funkci. Tento postup
