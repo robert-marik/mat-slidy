@@ -43,6 +43,8 @@ padding:5px;
 
 .titlepage h1 {border-bottom:none; color: #222; color: #006131;}
 
+h1{ clear:both;}
+
 div.toolbar {background-color: #006131;}
 .toolbar  a:link {color: white;}
 .toolbar  a {color: white;}

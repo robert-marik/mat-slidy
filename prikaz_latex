@@ -1,5 +1,5 @@
 
-kde="derivace aproximace integraly integraly2"
+kde="derivace aproximace integraly integraly2 ode"
 
 for i in $kde
 do
