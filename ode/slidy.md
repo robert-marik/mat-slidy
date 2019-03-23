@@ -144,10 +144,10 @@ splňující diferenciální rovnici.
 \fi
 
 * Při datování archeologických nálezů pozůstatků živých organismů se
-  využívá toho, že radioaktivní prvky se rozpadají rychlostí, která je
-  úměrná množství dosud nerozpadnutého materiálu.
+  využívá fyzikálního poznatku, že radioaktivní prvky se rozpadají
+  rychlostí, která je úměrná množství dosud nerozpadnutého materiálu.
 * Rychlost, s jakou se mění množství (a tedy i koncentrace $y$ v daném
-  vzorku) nerozpadnutého radioaktivního materiálu je popsána rovnicí
+  vzorku) nerozpadnutého radioaktivního materiálu je tedy matematicky popsána rovnicí
   $$\frac{\mathrm dy}{\mathrm dt}=-\lambda y,$$
   kde $\lambda$ je konstanta úměrnosti. Tato rovnice je přirozeným
   důsledkem toho, že pro daný nestabilní izotop mají všechny atomy
@@ -168,44 +168,6 @@ splňující diferenciální rovnici.
   radioaktivního uhlíku pod měřitelnou úroveň. Proto se
   v tomto případě používají látky s delším poločasem rozpadu.
 
-
-# Příklad - akutní normovolemická hemodiluce
-
-\iffalse
-
-<div class='obtekat'>
-
-![Při operaci ztrácí pacient krvinky rychlostí úměrnou koncentraci krvinek,
- https://pixabay.com](chirurg.jpg)
-
-</div>
-
-\fi
-
-
-* Při chirurgické operaci dochází ke krvácení. Pacient ztrácí krev s ní
-  i krvinky. Při konstantní intenzitě krvácení to znamená, že pacient
-  ztrácí krvinky rychlostí úměrnou počtu krvinek. Formálně se jedná o
-  stejnou rovnici jako u radioaktivního rozpadu, jenom změníme
-  interpretaci veličin.
-* Pokud očekáváme takový průběh operace, že i po uvedeném poklesu bude
-  pořád množství krvinek nad minimální přípustnou hodnotou, je možné
-  před operací toto množství snížit tím, že se část krve odebere a
-  krev se poté doplní vhodnými roztoky.
-* Protože pacient má už od začátku operace menší počet krvinek, ztrácí
-  tyto krvinky pomaleji a celkový úbytek během operace je menší. Na
-  konci operace se pacientovi vrátí dříve odebraná krev. Výsledkem je,
-  že po operaci v jeho těle koluje více krvinek, než pokud by byl
-  operován s "původní krví".
-* Aby metoda fungovala, je nutné odhadnout ztrátu krve během
-  operace. Modelování pomocí diferenciálních rovnic dokáže
-  předpovědět, kolik krve odebrat na začátku tak, aby i po plánované
-  době operace zůstaly krevní hodnoty pacienta v bezpečných mezích.
-* Metoda *akutní normovolemické hemodiluce* nachází v současné praxi
-  široké využití v řadě operačních oborů. Poskytuje totiž možnost
-  vyhnout se podání alogenní krevní transfuze a tím eliminovat rizika
-  z ní vyplývající. Současně je tato metoda výrazně finančně levnější
-  a její přínos je tak i ekonomický. (Podle https://zdravi.euro.cz/)
 
 # Příklad - rovnice samočištění jezer
 
@@ -240,7 +202,7 @@ splňující diferenciální rovnici.
   $$
 * Výše uvedená rovnice na nazývá *rovnice samočištění jezer*, ale
   tento název je čistě formální. Jedná se vlastně o stejnou rovnici,
-  která popisuje radioaktivní rozpad, ztrátu krvinek při operaci nebo
+  která popisuje radioaktivní rozpad nebo
   změnu rozdílu mezi teplotou horkého nápoje a místnosti při chladnutí
   nápoje.
 * Stejnou rovnicí je možné popsat nejenom odbourávání nečistot z
@@ -251,6 +213,54 @@ splňující diferenciální rovnici.
   většina léčiv za běžných koncentrací), řídí se proces odbourávání
   stejnou diferenciální rovnicí.
 
+
+\iffalse
+
+
+# Příklad - akutní normovolemická hemodiluce
+
+
+<div class='obtekat'>
+
+![Při operaci ztrácí pacient krvinky rychlostí úměrnou koncentraci krvinek. Pokus je tato koncentrace malá, pacient ztratí krvinek málo. Zdroj: 
+ https://pixabay.com](chirurg.jpg)
+
+</div>
+
+
+
+* Při chirurgické operaci dochází ke krvácení. Pacient ztrácí krev s
+  ní i krvinky. Při konstantní intenzitě krvácení to znamená, že
+  pacient ztrácí krvinky rychlostí úměrnou počtu krvinek. Formálně na
+  krvinky v krvi můžeme pohlížet stejně jako na znečištění
+  jezera. Jedná se o stejný proces vyplavování látek obsažených v
+  tekutině, jenom měníme interpretaci veličin.
+* Pokud očekáváme takový průběh operace, že i po uvedeném poklesu bude
+  pořád množství krvinek nad minimální přípustnou hodnotou, je možné
+  před operací toto množství snížit tím, že se část krve odebere a
+  krev se poté doplní vhodnými roztoky.
+* Protože pacient bude po výše uvedeném zákroku už od začátku operace
+  menší počet krvinek, ztrácí tyto krvinky pomaleji a celkový úbytek
+  během operace je menší. Na konci operace se pacientovi vrátí dříve
+  odebraná krev. Výsledkem je, že po operaci v jeho těle koluje více
+  krvinek, než pokud by byl operován s "původní krví".
+* Aby metoda fungovala, je nutné odhadnout ztrátu krve během
+  operace. Modelování pomocí diferenciálních rovnic dokáže
+  předpovědět, kolik krve odebrat na začátku tak, aby i po plánované
+  době operace zůstaly krevní hodnoty pacienta v bezpečných
+  mezích. Pokud na začátku operace část krve dáme bokem a poté tekutiny
+  doplňujeme fyziologickým roztokem (s tím, že vlastní krev vrátíme po
+  skončení operace), jedná se o stejný proces a stejnou rovnici jako
+  samočištění jezer. Pokud krev doplňujeme během operace z krve
+  dopředu odebrané,
+  dokážeme model samočištění jezer modifikovat pro daný proces.
+* Metoda *akutní normovolemické hemodiluce* nachází v současné praxi
+  široké využití v řadě operačních oborů. Poskytuje totiž možnost
+  vyhnout se podání alogenní krevní transfuze a tím eliminovat rizika
+  z ní vyplývající. Současně je tato metoda výrazně finančně levnější
+  a její přínos je tak i ekonomický. (Podle https://zdravi.euro.cz/)
+
+\fi
 
 
 # Příklad - vývoj populace a její ekologický lov
@@ -269,20 +279,20 @@ splňující diferenciální rovnici.
 
 
 * Zkoumejme velikost $y$  určité populace, v prostředí s nosnou kapacitou $K$.
-* Realistickým předpokladem v prostředí s omezenými úživnými
-  vlastnostmi je, že specifická míru růstu populace (rychlost s jakou
+* Realistickým předpokladem dodaným biologickými vědami je, že v prostředí s omezenými úživnými
+  vlastnostmi specifická míru růstu populace (rychlost s jakou
   se velikost populace zvětšuje vztažená na jednotkové množství
   populace) klesá s tím, jak se velikost populace přibližuje k nosné
-  kapacitě a je modelována funkcí $r\left(1-\frac yK\right)$.  Podle
+  kapacitě, a rychlost růstu populace je modelována funkcí $ry\left(1-\frac yK\right)$.  Podle
   velkosti koeficientů v této rovnici dělíme živočichy na [r-stratégy
-  a K-stratégy](http://cs.wikipedia.org/wiki/%C5%BDivotn%C3%AD_strategie),
-  toto dělení odráží, jak se snaží druh přežít.
+  a K-stratégy](http://cs.wikipedia.org/wiki/%C5%BDivotn%C3%AD_strategie) a
+  toto dělení odráží, jak se snaží druh vyrovnávat se změnami prostředí.
 * Za uvedených předpokladů je možno vývoj populace popsat rovnicí 
   $$\frac{\mathrm dy}{\mathrm dt}=ry\left(1-\frac yK\right).$$	  
 * Pokud lovem snížíme přírůstky populace, můžeme tento proces modelovat rovnicí 
   $$\frac{\mathrm dy}{\mathrm dt}=ry\left(1-\frac yK\right)-h(y),$$
   kde $h(y)$ je intenzita lovu populace o velikosti $y$. Modelování
-  tohoto procesu umožní nalezení ekonomicky výhodné ale trvale
+  tohoto procesu umožní nalezení ekonomicky výhodné ale přitom trvale
   udržitelné strategie lovu.
 
 
@@ -295,7 +305,7 @@ splňující diferenciální rovnici.
 </div>
 
 Protože derivace funkce v bodě udává směrnici tečny ke grafu funkce
-v tomto bodě, lze rovnici $$y'=\varphi(x,y)\tag{ODE}$$ chápat jako předpis, který
+v tomto bodě, lze rovnici $$y'=\varphi(x,y)\tag{1}$$ chápat jako předpis, který
 každému bodu v rovině přiřadí směrnici tečny k integrální křivce,
 která tímto bodem prochází.  Sestrojíme-li v dostatečném počtu
 (například i náhodně zvolených) bodů $[x,y]$ v rovině vektory
@@ -353,9 +363,19 @@ výstupem metody bude aproximace integrální křivky pomocí lomené čáry.
 
 **Vylepšení**
 
-* zjemnit krok $h$ (buď všude, nebo jenom tam, kde "je to potřeba"),
-* použít místo $\varphi(x_n,y_n)$ lepší směrnici, která dokáže zohlednit, jestli se růst zrychluje nebo zpomaluje (metoda Runge Kutta druhého nebo čtvrtého řádu, ...).
-
+* Pro přesnější aproximaci je možné zjemnit krok $h$ (buď všude, nebo
+  jenom tam, kde "je to potřeba").
+* Pro přesnější aproximaci je možné použít místo $\varphi(x_n,y_n)$
+  lepší směrnici, která dokáže zohlednit, jestli se růst zrychluje
+  nebo zpomaluje (metoda Runge Kutta druhého nebo čtvrtého řádu, ...).
+* Modely obsahující diferenciální rovnice obsahují zpravidla sadu
+  parametrů charakterizujících fyzikální vlastnosti studovaných
+  objektů. Pro numerické řešení musíme těmto parametrům dát konkrétní
+  hodnoty a přicházíme tak o cennou informaci, jak řešení závisí na
+  těchto parametrech. Vhodnou úpravou rovnice dokážeme počet parametrů
+  eliminovat. Jednoduchým a často dostatečným způsobem je volba
+  jednotek, obecnější metodou je transformace diferenciální rovnice
+  uvedená v následujícím textu.
 
 
 **Online řešiče ODE (numericky):**
@@ -368,14 +388,18 @@ výstupem metody bude aproximace integrální křivky pomocí lomené čáry.
 
 <div class='obtekat'>
 
-![Letecký snímek údolí Vajont krátce po katastrofě. [Video](https://www.youtube.com/watch?v=UNWKHp2NYMc&feature=youtu.be&t=38m10s) ukazuje, že při modelování procesu v menším měřítku je nutné transformovat veličiny ostatní veličiny, například čas. Pro nás klíčová slova v čase 39:21 dokumentu jsou "v přepočtu pro simulaci se jedná o zhruba čtyři sekundy". Čas ve zmenšeném modelu ubíhá jinou rychlostí než čas v modelu reálném. Foto: Wikipedia.](Vajont.jpg)
+![Letecký snímek údolí Vajont krátce po katastrofě. [Video](https://www.youtube.com/watch?v=UNWKHp2NYMc&feature=youtu.be&t=38m10s) ukazuje, že při modelování procesu ve zmenšeném měřítku je nutné transformovat ostatní veličiny, například čas. Pro nás klíčová slova v čase 39:21 dokumentu jsou "v přepočtu pro simulaci se jedná o zhruba čtyři sekundy". Čas ve zmenšeném modelu ubíhá jinou rychlostí než čas v reálném ději. Foto: Wikipedia.](Vajont.jpg)
 
 </div>
 
+Naučíme se vyjadřovat diferenciální rovnici v jiných proměnných tak,
+aby bylo možné snížit počet parametrů v této rovnici. Pro jednoduchost
+budeme uvažovat jenom případ, kdy nová proměnný je lineární funkcí
+původní proměnné.
 
 Uvažujme funkci $y$ proměnné $x$. Připomeneme si vzorce pro derivaci
-součtu, derivaci součinu a derivaci složené funkce, ale uvedeme si je
-v kontextu vhodném pro studium diferenciálních rovnic. 
+součtu, derivaci konstantního násobku a derivaci složené funkce, ale
+uvedeme si je v kontextu vhodném pro studium diferenciálních rovnic.
 
 * Z derivace součtu a z derivace konstanty plyne pro funkci $y$ a konstantu $y_0$ vztah
  $$ \frac{\mathrm d (y\pm y_0)}{\mathrm dx} = \frac{\mathrm d y}{\mathrm dx} \pm \frac{\mathrm d y_0}{\mathrm dx} = \frac{\mathrm d y}{\mathrm dx} \pm 0= \frac{\mathrm d y}{\mathrm dx}.$$
@@ -402,7 +426,7 @@ a přeškálovat pomocí konstanty $k$ čas
 $$\frac{\mathrm d(T-T_0)}{\mathrm d(kt)}=-(T-T_0).$$
 Po substituci $y=T-T_0$, $x=kt$ má rovnice tvar
 $$\frac{\mathrm d y}{\mathrm d x}=-y. \tag{**}$$
-Nová rovnice (**) **neobsahuje žádné parametry** a proto je pro studium
+Nová rovnice (**) *neobsahuje žádné parametry* a proto je pro studium
 jednodušší. Přesto je v ní obsažena veškerá informace obsažená v
 rovnici (*). Tuto informaci je však nutno interpretovat v kontextu
 definice nových proměnných. Například to, že všechna řešení rovnice (**) konvergují k nule
@@ -412,45 +436,101 @@ Proces eliminace parametrů z modelu popsaného diferenciální rovnicí se
 nazývá nondimenzionalizace modelu, protože eliminaci parametrů je
 vhodné provádět tak, aby výsledné nové veličiny vycházely bez
 fyzikálních jednotek. K tomu se provádí rozbor jednotek jednotlivých
-veličiny. V jednoduchých případech však stačí primitivní postup
+veličin. V jednoduchých případech však stačí primitivní postup
 popsaný v odstavcích výše a ukázaný na příkladu.
 
+
+\iffalse 
+
+# Malá odbočka - zaokrouhlovací chyby v numerických výpočtech
+
+<div class='obtekat'>
+
+![Součást protiraketového systému Patriot. Raketu Scud vystřelenou 25.2.1991 systém nesestřelil vinou zaokrouhlovací chyby. Zdroj: U.S. Army.](patriot.jpg)
+
+</div>
+
+
+Uvedli jsme, že počáteční úlohu umíme vyřešit numericky. Ukázali jsme
+si základní algoritmus (Eulerův) a řekli, že existují algoritmy
+pokročilejší. Na tomto místě upozorníme na záludnosti skryté v
+numerických výpočtech. Je iluzorní se domnívat, že zjemněním kroku při
+numerickém řešení diferenciální rovnice vždy dostaneme přesnější
+řešení. Toto platí jenom dokud se nedostaneme ke kritické hodnotě
+kroku, kdy další snižování vede k tomu, že zpřesnění díky kratšímu
+kroku se přebije akumulovanou chybou z velkého množství výpočtů nutně
+zatížených zaokrouhlováním a dalším zjemňováním přesnost ztrácíme.
+
+Zajímavá léčka je v samé podstatě výpočtů na počítači a to v
+reprezentaci desetinných čísel ve dvojkové soustavě. Například číslo
+0.1 je ve dvojkové soustavě periodické! Proto desetinásobným sečtením
+tohoto čísla nedostaneme (překvapivě) jedničku! Je to podobné, jako
+bychom třikrát sečetli jednu třetinu v desetinném tvaru
+reprezentovaném konečným počtem desetinných míst, tj. například
+třikrát sečetli číslo $0.33333333$. Nedostaneme přesně jedničku. 
+
+Tento efekt měl i tragický důsledek. Software systému protiraketového
+systému Patriot počítal čas postupným přičítáním desetiny
+sekundy. Protože systém byl vytvořen a testován na mobilním zařízení,
+které se často restartovalo a běželo krátkou dobu, ničemu to
+nevadilo. Nasazení v systému Patriot však byla chyba. Při ostrém
+nasazení systém běžel dlouho, zaokrouhlovací chyba se kumulovala
+například 100 hodin. I když za tu dobu chyba dosáhla pouze zlomku
+sekundy, raketa letící vysokou rychlostí již byla jinde, než systém
+Patriot propočítal.  Dne 25.2.1991 systém Patriot během operace
+Pouštní bouře na osvobození Kuvajtu od irácké okupace nesestřelil
+útočící raketu Scud a ta zabila 28 vojáků osvobozující armády a okolo
+100 osob zranila.
+
+S chybami plynoucími ze zaokrouhlování se setkáme i při výpočtech mimo modelování diferenciálních rovnic. Viz například [Floating-point arithmetic may give
+inaccurate results in
+Excel](https://support.microsoft.com/en-us/help/78113/floating-point-arithmetic-may-give-inaccurate-results-in-excel).
+
+
+\fi
 
 # ODE tvaru $\frac{\mathrm dy}{\mathrm dx}=f(y)$
 
 Rovnice $$\frac{\mathrm dy}{\mathrm dx}=f(y)\tag{♣}$$ se nazývá
 autonomní, nebo též nezávislá na čase. Je speciálním případem rovnice
-se separovanými proměnnými, která je uvedena dále a naučíme se ji
-řešit. Proto se nyní nebudeme zaměřovat na hledání obecného řešení,
-ale pokusíme se popsat chování řešení, aniž bychom tato řešení
-znali. Pokusíme se s co nejmenší námahou říct, jak se budou řešení
-chovat.
+se separovanými proměnnými, která je uvedena na dalším slidu a naučíme
+se ji řešit analytickou cestou. Proto se nyní nebudeme zaměřovat na
+hledání obecného řešení, ale pokusíme se popsat chování řešení, aniž
+bychom tato řešení znali. Pokusíme se s co nejmenší námahou říct, jak
+se budou řešení chovat.
 
 * Je-li $f(y_0)=0$, je konstantní funkce $y(x)=t_0$ řešením rovnice
   (♣). Protože derivace konstantní funkce je nula, vidíme, že řešením
   rovnice $$f(y)=0$$ obdržíme všechna konstantní řešení rovnice (♣).
-* Rovnici $$\frac{\mathrm dy}{\mathrm dx}=ky,$$ kde $k$ je konstanta,
-  je možno přetransformovat na rovnici $\frac{\mathrm dy}{\mathrm dx}=y$, kterou jsme studovali na předchozích slidech.  Proto není težké se přesvědčit, že obecným řešením této
+* Rovnici $$\frac{\mathrm dy}{\mathrm d x}=ky,$$ kde $k$ je konstanta,
+  je možno přetransformovat na rovnici $\frac{\mathrm dy}{\mathrm d(kx)}=y$, kterou jsme studovali na jednom z úvodních slidů.  Proto není težké se přesvědčit, že obecným řešením této
   rovnice je funkce $$y=Ce^{kx}. \tag{♣♣}$$
   Jediné konstantní řešení této rovnice je $y=0$.  
     * Pro $k>0$ jsou funkce (♣♣)
     jsou neohraničené (kladné rostoucí nebo záporné klesající, podle
     znaménka konstanty $C$) na intervalu $[0,\infty)$. Jakákoliv
     odchylka od rovnovážného stavu neohraničeně naroste, konstantní
-    řešení $y=0$ se klasifikuje jako nestabilní.
+    řešení $y=0$ se proto klasifikuje jako nestabilní.
     * Pro $k<0$ je funkce (♣♣) na intervalu $[0,\infty)$
     blíží k nule. Ať je počáteční podmínka libovolná, všechna řešení se
-    v čase blíží k nule. Nulové řešení je stabilní.
+    v čase blíží k nule. Jakákoliv
+    odchylka od rovnovážného stavu neohraničeně časem vymízí. Nulové
+    řešení je stabilní.
 
-Vyzbrojeni předchozími speciálními případy budeme sledovat řešení rovnice
-$$\frac{\mathrm dy}{\mathrm dx}=f(y)$$ v okolí bodu $y_0$ splňujícího $f(y_0)=0.$
-Lineární aproximace
+Vyzbrojeni předchozími speciálními případy budeme sledovat řešení
+rovnice $$\frac{\mathrm dy}{\mathrm dx}=f(y)$$ v okolí bodu $y_0$
+splňujícího $f(y_0)=0.$
+To můžeme chápat tak, že modelovaný systém je ve stacionárním stavu s
+konstantním řešením $y(x)=y_0$ a nějakými vnějšími vlivy došlo k
+drobnému vychýlení z tohoto stavu.
+Lineární aproximace (viz úvodní přednášky derivacích)
 $$f(y)\approx f'(y_0)(y-y_0)$$ nám umožní rovnici aproximovat rovnicí
 $$\frac{\mathrm dy}{\mathrm dx}=f'(y_0)(y-y_0)$$
 neboli
 $$\frac{\mathrm d(y-y_0)}{\mathrm dx}=f'(y_0)(y-y_0)$$ a po substituci $Y=y-y_0$, $k=f'(y_0)$ dostáváme rovnici
 $$\frac{\mathrm dY}{\mathrm dx}=kY,$$
-což je rovnice typu (♣). Proto můžeme udělat následující závěr.
+což je rovnice typu (♣). Stabilitu takové rovnice máme prozkoumánu a
+proto můžeme udělat následující závěr.
 
 > Věta (stabilita konstantních řešení). Jestliže platí $f(y_0)=0$, je konstantní funkce $y(x)=y_0$ konstantním
 řešením rovnice $$\frac{\mathrm dy}{\mathrm dx}=f(y).$$ Toto řešení je
