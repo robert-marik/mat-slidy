@@ -222,7 +222,7 @@ splňující diferenciální rovnici.
 
 <div class='obtekat'>
 
-![Při operaci ztrácí pacient krvinky rychlostí úměrnou koncentraci krvinek. Pokus je tato koncentrace malá, pacient ztratí krvinek málo. Zdroj: 
+![Při operaci ztrácí pacient krvinky rychlostí úměrnou koncentraci krvinek. Pokud je tato koncentrace malá, pacient ztratí krvinek málo. Zdroj: 
  https://pixabay.com](chirurg.jpg)
 
 </div>
