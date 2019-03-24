@@ -649,10 +649,7 @@ $$
 
 <div class='obtekat'>
 
-
-![Londýnská mlha. Dnes už to není jako za časů Sherloka
-Holmese. Poslední velká mlha (Pea soup fog) byla v roce 1952. Zdroj:
-Wikipedia.](london.jpg)
+![Londýnská mlha. Dnes už to není jako za časů Sherloka Holmese. Poslední velká mlha (Pea soup fog) byla v roce 1952. Zdroj: Wikipedia.](london.jpg)
 
 </div>
 
