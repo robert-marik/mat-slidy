@@ -584,3 +584,96 @@ $$
 
 
 
+# Diferenciální rovnice vyšších řádů
+
+<div class='obtekat'>
+
+![Téměř veškerá mechanika se redukuje na studium diferenciálních rovnic druhého řádu. Ve vesmíru i na Zemi. Zdroj: pixabay.com.](satelit.jpg)
+
+</div>
+
+
+Je-li $x$ poloha tělesa, je derivace $\frac{\mathrm dx}{\mathrm dt}$
+rychlost a druhá derivace $\frac{\mathrm d^2x}{\mathrm dt^2}$
+zrychlení. Podle Newtonova pohybového zákona je součin hmotnosti a
+zrychlení roven výsledné působící síle. Tato síla může mít složku
+závislou na poloze (například síla, která vrací těleso do rovnovážné
+polohy), složku závislou na rychlosti (odporová síla prostředí) a
+složku nezávislou na poloze i rychlosti (například vnější síla). Proto
+je přirozené v podstatě jakýkoliv pohyb v mechanice modelovat pomocí
+diferenciální rovnice druhého řádu $$m \frac{\mathrm d^2x}{\mathrm
+dt^2} = - kx - b \frac{\mathrm dx}{\mathrm dt} + F.$$ Přirozeně přitom
+formulujeme počáteční podmínky pro počáteční polohu a počáteční
+rychlost, tj. $x(t_0)=x_0$, $\frac{\mathrm dx}{\mathrm
+dt}(t_0)=x_1$. Každá počáteční úloha má právě jedno řešení. Taková
+úloha se zpravidla řeší podobně jako u diferenciálních rovnic prvního
+řádu: najde se obecné řešení a poté se ze všech funkcí, které splňují
+danou diferenciální rovnici, vybere ta jediná, která splňuje i
+počáteční podmínky. Numerický výpočet se děje podobně jako u rovnice
+prvního řádu: řešení se prodlužuje po malých krocích a v rámci každého
+kroku aproximujeme pohyb rovnoměrným pohybem. ([Film Hidden figures a hlavní hrdinka propočítávající dráhu pro návrat prvního amerického astronauta.](https://www.youtube.com/watch?v=v-pbGAts_Fg))
+
+Při studiu deformací nosníků nebo kmitů strun, ploch či těles se
+setkáme s diferenciálními rovnicemi typů $$\frac{\mathrm d^2x}{\mathrm
+dt^2} + kx = q $$ a $$\frac{\mathrm d^4x}{\mathrm dt^4} = q. $$ U
+takových úloh definujeme podmínky ve dvou různých bodech. Například u
+struny nebo u oboustranně vetknutého namáhaného nosníku je v bodech
+uchycení nulová výchylka a proto je přirozené formulovat okrajové
+podmínky $x(0)=0$ a $x(l)=0$. Řešení takové úlohy existuje jenom pro
+některé kombinace parametrů a fyzikální rozbor ukazuje, že to je
+například to místo, kde se objeví efekt, že struna kmitá jenom na
+některých frekvencích (na základní frekvenci na kterou je naladěna a
+na vyšších harmonických frekvencích). Tyto úlohy se v praxi vyskytují
+v poměrně komplikovaných situacích (posuzování ne jednoho nosníku, ale
+celé konstrukce) a proto se zpravidla řeší přibližně a převádí se na
+řešení soustav lineárních rovnic.
+
+# Konečné diference
+
+<div class='obtekat'>
+
+![Tramvajový most v Brně Pisárkách z předpjatého betonu. Vede do zatáčky a ve stoupání. Analyticky vyřešit namáhání takového mostu je nereálné. Zdroj: www.moravskyturista.cz.](pisarky.jpg)
+
+</div>
+
+
+Naučili jsme se numericky integrovat a řešit diferenciální rovnice a
+naskýtá se otázka, jak to je s numerickým derivováním. Základním
+přístupem je vynechání limitního přechodu v definici derivace
+$$\frac{\mathrm df}{\mathrm dx}=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}.$$
+Tedy $$\frac{\mathrm df}{\mathrm dx}\approx\frac{f(x+h)-f(x)}{h}.$$ Okamžitá rychlost je nahrazena
+průměrnou rychlostí na intervalu $(x,x+h).$ Tento podíl se nazývá
+dopředná poměrná diference. Pokud pouzijeme toto nahrazení v diferenciální rovnici 
+$$\frac{\mathrm df}{\mathrm dx}=\varphi(x,y),$$
+dostaneme 
+$$\frac{f(x+h)-f(x)}{h}=\varphi(x,y)$$
+a odsud
+$$f(x+h)=h\varphi(x,y)+f(x),$$
+což je vlastně Eulerova metoda řešení diferenciální rovnice prvního řádu. Kromě dopředné diference někdy používáme zpětnou diferenci
+$$\frac{f(x)-f(x-h)}{h}$$
+nebo jejich průměr, centrální diferenci
+$$\frac{f(x+h)-f(x-h)}{2h}.$$
+
+Pro druhou derivaci dostáváme podobně pomocí diferencí aproximaci
+druhé derivace pomocí funkční hodnoty funkce $f$ v daném bodě a v
+bodech o $h$ doprava a doleva ve tvaru
+$$ \frac{\mathrm d^2f}{\mathrm dx^2}= \frac{\frac{f(x+h)-f(x)}{h} - \frac{f(x)-f(x-h)}{h}}{h} =\frac{f(x-h)-2f(x)+f(x+h)}{h^2}.  $$
+
+**Příklad** (podle Autar Kaw et al.: [Finite Difference Method for Ordinary Differential Equations](http://nm.mathforcollege.com/topics/finite_difference_method.html).) Deformace $y$ nosníku délky $L$ podepřeného na koncích,
+vystaveného vertikálnímu zatížení $q$ a axiálnímu namáhání $T$ je dána
+rovnicí
+$$\frac{d^2 y}{dx^2}-\frac {T}{EI} y=\frac{qx(L-x)}{2EI},$$
+kde $E$ je materiálová charakteristika a $I$ je veličina související s
+průřezem nosníku (kvadratický moment průřezu, souvisí s velikostí i s
+tvarem). Po dosazení za druhou derivaci dostáváme
+$$\frac{y(x-h)-2y(x)+y(x+h)}{h^2}-\frac {T}{EI} y(x)=\frac{qx(L-x)}{2EI}.$$
+Pokud délku nosníku $L$ rozdělíme na $n$ částí délky $h$ a pokud označíme $x_i=ni$, $y_i=y(x_i)$, rovnice se redukuje na rovnici 
+$$\frac{y_{i-1}-2y_i+y_{i+1}}{h^2}-\frac {T}{EI} y_i=\frac{qx_i(L-x_i)}{2EI}.$$ To
+je pro $i$ od $i=1$ po $i=n-1$ celkem $n-1$ lineárních rovnic. K tomu
+přidáváme rovnice na koncích podepřeného nosníku, kdy platí $y_0=0$ a
+$y_n=0$. Celkem tedy máme soustavu $n+1$ lineárních rovnic o $n+1$
+neznámých. Soustava je řešitelná. Protože pro jemné dělení je rovnic
+obrovské množství, není vhodné se problém snažit zdolat metodami
+řešení rovnic známými ze střední školy. Problematika spadá do oboru
+nazývaného lineární algebra, kterému se začneme věnovat na příští
+přednášce.
