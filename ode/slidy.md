@@ -290,7 +290,7 @@ splňující diferenciální rovnici.
   a K-stratégy](http://cs.wikipedia.org/wiki/%C5%BDivotn%C3%AD_strategie) a
   toto dělení odráží, jak se snaží druh vyrovnávat se změnami prostředí.
 * Za uvedených předpokladů je možno vývoj populace popsat rovnicí 
-  $$\frac{\mathrm dy}{\mathrm dt}=ry\left(1-\frac yK\right).$$	  
+  $$\frac{\mathrm dy}{\mathrm dt}=ry\left(1-\frac yK\right).$$ Tato rovnice se nazývá *logistická rovnice.*
 * Pokud lovem snížíme přírůstky populace, můžeme tento proces modelovat rovnicí 
   $$\frac{\mathrm dy}{\mathrm dt}=ry\left(1-\frac yK\right)-h(y),$$
   kde $h(y)$ je intenzita lovu populace o velikosti $y$. Modelování
@@ -537,6 +537,21 @@ proto můžeme udělat následující závěr.
 > Věta (stabilita konstantních řešení). Jestliže platí $f(y_0)=0$, je konstantní funkce $y(x)=y_0$ konstantním
 řešením rovnice $$\frac{\mathrm dy}{\mathrm dx}=f(y).$$ Toto řešení je
 stabilní pokud $f'(y_0)<0$ a nestabilní pokud $f'(y_0)>0$.
+
+**Příklad.** Logistická diferenciální rovnice s konstantním lovem
+  $h$, tj. rovnice
+  $$\frac{\mathrm dy}{\mathrm dt}=ry\left(1-\frac yK\right)-h,$$
+  má pro malé $h$ dva stacionární body. Funkce $ry\left(1-\frac
+  yK\right)$ je parabola otočená vrcholem
+  nahoru a s nulovými body $y=0$ a $y=K$. V prvním stacionárním bodě
+  je funkce rostoucí a tento stacionární bod je nestabilní. Ve druhém
+  stacionárním bodě je funkce klesající a tento stacionární bod je
+  stabilní. Jak se zvyšuje faktor $h$, graf paraboly se posouvá směrem
+  dolů a oba stacionární body se posouvají směrem k sobě a k
+  vrcholu. Jejich stabilita zůstává neporučena. To znamená, že sice
+  pořád existuje stabilní stav, ale se zyšující se intenzitou lovu se
+  tento staionární stav dostává stále blíže ke stavu nestacionárnímu a
+  rovnováha je tedy poněkud křehká. 
 
 #  Příklad - časový rozestup mezi trolejbusy
 
