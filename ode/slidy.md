@@ -536,6 +536,51 @@ proto můžeme udělat následující závěr.
 řešením rovnice $$\frac{\mathrm dy}{\mathrm dx}=f(y).$$ Toto řešení je
 stabilní pokud $f'(y_0)<0$ a nestabilní pokud $f'(y_0)>0$.
 
+#  Příklad - časový rozestup mezi trolejbusy
+
+<div class='obtekat'>
+
+
+![Trolejbus jezdící okolo LDF. Dříve se běžně dlouho čekalo a poté jelo několik trolejbusů za sebou. S IDS JMK a koordinací dopravy k tomuto nedochází, ale občas trolejbus čeká na odjezd podle jízního řádu. Autor: Dezidor, CC BY 3.0.](trolejbus.jpg)
+
+</div>
+
+Uvažujme dva trolejbusy jedoucí za sebou po stejné trati. Označme
+$x(t)$ jejich časový odstup. Pokud první trolejbus zastaví na určité
+zastávce v čase $t$, druhý trolejbus na tuto zastávku dorazí v čase
+$x(t)$. Naším úkolem je zjistit, jak se $x(t)$ mění s rostoucím $t$.
+
+Předpokládejme, že
+
+* první vůz jede konstatní rychlostí (není dopravní špička)
+* pokud žádní pasažéři nečekají na druhý vůz, druhý vůz se
+  pohybuje rychleji než první vůz a oba vozy se "sjedou", tj. $x(t)$
+  klesá, pokud na druhý vůz nečekají žádní pasažéři
+* rychlost druhého vozu klesá s rostoucím počtem pasažérů, kteří
+  čekají na zastávce 
+* počet pasažérů kteří čekají na zastávce roste s rostoucím
+  intervalem mezi oběma vozy.
+
+Uvažujme, že všechny závislosti popsané výše jsou lineární (přímá
+úměrnost).
+
+Situaci je možno modelovat diferenciální rovnicí
+$$
+  \frac{\mathrm dx}{\mathrm  dt}=\beta x-\alpha,
+$$
+kde $\alpha$ a $\beta$ jsou kladné reálné konstanty. Tato rovnice má konstantní řešení $x=\frac \alpha\beta$. Toto řešení je nestabilní, protože 
+$$\frac{\mathrm d}{\mathrm dx}(\beta x-\alpha)=\beta>0.$$ Žádné jiné
+konstantní řešení neexistuje a proto všechna řešení klesají na nulu
+nebo neohraničeně rostou.
+
+Vzhledem k nestabilitě stacionárního řešení nemůžeme nechat řidiče
+veřejné dopravy jezdit "jak jim to vyjde". Situace by směřovala k
+tomu, že cestující budou nejprve dlouho čekat na trolejbus a nakonec
+přijede několik trolejbusů těsně za sebou. (Podle knihy P.  Blanchard,
+R. L. Devaney, G.  R. Hall: Differential equations, Cengage Learning
+(2006), 828 pp.)
+
+
 # ODE tvaru $\frac{\mathrm dy}{\mathrm dx}=f(x)g(y)$ (rovnice se separovanými proměnnými)
 
 
@@ -583,6 +628,48 @@ $$
 $$
 
 
+# Diferenciální rovnice růstu vodní kapky
+
+<div class='obtekat'>
+
+
+![Londýnská mlha. Dnes už to není jako za časů Sherloka
+Holmese. Poslední velká mlha (Pea soup fog) byla v roce 1952. Zdroj:
+Wikipedia.](london.jpg)
+
+</div>
+
+
+
+Modelujme růst kulové kapky. Ta roste tak, že na povrchu kondenzují
+vodní Kapka proto roste tak, že její objem se zvětšuje rychlostí
+úměrnou povrchu. Platí tedy
+$$\frac{\mathrm dV}{\mathrm dt}=kV^{2/3}.$$ 
+Tato rovnice má konstantní řešení $V=0$. Nekonstantní řešení dostaneme
+po úpravě
+$$V^{-2/3}\mathrm dV=k\mathrm dt$$
+a po integraci
+$$\int V^{-2/3}\mathrm dV=k\int \mathrm dt,$$
+což dává
+$$3V^{1/3}=kt+C$$
+a
+$$V=\left(\frac 13 kt+ \frac 13 C\right)^3,$$
+tj.
+$$V=\left(k_0t+ c\right)^3,$$
+kde $k_0=\frac 13 k$ a $c=\frac 13 C$ jsou konstanta spojená rychlostí kondenzace  a integrační konstanta.
+
+Všimněte si, že počáteční úloha s počáteční podmínkou $V(0)=0$ má
+konstantní nulové řešení a nenulové řešení $V(t)=(k_0t)^3$. Máme zde
+tedy nejednoznačnost. Ta má v tomto případě dokonce fyzikální
+význam. Plynné skupenství může existovat i pod bodem
+kondenzace. Takovému jevu se říká přechlazená pára. Aby došlo ke
+kondenzaci, musí být k dispozici kondenzační jádra, například nečistoty
+ve vzduchu. Proto ve znečištěném ovzduší dochází častěji ke kondenzaci
+a tvorbě mlhy. Své by o tom mohli vyprávět obyvatelé Londýna, kteří se
+proslulých mlh zbavili poté, co se omezilo topení uhlím. My dnes spíše
+známe přechlazenou tekutinu ve formě hřejících polštářků, kde se po
+lupnutí plíškem spustí přeměna skupenství na pevné spojená s
+intenzivním uvolněním tepla.
 
 # Diferenciální rovnice vyšších řádů
 
@@ -620,19 +707,19 @@ takových úloh definujeme podmínky ve dvou různých bodech. Například u
 struny nebo u oboustranně vetknutého namáhaného nosníku je v bodech
 uchycení nulová výchylka a proto je přirozené formulovat okrajové
 podmínky $x(0)=0$ a $x(l)=0$. Řešení takové úlohy existuje jenom pro
-některé kombinace parametrů a fyzikální rozbor ukazuje, že to je
-například to místo, kde se objeví efekt, že struna kmitá jenom na
+některé kombinace parametrů. Fyzikální rozbor ukazuje, že okrajová
+podmínka je to místo, kde se objeví efekt, že struna kmitá jenom na
 některých frekvencích (na základní frekvenci na kterou je naladěna a
-na vyšších harmonických frekvencích). Tyto úlohy se v praxi vyskytují
-v poměrně komplikovaných situacích (posuzování ne jednoho nosníku, ale
-celé konstrukce) a proto se zpravidla řeší přibližně a převádí se na
-řešení soustav lineárních rovnic.
+na vyšších harmonických frekvencích). Úlohy s okrajovými podmnkami se
+v praxi vyskytují v poměrně komplikovaných situacích (posuzování ne
+jednoho nosníku, ale celé konstrukce) a proto se zpravidla řeší
+přibližně a převádí se na řešení soustav lineárních rovnic. 
 
 # Konečné diference
 
 <div class='obtekat'>
 
-![Tramvajový most v Brně Pisárkách z předpjatého betonu. Vede do zatáčky a ve stoupání. Analyticky vyřešit namáhání takového mostu je nereálné. Zdroj: www.moravskyturista.cz.](pisarky.jpg)
+![Tramvajový most v Brně Pisárkách z předpjatého betonu. Vede do zatáčky a ve stoupání. Analyticky vyřešit namáhání takového mostu je nereálné, podobné úlohy se řeší převodem na úlohy lineární algebry. Zdroj: www.moravskyturista.cz.](pisarky.jpg)
 
 </div>
 
@@ -643,7 +730,8 @@ přístupem je vynechání limitního přechodu v definici derivace
 $$\frac{\mathrm df}{\mathrm dx}=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}.$$
 Tedy $$\frac{\mathrm df}{\mathrm dx}\approx\frac{f(x+h)-f(x)}{h}.$$ Okamžitá rychlost je nahrazena
 průměrnou rychlostí na intervalu $(x,x+h).$ Tento podíl se nazývá
-dopředná poměrná diference. Pokud pouzijeme toto nahrazení v diferenciální rovnici 
+dopředná poměrná diference. Pokud použijeme toto nahrazení v
+diferenciální rovnici
 $$\frac{\mathrm df}{\mathrm dx}=\varphi(x,y),$$
 dostaneme 
 $$\frac{f(x+h)-f(x)}{h}=\varphi(x,y)$$
@@ -659,21 +747,25 @@ druhé derivace pomocí funkční hodnoty funkce $f$ v daném bodě a v
 bodech o $h$ doprava a doleva ve tvaru
 $$ \frac{\mathrm d^2f}{\mathrm dx^2}= \frac{\frac{f(x+h)-f(x)}{h} - \frac{f(x)-f(x-h)}{h}}{h} =\frac{f(x-h)-2f(x)+f(x+h)}{h^2}.  $$
 
-**Příklad** (podle Autar Kaw et al.: [Finite Difference Method for Ordinary Differential Equations](http://nm.mathforcollege.com/topics/finite_difference_method.html).) Deformace $y$ nosníku délky $L$ podepřeného na koncích,
-vystaveného vertikálnímu zatížení $q$ a axiálnímu namáhání $T$ je dána
-rovnicí
-$$\frac{d^2 y}{dx^2}-\frac {T}{EI} y=\frac{qx(L-x)}{2EI},$$
-kde $E$ je materiálová charakteristika a $I$ je veličina související s
-průřezem nosníku (kvadratický moment průřezu, souvisí s velikostí i s
-tvarem). Po dosazení za druhou derivaci dostáváme
-$$\frac{y(x-h)-2y(x)+y(x+h)}{h^2}-\frac {T}{EI} y(x)=\frac{qx(L-x)}{2EI}.$$
-Pokud délku nosníku $L$ rozdělíme na $n$ částí délky $h$ a pokud označíme $x_i=ni$, $y_i=y(x_i)$, rovnice se redukuje na rovnici 
-$$\frac{y_{i-1}-2y_i+y_{i+1}}{h^2}-\frac {T}{EI} y_i=\frac{qx_i(L-x_i)}{2EI}.$$ To
-je pro $i$ od $i=1$ po $i=n-1$ celkem $n-1$ lineárních rovnic. K tomu
-přidáváme rovnice na koncích podepřeného nosníku, kdy platí $y_0=0$ a
-$y_n=0$. Celkem tedy máme soustavu $n+1$ lineárních rovnic o $n+1$
-neznámých. Soustava je řešitelná. Protože pro jemné dělení je rovnic
-obrovské množství, není vhodné se problém snažit zdolat metodami
-řešení rovnic známými ze střední školy. Problematika spadá do oboru
-nazývaného lineární algebra, kterému se začneme věnovat na příští
-přednášce.
+**Příklad** (podle Autar Kaw et al.: [Finite Difference Method for
+Ordinary Differential
+Equations](http://nm.mathforcollege.com/topics/finite_difference_method.html).)
+Deformace $y$ nosníku délky $L$ podepřeného na koncích, vystaveného
+vertikálnímu zatížení $q$ a axiálnímu namáhání $T$ je dána rovnicí
+$$\frac{d^2 y}{dx^2}-\frac {T}{EI} y=\frac{qx(L-x)}{2EI},$$ kde $E$ je
+materiálová charakteristika a $I$ je veličina související s průřezem
+nosníku (kvadratický moment průřezu, souvisí s velikostí i s
+tvarem). Okrajové podmínky jsou $y(0)=0$ a $y(L)=0$. 
+Po dosazení za druhou derivaci dostáváme
+$$\frac{y(x-h)-2y(x)+y(x+h)}{h^2}-\frac {T}{EI}
+y(x)=\frac{qx(L-x)}{2EI}.$$ Pokud délku nosníku $L$ rozdělíme na $n$
+částí délky $h$ a pokud označíme $x_i=ni$, $y_i=y(x_i)$, rovnice se
+redukuje na rovnici $$\frac{y_{i-1}-2y_i+y_{i+1}}{h^2}-\frac {T}{EI}
+y_i=\frac{qx_i(L-x_i)}{2EI}.$$ To je pro $i$ od $i=1$ po $i=n-1$
+celkem $n-1$ lineárních rovnic. K tomu přidáváme rovnice na koncích
+podepřeného nosníku, kdy platí $y_0=0$ a $y_n=0$. Celkem tedy máme
+soustavu $n+1$ lineárních rovnic o $n+1$ neznámých. Soustava je
+řešitelná. Protože pro jemné dělení je rovnic obrovské množství, není
+vhodné se problém snažit zdolat metodami řešení rovnic známými ze
+střední školy. Problematika spadá do oboru nazývaného lineární
+algebra, kterému se začneme věnovat na příští přednášce.
