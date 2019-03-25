@@ -1,0 +1,169 @@
+\documentclass{article}
+
+\usepackage[czech]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsfonts,mathtools,multicol, url, booktabs}
+\usepackage[a6paper, margin=20pt, landscape]{geometry}
+\usepackage{graphicx, xcolor}
+\usepackage{wrapfig, enumerate}
+\parskip 10pt
+\everymath{\displaystyle}
+\parindent 0 pt
+
+\def\zlomek{0.45}
+
+\let\rho\varrho
+
+\def\nic{}
+
+
+\newcommand\obrazek[2][pixabay.com]{
+  \clearpage
+  \def\test{#1}
+\begin{wrapfigure}{R}{\zlomek\linewidth}
+  \begin{minipage}{1.0\linewidth}\parskip 0 pt
+  \includegraphics[width=\linewidth]{#2}
+
+  \vspace*{-10pt}
+  \ifx\test\nic\else
+  \null\hfill{\color{gray}\footnotesize Zdroj: #1}
+  \fi
+
+  \mezera
+  \end{minipage}
+\end{wrapfigure}
+}
+
+\let\oldtextbf\textbf
+\def\textbf#1{%\newpage
+  \oldtextbf{\color{red} #1}}
+
+\def\mezera{\vspace*{10pt}}
+
+\def\stranka{\newpage}
+
+\begin{document}
+
+\rightskip 0 pt plus 1 em
+\title{Cvičení Matematika LDF, bak. 1. ročník}
+\date{28. března 2019}
+\maketitle
+
+Příklady, které se budou ve cvičení přeskakovat si projděte
+samostatně. Řešení budou zveřejněna na webu předmětu \url{http://user.mendelu.cz/marik/mt}.
+
+\newpage
+
+
+\def\tg{\mathop{\mathrm{tg}}}
+\def\cotg{\mathop{\mathrm{cotg}}}
+\def\arctg{\mathop{\mathrm{arctg}}}
+
+
+\textbf{Řešení ODE a IVP.} 
+
+\begin{multicols}2
+
+\def\priklad #1. {$#1$}
+
+\begin{enumerate}[(1)]
+  \setlength\itemsep{20pt}
+\item \priklad \frac{\mathrm dy}{\mathrm dx}=xy^2.
+\item \priklad \frac{\mathrm dy}{\mathrm dx}=\frac{\sin x}{y^2}.
+\item \priklad \frac{\mathrm dy}{\mathrm dx}=x\sqrt y.
+\item \priklad \frac{\mathrm dy}{\mathrm dt}=te^y.
+\item \priklad \frac{\mathrm dx}{\mathrm dt}=x^2-x^2t^3.
+\item \priklad \frac{\mathrm dy}{\mathrm dx}=x\sqrt y,\ \ y(0)=1.
+\item \priklad \frac{\mathrm dy}{\mathrm dx}=(xy)^2,\ \ y(0)=-1.
+\item \priklad \frac{\mathrm dr}{\mathrm dt}=kr^3,\ \ r(0)=r_0.
+\item \priklad \frac{\mathrm dm}{\mathrm dt}=m+2,\ \ m(0)=0.
+\item \priklad \frac{\mathrm dm}{\mathrm dt}=m+2,\ \ m(0)=-2.
+\end{enumerate}
+\end{multicols}
+
+
+\newpage
+
+
+\obrazek[www.rodovystatek.cz]{voda_plastovky.jpg}
+
+
+\textbf{Vypouštění nádrže.} Z fyziky je známo, že rychlost s jakou
+vytéká tekutina otvorem u dna nádoby je úměrná odmocnině výšky hladiny
+(protože se mění potenciální energie úměrná mocnině výšky na
+kinetickou energii úměrnou druhé mocnině rychlosti). Proto je i
+rychlost s jakou se zmenšuje objem vody v nádrži úměrná výšce
+hladiny. Modelujte proces pomocí diferenciální rovnice
+\begin{itemize}
+\item pro nádrž
+cylindrického tvaru (válec postavený na podstavu), 
+\item pro nádrž ve tvaru
+kvádru 
+\item pro nádrž ve tvaru kužele otočeného vrcholem dolů (trychtýř).
+\end{itemize}
+
+
+
+\newpage
+
+\obrazek[]{pokros.jpg}
+
+
+\textbf{Stavebniny vedle čebínského nádraží.} Hromada sypkého materiálu
+má tvar kužele. Úhel u~vrcholu je konstantní, daný mechanickými
+vlastnostmi materiálu a je nezávislý na objemu. Předpokládejme, že
+personál stavebnin přisypává na hromadu materiál konstantní rychlostí. Tato
+hromada je však v poměrně otevřené krajině a vítr rozfoukává materiál
+po okolí. Je rozumné předpokládat, že rozfoukávání se děje rychlostí
+úměrnou povrchu, tj. rychlostí úměrnou druhé mocnině některého
+délkového parametru, například průměru, poloměru nebo výšky. Modelujte
+proces pomocí diferenciální rovnice. Sestavte diferenciální rovnici
+pro objem hromady.
+\begin{itemize}
+\itemsep 0 pt
+\item Může hromada skončit i při neustálém přisypávání celá rozfoukaná. 
+\item Mohou pracovníci navršit hromadu do libovolné výšky anebo pro velkou hromadu je již rozfoukávání rychlejší než přisypávání?
+\end{itemize}
+Odpovědi zjistíte, když
+rozhodnete, zda existuje konstantní řešení a zda je toto řešení
+stabilní.
+
+
+
+\newpage
+
+\textbf{Ropná skvrna.} Kruhová ropná skvrna na hladině se rozšiřuje
+tak, že poloměr roste rychlostí, která je nepřímo úměrná druhé mocnině
+poloměru. Sestavte diferenciální rovnici popisující tento proces a
+vyřešte ji.
+
+\textbf{Učení.} Rychlost učení (tj. časová změna objemu osvojené látky
+nebo procento z~maximální manuální zručnosti) je úměrná objemu dosud
+nenaučené látky. Sestavte diferenciální rovnici modelující proces
+učení probíhající podle těchto pravidel.
+
+
+\textbf{Chemická směs.} Chemikálii rozpouštíme v nádrži tak, že do
+nádrže pumpujeme vodu a směs odčerpáváme. Objem směsi roste podle
+vztahu $20+2t$. Množství chemikálie $y$ klesá rychlostí, která je
+úměrná $y$ a nepřímo úměrná objemu roztoku v nádrži.
+
+
+\textbf{Růst buňky.} Buňka ve tvaru koule o poloměru $r$ získává
+živiny rychlostí úměrnou povrchu a spotřebovává živiny rychlostí
+úměrnou objemu. Získávání živin a spotřeba živin jsou tedy úměrné po
+řadě $r^2$ a $r^3$. Předpokládejme, že rychlost s jakou roste objem je
+úměrná rozdílu mezi příjmem a výdejem. Sestavte diferenciální rovnici
+pro poloměr buňky, najděte její konstantní řešení a posuďte jeho
+stabilitu. Sestavte i diferenciální rovnici pro objem buňky. (Podobnou
+úvahu lze provést i pro jiné živé organismy a odsud plynou omezení
+daná efektivitou stavby těla. Například buňky větší než
+$1\,\mathrm{mm}$ se nevyskytují příliš často. Volně podle
+L.~Edelstein-Keshet: Differential Calculus for the Life Sciences.)
+
+
+
+
+\end{document}
+

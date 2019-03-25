@@ -538,6 +538,10 @@ proto můžeme udělat následující závěr.
 řešením rovnice $$\frac{\mathrm dy}{\mathrm dx}=f(y).$$ Toto řešení je
 stabilní pokud $f'(y_0)<0$ a nestabilní pokud $f'(y_0)>0$.
 
+Pro grafickou intepretaci je vhodné připomenout, že funkce s kladnou
+derivací jsou rostoucí a funkce se zápornou derivací klesající. Pokud
+má tedy pravá strana derivaci různou od nuly, poznáme stabilitu z\ monotonie pravé strany.
+
 **Příklad.** Logistická diferenciální rovnice s konstantním lovem
   $h$, tj. rovnice
   $$\frac{\mathrm dy}{\mathrm dt}=ry\left(1-\frac yK\right)-h,$$
@@ -547,10 +551,9 @@ stabilní pokud $f'(y_0)<0$ a nestabilní pokud $f'(y_0)>0$.
   je funkce rostoucí a tento stacionární bod je nestabilní. Ve druhém
   stacionárním bodě je funkce klesající a tento stacionární bod je
   stabilní. Jak se zvyšuje faktor $h$, graf paraboly se posouvá směrem
-  dolů a oba stacionární body se posouvají směrem k sobě a k
-  vrcholu. Jejich stabilita zůstává neporučena. To znamená, že sice
-  pořád existuje stabilní stav, ale se zyšující se intenzitou lovu se
-  tento staionární stav dostává stále blíže ke stavu nestacionárnímu a
+  dolů a oba stacionární body se posouvají směrem k sobě a k\  vrcholu. Jejich stabilita zůstává neporušena. To znamená, že sice
+  pořád existuje stabilní stav, ale se zvyšující se intenzitou lovu se
+  tento stacionární stav dostává stále blíže ke stavu nestacionárnímu a
   rovnováha je tedy poněkud křehká. 
 
 #  Příklad - časový rozestup mezi trolejbusy
@@ -657,8 +660,9 @@ $$
 
 Modelujme růst kulové kapky. Ta roste tak, že na povrchu kondenzují
 vodní Kapka proto roste tak, že její objem se zvětšuje rychlostí
-úměrnou povrchu. Platí tedy
-$$\frac{\mathrm dV}{\mathrm dt}=kV^{2/3}.$$ 
+úměrnou povrchu. Povrch je zase úměrný druhé mocnině poloměru a
+poloměr je úměrný třetí odmocnině objemu. Platí tedy (po sloučení všech konstant úměrnosti do jedné)
+$$\frac{\mathrm dV}{\mathrm dt}=kV^{2/3}.$$  
 Tato rovnice má konstantní řešení $V=0$. Nekonstantní řešení dostaneme
 po úpravě
 $$V^{-2/3}\mathrm dV=k\mathrm dt$$
@@ -736,7 +740,7 @@ přibližně a převádí se na řešení soustav lineárních rovnic.
 
 <div class='obtekat'>
 
-![Tramvajový most v Brně Pisárkách z předpjatého betonu. Vede do zatáčky a ve stoupání. Analyticky vyřešit namáhání takového mostu je nereálné, podobné úlohy se řeší převodem na úlohy lineární algebry. Zdroj: www.moravskyturista.cz.](pisarky.jpg)
+![Tramvajový most v Brně Pisárkách z předpjatého betonu. Vede do zatáčky a ve stoupání. Analyticky vyřešit namáhání takového mostu je nereálné, podobné úlohy se řeší převodem na úlohy lineární algebry. Podobné síly mohou vznikat i v\ dřevěných konstrukcích a to i v\ případě, že  nosníky primárně nekonstruujeme jako předpjaté. Zdroj: www.moravskyturista.cz.](pisarky.jpg)
 
 </div>
 
