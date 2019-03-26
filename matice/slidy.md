@@ -1,6 +1,6 @@
 % Lineární algebra (operace s vektory a maticemi)
 % Robert Mařík
-% 2019
+% 2.4.2019
 
 # Vektory a operace s nimi
 
