@@ -408,9 +408,9 @@ uvedeme si je v kontextu vhodném pro studium diferenciálních rovnic.
 * Z derivace konstantního násobku funkce plyne pro funkci $y$ a konstantu $k$ vztah
  $$ \frac{\mathrm d (ky)}{\mathrm dx} = k\frac{\mathrm d y}{\mathrm dx}.$$
 * Z derivace složené funkce plyne pro konstantu $k$ a veličinu $X = kx$ vztah
-  $$ \frac{\mathrm d y}{\mathrm d x} =    \frac{\mathrm d y}{\mathrm dX}   \frac{\mathrm d X}{\mathrm dx} =   \frac{\mathrm d y}{\mathrm d x} k   $$
+  $$ \frac{\mathrm d y}{\mathrm d x} =    \frac{\mathrm d y}{\mathrm dX}   \frac{\mathrm d X}{\mathrm dx} =   \frac{\mathrm d y}{\mathrm d X} k   $$
   tj.
-  $$  \frac{\mathrm d y}{\mathrm d X} =   \frac{\mathrm d y}{\mathrm d (kx)} =   \frac 1k \frac{\mathrm d y}{\mathrm d x}.$$
+  $$ \frac{\mathrm d y}{\mathrm d (kx)} = \frac{\mathrm d y}{\mathrm d X} =      \frac 1k \frac{\mathrm d y}{\mathrm d x}.$$
 * Celkem  tedy pro $Y=k_1(y-y_0)$ a $X=k_2 x$ platí
   $$  \frac{\mathrm d Y}{\mathrm d X} =   \frac{\mathrm d \Bigl(k_1(y-y_0)\Bigr)}{\mathrm d (k_2 x)} = \frac{k_1}{k_2} \frac{\mathrm dy}{\mathrm dx}.$$
   Výraz nalevo neobsahuje konstanty, které jsou ve výrazu
@@ -471,13 +471,13 @@ bychom třikrát sečetli jednu třetinu v desetinném tvaru
 reprezentovaném konečným počtem desetinných míst, tj. například
 třikrát sečetli číslo $0.33333333$. Nedostaneme přesně jedničku. 
 
-Tento efekt měl i\ tragický důsledek. Software systému protiraketového
+Tento efekt měl i\ tragický důsledek. Software protiraketového
 systému Patriot počítal čas postupným přičítáním desetiny
 sekundy. Protože systém byl vytvořen a testován na mobilním zařízení,
 které se často restartovalo a běželo krátkou dobu, ničemu to
 nevadilo. Nasazení v systému Patriot však byla chyba. Při ostrém
 nasazení systém běžel dlouho, zaokrouhlovací chyba se kumulovala
-například 100 hodin. i\ když za tu dobu chyba dosáhla pouze zlomku
+například 100 hodin. I\ když za tu dobu chyba dosáhla pouze zlomku
 sekundy, raketa letící vysokou rychlostí již byla jinde, než systém
 Patriot propočítal.  Dne 25.2.1991 systém Patriot během operace
 Pouštní bouře na osvobození Kuvajtu od irácké okupace nesestřelil
@@ -501,11 +501,13 @@ hledání obecného řešení, ale pokusíme se popsat chování řešení, ani�
 bychom tato řešení znali. Pokusíme se s\ co nejmenší námahou říct, jak
 se budou řešení chovat.
 
-* Je-li $f(y_0)=0$, je konstantní funkce $y(x)=t_0$ řešením rovnice
+* Je-li $f(y_0)=0$, je konstantní funkce $y(x)=y_0$ řešením rovnice
   (♣). Protože derivace konstantní funkce je nula, vidíme, že řešením
   rovnice $$f(y)=0$$ obdržíme všechna konstantní řešení rovnice (♣).
 * Rovnici $$\frac{\mathrm dy}{\mathrm d x}=ky,$$ kde $k$ je konstanta,
-  je možno přetransformovat na rovnici $\frac{\mathrm dy}{\mathrm d(kx)}=y$, kterou jsme studovali na jednom z úvodních slidů.  Proto není težké se přesvědčit, že obecným řešením této
+  je možno přetransformovat na rovnici $\frac{\mathrm dy}{\mathrm
+  d(kx)}=y$, kterou jsme studovali na jednom z úvodních slidů.  Proto
+  není težké se přesvědčit, že obecným řešením této
   rovnice je funkce $$y=Ce^{kx}. \tag{♣♣}$$
   Jediné konstantní řešení této rovnice je $y=0$.  
     * Pro $k>0$ jsou funkce (♣♣)
@@ -529,14 +531,16 @@ Lineární aproximace (viz úvodní přednášky derivacích)
 $$f(y)\approx f'(y_0)(y-y_0)$$ nám umožní rovnici aproximovat rovnicí
 $$\frac{\mathrm dy}{\mathrm dx}=f'(y_0)(y-y_0)$$
 neboli
-$$\frac{\mathrm d(y-y_0)}{\mathrm dx}=f'(y_0)(y-y_0)$$ a po substituci $Y=y-y_0$, $k=f'(y_0)$ dostáváme rovnici
+$$\frac{\mathrm d(y-y_0)}{\mathrm dx}=f'(y_0)(y-y_0)$$
+a po substituci $Y=y-y_0$, $k=f'(y_0)$ dostáváme rovnici
 $$\frac{\mathrm dY}{\mathrm dx}=kY,$$
 což je rovnice typu (♣). Stabilitu takové rovnice máme prozkoumánu a
 proto můžeme udělat následující závěr.
 
-> Věta (stabilita konstantních řešení). Jestliže platí $f(y_0)=0$, je konstantní funkce $y(x)=y_0$ konstantním
-řešením rovnice $$\frac{\mathrm dy}{\mathrm dx}=f(y).$$ Toto řešení je
-stabilní pokud $f'(y_0)<0$ a nestabilní pokud $f'(y_0)>0$.
+> Věta (stabilita konstantních řešení). Jestliže platí $f(y_0)=0$, je
+  konstantní funkce $y(x)=y_0$ konstantním řešením rovnice
+  $$\frac{\mathrm dy}{\mathrm dx}=f(y).$$ Toto řešení je stabilní
+  pokud $f'(y_0)<0$ a nestabilní pokud $f'(y_0)>0$.
 
 Pro grafickou intepretaci je vhodné připomenout, že funkce s kladnou
 derivací jsou rostoucí a funkce se zápornou derivací klesající. Pokud
@@ -585,7 +589,7 @@ Uvažujme, že všechny závislosti popsané výše jsou lineární (přímá
 úměrnost).
 
 Situaci je možno modelovat diferenciální rovnicí
-$$
+$$ 
   \frac{\mathrm dx}{\mathrm  dt}=\beta x-\alpha,
 $$
 kde $\alpha$ a $\beta$ jsou kladné reálné konstanty. Tato rovnice má konstantní řešení $x=\frac \alpha\beta$. Toto řešení je nestabilní, protože 
@@ -626,8 +630,7 @@ R. L. Devaney, G.  R. Hall: Differential equations, Cengage Learning
     $$          \frac{\mathrm{d}y}{g(y)}=f(x)\mathrm{d}x$$
 
 4.  Získanou rovnost integrujeme. Tím získáme obecné řešení v implicitním tvaru.
-    $$
-          \int \frac{\mathrm{d}y}{g(y)}=\int f(x)\mathrm{d}x+C$$
+    $$           \int \frac{\mathrm{d}y}{g(y)}=\int f(x)\mathrm{d}x+C$$
 
 5.  Pokud je zadána počáteční podmínka, je možné ji na tomto místě
     dosadit do obecného řešení a určit hodnotu konstanty $C$. Tuto
@@ -674,7 +677,8 @@ a
 $$V=\left(\frac 13 kt+ \frac 13 C\right)^3,$$
 tj.
 $$V=\left(k_0t+ c\right)^3,$$
-kde $k_0=\frac 13 k$ a $c=\frac 13 C$ jsou konstanta spojená rychlostí kondenzace  a integrační konstanta.
+kde $k_0=\frac 13 k$ a $c=\frac 13 C$ jsou konstanta spojená rychlostí
+kondenzace a integrační konstanta.
 
 Všimněte si, že počáteční úloha s\ počáteční podmínkou $V(0)=0$ má
 konstantní nulové řešení $$V(t)=0$$ a nenulové řešení
@@ -696,7 +700,7 @@ pevné spojená s\ intenzivním uvolněním tepla.
 
 <div class='obtekat'>
 
-![Téměř veškerá mechanika se redukuje na studium diferenciálních rovnic druhého řádu. Ve vesmíru i\ na Zemi. Zdroj: pixabay.com.](satelit.jpg)
+![Téměř veškerá klasická mechanika a dynamika pohybů se redukuje na studium diferenciálních rovnic druhého řádu. Ve vesmíru i\ na Zemi. Zdroj: pixabay.com.](satelit.jpg)
 
 </div>
 
@@ -767,6 +771,13 @@ Pro druhou derivaci dostáváme podobně pomocí diferencí aproximaci
 druhé derivace pomocí funkční hodnoty funkce $f$ v daném bodě a v
 bodech o $h$ doprava a doleva ve tvaru
 $$ \frac{\mathrm d^2f}{\mathrm dx^2}= \frac{\frac{f(x+h)-f(x)}{h} - \frac{f(x)-f(x-h)}{h}}{h} =\frac{f(x-h)-2f(x)+f(x+h)}{h^2}.  $$
+
+
+<div class='obtekat'>
+
+![Příhradový nosník. Vzpěry jsou namáhány v ose. Teorii vybudoval v 18. století L. Euler, ale začala se dále rozvíjet a využívat až po [sérii pádů](https://en.wikipedia.org/wiki/Cast-iron_architecture#Catastrophic_failures) příhradových železničních mostů v 19. století. Zdroj: www.ceskestavby.cz.](nosnik.jpg)
+
+</div>
 
 **Příklad** (podle Autar Kaw et al.: [Finite Difference Method for
 Ordinary Differential
