@@ -501,7 +501,7 @@ $$\begin{aligned}
         \frac{\partial u_{2}}{\partial x_{1}} & \frac{\partial u_{2}}{\partial x_{2}}
       \end{pmatrix}
       $$
-       rozdělíme na součet symetrické a
+       rozdělíme stejným obratem jako na předešlém slidu na součet symetrické a
 antisymetrické matice, dostaneme
 \dm$$D=  \begin{pmatrix} \displaystyle        \frac{\partial u_{1}}{\partial x_{1}} & \displaystyle \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}+\frac{\partial u_{2}}{\partial x_{1}}\right)\\   \displaystyle      \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}+\frac{\partial u_{2}}{\partial x_{1}}\right)& \displaystyle\frac{\partial u_{2}}{\partial x_{2}}       \end{pmatrix}       +  \displaystyle \begin{pmatrix}     \displaystyle    0 & \displaystyle \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}-\frac{\partial u_{2}}{\partial x_{1}}\right)\\    \displaystyle    - \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}-\frac{\partial u_{2}}{\partial x_{1}}\right)& \displaystyle 0       \end{pmatrix}.$$
       Druhá část je deformace související s pootočením, což snadno
