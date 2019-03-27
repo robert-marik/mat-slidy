@@ -118,8 +118,8 @@ $$
 Je-li úhel $\theta$ malý, platí (viz cvičení z derivací) $\sin\theta\approx\theta$, $\cos\theta=1$ a dostáváme
 $$
 \begin{aligned}
-f_1&= e_1 +\theta e_2,\\
-f_2&=-\theta e_1 +e_2.
+f_1&= (1,\theta) = e_1 +\theta e_2,\\
+f_2&= (-\theta,1) = -\theta e_1 +e_2.
 \end{aligned}
 $$
 
@@ -368,11 +368,9 @@ Další informace:
 
 Je-li $A$ čtvercová matice, můžeme každému vektoru $X$ přiřadit vektor
 $Y=AX$ a tím definovat zobrazení $n$-rozměrného prostoru do sebe. Dá
-se ukázat, že takto dostaneme všechna zobrazení, která jsou rozumná v
-tom smyslu, že počátek nechávají v počátku a zachovávají středy úseček
-a lineární kombinaci vektorů. [Ukázka zobrazení ve 2D](https://sagecell.sagemath.org/?z=eJxtUU9rgzAUvwt-h8AOTexbq223wyCH9jJ2EER2EztSl67ZnE9i2q399Eu0VGEG8sjL7194OV1QnznNQghzyKJrjWwNZw8QzR7dqestxnxvzb-F0eqXZtmiZYewyB2w6YEIlvNVB82XLWgO0gheq_nS95KeWGBDW4htF9Co6toE_b11Gb0fsLcun9yRWuOn_Cqk76VjCQOFNb3vOxiktUYajXA2vrdHTWKiKpKtYQMJpJAGCSRBmj_5HrELd1pczjyLg5MsDGqqGHEi5UQnN9u8I77Ez7xGVRnaSYAUWKLmEy3fJ0AadZF8FbJpjeX5A6txlijrg-D2Y9i0VJUcI7E-zu5pF9k-5BZy4-_Ko_wv6PKvkr0qS_6qj3IQPqpvDvhDaDzoqLWzqqa2g3nTwijkEfsDrky_iQ==&lang=sage&interacts=eJyLjgUAARUAuQ==).
+se ukázat, že takto dostaneme všechna zobrazení, která zobrazují úsečky na úsečky, počátek nechávají v počátku  a jsou pěkná v tom smyslu, že zachovávají středy úseček, rovnoběžnost a lineární kombinaci vektorů. [Ukázka zobrazení ve 2D](https://sagecell.sagemath.org/?z=eJxtUU9LwzAUvxf6HQIe1nTPrd2mByGH7SIeCqV4K51kNXPR2FfSON0-vUk71ooN5JGX37_wcjyjPrEgjyAqII8vNbY1mt1BPLt3p663GPW9NfvkRsufIM8XLTuCReGATQ_EsJyvOmi-bEFzEIazWs6Xvpf2xBKboIXodgGNrC5N2N9bl9H7AXvr8skNqTW-i49S-F42lgC3veSPKwzSWiONhjsb39ujJgmRFcnXsIEUMsjCFNIwKx58j9iFO83PJ5Yn4VGUBnUgKXEi6URHN9uiIz4lj6xGWZmgkwApUaFmEy1eJ0AaeRZsFdFpjer0htU4i6v6wJn9GDpVshJjJNrH2T3tItuHXEOu_J36Ev8FXf5FspdKsWf9JQbho_rmgN8kSAZdYO2sqqntYF40NxJZTH8BrAC_iQ==&lang=sage&interacts=eJyLjgUAARUAuQ==).
 
-Podobně je možné definovat i zobrazení mezi prostory jiných domenzí. Například [projekce 3D objektu do 2D](https://sagecell.sagemath.org/?z=eJx9UbFugzAU3JH4B492MQFDSSUkDyytOmTtYlkVSklricapQTTp1_fZJqQhqEgY37u75-dj-NHmxLFIaSqpYOPKYE1XBWWrtd15DBwJgxdryN-4gIISIFeCSYl22iCF1B4NlpcoQkIUSf6PJAzCYFP3attw8Vn3Rh2xsAO4EeBI-EpC0UT5kpsD5rmiLq4FKva2mCWZ3c94Wxl56iQ3fpZ0X6bHGTkPNuGFo84cNPLqq5I1uHvbKCobhQ-gDAMEj4uWi-puaLa9NliRS2Zj7BJZuxU_b574Qbend73HjhQl_Cu0U23LH-u2a4jXTR1cgBnN6b0czxvbRLM-aaTKLFIy8vABYAFvzJbaL_jX5Vzopd2H_sYV-QPATFHdHeC6rwaS0JwBPjbd6PwFZwa9tw==&lang=sage&interacts=eJyLjgUAARUAuQ==).
+Podobně je možné definovat i zobrazení mezi prostory jiných dimenzí. Například [projekce 3D objektu do 2D](https://sagecell.sagemath.org/?z=eJx9UbFugzAU3JH4B492MQFDSSUkDyytOmTtYlkVSklricapQTTp1_fZJqQhqEgY37u75-dj-NHmxLFIaSqpYOPKYE1XBWWrtd15DBwJgxdryN-4gIISIFeCSYl22iCF1B4NlpcoQkIUSf6PJAzCYFP3attw8Vn3Rh2xsAO4EeBI-EpC0UT5kpsD5rmiLq4FKva2mCWZ3c94Wxl56iQ3fpZ0X6bHGTkPNuGFo84cNPLqq5I1uHvbKCobhQ-gDAMEj4uWi-puaLa9NliRS2Zj7BJZuxU_b574Qbend73HjhQl_Cu0U23LH-u2a4jXTR1cgBnN6b0czxvbRLM-aaTKLFIy8vABYAFvzJbaL_jX5Vzopd2H_sYV-QPATFHdHeC6rwaS0JwBPjbd6PwFZwa9tw==&lang=sage&interacts=eJyLjgUAARUAuQ==). Protože zobrazení zachovává rovnoběžnost, není možné takto jednoduše obdržet například perspektivu. Zde si pomáháme trikem, že přidáme další souřadnici, více viz Wikipedie a heslo [Camera matrix](https://en.wikipedia.org/wiki/Camera_matrix).
 
 Například matice $$R=
 \begin{pmatrix}
@@ -409,8 +407,9 @@ $$\begin{pmatrix}
 \end{pmatrix}.
 $$
 Proto matice $R$ definuje zobrazení, které pootočí rovinu o úhel
-$\theta$. Matice malých rotací je (použitím lineární aproximace v okolí
-nuly)
+$\theta$ a nazývá se matice rotace. Matice malých rotací je (použitím
+lineární aproximace $\sin\theta\approx \theta$ a $\cos \theta=1$ v
+okolí nuly)
 $$R_0=
 \begin{pmatrix}
   1 & - \theta\\
@@ -433,13 +432,13 @@ $$
   1& -2& 3\\
   0& 1 &3\\
   2& 1 &9
-\end{pmatrix},$ je $A^T=\begin{pmatrix}  1& 0 &2 \\  -2& 1& 1\\  3 &3 &9 \end{pmatrix}.$
+\end{pmatrix}$ je $A^T=\begin{pmatrix}  1& 0 &2 \\  -2& 1& 1\\  3 &3 &9 \end{pmatrix}.$
 
 **Příklad.** Skalární součin sloupcových vektorů $u= \begin{pmatrix}   1\\-2\\ a \end{pmatrix}$
 a $v= \begin{pmatrix}   2\\-4\\ 1 \end{pmatrix}$
 je možno zapsat jako maticový součin $$u^T v= \begin{pmatrix}   1& -2 & a \end{pmatrix} \begin{pmatrix}   2\\-4\\ 1 \end{pmatrix} =(a+10).$$
 
-**Příklad.** Matice, která se nemění transponováním, tj. $a_{ij}=a_{ji}$ se nazývá symetrická. Matice, která splňuje $a_{ij}=-a_{ji}$ se nazývá antisymetrická. Pro libovolnou matici $A$ platí
+**Příklad.** Matice, která se nemění transponováním, tj. $a_{ij}=a_{ji}$ se nazývá symetrická. Matice, která splňuje $a_{ij}=-a_{ji}$ se nazývá antisymetrická. Pro libovolnou čtvercovou matici $A$ platí
 $$A=\frac{A+A^T}2+\frac{A-A^T}2.$$ První matice v tomto součtu je symetrická a druhá antisymetrická. Takto je možné rozložit matici na součet symetrické a antisymetrické matice. Například matice
 $$A=
 \begin{pmatrix}
@@ -504,13 +503,13 @@ $$\begin{aligned}
       $$
        rozdělíme na součet symetrické a
 antisymetrické matice, dostaneme
-\dm$$D=  \begin{pmatrix} \displaystyle        \frac{\partial u_{1}}{\partial x_{1}} & \displaystyle \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}+\frac{\partial u_{2}}{\partial x_{1}}\right)\\   \displaystyle      \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}+\frac{\partial u_{2}}{\partial x_{1}}\right)& \displaystyle\frac{\partial u_{2}}{\partial x_{2}}       \end{pmatrix}       +  \displaystyle \begin{pmatrix}     \displaystyle    0 & \displaystyle \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}-\frac{\partial u_{2}}{\partial x_{1}}\right)\\    \displaystyle     \frac 12\left(-\frac{\partial u_{1}}{\partial x_{2}}+\frac{\partial u_{2}}{\partial x_{1}}\right)& \displaystyle 0       \end{pmatrix}.$$
+\dm$$D=  \begin{pmatrix} \displaystyle        \frac{\partial u_{1}}{\partial x_{1}} & \displaystyle \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}+\frac{\partial u_{2}}{\partial x_{1}}\right)\\   \displaystyle      \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}+\frac{\partial u_{2}}{\partial x_{1}}\right)& \displaystyle\frac{\partial u_{2}}{\partial x_{2}}       \end{pmatrix}       +  \displaystyle \begin{pmatrix}     \displaystyle    0 & \displaystyle \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}-\frac{\partial u_{2}}{\partial x_{1}}\right)\\    \displaystyle    - \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}-\frac{\partial u_{2}}{\partial x_{1}}\right)& \displaystyle 0       \end{pmatrix}.$$
       Druhá část je deformace související s pootočením, což snadno
 nahlédneme, pokud tuto informaci sečteme s identitou reprezentovanou
 jednotkovou maticí na
 $$ \begin{pmatrix}
         1 & \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}-\frac{\partial u_{2}}{\partial x_{1}}\right)\\
-        \frac 12\left(-\frac{\partial u_{1}}{\partial x_{2}}+\frac{\partial u_{2}}{\partial x_{1}}\right)& 1
+       - \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}-\frac{\partial u_{2}}{\partial x_{1}}\right)& 1
       \end{pmatrix}
       $$
       abychom měli celou část zobrazení (ne jenom deformaci). Porovnáním s maticí malých rotací

@@ -1,0 +1,35 @@
+vzory=([0,0],[1,0],[1,1],[0.5,1.6],[0,1],[0,0])
+A=matrix([[2,0],[0,2]])
+B=matrix([[1,3/4],[0,2/3]])
+theta=pi/3
+P=matrix([[cos(theta)^2,sin(theta)*cos(theta)],[sin(theta)*cos(theta),sin(theta)^2]]) # projekce
+R=matrix([[cos(theta),-sin(theta)],[sin(theta),cos(theta)]]) # rotace
+
+for M in [A,B,P,R,R*P,P*R]:
+    obrazy=[M*vector(i) for i in vzory]
+    IMG=point(obrazy, color='red', size=40)+polygon(obrazy, color='red', alpha=0.5)+line(obrazy, color='red')
+    IMG=IMG+point(vzory, size=40, color='blue')
+    IMG=IMG+polygon(vzory, fill=True, alpha=0.5, color='blue')
+    show (M)
+    show(IMG, aspect_ratio=1)
+
+
+
+
+------------------------------
+
+vzory=([0,0],[1,0],[1,1],[0.5,1.6],[0,1],[0,0])
+Vzory3d=[[0,i[0],i[1]] for i in vzory] + [[5/3,i[0],i[1]] for i in vzory]
+
+Matice=[matrix([[1,0,0],[0,1,0]]), matrix([[0,1,0],[0,0,1]]), matrix([[1,0,0],[0,0,1]]), matrix([[1,-1,0],[-1/2,-1,1]]), matrix([[-1,1,0],[-1,-1/2,1]]), matrix([[1,1/sqrt(2),0],[0,1/sqrt(2),1]]), matrix([[1,-1/sqrt(2)/2,0],[0,-1/sqrt(2)/2,1]])]
+
+for A in Matice:
+    Vzory=[A*vector(i) for i in Vzory3d] 
+
+    IMG=polygon(Vzory[:6], fill=False)
+    for i in [0,1,2,3,4]:
+        IMG+=polygon(Vzory[0+i:2+i]+Vzory[7+i:5+i:-1], fill=False)
+    IMG+=polygon(Vzory[6:], fill=False)
+
+    show(A)
+    show(IMG, aspect_ratio=1, axes=False)
