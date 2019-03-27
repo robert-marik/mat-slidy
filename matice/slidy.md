@@ -51,9 +51,10 @@ $$
 \end{pmatrix}
 $$
 
-Neutrálním prvkem vzhledem ke sčítání vektorů je *nulový vektor*, jehož
+Neutrálním prvkem vzhledem ke sčítání vektorů je *nulový vektor* $\vec o$, jehož
 všechny komponenty jsou nulové. Vektor, ke kterému přičteme nulový
 vektor, se nezmění.
+$$\vec u +\vec o=\vec u$$
 
 
 # Vektory ve 2D a 3D -- geometrie
@@ -174,7 +175,7 @@ nezávislost.
 >  Řekneme, že vektory $\vec u_1$, $\vec u_2$, $\dots$, $\vec u_k$ jsou
   *lineárně závislé*, jestliže existuje alespoň jedna
   netriviální lineární kombinace těchto vektorů, jejímž
-  výsledkem je nulový vektor, tj. existují-li reálná čísla $t_1$,
+  výsledkem je nulový vektor $\vec o$, tj. existují-li reálná čísla $t_1$,
   $t_2$, $\dots$, $t_k$, z nichž alespoň jedno je různé od nuly, taková,
   že platí
 $$
@@ -200,7 +201,7 @@ tom případě říkáme, že vektory mají stejný směr.
 
 <div class='obtekat'>
 
-![Markovovy řetězce umožňují modelování migrace mezi městem a venkovem. Zdroj: pixabay.com](city.jpg)
+![Markovovy řetězce umožňují modelování situací, ve kterých dochází k přepínání stavů. Například migrace mezi městem a venkovem. Zdroj: pixabay.com](city.jpg)
 
 </div>
 
@@ -326,7 +327,7 @@ platí $$AI=IA=A.$$
 
 <div class='obtekat'>
 
-![Markovovy řetězce umožňují modelování migrace mezi městem a venkovem. Zdroj: pixabay.com](city.jpg)
+![Markovovy řetězce umožňují modelování situací, ve kterých dochází k přepínání stavů. Například migrace mezi městem a venkovem. Zdroj: pixabay.com](city.jpg)
 
 </div>
 
@@ -629,7 +630,7 @@ $$ \begin{pmatrix}
       $$
       popisující změnu tvaru a nazývaná [*tenzor malých deformací*](https://cs.wikipedia.org/wiki/Deformace#Tenzor_mal%C3%BDch_deformac%C3%AD). Ten se ještě někdy rozděluje na součet vhodného konstantního násobku jednotkové matice (souvisí se zvětšením nebo zmenšením, tj. se změnou objemu) a deviátor (souvisí se zmenou tvaru bez započtení zvětšení či zmenšení).
 
-[Obrázky a online výpočty.](https://sagecell.sagemath.org/?z=eJxtkkFvozAQhe-R8h9G6qFQCA10s4dKPtDLag9cVrmhKHJg2roBD7JNduHX7xiiNFKCBLbH731jP_EAaQJ_aDw2sgY6YKURnJHavpNpZYWgJZCjCrUCCXZo0RlVHam_Vqnl4gGyb85FdstSIzlDHdMqaR0jazwp6cjw5ALzuEI6xRaDncERteu_FHyhphbGFnUfQ2eIgUeDtvGHs1gpJ1sEy7JakzvSiU_ZesyEPI1kBhGU63i9i8v0_E35u042cZr89LN5zXvhcpELNhv1LyjLhOVJtpm06028SrLdpNiKPJlu2JHFgCtve767CPIo34bPmV_LubA6F3yJMxCT0Hsr9j1nT6rmOyo37M89swnG4czK1eTydg4JClAayjye6TFMEj-wxg9s270uF8APHYwcB1EGRXTbInw6YcXZByoEz1WeO-W0m92_i1-iI6VdMHNiqKghIx4N1o8xWDWi-LEOo46a4YP0fZVsuk8pOOQwapTGe6Lwux2_0dxyOsilyUV_aHq8Ncz9z5Z31TRia3q8an7Xbz_pLwQ6KGKo1YdyVryEV1sBsxlhO05pb_hPIpGG_wFT7gPz&lang=sage&interacts=eJyLjgUAARUAuQ==)
+[Obrázky a online výpočty.](https://sagecell.sagemath.org/?z=eJydU8tq20AU3Rv8DxdlESmaKLbadBEyBbeFkoU3behGmDCWbuKpRzNiNHIr_UO-oKt8QL7C-bBePeq42FCoQGIe555z7kMnMI3gi2nWSmRglphqBGeFLu-NzUWKoAUYZ1LUEgSUdY7OynRtqn2UHI9OIH7l2cEOuWRjnDUFsaWidESZ4UYKZywtdmTj0aYxtuZ-MmGTBUumw3dK30l0yabRu3bV7-kuGI9mPBck-dNPkojgUXzZYSeX7DyKFx3ils-izk5hSvTp5MMdGeX-LJzdBhdxuxf9wflwcALf6nKDTrXZ97dXsIbCyrLAzbpisHZoa7BYWGxQu-o7QpOjrv7ULGctOhM5gswIIB0FiWWdrkwOOSoqA6qDYrZWqFC8M9h6TsnvRXw2UNR3Q65xlwRVsEeed1EHtun-3667NqQSTDa0SMuVaWMKkVX_mQQtYQ5SQ5LMmPcR1fZp12X0qD99SZk3I87dzBDo5XH7VDpSNVTGl0fU22eCQ9JlybyvR6BN_vKLxstthK0GLOXBvJth3rbPA7RH1n8hKXnmfaIKbJ_2J7FVXVyNR0CPWVrR1Dzx58lkER42IjjbYErBvgygzVu2eXdTvOgJbuafeWGkdn5PxSA1ylh-ajE7ZVDKBvnbSRAWRtUPRh9HCVWsBKdfIAiV1HgMFLzK0Rv2kp2RncgOv1QVHgb0-kPIvVSK39oK98SPxpcr88NfuVz53vUqfu-F82S6CL3ri3YT7IHA110RGWTyQbqSv9m_9ckDSdGkpu7OCicNnx5TsC3pb7sKl7c=&lang=sage&interacts=eJyLjgUAARUAuQ==)
 
 
 # Rozložení teploty na tepelně vodivé desce

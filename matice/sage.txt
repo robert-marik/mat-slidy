@@ -33,3 +33,31 @@ for A in Matice:
 
     show(A)
     show(IMG, aspect_ratio=1, axes=False)
+
+
+------------------------------
+
+# 1. Rozklad obecne transformace na otoceni a symetrickou transformaci
+# 2. Rozklad symetricke transformace na izotropni cast a deviator deformaci
+
+vzory=([0,0],[1,0],[1,1],[0.5,1.6],[0,1],[0,0])
+A=matrix([[.1,0.25],[0.05,-.2]])
+AT=A.transpose()
+B_sym=(A+AT)/2
+B_asym=(A-AT)/2
+# Vysvetleni B_asym: k prispevku, ktery reprezentuje zmenu otocenim, pridame identitu, abychom meli celou transformaci
+
+B_izo=B_sym.trace()/2*identity_matrix(2)
+B_dev=B_sym-B_izo
+# Vysvetleni B_dev: k prispevku, ktery reprezentuje deviaci od izotroniho pripadu, pridame identitu, abychom meli celou transformaci
+
+for M in [[A,"Celá deformace"],[B_asym,"Antisymetrická èást, pootoèení"], [B_sym,"Symetrická èást, zmìna tvaru"], [B_izo,"Izotropní èást zmìny tvaru"], [B_dev,"Deviátor deformací"]]:
+    obrazy=[(M[0]+identity_matrix(2))*vector(i) for i in vzory]
+    IMG=point(obrazy, color='red', size=40)+polygon(obrazy, color='red', alpha=0.5)+line(obrazy, color='red')
+    IMG=IMG+point(vzory, size=40, color='blue')
+    IMG=IMG+polygon(vzory, fill=True, alpha=0.5, color='blue')
+    show(html("<h2>"+M[1]+"</h2>"))
+    show (n(M[0], digits=3))
+    show(IMG, aspect_ratio=1)
+    show(html("<hr>"))
+
