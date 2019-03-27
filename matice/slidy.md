@@ -7,7 +7,9 @@
 Vektorem rozumíme uspořádanou $n$-ti objektů, pro které má smysl
 operace sčítání a násobení číslem. Počet komponent v této $n$-tici se
 nazývá dimenze vektoru. Tyto komponenty jsou zpravidla čísla nebo
-skalární funkce.
+skalární funkce. Aby se s vektory dalo rozumně pracovat, musí tvořit
+vhodnou strukturu. Například každý vektor musí mít neutrální prvek a
+každý vektor musí mít opačný prvek.
 
 
 > Definice (vektory, vektorový prostor).
@@ -27,10 +29,9 @@ skalární funkce.
   a_n$ nazýváme *složky vektoru* $(a_1,a_2,\dots, a_n)$. Číslo
   $n$ nazýváme *dimenze prostoru $V$*.
 
- Vektorový prostor, jehož komponenty jsou uspořádané $n$-tice reálých čísel označujeme $\mathbb R^n$.
+Vektorový prostor, jehož komponenty jsou uspořádané $n$-tice reálých čísel označujeme $\mathbb R^n$.
 
- Často pracujeme se sloupcovými vektory. Zápis je potom přehlednější.
- 
+Často pracujeme se sloupcovými vektory. Zápis je potom přehlednější.
 $$
 \begin{pmatrix}
   1\\-2\\1
@@ -105,21 +106,28 @@ Další informace: [Wikipedia, Path integration](https://en.wikipedia.org/wiki/P
 
 # Pootočení vektoru
 
-Ve dvourozměrném prostoru uvažujme jednotkové vektory ve směru souřadných os $e_1=(1,0)$ a $e_2=(0,1)$.
-Pokud pootočíme vektory o úhel $\theta$ v kladném směru, mají pootočené vektory $f_1$, $f_2$ souřadnice
-$$f_1=(\cos \theta,\sin\theta)$$ (plyne přímo z definice funkcí sinus a kosinus na jednotkové kružnici) a
-$$f_2=(-\sin\theta,\cos\theta)$$ (plyne z předchozího přičtením úhlu $\frac\pi 2$ a využitím identit $\cos\left(\theta+\frac\pi 2\right)=-\sin\theta$ a $\sin\left(\theta+\frac\pi 2\right)=\cos\theta$). Pomocí lineární kombinace můžeme psát
+<div class='obtekat'>
+
+![Jednotkové vektory ve směru os pootočíme o úhel $\theta$ a výsledek vyjádříme jako lineární kombinaci původních vektorů.](otoceni.png)
+
+</div>
+
+
+Ve dvourozměrném vektorovém prostoru uvažujme jednotkové vektory ve směru souřadných os $\vec e_1=(1,0)$ a $\vec e_2=(0,1)$.
+Pokud pootočíme vektory o úhel $\theta$ v kladném směru, mají pootočené vektory $\vec f_1$, $\vec f_2$ souřadnice
+$$\vec f_1=(\cos \theta,\sin\theta)$$ (plyne přímo z definice funkcí sinus a kosinus na jednotkové kružnici) a
+$$\vec f_2=(-\sin\theta,\cos\theta)$$ (plyne z předchozího přičtením úhlu $\frac\pi 2$ a využitím identit $\cos\left(\theta+\frac\pi 2\right)=-\sin\theta$ a $\sin\left(\theta+\frac\pi 2\right)=\cos\theta$). Pomocí lineární kombinace můžeme psát
 $$
 \begin{aligned}
-f_1&=\cos(\theta) e_1 +\sin(\theta)e_2,\\
-f_2&=-\sin(\theta) e_1 +\cos(\theta)e_2.
+\vec f_1&=\cos(\theta) \vec e_1 +\sin(\theta)\vec e_2,\\
+\vec f_2&=-\sin(\theta)\vec  e_1 +\cos(\theta)\vec e_2.
 \end{aligned}
 $$
-Je-li úhel $\theta$ malý, platí (viz cvičení z derivací) $\sin\theta\approx\theta$, $\cos\theta=1$ a dostáváme
+Je-li úhel $\theta$ malý, platí (viz cvičení z derivací) $\sin\theta\approx\theta$, $\cos\theta\approx 1$ a dostáváme
 $$
 \begin{aligned}
-f_1&= (1,\theta) = e_1 +\theta e_2,\\
-f_2&= (-\theta,1) = -\theta e_1 +e_2.
+\vec f_1&= (1,\theta) = \vec e_1 +\theta\vec  e_2,\\
+\vec f_2&= (-\theta,1) = -\theta\vec e_1 +\vec e_2.
 \end{aligned}
 $$
 
@@ -138,9 +146,20 @@ kde $t_1$, $t_2$, $\dots$, $t_k$ jsou nějaká reálná čísla, se nazývá
 
 V $n$-rozměrném prostoru existuje $n$-tice vektorů, pomocí
 nichž můžeme dostat libovolný vektor jako lineární kombinaci. Taková
-$n$-tice se nazývá báze. Dá se ukázat, že bází je nekonečné mnoho a
-pro zadanou bázi a vektor je vyjádření vektoru pomocí bázováých
-vektorů jednoznačné až na pořadí. Nejjednodušší báze je tvořena jednotkovými vektory, které mají všechny komponenty kromě jedné nulové. Například pro bázové vektory  $e_1=(1,0)$ a $e_2=(0,1)$ a vektor $v=(4,\pi)$ platí $$v=(4,\pi)=(4,0)+(0,\pi) = 4 (1,0) +\pi (0,1) = 4e_1-\pi e_2.$$
+$n$-tice se nazývá *báze*. Dá se ukázat, že bází je nekonečné mnoho a
+pro zadanou bázi a vektor je vyjádření vektoru pomocí bázových
+vektorů jednoznačné až na pořadí. Nejjednodušší báze je tvořena
+jednotkovými vektory, které mají všechny komponenty kromě jedné
+nulové. Například pro bázové vektory $\vec e_1=(1,0)$ a $\vec e_2=(0,1)$
+dvourozměrného vektorového prostoru a pro vektor $\vec v=(4,\pi)$ platí
+$$\vec v=(4,\pi)=(4,0)+(0,\pi) = 4 (1,0) +\pi (0,1) = 4\vec e_1+\pi \vec e_2.$$
+Koeficienty lineární kombinace se nazývají souřadnice. Například
+souřadnice vektoru $\vec v=(4,\pi)$ v uvažované bázi jsou
+$\begin{bmatrix} 4\\\pi \end{bmatrix}_{e_1,e_2}$. Pro bázové vektory $\vec e'_1=(2,0)$ a $\vec
+e'_2=(0,\pi)$ platí
+$$\vec v=(4,\pi)=2(2,0)+1(0,\pi)=2e'_1+e'_2$$
+a souřadnice vektoru $\vec v=(4,\pi)$ v nové bázi jsou $\begin{bmatrix} 2\\1 \end{bmatrix} _{e'_1,e'_2}$. Tady vidíme
+výhodu "pěkné volby" bázových vektorů.
 
 Výsledekm triviální lineární kombinace, tj. lineární kombinace s
 nulovými koeficienty, je nulový vektor.  Pokud vektory bázi netvoří,
@@ -163,8 +182,18 @@ $$
 $$
    V opačném případě říkáme, že vektory jsou *lineárně nezávislé*.
 
+Platí následující.
 
-# Migrace mezi městem a venkovem
+* Vektory, které tvoří bázi, jsou lineárně nezávislé.
+* Je-li vektorů větší počet, než je dimenze prostoru, jsou tyto vektory lineárně závislé.
+* Je-li v posloupnosti vektorů některý vektor násobkem jiného vektoru nebo lineární kombinací ostatních vektorů, jedná se o lineárně závislou posloupnost vektorů.
+
+Ve výše uvedených případech poznáme lineární závislost snadno. Mimo
+tyto případy je to snadné pouze pro dvojici vektorů, které jsou
+lineárně závislé právě tehdy když je jeden vektor násobkem druhého. V
+tom případě říkáme, že vektory mají stejný směr.
+
+# Migrace mezi městem a venkovem pomocí vektorů
 
 
 \iffalse 
@@ -177,17 +206,28 @@ $$
 
 \fi
 
-Každý rok měříme velikosti populací ve městě a na
-venkově. Procentuální složení zaznamenáváme ve formě
-vektoru. Například vektor $$ X_0=
-\begin{pmatrix}
-  0.6 \\ 0.4
-\end{pmatrix}
-$$
-znamená, že $60\%$ populace žije ve městě a $40\%$ na venkově. Každý
+Na příkladě si ukážeme, kdy je přirozené paracovat s lineárními
+kombinacemi vektorů. Pokusíme se matematicky modelovat migraci mezi
+městem a venkovem. Matematicky se tento přístup používá vždy, když je
+možné rozdělit jednotlivé části systému do konečného počtu navzájem
+disjunktních stavů a jednotlivé části mohou měnit svůj stav, přičemž
+pravděpodobnost změny je dána pouze současným stavem a ne například
+historií předchozích stavů.
+
+**Slovní formulace:** Každý rok měříme velikosti populací ve městě a na
+venkově. Na počátku $60\%$ populace žije ve městě a $40\%$ na venkově. Každý
 rok zůstane $95\%$ městské populace ve městě a $5\%$ se stěhuje na
 venkov. Podobně $97\%$ obyvatelstva venkova zůstává a $3\%$ se stěhuje
-do města. Po jednom roce je tedy rozložení populace dáno vektorem
+do města.
+
+**Matematický model:**
+Procentuální složení zaznamenáváme ve formě
+vektoru. Na počátku bude $$ X_0=
+\begin{pmatrix}
+  0.6 \\ 0.4
+\end{pmatrix}.
+$$
+Po jednom roce je rozložení populace dáno vektorem
 $$ X_1=
 \begin{pmatrix}
   0.95 \\ 0.05 
@@ -200,12 +240,16 @@ $$ X_1=
 0.4
 .
 $$
-Koeficienty vektoru $X_0$ jsou koeficienty v této lineární
-kombinaci.
+Intenzita migrace jednotlivými směry je ve sloupcových vektorech na
+pravých stranách. Koeficienty v této lineární kombinaci jsou
+koeficienty vektoru $X_0$.
 
 Podobně, rozložení po dvou letech bude dáno lineární
 kombinací s koeficienty, danými vektorem $X_1$.
-Pokud bychom potřebovali znát rozložení populace po $k$ letech, situace se komplikuje, dostali bychom rekurentní vzorec, který je nutno stále opakovat. Pro odstranění tohoto nepohodlí se zavádí pojem matice, viz níže.
+Pokud bychom potřebovali znát rozložení populace po $k$ letech,
+situace se komplikuje. Dostali bychom rekurentní vzorec, který je
+nutno stále opakovat. Pro odstranění tohoto nepohodlí se zavádí pojem
+matice, viz níže.
 
    
 # Matice a jejich lineární kombinace
@@ -275,7 +319,7 @@ jedničky v hlavní diagonále a nuly mimo tuto diagonálu. Mají-li
 platí $$AI=IA=A.$$
 
 
-# Migrace mezi městem a venkovem
+# Migrace mezi městem a venkovem pomocí matic
 
 
 \iffalse 
@@ -318,7 +362,7 @@ obyvatel vesnice).
 
 (Podle D. Lay, Linear algebra)
 
-# Leslieho matice
+# Růst populace pomocí Leslieho matice
 
 \iffalse 
 
@@ -334,11 +378,15 @@ lidskou nebo jinou populaci. Zdroj: pixabay.com](potkan.jpg)
 
 \fi
 
-Leslieho model růstu populace zohledňuje věkovou strukturu
-populace. Původně byl odvozen pro modelování populace samic, dá se
-však adaptovat na populaci obecně. Model předpokládá, že populace je
-rozdělena do několika věkových kategoriií a v každé kategorii je dána
-pravděpodobnost dožití se do další kategorie a průměrný počet potomků. 
+Leslieho model používá matice pro modelování vývoje populace, který
+zohledňuje věkovou strukturu populace. Model předpokládá, že populace
+je rozdělena do několika věkových kategoriií a v každé kategorii je
+dána pravděpodobnost dožití se do další kategorie a průměrný počet
+potomků. Situace je podobná jako u Markovova řetězce s tím, že
+nenulový prvek matice bude jenom tam, kde dochází k přesunu do další
+věkové kategorie nebo tam, kde kumulujeme počet nově narozených
+jedinců v nejnižší věkové kategorie pro jednotlivé věkové skupiny
+rodičů.
 
 Příslušný model například pro populaci rozdělenou do tří věkových
 kategorií by byl dán rovnicí
@@ -351,8 +399,12 @@ $$\begin{pmatrix} x_1(k+1) \\ x_2(k+1) \\ x_3 (k+1)
 \end{pmatrix}
 $$
 
-Opakovaným násobením získáme rozložení populace v další generaci a
-toto se opakuje podobně jako u Markovova řetězce.
+Opakovaným násobením získáme věkovou strukturu populace v další
+generaci a toto se opakuje podobně jako u Markovova řetězce.
+
+Původně byl odvozen pro modelování populace samic, dá se
+však adaptovat na populaci obecně.
+
 
 Další informace:
 
@@ -408,7 +460,7 @@ $$\begin{pmatrix}
 $$
 Proto matice $R$ definuje zobrazení, které pootočí rovinu o úhel
 $\theta$ a nazývá se matice rotace. Matice malých rotací je (použitím
-lineární aproximace $\sin\theta\approx \theta$ a $\cos \theta=1$ v
+lineární aproximace $\sin\theta\approx \theta$ a $\cos \theta\approx 1$ v
 okolí nuly)
 $$R_0=
 \begin{pmatrix}
@@ -416,6 +468,47 @@ $$R_0=
   \theta & 1
 \end{pmatrix}.
 $$
+Tuto matici budeme potřebovat při studiu deformace při odvození matematického popisu malých deformací.
+
+# Vlastní čísla a vlastní vektory
+
+U zobrazování vektorů pomocí maticového násobení nás velice zajímá, které směry se zachovávají, tj. kdy bude obrazem vektoru jeho násobek.
+
+> Definice (vlastní vektor a vlastní hodnota matice). Řekneme, že nenulový vektor $\vec u$ je *vlastním vektorem* matice $A$ příslušným *vlastní hodnotě* $\lambda$, jestliže platí $$A \vec u=\lambda \vec u.$$
+
+Vlastní čísla se nazývají též vlastní hodnoty matice. Každý nenulový
+vlastní násobek vlastního vektoru je vlastní vektor příslušný téže
+vlastní hodnotě.
+
+<div class='obtekat'>
+
+![Dřevo není izotropní materiál a nemá stejné vlastnosti v každém směru. Existují ale tři výrazné směry, vzhledem k nimž se dají mechanické a fyzikální vlastnosti popsat snadněji, než vhledem ke směrům ostatním. Matematicky se jedná o vlastní vektory příslušných maticových fyzikálních veličin. Zdroj: http://woodpoint.sk](drevo.png)
+
+</div>
+
+
+**Příklad.** Matice rotace nemá žádnou vlastní hodnotu, pootočením se změní směr všech vektorů.
+
+**Příklad.** Matice $\begin{pmatrix} 3 & 0\\ 0 & 3 \end{pmatrix}$ (trojnásobek jednotkové matice) zobrazuje každý vektor na trojnásobek a všechny vektory jsou vlastními vektory této matice. Příslušná vlastní hodnota je $3$.
+
+**Příklad.** Matice $\begin{pmatrix} 3 & 0\\ 0 & 0 \end{pmatrix}$ má vlastní vektor $(1,0)$ příslušný vlastní hodnotě $3$ a
+vlastní vektor $(0,1)$ příslušný vlastní hodnotě $0$.
+
+**Příklad.** Platí $\begin{pmatrix} 3 & -2\\ -1 & 4 \end{pmatrix} \begin{pmatrix}   2\\1 \end{pmatrix} = \begin{pmatrix}   4\\2 \end{pmatrix}$
+a matice $\begin{pmatrix} 3 & -2\\ -1 & 4 \end{pmatrix}$ má vlastní vektor $(2,1)$ příslušný vlastní hodnotě $2$.
+
+Vlastní vektory jsou nesmírně důležité, protože definují směry, podél
+nichž se zobrazení chová "pěkně". Tímto zobrazením může být třeba to,
+jak se působení vnější síly na těleso projeví na deformaci tohoto
+tělesa nebo jak se gradient teploty nebo vlhkosti projeví na proudění
+tepla či vody ve dřevě, půdě nebo jiném materiálu. Pro pravidelně
+rostlé dřevo je snadné tyto směry určit. Pro zkroucené dřevo nebo při
+studiu proudění vody, vzduchu či ropy v půdě to již snadné není a je
+nutné tyto směry vypočítat. To se naučíme později. V aplikacích často
+bývá matice "symetrická podle diagonály" a u takové matice vlastní
+vektory existují. Co se přesně myslí pod pojmem "symetrická matice" si
+uvedeme na následujícím slidu.
+
 
 # Transponovaná matice
 
@@ -434,11 +527,14 @@ $$
   2& 1 &9
 \end{pmatrix}$ je $A^T=\begin{pmatrix}  1& 0 &2 \\  -2& 1& 1\\  3 &3 &9 \end{pmatrix}.$
 
-**Příklad.** Skalární součin sloupcových vektorů $u= \begin{pmatrix}   1\\-2\\ a \end{pmatrix}$
+**Příklad.** Skalární součin sloupcových vektorů (chápaných jako matice) $u= \begin{pmatrix}   1\\-2\\ a \end{pmatrix}$
 a $v= \begin{pmatrix}   2\\-4\\ 1 \end{pmatrix}$
 je možno zapsat jako maticový součin $$u^T v= \begin{pmatrix}   1& -2 & a \end{pmatrix} \begin{pmatrix}   2\\-4\\ 1 \end{pmatrix} =(a+10).$$
 
-**Příklad.** Matice, která se nemění transponováním, tj. $a_{ij}=a_{ji}$ se nazývá symetrická. Matice, která splňuje $a_{ij}=-a_{ji}$ se nazývá antisymetrická. Pro libovolnou čtvercovou matici $A$ platí
+**Příklad.** Matice, která se nemění transponováním,
+tj. $a_{ij}=a_{ji}$ se nazývá **symetrická**. Matice, která splňuje
+$a_{ij}=-a_{ji}$ se nazývá **antisymetrická**. Pro libovolnou čtvercovou
+matici $A$ platí
 $$A=\frac{A+A^T}2+\frac{A-A^T}2.$$ První matice v tomto součtu je symetrická a druhá antisymetrická. Takto je možné rozložit matici na součet symetrické a antisymetrické matice. Například matice
 $$A=
 \begin{pmatrix}
@@ -458,6 +554,13 @@ $$
 Tento trik použijeme pro odvození tvaru tenzoru malých deformací.
 
 
+Následující větu využijeme později.
+
+> Věta (souvislost transponování matice a maticového součinu). Pro čtvercové matice platí $$(AB)^T=B^T A^T.$$
+
+
+
+
 # Tenzor malých deformací
 
 
@@ -465,15 +568,14 @@ Tento trik použijeme pro odvození tvaru tenzoru malých deformací.
 
 <div class='obtekat'>
 
-![Metodami lineární algebry kombinovanými s diferenciálním počtem dokážeme ze zobrazení eliminovat složku související se změnou tvaru, tenzor malých deformací. Zdroj: pixabay.com](deformace.jpg)
+![Metodami lineární algebry kombinovanými s diferenciálním počtem dokážeme ve zobrazení identifikovat tenzor malých deformací, složku související jenom se změnou tvaru. Odfiltrujeme tak posun či rotaci, které se změnou tvaru nesouvisí. Zdroj: pixabay.com](deformace.jpg)
 
 </div>
 
 \fi
 
 
-
-Zobrazení roviny do sebe, kterým je možné popsat deformaci tělesa působením síly je možné popsat dvojicí funkcí $u_1(x,y)$, $u_2(x,y)$. Lineární aproximace těchto funkcí v okolí bodu $(x,y)$ dávají (vpravo pro stručnost vynecháváme argument $(x,y)$)
+Zobrazení roviny do sebe, kterým je možné popsat deformaci tělesa působením síly je možné popsat dvojicí funkcí $u_1(x_1,x_2)$, $u_2(x_1,x_2)$. Lineární aproximace těchto funkcí v okolí bodu $(x_1,x_2)$ dávají (viz závěr prezentace z přednášky věnované derivací, kdy ještě vpravo pro stručnost vynecháváme argument $(x_1,x_2)$)
 $$\begin{aligned}
   u_{1}(x_{1}+\Delta x_{1}, x_{2}+\Delta x_{2})&\approx u_{1}+\frac{\partial u_{1}}{\partial x_{1}}\Delta x_{1}+\frac{\partial u_{1}}{\partial x_{2}}\Delta x_{2},\\
   u_{2}(x_{1}+\Delta x_{1}, x_{2}+\Delta x_{2})&\approx u_{2}+\frac{\partial u_{2}}{\partial x_{1}}\Delta x_{1}+\frac{\partial u_{2}}{\partial x_{2}}\Delta x_{2},
@@ -495,7 +597,7 @@ $$\begin{aligned}
       \Delta x_1 \\ \Delta x_2   
       \end{pmatrix}.
       $$
-      První člen, $\begin{pmatrix} u_1\\u_2 \end{pmatrix}$ je posunutí, druhý člen popisuje deformaci. Pokud 
+      Člen $\begin{pmatrix} u_1\\u_2 \end{pmatrix}$ je posunutí, proto nás zajímá až druhý člen, obsahující deformaci. Pokud 
       matici $$D=      \begin{pmatrix}
         \frac{\partial u_{1}}{\partial x_{1}} & \frac{\partial u_{1}}{\partial x_{2}}\\
         \frac{\partial u_{2}}{\partial x_{1}} & \frac{\partial u_{2}}{\partial x_{2}}
@@ -503,7 +605,7 @@ $$\begin{aligned}
       $$
        rozdělíme stejným obratem jako na předešlém slidu na součet symetrické a
 antisymetrické matice, dostaneme
-\dm$$D=  \begin{pmatrix} \displaystyle        \frac{\partial u_{1}}{\partial x_{1}} & \displaystyle \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}+\frac{\partial u_{2}}{\partial x_{1}}\right)\\   \displaystyle      \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}+\frac{\partial u_{2}}{\partial x_{1}}\right)& \displaystyle\frac{\partial u_{2}}{\partial x_{2}}       \end{pmatrix}       +  \displaystyle \begin{pmatrix}     \displaystyle    0 & \displaystyle \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}-\frac{\partial u_{2}}{\partial x_{1}}\right)\\    \displaystyle    - \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}-\frac{\partial u_{2}}{\partial x_{1}}\right)& \displaystyle 0       \end{pmatrix}.$$
+\dm$$D=  \begin{pmatrix}         \frac{\partial u_{1}}{\partial x_{1}} &  \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}+\frac{\partial u_{2}}{\partial x_{1}}\right)\\         \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}+\frac{\partial u_{2}}{\partial x_{1}}\right)& \frac{\partial u_{2}}{\partial x_{2}}       \end{pmatrix}       +   \begin{pmatrix}         0 &  \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}-\frac{\partial u_{2}}{\partial x_{1}}\right)\\        - \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}-\frac{\partial u_{2}}{\partial x_{1}}\right)&  0       \end{pmatrix}.$$
       Druhá část je deformace související s pootočením, což snadno
 nahlédneme, pokud tuto informaci sečteme s identitou reprezentovanou
 jednotkovou maticí na
@@ -525,7 +627,7 @@ $$ \begin{pmatrix}
         \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}+\frac{\partial u_{2}}{\partial x_{1}}\right)& \frac{\partial u_{2}}{\partial x_{2}}
       \end{pmatrix}
       $$
-      popisující změnu tvaru a nazývaná *tenzor malých deformací*.
+      popisující změnu tvaru a nazývaná [*tenzor malých deformací*](https://cs.wikipedia.org/wiki/Deformace#Tenzor_mal%C3%BDch_deformac%C3%AD). Ten se ještě někdy rozděluje na součet vhodného konstantního násobku jednotkové matice (souvisí se zvětšením nebo zmenšením, tj. se změnou objemu) a deviátor (souvisí se zmenou tvaru bez započtení zvětšení či zmenšení).
 
 [Obrázky a online výpočty.](https://sagecell.sagemath.org/?z=eJxtkkFvozAQhe-R8h9G6qFQCA10s4dKPtDLag9cVrmhKHJg2roBD7JNduHX7xiiNFKCBLbH731jP_EAaQJ_aDw2sgY6YKURnJHavpNpZYWgJZCjCrUCCXZo0RlVHam_Vqnl4gGyb85FdstSIzlDHdMqaR0jazwp6cjw5ALzuEI6xRaDncERteu_FHyhphbGFnUfQ2eIgUeDtvGHs1gpJ1sEy7JakzvSiU_ZesyEPI1kBhGU63i9i8v0_E35u042cZr89LN5zXvhcpELNhv1LyjLhOVJtpm06028SrLdpNiKPJlu2JHFgCtve767CPIo34bPmV_LubA6F3yJMxCT0Hsr9j1nT6rmOyo37M89swnG4czK1eTydg4JClAayjye6TFMEj-wxg9s270uF8APHYwcB1EGRXTbInw6YcXZByoEz1WeO-W0m92_i1-iI6VdMHNiqKghIx4N1o8xWDWi-LEOo46a4YP0fZVsuk8pOOQwapTGe6Lwux2_0dxyOsilyUV_aHq8Ncz9z5Z31TRia3q8an7Xbz_pLwQ6KGKo1YdyVryEV1sBsxlhO05pb_hPIpGG_wFT7gPz&lang=sage&interacts=eJyLjgUAARUAuQ==)
 
@@ -543,7 +645,7 @@ $$ \begin{pmatrix}
 
 \fi
 
-Uvažujme kovovou desku, kterou si rozdělíme sítí na $12$ uzlových bodů
+Uvažujme čtvercovou desku, kterou si rozdělíme sítí na $12$ uzlových bodů
 (rohy zanedbáme) jak je uvedeno na obrázku.  V uzlových bodech na
 okraji desky je teplota zadána (okrajová podmínka), zajímá nás
 rozložení teploty v ostatních uzlových bodech.
@@ -570,8 +672,30 @@ $$
   -x_1\qquad-x_3+4x_4&=40
 \end{aligned}
 $$
-Dostali jsme soustavu lineárních rovnic o čtyřech neznámých. V
-maticovém tvaru (s vynechanými nulami uvnitř matice)
+Dostali jsme soustavu lineárních rovnic o čtyřech neznámých.
+Tuto úlohu je možno zformulovat pomocí lineární kombinace
+$$
+\begin{pmatrix}
+  4\\-1\\0\\-1
+\end{pmatrix} x_1
++
+\begin{pmatrix}
+  -1\\4\\-1\\0
+\end{pmatrix} x_2
++
+\begin{pmatrix}
+  0\\-1\\4\\-1
+\end{pmatrix} x_3
++
+\begin{pmatrix}
+  -1\\0\\-1\\4
+\end{pmatrix} x_4
+=
+\begin{pmatrix}
+  30\\60\\70\\40
+\end{pmatrix} 
+$$
+nebo pomocí maticového násobení (s vynechanými nulami uvnitř matice)
 $$
 \begin{pmatrix}
  \phantom{-}4&-1&&-1\\
@@ -590,7 +714,7 @@ $$
 Úloha je tedy převoditelná na úlohu řešení soustavy lineárních
 rovnic. Pro podrobnější popis použijeme stejnou myšlenku, ale mnohem
 více uzlových bodů. Postup je stejný, pouze vznikne soustava s více
-neznámými a více rovnicemi.
+neznámými a více rovnicemi. 
 
 
 Poznámka: Rovnice popisující vedení tepla je poměrně komplikovaně
@@ -604,3 +728,4 @@ soustava je velmi řídká, má hodně nul. Je tedy možné ji rychle vyřešit
 i v případě tisíců rovnic. Používá se k modelování proudění tepla nebo
 vody, k modelování mechanického namáhání od jednoduchých nosníků po
 komplikované stroje nebo stromy.
+
