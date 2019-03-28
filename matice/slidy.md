@@ -113,6 +113,7 @@ Další informace: [Wikipedia, Path integration](https://en.wikipedia.org/wiki/P
 </div>
 
 
+
 Ve dvourozměrném vektorovém prostoru uvažujme jednotkové vektory ve směru souřadných os $\vec e_1=(1,0)$ a $\vec e_2=(0,1)$.
 Pokud pootočíme vektory o úhel $\theta$ v kladném směru, mají pootočené vektory $\vec f_1$, $\vec f_2$ souřadnice
 $$\vec f_1=(\cos \theta,\sin\theta)$$ (plyne přímo z definice funkcí sinus a kosinus na jednotkové kružnici) a
@@ -144,6 +145,15 @@ kde $t_1$, $t_2$, $\dots$, $t_k$ jsou nějaká reálná čísla, se nazývá
 *lineární kombinace* vektorů $\vec u_1$, $\vec u_2$, $\dots$, $\vec u_k$.
 Čísla $t_1$, $t_2$, $\dots$, $t_k$ nazýváme *koeficienty lineární kombinace*.
 
+
+<div class='obtekat'>
+
+![Stejný modrý vektor vyjádřený ve dvou různých bázích ve 3D, v červené a fialové bázi. Zdroj: Wikipedia.](baze.png)
+
+</div>
+
+
+
 V $n$-rozměrném prostoru existuje $n$-tice vektorů, pomocí
 nichž můžeme dostat libovolný vektor jako lineární kombinaci. Taková
 $n$-tice se nazývá *báze*. Dá se ukázat, že bází je nekonečné mnoho a
@@ -151,14 +161,14 @@ pro zadanou bázi a vektor je vyjádření vektoru pomocí bázových
 vektorů jednoznačné až na pořadí. Nejjednodušší báze je tvořena
 jednotkovými vektory, které mají všechny komponenty kromě jedné
 nulové. Například pro bázové vektory $\vec e_1=(1,0)$ a $\vec e_2=(0,1)$
-dvourozměrného vektorového prostoru a pro vektor $\vec v=(4,\pi)$ platí
-$$\vec v=(4,\pi)=(4,0)+(0,\pi) = 4 (1,0) +\pi (0,1) = 4\vec e_1+\pi \vec e_2.$$
+dvourozměrného vektorového prostoru a pro vektor $\vec v=(4,3)$ platí
+$$\vec v=(4,3)=(4,0)+(0,3) = 4 (1,0) +3 (0,1) = 4\vec e_1+3 \vec e_2.$$
 Koeficienty lineární kombinace se nazývají souřadnice. Například
-souřadnice vektoru $\vec v=(4,\pi)$ v uvažované bázi jsou
-$\begin{bmatrix} 4\\\pi \end{bmatrix}_{e_1,e_2}$. Pro bázové vektory $\vec e'_1=(2,0)$ a $\vec
-e'_2=(0,\pi)$ platí
-$$\vec v=(4,\pi)=2(2,0)+1(0,\pi)=2e'_1+e'_2$$
-a souřadnice vektoru $\vec v=(4,\pi)$ v nové bázi jsou $\begin{bmatrix} 2\\1 \end{bmatrix} _{e'_1,e'_2}$. Tady vidíme
+souřadnice vektoru $\vec v=(4,3)$ v uvažované bázi jsou
+$\begin{bmatrix} 4\\3 \end{bmatrix}_{e_1,e_2}$. Pro bázové vektory $\vec \varepsilon_1=(2,1)$ a $\vec
+\varepsilon_2=(0,1)$ platí
+$$\vec v=(4,3)=2(2,1)+1(0,1)=2\vec \varepsilon_1+\vec \varepsilon_2$$
+a souřadnice vektoru $\vec v=(4,3)$ v nové bázi jsou $\begin{bmatrix} 2\\1 \end{bmatrix} _{\varepsilon_1,\varepsilon_2}$. Tady vidíme
 výhodu "pěkné volby" bázových vektorů.
 
 Výsledkem triviální lineární kombinace, tj. lineární kombinace s
@@ -193,7 +203,7 @@ tyto případy je to snadné pouze pro dvojici vektorů, které jsou
 lineárně závislé právě tehdy když je jeden vektor násobkem druhého. V
 tom případě říkáme, že vektory mají stejný směr.
 
-# Migrace mezi městem a venkovem pomocí vektorů
+# Model migrace jako přepínání stavů
 
 
 \iffalse 
@@ -207,12 +217,18 @@ tom případě říkáme, že vektory mají stejný směr.
 \fi
 
 Na příkladě si ukážeme, kdy je přirozené pracovat s lineárními
-kombinacemi vektorů. Pokusíme se matematicky modelovat migraci mezi
-městem a venkovem. Matematicky se tento přístup používá vždy, když je
-možné rozdělit jednotlivé části systému do konečného počtu navzájem
-disjunktních stavů a jednotlivé části mohou měnit svůj stav, přičemž
-pravděpodobnost změny je dána pouze současným stavem a ne například
-historií předchozích stavů.
+kombinacemi vektorů. Pokusíme se na jednoduchém modelu migrace mezi
+městem a venkovem demonstrovat přístup, který se používá v případech,
+když je možné rozdělit jednotlivé části systému do konečného počtu
+navzájem disjunktních stavů a jednotlivé části mohou měnit svůj stav,
+přičemž pravděpodobnost změny je dána pouze současným stavem a ne
+například historií předchozích stavů. Aplikace zahrnují například
+modelování vegetace na stanovištích (zájmová oblast je rozdělena na
+stanoviště a ke každému stanovišti je přiřazen převažující typ
+vegetace), pro modelování změn druhového složení v lese nebo v
+krajině, ale i v hydrologickych modelech, předpovědi počasí a
+jinde. Základní model má řadu rozšíření a ukážeme si jej jen v
+nejjednodušší formě a na případě dvou stavů.
 
 **Slovní formulace:** Každý rok měříme velikosti populací ve městě a na
 venkově. Na počátku $60\%$ populace žije ve městě a $40\%$ na venkově. Každý
@@ -222,13 +238,13 @@ do města.
 
 **Matematický model:**
 Procentuální složení zaznamenáváme ve formě
-vektoru. Na počátku bude $$ X_0=
+vektoru. Na počátku bude $$ \vec q_0=
 \begin{pmatrix}
   0.6 \\ 0.4
 \end{pmatrix}.
 $$
 Po jednom roce je rozložení populace dáno vektorem
-$$ X_1=
+$$ \vec q_1=
 \begin{pmatrix}
   0.95 \\ 0.05 
 \end{pmatrix}
@@ -242,10 +258,10 @@ $$ X_1=
 $$
 Intenzita migrace jednotlivými směry je ve sloupcových vektorech na
 pravých stranách. Koeficienty v této lineární kombinaci jsou
-koeficienty vektoru $X_0$.
+koeficienty vektoru $\vec q_0$.
 
 Podobně, rozložení po dvou letech bude dáno lineární
-kombinací s koeficienty, danými vektorem $X_1$.
+kombinací s koeficienty, danými vektorem $\vec q_1$.
 Pokud bychom potřebovali znát rozložení populace po $k$ letech,
 situace se komplikuje. Dostali bychom rekurentní vzorec, který je
 nutno stále opakovat. Pro odstranění tohoto nepohodlí se zavádí pojem
@@ -319,7 +335,7 @@ jedničky v hlavní diagonále a nuly mimo tuto diagonálu. Mají-li
 platí $$AI=IA=A.$$
 
 
-# Migrace mezi městem a venkovem pomocí matic
+# Markovovy řetězce
 
 
 \iffalse 
@@ -333,7 +349,7 @@ platí $$AI=IA=A.$$
 \fi
 
 Budeme pokračovat v příkladě s migrací. Viděli jsme, že po jednom roce je tedy rozložení populace dáno vektorem
-$$ X_1=0.6
+$$ \vec q_1=0.6
 \begin{pmatrix}
   0.95 \\ 0.05 
 \end{pmatrix}
@@ -342,25 +358,38 @@ $$ X_1=0.6
   0.03 \\ 0.97
 \end{pmatrix}.
 $$
-Koeficienty vektoru $X_0=\begin{pmatrix}
+Koeficienty vektoru $\vec q_0=\begin{pmatrix}
   0.6\\0.4
 \end{pmatrix}$ jsou koeficienty v této lineární
 kombinaci.
 To lze zapsat jako maticový součin
-$$ X_1= \begin{pmatrix}   0.95 & 0.03 \\ 0.05 & 0.97 \end{pmatrix}
+$$ \vec q_1= \begin{pmatrix}   0.95 & 0.03 \\ 0.05 & 0.97 \end{pmatrix}
 \begin{pmatrix}
   0.6\\0.4
 \end{pmatrix}.
 $$
 Pro matici $A=\begin{pmatrix}   0.95 & 0.03 \\ 0.05 & 0.97 \end{pmatrix}$
-platí $$X_1=AX_0$$ a dále
-$$X_2=AX_1=A(A X_0)=(AA)X_0=A^2 X_0.$$
-Po $k$ letech je rozložení populace dáno vektorem $$X_k=A^k X_0.$$
-Takový rekurentní vzorec se nazývá *Markovův řetězec* nebo též stavový
-automat, protože řídí přepínání mezi dvěma stavy (obyvatel města,
-obyvatel vesnice).
+platí $$\vec q_1=A\vec q_0$$ a dále
+$$\vec q_2=A\vec q_1=A(A \vec q_0)=(AA)\vec q_0=A^2 \vec q_0.$$
+Po $k$ letech je rozložení populace dáno vektorem $$\vec q_k=A^k \vec q_0.$$
+Pokud pro některý vektor $\vec q$ platí $$\vec q=A\vec q$$ znamená to, že systém je
+ve stacionárním stavu a procentuální zastoupení stavů se
+nemění. Například v našem modelu to znamená, že stejný počet lidí
+přestěhovaných z města do vesnice je stejný, jako počet lidí
+přestěhovaných opačným směrem. Tento stacionární stav se dá najít opakovanými iteracemi. [Online výpočet.](https://sagecell.sagemath.org/?z=eJxztM1NLCnKrNCIjjbQszTVMdAzMI7VAbINQGxL89hYTV6uCLgiAz0zoLBJrKZeSVFiXnFBfnGqBlBBcUZ-uYajXp5GSmZ6ZkmxrZEmTDACTTDC1lErggw5sGBGSW6OhpKenp5CYkmKAog2NDBQSEnMObrw8NrkDIXMktSixOTDa5VAOtLyixQyFTLzFIAOTU9V0AAq1bTi5VIAAqhFOOwzw-MWAnIAy25f0Q==&lang=sage&interacts=eJyLjgUAARUAuQ==)
 
-(Podle D. Lay, Linear algebra)
+Takový rekurentní vzorec je možno chápat jako jakýsi stavový automat,
+který řídí přepínání mezi dvěma stavy (obyvatel města, obyvatel
+vesnice). V matematice se nazývá *Markovův řetězec*. Protože unitř
+matice jsou pravděpodobnosti a v každém sloupci vždy nastane právě
+jeden z jevů, který tyto pravděpodobonosti reprezentují, je součet
+čísel v každém sloupci matice roven jedné. V obecných stavových
+modelech, kde se nepracuje s pravděpodobností, jako je například
+Leslieho model růstu populace níže, tato podmínka platit nemusí.
+
+(Podle D. Lay, Linear algebra. Markovovy řetězce viz též Wikipedie,
+ale pozor: někdy se místo zde představeného zápisu používá zápis s
+řádkovým vektorem nalevo od matice popisující změnu stavů.)
 
 # Růst populace pomocí Leslieho matice
 
@@ -402,7 +431,7 @@ $$
 Opakovaným násobením získáme věkovou strukturu populace v další
 generaci a toto se opakuje podobně jako u Markovova řetězce.
 
-Původně byl odvozen pro modelování populace samic, dá se
+Původně byl Leslieho model odvozen pro modelování populace samic, dá se
 však adaptovat na populaci obecně.
 
 
@@ -415,6 +444,8 @@ Další informace:
 <div class='obtekat'>
 
 ![Příklad transformace dané maticí. Zachovává se například rovnoběžnost a středy úseček. Přímky se zobrazují na přímky.](transformace.png)
+
+![Transformace 3D objektu do roviny pomocí matice. Koeficienty matice můžou realizovat libovolné natočení.](domecek.png)
 
 </div>
 
@@ -458,10 +489,10 @@ $$\begin{pmatrix}
   \cos\theta
 \end{pmatrix}.
 $$
-Proto matice $R$ definuje zobrazení, které pootočí rovinu o úhel
+Proto matice $R$ definuje zobrazení, které pootočí rovinu o\ úhel
 $\theta$ a nazývá se matice rotace. Matice malých rotací je (použitím
-lineární aproximace $\sin\theta\approx \theta$ a $\cos \theta\approx 1$ v
-okolí nuly)
+lineární aproximace $\sin\theta\approx \theta$ a $\cos \theta\approx 1$
+v\ okolí nuly)
 $$R_0=
 \begin{pmatrix}
   1 & - \theta\\
@@ -487,15 +518,36 @@ vlastní hodnotě.
 </div>
 
 
-**Příklad.** Matice rotace nemá žádnou vlastní hodnotu, pootočením se změní směr všech vektorů.
+**Příklad.** Matice rotace nemá žádnou vlastní hodnotu (pokud tedy
+  uvažujeme vlastní hodnoty v množině reálných čísel), protože pootočením se
+  změní směr všech vektorů. Vlastní hodnoty existují pouze pro otočení o násobky $180^\circ$.
 
 **Příklad.** Matice $\begin{pmatrix} 3 & 0\\ 0 & 3 \end{pmatrix}$ (trojnásobek jednotkové matice) zobrazuje každý vektor na trojnásobek a všechny vektory jsou vlastními vektory této matice. Příslušná vlastní hodnota je $3$.
 
 **Příklad.** Matice $\begin{pmatrix} 3 & 0\\ 0 & 0 \end{pmatrix}$ má vlastní vektor $(1,0)$ příslušný vlastní hodnotě $3$ a
-vlastní vektor $(0,1)$ příslušný vlastní hodnotě $0$.
+vlastní vektor $(0,1)$ příslušný vlastní hodnotě $0$. Protože vlastními vektory jsou i nenulové násobky, je vlastním vektorem každý nenulový vektor, který má nulovou druhou komponentu (vlastní hodnota je $3$) nebo první komponentu (vlastní hodnota je $0$).
 
 **Příklad.** Platí $\begin{pmatrix} 3 & -2\\ -1 & 4 \end{pmatrix} \begin{pmatrix}   2\\1 \end{pmatrix} = \begin{pmatrix}   4\\2 \end{pmatrix}$
-a matice $\begin{pmatrix} 3 & -2\\ -1 & 4 \end{pmatrix}$ má vlastní vektor $(2,1)$ příslušný vlastní hodnotě $2$.
+a matice $\begin{pmatrix} 3 & -2\\ -1 & 4 \end{pmatrix}$ má vlastní vektor $(2,1)$ příslušný vlastní hodnotě $2$. Vlatním vektorem je i každý nenulovvý násobek vektoru $(2,1)$.
+
+**Příklad.** Stacionární stav Markovova řetězce je vlastním vektorem
+matice, která tento řetězec reprezentuje. Příslušná vlastní hodnota je
+$1$. To plyne hned z rovnosti $$M\vec q=\vec q.$$ Kromě toho mohou
+existovat i další vlastní hodnoty, z praktického hlediska méně
+zajímavé.
+
+**Příklad.** Leslieho matice má jednu kladnou vlastní
+hodnotu. Příslušný vlastní vektor definuje rozložení četnosti
+zastoupení jednotlivých věkových kategorií u populace ve stacionárním
+stavu. (Toto není tvrzení patrné na první pohled, ale dá se dokázat.)
+
+**Příklad.** Vlastní hodnoty a vektory jsou jedním z hlavních
+  stavebních kamenů
+  [algoritmu](https://cs.wikipedia.org/wiki/PageRank), kterým Google
+  provádí hodnocení důležitosti webových stránek. Vlatní vektory se
+  počítají iteračně, odpovídá to vlastně modelu, kdy Markovův řetězec
+  začneme v libovolném výchozím stavu a postupným iterováním se
+  dostaneme do stacionárního stavu reprezentovaného vlastním vektorem.
 
 Vlastní vektory jsou nesmírně důležité, protože definují směry, podél
 nichž se zobrazení chová "pěkně". Tímto zobrazením může být třeba to,
@@ -606,9 +658,9 @@ $$\begin{aligned}
        rozdělíme stejným obratem jako na předešlém slidu na součet symetrické a
 antisymetrické matice, dostaneme
 \dm$$D=  \overbrace{\begin{pmatrix}         \frac{\partial u_{1}}{\partial x_{1}} &  \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}+\frac{\partial u_{2}}{\partial x_{1}}\right)\\         \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}+\frac{\partial u_{2}}{\partial x_{1}}\right)& \frac{\partial u_{2}}{\partial x_{2}}       \end{pmatrix}     }^{D_{\text{sym}}}  +  \underbrace{ \begin{pmatrix}         0 &  \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}-\frac{\partial u_{2}}{\partial x_{1}}\right)\\        - \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}-\frac{\partial u_{2}}{\partial x_{1}}\right)&  0       \end{pmatrix}}_{D_{\text{asym}}}.$$
-      Druhá část je deformace související s pootočením, což snadno
-nahlédneme, pokud tuto informaci sečteme s identitou reprezentovanou
-jednotkovou maticí na
+      Druhá část reprezentuje pootočení, což snadno nahlédneme, pokud
+tuto informaci sečteme s identitou reprezentovanou jednotkovou maticí
+na
 $$ D_{\text{asym}}+I=\begin{pmatrix}
         1 & \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}-\frac{\partial u_{2}}{\partial x_{1}}\right)\\
        - \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}-\frac{\partial u_{2}}{\partial x_{1}}\right)& 1
@@ -621,7 +673,7 @@ $$ D_{\text{asym}}+I=\begin{pmatrix}
   \theta & 1
 \end{pmatrix}
 $$
-získáme přímo pootočení. To nás však nezajímá. V teorii deformace nás zajímá symetrická část, tj. matice
+získáme přímo pootočení. V teorii deformace nás zajímá spíše symetrická část, tj. matice
 $$ D_{\text{sym}}=\begin{pmatrix}
         \frac{\partial u_{1}}{\partial x_{1}} & \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}+\frac{\partial u_{2}}{\partial x_{1}}\right)\\
         \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}+\frac{\partial u_{2}}{\partial x_{1}}\right)& \frac{\partial u_{2}}{\partial x_{2}}
@@ -717,15 +769,20 @@ více uzlových bodů. Postup je stejný, pouze vznikne soustava s více
 neznámými a více rovnicemi. 
 
 
-Poznámka: Rovnice popisující vedení tepla je poměrně komplikovaně
-řešitelná a proto se zpravidla převádí na problém lineární
-algebry. Výše uvedený postup se nazývá metoda konečných diferencí, ale
-jsou i další metody, například metoda konečných prvků. Společným
-znakem je rozdělení oblasti našeho zájmu na velké množství bodů a
-aproximace fyzikálních zákonů pro sledovaný jev v každém bodě pomocí
-lineární rovnice. Tím vznikne úloha na řešení soustavy rovnic. Tato
-soustava je velmi řídká, má hodně nul. Je tedy možné ji rychle vyřešit
-i v případě tisíců rovnic. Používá se k modelování proudění tepla nebo
-vody, k modelování mechanického namáhání od jednoduchých nosníků po
-komplikované stroje nebo stromy.
+**Poznámka.** Rovnice popisující vedení tepla na základě fyzikálních
+principů je poměrně komplikovaně řešitelná a proto se zpravidla
+převádí na problém lineární algebry. Může to znít překvapivě, ale
+skončíme u něčeho podobného jako v našem jednoduchoučkém modelu. Výše
+uvedený postup se nazývá metoda konečných diferencí, ale jsou i další
+metody, například metoda konečných prvků. Společným znakem je
+rozdělení oblasti našeho zájmu na velké množství bodů a aproximace
+fyzikálních zákonů pro sledovaný jev v každém bodě pomocí lineární
+rovnice. Tím vznikne úloha na řešení soustavy rovnic. Používá se k
+modelování proudění tepla nebo vody, k modelování mechanického
+namáhání od jednoduchých nosníků po komplikované stroje nebo stromy.
+Soustava vytvořená pomocí takových modelů je velmi řídká, má hodně
+nul. Je proto možné ji rychle vyřešit i v případě tisíců rovnic. My se
+později například naučíme chytře využít toho, že každý řádek má v
+hlavní diagonále větší číslo, než je součet zbylých čísel v tomto
+řádku.
 
