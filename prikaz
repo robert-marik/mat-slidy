@@ -38,7 +38,7 @@ do
 done
 
 rsync -e "ssh -o StrictHostKeyChecking=no" -av my.css cornus.mendelu.cz:html/mt/mat-slidy
-rsync -e "ssh -o StrictHostKeyChecking=no"  -av facebox cornus.mendelu.cz:html/mt/mat-slidy
-rsync -e "ssh -o StrictHostKeyChecking=no"  -av styles cornus.mendelu.cz:html/mt/mat-slidy
-rsync -e "ssh -o StrictHostKeyChecking=no"  -av scripts cornus.mendelu.cz:html/mt/mat-slidy
-rsync -e "ssh -o StrictHostKeyChecking=no"  -av deck cornus.mendelu.cz:html/mt/mat-slidy
+#rsync -e "ssh -o StrictHostKeyChecking=no"  -av facebox cornus.mendelu.cz:html/mt/mat-slidy
+#rsync -e "ssh -o StrictHostKeyChecking=no"  -av styles cornus.mendelu.cz:html/mt/mat-slidy
+#rsync -e "ssh -o StrictHostKeyChecking=no"  -av scripts cornus.mendelu.cz:html/mt/mat-slidy
+#rsync -e "ssh -o StrictHostKeyChecking=no"  -av deck cornus.mendelu.cz:html/mt/mat-slidy

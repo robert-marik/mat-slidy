@@ -4,7 +4,7 @@
 
 # Vektory a operace s nimi
 
-Vektorem rozumíme uspořádanou $n$-ti objektů, pro které má smysl
+Vektorem rozumíme uspořádanou $n$-tici objektů, pro které má smysl
 operace sčítání a násobení číslem. Počet komponent v této $n$-tici se
 nazývá dimenze vektoru. Tyto komponenty jsou zpravidla čísla nebo
 skalární funkce. Aby se s vektory dalo rozumně pracovat, musí tvořit
@@ -64,7 +64,6 @@ $$\vec u +\vec o=\vec u$$
 ![Modrý vektor je součtem ostatních tří vektorů. U černého vektoru je pravoúhlý trojúhelník pro výpočet délky pomocí Pythagorovy věty.](vektor.png)
 
 </div>
-
 
 Dvourozměrné vektory s komponentami danými reálnými čísly můžeme
 reprezentovat graficky pomocí orientovaných úseček. Ve zvolené
@@ -162,12 +161,12 @@ $$\vec v=(4,\pi)=2(2,0)+1(0,\pi)=2e'_1+e'_2$$
 a souřadnice vektoru $\vec v=(4,\pi)$ v nové bázi jsou $\begin{bmatrix} 2\\1 \end{bmatrix} _{e'_1,e'_2}$. Tady vidíme
 výhodu "pěkné volby" bázových vektorů.
 
-Výsledekm triviální lineární kombinace, tj. lineární kombinace s
+Výsledkem triviální lineární kombinace, tj. lineární kombinace s
 nulovými koeficienty, je nulový vektor.  Pokud vektory bázi netvoří,
 nemusí být vyjádření lineární kombinace jednoznačné. Dokonce tedy
 nulový vektor můžeme dostat i jinak, než jako triviální lineární
 kombinaci. Ukazuje se, že je důležité rozlišovat mezi těmito případy a
-proto si na rozličení zavedeme nové pojmy, lineární závislost a
+proto si na rozlišení zavedeme nové pojmy, lineární závislost a
 nezávislost.
 
 
@@ -207,7 +206,7 @@ tom případě říkáme, že vektory mají stejný směr.
 
 \fi
 
-Na příkladě si ukážeme, kdy je přirozené paracovat s lineárními
+Na příkladě si ukážeme, kdy je přirozené pracovat s lineárními
 kombinacemi vektorů. Pokusíme se matematicky modelovat migraci mezi
 městem a venkovem. Matematicky se tento přístup používá vždy, když je
 možné rozdělit jednotlivé části systému do konečného počtu navzájem
@@ -381,7 +380,7 @@ lidskou nebo jinou populaci. Zdroj: pixabay.com](potkan.jpg)
 
 Leslieho model používá matice pro modelování vývoje populace, který
 zohledňuje věkovou strukturu populace. Model předpokládá, že populace
-je rozdělena do několika věkových kategoriií a v každé kategorii je
+je rozdělena do několika věkových kategorií a v každé kategorii je
 dána pravděpodobnost dožití se do další kategorie a průměrný počet
 potomků. Situace je podobná jako u Markovova řetězce s tím, že
 nenulový prvek matice bude jenom tam, kde dochází k přesunu do další
@@ -652,7 +651,7 @@ okraji desky je teplota zadána (okrajová podmínka), zajímá nás
 rozložení teploty v ostatních uzlových bodech.
 
 Učiníme (poměrně realistický) předpoklad, že teplota v každém uzlovém
-bodě je díky tepelné vodivosti desky ovlivněna sousedníi uzlovými
+bodě je díky tepelné vodivosti desky ovlivněna sousedními uzlovými
 body. Každý sousední bod má stejný vliv, proto teplota v uzlovém bodě
 bude přibližně rovna aritmetickému průměru teplot v sousedních
 bodech. Kvantitativně zformulováno, platí 
