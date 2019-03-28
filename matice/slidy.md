@@ -69,7 +69,7 @@ Dvourozměrné vektory s komponentami danými reálnými čísly můžeme
 reprezentovat graficky pomocí orientovaných úseček. Ve zvolené
 soustavě souřadnic a při zvoleném výchozím bodu vektor znázorníme
 takovou orientovanou úsečkou, že komponenty vektoru označují změnu
-směru vzhledem k jednotlivým souřadnicím. Pokud tyto vektory označují
+polohy v jednotlivých směrech. Pokud tyto vektory označují
 změnu polohy, mluvíme o vektorech posunutí. Sčítání vektorů poté
 odpovídá posunutí počátečního bodu druhého vektoru do koncového bodu
 prvního vektoru a nahrazení dvou částečných posunutí jedním
@@ -104,33 +104,6 @@ v komplikovaném prostředí.
 
 Další informace: [Wikipedia, Path integration](https://en.wikipedia.org/wiki/Path_integration)
 
-# Pootočení vektoru
-
-<div class='obtekat'>
-
-![Jednotkové vektory ve směru os pootočíme o úhel $\theta$ a výsledek vyjádříme jako lineární kombinaci původních vektorů.](otoceni.png)
-
-</div>
-
-
-
-Ve dvourozměrném vektorovém prostoru uvažujme jednotkové vektory ve směru souřadných os $\vec e_1=(1,0)$ a $\vec e_2=(0,1)$.
-Pokud pootočíme vektory o úhel $\theta$ v kladném směru, mají pootočené vektory $\vec f_1$, $\vec f_2$ souřadnice
-$$\vec f_1=(\cos \theta,\sin\theta)$$ (plyne přímo z definice funkcí sinus a kosinus na jednotkové kružnici) a
-$$\vec f_2=(-\sin\theta,\cos\theta)$$ (plyne z předchozího přičtením úhlu $\frac\pi 2$ a využitím identit $\cos\left(\theta+\frac\pi 2\right)=-\sin\theta$ a $\sin\left(\theta+\frac\pi 2\right)=\cos\theta$). Pomocí lineární kombinace můžeme psát
-$$
-\begin{aligned}
-\vec f_1&=\cos(\theta) \vec e_1 +\sin(\theta)\vec e_2,\\
-\vec f_2&=-\sin(\theta)\vec  e_1 +\cos(\theta)\vec e_2.
-\end{aligned}
-$$
-Je-li úhel $\theta$ malý, platí (viz cvičení z derivací) $\sin\theta\approx\theta$, $\cos\theta\approx 1$ a dostáváme
-$$
-\begin{aligned}
-\vec f_1&= (1,\theta) = \vec e_1 +\theta\vec  e_2,\\
-\vec f_2&= (-\theta,1) = -\theta\vec e_1 +\vec e_2.
-\end{aligned}
-$$
 
 # Lineární kombinace, lineární závislost a nezávislost vektorů
 
@@ -202,6 +175,36 @@ Ve výše uvedených případech poznáme lineární závislost snadno. Mimo
 tyto případy je to snadné pouze pro dvojici vektorů, které jsou
 lineárně závislé právě tehdy když je jeden vektor násobkem druhého. V
 tom případě říkáme, že vektory mají stejný směr.
+
+
+# Pootočení vektoru
+
+<div class='obtekat'>
+
+![Jednotkové vektory ve směru os pootočíme o úhel $\theta$ a výsledek vyjádříme jako lineární kombinaci původních vektorů.](otoceni.png)
+
+</div>
+
+
+
+Ve dvourozměrném vektorovém prostoru uvažujme jednotkové vektory ve směru souřadných os $\vec e_1=(1,0)$ a $\vec e_2=(0,1)$.
+Pokud pootočíme vektory o úhel $\theta$ v kladném směru, mají pootočené vektory $\vec f_1$, $\vec f_2$ souřadnice
+$$\vec f_1=(\cos \theta,\sin\theta)$$ (plyne přímo z definice funkcí sinus a kosinus na jednotkové kružnici) a
+$$\vec f_2=(-\sin\theta,\cos\theta)$$ (plyne z předchozího přičtením úhlu $\frac\pi 2$ a využitím identit $\cos\left(\theta+\frac\pi 2\right)=-\sin\theta$ a $\sin\left(\theta+\frac\pi 2\right)=\cos\theta$). Pomocí lineární kombinace můžeme psát
+$$
+\begin{aligned}
+\vec f_1&=\cos(\theta) \vec e_1 +\sin(\theta)\vec e_2,\\
+\vec f_2&=-\sin(\theta)\vec  e_1 +\cos(\theta)\vec e_2.
+\end{aligned}
+$$
+Je-li úhel $\theta$ malý, platí (viz cvičení z derivací) $\sin\theta\approx\theta$, $\cos\theta\approx 1$ a dostáváme
+$$
+\begin{aligned}
+\vec f_1&= (1,\theta) = \vec e_1 +\theta\vec  e_2,\\
+\vec f_2&= (-\theta,1) = -\theta\vec e_1 +\vec e_2.
+\end{aligned}
+$$
+
 
 # Model migrace jako přepínání stavů
 
@@ -449,13 +452,13 @@ Další informace:
 
 </div>
 
-Je-li $A$ čtvercová matice, můžeme každému vektoru $X$ přiřadit vektor
-$Y=AX$ a tím definovat zobrazení $n$-rozměrného prostoru do sebe. Dá
+Je-li $A$ čtvercová matice, můžeme každému vektoru $\vec q$ přiřadit vektor
+$Y=A\vec q$ a tím definovat zobrazení $n$-rozměrného prostoru do sebe. Dá
 se ukázat, že takto dostaneme všechna zobrazení, která zobrazují úsečky na úsečky, počátek nechávají v počátku  a jsou pěkná v tom smyslu, že zachovávají středy úseček, rovnoběžnost a lineární kombinaci vektorů. [Ukázka zobrazení ve 2D](https://sagecell.sagemath.org/?z=eJxtUU9LwzAUvxf6HQIe1nTPrd2mByGH7SIeCqV4K51kNXPR2FfSON0-vUk71ooN5JGX37_wcjyjPrEgjyAqII8vNbY1mt1BPLt3p663GPW9NfvkRsufIM8XLTuCReGATQ_EsJyvOmi-bEFzEIazWs6Xvpf2xBKboIXodgGNrC5N2N9bl9H7AXvr8skNqTW-i49S-F42lgC3veSPKwzSWiONhjsb39ujJgmRFcnXsIEUMsjCFNIwKx58j9iFO83PJ5Yn4VGUBnUgKXEi6URHN9uiIz4lj6xGWZmgkwApUaFmEy1eJ0AaeRZsFdFpjer0htU4i6v6wJn9GDpVshJjJNrH2T3tItuHXEOu_J36Ev8FXf5FspdKsWf9JQbho_rmgN8kSAZdYO2sqqntYF40NxJZTH8BrAC_iQ==&lang=sage&interacts=eJyLjgUAARUAuQ==).
 
 Podobně je možné definovat i zobrazení mezi prostory jiných dimenzí. Například [projekce 3D objektu do 2D](https://sagecell.sagemath.org/?z=eJx9UbFugzAU3JH4B492MQFDSSUkDyytOmTtYlkVSklricapQTTp1_fZJqQhqEgY37u75-dj-NHmxLFIaSqpYOPKYE1XBWWrtd15DBwJgxdryN-4gIISIFeCSYl22iCF1B4NlpcoQkIUSf6PJAzCYFP3attw8Vn3Rh2xsAO4EeBI-EpC0UT5kpsD5rmiLq4FKva2mCWZ3c94Wxl56iQ3fpZ0X6bHGTkPNuGFo84cNPLqq5I1uHvbKCobhQ-gDAMEj4uWi-puaLa9NliRS2Zj7BJZuxU_b574Qbend73HjhQl_Cu0U23LH-u2a4jXTR1cgBnN6b0czxvbRLM-aaTKLFIy8vABYAFvzJbaL_jX5Vzopd2H_sYV-QPATFHdHeC6rwaS0JwBPjbd6PwFZwa9tw==&lang=sage&interacts=eJyLjgUAARUAuQ==). Protože zobrazení zachovává rovnoběžnost, není možné takto jednoduše obdržet například perspektivu. Zde si pomáháme trikem, že přidáme další souřadnici, více viz Wikipedie a heslo [Camera matrix](https://en.wikipedia.org/wiki/Camera_matrix).
 
-Například matice $$R=
+Například matice $$R_\theta=
 \begin{pmatrix}
   \cos\theta & -\sin \theta\\
   \sin\theta & \cos\theta
@@ -489,11 +492,11 @@ $$\begin{pmatrix}
   \cos\theta
 \end{pmatrix}.
 $$
-Proto matice $R$ definuje zobrazení, které pootočí rovinu o\ úhel
+Proto matice $R_\theta$ definuje zobrazení, které pootočí rovinu o\ úhel
 $\theta$ a nazývá se matice rotace. Matice malých rotací je (použitím
 lineární aproximace $\sin\theta\approx \theta$ a $\cos \theta\approx 1$
 v\ okolí nuly)
-$$R_0=
+$$R_{\theta,0}=
 \begin{pmatrix}
   1 & - \theta\\
   \theta & 1
@@ -518,7 +521,7 @@ vlastní hodnotě.
 </div>
 
 
-**Příklad.** Matice rotace nemá žádnou vlastní hodnotu (pokud tedy
+**Příklad.** Matice rotace z minulého slidu nemá žádnou vlastní hodnotu (pokud tedy
   uvažujeme vlastní hodnoty v množině reálných čísel), protože pootočením se
   změní směr všech vektorů. Vlastní hodnoty existují pouze pro otočení o násobky $180^\circ$.
 
@@ -667,12 +670,13 @@ $$ D_{\text{asym}}+I=\begin{pmatrix}
       \end{pmatrix}
       $$
       abychom měli celou část zobrazení (ne jenom deformaci). Porovnáním s maticí malých rotací
-      $$R_0=
+      $$R_{\theta,0}=
 \begin{pmatrix}
   1 & - \theta\\
   \theta & 1
 \end{pmatrix}
 $$
+odvozenou na jednom z předchozích slidů 
 získáme přímo pootočení. V teorii deformace nás zajímá spíše symetrická část, tj. matice
 $$ D_{\text{sym}}=\begin{pmatrix}
         \frac{\partial u_{1}}{\partial x_{1}} & \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}+\frac{\partial u_{2}}{\partial x_{1}}\right)\\
