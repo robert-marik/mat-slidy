@@ -91,9 +91,10 @@ tj. že inverzní a transponovaná matice jsou v případě matice rotace stejn�
 > Definice (ortogonální matice). *Ortogonální matice* je matice, jejíž transponovaná matice je současně maticí inverzní.
 
 Řádky ortogonální matice jsou tvořeny navzájem kolmými vektory
-jednotkové délky. Má-li například čtvercová matice $A$ řádu $n$ celkem
-$n$ lineárně nezávislých vlastních vektorů, potom matice vytvořená
-tak, že sloupce nebo řádky matice jsou tyto vektory, je ortogonální. 
+jednotkové délky. Má-li například symetrická čtvercová matice $A$ řádu
+$n$ celkem $n$ lineárně nezávislých vlastních vektorů, potom matice
+vytvořená tak, že sloupce nebo řádky matice jsou tyto vektory, je
+ortogonální.
 
 # Inverzní matice k diagonální matici
 
@@ -367,6 +368,62 @@ Pojmy lineární algebry spolu krásně souvisí.
 
 
 # Změna báze a matice přechodu
+
+Předpokládejme, že obě dvojice $E=[\vec e_1,\vec e_2]$ a $F=[\vec f_1,\vec f_2]$ jsou báze dvourozměrného vektorového prostoru. Tedy každý vektor můžeme zapsat jako jejich lineární kombinaci a to jednoznačně.
+Pokud platí
+$$X=a_1 \vec e_1 + a_2 \vec e_2 =  b_1 \vec f_1 + b_2 \vec f_2 ,$$
+jsou 
+$\begin{bmatrix}   a_1\\a_2 \end{bmatrix}_E$
+souřadnice v bázi $E$ a
+$\begin{bmatrix}   b_1\\b_2 \end{bmatrix}_F$
+souřadnice v bázi $F$. Pro dvojici bází existuje matice  $P$  typu $2\times 2$ taková, že
+$$\begin{bmatrix}   a_1\\a_2 \end{bmatrix}_E
+=
+P
+\begin{bmatrix}   b_1\\b_2 \end{bmatrix}_F
+$$
+Tato matice se nazývá matice přechodu a umožňuje najít souřadnice
+vektoru v jedné bázi pomocí souřadnic vektoru v jiné bázi. Matice přechodu musí být regulární a proto evidentně můžeme mezi bázemi přecházet i v opačném směru směru pomocí inverzní matice
+$$P^{-1}\begin{bmatrix}   a_1\\a_2 \end{bmatrix}_E
+=
+\begin{bmatrix}   b_1\\b_2 \end{bmatrix}_F.
+$$
+
+Předpokládejme, že zobrazení $X\to Y$, které je možno charakterizovat maticemi, 
+je vyjádřeno v nějaké bázi $B$ maticí $A$, tj. 
+$$Y=AX.$$ Budeme chtít zobrazení vyjádřit v jiné bázi. Například v bázi $b$ takové, že platí $X=Px$ a $Y=Py$, kde malá písmena jsou souřadnice v "malé" bázi $b$ a velká písmena souřadnice ve "velké" bázi $B$. Dosazením získáme
+$$Py=APx$$
+a po vynásobení inverzní maticí
+$$P^{-1}(PY)=P^{-1}(APx),$$
+tj
+$$y=(P^{-1}AP)x.$$ V bázi $b$ je tedy zobrazení charakterizováno maticí
+$P^{-1}AP$.
+
+**Příklad.**
+Pro matice $A=
+\begin{pmatrix}
+  1 & 0 \\ 1 &2
+\end{pmatrix}$
+a $P=
+\begin{pmatrix}
+  0& -1 \\ 1 &1
+\end{pmatrix}$
+platí (po chvilce počítání)
+$$  P^{-1}AP=
+\begin{pmatrix}
+  2& 0 \\ 0 & 1
+\end{pmatrix}.
+$$
+Odsud vidíme, že v souřadnicích ke kteým bychom přešli pomocí matice
+$P$ je vyjádření zobrazení matice $A$ mnohem jenodušší, protože matice
+$P^{-1}AP$ je diagonální.
+Častým úkolem je zapsat vztahy mezi veličinami tak, aby byly co
+nejjednodušší a proto jeden z častých úkolů v lineární algebře bývá
+takovou šikovnou bázi nalézt. Zpravidla to bývá báze z vlastních
+vektorů matice, sloupce matice $P$ jsou vlastní vektory a matice je
+ortogonální, inverze je tedy matice transponovaná. Tomto procesu se
+říká diagonalizace matice a v diagonále vychází právě vlastní čísla
+matice.
 
 # Hookův zákon, matice tuhosti a poddajnosti
 
