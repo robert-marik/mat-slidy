@@ -57,11 +57,11 @@ vektor, se nezmění.
 $$\vec u +\vec o=\vec u$$
 
 
-# Vektory ve 2D a 3D -- geometrie
+# 2D a 3D a vektory v geometrii
 
 <div class='obtekat'>
 
-![Modrý vektor je součtem ostatních tří vektorů. U černého vektoru je pravoúhlý trojúhelník pro výpočet délky pomocí Pythagorovy věty.](vektor.png)
+![Modrý vektor je součtem ostatních tří vektorů. U černého vektoru je pravoúhlý trojúhelník pro výpočet délky pomocí Pythagorovy věty. Zdroj: Wikiepdie.](vektor.png)
 
 </div>
 
@@ -121,7 +121,7 @@ kde $t_1$, $t_2$, $\dots$, $t_k$ jsou nějaká reálná čísla, se nazývá
 
 <div class='obtekat'>
 
-![Stejný modrý vektor vyjádřený ve dvou různých bázích ve 3D, v červené a fialové bázi. Zdroj: Wikipedia.](baze.png)
+![Stejný modrý vektor vyjádřený ve dvou různých bázích ve 3D, v červené a fialové bázi. Bázové vektory volíme zpravidla jednotkové délky, na obrázku už jsou vynásobeny vhodnými konstantami tak, abychom jako lineární kombinaci obdrželi požadovaný vektor. Zdroj: Wikipedia.](baze.png)
 
 </div>
 
@@ -263,12 +263,11 @@ Intenzita migrace jednotlivými směry je ve sloupcových vektorech na
 pravých stranách. Koeficienty v této lineární kombinaci jsou
 koeficienty vektoru $\vec q_0$.
 
-Podobně, rozložení po dvou letech bude dáno lineární
-kombinací s koeficienty, danými vektorem $\vec q_1$.
-Pokud bychom potřebovali znát rozložení populace po $k$ letech,
-situace se komplikuje. Dostali bychom rekurentní vzorec, který je
-nutno stále opakovat. Pro odstranění tohoto nepohodlí se zavádí pojem
-matice, viz níže.
+Podobně, rozložení po dvou letech bude dáno lineární kombinací s
+koeficienty, danými vektorem $\vec q_1$.  Pokud bychom potřebovali
+znát rozložení populace po $k$ letech, situace se komplikuje. Dostali
+bychom rekurentní vzorec, který je nutno stále opakovat. Pro
+odstranění tohoto nepohodlí se zavádí pojem matice, viz níže.
 
    
 # Matice a jejich lineární kombinace
@@ -293,7 +292,7 @@ ${A=(a_{ij})}$.
 matice, nazýváme prvky tvaru $a_{ii}$, tj. prvky, jejichž řádkový
 a sloupcový index jsou stejné, *prvky hlavní diagonály*.
 
-Pro matice definujeme sčítání a násobení číslem stejně jako u vektorů,
+Pro matice definujeme *sčítání* a *násobení číslem* stejně jako u vektorů,
 tj. po složkách. Má potom smysl mluvit o lineární kombinaci matic a o
 jejich lineární závislosti či nezávislosti. Tyto operace přirozeně
 přebírají všechny důležité vlastnosti operace sčítání, jako jsou
@@ -371,15 +370,19 @@ $$ \vec q_1= \begin{pmatrix}   0.95 & 0.03 \\ 0.05 & 0.97 \end{pmatrix}
   0.6\\0.4
 \end{pmatrix}.
 $$
+Pro další rok tento postup opakujeme. 
 Pro matici $A=\begin{pmatrix}   0.95 & 0.03 \\ 0.05 & 0.97 \end{pmatrix}$
-platí $$\vec q_1=A\vec q_0$$ a dále
+platí $$\vec q_1=A\vec q_0.$$
+Je-li $\vec q_k$ vektor charakterizující rozložení po $k$ letech, rozložení v následujícím roce získáme ze vztahu
+$$\vec q_{k+1}=A\vec q_k.$$
+Pro stav po dvou letech platí
 $$\vec q_2=A\vec q_1=A(A \vec q_0)=(AA)\vec q_0=A^2 \vec q_0.$$
 Po $k$ letech je rozložení populace dáno vektorem $$\vec q_k=A^k \vec q_0.$$
 Pokud pro některý vektor $\vec q$ platí $$\vec q=A\vec q$$ znamená to, že systém je
 ve stacionárním stavu a procentuální zastoupení stavů se
-nemění. Například v našem modelu to znamená, že stejný počet lidí
+nemění. Například v\ našem modelu to znamená, že stejný počet lidí
 přestěhovaných z města do vesnice je stejný, jako počet lidí
-přestěhovaných opačným směrem. Tento stacionární stav se dá najít opakovanými iteracemi. [Online výpočet.](https://sagecell.sagemath.org/?z=eJxztM1NLCnKrNCIjjbQszTVMdAzMI7VAbINQGxL89hYTV6uCLgiAz0zoLBJrKZeSVFiXnFBfnGqBlBBcUZ-uYajXp5GSmZ6ZkmxrZEmTDACTTDC1lErggw5sGBGSW6OhpKenp5CYkmKAog2NDBQSEnMObrw8NrkDIXMktSixOTDa5VAOtLyixQyFTLzFIAOTU9V0AAq1bTi5VIAAqhFOOwzw-MWAnIAy25f0Q==&lang=sage&interacts=eJyLjgUAARUAuQ==)
+přestěhovaných opačným směrem. Tento stacionární stav se dá najít opakovanými iteracemi z náhodného výchozího stavu. [Online výpočet.](https://sagecell.sagemath.org/?z=eJxztM1NLCnKrNCIjjbQszTVMdAzMI7VAbINQGxL89hYTV6uCLgiAz0zoLBJrKZeSVFiXnFBfnGqBlBBcUZ-uYajXp5GSmZ6ZkmxrZEmTDACTTDC1lErggw5sGBGSW6OhpKenp5CYkmKAog2NDBQSEnMObrw8NrkDIXMktSixOTDa5VAOtLyixQyFTLzFIAOTU9V0AAq1bTi5VIAAqhFOOwzw-MWAnIAy25f0Q==&lang=sage&interacts=eJyLjgUAARUAuQ==)
 
 Takový rekurentní vzorec je možno chápat jako jakýsi stavový automat,
 který řídí přepínání mezi dvěma stavy (obyvatel města, obyvatel
@@ -539,11 +542,6 @@ $1$. To plyne hned z rovnosti $$M\vec q=\vec q.$$ Kromě toho mohou
 existovat i další vlastní hodnoty, z praktického hlediska méně
 zajímavé.
 
-**Příklad.** Leslieho matice má jednu kladnou vlastní
-hodnotu. Příslušný vlastní vektor definuje rozložení četnosti
-zastoupení jednotlivých věkových kategorií u populace ve stacionárním
-stavu. (Toto není tvrzení patrné na první pohled, ale dá se dokázat.)
-
 **Příklad.** Vlastní hodnoty a vektory jsou jedním z hlavních
   stavebních kamenů
   [algoritmu](https://cs.wikipedia.org/wiki/PageRank), kterým Google
@@ -551,6 +549,11 @@ stavu. (Toto není tvrzení patrné na první pohled, ale dá se dokázat.)
   počítají iteračně, odpovídá to vlastně modelu, kdy Markovův řetězec
   začneme v libovolném výchozím stavu a postupným iterováním se
   dostaneme do stacionárního stavu reprezentovaného vlastním vektorem.
+
+**Příklad.** Leslieho matice má jednu kladnou vlastní
+hodnotu. Příslušný vlastní vektor definuje rozložení četnosti
+zastoupení jednotlivých věkových kategorií u populace ve stacionárním
+stavu. (Toto není tvrzení patrné na první pohled, ale dá se dokázat.)
 
 Vlastní vektory jsou nesmírně důležité, protože definují směry, podél
 nichž se zobrazení chová "pěkně". Tímto zobrazením může být třeba to,
@@ -609,11 +612,14 @@ $$
 Tento trik použijeme pro odvození tvaru tenzoru malých deformací.
 
 
-Následující větu využijeme později.
-
 > Věta (souvislost transponování matice a maticového součinu). Pro čtvercové matice platí $$(AB)^T=B^T A^T.$$
 
 
+**Příklad.** Pro Markovův řetězec s maticí a sloupcovými vektory $\vec q$ dostaneme transponováním vztahu
+$$\vec q_{k+1}=A\vec q_k$$
+vztah
+$$\vec q^T_{k+1}=\vec q^T_k A^T$$
+s řádkovými vektory a maticí, která má součet čísel v každém řádku roven 1. Takto jsou Markovovy řetězce také často zaváděny, například na [Wikipedii](https://cs.wikipedia.org/wiki/Markov%C5%AFv_%C5%99et%C4%9Bzec#Popis_Markovova_%C5%99et%C4%9Bzce).
 
 
 # Tenzor malých deformací
