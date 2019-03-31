@@ -332,9 +332,19 @@ Můžeme tedy měnit uzávorkování, můžeme
 roznásobovat závorky, nesmíme však měnit pořadí matic při násobení.
 
 Maticové násobení má neutrální prvek, čtvercovou matici $I$, která má
-jedničky v hlavní diagonále a nuly mimo tuto diagonálu. Mají-li
+jedničky v hlavní diagonále a nuly mimo tuto diagonálu. Tato matice se nazývá *jednotková matice*. Mají-li
 čtvercové matice $A$ a $I$ stejný počet řádků a sloupců,
 platí $$AI=IA=A.$$
+Například pro matice $3\times 3$ je
+jednotková matice
+  $$
+ I=
+ \begin{pmatrix}
+   1&0&0\\
+   0&1&0\\
+   0&0&1
+ \end{pmatrix}
+.$$
 
 
 # Markovovy řetězce

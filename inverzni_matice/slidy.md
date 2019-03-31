@@ -2,6 +2,8 @@
 % Robert Mařík
 % 9.4.2019
 
+
+
 # Inverzní matice
 
 U reálných čísel máme doplňkové operace ke sčítání a násobení. Jsou to
@@ -39,6 +41,16 @@ Inverzní matice k součinu dvou matic je součinem jednotlivých inverzních ma
 
 
 # Využití inverzní matice pro řešení soustavy lineárních rovnic
+
+\iffalse
+
+<div class='obtekat'>
+
+![Inverzní matice umožní zapsat elegantně řešení i neuvěřitelně komplexní a složité soustavy rovnic. Pro praktické počítání ji však budeme muset ještě o něco vylepšit na iterační metodu. Zdroj: pixabay.com.](matrix.jpg)
+
+</div>
+
+\fi
 
 Z minulé přednášky víme, že pomocí maticového násobení je možné soustavu lineárních rovnic zapsat ve tvaru $$AX=B,$$ kde $A$ je matice soustavy, $X$ je sloupcový vektor neznámých a $B$ je vektor pravých stran. Po vynásobení tohoto vztahu inverzní maticí zleva dostáváme
 $$A^{-1}(AX)=A^{-1}B$$
@@ -98,7 +110,7 @@ ortogonální.
 
 # Inverzní matice k diagonální matici
 
-Diagonální matice (matice mají nenulové prvky jenom na hlavní
+Diagonální matice (tj. matice, které mají nenulové prvky jenom na hlavní
 diagonále) se vzhledem k násobení chovají velice hezky: součinem je
 taková matice, která je diagonální a na hlavní diagonále má prvky
 vytvořené jako součin odpovídajících prvků násobených matic.
@@ -229,7 +241,12 @@ Podobně jako u Markovových řetězců můžeme najít postupnými iteracemi z
 vhodného (nebo libovolného) počátečního stavu stacionární stav, kdy se
 $X_k$ dalšími iteracemi nemění a tím dostaneme řešení rovnice (2),
 která je ekvivalentní rovnici (1). Protože inverzní matici počítáme
-pro matici diagonální, je tento výpočet velice rychlý a levný.
+pro matici diagonální, je tento výpočet velice rychlý a levný. Vlastně
+není vůbec nutné mít k dispozici maticový počet. Iterace dostaneme
+tak, že z první rovnice osamostatníme $x_1$, z druhé rovnice $x_2$
+atd. Výchozí odhad dosadíme do pravých stran a obdržíme zpřesněný
+odhad. Postup opakujeme, dokud nejsou dvě následující iterae
+dostatečně blízké.
 
 **Poznámka.** Předchozí postup je možné použít jenom v případě, že
 iterační proces (3) konverguje. Pokud by nekonvergoval, není možné o
@@ -358,46 +375,97 @@ Pojmy lineární algebry spolu krásně souvisí.
 > Věta. Buď $A$ čtvercová matice řádu $n$. Následující výroky
    jsou ekvivalentní:
 >
-1. Řádky matice jsou tvořeny lineárně nezávislými vektory.
-1. Sloupce matice jsou tvořeny lineárně nezávislými vektory.
-1. Existuje matice inverzní $A^{-1}$ k matici $A$.
+1. Řádky matice $A$ jsou tvořeny lineárně nezávislými vektory.
+1. Sloupce matice $A$ jsou tvořeny lineárně nezávislými vektory.
+1. K matici $A$ existuje matice inverzní $A^{-1}$.
 1. Matice $A$ je  regulární, tj. $\det A\neq 0$.
 1. Soustava lineárních rovnic $$AX=B$$ má pro libovolnou pravou stranu $B$ jediné řešení.
 1. Homogenní soustava lineárních rovnic $$AX=0$$ má pouze nulové řešení.
 1. Každý vektor z $\mathbb R^n$ lze vyjádřit jako lineární      kombinaci vektorů tvořených řádky (sloupci) matice      $A$, a to jednoznačně, až na pořadí.
 
+Například je-li $\vec q$ vlastním vektorem matice $A$ příslušným vlastní hodnotě $\lambda$, platí
+$$A\vec q=\lambda \vec q.$$
+Odsud
+$$\begin{aligned}A\vec q-\lambda \vec q&=0\\ A\vec q-(\lambda I )\vec q &=0\\ (A-\lambda I )\vec q &=0\end{aligned}.$$ 
+Pokud chápeme poslední rovnost jako soustavu rovnic s koeficienty
+$(A-\lambda I)$, nulovou pravou stranou a nenulovým řešením $\vec q$
+(tj. bod 6 předchozí věty neplatí), musí být determinant matice
+$A-\lambda I$ nulový (tj. bod 4 předchozí věty neplatí). Tím je
+motivována následující definice a dokázána následující věta.
+
+> Definice (charakteristická rovnice). Rovnice
+> $$\det (A-\lambda I)=0$$ s neznámou $\lambda$ se nazývá
+> *charakteristická rovnice* matice $A$.
+
+> Důsledek (vlastní čísla). Vlastní čísla matice $A$ jsou právě řešení charakteristické rovnice.
+
+
 
 # Změna báze a matice přechodu
 
-Předpokládejme, že obě dvojice $E=[\vec e_1,\vec e_2]$ a $F=[\vec f_1,\vec f_2]$ jsou báze dvourozměrného vektorového prostoru. Tedy každý vektor můžeme zapsat jako jejich lineární kombinaci a to jednoznačně.
+
+Předpokládejme, že obě dvojice $\mathcal E=[\vec e_1,\vec e_2]$ a $\mathcal F=[\vec f_1,\vec f_2]$ jsou báze dvourozměrného vektorového prostoru. Tedy každý vektor můžeme zapsat jako jejich lineární kombinaci a to jednoznačně.
 Pokud platí
 $$X=a_1 \vec e_1 + a_2 \vec e_2 =  b_1 \vec f_1 + b_2 \vec f_2 ,$$
 jsou 
-$\begin{bmatrix}   a_1\\a_2 \end{bmatrix}_E$
-souřadnice v bázi $E$ a
-$\begin{bmatrix}   b_1\\b_2 \end{bmatrix}_F$
-souřadnice v bázi $F$. Pro dvojici bází existuje matice  $P$  typu $2\times 2$ taková, že
-$$\begin{bmatrix}   a_1\\a_2 \end{bmatrix}_E
+$[X]_{\mathcal  E}=\begin{bmatrix}   a_1\\a_2 \end{bmatrix}$
+souřadnice v bázi $\mathcal E$ a
+$[X]_{\mathcal F}=\begin{bmatrix}   b_1\\b_2 \end{bmatrix}$
+souřadnice v bázi $\mathcal F$. Pro dvojici bází existuje matice  $P$  typu $2\times 2$ taková, že
+$$\begin{bmatrix}   a_1\\a_2 \end{bmatrix}
 =
 P
-\begin{bmatrix}   b_1\\b_2 \end{bmatrix}_F
+\begin{bmatrix}   b_1\\b_2 \end{bmatrix}
 $$
 Tato matice se nazývá matice přechodu a umožňuje najít souřadnice
 vektoru v jedné bázi pomocí souřadnic vektoru v jiné bázi. Matice přechodu musí být regulární a proto evidentně můžeme mezi bázemi přecházet i v opačném směru směru pomocí inverzní matice
-$$P^{-1}\begin{bmatrix}   a_1\\a_2 \end{bmatrix}_E
+$$P^{-1}\begin{bmatrix}   a_1\\a_2 \end{bmatrix}
 =
-\begin{bmatrix}   b_1\\b_2 \end{bmatrix}_F.
+\begin{bmatrix}   b_1\\b_2 \end{bmatrix}.
 $$
 
-Předpokládejme, že zobrazení $X\to Y$, které je možno charakterizovat maticemi, 
-je vyjádřeno v nějaké bázi $B$ maticí $A$, tj. 
-$$Y=AX.$$ Budeme chtít zobrazení vyjádřit v jiné bázi. Například v bázi $b$ takové, že platí $X=Px$ a $Y=Py$, kde malá písmena jsou souřadnice v "malé" bázi $b$ a velká písmena souřadnice ve "velké" bázi $B$. Dosazením získáme
+
+\iffalse
+
+<div class='obtekat'>
+
+![Matice přechodu je vlastně vyjádření téhož jiným jazykem. Používáme tam, kde můžeme "přeložit" do jazyka jednoduššího. Zdroj: pixabay.com.](cina.jpg)
+
+</div>
+
+\fi
+
+
+
+Ukážeme si důležité využití matice přechodu. Předpokládejme, že máme
+zobrazení $f\colon X\to Y$, které je možno charakterizovat maticemi.  Na
+vstupu i výstupu jsou tedy vektory a jejich směry si obecně nemusí
+odpovídat.
+Může se jednat třeba o zobrazení, které působícím silám přiřadí
+deformaci tělesa, což uvidíme v Hookově zákoně na dalším slidu. Může
+se jednat také o zobrazení, které vektoru charakterizujícímu změnu tlaku v
+podzemní vodě přiřadí směr proudění. (Oba směry si nemusí odpovídat,
+protože voda je poháněna rozdílem tlaků ve směru největšího poklesu
+tlaku, ale současně si v anizotrponím prostředí hledá cestu nejmenšího
+odporu).
+
+Nechť je naše zobrazení vyjádřeno v nějaké bázi $\mathcal B$ maticí $A$,
+tj. $$Y=AX,$$ kde $X$ a $Y$ jsou souřadnice v dané bázi. Budeme chtít
+zobrazení vyjádřit v jiné bázi. Například v bázi $\mathcal b$ takové, že platí
+$X=Px$ a $Y=Py$, kde malá písmena jsou souřadnice v "malé" bázi
+$b$. Dosazením získáme
 $$Py=APx$$
 a po vynásobení inverzní maticí
 $$P^{-1}(PY)=P^{-1}(APx),$$
 tj
 $$y=(P^{-1}AP)x.$$ V bázi $b$ je tedy zobrazení charakterizováno maticí
-$P^{-1}AP$.
+$P^{-1}AP$. Pro vhodně zvolenou matici $P$ může být matice v nové bázi
+podstatně jednodušší než matice v bázi původní.
+
+V následujícím příkladě si ukážeme, že vhodně zvolenou maticí $P$
+můžeme dosáhnout toho, že $P^{-1}AP$ je diagonální matice. Na dalším
+slidu již rovnou zvolíme vhodnou bázi a matice, která bude sice
+impozantních rozměrů $6\times 6$ bude plná nul. 
 
 **Příklad.**
 Pro matice $A=
@@ -414,16 +482,21 @@ $$  P^{-1}AP=
   2& 0 \\ 0 & 1
 \end{pmatrix}.
 $$
-Odsud vidíme, že v souřadnicích ke kteým bychom přešli pomocí matice
-$P$ je vyjádření zobrazení matice $A$ mnohem jenodušší, protože matice
+Odsud vidíme, že v souřadnicích ke kterým bychom přešli pomocí matice
+$P$ je vyjádření zobrazení matice $A$ mnohem jednodušší, protože matice
 $P^{-1}AP$ je diagonální.
+
 Častým úkolem je zapsat vztahy mezi veličinami tak, aby byly co
 nejjednodušší a proto jeden z častých úkolů v lineární algebře bývá
-takovou šikovnou bázi nalézt. Zpravidla to bývá báze z vlastních
-vektorů matice, sloupce matice $P$ jsou vlastní vektory a matice je
-ortogonální, inverze je tedy matice transponovaná. Tomto procesu se
-říká diagonalizace matice a v diagonále vychází právě vlastní čísla
-matice.
+takovou šikovnou bázi nalézt. Nastíníme neoptimističtější variantu
+postupu, připadné detaily a řešení zádrhelů je možné najít v odborné
+literatuře. Zpravidla vyjadřujeme zobrazení v bázi tvořené
+ortonormálními vlastními vektory matice $A$. Sloupce matice $P$ jsou
+vlastní vektory matice $A$. Pokud je matice $A$ symetrická, je matice
+$P$ navíc ortogonální, její inverze je tedy matice
+transponovaná. Tomuto procesu se říká diagonalizace matice, protože
+$P^{-1}AP$ vychází diagonální a v diagonále vychází právě vlastní
+čísla matice.
 
 # Hookův zákon, matice tuhosti a poddajnosti
 
@@ -433,20 +506,26 @@ $$\begin{pmatrix}
         \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}+\frac{\partial u_{2}}{\partial x_{1}}\right)& \frac{\partial u_{2}}{\partial x_{2}}
       \end{pmatrix}$$
 
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>0.5\linewidth 0.5\linewidth\else\Gin@nat@width\fi}
+\makeatother
+
 <div class='obtekat'>
 
 ![Složky tenzoru napětí charakterizují sílu způsobující deformaci. Zdroj: Wikiepdie.](napeti.png)
 
 </div>
 
-Toto můžeme zapsat symbolicky $$\varepsilon_{ij}=\frac 12\left(\frac{\partial u_{i}}{\partial x_{j}}+\frac{\partial u_{j}}{\partial x_{i}}\right).\tag{*}$$ Pro deformaci v prostoru máme nikoliv dvě, ale tři souřadnice a tenzor deformací je tedy $3\times 3$ symetrická matice, tj. matice, která má šest nezávislých komponent. (Zbylé tři komponenty dostaneme ze symetrie.) Tyto komponenty dostaneme postupnou volbou indexů ve vzorci (*) a můžeme je sestavit do sloupcového vektoru $$(\varepsilon_{11},\varepsilon_{22},\varepsilon_{33},\varepsilon_{23},\varepsilon_{13},\varepsilon_{12})^T$$ Podobně, působící sílu můžeme rozdělit podle působení v jednotlivých směrech a tím dostaneme šest veličin charakterizujících napětí. (Zbylé tři jsou dány podmínkou, že se deformované těleso nepohybuje.)
+Toto můžeme zapsat symbolicky $$\varepsilon_{ij}=\frac 12\left(\frac{\partial u_{i}}{\partial x_{j}}+\frac{\partial u_{j}}{\partial x_{i}}\right).\tag{*}$$ Pro deformaci v prostoru máme nikoliv dvě, ale tři souřadnice a tenzor deformací je tedy $3\times 3$ symetrická matice, tj. matice, která má šest nezávislých komponent. (Zbylé tři komponenty dostaneme ze symetrie.) Tyto komponenty dostaneme postupnou volbou indexů ve vzorci (*) a můžeme je sestavit do sloupcového vektoru $$(\varepsilon_{11},\varepsilon_{22},\varepsilon_{33},\varepsilon_{23},\varepsilon_{13},\varepsilon_{12})^T$$ Podobně, působící sílu můžeme rozdělit podle působení v jednotlivých směrech a tím dostaneme tenzor napětí, šest veličin charakterizujících napětí. (Zbylé tři jsou dány podmínkou, že se deformované těleso nepohybuje.)
+Pro další úvahy složky tenzoru napětí uspořádáme do sloupcového vektoru
+$$(\sigma_{11},\sigma_{22},\sigma_{33},\sigma_{23},\sigma_{13},\sigma_{12})^T.$$
 
 Následující poučka je fyzikálně ověřený fakt, že vztah mezi složkami
-tenzoru napětí a tenzoru deformace je linární. To nás nepřekvapí,
-protože víme, že **jakákoliv** funkční závislost se dá
-linearizovat. Podstatné zde však je, že interval, na kterém má
-linerizace smysl, není příliš malý, tj. že tato linearizace platí pro
-prakticky významné případy.
+tenzoru napětí a tenzoru deformace je lineární. To nás nepřekvapí,
+protože z přednášek o derivacích na začátku semestru víme, že
+**jakákoliv** funkční závislost se dá linearizovat. Podstatné zde však
+je, že interval, na kterém má linerizace smysl, není příliš malý,
+tj. že tato linearizace platí pro prakticky významné případy.
 
 > **Hookův zákon deformace (volná slovní formulace).** Do určité hranice zatížení je libovolná složka tenzoru deformace úměrná libovolné složce tenzoru napětí.
 
@@ -490,6 +569,12 @@ udávají složky jednotlivých deformací způsobených napětími
 $\sigma_{23}$, $\sigma_{13}$ a $\sigma_{12}$ mají jenom jednu
 nenulovou složku.
 
+Pokud bychom použili k popisu libovolnou soustavu souřadnic, nebylo by
+možné se na symetrii odvolávat. Matice $C$ by obsahovala včechny prvky
+a bylo by nutné hledat bázi, v níž je její vyjádření nejjednodušší. U
+dřeva je však snadné rozpoznat význačné směry. Když soustavu souřadnic
+zvolíme tak, aby byla v souladu s těmito význačnými směry, docílíme
+tohot, že obdržíme matici $C$ již přímo ve tvaru s co nejvíce nulami.
 
 Někdy je vhodné umět určit napětí pomocí deformací. K tomu stačí
 Hookův zákon vynásobit maticí $C^{-1}$ a obdržíme
