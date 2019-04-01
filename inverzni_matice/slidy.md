@@ -450,7 +450,7 @@ tlaku, ale současně si v anizotrponím prostředí hledá cestu nejmenšího
 odporu).
 
 Nechť je naše zobrazení vyjádřeno v nějaké bázi $\mathcal B$ maticí $A$,
-tj. $$Y=AX,$$ kde $X$ a $Y$ jsou souřadnice v dané bázi. Budeme chtít
+tj. $$Y=AX,$$ kde $X$ a $Y$ jsou souřadnice vzoru a obrazu v dané bázi. Budeme chtít
 zobrazení vyjádřit v jiné bázi. Například v bázi $\mathcal b$ takové, že platí
 $X=Px$ a $Y=Py$, kde malá písmena jsou souřadnice v "malé" bázi
 $b$. Dosazením získáme
@@ -497,6 +497,12 @@ $P$ navíc ortogonální, její inverze je tedy matice
 transponovaná. Tomuto procesu se říká diagonalizace matice, protože
 $P^{-1}AP$ vychází diagonální a v diagonále vychází právě vlastní
 čísla matice.
+
+\iffalse
+
+[Ukázka](https://sagecell.sagemath.org/?z=eJytkU1v2zAMhu8G_B8INEWkRM3ioOlNB5-GHQb4sJuRFYqtzmoV0ZNlr_Gw_z469ryP9lJgBkzT4ks9fMFUnlTw5pnl-V7sDiLfUTxwuAI6N4WOo-y3InnXfPWB7bm42f1Kh5b5eBbQFZvglWtqbDTjMN8HtddFhWULJUJjnrBzGo6q1xBHVxAUHWA7FSihioFGg1NtYU4aKqtLFaDGvtSPJo7iqKnwG7AqnCzzy0Uqr5uFgEU2fJfXzKqgn1nKxZhknB6apVelcqbr0Z8ly7diSy6SKSYUt5u9SDZ3Qzb-U43_y8o-f79JfqQTagSwbGNcp_1gmq_SVTbyJu8dOOwudi-jv5n_P1YRR3j0qj_LPFt1ugjomeHwgB4MGAeXmQ5x9OHje1mjcYGNcgEFWvRy6XW5FLSgXsvbLV_XaM9f0L2uUraulCQzfG2N06-J-Iiidz3iLgPMgFl7tK3-WzxyJ_mDsVZ-8q3-A_qid1gfo2bSNDVZv_e0FpQJ_wkl8e8J&lang=sage&interacts=eJyLjgUAARUAuQ==)
+
+\fi
 
 # Hookův zákon, matice tuhosti a poddajnosti
 

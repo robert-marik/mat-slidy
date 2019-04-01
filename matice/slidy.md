@@ -69,15 +69,14 @@ Dvourozměrné vektory s komponentami danými reálnými čísly můžeme
 reprezentovat graficky pomocí orientovaných úseček. Ve zvolené
 soustavě souřadnic a při zvoleném výchozím bodu vektor znázorníme
 takovou orientovanou úsečkou, že komponenty vektoru označují změnu
-polohy v jednotlivých směrech. Pokud tyto vektory označují
-změnu polohy, mluvíme o vektorech posunutí. Sčítání vektorů poté
+polohy v jednotlivých směrech. Sčítání vektorů 
 odpovídá posunutí počátečního bodu druhého vektoru do koncového bodu
 prvního vektoru a nahrazení dvou částečných posunutí jedním
 celkovým. Je přirozené zavést délku vektoru $\vec u=
 \begin{pmatrix}
   u_1\\u_2
 \end{pmatrix}$ pomocí Pythaghorovy věty vzorcem $|\vec
-u|=\sqrt{u_1^2+u_2^2}$. Násobení vektoru kladným číslem poté odpovídá
+u|=\sqrt{u_1^2+u_2^2}$. Násobení vektoru kladným číslem odpovídá
 změně délky vektoru. Násobení záporným číslem odpovídá změně délky a
 otočení směru.
 
@@ -149,7 +148,7 @@ nulovými koeficienty, je nulový vektor.  Pokud vektory bázi netvoří,
 nemusí být vyjádření lineární kombinace jednoznačné. Dokonce tedy
 nulový vektor můžeme dostat i jinak, než jako triviální lineární
 kombinaci. Ukazuje se, že je důležité rozlišovat mezi těmito případy a
-proto si na rozlišení zavedeme nové pojmy, lineární závislost a
+proto si na jejich rozlišení zavedeme nové pojmy, lineární závislost a
 nezávislost.
 
 
@@ -174,7 +173,9 @@ Platí následující.
 Ve výše uvedených případech poznáme lineární závislost snadno. Mimo
 tyto případy je to snadné pouze pro dvojici vektorů, které jsou
 lineárně závislé právě tehdy když je jeden vektor násobkem druhého. V
-tom případě říkáme, že vektory mají stejný směr.
+tom případě říkáme, že vektory mají stejný směr. V ostatních případech
+se lineární závislost a nezávislost naučíme posuzovat později při
+výpočtu hodnosti.
 
 
 # Pootočení vektoru
@@ -222,7 +223,7 @@ $$
 Na příkladě si ukážeme, kdy je přirozené pracovat s lineárními
 kombinacemi vektorů. Pokusíme se na jednoduchém modelu migrace mezi
 městem a venkovem demonstrovat přístup, který se používá v případech,
-když je možné rozdělit jednotlivé části systému do konečného počtu
+kdy je možné rozdělit jednotlivé části systému do konečného počtu
 navzájem disjunktních stavů a jednotlivé části mohou měnit svůj stav,
 přičemž pravděpodobnost změny je dána pouze současným stavem a ne
 například historií předchozích stavů. Aplikace zahrnují například
@@ -326,7 +327,7 @@ Maticový součin
   
   * je asociativní $$(AB)C=A(BC)=ABC,$$
   * je distributivní vzhledem ke sčítání $$A(B+C)=AB+AC\qquad \text {a}\qquad (B+C)A=BA+CA,$$
-  * není však komutativní ($AB$ je obecně různé od $BA$, proto v předchozím máme roznásobování závorky zleva i zprava),
+  * není však komutativní ($AB$ je obecně různé od $BA$, proto v předchozím máme roznásobování závorky zleva i zprava).
 
 Můžeme tedy měnit uzávorkování, můžeme
 roznásobovat závorky, nesmíme však měnit pořadí matic při násobení.
@@ -459,17 +460,24 @@ Další informace:
 
 <div class='obtekat'>
 
+
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>0.5\linewidth 0.5\linewidth\else\Gin@nat@width\fi}
+\makeatother
+
+
 ![Příklad transformace dané maticí. Zachovává se například rovnoběžnost a středy úseček. Přímky se zobrazují na přímky.](transformace.png)
 
 ![Transformace 3D objektu do roviny pomocí matice. Koeficienty matice můžou realizovat libovolné natočení.](domecek.png)
 
 </div>
 
+
 Je-li $A$ čtvercová matice, můžeme každému vektoru $\vec q$ přiřadit vektor
 $Y=A\vec q$ a tím definovat zobrazení $n$-rozměrného prostoru do sebe. Dá
 se ukázat, že takto dostaneme všechna zobrazení, která zobrazují úsečky na úsečky, počátek nechávají v počátku  a jsou pěkná v tom smyslu, že zachovávají středy úseček, rovnoběžnost a lineární kombinaci vektorů. [Ukázka zobrazení ve 2D](https://sagecell.sagemath.org/?z=eJxtUU9LwzAUvxf6HQIe1nTPrd2mByGH7SIeCqV4K51kNXPR2FfSON0-vUk71ooN5JGX37_wcjyjPrEgjyAqII8vNbY1mt1BPLt3p663GPW9NfvkRsufIM8XLTuCReGATQ_EsJyvOmi-bEFzEIazWs6Xvpf2xBKboIXodgGNrC5N2N9bl9H7AXvr8skNqTW-i49S-F42lgC3veSPKwzSWiONhjsb39ujJgmRFcnXsIEUMsjCFNIwKx58j9iFO83PJ5Yn4VGUBnUgKXEi6URHN9uiIz4lj6xGWZmgkwApUaFmEy1eJ0AaeRZsFdFpjer0htU4i6v6wJn9GDpVshJjJNrH2T3tItuHXEOu_J36Ev8FXf5FspdKsWf9JQbho_rmgN8kSAZdYO2sqqntYF40NxJZTH8BrAC_iQ==&lang=sage&interacts=eJyLjgUAARUAuQ==).
 
-Podobně je možné definovat i zobrazení mezi prostory jiných dimenzí. Například [projekce 3D objektu do 2D](https://sagecell.sagemath.org/?z=eJx9UbFugzAU3JH4B492MQFDSSUkDyytOmTtYlkVSklricapQTTp1_fZJqQhqEgY37u75-dj-NHmxLFIaSqpYOPKYE1XBWWrtd15DBwJgxdryN-4gIISIFeCSYl22iCF1B4NlpcoQkIUSf6PJAzCYFP3attw8Vn3Rh2xsAO4EeBI-EpC0UT5kpsD5rmiLq4FKva2mCWZ3c94Wxl56iQ3fpZ0X6bHGTkPNuGFo84cNPLqq5I1uHvbKCobhQ-gDAMEj4uWi-puaLa9NliRS2Zj7BJZuxU_b574Qbend73HjhQl_Cu0U23LH-u2a4jXTR1cgBnN6b0czxvbRLM-aaTKLFIy8vABYAFvzJbaL_jX5Vzopd2H_sYV-QPATFHdHeC6rwaS0JwBPjbd6PwFZwa9tw==&lang=sage&interacts=eJyLjgUAARUAuQ==). Protože zobrazení zachovává rovnoběžnost, není možné takto jednoduše obdržet například perspektivu. Zde si pomáháme trikem, že přidáme další souřadnici, více viz Wikipedie a heslo [Camera matrix](https://en.wikipedia.org/wiki/Camera_matrix).
+Podobně je možné definovat i zobrazení mezi prostory jiných dimenzí. Například [projekce 3D objektu do 2D](https://sagecell.sagemath.org/?z=eJx9UbFugzAU3JH4B492MQFDSSUkDyytOmTtYlkVSklricapQTTp1_fZJqQhqEgY37u75-dj-NHmxLFIaSqpYOPKYE1XBWWrtd15DBwJgxdryN-4gIISIFeCSYl22iCF1B4NlpcoQkIUSf6PJAzCYFP3attw8Vn3Rh2xsAO4EeBI-EpC0UT5kpsD5rmiLq4FKva2mCWZ3c94Wxl56iQ3fpZ0X6bHGTkPNuGFo84cNPLqq5I1uHvbKCobhQ-gDAMEj4uWi-puaLa9NliRS2Zj7BJZuxU_b574Qbend73HjhQl_Cu0U23LH-u2a4jXTR1cgBnN6b0czxvbRLM-aaTKLFIy8vABYAFvzJbaL_jX5Vzopd2H_sYV-QPATFHdHeC6rwaS0JwBPjbd6PwFZwa9tw==&lang=sage&interacts=eJyLjgUAARUAuQ==). Protože zobrazení zachovává rovnoběžnost, není možné takto jednoduše obdržet například perspektivu. Protože se zachovává počátek, není možné zahrnout ani posunutí. V obou případech si pomáháme trikem, že přidáme další souřadnici, více viz Wikipedie a heslo [Grafické transformace](https://cs.wikipedia.org/wiki/Grafick%C3%A9_transformace) nebo [Camera matrix](https://en.wikipedia.org/wiki/Camera_matrix).
 
 Například matice $$R_\theta=
 \begin{pmatrix}
@@ -799,7 +807,7 @@ rozdělení oblasti našeho zájmu na velké množství bodů a aproximace
 fyzikálních zákonů pro sledovaný jev v každém bodě pomocí lineární
 rovnice. Tím vznikne úloha na řešení soustavy rovnic. Používá se k
 modelování proudění tepla nebo vody, k modelování mechanického
-namáhání od jednoduchých nosníků po komplikované stroje nebo stromy.
+namáhání od jednoduchých nosníků po komplikované konstrukce nebo stromy.
 Soustava vytvořená pomocí takových modelů je velmi řídká, má hodně
 nul. Je proto možné ji rychle vyřešit i v případě tisíců rovnic. My se
 později například naučíme chytře využít toho, že každý řádek má v
