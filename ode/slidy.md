@@ -662,7 +662,7 @@ $$
 
 
 Modelujme růst kulové kapky. Ta roste tak, že na povrchu kondenzují
-vodní Kapka proto roste tak, že její objem se zvětšuje rychlostí
+vodní páry. Kapka proto roste tak, že její objem se zvětšuje rychlostí
 úměrnou povrchu. Povrch je zase úměrný druhé mocnině poloměru a
 poloměr je úměrný třetí odmocnině objemu. Platí tedy (po sloučení všech konstant úměrnosti do jedné)
 $$\frac{\mathrm dV}{\mathrm dt}=kV^{2/3}.$$  
