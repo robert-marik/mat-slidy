@@ -719,7 +719,7 @@ $$ D_{\text{sym}}=\begin{pmatrix}
 
 <div class='obtekat'>
 
-![Rozložení teploty na tepelně vodivé desce je možné přibližně zkoumat metodami lineární algebry. Zdroj: pixabay.com](deska.png)
+![Rozložení teploty na tepelně vodivé desce je možné přibližně zkoumat metodami lineární algebry.](deska.png)
 
 </div>
 

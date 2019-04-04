@@ -261,8 +261,9 @@ dominantní matice* porovnáním absolutních hodnot diagonálních prvků se
 součty absolutních hodnot ostatních prvků v daných sloupcích a i pro
 sloupcově ostře diagonální matice metoda konverguje. I přes
 jednoduchost tohoto kriteria se s diagonálně dominantními maticemi
-setkáváme v aplikacích poměrně často. Podíváme-li se, jak byla naše
-matice odvozena, není to až takové překvapení.
+setkáváme v aplikacích poměrně často. Podíváme-li se, jak byla
+odvozena soustava popisující rozložení teploty na tepelně vodivé
+desce (poslední slajd minulé přednášky), není to až takové překvapení.
 
 [Online výpočet.](https://sagecell.sagemath.org/?z=eJxtjzFrwzAQhXeD_8ORLrKRXYUqDQQ02Hjq1CGDwTVBRGpyQ05GFqH995Vj11CoEOLe3Xv6pErddPD4xbpO8mLLRTx63sVqlrGeWg8192fZ91ma1Gv4RfBXwfeCS9FnZfCaxsGNlkVTmjRK5mgsBQzfpyUh46RBuqvt8__Do6qKJk3aFbET_Hf_RcATDO6sgz0TgjNXbcDb0RJO7E_nAQEJov9i2S47pAnE1SpiEz9ndXHM2ywSB48UYPPmvNHk7hpuNjijD_BBG96WxAxeMIxKPj61uN8jiuwCnK3EqjLebP30uLzmsOZ-AAxjagI=&lang=sage&interacts=eJyLjgUAARUAuQ==)
 
@@ -325,9 +326,9 @@ $$
 
 *Mnemotechnická pomůcka:* opsat první dva řádky pod determinant,
 vynásobit hlavní diagonálu a dvě diagonály pod tím, potom vynásobit
-vedlejší diagonálu a dvě diagonály pod tím. Příspěvky o hlavní
-diagonály a dvou diagonál pod ní se sčítají, příspěvky od vedlejší
-diagonály a dvou diagonál pod ní se odečítají.
+vedlejší diagonálu a dvě diagonály pod tím. Příspěvky od hlavní
+diagonály a dvou šikmých řad pod ní se sčítají, příspěvky od vedlejší
+diagonály a dvou šikmých řad pod ní se odečítají.
 
 # Determinant matice ve schodovitém tvaru
 
@@ -465,7 +466,7 @@ podstatně jednodušší než matice v bázi původní.
 V následujícím příkladě si ukážeme, že vhodně zvolenou maticí $P$
 můžeme dosáhnout toho, že $P^{-1}AP$ je diagonální matice. Na dalším
 slidu již rovnou zvolíme vhodnou bázi a matice, která bude sice
-impozantních rozměrů $6\times 6$ bude plná nul. 
+impozantních rozměrů $6\times 6$, bude plná nul a proto relativně pěkná. 
 
 **Příklad.**
 Pro matice $A=
@@ -551,7 +552,7 @@ kde $C$ je čtvercová $6\times 6$ matice.
 </div>
 
 
-Matice $C$ je symetrická a obsahuje celkem 21 nezávislých
+Fyzikální úvahy ukazují, že matice $C$ je určitě symetrická a obsahuje celkem ne 36, ale jenom 21 nezávislých
 veličin. Nazývá se *matice tuhosti*. V obecném případě tedy musíme
 pro popis deformace mít celkem 21 materiálových konstant. Tento počet
 se však výrazně redukuje, pokud je materiál například izotropní nebo
