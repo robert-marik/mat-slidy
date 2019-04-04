@@ -816,7 +816,7 @@ hlavní diagonále větší číslo, než je součet zbylých čísel v tomto
 
 **Poznámka.** Ukážeme řešení soustavy (1) iterační metodou. Zatím
 budeme postupovat intuitivně, vyjdeme z libovolného odhadu řešení
-teplotu v každém bodě budeme opakovaně nahrazovat průměrem teplot v
+a teplotu v každém bodě budeme opakovaně nahrazovat průměrem teplot v
 okolních bodech, dokud se hodnoty neustálí. Kdy tento postup funguje a jak se dá zformalizovat si ukážeme později (Jaobiho metoda).
 
 [Online výpočet.](https://sagecell.sagemath.org/?z=eJxljcEKgzAMhu-C75Cb6Ra2WMsGAw_6FAXx0IPbPGhHlS2PvzoYIoaEhD__l1Tl4ObQCzYNU06xWmp-nThOe61VaVKvUMF0YboymWV1moMbp5efOoy2twuYSQ6iQQoQk0XNrqjkJJqkIDE7dHr6DyBWB3us1dlsQc30zx149wF66EeI4qMD1KxuaQIxbDluDi4v0KovMJNFkw==&lang=sage&interacts=eJyLjgUAARUAuQ==)
