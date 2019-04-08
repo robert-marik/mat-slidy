@@ -122,6 +122,9 @@ $$\frac{\partial \rho}{\partial T}=\mathop{\mathrm{div}} (k\nabla T).$$
 To je zobecnění rovnice vedení tepla v jedné dimenzi, kterou jsme
 odvodili primitivními prostředky v úvodní přednášce.
 
+Nenulové zdroje tepla jsou například, pokud je přítomno tření nebo
+pokud dochází k ohřevu elektrickým proudem nebo mikrovlným zářením.
+
 ## Mechanika kontinua
 
 V mechanice kontinua podobně jako u vedení tepla neuvažujeme zdroje. Rovnice kontinuity popisující proudění dané rychlostí $\vec u$ má poté tvar

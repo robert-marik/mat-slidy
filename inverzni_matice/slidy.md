@@ -180,10 +180,10 @@ V minulé přednášce jsme modelovali rozložení teploty ve dvourozměrné
 desce pomocí soustavy rovnic
 $$
 \begin{pmatrix}
- \phantom{-}4&-1&0&-1\\
- -1& \phantom{-}4&-1&0\\
-0 &-1& \phantom{-}4&-1\\
- -1&0&-1& \phantom{-}4
+ \phantom{-}4&-1& \phantom{-}0&-1\\
+ -1& \phantom{-}4&-1& \phantom{-}0\\
+ \phantom{-}0 &-1& \phantom{-}4&-1\\
+ -1& \phantom{-}0&-1& \phantom{-}4
 \end{pmatrix}
 \begin{pmatrix}
   x_1\\x_2\\x_3\\x_4
@@ -195,10 +195,10 @@ $$
 $$
 Pro
 $$A=\begin{pmatrix}
- \phantom{-}4&-1&0&-1\\
- -1& \phantom{-}4&-1&0\\
-0 &-1& \phantom{-}4&-1\\
- -1&0&-1& \phantom{-}4
+ \phantom{-}4&-1& \phantom{-}0&-1\\
+ -1& \phantom{-}4&-1& \phantom{-}0\\
+ \phantom{-}0 &-1& \phantom{-}4&-1\\
+ -1& \phantom{-}0&-1& \phantom{-}4
 \end{pmatrix}, \quad
 X=\begin{pmatrix}
   x_1\\x_2\\x_3\\x_4
@@ -221,10 +221,10 @@ $$D=
 \quad \text{a}\quad
 T=
 \begin{pmatrix}
- \phantom{-}0&-1&0&-1\\
- -1& \phantom{-}0&-1&0\\
-0 &-1& \phantom{-}0&-1\\
- -1&0&-1& \phantom{-}0
+ \phantom{-}0&-1& \phantom{-}0&-1\\
+ -1& \phantom{-}0&-1& \phantom{-}0\\
+ \phantom{-}0 &-1& \phantom{-}0&-1\\
+ -1& \phantom{-}0&-1& \phantom{-}0
 \end{pmatrix}
 $$
 Potom můžeme psát rovnici ve tvaru
