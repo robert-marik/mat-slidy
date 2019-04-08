@@ -138,6 +138,11 @@ z\ těchto čísel je hodnost matice, kterou si nadefinujeme nyní.
   maximální počet lineárně nezávislých řádků matice.
   Hodnost matice $A$ označujeme ${h(A)}$.
 
+Poznámka: Hodnost je v anglické literatuře označována jako *rank*.
+
+Schodovitý tvar jsme si představili u determinantu. U matice ve
+schodovitém tvaru je určení determinantu velmi jednoduché. Podobný
+efekt vidíme i u hodnosti.
 
 > Definice (schodovitý tvar).
   Řekneme, že matice $A$ je ve *schodovitém tvaru*, jestliže
@@ -155,6 +160,8 @@ z\ těchto čísel je hodnost matice, kterou si nadefinujeme nyní.
 
 # Výpočet hodnosti
 
+Výpočet hodnosti se provádí postupným nahrazením zadané matice maticí, která má stejnou hodnost, ale postupně se přibližuje schodovitému tvaru. Uvedeme si jenom základní postup. Tento se sice dá vylepšit, pro nás je však důležité, že i bez jakýchkoliv vylepšení vždy vede k cíli. (Alespoň teoreticky.)
+
 > Věta (řádkové operace zachovávající hodnost matice).
 >  Následující operace nemění hodnost matice:
 >
@@ -168,6 +175,9 @@ z\ těchto čísel je hodnost matice, kterou si nadefinujeme nyní.
     řádků matice.
 >
 >  Libovolnou matici lze konečným počtem těchto úprav převést do schodovitého tvaru.
+
+Následující věta udává, že veškerá tvrzení, uvedená v souvislosti s
+hodností pro řádky matice, se dají přeformulovat i pro sloupce matice.
 
 > Věta. 
   Transponování nemění  hodnost matice.
@@ -188,8 +198,6 @@ případ, kdy řešení je určeno jednoznačně.
 > Věta (jednoznačnost řešení). Nechť soustava lineárních rovnic má řešení. Toto řešení je právě jedno, pokud je společná hodnost matice soustavy a rozšířené matice soustavy rovna počtu neznámých. V opačném případě je společná hodnost matice a rozšířené matice soustavy menší než počet neznámých. 
 
 # Gaussova eliminace
-
-# Metoda LU dekompozice
 
 # Gaussova-Seidelova iterační metoda
 
