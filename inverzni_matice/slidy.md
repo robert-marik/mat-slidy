@@ -104,9 +104,9 @@ tj. že inverzní a transponovaná matice jsou v případě matice rotace stejn�
 
 Řádky ortogonální matice jsou tvořeny navzájem kolmými vektory
 jednotkové délky. Má-li například symetrická čtvercová matice $A$ řádu
-$n$ celkem $n$ lineárně nezávislých vlastních vektorů, potom matice
-vytvořená tak, že sloupce nebo řádky matice jsou tyto vektory, je
-ortogonální.
+$n$ celkem $n$ lineárně nezávislých jednotkových vlastních vektorů,
+potom matice vytvořená tak, že sloupce nebo řádky matice jsou tyto
+vektory, je ortogonální.
 
 # Inverzní matice k diagonální matici
 
@@ -457,7 +457,7 @@ $X=Px$ a $Y=Py$, kde malá písmena jsou souřadnice v "malé" bázi
 $b$. Dosazením získáme
 $$Py=APx$$
 a po vynásobení inverzní maticí
-$$P^{-1}(PY)=P^{-1}(APx),$$
+$$P^{-1}(Py)=P^{-1}(APx),$$
 tj
 $$y=(P^{-1}AP)x.$$ V bázi $b$ je tedy zobrazení charakterizováno maticí
 $P^{-1}AP$. Pro vhodně zvolenou matici $P$ může být matice v nové bázi
