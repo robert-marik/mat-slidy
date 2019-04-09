@@ -66,6 +66,21 @@ vodivosti (někdy též koeficient filtrace), v obecném případě
 symetrický tenzor, v izotropním případě, kdy $\vec q$ a $\nabla p$
 mají stejný směr, veličina skalární.
 
+Někdy se tento zákon neformuluje pomocí gradientu tlaku, ale pomocí
+gradientu jiné veličiny, kterou zavádíme v hydrologii pro názorné
+studium efektů, souvisejících s prouděním vody. Nejčastěji se jedná o
+*vodní potenciál* a pomocí hydraulické výšky či 
+[piezometrické
+hladiny](https://cs.wikipedia.org/wiki/Hladina_podzemn%C3%AD_vody). Piezometrická hladina je veličina používaná v hydrologii k tomu, abychom do jednoho
+jednoduše modelovatelného faktoru (má rozměr stejný jako délka)
+započítali všechny veličiny mající vliv na proudění podzemní vody, od
+rozdílu nadmořských výšek, přes kapilární a osmotické jevy až po
+vnější síly vyvolané tlakem geologických vrstev a jiné. Jedná se
+vlastně o celkovou energii vody s tím, že některé části považujeme za
+zadnebatelné. Jedná se například často o to, že neuvažujeme
+kinetickou energii nebo osmózu a kapilární jevy.
+
+
 ## Fourierův zákon (vedení tepla)
 
 Fourierův zákon se týká vedení tepla a vyjadřuje, že 
@@ -83,7 +98,7 @@ látky. Většinou je hybatelem procesu nerovnoměrnost v rozložení látky,
 která se tímto procesem transportuje. Nemusí to však být
 vždy. Příkladem je termodifúze, což je pohyb prvků vyvolaný
 nerovnoměrným rozložením teploty. Například při difúzi vody ve dřevě s
-nerovnoměrným rozložením teploty je tok dán vztahem $$\vec J=-D\nabla c - s D \nabla T, $$
+nerovnoměrným rozložením teploty je tok dán vztahem $$\vec J=-D\nabla c - sD\nabla T, $$
 kde $s$ je koeficient termodifúze. Narozdíl od předchozích zákonů, u
 Sortetova efektu dochází k transportu nejenom ve
 směru maximálního poklesu (záporného gradientu) teploty, ale někdy i ve směru 
@@ -215,23 +230,21 @@ proudění místem s menším průřezem.
 
 ## Proudění podzemní vody 
 
-Proudění podzemní vody s volnou hladinou je popsáno rovnicí
+Proudění podzemní vody s [volnou hladinou](https://cs.wikipedia.org/wiki/Hladina_podzemn%C3%AD_vody) v nasycené půdě (nemění se obsah vody) je popsáno rovnicí
 $$\mathop{\mathrm{div}}(K\nabla h)=0,$$
 kde $h$ je [piezometrická
-hladina](https://cs.wikipedia.org/wiki/Hladina_podzemn%C3%AD_vody) -
-veličina používaná v hydrologii k
-tomu, abychom do jednoho jednoduše modelovatelného faktoru (má rozměr
-stejný jako délka) započítali všechny veličiny mající vliv na
-proudění podzemní vody, od rozdílu nadmořských výšek, přes kapilární a osmotické
-jevy až po vnější síly vyvolané tlakem geologických vrstev a jiné.
+hladina](https://cs.wikipedia.org/wiki/Hladina_podzemn%C3%AD_vody).
 
-Nejobecnější tvar rovnice kontinuity pro podzemní vodu má se zapojením
-Darcyho zákona tvar
-$$\mathop{\mathrm{div}} (\kappa \nabla h\rho)=-S\rho\frac{\partial h}{\partial t}+P\rho,$$
-kde $\kappa$ je tenzor filtrace, $\rho$ je hustota vody, $S$ je měrná
-objemová zásobnost (kolik vody je v jednotkovém množství půdy) a $P$
-je celkový objem ze zdrojů. Často je vertikální proudění zadnebatelné
-a úloha není trojrozměrná, ale ve skutečnosti dvourozměrná a klademe
+Zcela obecný tvar rovnice kontinuity pro podzemní vodu, ve kterém
+uvažujeme hromadění vody (například proudění nenasycenou zeminou) konstantní hustoty a
+zdroje či spotřebiče (například prosak do jiných geologických vrstev)
+má [tvar](https://is.muni.cz/th/eqgoo/dp.pdf)
+$$\mathop{\mathrm{div}} (\vec v)=-S\frac{\partial h}{\partial t}+P,$$
+kde $\vec q$ je tok, $\rho$ je hustota vody, $S$ je měrná
+objemová zásobnost (kolik vody je v jednotkovém množství půdy), $P$
+je celkový objem ze zdrojů a $h$ je piezometrická výška. Často je
+vertikální proudění zadnebatelné a úloha není trojrozměrná, ale ve
+skutečnosti dvourozměrná a klademe
 $\frac{\partial h}{\partial z}=0$.
 
 # Vedení tepla v homogenním izotropním materiálu a ve dřevě
