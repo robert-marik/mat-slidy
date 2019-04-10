@@ -23,7 +23,7 @@ optimální.  Například při toku vody v půdě se molekuly vody
 "prodírají" volnými cestami mezi zrnky půdy nebo horniny a efektivní
 rychlost toku vody je nižší než rychlost jednotlivých molekul. To
 znamená, že na takový pohyb nemá smysl aplikovat Newtonovy pohybové
-zákony tak jak je známe z fyziky části a tuhých těles.
+zákony tak jak je známe z fyziky částic a tuhých těles.
 
 Tok stavové veličiny danou plochou vyjadřuje, kolik stavové veličiny
 projde touto plochou za jednotku času, přepočteno na jednotku povrchu
@@ -34,13 +34,13 @@ plochy.
 Tok veličiny je způsoben nějakým hnacím faktorem. Například vítr (tok
 molekul vzduchu) je vyvolán nerovnoměrným rozložením vzduchu (jeho
 hustoty a tím i tlaku) v prostoru a směruje z míst s vyšším tlakem do
-míst s tlakem nižším.  Větší rozdíl tlaků způsobí větší vítr a tím
+míst s tlakem nižším.  Větší rozdíl tlaků způsobí "větší vítr" a tím
 větší tok vzduchu. Toto platí i pro jiné proudění.
 
 Nerovnoměrnost v prostorovém rozložení charakterizuje gradient. Viz
 [úvodní přednáška o
 derivacích](http://user.mendelu.cz/marik/mt/mat-slidy/derivace/index.html#(13)). Pro
-potřeby formulace fyzikálních zákonů gradient uvažujeme jako sloupcový
+potřeby matematické formulace fyzikálních zákonů gradient uvažujeme jako sloupcový
 vektor.
 
 V ustáleném stavu je pro široké rozmezí fyzikálních problémů závislost
@@ -100,9 +100,9 @@ mají stejný směr, veličina skalární.
 Někdy se tento zákon neformuluje pomocí gradientu tlaku, ale pomocí
 gradientu jiné veličiny, kterou zavádíme v hydrologii pro názorné
 studium efektů, souvisejících s prouděním vody. Nejčastěji se jedná o
-*vodní potenciál* a pomocí hydraulické výšky či 
-[piezometrické
-hladiny](https://cs.wikipedia.org/wiki/Hladina_podzemn%C3%AD_vody). Piezometrická hladina je veličina používaná v hydrologii k tomu, abychom do jednoho
+*vodní potenciál* a  hydraulickou výšku či 
+[piezometrickou
+hladinu](https://cs.wikipedia.org/wiki/Hladina_podzemn%C3%AD_vody). Piezometrická hladina je veličina používaná k tomu, abychom do jednoho
 jednoduše modelovatelného faktoru (má rozměr stejný jako délka)
 započítali všechny veličiny mající vliv na proudění podzemní vody, od
 rozdílu nadmořských výšek, přes kapilární a osmotické jevy až po
@@ -114,19 +114,20 @@ kinetickou energii nebo osmózu a kapilární jevy.
 
 ## Fourierův zákon (vedení tepla)
 
-Fourierův zákon se týká vedení tepla a vyjadřuje, že 
+Fourierův zákon se týká vedení tepla a vyjadřuje, 
 že vektor hustoty tepelného toku $\vec q$ je úměrný gradientu teploty $\nabla T$
 a má opačný směr, tj. 
-$$\vec q=-k\nabla T.$$ Veličina $k$ opět může být symetrickým
-tenzorem, je-li materiál anizotropní, což je neobecnější
-případ. Je-li materiál izotropní, je
+$$\vec q=-D\nabla T.$$ 
+Je-li materiál anizotropní, což je neobecnější
+případ, je veličina $D$ symetrickým
+tenzorem. Je-li materiál izotropní, je
 $k$ skalární veličinou, případně skalární veličina násobená
 jednotkovou maticí, pokud potřebujeme zachovat její maticový chrakter.
 
 
 ## Soretův efekt (termodifúze)
 
-Tok tepla je vyvolaný nerovnoměrným rozložením tepla. Difúze chemické
+Tok tepla je vyvolaný nerovnoměrným rozložením teploty. Difúze chemické
 látky je vyvolána nerovnoměrným rozložením koncentrace této
 látky. Většinou je hybatelem procesu nerovnoměrnost v rozložení látky,
 která se tímto procesem transportuje. Nemusí to však být
@@ -141,9 +142,9 @@ gradientu teploty. Viz Wikipedia a heslo Thermophoresis.
 # Speciální případy vztahu mezi gradientem a tokem
 
 Uvažujme vztah mezi gradientem a tokem ve tvaru $$\vec j=-K\nabla \varphi,$$ kde $K$ je symetrický tenzor. Gradient má ve trojrozměrném případě vyjádření
-$$\nabla \phi =\left(\frac{\partial \varphi}{\partial x},\frac{\partial \varphi}{\partial y},\frac{\partial \varphi}{\partial z}\right)$$
+$$\nabla \varphi =\left(\frac{\partial \varphi}{\partial x},\frac{\partial \varphi}{\partial y},\frac{\partial \varphi}{\partial z}\right)^T$$
 a ve 2D
-$$\nabla \phi =\left(\frac{\partial \varphi}{\partial x},\frac{\partial \varphi}{\partial y}\right).$$ Pro potřeby formulace fyzikálních zákonů gradient uvažujeme jako sloupcový vektor.
+$$\nabla \varphi =\left(\frac{\partial \varphi}{\partial x},\frac{\partial \varphi}{\partial y}\right)^T.$$ 
 
 ## Obecný případ (anizotropní)
 
@@ -201,7 +202,7 @@ $\vec j=-k\nabla \varphi$, kde $k$ je konstanta a vektory toku a gradientu mají
 # Divergence
 
 Divergence je veličina, která udává tok vektorového pole z uvažovaného
-místa všemi směry. Protože záleží na objemu, ze kterého tok sledujeme,
+místa. Protože záleží na objemu, ze kterého tok sledujeme,
 je tento tok vztažený na jednotku objemu. 
 
 * Pro vektorovou funkci $$\vec F=(P,Q,R)=P\vec i + Q\vec j + R\vec k,$$ kde $P$, $Q$ a $R$ jsou funkce tří proměnných $x$, $y$ a $z$ definujeme
@@ -224,8 +225,8 @@ nevznikne samostatný jižní pól a severní pól magnetu.)
 # Rovnice kontinuity
 
 Předpokládejme, že tok vektorového pole přenáší nějakou stavovou
-veličinu, veličinu, která charakterizuje stav látky nebo
-tělesa. Množství této veličiny v jednotkovém objemu tělesa označíme
+veličinu (veličinu, která charakterizuje stav látky nebo
+tělesa). Množství této veličiny v jednotkovém objemu tělesa označíme
 $\rho$. Budeme uvažovat obecný nestacionární stav, kdy se $\rho$ může
 měnit s časem.
 
@@ -283,15 +284,19 @@ $$\rho c\frac{\partial T}{\partial t}+\mathop{\mathrm{div}}\vec j = 0,$$
 kde $T$ je teplota, $\vec j$ tok tepla. Konstanty $\rho$ a $c$ jsou
 hustota a měrná tepelná kapacita a slouží k přepočtení množství
 dodaného tepla na lépe měřitelnou veličinu, na změnu teploty.
-Pokud k tomuto tvaru rovnice kontinuity přidáme Fourierův zákon,
+Pokud k tomuto tvaru rovnice kontinuity přidáme Fourierův zákon a divergenci p5evedeme na druhou stranu rovnice,
 získáme
-$$\rho c\frac{\partial T}{\partial t}=\mathop{\mathrm{div}} (k\nabla T).$$ 
+$$\rho c\frac{\partial T}{\partial t}=\mathop{\mathrm{div}} (D\nabla T).$$ 
 To je zobecnění rovnice vedení tepla v jedné dimenzi, kterou jsme
 odvodili primitivními prostředky v úvodní přednášce.
 
 V některých případech nemusí být člen charakterizující zdroje
 nulový. Teplo může vznikat například při tření nebo při průchodu
 elektrického proudu transformací z jiného druhu energie.
+
+Ze střední školy známe [makroskopickou formu](https://cs.wikipedia.org/wiki/M%C4%9Brn%C3%A1_tepeln%C3%A1_kapacita#Vztah) $$mc\Delta T=Q.$$ Ta je
+zformulována pro těleso jako celek a $Q$ se uvažuje v opačném smyslu
+než v rovnici kontinuity (teplo je kladné, pokud jej dodáváme).
 
 # Proudění tekutiny v mechanice kontinua
 
@@ -313,6 +318,7 @@ dostáváme $$\mathop{\mathrm{div}} \vec u =0.$$ Důsledkem této rovnice
 je zvýšení rychlosti molekul pohybující se nestlačitelné tekutiny při
 proudění místem s menším průřezem.
 
+[Středoškolský makroskopický tvar](https://cs.wikipedia.org/wiki/Rovnice_kontinuity#Rovnice_kontinuity_ve_st%C5%99edo%C5%A1kolsk%C3%A9_fyzice) jednorozměrné rovnice kontinuity pro proudění nestlačitelné tekutiny je $$S u = \mathrm{konst}.$$
 
 # Proudění vody ve dřevě
 
@@ -327,10 +333,9 @@ proudění místem s menším průřezem.
 Jedná se o rovnici kontiunity pro koncentraci vody $c$. Voda ve dřevě
 nevzniká ani nezaniká, jenom se transportuje mimo dřevo. Proto v
 rovnici nebudou zdroje. Příslušným konstitutivním zákonem je Fickův
-zákon a rovnice neobsahuje zdroje (vlhkost proudí ven, neztrácí
-se). Příslušná rovnice popisující tento proces má tvar
+zákon. Příslušná rovnice popisující tento proces má tvar
 $$\frac{\partial c}{\partial t}=\mathrm{\mathop{div}}(D\nabla c)\tag{*}$$
-anebo (po započtení Soretova efektru)
+anebo (po započtení Soretova efektu)
 $$\frac{\partial c}{\partial t}=\mathrm{\mathop{div}}(D\nabla c+sD\nabla T).$$
 Ve druhém případě musíme tuto rovnici uvažovat společně s rovnicí
 vedení tepla a mít tedy úlohu na soustavu dvou rovnic pro dvě
@@ -357,10 +362,8 @@ protože derivace konstantního násobku je násobek derivace.
 </div>
 
 
-Proudění podzemní vody s [volnou hladinou](https://cs.wikipedia.org/wiki/Hladina_podzemn%C3%AD_vody) v nasycené půdě (nemění se obsah vody) je popsáno rovnicí
-$$\mathop{\mathrm{div}}(K\nabla h)=0,$$
-kde $h$ je [piezometrická
-hladina](https://cs.wikipedia.org/wiki/Hladina_podzemn%C3%AD_vody).
+Stavovou veličinou při proudění podzemní vody s [volnou hladinou](https://cs.wikipedia.org/wiki/Hladina_podzemn%C3%AD_vody) je [piezometrická
+hladina](https://cs.wikipedia.org/wiki/Hladina_podzemn%C3%AD_vody) $h$.
 
 Zcela obecný tvar rovnice kontinuity pro podzemní vodu, ve kterém
 uvažujeme hromadění vody (například proudění nenasycenou zeminou) konstantní hustoty a
@@ -386,10 +389,14 @@ $$k_x \frac{\partial^2 h}{\partial x^2}
 +
 k_y \frac{\partial^2 h}{\partial y^2}
 =
--S\frac{\partial h}{\partial t}+P.
+S\frac{\partial h}{\partial t}.
 $$
 
+Ustálené proudění  v nasycené půdě (nemění se obsah vody) je popsáno rovnicí
+$$\mathop{\mathrm{div}}(K\nabla h)=0.$$
 
+
+ 
 # Vedení tepla v homogenním izotropním materiálu a ve dřevě
 
 # Pohyb vody v půdě a ve dřevě
