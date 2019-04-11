@@ -800,3 +800,6 @@ soustavu $n+1$ lineárních rovnic o $n+1$ neznámých. Soustava je
 vhodné se problém snažit zdolat metodami řešení rovnic známými ze
 střední školy. Problematika spadá do oboru nazývaného lineární
 algebra, kterému se začneme věnovat na příští přednášce.
+
+Pro analogickou úlohu se vzpěrnou tlakovou pevností dřeva viz
+též Podžgaj, Štruktúra a vlastnosti dreva str. 359.

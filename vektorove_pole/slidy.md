@@ -330,6 +330,7 @@ proudění místem s menším průřezem.
 </div>
 
 
+
 Jedná se o rovnici kontiunity pro koncentraci vody $c$. Voda ve dřevě
 nevzniká ani nezaniká, jenom se transportuje mimo dřevo. Proto v
 rovnici nebudou zdroje. Příslušným konstitutivním zákonem je Fickův
@@ -351,6 +352,7 @@ $$
 $$
 protože derivace konstantního násobku je násobek derivace.
 
+V literatuře věnované problematice dřeva se rovnice vedení tepla ve dřevě označuje jako Druhý Fickův zákon (Podžgaj, Štruktúra a vlastnosti dreva, str. 202, Horáček, Fyzikální a mechanické vlastnosti dřeva I, str. 60)
 
 # Proudění podzemní vody
 
