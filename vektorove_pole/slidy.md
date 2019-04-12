@@ -265,7 +265,7 @@ praktickém použití většinou preferujeme názornou interpretaci
 jednotlivých veličin a proto se v rovnici mohou objevit další
 konstanty úměrnosti, které umožní sladit jednotky a fyzikální
 interpretaci členů. Někdy se naopak snažíme konstanty co nejvíce redukovat metodami transformace popsanými v přednášce o diferenciálních rovnicích. Proto volíme vhodné násobky veličin vystupujících v mateamtické formulaci tak, aby se co nejvíce konstant eliminovalo, případně shluklo do jediné veličiny. Zkušenosti ukazují, že je vhodné volit veličiny bezrozměrné. Například v
-Horáček, Fyzikální a mechanické vlastnosti dřeva I je zavedena bezrozměrná vlhkost, bezrozměrný čas a bezrozměrná vzdálenost na straně 61 pro rovnici popisující difuzi a charakteristická délka, Biotovo číslo (bezrozměrná tepelná vodivost) a bezrozměrná teplota, bezrozměrný čas a bezrozměrná vzdálenost pro rovnici popisující vedení tepla na stranách 88 a 89.
+Horáček, Fyzikální a mechanické vlastnosti dřeva I je zavedena [bezrozměrná vlhkost, bezrozměrný čas a bezrozměrná vzdálenost](https://is.mendelu.cz/eknihovna/opory/zobraz_cast.pl?cast=9180;lang=cz) na straně 61 pro rovnici popisující difuzi a [charakteristická délka, Biotovo číslo (bezrozměrná tepelná vodivost) a bezrozměrná teplota, bezrozměrný čas a bezrozměrná vzdálenost](https://is.mendelu.cz/eknihovna/opory/zobraz_cast.pl?cast=9182;lang=cz) pro rovnici popisující vedení tepla na stranách 88 a 89.
 
 # Vedení tepla
 
