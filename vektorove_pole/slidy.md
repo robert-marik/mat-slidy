@@ -264,7 +264,8 @@ matematice často rovnice uvažujeme v právě tomto tvaru.  Při
 praktickém použití většinou preferujeme názornou interpretaci
 jednotlivých veličin a proto se v rovnici mohou objevit další
 konstanty úměrnosti, které umožní sladit jednotky a fyzikální
-interpretaci členů.
+interpretaci členů. Někdy se naopak snažíme konstanty co nejvíce redukovat metodami transformace popsanými v přednášce o diferenciálních rovnicích. Proto volíme vhodné násobky veličin vystupujících v mateamtické formulaci tak, aby se co nejvíce konstant eliminovalo, případně shluklo do jediné veličiny. Zkušenosti ukazují, že je vhodné volit veličiny bezrozměrné. Například v
+Horáček, Fyzikální a mechanické vlastnosti dřeva I je zavedena bezrozměrná vlhkost, bezrozměrný čas a bezrozměrná vzdálenost na straně 61 pro rovnici popisující difuzi a charakteristická délka, Biotovo číslo (bezrozměrná tepelná vodivost) a bezrozměrná teplota, bezrozměrný čas a bezrozměrná vzdálenost pro rovnici popisující vedení tepla na stranách 88 a 89.
 
 # Vedení tepla
 
@@ -297,6 +298,8 @@ elektrického proudu transformací z jiného druhu energie.
 Ze střední školy známe [makroskopickou formu](https://cs.wikipedia.org/wiki/M%C4%9Brn%C3%A1_tepeln%C3%A1_kapacita#Vztah) $$mc\Delta T=Q.$$ Ta je
 zformulována pro těleso jako celek a $Q$ se uvažuje v opačném smyslu
 než v rovnici kontinuity (teplo je kladné, pokud jej dodáváme).
+
+V literatuře věnované problematice dřeva se rovnice vedení tepla ve dřevě označuje jako Druhý Fickův zákon (Podžgaj, Štruktúra a vlastnosti dreva, str. 202, Horáček, Fyzikální a mechanické vlastnosti dřeva I, str. 60)
 
 # Proudění tekutiny v mechanice kontinua
 
@@ -352,7 +355,6 @@ $$
 $$
 protože derivace konstantního násobku je násobek derivace.
 
-V literatuře věnované problematice dřeva se rovnice vedení tepla ve dřevě označuje jako Druhý Fickův zákon (Podžgaj, Štruktúra a vlastnosti dreva, str. 202, Horáček, Fyzikální a mechanické vlastnosti dřeva I, str. 60)
 
 # Proudění podzemní vody
 
