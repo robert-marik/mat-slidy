@@ -285,7 +285,7 @@ $$\rho c\frac{\partial T}{\partial t}+\mathop{\mathrm{div}}\vec j = 0,$$
 kde $T$ je teplota, $\vec j$ tok tepla. Konstanty $\rho$ a $c$ jsou
 hustota a měrná tepelná kapacita a slouží k přepočtení množství
 dodaného tepla na lépe měřitelnou veličinu, na změnu teploty.
-Pokud k tomuto tvaru rovnice kontinuity přidáme Fourierův zákon a divergenci p5evedeme na druhou stranu rovnice,
+Pokud k tomuto tvaru rovnice kontinuity přidáme Fourierův zákon a divergenci převedeme na druhou stranu rovnice,
 získáme
 $$\rho c\frac{\partial T}{\partial t}=\mathop{\mathrm{div}} (D\nabla T).$$ 
 To je zobecnění rovnice vedení tepla v jedné dimenzi, kterou jsme
@@ -299,7 +299,7 @@ Ze střední školy známe [makroskopickou formu](https://cs.wikipedia.org/wiki/
 zformulována pro těleso jako celek a $Q$ se uvažuje v opačném smyslu
 než v rovnici kontinuity (teplo je kladné, pokud jej dodáváme).
 
-V literatuře věnované problematice dřeva se rovnice vedení tepla ve dřevě označuje jako Druhý Fickův zákon (Podžgaj, Štruktúra a vlastnosti dreva, str. 202, Horáček, Fyzikální a mechanické vlastnosti dřeva I, str. 60)
+V literatuře věnované problematice dřeva se rovnice vedení tepla ve dřevě označuje jako Druhý Fickův zákon (Podžgaj a kol., Štruktúra a vlastnosti dreva, str. 202, Horáček, Fyzikální a mechanické vlastnosti dřeva I, str. 60)
 
 # Proudění tekutiny v mechanice kontinua
 
@@ -367,7 +367,7 @@ protože derivace konstantního násobku je násobek derivace.
 
 
 Stavovou veličinou při proudění podzemní vody s [volnou hladinou](https://cs.wikipedia.org/wiki/Hladina_podzemn%C3%AD_vody) je [piezometrická
-hladina](https://cs.wikipedia.org/wiki/Hladina_podzemn%C3%AD_vody) $h$.
+výška](https://cs.wikipedia.org/wiki/Hladina_podzemn%C3%AD_vody) $h$.
 
 Zcela obecný tvar rovnice kontinuity pro podzemní vodu, ve kterém
 uvažujeme hromadění vody (například proudění nenasycenou zeminou) konstantní hustoty a
@@ -379,7 +379,7 @@ objemová zásobnost (kolik vody je v jednotkovém množství půdy), $P$
 je celkový objem ze zdrojů a $h$ je piezometrická výška. S Darcyho zákonem vyjádřeným pomocí piezometrické výšky a bez dodatečných zdrojů ($P=0$) obdržíme
 $$\mathop{\mathrm{div}} \left(k\nabla h\right)=S\frac{\partial h}{\partial t}.$$
 Často je
-vertikální proudění zadnedbatelné a úloha není trojrozměrná, ale ve
+vertikální proudění zanedbatelné a úloha není trojrozměrná, ale ve
 skutečnosti dvourozměrná a klademe
 $\frac{\partial h}{\partial z}=0$. Pokud je možnost zvolit soustavu tak, že geometrické vlastnosti jsou v souladu s fyzikálními (jedna osa je ve směru největší a druhá ve směru nejmenší vodivosti), je tenzor $k$ diagonální  a rovnice se redukuje na
 $$\frac{\partial }{\partial x} \left(k_x \frac{\partial h}{\partial x}\right)

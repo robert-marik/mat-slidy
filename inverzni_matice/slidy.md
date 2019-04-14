@@ -447,7 +447,7 @@ deformaci tělesa, což uvidíme v Hookově zákoně na dalším slidu. Může
 se jednat také o zobrazení, které vektoru charakterizujícímu změnu tlaku v
 podzemní vodě přiřadí směr proudění. (Oba směry si nemusí odpovídat,
 protože voda je poháněna rozdílem tlaků ve směru největšího poklesu
-tlaku, ale současně si v anizotrponím prostředí hledá cestu nejmenšího
+tlaku, ale současně si v anizotropním prostředí hledá cestu nejmenšího
 odporu).
 
 Nechť je naše zobrazení vyjádřeno v nějaké bázi $\mathcal B$ maticí $A$,
