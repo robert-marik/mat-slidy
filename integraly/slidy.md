@@ -286,8 +286,7 @@ sílu. Ovšem jenom v extrémně pěkných případech.
   zmenšuje, protože visící kus řetězu se při namotávání
   zkracuje. Pokud nás zajímá práce nutná k vyčerpání vodní nádrže,
   musíme každý litr vody, který je na dně, "tahat" po delší dráze než
-  každý litr vody, který je na hladině a proto se mění dráha. Vzorec
-  (3) selhává v obou případech. Jednou kvůli nekonstantní síle,
+  každý litr vody, který je na hladině a proto se mění dráha. Vzorec (3) selhává v obou případech. Jednou kvůli nekonstantní síle,
   podruhé kvůli dráze.
 
 \iffalse

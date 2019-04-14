@@ -274,7 +274,7 @@ Jak vidno, vypočtenou hodnotu $x_1$ ihned použijeme pro výpočet $x_2$. Obě 
 V inženýrských problémech je častou aplikací lineární algebry
 transformace úlohy do vhodných souřadnic, ve kterých je popis
 jednodušší. Zpravidla se jedná o prosté otočení. Toto se používá při
-studiu dřeva, které má geometricky význačné směry, při studiu
+studiu dřeva, které má anatomicky význačné směry, při studiu
 vrstvených materiálů, při studiu chování vodorovně uložených
 geologických vrstev. Nemusí však vždy jít jenom o materiál s
 charakteristickými směry. Transformace mezi souřadnicemi se používá
@@ -314,7 +314,7 @@ V minulé přednášce jsme viděli, že je-li $A$ matice zobrazení v souřadni
 
 <div class='obtekat'>
 
-![Úloha na transformaci tenzoru napětí do geometrických směrů dřeva. Znázorněná krychlička je jenom reprezentující element většího tělesa. Zdroj: Podžgaj a kol., Štruktúra a vlastnosti drevá. ](podzgaj.jpg)
+![Úloha na transformaci tenzoru napětí do anatomických směrů dřeva. Znázorněná krychlička je jenom reprezentující element většího tělesa. Zdroj: Podžgaj a kol., Štruktúra a vlastnosti drevá. ](podzgaj.jpg)
 
 </div>
 
@@ -322,7 +322,7 @@ V knize Podžgaj a kol., Štruktúra a vlastnosti dreva je následující
 úloha. Dřevo v konfiguraci podle obrázku je namáháno pouze tahovou
 silou svisle, tedy tenzor napětí má jenom jednu nenulovou
 složku. Naším cílem je pootočit souřadnou soustavu tak, aby byl tenzor
-napětí vyjádřen v geometrických směrech dřeva. Úloha je v knize vyřešena pomocí směrových kosinů. Ukážeme si alternativní způsob, který je výhodný v tom, že využívá pouze základní aparát lineární algebry. Původní souřadnice
+napětí vyjádřen v anatomických směrech dřeva. Úloha je v knize vyřešena pomocí směrových kosinů. Ukážeme si alternativní způsob, který je výhodný v tom, že využívá pouze základní aparát lineární algebry. Původní souřadnice
 $(x_1,x_2)$ označíme $(x,y)$, osa $x$ směřuje vodorovně vpravo (v obrázku $x_2$) a osa $y$ nahoru (v obrázku $x_1$). Tenzor napětí je $A=
 \begin{pmatrix}
   0 & 0\\0& 10
@@ -390,10 +390,10 @@ Tento vztah je uveden i v literatuře Podžgaj a kol., Štruktúra a vlastnosti
 drevá a v e-opoře [Fyzikální a mechanické vlastnosti
 dřeva](https://is.mendelu.cz/eknihovna/opory/zobraz_cast.pl?cast=9178). Zde
 je také uvedena jedna z aplikací, transformace tenzoru deformací
-naměřených při bobtnání dřeva do geometrických směrů dřeva. To je
+naměřených při bobtnání dřeva do anatomických směrů dřeva. To je
 možné udělat po změření sklonu vláken a pootočení tenzoru o příslušný
 úhel. Získáme diagonální tenzor, který má v diagonále deformace v
-geometrických osách dřeva. Jednodušší alternativou je určení vlastních hodnot
+anatomických osách dřeva. Jednodušší alternativou je určení vlastních hodnot
 tenzoru deformace pomocí charakteristického polynomu, což je v tomto
 případě polynom kvadratický. Která vlastní hodnota patří ke kterému
 směru určíme ze znalosti uspořádání koeficientů bobtnání dřeva v
@@ -425,9 +425,9 @@ $\frac{\mathrm d}{\mathrm d\theta}S^2=2SC$, $\frac{\mathrm d}{\mathrm d\theta}CS
 $$
 \begin{aligned}
   \frac{\mathrm d a'_{11}}{\mathrm d\theta}&=
-  -2CSa_{11}+2SCa_{22}+2(C^2-S^2)a_{a2}=2a'_{12},\\
+  -2CSa_{11}+2SCa_{22}+2(C^2-S^2)a_{12}=2a'_{12},\\
   \frac{\mathrm d a'_{22}}{\mathrm d\theta}&=
-  2SCa_{11}-2CSa_{22}+2(S^2-C^2)a_{a2}=-2a'_{12}.\\
+  2SCa_{11}-2CSa_{22}+2(S^2-C^2)a_{12}=-2a'_{12}.\\
 \end{aligned}
 $$
 To znamená, že lokální extrémy diagonálních prvků nastávají v
