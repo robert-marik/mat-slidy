@@ -212,6 +212,101 @@ Gaussova eliminace je velice flexibilní a univerzální, umožní nám
 řešit i soustavy mající nekonečně mnoho řešení. V tomto případě
 dokážeme zapsat řešení pomocí parametrů.
 
+**Příklad.**
+
+$$
+\begin{aligned}
+  x_1+2x_2+2x_3+x_4&=0\\
+  x_1-x_2+x_3-2x_4&=1\\
+  x_2-2x_3+x_4&=2
+\end{aligned}
+$$
+
+Rozšířená matice soustavy je
+$$\left(
+  \begin{array}{cccc|c}
+ 1& 2& 2& 1& 0\\
+ 1& -1& 1& -2& 1\\
+ 0& 1& -2& 1& 2
+  \end{array}\right)
+  $$
+
+  V prvním kroku převedeme na tvar, kdy jednom jeden řádek začíná nenulovým prvkem. První řádek už nijak neupravujeme a opíšeme jej. Místo druhého řádku napíšeme jeho součet s $(-1)$-násobkem prvního řádku. 
+$$ \left( \begin{array}{cccc|c}
+ 1& 2& 2& 1& 0\\
+ 0& -3& -1& -3& 1\\
+ 0& 1& -2& 1& 2
+    \end{array}\right)
+    $$
+
+V dalším kroku převedeme na tvar, kdy z řádků začínajících jednou nulou ponecháme jenom jeden a ostatní upravíme tak, aby začínaly alespoň dvěma nulami. K tomu je vhodné nejprve přehodit poslední dva řádky, abychom mohli použít k vytváření nul jedničku.
+$$ \left( \begin{array}{cccc|c}
+ 1& 2& 2& 1& 0\\
+ 0& 1& -2& 1& 2\\
+ 0& -3& -1& -3& 1
+    \end{array}\right)
+    $$
+
+Nyní provedeme potřebnou úpravu. První dva řádky opíšeme. Místo třetího řádku napíšeme jeho součet s trojnásobkem druhého řádku.
+$$ \left( \begin{array}{cccc|c}
+ 1& 2& 2& 1& 0\\
+ 0& 1& -2& 1& 2\\
+ 0& 0& -7& 0& 7
+    \end{array}\right)
+    $$
+
+Nyní přepíšme do tvaru soustavy rovnic
+
+$$
+\begin{aligned}
+    x_1+2x_2+2x_3+x_4&=0\\
+  x_2-2x_3+x_4&=2\\
+-7x_3\phantom{+x_4}&=7
+\end{aligned}
+$$
+
+Z poslední rovnice máme snadno $x_3=-1$. Tutho hodnotu použijeme ve
+druhé rovnici. Protože však máme pořád dvě neznámé, jednu z nich
+zvolíme za parametr.
+$$
+\begin{aligned}
+  x_2-2x_3+x_4&=2\\
+  x_2+2+x_4&=2\\
+  x_2+x_4&=0\\
+  x_4&=t\\
+  x_2&=-t  
+\end{aligned}
+$$
+Vypočtené hodnoty dosadíme do první rovnice a určíme zbývající
+neznámou $x_1$.
+$$
+\begin{aligned}
+  x_1+2x_2+2x_3+x_4&=0\\
+  x_1-2t-2+t&=0\\
+  x_1&=2+t
+\end{aligned}
+$$
+Řešení je $x_1=2+t$, $x_2=-t$, $x_3=-1$, $x_4=t$, kde $t$ je libovolné reálné číslo. Vektorově (maticově) máme řešení ve tvaru
+$$
+\begin{pmatrix}
+  x_1\\x_2\\x_3\\x_4
+\end{pmatrix}
+=
+\begin{pmatrix}
+  2+t\\-t\\-1\\t
+\end{pmatrix}
+=
+\begin{pmatrix}
+  2\\0\\-1\\0
+\end{pmatrix}
++t
+\begin{pmatrix}
+  1\\-1\\0\\1
+\end{pmatrix}
+.
+$$
+
+
 # Gaussova-Seidelova iterační metoda
 
 Gaussova-Seidelova iterační metoda je jakýsi mezikrok mezi Jacobiho
