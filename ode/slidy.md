@@ -804,4 +804,4 @@ střední školy. Problematika spadá do oboru nazývaného lineární
 algebra, kterému se začneme věnovat na příští přednášce.
 
 Pro analogickou úlohu se vzpěrnou tlakovou pevností dřeva viz
-též Podžgaj, Štruktúra a vlastnosti dreva str. 359.
+též A. Požgaj, Štruktúra a vlastnosti dreva str. 359.

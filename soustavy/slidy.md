@@ -409,7 +409,7 @@ V minulé přednášce jsme viděli, že je-li $A$ matice zobrazení v souřadni
 
 <div class='obtekat'>
 
-![Úloha na transformaci tenzoru napětí do anatomických směrů dřeva. Znázorněná krychlička je jenom reprezentující element většího tělesa. Zdroj: Podžgaj a kol., Štruktúra a vlastnosti drevá. ](podzgaj.jpg)
+![Úloha na transformaci tenzoru napětí do anatomických směrů dřeva. Znázorněná krychlička je jenom reprezentující element většího tělesa. Zdroj: A. Požgaj a kol., Štruktúra a vlastnosti drevá. ](podzgaj.jpg)
 
 </div>
 
