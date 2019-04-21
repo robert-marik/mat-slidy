@@ -409,11 +409,11 @@ V minulé přednášce jsme viděli, že je-li $A$ matice zobrazení v souřadni
 
 <div class='obtekat'>
 
-![Úloha na transformaci tenzoru napětí do anatomických směrů dřeva. Znázorněná krychlička je jenom reprezentující element většího tělesa. Zdroj: A. Požgaj a kol., Štruktúra a vlastnosti drevá. ](podzgaj.jpg)
+![Úloha na transformaci tenzoru napětí do anatomických směrů dřeva. Znázorněná krychlička je jenom reprezentující element většího tělesa. Zdroj: A. Požgaj a kol., Štruktúra a vlastnosti drevá. ](pozgaj.jpg)
 
 </div>
 
-V knize Podžgaj a kol., Štruktúra a vlastnosti dreva je následující
+V knize A. Požgaj a kol., Štruktúra a vlastnosti dreva je následující
 úloha. Dřevo v konfiguraci podle obrázku je namáháno pouze tahovou
 silou svisle, tedy tenzor napětí má jenom jednu nenulovou
 složku. Naším cílem je pootočit souřadnou soustavu tak, aby byl tenzor
@@ -481,7 +481,7 @@ $$
   a_{11}\\a_{22}\\a_{12}
 \end{pmatrix}.
 $$
-Tento vztah je uveden i v literatuře Podžgaj a kol., Štruktúra a vlastnosti
+Tento vztah je uveden i v literatuře A. Požgaj a kol., Štruktúra a vlastnosti
 drevá a v e-opoře [Fyzikální a mechanické vlastnosti
 dřeva](https://is.mendelu.cz/eknihovna/opory/zobraz_cast.pl?cast=9178). Zde
 je také uvedena jedna z aplikací, transformace tenzoru deformací

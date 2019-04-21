@@ -299,7 +299,7 @@ Ze střední školy známe [makroskopickou formu](https://cs.wikipedia.org/wiki/
 zformulována pro těleso jako celek a $Q$ se uvažuje v opačném smyslu
 než v rovnici kontinuity (teplo je kladné, pokud jej dodáváme).
 
-V literatuře věnované problematice dřeva se rovnice vedení tepla ve dřevě označuje jako Druhý Fickův zákon (Podžgaj a kol., Štruktúra a vlastnosti dreva, str. 202, Horáček, Fyzikální a mechanické vlastnosti dřeva I, str. 60)
+V literatuře věnované problematice dřeva se rovnice vedení tepla ve dřevě označuje jako Druhý Fickův zákon (A. Požgaj a kol., Štruktúra a vlastnosti dreva, str. 202, Horáček, Fyzikální a mechanické vlastnosti dřeva I, str. 60)
 
 # Proudění tekutiny v mechanice kontinua
 
