@@ -1,6 +1,6 @@
 % Vektorová pole a jejich tok
 % Robert Mařík
-% 7.5.2019
+% 30.4.2019
 
 # Vektorové pole
 
@@ -29,7 +29,7 @@ Tok stavové veličiny danou plochou vyjadřuje, kolik stavové veličiny
 projde touto plochou za jednotku času, přepočteno na jednotku povrchu
 plochy.
 
-# Tok a gradient
+# Tok a gradient obecně
 
 Tok veličiny je způsoben nějakým hnacím faktorem. Například vítr (tok
 molekul vzduchu) je vyvolán nerovnoměrným rozložením vzduchu (jeho
@@ -48,7 +48,7 @@ intenzity toku na gradientu lineární.  A protože nulovému gradientu a
 nulovému rozdílu v hodnotách "hnacího faktoru" odpovídá nulový tok,
 bude tato lineární funkce přímou úměrností.
 
-Níže shrneme důležité praktické příklady, kdy je tok úměrný gradientu.
+V dalším shrneme důležité praktické příklady, kdy je tok úměrný gradientu.
 Konstanta úměrnosti je obecně pouze konstantou pro daný problém a dané
 hodnoty parametrů. Může se měnit s velikostí studovaného objektu
 (například obsah průřezu geologické vrstvy, kterou proudí voda), s
@@ -62,6 +62,8 @@ zvyklostech v příslušném podoboru, nebo na přístupu autora. Není proto
 naší ambicí vést výklad dopodrobna, všímejme si jenom základních
 myšlenek.
 
+# Tok a gradient v konkrérních případech
+
 Zákony uvedené níže byly často odvozeny v jednorozměrném případě. V
 moderní formulaci používáme obecný vektorový zápis, který zohledňuje i
 směr. Konstanta úměrnosti potom zprostředkovává vztah mezi dvěma
@@ -73,8 +75,7 @@ tenzor rozumět matici $3\times 3$ nebo $2\times 2$, podle
 kontextu. (Obecněji je možno považovat skalární veličiny a vektory za
 tenzory nižších řádů, toto my však dělat nebudeme.)
 
-
-## Fickův zákon (difúze)
+## Fickův zákon (difuze)
 
 V roce 1855 německý lékař A. Fick objevil, že difuzní tok $\vec J$
 (množství látky které projde při difúzi jednotkovou plochou za
@@ -85,7 +86,20 @@ Veličina $D$ se nazývá difuzní koeficient. Pokud má $\vec J$ stejný
 směr jako $\nabla c$, je $D$ skalární veličina. Pokud směry nejsou
 stejné, je $D$ tenzor. Z fyzikálních důvodů je tenzor $D$ symetrický.
 
+Difuzí se například dřevo zbavuje vlhkosti při vysoušení.
+
 ## Darcyho zákon (proudění podzemní vody)
+
+
+\iffalse
+
+<div class='obtekat'>
+
+![Vodárna [Káraný](http://www.vodarnakarany.cz/) infiltruje vodu do podzemí. Znalost, co se tam s vodou děje a kudy a jak teče je nezbytná. Základním zákonem pro popis tohoto děje je Darcyho zákon. Zdroj: nase-voda.cz, Nina Havlová](karany.jpg)
+
+</div>
+
+\fi
 
 V letech 1855 a 1856 francouzský inženýr H. Darcy pokusy prokázal
 přímou úměru mezi rozdílem tlaků na koncích
@@ -170,6 +184,17 @@ což zjistíme prostým maticovým násobením. Prostor pro další úpravu nen�
 
 ## Ortotropní případ, vhodně zvolené osy
 
+\iffalse
+
+<div class='obtekat'>
+
+![Ortotropní materiál je typicky materiál z jednotlivých vrstev. Typicky dřevo, půda z různých vrstev, lepenka. Zdroj: pixabay.com](lepenka.jpg)
+
+</div>
+
+\fi
+
+
 V obecném případě je zpravidla možné transformovat soustavu souřadnic tak, aby tenzor $K$ byl diagonální. Pro praktické výpočty se toto však často nevyplatí. Pokud však je studovaný problém ortotropní, má charakteristické směry (přesněji, má tři roviny symetrie materiálových vlastností), je možné zvolit souřadnice v souladu s těmito směry a matice $K$ je diagonální. 
 
 $$K=
@@ -222,7 +247,21 @@ nevznikne samostatný jižní pól a severní pól magnetu.)
 
 # Výpočet divergence
 
+Viz přednáška.
+
 # Rovnice kontinuity
+
+\iffalse 
+
+<div class='obtekat'>
+
+![Rovnice kontinuity je vlastně bilance zisků a ztrát pro danou
+ stavovou veličinu v libovolném bodě. Zdroj: pixabay.com](ucto.jpg)
+
+</div>
+
+\fi
+
 
 Předpokládejme, že tok vektorového pole přenáší nějakou stavovou
 veličinu (veličinu, která charakterizuje stav látky nebo
@@ -264,11 +303,11 @@ matematice často rovnice uvažujeme v právě tomto tvaru.  Při
 praktickém použití většinou preferujeme názornou interpretaci
 jednotlivých veličin a proto se v rovnici mohou objevit další
 konstanty úměrnosti, které umožní sladit jednotky a fyzikální
-interpretaci členů. Někdy se naopak snažíme konstanty co nejvíce redukovat metodami transformace popsanými v přednášce o diferenciálních rovnicích. Proto volíme vhodné násobky veličin vystupujících v mateamtické formulaci tak, aby se co nejvíce konstant eliminovalo, případně shluklo do jediné veličiny. Zkušenosti ukazují, že je vhodné volit veličiny bezrozměrné. Například v
-Horáček, Fyzikální a mechanické vlastnosti dřeva I je zavedena [bezrozměrná vlhkost, bezrozměrný čas a bezrozměrná vzdálenost](https://is.mendelu.cz/eknihovna/opory/zobraz_cast.pl?cast=9180;lang=cz) na straně 61 pro rovnici popisující difuzi a [charakteristická délka, Biotovo číslo (bezrozměrná tepelná vodivost) a bezrozměrná teplota, bezrozměrný čas a bezrozměrná vzdálenost](https://is.mendelu.cz/eknihovna/opory/zobraz_cast.pl?cast=9182;lang=cz) pro rovnici popisující vedení tepla na stranách 88 a 89.
+interpretaci členů. Někdy se naopak snažíme konstanty co nejvíce redukovat metodami transformace popsanými v přednášce o diferenciálních rovnicích. Proto volíme vhodné násobky veličin vystupujících v mateamtické formulaci tak, aby se co nejvíce konstant eliminovalo, případně shluklo do jediné veličiny. Zkušenosti ukazují, že je vhodné volit veličiny bezrozměrné. Například v publikaci P. Horáček, Fyzikální a mechanické vlastnosti dřeva I je zavedena [bezrozměrná vlhkost, bezrozměrný čas a bezrozměrná vzdálenost](https://is.mendelu.cz/eknihovna/opory/zobraz_cast.pl?cast=9180;lang=cz) na straně 61 pro rovnici popisující difuzi a [charakteristická délka, Biotovo číslo (bezrozměrná tepelná vodivost) a bezrozměrná teplota, bezrozměrný čas a bezrozměrná vzdálenost](https://is.mendelu.cz/eknihovna/opory/zobraz_cast.pl?cast=9182;lang=cz) pro rovnici popisující vedení tepla na stranách 88 a 89.
 
 # Vedení tepla
 
+\iffalse
 
 <div class='obtekat'>
 
@@ -276,26 +315,32 @@ Horáček, Fyzikální a mechanické vlastnosti dřeva I je zavedena [bezrozměr
 
 </div>
 
+\fi
 
 Důležitým speciálním případem rovnice kontinuity je vedení tepla, kdy
 dochází k přenosu energie a rovnice kontinuity vyjadřuje, že energie
 nemizí ani se netvoří. Proto má rovnice vedení tepla zpravidla nulový
 člen vyjadřující vydatnost zdrojů a tvar        
-$$\rho c\frac{\partial T}{\partial t}+\mathop{\mathrm{div}}\vec j = 0,$$
+$$\rho c\frac{\partial T}{\partial t}+\mathop{\mathrm{div}}\vec j = 0,\tag{1}$$
 kde $T$ je teplota, $\vec j$ tok tepla. Konstanty $\rho$ a $c$ jsou
 hustota a měrná tepelná kapacita a slouží k přepočtení množství
 dodaného tepla na lépe měřitelnou veličinu, na změnu teploty.
+
+* Veličina $\frac{\partial T}{\partial t}$ udává, jak rychle roste teplota tělesa a koeficient $\rho c$ tuto hodnotu přepočítává na údaj, jak rychle roste vnitřní energie tělesa (kinetická energie molekul.)
+* Člen $\mathop{\mathrm{div}}\vec j$ udává, kolik energie se v daném místě ubývá za jednotku času.
+* Rovnice (1) vyjadřuje to, že energie, která do místa proudí, tj. $-\mathop{\mathrm{div}}\vec j$, se projeví odpovídajícím zvýšením teploty.
+
 Pokud k tomuto tvaru rovnice kontinuity přidáme Fourierův zákon a divergenci převedeme na druhou stranu rovnice,
 získáme
 $$\rho c\frac{\partial T}{\partial t}=\mathop{\mathrm{div}} (D\nabla T).$$ 
 To je zobecnění rovnice vedení tepla v jedné dimenzi, kterou jsme
-odvodili primitivními prostředky v úvodní přednášce.
+odvodili primitivními prostředky (jenom pomocí parciálních derivací, bez gradientu a divergence) v úvodní přednášce.
 
 V některých případech nemusí být člen charakterizující zdroje
 nulový. Teplo může vznikat například při tření nebo při průchodu
 elektrického proudu transformací z jiného druhu energie.
 
-Ze střední školy známe [makroskopickou formu](https://cs.wikipedia.org/wiki/M%C4%9Brn%C3%A1_tepeln%C3%A1_kapacita#Vztah) $$mc\Delta T=Q.$$ Ta je
+Ze střední školy známe [makroskopickou formu](https://cs.wikipedia.org/wiki/M%C4%9Brn%C3%A1_tepeln%C3%A1_kapacita#Vztah) rovnice (1) $$mc\Delta T=Q.$$ Ta je
 zformulována pro těleso jako celek a $Q$ se uvažuje v opačném smyslu
 než v rovnici kontinuity (teplo je kladné, pokud jej dodáváme).
 
@@ -303,13 +348,15 @@ V literatuře věnované problematice dřeva se rovnice vedení tepla ve dřevě
 
 # Proudění tekutiny v mechanice kontinua
 
+\iffalse
+
 <div class='obtekat'>
 
 ![Rovnice mechaniky kontinua dokáží popsat i děje, které se odehrávají v tekutinách tekoucích jinak, než voda nebo ideální tekutina. Běžným příkladem je med, technicky významným například beton. Kromě rovnice kontinuity je nutné dodat ještě další fyzikální vztahy. Zdroj: pixabay.com.](med.jpg)
 
 </div>
 
-
+\fi
 
 V mechanice kontinua podobně jako u vedení tepla neuvažujeme zdroje. Rovnice kontinuity popisující proudění dané rychlostí $\vec u$ má poté tvar
 $$\frac{\partial \rho}{\partial t} + \mathop{\mathrm{div}} (\rho \vec {u}) = 0,$$
@@ -325,6 +372,7 @@ proudění místem s menším průřezem.
 
 # Proudění vody ve dřevě
 
+\iffalse
 
 <div class='obtekat'>
 
@@ -332,7 +380,7 @@ proudění místem s menším průřezem.
 
 </div>
 
-
+\fi
 
 Jedná se o rovnici kontiunity pro koncentraci vody $c$. Voda ve dřevě
 nevzniká ani nezaniká, jenom se transportuje mimo dřevo. Proto v
@@ -358,6 +406,7 @@ protože derivace konstantního násobku je násobek derivace.
 
 # Proudění podzemní vody
 
+\iffalse
 
 <div class='obtekat'>
 
@@ -365,18 +414,22 @@ protože derivace konstantního násobku je násobek derivace.
 
 </div>
 
+\fi
 
 Stavovou veličinou při proudění podzemní vody s [volnou hladinou](https://cs.wikipedia.org/wiki/Hladina_podzemn%C3%AD_vody) je [piezometrická
-výška](https://cs.wikipedia.org/wiki/Hladina_podzemn%C3%AD_vody) $h$.
+výška](https://cs.wikipedia.org/wiki/Hladina_podzemn%C3%AD_vody) $h$. (Pro jednoduchost si představme hladinu podzemní vody.)
 
-Zcela obecný tvar rovnice kontinuity pro podzemní vodu, ve kterém
-uvažujeme hromadění vody (například proudění nenasycenou zeminou) konstantní hustoty a
-zdroje či spotřebiče (například prosak do jiných geologických vrstev)
+Obecný tvar rovnice kontinuity pro podzemní vodu, ve kterém
+uvažujeme nestacionární stav a 
+zdroje či spotřebiče (například prosak do jiných geologických vrstev, mimo vodní kolektor)
 má [tvar](https://is.muni.cz/th/eqgoo/dp.pdf)
-$$\mathop{\mathrm{div}} (\vec v)=-S\frac{\partial h}{\partial t}+P,$$
-kde $\vec q$ je tok, $\rho$ je hustota vody, $S$ je měrná
+$$\mathop{\mathrm{div}} (\vec q)=-S\frac{\partial h}{\partial t}+P,$$
+kde $\vec q$ je tok, $S$ je měrná
 objemová zásobnost (kolik vody je v jednotkovém množství půdy), $P$
-je celkový objem ze zdrojů a $h$ je piezometrická výška. S Darcyho zákonem vyjádřeným pomocí piezometrické výšky a bez dodatečných zdrojů ($P=0$) obdržíme
+je celkový objem ze zdrojů a $h$ je piezometrická výška. 
+Tato rovnice vyjadřuje, že rozdíl mezi množstvím vody, které z místa vyteče a množstvím, které do místa vteče, je dán vydatností zdroje v tomto místě a tím, kolik vody v tomto místě ubude díky snížení hladiny podzemní vody (přesněji díky snížení piezometrické hladiny).
+
+S Darcyho zákonem vyjádřeným pomocí piezometrické výšky a bez dodatečných zdrojů ($P=0$) obdržíme
 $$\mathop{\mathrm{div}} \left(k\nabla h\right)=S\frac{\partial h}{\partial t}.$$
 Často je
 vertikální proudění zanedbatelné a úloha není trojrozměrná, ale ve
@@ -396,11 +449,10 @@ k_y \frac{\partial^2 h}{\partial y^2}
 S\frac{\partial h}{\partial t}.
 $$
 
-Ustálené proudění  v nasycené půdě (nemění se obsah vody) je popsáno rovnicí
-$$\mathop{\mathrm{div}}(K\nabla h)=0.$$
+Pro ustálené proudění ($h$ se nemění v čase) v těchto rovnicích klademe
+$$\frac{\partial h}{\partial t}=0.$$
+Je-li $K$ konstanta, redukuje se tato rovnice na 
+$$\frac{\partial ^2 h}{\partial x^2}+\frac{\partial^2 h}{\partial y^2}=0.$$
 
-
- 
 # Vedení tepla v homogenním izotropním materiálu a ve dřevě
 
-# Pohyb vody v půdě a ve dřevě
