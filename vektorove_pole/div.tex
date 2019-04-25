@@ -1,0 +1,35 @@
+\documentclass{standalone}
+
+\usepackage{tikz, tikz-3dplot}
+
+\begin{document}
+  \tdplotsetmaincoords{70}{115}
+
+  \begin{tikzpicture}[scale=4,tdplot_main_coords]
+    \coordinate (O) at (0,0,0);
+    \tdplotsetcoord{P}{1.414213}{54.68636}{45}
+
+    \begin{scope}[scale=0.15, shift={(0,8,7)}, purple]
+\draw[thick,->] (0,0,0) -- (1,0,0) node[anchor=north east]{$x$};
+\draw[thick,->] (0,0,0) -- (0,1,0) node[anchor=north west]{$y$};
+\draw[thick,->] (0,0,0) -- (0,0,1) node[anchor=south]{$z$};
+\end{scope}
+
+    \draw[] (O) -- (Py) -- (Pyz) -- (Pz) -- cycle;
+    \draw[] (O) -- (Px) -- (Pxy) -- (Py) -- cycle;
+    \draw[] (O) -- (Px) -- (Pxz) -- (Pz) -- cycle;
+    \draw[] (Pz) -- (Pyz) -- (P) -- (Pxz) -- cycle;
+    \draw[] (Px) -- (Pxy) -- (P) -- (Pxz) -- cycle;
+    \draw[] (Py) -- (Pxy) -- (P) -- (Pyz) -- cycle;
+
+    
+    \draw[-latex, blue] ($(Pxy)!0.5!(Pyz)$)-- ++ (0,0.5,0) node[right] {$q_y+\frac{\partial q_y}{\partial y}\Delta y$};
+
+    \draw[latex-, red] ($(O)!0.5!(Pxz)$)-- ++ (0,-0.3,0) node[above] {$q_y$};
+
+    \draw[latex-, red] ($(O)!0.5!(Pxy)$)-- ++ (0,0,-0.2) node[below] {$q_z$};
+
+    \draw[-latex, blue] ($(Pxz)!0.5!(Pyz)$)-- ++ (0,0,0.5) node[right] {$q_z+\frac{\partial q_z}{\partial z}\Delta z$};
+
+  \end{tikzpicture}
+\end{document}

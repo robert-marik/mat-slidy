@@ -1,4 +1,4 @@
-% Vektorová pole a jejich tok
+% Vektorová pole, tok, zákony zachování
 % Robert Mařík
 % 30.4.2019
 
@@ -6,7 +6,7 @@
 
 <div class='obtekat'>
 
-![Vektorové pole vykreslené v náhodných bodech v prostoru.](3d_pole.png)
+![Vektorové pole vykreslené v náhodných bodech v prostoru. Je vhodné pro popis proudění.](3d_pole.png)
 
 </div>
 
@@ -25,17 +25,36 @@ rychlost toku vody je nižší než rychlost jednotlivých molekul. To
 znamená, že na takový pohyb nemá smysl aplikovat Newtonovy pohybové
 zákony tak jak je známe z fyziky částic a tuhých těles.
 
-Tok stavové veličiny danou plochou vyjadřuje, kolik stavové veličiny
-projde touto plochou za jednotku času, přepočteno na jednotku povrchu
-plochy.
+> Poznámka (stavová veličina). Veličiny charakterizující stav tělesa se nazývají *stavové veličiny*. Tyto veličiny závisí jenom na současném stavu a ne na historii, jak se těleso do daného stavu dostalo. Některé stavové veličiny se mohou měnit ("přenášet") tokem definovaným pomocí vhodného vektorového pole. Tok stavové veličiny danou plochou vyjadřuje, kolik stavové veličiny projde touto plochou za jednotku času, přepočteno na jednotku povrchu plochy. 
 
-# Tok a gradient obecně
+Příkladem stavové veličiny může být množství vody v jednotkovém objemu
+dřeva, tj. koncentrace vody ve dřevě. Protože se voda ve dřevě může
+pohybovat, je tato stavová veličina přenášena jistým vektorovým
+polem. Tok tohoto pole v daném bodě vyjadřuje, kolik vody projde
+rovinnou plochou v daném místě za jednotku času. Orientace plochy se
+volí dle potřeby (podle toho, se kterou komponentou proudění chceme
+pracovat) a tok se přepočítává na jednotkovou plochu.
 
-Tok veličiny je způsoben nějakým hnacím faktorem. Například vítr (tok
+# Tok a gradient v konstitutivních zákonech
+
+> Poznámka (konstitutivní zákony). V aplikacích často formulujeme pomocí gradientu a toku vektorového pole *konstitutivní zákony*. To jsou zákony nebo vztahy mezi fyzikálními veličinami specifickými pro danou látku nebo materiál a udávají odezvu tohoto materiálu na externí stimul. Viz. též [Wikipedie](https://en.wikipedia.org/wiki/Constitutive_equation).
+
+\iffalse
+
+<div class='obtekat'>
+
+![Tok si snadno představíme mechanickým modelem. Například větru nebo vody. Zdroj: pixabay.com](vitr.jpg)
+
+</div>
+
+\fi
+
+
+Například vítr (tok
 molekul vzduchu) je vyvolán nerovnoměrným rozložením vzduchu (jeho
 hustoty a tím i tlaku) v prostoru a směruje z míst s vyšším tlakem do
 míst s tlakem nižším.  Větší rozdíl tlaků způsobí "větší vítr" a tím
-větší tok vzduchu. Toto platí i pro jiné proudění.
+větší tok vzduchu. Toto platí i pro jiné proudění, jak ukážeme dále.
 
 Nerovnoměrnost v prostorovém rozložení charakterizuje gradient. Viz
 [úvodní přednáška o
@@ -48,21 +67,21 @@ intenzity toku na gradientu lineární.  A protože nulovému gradientu a
 nulovému rozdílu v hodnotách "hnacího faktoru" odpovídá nulový tok,
 bude tato lineární funkce přímou úměrností.
 
-V dalším shrneme důležité praktické příklady, kdy je tok úměrný gradientu.
-Konstanta úměrnosti je obecně pouze konstantou pro daný problém a dané
-hodnoty parametrů. Může se měnit s velikostí studovaného objektu
-(například obsah průřezu geologické vrstvy, kterou proudí voda), s
-fyzikálními vlastnostmi proudící látky (např. viskozita nebo hustota
-tekutiny, stlačitelnost vzduchu), s fyzikálními vlastnostmi prostředí
-(např. velikost pórů v pórovitém prostředí nebo vlhkost dřeva). Proto
-je možné tyto zákony najít v různých tvarech, s různými členy a
-případnými přídavnými konstantami, které například odseparují vliv
-proudící látky a vliv prostředí. Vždy záleží na konkrétní situaci,
-zvyklostech v příslušném podoboru, nebo na přístupu autora. Není proto
-naší ambicí vést výklad dopodrobna, všímejme si jenom základních
-myšlenek.
+V dalším shrneme důležité praktické příklady, kdy je tok úměrný
+gradientu.  Konstanta úměrnosti je obecně pouze konstantou pro daný
+problém a dané hodnoty parametrů. Může se měnit s velikostí
+studovaného objektu (například obsah průřezu geologické vrstvy, kterou
+proudí voda), s fyzikálními vlastnostmi proudící látky
+(např. viskozita nebo hustota tekutiny, stlačitelnost vzduchu), s
+fyzikálními vlastnostmi prostředí (např. velikost pórů v pórovitém
+prostředí nebo vlhkost dřeva). Proto je možné tyto zákony najít v
+různých tvarech, s různými členy a případnými přídavnými konstantami,
+které například odseparují vliv proudící látky a vliv prostředí. Vždy
+záleží na konkrétní situaci, zvyklostech v příslušném podoboru, nebo
+na přístupu autora. Není proto naší ambicí vést výklad dopodrobna,
+všímejme si jenom základních myšlenek.
 
-# Tok a gradient v konkrérních případech
+# Vybrané konstitutivní zákony
 
 Zákony uvedené níže byly často odvozeny v jednorozměrném případě. V
 moderní formulaci používáme obecný vektorový zápis, který zohledňuje i
@@ -78,7 +97,7 @@ tenzory nižších řádů, toto my však dělat nebudeme.)
 ## Fickův zákon (difuze)
 
 V roce 1855 německý lékař A. Fick objevil, že difuzní tok $\vec J$
-(množství látky které projde při difúzi jednotkovou plochou za
+(množství látky které projde při difuzi jednotkovou plochou za
 jednotku času) je úměrný gradientu koncentrace $c$ této
 látky. Matematicky vyjádřeno pomocí moderní terminologie to znamená, že platí
 $$\vec J=-D\nabla c. $$
@@ -155,7 +174,7 @@ gradientu teploty. Viz Wikipedia a heslo Thermophoresis.
 
 # Speciální případy vztahu mezi gradientem a tokem
 
-Uvažujme vztah mezi gradientem a tokem ve tvaru $$\vec j=-K\nabla \varphi,$$ kde $K$ je symetrický tenzor. Gradient má ve trojrozměrném případě vyjádření
+Uvažujme vztah mezi gradientem a tokem ve tvaru $$\vec j=-K\nabla \varphi,$$ kde $K$ je symetrický tenzor. Gradient má ve trorozměrném případě vyjádření
 $$\nabla \varphi =\left(\frac{\partial \varphi}{\partial x},\frac{\partial \varphi}{\partial y},\frac{\partial \varphi}{\partial z}\right)^T$$
 a ve 2D
 $$\nabla \varphi =\left(\frac{\partial \varphi}{\partial x},\frac{\partial \varphi}{\partial y}\right)^T.$$ 
@@ -169,7 +188,7 @@ Veličina $K$ je matice $$K=
   k_{31}& k_{32} & k_{33}
 \end{pmatrix}
 $$
-jejíž komponenty splňují $k_{ij}=k_{ji}$. Zpravidla jsou všechny
+jejíž komponenty splňují $k_{ij}=k_{ji}$. Často jsou všechny
 veličiny kladné a prvky v hlavní diagonále jsou dominantní.
 
 Komponenty vektoru $\vec j$ jsou
@@ -226,26 +245,40 @@ $\vec j=-k\nabla \varphi$, kde $k$ je konstanta a vektory toku a gradientu mají
 
 # Divergence
 
+
+\iffalse 
+
+<div class='obtekat'>
+
+![Divergence a tok pole $\vec q=(0,q_y, q_z)$ krychlí. Červené vektory vstupují do krychle a příslušné toky se počítají záporně. Modré vystupují ven a počítají se kladně. V tomto případě je celková bilance kladná, z objemu více vyteče, než vteče dovnitř. Divergence je kladná. Pokud v krychli množství veličiny neubývá, musí tam být zdroj této veličiny.](divergence.png)
+
+</div>
+
+\fi
+
+
 Divergence je veličina, která udává tok vektorového pole z uvažovaného
 místa. Protože záleží na objemu, ze kterého tok sledujeme,
 je tento tok vztažený na jednotku objemu. 
 
+
 * Pro vektorovou funkci $$\vec F=(P,Q,R)=P\vec i + Q\vec j + R\vec k,$$ kde $P$, $Q$ a $R$ jsou funkce tří proměnných $x$, $y$ a $z$ definujeme
 divergenci vztahem
 	  $$\mathop{\mathrm{div}}\vec F=\nabla\cdot\vec F=\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}.$$
-* Pro vektorovou funkci dvou proměnných definujeme divergenci analogicky, pouze chybí třetí člen. [Online výpočet a obrázek.](https://sagecell.sagemath.org/?z=eJyNUstqwzAQvBv8D0uS1jJRipO7rv2JOhjFlhOBbBn5USkh_96V4iZpoVBh0K52RqOdtaWOntnEDUksODgnaRzFUU2sP08Z2Thq145mKeBaQivaUemJg9EDLwVIqOQkzFG0pYij5U_ezAq8G-sPsN-_sQ_wLAH-QbaRLQXbcEvBhdhhDAw2Wwr4hc0DUaFmpJJ1TeqPbE9tup6T7Z66e7Lbo3D61sumU7J2RT0qRbD1cjTq8S7YPLjnZ65L6b22exbJPPBRy541tx4Iwd_-pD_JaWgUMYtVfhBH2V64ksdWVFfIJ1HC-yuDlx7yHPI4Qlfyhg8n3V3CbpoL9nm9_guJNt6RwDxStNVdbbV4CSyi-CAswd4Zds_8T4EGUbgde1d_V-bS7NhzDZdvslN6KFB30KaopVAVCY7M06bekDnG2zAKM_Yj9qmjYczulvK-w3sKwwepGY661EoblhzUKJL0C_Io15w=&lang=sage)
-
+* Pro vektorovou funkci dvou proměnných definujeme divergenci analogicky, pouze chybí třetí člen. 
 
 Pokud při ustáleném proudění je v některém místě kladná divergence,
 znamená to, že v tomto místě musí být zdroj této veličiny. Proto se
 vektorové pole, jehož divergence je rovna nule, se nazývá **nezřídlové
 pole**. Ze střední školy z fyziky umíme modelovat vektorové pole
 pomocí siločar. Siločáry nezřídlového pole nikde nezačínají ani
-nekončí a jsou to uzavřené křivky. Stacionární magnetické pole je
+nekončí a jsou to uzavřené křivky. 
+
+Například stacionární magnetické pole je
 nezřídlové (rozříznutím tyčového magnetu vzniknou dva magnety,
 nevznikne samostatný jižní pól a severní pól magnetu.)
 
-# Výpočet divergence
+# Výpočet gradientu a divergence
 
 Viz přednáška.
 
@@ -283,10 +316,9 @@ veličiny, které vyprodukují v jednotkovém objemu za jednotku času)
 označíme $\sigma$, přičemž spotřebiče bereme jako zdroje se zápornou
 vydatností.
 
-Rovnice kontinuity je matematické vyjádření zákona zachování. Udává,
-že pro libovolnou část tělesa je rychlost změny množství stavové
-veličiny dáno celkovou vydatností zdrojů v této části snížené o tok z
-této části tělesa ven. Pro přesné odvození pro libovolnou část objemu
+> Rovnice kontinuity je matematické vyjádření zákona zachování. Udává, že pro libovolnou malou reprezentativní část tělesa je rychlost změny množství stavové veličiny dáno celkovou vydatností zdrojů v této části snížené o tok z této části tělesa ven. 
+
+Pro přesné odvození pro libovolnou část objemu
 nemáme bohužel matematické prostředky (tok vyjádřený pomocí plošného
 integrálu, celkové množství tělesa promocí trojného integrálu a věty
 pro převod plošného integrálu na trojný), ale pokusíme se tedy o
@@ -385,7 +417,7 @@ proudění místem s menším průřezem.
 Jedná se o rovnici kontiunity pro koncentraci vody $c$. Voda ve dřevě
 nevzniká ani nezaniká, jenom se transportuje mimo dřevo. Proto v
 rovnici nebudou zdroje. Příslušným konstitutivním zákonem je Fickův
-zákon. Příslušná rovnice popisující tento proces má tvar
+zákon. Rovnice popisující tento proces má tvar
 $$\frac{\partial c}{\partial t}=\mathrm{\mathop{div}}(D\nabla c)\tag{*}$$
 anebo (po započtení Soretova efektu)
 $$\frac{\partial c}{\partial t}=\mathrm{\mathop{div}}(D\nabla c+sD\nabla T).$$
@@ -423,16 +455,15 @@ Obecný tvar rovnice kontinuity pro podzemní vodu, ve kterém
 uvažujeme nestacionární stav a 
 zdroje či spotřebiče (například prosak do jiných geologických vrstev, mimo vodní kolektor)
 má [tvar](https://is.muni.cz/th/eqgoo/dp.pdf)
-$$\mathop{\mathrm{div}} (\vec q)=-S\frac{\partial h}{\partial t}+P,$$
+$$\mathop{\mathrm{div}} \vec q=-S\frac{\partial h}{\partial t}+P,$$
 kde $\vec q$ je tok, $S$ je měrná
-objemová zásobnost (kolik vody je v jednotkovém množství půdy), $P$
+objemová zásobnost (kolik vody je v\ jednotkovém množství půdy), $P$
 je celkový objem ze zdrojů a $h$ je piezometrická výška. 
 Tato rovnice vyjadřuje, že rozdíl mezi množstvím vody, které z místa vyteče a množstvím, které do místa vteče, je dán vydatností zdroje v tomto místě a tím, kolik vody v tomto místě ubude díky snížení hladiny podzemní vody (přesněji díky snížení piezometrické hladiny).
 
-S Darcyho zákonem vyjádřeným pomocí piezometrické výšky a bez dodatečných zdrojů ($P=0$) obdržíme
+S Darcyho zákonem vyjádřeným pomocí piezometrické výšky, tj. $$\vec q=-k\nabla h,$$ a bez dodatečných zdrojů ($P=0$) obdržíme
 $$\mathop{\mathrm{div}} \left(k\nabla h\right)=S\frac{\partial h}{\partial t}.$$
-Často je
-vertikální proudění zanedbatelné a úloha není trojrozměrná, ale ve
+Často je vertikální proudění zanedbatelné a úloha není trojrozměrná, ale ve
 skutečnosti dvourozměrná a klademe
 $\frac{\partial h}{\partial z}=0$. Pokud je možnost zvolit soustavu tak, že geometrické vlastnosti jsou v souladu s fyzikálními (jedna osa je ve směru největší a druhá ve směru nejmenší vodivosti), je tenzor $k$ diagonální  a rovnice se redukuje na
 $$\frac{\partial }{\partial x} \left(k_x \frac{\partial h}{\partial x}\right)
@@ -451,8 +482,8 @@ $$
 
 Pro ustálené proudění ($h$ se nemění v čase) v těchto rovnicích klademe
 $$\frac{\partial h}{\partial t}=0.$$
-Je-li $K$ konstanta, redukuje se tato rovnice na 
+Je-li $K$ konstanta, redukuje se tato rovnice popisující proudění podzemní vody na rovnici
 $$\frac{\partial ^2 h}{\partial x^2}+\frac{\partial^2 h}{\partial y^2}=0.$$
 
-# Vedení tepla v homogenním izotropním materiálu a ve dřevě
+# Rovnice vedení tepla v různých prostředích
 

@@ -9,7 +9,8 @@ sed -i 's/<blockquote><p>Věta\./<blockquote class="veta"><p class="vetaname">V�
 sed -i 's/<blockquote><p>Věta (\([^\.]*\))./<blockquote class="veta"><p class="vetaname">Věta (\1).<\/p><p>/' index.html
 sed -i 's/<blockquote><p>Důsledek (\([^\.]*\))./<blockquote class="veta"><p class="vetaname">Důsledek (\1).<\/p><p>/' index.html
 sed -i 's/<blockquote><p>Důsledek\./<blockquote class="veta"><p class="vetaname">Důsledek.<\/p><p>/' index.html
-sed -i 's/<blockquote><p>Poznámka./<blockquote class="poznamka"><p class="poznamkaname">Poznámka.<\/p><p>/' index.html
+sed -i 's/<blockquote><p>Poznámka (\([^\.]*\))\./<blockquote class="poznamka"><p class="poznamkaname">Poznámka (\1).<\/p><p>/' index.html
+sed -i 's/<blockquote><p>Poznámka\./<blockquote class="poznamka"><p class="poznamkaname">Poznámka.<\/p><p>/' index.html
 
 #pandoc -t html --css my.css -s slidy.md -o index_p.html --mathjax=http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML 
 #pandoc -t slidy -V slidy-url=../ --css ../my.css --template ../my.deck -s slidy_kopie.md -o index_d.html --mathjax=http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
