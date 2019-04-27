@@ -15,8 +15,8 @@
 \draw[thick,->] (0,0,0) -- (0,0,1) node[anchor=south]{$z$};
 \end{scope}
 
-    \draw[] (O) -- (Py) -- (Pyz) -- (Pz) -- cycle;
-    \draw[] (O) -- (Px) -- (Pxy) -- (Py) -- cycle;
+    \draw[] (O) -- (Py) -- node[right] {$\Delta z$} (Pyz) -- (Pz) -- cycle;
+    \draw[] (O) -- (Px) -- node[below] {$\Delta y$}(Pxy) -- node[below right] {$\Delta x$} (Py) -- cycle;
     \draw[] (O) -- (Px) -- (Pxz) -- (Pz) -- cycle;
     \draw[] (Pz) -- (Pyz) -- (P) -- (Pxz) -- cycle;
     \draw[] (Px) -- (Pxy) -- (P) -- (Pxz) -- cycle;

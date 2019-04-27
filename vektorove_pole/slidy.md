@@ -2,6 +2,29 @@
 % Robert Mařík
 % 30.4.2019
 
+# Připomenutí derivací
+
+## (Obyčejná) derivace $\frac{\mathrm df}{\mathrm dt}$. 
+
+* S touto derivací se pracuje u funkce jedné proměnné $f(t)$. Např. $f(t)=kt^2$, kde $k$ je parametr (reálné číslo).
+* Derivace je okamžitá rychlost změny veličiny $f$ vzhledem k $t$, tj. nárůst veličiny $f$ vyvolaný jednotkovým nárůstem veličiny $t$. (Prakticky však veličinu $t$ změníme o malou hodnotu a nárlst přepočítáme na jednotovou změnu.)
+* Jednotka derivace je stejná, jako bychom veličiny $f$ a $t$ dělili.
+* V modelech a při praktickém využití pracujeme s definicí derivace jako s rychlostí změny. Při výpočtu ale využíváme dostupné vzorce pro výpočet derivace. Například pro funkci z prvního bodu platí $\frac{\mathrm df}{\mathrm dt}=2kt.$
+
+## Parciální derivace $\frac{\partial f}{\partial t}$, $\frac{\partial f}{\partial x}$, $\dots$. 
+
+* S touto derivací se pracuje u funkce více proměnných, typicky $f(x,y,z,t)$. Např. $f(x,y,z,t)=xt^2$
+* Jedná se o obyčejnou derivaci podle jedné proměnné, přičemž ostatní proměnné považujeme za parametry. Tj. v případě funkce z minulého bodu je $\frac{\partial f}{\partial t}=2xt$, $\frac{\partial f}{\partial x}=t^2$,  $\frac{\partial f}{\partial y}=\frac{\partial f}{\partial z}=0$.
+* Pro jednotku a výpočet platí totéž co u obyčejné derivace. 
+* Při aplikacích často pracujeme s gradientem, tj. s vektorem sestaveným z parciálních derivací podle jednotlivých prostorových proměnných. Pro funkci tří proměnných $x$, $y$ a $z$ a pro 
+potřeby matematické formulace fyzikálních zákonů gradient uvažujeme jako sloupcový
+vektor
+$$\nabla f =\begin{pmatrix}\frac{\partial \varphi}{\partial x}\\\frac{\partial \varphi}{\partial y}\\\frac{\partial \varphi}{\partial z}\end{pmatrix}.$$
+Pro úsporu místa jej někdy píšeme v transponovaném tvaru
+$$\nabla f =\left(\frac{\partial \varphi}{\partial x},\frac{\partial \varphi}{\partial y},\frac{\partial \varphi}{\partial z}\right)^T.$$ Gradient je vektor, který má směr odpovídající směru nejrychlejšího růstu skalární veličiny a velikost je stejná jako derivace v daném směru.
+
+
+
 # Vektorové pole
 
 <div class='obtekat'>
@@ -56,15 +79,9 @@ hustoty a tím i tlaku) v prostoru a směruje z míst s vyšším tlakem do
 míst s tlakem nižším.  Větší rozdíl tlaků způsobí "větší vítr" a tím
 větší tok vzduchu. Toto platí i pro jiné proudění, jak ukážeme dále.
 
-Nerovnoměrnost v prostorovém rozložení charakterizuje gradient. Viz
-[úvodní přednáška o
-derivacích](http://user.mendelu.cz/marik/mt/mat-slidy/derivace/index.html#(13)). Pro
-potřeby matematické formulace fyzikálních zákonů gradient uvažujeme jako sloupcový
-vektor.
-
+Nerovnoměrnost v prostorovém rozložení charakterizuje gradient. 
 V ustáleném stavu je pro široké rozmezí fyzikálních problémů závislost
-intenzity toku na gradientu lineární.  A protože nulovému gradientu a
-nulovému rozdílu v hodnotách "hnacího faktoru" odpovídá nulový tok,
+intenzity toku na gradientu lineární.  A protože nulovému gradientu (nulovému stimulu) odpovídá nulový tok (nulová odezva),
 bude tato lineární funkce přímou úměrností.
 
 V dalším shrneme důležité praktické příklady, kdy je tok úměrný
@@ -250,33 +267,47 @@ $\vec j=-k\nabla \varphi$, kde $k$ je konstanta a vektory toku a gradientu mají
 
 <div class='obtekat'>
 
-![Divergence a tok pole $\vec q=(0,q_y, q_z)$ krychlí. Červené vektory vstupují do krychle a příslušné toky se počítají záporně. Modré vystupují ven a počítají se kladně. V tomto případě je celková bilance kladná, z objemu více vyteče, než vteče dovnitř. Divergence je kladná. Pokud v krychli množství veličiny neubývá, musí tam být zdroj této veličiny.](divergence.png)
+![Divergence a tok pole $\vec q=(0,q_y, q_z)$ krychlí. Tok je zobrazen vždy ve středu stěny. Červené vektory vstupují do krychle a příslušné toky se počítají záporně. Modré vystupují ven a počítají se kladně. V tomto případě je celková bilance kladná, z objemu více vyteče, než vteče dovnitř. Divergence je kladná. Pokud v krychli množství veličiny neubývá, musí tam být zdroj této veličiny.](divergence.png)
 
 </div>
 
 \fi
 
 
-Divergence je veličina, která udává tok vektorového pole z uvažovaného
-místa. Protože záleží na objemu, ze kterého tok sledujeme,
-je tento tok vztažený na jednotku objemu. 
+Budeme sledovat tok vektorového pole ze zvoleného 
+místa. Vyjádříme bilanci, o kolik více vektorové pole proudí z
+daného místa ve srování s tokem tohoto pole do daného místa. Protože
+záleží na objemu, ve kterém tok sledujeme, je  vztáhneme tento tok na
+jednotku objemu.
+
+Fyzikálně tok ven uvažujeme jako kladný a tok dovnitř jako záporný. Velikost toku rovinnou plochou určíme jako součin vektorového pole v tomto místě a  obsahu plochy.
+Celkový tok $\vec q=(0,q_y,q_z)$ do krychle na obrázku je součtem toků levou boční stěnou a dolní stěnou, tj. 
+$$Q_{in}=-q _y\Delta x \Delta z - q _z\Delta x \Delta y.$$
+Podobně tok ven z krychle je  $$Q_{out}=\left(q_z+\frac {\partial q_z}{\partial z}\Delta z\right)\Delta x\Delta y + \left(q_y+\frac {\partial q_y}{\partial y}\Delta y\right)\Delta x\Delta z$$
+a celková bilance je 
+$$Q_{in}+Q_{out}=
+\left(\frac {\partial q_y}{\partial y}+\frac {\partial q_z}{\partial z}\right)\Delta x\Delta y\Delta z.
+$$
+V případě proudění i v ose $x$ bude přítomen ještě další analogický člen charakterizující tuto dodatečnou položku. 
+Těmtito úvahami je motivována následující definice a věta.
+
+> Definice (divergence). *Divergence* vektorového pole $\vec F$ v daném bodě je převis toku vektorového pole z tohoto místa nad tokem do tohoto místa. Tento převis je vztažený na jednotku objemu. Divergenci vektorového pole $\vec F$ označujeme $\mathop{\mathrm{div}}\vec F$ nebo $\nabla \cdot \vec F$.
 
 
-* Pro vektorovou funkci $$\vec F=(P,Q,R)=P\vec i + Q\vec j + R\vec k,$$ kde $P$, $Q$ a $R$ jsou funkce tří proměnných $x$, $y$ a $z$ definujeme
-divergenci vztahem
-	  $$\mathop{\mathrm{div}}\vec F=\nabla\cdot\vec F=\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}.$$
-* Pro vektorovou funkci dvou proměnných definujeme divergenci analogicky, pouze chybí třetí člen. 
+> Věta (výpočet divergence).
+> Pro vektorovou funkci $$\vec F=(P,Q,R)=P\vec i + Q\vec j + R\vec k,$$ kde $P$, $Q$ a $R$ jsou funkce tří proměnných $x$, $y$ a $z$ vypočteme divergenci vztahem 	  $$\mathop{\mathrm{div}}\vec F=\nabla\cdot\vec F=\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}.$$
+> Pro vektorovou funkci dvou proměnných vypočteme divergenci analogicky, pouze chybí třetí člen. 
 
 Pokud při ustáleném proudění je v některém místě kladná divergence,
 znamená to, že v tomto místě musí být zdroj této veličiny. Proto se
 vektorové pole, jehož divergence je rovna nule, se nazývá **nezřídlové
-pole**. Ze střední školy z fyziky umíme modelovat vektorové pole
+pole**. 
+
+Ze střední školy z fyziky umíme modelovat vektorové pole
 pomocí siločar. Siločáry nezřídlového pole nikde nezačínají ani
 nekončí a jsou to uzavřené křivky. 
-
 Například stacionární magnetické pole je
-nezřídlové (rozříznutím tyčového magnetu vzniknou dva magnety,
-nevznikne samostatný jižní pól a severní pól magnetu.)
+nezřídlové. Absence zdrojů magnetického pole se projevuje tak, že rozříznutím tyčového magnetu vzniknou dva menší polnohodnotné magnety. Nevznikne samostatný jižní pól a samostatný severní pól magnetu. To je rozdíl oproti poli elektrickému, kdy rozdělením tyče s opačně nabitými konci vznikne jedna kladně nabitá a jedna záporně nabitá tyč poloviční délky.
 
 # Výpočet gradientu a divergence
 
@@ -425,7 +456,7 @@ Ve druhém případě musíme tuto rovnici uvažovat společně s rovnicí
 vedení tepla a mít tedy úlohu na soustavu dvou rovnic pro dvě
 modelovaná pole.
 
-V případě dřeva volíme souřadné osy souhlasně s charakteristickými směry ve dřevě a matice $D$ je poté diagonální. Proto se (*) redukuje na
+V případě dřeva volíme pokud možno souřadné osy souhlasně s anatomickými směry dřeva a matice $D$ je poté diagonální. Proto se (*) redukuje na
 $$
 \frac{\partial c}{\partial t}=\frac{\partial }{\partial x}\left(D_x\frac{\partial c}{\partial x}\right)+\frac{\partial }{\partial y}\left(D_y\frac{\partial c}{\partial y}\right)+\frac{\partial }{\partial z}\left(D_z\frac{\partial c}{\partial z}\right)
 $$
@@ -448,17 +479,19 @@ protože derivace konstantního násobku je násobek derivace.
 
 \fi
 
+Podzemní vodou se rozumí voda přítomná pod zemským povrchem, která teče porézním prostředím tvořeným propustnými horninami a geologickými vrstvami nad nepropustnou vrstvou (volná hladina) mnebo mezi dvěma nepropustnými vrstvami (napjatá hladina). 
+
 Stavovou veličinou při proudění podzemní vody s [volnou hladinou](https://cs.wikipedia.org/wiki/Hladina_podzemn%C3%AD_vody) je [piezometrická
 výška](https://cs.wikipedia.org/wiki/Hladina_podzemn%C3%AD_vody) $h$. (Pro jednoduchost si představme hladinu podzemní vody.)
 
 Obecný tvar rovnice kontinuity pro podzemní vodu, ve kterém
-uvažujeme nestacionární stav a 
+uvažujeme nestlačitelnou kapalinu, nestacionární stav a 
 zdroje či spotřebiče (například prosak do jiných geologických vrstev, mimo vodní kolektor)
 má [tvar](https://is.muni.cz/th/eqgoo/dp.pdf)
 $$\mathop{\mathrm{div}} \vec q=-S\frac{\partial h}{\partial t}+P,$$
-kde $\vec q$ je tok, $S$ je měrná
-objemová zásobnost (kolik vody je v\ jednotkovém množství půdy), $P$
-je celkový objem ze zdrojů a $h$ je piezometrická výška. 
+kde $\vec q$ je tok, $P$
+je celkový objem ze zdrojů, $h$ je piezometrická výška  a 
+ $S$ je měrná objemová zásobnost (kolik vody se uvolní z\ jednotkového množství půdy při změně piezometrické výšky o jednotku). 
 Tato rovnice vyjadřuje, že rozdíl mezi množstvím vody, které z místa vyteče a množstvím, které do místa vteče, je dán vydatností zdroje v tomto místě a tím, kolik vody v tomto místě ubude díky snížení hladiny podzemní vody (přesněji díky snížení piezometrické hladiny).
 
 S Darcyho zákonem vyjádřeným pomocí piezometrické výšky, tj. $$\vec q=-k\nabla h,$$ a bez dodatečných zdrojů ($P=0$) obdržíme
