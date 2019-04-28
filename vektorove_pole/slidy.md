@@ -547,11 +547,11 @@ $$\frac{\partial ^2 h}{\partial x^2}+\frac{\partial^2 h}{\partial y^2}=0.$$
 # Rovnice vedení tepla ve 2D v různých podmínkách
 
 Uvažujme rovnici vedení tepla ve dvou rozměrech a v  prostředí bez zdrojů.
-$$\rho c\frac{\partial T}{\partial t}=\mathop{\mathrm{div}} (D\nabla T)$$
+$$\rho c\frac{\partial T}{\partial t}=\mathop{\mathrm{div}} (D\nabla T)\tag{**}$$
 
 ## Stacionární stav
 
-Stacionární stav znamená, že stavové veličiny nezávisí na čase. Derivace podle času je v takovém případě nulová. Rovnice se redukuje na 
+Stacionární stav znamená, že stavové veličiny nezávisí na čase. Derivace podle času je v takovém případě nulová. Rovnice (**) se redukuje na 
 $$\mathop{\mathrm{div}} (D\nabla T)=0.$$
 
 
@@ -559,7 +559,7 @@ $$\mathop{\mathrm{div}} (D\nabla T)=0.$$
 
 Materiál má ve všech místech (homogenní) a ve všech směrech (izotropní) stejné vlastnosti.
 
-Veličina $D$ je reálná skalární veličina (konstanta). Podle pravidla derivace konstantního násobku se rovnice redukuje na  
+Veličina $D$ je reálná skalární veličina (konstanta). Podle pravidla derivace konstantního násobku se rovnice (**) redukuje na  
 $$\rho c\frac{\partial T}{\partial t}=D\mathop{\mathrm{div}} (\nabla T)$$
 a ve složkách
 $$\rho c\frac{\partial T}{\partial t}=D\left(\frac{\partial^2 T}{\partial x^2}+\frac{\partial^2 T}{\partial y^2}\right).$$
@@ -572,7 +572,7 @@ Materiál má dva charakteristické směry související s rovinami
 symetrie. Zvolíme soustavu souřadnic tak, aby osy byly orientovány ve
 směru vlastních vektorů.
 
-Veličina $D$ je diagonální matice. Pro $$D=\begin{pmatrix}D_x & 0\\ 0& D_y\end{pmatrix}$$ je ve složkách
+Veličina $D$ je diagonální matice. Pro $$D=\begin{pmatrix}D_x & 0\\ 0& D_y\end{pmatrix}$$ je tvar rovnice (**) ve složkách
 $$\rho c\frac{\partial T}{\partial t}=\frac{\partial }{\partial x}\left(D_x\frac{\partial T}{\partial x}\right)
 +\frac{\partial }{\partial y}\left(D_y\frac{\partial T}{\partial y}\right).$$
 
@@ -582,5 +582,5 @@ $$\rho c\frac{\partial T}{\partial t}=\frac{\partial }{\partial x}\left(D_x\frac
 
 Materiál má dva charakteristické směry související s rovinami symetrie a materiálové charakteristiky jsou ve všech místech stejné.
 
-Jako předchozí případ, ale $D_x$ a $D_y$ nezávisí na souřadnicích a jedná se tedy o konstanty. Podle pravidla pro derivaci konstantního násobku se rovnice redukuje na 
+Jako předchozí případ, ale $D_x$ a $D_y$ nezávisí na souřadnicích a jedná se tedy o konstanty. Podle pravidla pro derivaci konstantního násobku se rovnice (**) redukuje na 
 $$\rho c\frac{\partial T}{\partial t}=D_x\frac{\partial^2 T}{\partial x^2}+D_y\frac{\partial^2 T}{\partial y^2}.$$
