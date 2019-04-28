@@ -4,7 +4,13 @@
 
 # Připomenutí derivací
 
-*Každá věda se od určité úrovně automaticky stává částí matematiky. (David Hilbert, německý matematik.)*
+\iffalse
+
+<div style="padding-left:40%;font-style:italic;color:gray">
+Každá věda se od určité úrovně automaticky stává částí matematiky. (David Hilbert, německý matematik.)
+</div>
+
+\fi
 
 Derivace umožňují studovat a popisovat změny veličin, vyjadřovat kvantitativně jejich vzájemné souvislosti.
 
