@@ -4,6 +4,10 @@
 
 # Připomenutí derivací
 
+<style>
+h2 {font-size:110%; color:#006131; border-bottom:solid; margin-right:20%;}
+</style>
+
 \iffalse
 
 <div style="padding-left:40%;font-style:italic;color:gray">
