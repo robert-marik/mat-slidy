@@ -303,8 +303,8 @@ $\vec j=-k\nabla \varphi$, kde $k$ je konstanta a vektory toku a gradientu mají
 
 
 Budeme sledovat tok vektorového pole ze zvoleného 
-místa. Vyjádříme bilanci, o kolik více vektorové pole proudí z
-daného místa ve srování s tokem tohoto pole do daného místa. Protože
+místa. Vyjádříme bilanci, o kolik je větší tok vektorového pole z
+daného místa ven ve srování s tokem tohoto pole dovnitř (viz krychlička na obrázku). Protože
 záleží na objemu, ve kterém tok sledujeme, je  vztáhneme tento tok na
 jednotku objemu.
 
