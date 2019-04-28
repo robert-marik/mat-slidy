@@ -394,9 +394,9 @@ $(A-\lambda I)$, nulovou pravou stranou a nenulovým řešením $\vec q$
 $A-\lambda I$ nulový (tj. bod 4 předchozí věty neplatí). Tím je
 motivována následující definice a dokázána následující věta.
 
-> Definice (charakteristická rovnice). Rovnice
+> Definice (charakteristická rovnice, charakteristický polynom). Rovnice
 > $$\det (A-\lambda I)=0$$ s neznámou $\lambda$ se nazývá
-> *charakteristická rovnice* matice $A$.
+> *charakteristická rovnice* matice $A$. Výraz na levé straně této rovnice je polynom proměnné $\lambda$ a nazývá se *charakteristický polynom* matice $A$.
 
 > Důsledek (vlastní čísla). Vlastní čísla matice $A$ jsou právě řešení charakteristické rovnice.
 

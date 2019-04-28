@@ -4,6 +4,10 @@
 
 # Připomenutí derivací
 
+*Každá věda se od určité úrovně automaticky stává částí matematiky. (David Hilbert, německý matematik.)*
+
+Derivace umožňují studovat a popisovat změny veličin, vyjadřovat kvantitativně jejich vzájemné souvislosti.
+
 ## (Obyčejná) derivace $\frac{\mathrm df}{\mathrm dt}$. 
 
 * S touto derivací se pracuje u funkce jedné proměnné $f(t)$. Např. $f(t)=kt^2$, kde $k$ je parametr (reálné číslo).
@@ -250,6 +254,20 @@ $$
 \end{aligned}
 $$
 
+S diagonální maticí se pracuje velmi dobře, protože má v hlavní
+diagonále vlastní čísla. Tato vlastní čísla jsou fyzikální
+charakeristikou úlohy. Například největší vlastní číslo a odpovídající
+vlastní směr charakterizují směr, ve kterém je odezva materiálu na
+vnější podnět maximální a vlastní číslo udává velikost této
+reakce. Tyto fyzikální charakteristiky nemohou být závislé na volbě
+souřadné soustavy, ve které úlohu popisujeme. Co se mění s volbou
+souřadné soustavy jsou pouze souřadnice vlastního vektoru. Vlastní
+čísla jsou však skalární a proto jsou invariantní při otočení soustavy
+souřadnic. Pokud bychom neměli možnost zvolit
+soustavu souřadnic tak, aby matice byla diagonální, máme alespoň
+jistotu, že vlastní čísla zůstanou stejná. 
+
+
 ## Ortotropní případ ve 2D
 
 Stejné jako ve 3D, pouze chybí třetí rovnice.
@@ -326,6 +344,7 @@ Viz přednáška.
 
 \fi
 
+Zformulujeme zákon zachování pro zcela obecný případ zachovávající se veličiny. Díky obenému přístupu jsou rozsáhlé aplikace, ale k nim je nutné dodat další informace o studovaném problému (z biologie, geologie, fyziky, ...).
 
 Předpokládejme, že tok vektorového pole přenáší nějakou stavovou
 veličinu (veličinu, která charakterizuje stav látky nebo
@@ -367,6 +386,8 @@ praktickém použití většinou preferujeme názornou interpretaci
 jednotlivých veličin a proto se v rovnici mohou objevit další
 konstanty úměrnosti, které umožní sladit jednotky a fyzikální
 interpretaci členů. Někdy se naopak snažíme konstanty co nejvíce redukovat metodami transformace popsanými v přednášce o diferenciálních rovnicích. Proto volíme vhodné násobky veličin vystupujících v mateamtické formulaci tak, aby se co nejvíce konstant eliminovalo, případně shluklo do jediné veličiny. Zkušenosti ukazují, že je vhodné volit veličiny bezrozměrné. Například v publikaci P. Horáček, Fyzikální a mechanické vlastnosti dřeva I je zavedena [bezrozměrná vlhkost, bezrozměrný čas a bezrozměrná vzdálenost](https://is.mendelu.cz/eknihovna/opory/zobraz_cast.pl?cast=9180;lang=cz) na straně 61 pro rovnici popisující difuzi a [charakteristická délka, Biotovo číslo (bezrozměrná tepelná vodivost) a bezrozměrná teplota, bezrozměrný čas a bezrozměrná vzdálenost](https://is.mendelu.cz/eknihovna/opory/zobraz_cast.pl?cast=9182;lang=cz) pro rovnici popisující vedení tepla na stranách 88 a 89.
+
+V této rovnici není zahrnut případ, kdy se veličina přenáší ještě i prouděním hmotného prostředí (konvekce).
 
 # Vedení tepla
 
@@ -492,13 +513,12 @@ $$\mathop{\mathrm{div}} \vec q=-S\frac{\partial h}{\partial t}+P,$$
 kde $\vec q$ je tok, $P$
 je celkový objem ze zdrojů, $h$ je piezometrická výška  a 
  $S$ je měrná objemová zásobnost (kolik vody se uvolní z\ jednotkového množství půdy při změně piezometrické výšky o jednotku). 
-Tato rovnice vyjadřuje, že rozdíl mezi množstvím vody, které z místa vyteče a množstvím, které do místa vteče, je dán vydatností zdroje v tomto místě a tím, kolik vody v tomto místě ubude díky snížení hladiny podzemní vody (přesněji díky snížení piezometrické hladiny).
+Tato rovnice vyjadřuje, že rozdíl mezi množstvím vody, které z místa vyteče a množstvím, které do místa vteče, je dán vydatností zdroje v tomto místě a tím, kolik vody v tomto místě ubude díky snížení piezometrické hladinyhladiny podzemní vody (u volné hladiny jde zejména o snížení hladiny podzemní vody, u napjaté hladiny souvisí zejména se změnou pórovitosti při změně tlaku).
 
 S Darcyho zákonem vyjádřeným pomocí piezometrické výšky, tj. $$\vec q=-k\nabla h,$$ a bez dodatečných zdrojů ($P=0$) obdržíme
 $$\mathop{\mathrm{div}} \left(k\nabla h\right)=S\frac{\partial h}{\partial t}.$$
 Často je vertikální proudění zanedbatelné a úloha není trojrozměrná, ale ve
-skutečnosti dvourozměrná a klademe
-$\frac{\partial h}{\partial z}=0$. Pokud je možnost zvolit soustavu tak, že geometrické vlastnosti jsou v souladu s fyzikálními (jedna osa je ve směru největší a druhá ve směru nejmenší vodivosti), je tenzor $k$ diagonální  a rovnice se redukuje na
+skutečnosti dvourozměrná a pro třetí souřadnici klademe $$\frac{\partial h}{\partial z}=0$$ ([Dupuitův předpoklad](https://en.wikipedia.org/wiki/Dupuit%E2%80%93Forchheimer_assumption)). Pokud je možnost zvolit soustavu tak, že geometrické vlastnosti jsou v souladu s fyzikálními (jedna osa je ve směru největší a druhá ve směru nejmenší vodivosti), je tenzor $k$ diagonální  a rovnice se redukuje na
 $$\frac{\partial }{\partial x} \left(k_x \frac{\partial h}{\partial x}\right)
 +
 \frac{\partial }{\partial y} \left(k_y \frac{\partial h}{\partial y}\right)
@@ -513,10 +533,48 @@ k_y \frac{\partial^2 h}{\partial y^2}
 S\frac{\partial h}{\partial t}.
 $$
 
-Pro ustálené proudění ($h$ se nemění v čase) v těchto rovnicích klademe
+Pro ustálené proudění ($h$ se nemění v čase) v těchto rovnicích platí
 $$\frac{\partial h}{\partial t}=0.$$
-Je-li $K$ konstanta, redukuje se tato rovnice popisující proudění podzemní vody na rovnici
+Je-li navíc $k_x=k_y$ (izotropie, stejné vlastnosti ve obou hlavních směrech a tedy i ve všech směrech ostatních), redukuje se tato rovnice popisující proudění podzemní vody na rovnici
 $$\frac{\partial ^2 h}{\partial x^2}+\frac{\partial^2 h}{\partial y^2}=0.$$
 
-# Rovnice vedení tepla v různých prostředích
+# Rovnice vedení tepla ve 2D v různých podmínkách
 
+Uvažujme rovnici vedení tepla ve dvou rozměrech a v  prostředí bez zdrojů.
+$$\rho c\frac{\partial T}{\partial t}=\mathop{\mathrm{div}} (D\nabla T)$$
+
+## Stacionární stav
+
+Stacionární stav znamená, že stavové veličiny nezávisí na čase. Derivace podle času je v takovém případě nulová. Rovnice se redukuje na 
+$$\mathop{\mathrm{div}} (D\nabla T)=0.$$
+
+
+## Homogenní izotropní materiál
+
+Materiál má ve všech místech (homogenní) a ve všech směrech (izotropní) stejné vlastnosti.
+
+Veličina $D$ je reálná skalární veličina (konstanta). Podle pravidla derivace konstantního násobku se rovnice redukuje na  
+$$\rho c\frac{\partial T}{\partial t}=D\mathop{\mathrm{div}} (\nabla T)$$
+a ve složkách
+$$\rho c\frac{\partial T}{\partial t}=D\left(\frac{\partial^2 T}{\partial x^2}+\frac{\partial^2 T}{\partial y^2}\right).$$
+Pro $\tau=\frac{Dt}{\rho c}$ (změna jednotky času) dostáváme
+$$\frac{\partial T}{\partial \tau}=\frac{\partial^2 T}{\partial x^2}+\frac{\partial^2 T}{\partial y^2}.$$
+
+## Ortotropní materiál
+
+Materiál má dva charakteristické směry související s rovinami
+symetrie. Zvolíme soustavu souřadnic tak, aby osy byly orientovány ve
+směru vlastních vektorů.
+
+Veličina $D$ je diagonální matice. Pro $$D=\begin{pmatrix}D_x & 0\\ 0& D_y\end{pmatrix}$$ je ve složkách
+$$\rho c\frac{\partial T}{\partial t}=\frac{\partial }{\partial x}\left(D_x\frac{\partial T}{\partial x}\right)
++\frac{\partial }{\partial y}\left(D_y\frac{\partial T}{\partial y}\right).$$
+
+
+
+## Homogenní ortotropní materiál
+
+Materiál má dva charakteristické směry související s rovinami symetrie a materiálové charakteristiky jsou ve všech místech stejné.
+
+Jako předchozí případ, ale $D_x$ a $D_y$ nezávisí na souřadnicích a jedná se tedy o konstanty. Podle pravidla pro derivaci konstantního násobku se rovnice redukuje na 
+$$\rho c\frac{\partial T}{\partial t}=D_x\frac{\partial^2 T}{\partial x^2}+D_y\frac{\partial^2 T}{\partial y^2}.$$
