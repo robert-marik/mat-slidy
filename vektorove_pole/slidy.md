@@ -174,19 +174,19 @@ Je-li materiál anizotropní, což je nejobecnější
 případ, je veličina $D$ symetrickým
 tenzorem. Je-li materiál izotropní, je
 $k$ skalární veličinou, případně skalární veličina násobená
-jednotkovou maticí, pokud potřebujeme zachovat její maticový chrakter.
+jednotkovou maticí, pokud potřebujeme zachovat její maticový charakter.
 
 
-## Soretův efekt (termodifúze)
+## Soretův efekt (termodifuze)
 
-Tok tepla je vyvolaný nerovnoměrným rozložením teploty. Difúze chemické
+Tok tepla je vyvolaný nerovnoměrným rozložením teploty. Difuze chemické
 látky je vyvolána nerovnoměrným rozložením koncentrace této
 látky. Většinou je hybatelem procesu nerovnoměrnost v rozložení látky,
 která se tímto procesem transportuje. Nemusí to však být
-vždy. Příkladem je termodifúze, což je pohyb prvků vyvolaný
+vždy. Příkladem je termodifuze, což je pohyb prvků vyvolaný
 nerovnoměrným rozložením teploty. Například při difúzi vody ve dřevě s
 nerovnoměrným rozložením teploty je tok dán vztahem $$\vec J=-D\nabla c - sD\nabla T, $$
-kde $s$ je koeficient termodifúze. Na rozdíl od předchozích zákonů, u
+kde $s$ je koeficient termodifuze. Na rozdíl od předchozích zákonů, u
 Sortetova efektu dochází k transportu nejenom ve
 směru maximálního poklesu (záporného gradientu) teploty, ale někdy i ve směru 
 gradientu teploty. Viz Wikipedia a heslo Thermophoresis.
@@ -253,7 +253,7 @@ $$
 
 S diagonální maticí se pracuje velmi dobře, protože má v hlavní
 diagonále vlastní čísla. Tato vlastní čísla jsou fyzikální
-charakeristikou úlohy. Například největší vlastní číslo a odpovídající
+charakteristikou úlohy. Například největší vlastní číslo a odpovídající
 vlastní směr charakterizují směr, ve kterém je odezva materiálu na
 vnější podnět maximální a vlastní číslo udává velikost této
 reakce. Tyto fyzikální charakteristiky nemohou být závislé na volbě
@@ -285,7 +285,7 @@ $\vec j=-k\nabla \varphi$, kde $k$ je konstanta a vektory toku a gradientu mají
 
 Budeme sledovat tok vektorového pole ze zvoleného 
 místa. Vyjádříme bilanci, o kolik je větší tok vektorového pole z
-daného místa ven ve srování s tokem tohoto pole dovnitř (viz krychlička na obrázku). Protože
+daného místa ven ve srovnání s tokem tohoto pole dovnitř (viz krychlička na obrázku). Protože
 záleží na objemu, ve kterém tok sledujeme, je  vztáhneme tento tok na
 jednotku objemu.
 
@@ -316,7 +316,7 @@ Ze střední školy z fyziky umíme modelovat vektorové pole
 pomocí siločar. Siločáry nezřídlového pole nikde nezačínají ani
 nekončí a jsou to uzavřené křivky. 
 Například stacionární magnetické pole je
-nezřídlové. Absence zdrojů magnetického pole se projevuje tak, že rozříznutím tyčového magnetu vzniknou dva menší polnohodnotné magnety. Nevznikne samostatný jižní pól a samostatný severní pól magnetu. To je rozdíl oproti poli elektrickému, kdy rozdělením tyče s opačně nabitými konci vznikne jedna kladně nabitá a jedna záporně nabitá tyč poloviční délky.
+nezřídlové. Absence zdrojů magnetického pole se projevuje tak, že rozříznutím tyčového magnetu vzniknou dva menší plnohodnotné magnety. Nevznikne samostatný jižní pól a samostatný severní pól magnetu. To je rozdíl oproti poli elektrickému, kdy rozdělením tyče s opačně nabitými konci vznikne jedna kladně nabitá a jedna záporně nabitá tyč poloviční délky.
 
 # Výpočet gradientu a divergence
 
@@ -335,7 +335,7 @@ Viz přednáška.
 
 \fi
 
-Zformulujeme zákon zachování pro zcela obecný případ zachovávající se veličiny. Díky obenému přístupu jsou rozsáhlé aplikace, ale k nim je nutné dodat další informace o studovaném problému (z biologie, geologie, fyziky, ...).
+Zformulujeme zákon zachování pro zcela obecný případ zachovávající se veličiny. Díky obecnému přístupu jsou rozsáhlé aplikace, ale k nim je nutné dodat další informace o studovaném problému (z biologie, geologie, fyziky, ...).
 
 Předpokládejme, že tok vektorového pole přenáší nějakou stavovou
 veličinu (veličinu, která charakterizuje stav látky nebo
@@ -360,7 +360,7 @@ vydatností.
 > Rovnice kontinuity je matematické vyjádření zákona zachování. Udává, že pro libovolnou malou reprezentativní část tělesa je rychlost změny množství stavové veličiny dáno celkovou vydatností zdrojů v této části snížené o tok z této části tělesa ven. 
 
 Pro přesné odvození pro libovolnou část objemu
-nemáme bohužel v základním kurzu matematiky dostateěné matematické prostředky.  (Bylo by nutné mít některá zobecnění integrálu.) I tak se však můžeme pokusit o
+nemáme bohužel v základním kurzu matematiky dostatečné matematické prostředky.  (Bylo by nutné mít některá zobecnění integrálu.) I tak se však můžeme pokusit o
 jakousi bilanci v obecném místě tělesa pomocí hustoty stavové veličiny
 a divergence a detailnější popis je možné doplnit po prostudování dalších partií s nezbytnými matematickými nástroji. 
 
@@ -376,7 +376,7 @@ matematice často rovnice uvažujeme v právě tomto tvaru.  Při
 praktickém použití většinou preferujeme názornou interpretaci
 jednotlivých veličin a proto se v rovnici mohou objevit další
 konstanty úměrnosti, které umožní sladit jednotky a fyzikální
-interpretaci členů. Někdy se naopak snažíme konstanty co nejvíce redukovat metodami transformace popsanými v přednášce o diferenciálních rovnicích. Proto volíme vhodné násobky veličin vystupujících v mateamtické formulaci tak, aby se co nejvíce konstant eliminovalo, případně shluklo do jediné veličiny. Zkušenosti ukazují, že je vhodné volit veličiny bezrozměrné. Například v publikaci P. Horáček, Fyzikální a mechanické vlastnosti dřeva I je zavedena [bezrozměrná vlhkost, bezrozměrný čas a bezrozměrná vzdálenost](https://is.mendelu.cz/eknihovna/opory/zobraz_cast.pl?cast=9180;lang=cz) na straně 61 pro rovnici popisující difuzi a [charakteristická délka, Biotovo číslo (bezrozměrná tepelná vodivost) a bezrozměrná teplota, bezrozměrný čas a bezrozměrná vzdálenost](https://is.mendelu.cz/eknihovna/opory/zobraz_cast.pl?cast=9182;lang=cz) pro rovnici popisující vedení tepla na stranách 88 a 89.
+interpretaci členů. Někdy se naopak snažíme konstanty co nejvíce redukovat metodami transformace popsanými v přednášce o diferenciálních rovnicích. Proto volíme vhodné násobky veličin vystupujících v matematické formulaci tak, aby se co nejvíce konstant eliminovalo, případně shluklo do jediné veličiny. Zkušenosti ukazují, že je vhodné volit veličiny bezrozměrné. Například v publikaci P. Horáček, Fyzikální a mechanické vlastnosti dřeva I je zavedena [bezrozměrná vlhkost, bezrozměrný čas a bezrozměrná vzdálenost](https://is.mendelu.cz/eknihovna/opory/zobraz_cast.pl?cast=9180;lang=cz) na straně 61 pro rovnici popisující difuzi a [charakteristická délka, Biotovo číslo (bezrozměrná tepelná vodivost) a bezrozměrná teplota, bezrozměrný čas a bezrozměrná vzdálenost](https://is.mendelu.cz/eknihovna/opory/zobraz_cast.pl?cast=9182;lang=cz) pro rovnici popisující vedení tepla na stranách 88 a 89.
 
 V této rovnici není zahrnut případ, kdy se veličina přenáší ještě i prouděním hmotného prostředí (konvekce).
 
@@ -491,7 +491,7 @@ protože derivace konstantního násobku je násobek derivace.
 
 \fi
 
-Podzemní vodou se rozumí voda přítomná pod zemským povrchem, která teče porézním prostředím tvořeným propustnými horninami a geologickými vrstvami nad nepropustnou vrstvou (volná hladina) mnebo mezi dvěma nepropustnými vrstvami (napjatá hladina). 
+Podzemní vodou se rozumí voda přítomná pod zemským povrchem, která teče porézním prostředím tvořeným propustnými horninami a geologickými vrstvami nad nepropustnou vrstvou (volná hladina) nebo mezi dvěma nepropustnými vrstvami (napjatá hladina). 
 
 Stavovou veličinou při proudění podzemní vody s [volnou hladinou](https://cs.wikipedia.org/wiki/Hladina_podzemn%C3%AD_vody) je [piezometrická
 výška](https://cs.wikipedia.org/wiki/Hladina_podzemn%C3%AD_vody) $h$. (Pro jednoduchost si představme hladinu podzemní vody.)

@@ -577,13 +577,18 @@ Vlastní vektory jsou nesmírně důležité, protože definují směry, podél
 nichž se zobrazení chová "pěkně". Tímto zobrazením může být třeba to,
 jak se působení vnější síly na těleso projeví na deformaci tohoto
 tělesa nebo jak se gradient teploty nebo vlhkosti projeví na proudění
-tepla či vody ve dřevě, půdě nebo jiném materiálu. Pro pravidelně
-rostlé dřevo je snadné tyto směry určit. Pro zkroucené dřevo nebo při
-studiu proudění vody, vzduchu či ropy v půdě to již snadné není a je
-nutné tyto směry vypočítat. To se naučíme později. V aplikacích často
-bývá matice "symetrická podle diagonály" a u takové matice vlastní
-vektory existují. Co se přesně myslí pod pojmem "symetrická matice" si
-uvedeme na následujícím slidu.
+tepla či vody ve dřevě, půdě nebo jiném materiálu. Často se v
+aplikacích maticové zobrazení objevuje v *konstitučních vztazích*,
+vztazích mezi podnětem a materiálovou odezvou. Vlastní směry jsou tedy směry, ve kterých má odezva stejný směr jako podnět. 
+
+Pro pravidelně rostlé dřevo je snadné tyto směry určit, jsou to
+anatomické směry dřeva. Pro zkroucené dřevo nebo při studiu proudění
+vody, vzduchu či ropy v půdě to již tak snadné není a je nutné tyto
+směry vypočítat. To se naučíme později.
+
+V aplikacích často bývá matice "symetrická podle diagonály" a u takové
+matice vlastní vektory vždy existují. Co se přesně myslí pod pojmem
+"symetrická matice" si uvedeme na následujícím slidu.
 
 
 # Transponovaná matice

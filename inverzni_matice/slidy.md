@@ -590,7 +590,25 @@ $$
 C^{-1}
 \begin{pmatrix}\varepsilon_{11}\\\varepsilon_{22}\\\varepsilon_{33}\\\varepsilon_{23}\\\varepsilon_{13}\\\varepsilon_{12}\end{pmatrix}.
 $$
-Matice $C^{-1}$ se nazývá *matice poddajnosti* a označuje $S$.
+Matice $C^{-1}$ se nazývá *matice poddajnosti* a označuje $S$. 
 
-      
+Souvislostí vlastních vektorů matice tuhosti a matice poddajnosti
+(nebo obecněji souvislostí vlastních vektorů matice a matice inverzní)
+se budeme zabývat na následujícím slidu.
+
+# Vlastní vektory matice a matice inverzní
+
+Fyzikální úvaha snadno vede k závěru, že matice a matice inverzní mají
+stejné vlastní vektory. To proto, že pokud v některém směru je
+materiálová odezva násobkem podnětu, je i opačně podnět násobkem
+materiálové odezvy. To, že matice $A$ a $A^{-1}$ mají stejné vlastní
+vektory plyne i z toho, že pokud definiční vztah pro vlastní vektor
+matice $A$, tj. vztah 
+$$A\vec u=\lambda\vec u,$$ 
+vynásobíme zleva maticí $\frac 1\lambda A^{-1}$, dostaneme vzhledem k
+identitě $\frac 1\lambda A^{-1}A \vec u=\frac 1\lambda I \vec u =\frac
+1\lambda \vec u$ rovnici 
+$$\frac 1\lambda \vec u=A^{-1}\vec u,$$ 
+která vyjadřuje, že $\vec u$ je vlastním vektorem matice $A^{-1}$ s
+vlastním číslem $\frac 1\lambda.$
 
