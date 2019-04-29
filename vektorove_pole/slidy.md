@@ -4,10 +4,6 @@
 
 # Připomenutí derivací
 
-<style>
-h2 {font-size:110%; color:#006131; border-bottom:solid; margin-right:20%;}
-</style>
-
 \iffalse
 
 <div style="padding-left:40%;font-style:italic;color:gray">
@@ -21,7 +17,7 @@ Derivace umožňují studovat a popisovat změny veličin, vyjadřovat kvantitat
 ## (Obyčejná) derivace $\frac{\mathrm df}{\mathrm dt}$. 
 
 * S touto derivací se pracuje u funkce jedné proměnné $f(t)$. Např. $f(t)=kt^2$, kde $k$ je parametr (reálné číslo).
-* Derivace je okamžitá rychlost změny veličiny $f$ vzhledem k $t$, tj. nárůst veličiny $f$ vyvolaný jednotkovým nárůstem veličiny $t$. (Prakticky však veličinu $t$ změníme o malou hodnotu a nárlst přepočítáme na jednotovou změnu.)
+* Derivace je okamžitá rychlost změny veličiny $f$ vzhledem k $t$, tj. nárůst veličiny $f$ vyvolaný jednotkovým nárůstem veličiny $t$. (Prakticky však veličinu $t$ změníme o malou hodnotu a nárůst přepočítáme na jednotovou změnu.)
 * Jednotka derivace je stejná, jako bychom veličiny $f$ a $t$ dělili.
 * V modelech a při praktickém využití pracujeme s definicí derivace jako s rychlostí změny. Při výpočtu ale využíváme dostupné vzorce pro výpočet derivace. Například pro funkci z prvního bodu platí $\frac{\mathrm df}{\mathrm dt}=2kt.$
 
@@ -33,9 +29,9 @@ Derivace umožňují studovat a popisovat změny veličin, vyjadřovat kvantitat
 * Při aplikacích často pracujeme s gradientem, tj. s vektorem sestaveným z parciálních derivací podle jednotlivých prostorových proměnných. Pro funkci tří proměnných $x$, $y$ a $z$ a pro 
 potřeby matematické formulace fyzikálních zákonů gradient uvažujeme jako sloupcový
 vektor
-$$\nabla f =\begin{pmatrix}\frac{\partial \varphi}{\partial x}\\\frac{\partial \varphi}{\partial y}\\\frac{\partial \varphi}{\partial z}\end{pmatrix}.$$
+$$\nabla f =\begin{pmatrix}\frac{\partial f}{\partial x}\\\mathstrut \frac{\partial f \mathstrut}{\partial y \mathstrut}\\\frac{\partial f}{\partial z}\end{pmatrix}.$$
 Pro úsporu místa jej někdy píšeme v transponovaném tvaru
-$$\nabla f =\left(\frac{\partial \varphi}{\partial x},\frac{\partial \varphi}{\partial y},\frac{\partial \varphi}{\partial z}\right)^T.$$ Gradient je vektor, který má směr odpovídající směru nejrychlejšího růstu skalární veličiny a velikost je stejná jako derivace v daném směru.
+$$\nabla f =\left(\frac{\partial f}{\partial x},\frac{\partial f}{\partial y},\frac{\partial f}{\partial z}\right)^T.$$ Gradient je vektor, který má směr odpovídající směru nejrychlejšího růstu skalární veličiny a velikost je stejná jako derivace v daném směru.
 
 
 
@@ -52,25 +48,17 @@ Vektorové pole je vektorová funkce, dvou nebo tří proměnných. Můžeme
 si ji představit jako zobrazení, které každému bodu v rovině nebo v
 prostoru přiřadí vektor. Proto je vhodné tyto veličiny použít při
 popisu proudění. Ať už hmatatelných látek (tekutina, elektrony) nebo
-obecnější veličiny (teplo, elektrická intenzita). Pro popis proudění
-jevů vždy využíváme vhodné veličiny. V případě popisu látkového
-prostředí se jeví jako vhodnou veličinou například rychlost
-jednotlivých částic nebo molekul, ale ani toto nemusí být vždy
-optimální.  Například při toku vody v půdě se molekuly vody
-"prodírají" volnými cestami mezi zrnky půdy nebo horniny a efektivní
-rychlost toku vody je nižší než rychlost jednotlivých molekul. To
-znamená, že na takový pohyb nemá smysl aplikovat Newtonovy pohybové
-zákony tak jak je známe z fyziky částic a tuhých těles.
+obecnější veličiny (teplo, elektrická intenzita). 
 
-> Poznámka (stavová veličina). Veličiny charakterizující stav tělesa se nazývají *stavové veličiny*. Tyto veličiny závisí jenom na současném stavu a ne na historii, jak se těleso do daného stavu dostalo. Některé stavové veličiny se mohou měnit ("přenášet") tokem definovaným pomocí vhodného vektorového pole. Tok stavové veličiny danou plochou vyjadřuje, kolik stavové veličiny projde touto plochou za jednotku času, přepočteno na jednotku povrchu plochy. 
+> Poznámka (stavová veličina). Veličiny charakterizující stav tělesa se nazývají *stavové veličiny*. Tyto veličiny závisí jenom na současném stavu a ne na historii, jak se těleso do daného stavu dostalo. Některé stavové veličiny se mohou měnit ("přenášet") tokem definovaným pomocí vhodného vektorového pole. Tok tohoto pole danou plochou vyjadřuje, kolik stavové veličiny projde touto plochou za jednotku času, přepočteno na jednotku povrchu plochy. 
 
 Příkladem stavové veličiny může být množství vody v jednotkovém objemu
 dřeva, tj. koncentrace vody ve dřevě. Protože se voda ve dřevě může
-pohybovat, je tato stavová veličina přenášena jistým vektorovým
-polem. Tok tohoto pole v daném bodě vyjadřuje, kolik vody projde
-rovinnou plochou v daném místě za jednotku času. Orientace plochy se
-volí dle potřeby (podle toho, se kterou komponentou proudění chceme
-pracovat) a tok se přepočítává na jednotkovou plochu.
+pohybovat, je tato stavová veličina přenášena jistým vektorovým polem
+(rychlostní pole). Tok tohoto pole v daném bodě vyjadřuje, kolik vody
+projde rovinnou plochou v daném místě za jednotku času. Orientace
+plochy se volí dle potřeby (podle toho, se kterou komponentou proudění
+chceme pracovat) a tok se přepočítává na jednotkovou plochu.
 
 # Tok a gradient v konstitutivních zákonech
 
@@ -89,7 +77,7 @@ pracovat) a tok se přepočítává na jednotkovou plochu.
 
 Například vítr (tok
 molekul vzduchu) je vyvolán nerovnoměrným rozložením vzduchu (jeho
-hustoty a tím i tlaku) v prostoru a směruje z míst s vyšším tlakem do
+hustoty a tím i tlaku) v prostoru a směřuje z míst s vyšším tlakem do
 míst s tlakem nižším.  Větší rozdíl tlaků způsobí "větší vítr" a tím
 větší tok vzduchu. Toto platí i pro jiné proudění, jak ukážeme dále.
 
@@ -107,7 +95,7 @@ proudí voda), s fyzikálními vlastnostmi proudící látky
 fyzikálními vlastnostmi prostředí (např. velikost pórů v pórovitém
 prostředí nebo vlhkost dřeva). Proto je možné tyto zákony najít v
 různých tvarech, s různými členy a případnými přídavnými konstantami,
-které například odseparují vliv proudící látky a vliv prostředí. Vždy
+které například odseparují vliv vlastností proudící látky a vliv vlastností prostředí. Vždy
 záleží na konkrétní situaci, zvyklostech v příslušném podoboru, nebo
 na přístupu autora. Není proto naší ambicí vést výklad dopodrobna,
 všímejme si jenom základních myšlenek.
@@ -182,7 +170,7 @@ Fourierův zákon se týká vedení tepla a vyjadřuje,
 že vektor hustoty tepelného toku $\vec q$ je úměrný gradientu teploty $\nabla T$
 a má opačný směr, tj. 
 $$\vec q=-D\nabla T.$$ 
-Je-li materiál anizotropní, což je neobecnější
+Je-li materiál anizotropní, což je nejobecnější
 případ, je veličina $D$ symetrickým
 tenzorem. Je-li materiál izotropní, je
 $k$ skalární veličinou, případně skalární veličina násobená
@@ -222,7 +210,7 @@ $$
 jejíž komponenty splňují $k_{ij}=k_{ji}$. Často jsou všechny
 veličiny kladné a prvky v hlavní diagonále jsou dominantní.
 
-Komponenty vektoru $\vec j$ jsou
+Komponenty vektoru $\vec j=(j_x, j_y, j_z)$ jsou
 $$
 \begin{aligned}
   j_x&=-k_{11}\frac{\partial \varphi}{\partial x}-k_{12}\frac{\partial \varphi}{\partial y}-k_{13}\frac{\partial \varphi}{\partial z},\\
@@ -243,7 +231,6 @@ což zjistíme prostým maticovým násobením. Prostor pro další úpravu nen�
 </div>
 
 \fi
-
 
 V obecném případě je zpravidla možné transformovat soustavu souřadnic tak, aby tenzor $K$ byl diagonální. Pro praktické výpočty se toto však často nevyplatí. Pokud však je studovaný problém ortotropní, má charakteristické směry (přesněji, má tři roviny symetrie materiálových vlastností), je možné zvolit souřadnice v souladu s těmito směry a matice $K$ je diagonální. 
 
@@ -290,17 +277,11 @@ $\vec j=-k\nabla \varphi$, kde $k$ je konstanta a vektory toku a gradientu mají
 
 # Divergence
 
-
-\iffalse 
-
 <div class='obtekat'>
 
 ![Divergence a tok pole $\vec q=(0,q_y, q_z)$ krychlí. Tok je zobrazen vždy ve středu stěny. Červené vektory vstupují do krychle a příslušné toky se počítají záporně. Modré vystupují ven a počítají se kladně. V tomto případě je celková bilance kladná, z objemu více vyteče, než vteče dovnitř. Divergence je kladná. Pokud v krychli množství veličiny neubývá, musí tam být zdroj této veličiny.](divergence.png)
 
 </div>
-
-\fi
-
 
 Budeme sledovat tok vektorového pole ze zvoleného 
 místa. Vyjádříme bilanci, o kolik je větší tok vektorového pole z
@@ -317,7 +298,7 @@ $$Q_{in}+Q_{out}=
 \left(\frac {\partial q_y}{\partial y}+\frac {\partial q_z}{\partial z}\right)\Delta x\Delta y\Delta z.
 $$
 V případě proudění i v ose $x$ bude přítomen ještě další analogický člen charakterizující tuto dodatečnou položku. 
-Těmtito úvahami je motivována následující definice a věta.
+Těmito úvahami je motivována následující definice a věta.
 
 > Definice (divergence). *Divergence* vektorového pole $\vec F$ v daném bodě je převis toku vektorového pole z tohoto místa nad tokem do tohoto místa. Tento převis je vztažený na jednotku objemu. Divergenci vektorového pole $\vec F$ označujeme $\mathop{\mathrm{div}}\vec F$ nebo $\nabla \cdot \vec F$.
 
@@ -369,7 +350,7 @@ bilance je v každém místě vyjádřena divergencí vektorového pole.
 * Někdy se stavová veličina může v daném místě kumulovat, nebo může
 ubývat. Rychlost s jakou množství stavové veličiny v daném místě
 přibývá je dáno parciální derivací $\frac{\partial \rho}{\partial t}$.
-* V obecném případě stavová veličina přenášená prouděním může vznikat
+* V obecném případě stavová veličina přenášená vektorovým polem může vznikat
 nebo zanikat a tedy mohou být přítomny zdroje nebo spotřebiče této
 stavové veličiny. Jejich vydatnost (přesněji množství stavové
 veličiny, které vyprodukují v jednotkovém objemu za jednotku času)
@@ -379,11 +360,11 @@ vydatností.
 > Rovnice kontinuity je matematické vyjádření zákona zachování. Udává, že pro libovolnou malou reprezentativní část tělesa je rychlost změny množství stavové veličiny dáno celkovou vydatností zdrojů v této části snížené o tok z této části tělesa ven. 
 
 Pro přesné odvození pro libovolnou část objemu
-nemáme bohužel matematické prostředky (tok vyjádřený pomocí plošného
-integrálu, celkové množství tělesa promocí trojného integrálu a věty
-pro převod plošného integrálu na trojný), ale pokusíme se tedy o
+nemáme bohužel v základním kurzu matematiky dostateěné matematické prostředky.  (Bylo by nutné mít některá zobecnění integrálu.) I tak se však můžeme pokusit o
 jakousi bilanci v obecném místě tělesa pomocí hustoty stavové veličiny
-a divergence. Podle výše uvedeného platí
+a divergence a detailnější popis je možné doplnit po prostudování dalších partií s nezbytnými matematickými nástroji. 
+
+Podle výše uvedeného platí
 $$\frac{\partial \rho}{\partial t}
 =\sigma-\mathop{\mathrm{div}}  \vec j
 $$
