@@ -404,3 +404,4 @@ div.initial_prompt { display: none; visibility: hidden }
   div.slide.first-slide { page-break-before: avoid }
 }
 
+h2 {font-size:110%; color:#006131; border-bottom:solid; margin-right:20%;}

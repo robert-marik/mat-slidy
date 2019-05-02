@@ -15,12 +15,16 @@
 \draw[thick,->] (0,0,0) -- (0,0,1) node[anchor=south]{$z$};
 \end{scope}
 
-    \draw[] (O) -- (Py) -- node[right] {$\Delta z$} (Pyz) -- (Pz) -- cycle;
-    \draw[] (O) -- (Px) -- node[below] {$\Delta y$}(Pxy) -- node[below right] {$\Delta x$} (Py) -- cycle;
-    \draw[] (O) -- (Px) -- (Pxz) -- (Pz) -- cycle;
+% \draw[] (O) -- (Py) -- node[right] {$\Delta z$} (Pyz) -- (Pz) -- cycle;
+\draw (Py) -- node[right] {$\Delta z$} (Pyz);
+\draw [dashed] (O)--(Pz);
+    \draw  (Px) -- node[below] {$\Delta y$}(Pxy) -- node[below right] {$\Delta x$} (Py);
+    \draw[dashed] (O) -- (Px);
+    \draw[dashed] (O) -- (Py);
+    % \draw[] (O) -- (Px) -- (Pxz);% -- (Pz) -- cycle;
     \draw[] (Pz) -- (Pyz) -- (P) -- (Pxz) -- cycle;
     \draw[] (Px) -- (Pxy) -- (P) -- (Pxz) -- cycle;
-    \draw[] (Py) -- (Pxy) -- (P) -- (Pyz) -- cycle;
+%    \draw[] (Py) -- (Pxy) -- (P) -- (Pyz) -- cycle;
 
     
     \draw[-latex, blue] ($(Pxy)!0.5!(Pyz)$)-- ++ (0,0.5,0) node[right] {$q_y+\frac{\partial q_y}{\partial y}\Delta y$};
