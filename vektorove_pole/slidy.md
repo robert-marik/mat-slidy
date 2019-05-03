@@ -419,7 +419,7 @@ Ze střední školy známe [makroskopickou formu](https://cs.wikipedia.org/wiki/
 zformulována pro těleso jako celek a $Q$ se uvažuje v opačném smyslu
 než v rovnici kontinuity (teplo je kladné, pokud jej dodáváme).
 
-V literatuře věnované problematice dřeva se rovnice vedení tepla ve dřevě označuje jako Druhý Fickův zákon (A. Požgaj a kol., Štruktúra a vlastnosti dreva, str. 202, Horáček, Fyzikální a mechanické vlastnosti dřeva I, str. 60)
+V literatuře věnované problematice dřeva se rovnice vedení tepla ve dřevě označuje jako Druhý Fourierův zákon (P. Horáček, Fyzikální a mechanické vlastnosti dřeva I, str. 88).
 
 # Proudění tekutiny v mechanice kontinua
 
@@ -477,6 +477,9 @@ $$
 \frac{\partial c}{\partial t}=D_x\frac{\partial^2 c}{\partial x^2}+D_y\frac{\partial^2 c}{\partial y^2}+D_z\frac{\partial^2 c}{\partial z^2},
 $$
 protože derivace konstantního násobku je násobek derivace.
+
+V literatuře věnované problematice dřeva se rovnice difuze použitá na modelování vlhkosti ve dřevě označuje jako Druhý Fickův zákon (A. Požgaj a kol., Štruktúra a vlastnosti dreva, str. 202, P. Horáček, Fyzikální a mechanické vlastnosti dřeva I, str. 60).
+
 
 
 # Proudění podzemní vody
