@@ -88,19 +88,23 @@
 
 <div class='sloupce'>
 
-Pro dvojný integrál použijeme podobnou myšlenkovou konstrukci jako
-u\ křivkového integrálu prvního druhu, pouze místo drátu s\ danou
-lineární hustotou budeme uvažovat rovinnou ohraničenou desku s\ danou
-plošnou hustotou.
 
-* Pokud je hustota desky konstantní, je možno její hmotnost získat
-  jednoduše jako součin plošné hustoty a obsahu.
-* Pokud se hustota desky mění a v\ obecném bodě $(x,y)$ je dána funkcí
+Uvažujme plošný materiál (desku) s danou plošnou hustotou. Budeme se snažit
+vypočítat hmotnost.
+
+* Pokud je deska homogenní, je její (plošná) hustota desky konstantní
+  a její hmotnost je možno získat jednoduše jako součin této hustoty a
+  obsahu.
+* Pokud deska není homogenní, ale skládá se z konečného počtu homogenních kousků, určíme
+  postupem z minulého bodu hmotnost každého kousku a tyto hmotnosti
+  poté sečteme.
+* Zbývá případ, kdy je hustota dána nějakou obecnou funkcí. Pokud se
+  hustota desky mění a v\ obecném bodě $(x,y)$ je dána funkcí
   $f(x,y)$, můžeme myšlenkově rozdělit desku na malé kousky, v\ rámci
-  každého malého kousku hustotu aproximovat konstantou, vypočítat
-  hmotnost každého kousku jako součin hustoty a obsahu a všechny
-  hmotnosti sečíst.
-* Získaná veličina je aproximací celkové hmotnosti.
+  každého malého kousku hustotu aproximovat konstantou a postupovat
+  jako u desky z konečného počtu (malých) homogenních částí.
+* Získaná veličina je aproximací celkové hmotnosti. Pro jemnější
+  dělení se přesnost aproximace zlepšuje.
 
 V\ limitním přechodu kdy rozměry všech kousků na něž je deska dělena
 jde k\ nule dostáváme **dvojný integrál** 
@@ -117,6 +121,18 @@ $$ \iint_\Omega f(x,y)\mathrm{d}S.$$
 \fi
 
 </div>
+
+# Linearita a aditivita
+
+
+Dvojný integrál je odvozen (tak jako všechny integrály) pro aditivní
+veličiny a proto se "dobře snáší" se sčítáním (ať už integrovaných
+funkcí, nebo integračních oborů) a s násobení integrované funkce
+konstantnou. Přesněji, platí následující věty.
+
+> Věta (linearita dvojného integrálu).   Buď $f_1$, $f_2$ funkce integrovatelné v $\Omega$ a $c_1$, $c_2$   libovolná reálná čísla. Platí $$     \iint_{\Omega} \bigl[c_1f_1(x,y)+c_2f_2(x,y)\bigr]\mathrm dx\mathrm dy     =     c_1\iint_{\Omega} f_1(x,y)\mathrm dx\mathrm dy+     c_2\iint_{\Omega} f_2(x,y)\mathrm dx\mathrm dy $$
+
+> Věta (aditivita vzhledem k oboru integrace).  Nechť je množina $\Omega$ rozdělena na dvě oblasti $\Omega_1$   a $\Omega_2$, které mají společné nejvýše hraniční body. Platí $$     \iint_\Omega f(x,y)\mathrm dx\mathrm dy=     \iint_{\Omega_1} f(x,y)\mathrm dx\mathrm dy+     \iint_{\Omega_2} f(x,y)\mathrm dx\mathrm dy. $$
 
 
 # Výpočet (oblast mezi funkcemi proměnné $x$)
