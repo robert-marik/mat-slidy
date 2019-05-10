@@ -1,6 +1,6 @@
 % Dvojný integrál
 % Robert Mařík
-% 2014–2019
+% 7.5.2019
 
 \iffalse
 
@@ -225,7 +225,7 @@ Výše uvedené problémy se stanovením a případným přepočítáváním mez
 při záměně pořadí integrace se nevyskytují při integrování přes
 obdélníkovou oblast.
 
->   **Věta**: Nechť $R=[a,b]\times[c,d]$ je uzavřený obdélník v $\mathbb{R}^2$ a
+> Věta (dvojný integrál na obdélníkové množině). Nechť $R=[a,b]\times[c,d]$ je uzavřený obdélník v $\mathbb{R}^2$ a
 >   $f$ funkce definovaná a spojitá na $R$. Pak platí
 >   $$    \begin{aligned}\iint_R f(x,y)\mathrm{d}x \mathrm{d}y 
 >     &=
@@ -421,7 +421,13 @@ je již snadné.
 
 Nechť je dána množina $M$ s plošnou hustotou $\sigma(x,y)$. *Ukážeme,
 že vzhledem k ose procházející těžištěm je nejmenší moment
-setrvačnosti.* Nechť $m=\iint \sigma(x,y)\,\mathrm dx\mathrm dy$, $y_0=\frac
+setrvačnosti.* Ukážeme si dále, že pomocí momentu setrvačnosti
+vzhledem k ose procházející těžištěm je možné vyjádřit momenty
+setrvačnosti i k libovolným rovnoběžným osám. Pro jednotkovou pološnou
+hustotu dostáváme jako speciální případ vzorce pro kvadratický moment,
+důležité ve statice.
+
+Nechť $m=\iint \sigma(x,y)\,\mathrm dx\mathrm dy$, $y_0=\frac
 1{m}\iint_M y\sigma(x,y)\,\mathrm dx\mathrm dy$ a $I_{xT}=\iint_M
 (y-y_0)^2\sigma(x,y)\,\mathrm dx\mathrm dy$ jsou hmotnost, $y$-ová poloha těžiště
 a moment setrvačnosti vzhledem k ose jdoucí těžištěm rovnoběžně s osou
@@ -471,9 +477,9 @@ v těžišti množiny a o stejné hmotnosti jako je hmotnost množiny vzhledem k
 \fi
 
 Vzorec pro tlakovou sílu $F=pS$ není možné použít například pro
-výpočet celkové síly působící na svislou hráz, protože tlak $p$ se
+výpočet celkové síly působící na svislou stěnu nebo hráz, protože tlak $p$ se
 mění s hloubkou a není tedy konstantní na celém průřezu o obsahu
-$S$. Ukážeme, jak tuto nesnáz překonat.
+$S$. Pro obdélníkovou stěnu jsme úlohu vyřešili (viz Mojžíšův most) pomocí integrálu, pro stěnu obecného tvaru použijeme integrál dvojný.
 
 Uvažujme svislou rovinnou hráz $M$. Hrází je přitom myšlena rovinná
 množina s jednotkovou plošnou hustotou, ne postavený trojrozměrný
