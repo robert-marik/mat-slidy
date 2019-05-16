@@ -391,15 +391,15 @@ $$
   x'\\y'
 \end{pmatrix}.
 $$
-To je možné zkontrolovat podle obrázku a obrazu dvou bodů, pro další body roviny to poté funguje automaticky.
+To je možné zkontrolovat podle obrázku a souřadnic dvou bodů
+ $(x',y')=(1,0)$ a $(x',y')=(0,1).$ Pro další body roviny to poté funguje automaticky.
+ 
 Matici transformace budeme zkráceně označovat $R$, pokud budeme potřebovat zdůraznit velikost úhlu, použijeme $R(\theta)$ a pokud budeme potřebovat matici rozepsat ve složkách, budeme zkracovat výrazy $\cos\theta$ a $\sin\theta$ na $C$ a $S$ a psát
 $$R=
 \begin{pmatrix}
   C & -S \\ S & C
 \end{pmatrix}.
 $$
-Toto je snadné zkontrolovat pomocí souřadnic bodů $(x',y')=(1,0)$ a
-$(x',y')=(0,1).$
 
 V minulé přednášce jsme viděli, že je-li $A$ matice zobrazení v souřadnicích $(x,y)$, v souřadnicích $(x',y')$ má zobrazení vyjádření $R^{-1}AR,$ kde $R^{-1}=R(-\theta)=
 \begin{pmatrix}
@@ -426,7 +426,7 @@ $(x_1,x_2)$ označíme $(x,y)$, osa $x$ směřuje vodorovně vpravo (v obrázku 
    2.5 & -4.3\\
 -4.3&  7.5
 \end{pmatrix}.$$ V nových souřadnicích je směr $x'$ radiální a proto $\sigma_{RR}=2.5$
-a $\sigma_{LL}=7.5$. Mimodiagonální složka udává komponentu $\sigma_{RL}=-4.3$. Tento výsledek je stejný, jak je uveden jiným postupem v knize. Použili jsme však jenom základní nástroje lineární algebry.
+a $\sigma_{LL}=7.5$. Mimodiagonální složka udává komponentu $\sigma_{RL}=-4.3$. Tento výsledek je stejný, jako výsledek získaný jiným postupem v knize. Použili jsme však jenom základní nástroje lineární algebry.
 
 # Transformace tenzoru
 
@@ -439,7 +439,7 @@ a $\sigma_{LL}=7.5$. Mimodiagonální složka udává komponentu $\sigma_{RL}=-4
 
 Úloha na transformaci tenzoru, kterou jsme řešili na minulém slidu je
 v aplikacích velmi důležitá. Proto existuje řada grafických nebo
-inženýrských metod na řešení tohoto úkolu. Tyto metody jsou důvtipné a názorné, například metoda Mohrovy kružnice, oproti lineární algebře však mají zásadní nevýhodu: uživatel se musí učit něco nového. Použitím aparátu lineární algebry, stejně jako dokážeme v pootočených souřadnicích vyjádřit libovolné zobrazení, dokážeme vyjádřit v pootočených souřadnicích i libovolný tenzor. Vzorce jsou stejné a navíc při otočení v rovině je matice rotace ortogonální, tj. inverzní matice je maticí transponovanou. Pro symetrický tenzor $A=
+inženýrských metod na řešení tohoto úkolu. Tyto metody jsou důvtipné a názorné, například metoda Mohrovy kružnice, oproti lineární algebře však mají zásadní nevýhodu: uživatel se musí stále učit něco nového a dostává návod "jak", nikoliv "proč". Použitím aparátu lineární algebry, stejně jako dokážeme v pootočených souřadnicích vyjádřit libovolné zobrazení, dokážeme vyjádřit v pootočených souřadnicích i libovolný tenzor. Vzorce jsou stejné a navíc při otočení v rovině je matice rotace ortogonální, tj. inverzní matice je maticí transponovanou. Pro symetrický tenzor $A=
 \begin{pmatrix}
   a_{11} & a_{12} \\ a_{12} & a_{22}
 \end{pmatrix}$
@@ -485,9 +485,11 @@ Tento vztah je uveden i v literatuře A. Požgaj a kol., Štruktúra a vlastnost
 drevá a v e-opoře [Fyzikální a mechanické vlastnosti
 dřeva](https://is.mendelu.cz/eknihovna/opory/zobraz_cast.pl?cast=9178). Zde
 je také uvedena jedna z aplikací, transformace tenzoru deformací
-naměřených při bobtnání dřeva do anatomických směrů dřeva. To je
+naměřených při bobtnání dřeva. V této úloze je nutno tenzor deformací transformovat do anatomických směrů dřeva. To je
 možné udělat po změření sklonu vláken a pootočení tenzoru o příslušný
-úhel. Získáme diagonální tenzor, který má v diagonále deformace v
+úhel.
+
+<!-- Získáme diagonální tenzor, který má v diagonále deformace v
 anatomických osách dřeva. Jednodušší alternativou je určení vlastních hodnot
 tenzoru deformace pomocí charakteristického polynomu, což je v tomto
 případě polynom kvadratický. Která vlastní hodnota patří ke kterému
@@ -495,7 +497,7 @@ směru určíme ze znalosti uspořádání koeficientů bobtnání dřeva v
 jednotlivých směrech podle velikosti. Při použití vlastních hodnot je
 výhodou, že používáme standardní nástroje lineární algebry a metoda je
 použitelná bez znalosti úhlu, který svírají vlákna dřeva s osami
-soustavy, ve které určujeme tenzor deformace.
+soustavy, ve které určujeme tenzor deformace. -->
 
 Inverzní operací je pootočení o úhel $-\theta$ a proto je snadné najít inverzní transformaci: vzhledem k sudosti funkce $\cos$ a lichosti funkce $\sin$ stačí změnit znaménko u členů s $S$, tj. 
 $$
@@ -528,9 +530,9 @@ $$
 To znamená, že lokální extrémy diagonálních prvků nastávají v
 okamžiku, kdy jsou prvky mimo diagonálu nulové. Toto pozorování
 pefektně ladí s výsledky, které známe v lineární algebře i bez hledání
-lokálních extrémů a bez derivací a představíme na dalších
-stránkách. Budeme ovšem potřebovat připomenout definici vlastních
-vektorů a ukázat si jejich výpočet.
+lokálních extrémů a bez derivací. Náznak tohoto konceptu si představíme na dalších
+stránkách. Budeme potřebovat připomenout definici vlastních
+vektorů.
 
 **Pozor.** V případě tenzoru deformace se někdy se namísto
 mimodiagonální komponenty bere její dvojnásobek, protože ten má
@@ -610,7 +612,7 @@ výše uvedené platí i pro tenzory.
 
 
 Ve videu [https://www.youtube.com/watch?v=xdxVpC856ms](https://www.youtube.com/watch?v=xdxVpC856ms) je pomocí vzorců odvozován diagonální tvar tenzoru napětí
-$$
+$$A=
 \begin{pmatrix}
   20 & 30 \\ 30 & -10
 \end{pmatrix}.
@@ -618,6 +620,7 @@ $$
 Ukážeme si řešení úlohy bez použití vzorců, jenom prostředky lineární algebry.
 Charakteristický polynom této matice je
 $$
+\det(A-\lambda I)=
 \begin{vmatrix}
   20-\lambda & 30 \\ 30 & -10-\lambda
 \end{vmatrix}=
@@ -627,8 +630,9 @@ s kořeny $\lambda_1\approx 38.54$ a $\lambda_2\approx -28.54$. To
 budou prvky v hlavní diagonále po transformaci tenzoru.
 
 Pokud budeme chtít vědět, jak jsou nové osy orientovány vůči osám původním, musíme najít i vlastní vektory. Vlastní vektor příslušný hodnotě
-$38.54$ je řešením soustavy s maticí soustavy
+$\lambda_1$ je řešením soustavy s maticí soustavy
 $$
+A-\lambda_1 I\approx
 \begin{pmatrix}
   -18.54 & 30 \\
   30  & -48.54

@@ -576,7 +576,7 @@ udávají složky jednotlivých deformací způsobených napětími
 $\sigma_{23}$, $\sigma_{13}$ a $\sigma_{12}$ mají jenom jednu
 nenulovou složku.
 
-Pokud bychom použili k popisu libovolnou soustavu souřadnic, nebylo by
+Pokud bychom použili k popisu obecnou soustavu souřadnic, nebylo by
 možné se na symetrii odvolávat. Matice $C$ by obsahovala včechny prvky
 a bylo by nutné hledat bázi, v níž je její vyjádření nejjednodušší. U
 dřeva je však snadné rozpoznat význačné směry. Když soustavu souřadnic
