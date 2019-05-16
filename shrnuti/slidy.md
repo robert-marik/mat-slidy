@@ -2,12 +2,62 @@
 % Robert Mařík
 % 21.5.2019
 
+# Vlastnosti funkcí
+
+## Prostá funkce
+
+* Nabývá každou funkční hodnotu jenom jednou.
+* Lze u ní zrekonstruovat vstupní data, tj. definovat inverzní funkci.
+* Pokud v rovnici vystupují prosté funkce, dá se tato rovnice řešit
+  (pomocí inverzních funkcí).
+
+## Rostoucí funkce
+
+* Uspořádání vzorů zachovává i pro funkční hodnoty.
+* Můžeme detekovat pomocí znaménka derivace.
+* Podobně je definována klesající funkce. U spojitých funkcí změna
+  růstu na klesání nebo naopak signalizuje lokální extrém.
+* Umožní modifikovat úlohu na lokální extrémy. Například úloha
+  $x^3\sqrt{1-x^2}\to\max$ je na intervalu $x\in (0,\infty)$
+  ekvivalentní mnohem jednodušší úloze pro druhou mocninu funkce,
+  tj. $x^6(1-x^2)\to\max$.
+
+## Spojitá funkce
+
+* Má v každém bodě stejnou limitu a funkční hodnotu.
+* Nespojité funkce jsou nepředvídatelné a jejich chování je
+  neintuitivní.  Například změna monotonie si bez spojitostí nemusí
+  vynutit existenci lokálního extrému. Spojité jsou v určitém smyslu
+  pěkné. Spojitost je vyžadována například pro Bolzanovu větu.
+* Spojitost je automaticky zaručena, jakmile existuje derivace.
+* Elementární funkce jsou spojité na svém definičním oboru.
+
+# Derivace
+
+* $\frac{\mathrm df}{\mathrm dx}=\lim_{h\to 0} \frac{f(x+h)-f(x)}h$
+* Okamžitá rychlost změny $f$, tj. změna veličiny $f$ vztažená na
+  jednotku veličiny $x$.
+* Jednotka je stejná, jako bychom veličiny dělili.   
+* Derivace umožní detekovat monotonii.
+* Derivace umožní detekovat rychlost změny a tím umožní lineární
+  aproximaci. Ta se uplatní při přibližných výpočtech (odvození
+  Newtonovy věty, u paricálních derivací odvození tenzoru malých
+  deformací a odvození vzorce pro divergenci vektorového pole).
+* Derivace umožní formulovat modely založené na rychlostech, kdy
+  rychlost měnící se veličiny souvisí s velikostíé této veličiny.
+* Derivace umožní formulovat fyzikální zákony, ve kterých hraje roli
+  rychlost změny nějaké fyzikální veličiny. (Např. Newtonův zákon
+  ochlazování, rychlost s jakou se mění teplota tělesa při tepelené
+  výměně je úměrná rozdílu teplot.)
+
 # Maticový součin
 
 * Slouží k efektivnímu zápisu lineárních vztahů mezi vícerozměrnými
   veličinami, kdy se jednotlivé příspěvky sčítají. Například Hookův
   zákon: každá složka tenzoru napětí (definovaný působící silou) se
-  může s lineární odezvou projevit deformací v kterémkoliv směru a pro každý směr se příspěvky od jednotlivých složek tenzoru napětí sčítají.
+  může s lineární odezvou projevit deformací v kterémkoliv směru a pro
+  každý směr se příspěvky od jednotlivých složek tenzoru napětí
+  sčítají.
 * Umožňuje definovat fyzikální zákony mezi vektory, které nemusí mít
   stejný směr (konstituční zákony jako Fickův apod).
 * Umožňuje modelovat vývoj systémů se skokovou změnou v čase (Leslieho
@@ -18,13 +68,15 @@
 
 # Vlastní číslo a vlastní vektor matice
 
-* Vektor $\vec u$ je vlastní vektor matice $A$ příslušný vlastní hodnotě $\lambda$, pokud $A\vec u=\lambda \vec u$.
+* Vektor $\vec u$ je vlastní vektor matice $A$ příslušný vlastní
+  hodnotě $\lambda$, pokud $A\vec u=\lambda \vec u$.
 * Vlastní vektor k matici $A$ se působením matice $A$ neodchýlí od
-původního směru. V řeči materiálů tedy materiálová odezva má stejný
-směr jako podnět. Například tekutina proudí přesně ve směru
-maximálního poklesu tlaku, nestáčí se vlivem struktury materiálu do
-jiných směrů.
-* Vlastní vektory a čísla odpovídají směrům, ve kterých má reakce materiálu na vnější podnět maximum nebo minimum.
+  původního směru. V řeči materiálů tedy materiálová odezva má stejný
+  směr jako podnět. Například tekutina proudí přesně ve směru
+  maximálního poklesu tlaku, nestáčí se vlivem struktury materiálu do
+  jiných směrů.
+* Vlastní vektory a čísla odpovídají směrům, ve kterých má reakce
+  materiálu na vnější podnět maximum nebo minimum.
 
 
 # Transponovaná matice
