@@ -22,8 +22,7 @@
 * Můžeme je detekovat pomocí znaménka derivace.
 * Podobně je definována klesající funkce. U spojitých funkcí změna
   růstu na klesání nebo naopak signalizuje lokální extrém.
-* Umožní modifikovat úlohu na lokální extrémy. Například úloha
-  $x^3\sqrt{1-x^2}\to\max$ je na intervalu $x\in (0,\infty)$
+* Umožní modifikovat úlohu na lokální extrémy. Například úloha s nosníkem maximální tuhosti: úloha $x^3\sqrt{1-x^2}\to\max$ je na intervalu $x\in (0,\infty)$
   ekvivalentní mnohem jednodušší úloze pro druhou mocninu funkce,
   tj. $x^6(1-x^2)\to\max$.
 
@@ -46,16 +45,20 @@
   jednotku veličiny $x$.
 * Jednotka je stejná, jako bychom veličiny $f$ a $x$ dělili.   
 * Derivace umožní detekovat monotonii.
-* Derivace umožní detekovat rychlost změny a tím umožní lineární
+* Derivace umožní kvantitativně pracovat s rychlostí změny a tím umožní lineární
   aproximaci. Ta se uplatní při přibližných výpočtech (odvození
   Newtonovy věty, u paricálních derivací odvození tenzoru malých
   deformací a odvození vzorce pro divergenci vektorového pole).
 * Derivace umožní formulovat modely založené na rychlostech, kdy
-  rychlost měnící se veličiny souvisí s velikostí této veličiny.
-* Derivace umožní formulovat fyzikální zákony, ve kterých hraje roli
-  rychlost změny nějaké fyzikální veličiny. (Např. Newtonův zákon
-  ochlazování, rychlost s jakou se mění teplota tělesa při tepelené
-  výměně je úměrná rozdílu teplot.)
+  rychlost měnící se veličiny souvisí s velikostí této nebo jiné 
+  veličiny. Většina fyzikálních zákonů je v tomto
+  tvaru. (Např. Newtonův zákon ochlazování, rychlost s jakou se mění
+  teplota tělesa při tepelené výměně je úměrná rozdílu teplot.)
+* Vzorec pro derivaci složené funkce se používá i v případě, že jsou
+  dvě veličiny svázány vzorcem, jedna veličina se mění zadanou
+  rychlostí a snažíme se identifikovat, jakou rychlostí se mění
+  veličina související. (related rates problems) 
+* Vzorce pro derivaci konstantního násobku, derivaci složené funkce a derivaci součtu se (kromě přímého využití při derivování) používají často při eliminaci konstant z diferenciální rovnice. Zde vhodnou záměnou za jiné veličiny (často bezrozměrné -- nondimenzionalizace) dosáhneme toho, že úloha má menší počet parametrů a je možné ji snáze řešit, zejména pokud musíme použít numerické metody.
 
 ## Gradient
 
@@ -65,20 +68,82 @@ materiálu bývá gradient stavové veličiny, viz například Fickův zákon,
 Fourierův zákon, Darcyho zákon.
 * Gradient (přesněji vektor z parciálních derivací podle prostorových proměnných) umožní formulovat fyzikální zákony charakterizující proudění stavové veličiny způsobené nerovnoměrným prostorovým rozložením této veličiny. (Například teplota se mění dodáním nebo odebráním tepla a teplo proudí ve směru daném Fourierovým zákonem. V izotropním protředí tedy ve směru gradientu vyásobeného faktorem $-1$, tj. ve směru maximálního poklesu teploty.)
 
+## Obyčejná derivace versus parciální
+
+* Obyčejná derivace udává, jak reaguje veličina závisející na jedné
+  proměnné na změnu vstupních dat. Parciální derivace udává, jak
+  reaguje veličina závisející na více proměnných na změnu vstupních
+  dat, pokud se mění jenom jedna z proměnných. Ostatní bereme jako
+  parametry a proto se dá používat stejná pravidla pro výpočet jako u
+  obyčejné derivace.
+* Parciální derivace však mají smysl zejména proto, že je seskupujeme
+  do operátorů jako jsou například divergence nebo gradient a tyto
+  operátory jsou přirozeným jazykem pro formulaci přírodních zákonů.
+* Parciální derivace umožňují studovat změny funkcí více proměnných a
+  použili jsme je například pro tenzor malých deformací ve
+  dvourozměrném nebo trojrozměrném případě.
+
 # Divergence, tok a zákony zachování
 
-* Definice: Divergence vektorového pole je celková bilance toku z daného místa přes hranici myšlené (nekonečně malé) množiny, dělená mírou (objemem ve 3D nebo plochou ve 2D) této množiny.
-* Rovice kontinuity je vyjádření říkající, že rychlost změny stavové veličiny v daném místě je dána vzdatností zdrojů v tomto místě zmenšené o tok z daného místa.
-* K rovnici kontinuity často přidáváme konstituční zákon. Většinou má roli vztahu vyjadřujícího, že intenzita toku je záporně vzatý gradient stavové veličiny vynásobený materiálovou konstantou (difuzní rovnice, obecně tenzorového charakteru, tj. matice).
-* Někdy nás zajímá stacionární případ, kdy je nastolena rovnováha. Potom $\frac{\partial u}{\partial t}=0.$
-* Někdy nás zajímá případ, kdy nejsou přítomny zdroje. Potom $\sigma=0.$ Často toto je u rovnice vedení tepla (uvnitř dřeva nejsou tepelné zdroje) a vlhkosti (uvnitř dřeva se nijak nesyntetizuje voda).
-* Výraz popisující tok, tj. $\mathrm{div}(D\nabla u)$, může mít v různých prostředí různou míru zjednodušení. 
+* Definice: Divergence vektorového pole je celková bilance toku z
+  daného místa přes hranici myšlené (nekonečně malé) množiny, dělená
+  mírou (objemem ve 3D nebo plochou ve 2D) této množiny.
+* Rovice kontinuity je vyjádření říkající, že rychlost změny stavové
+  veličiny v daném místě je dána vzdatností zdrojů v tomto místě
+  zmenšené o tok z daného místa.
+* K rovnici kontinuity často přidáváme konstituční zákon. Většinou má
+  roli vztahu vyjadřujícího, že intenzita toku je záporně vzatý
+  gradient stavové veličiny vynásobený materiálovou konstantou
+  (difuzní rovnice, obecně tenzorového charakteru, tj. matice).
+* Někdy nás zajímá stacionární případ, kdy je nastolena
+  rovnováha. Potom $\frac{\partial u}{\partial t}=0.$
+* Někdy nás zajímá případ, kdy nejsou přítomny zdroje. Potom
+  $\sigma=0.$ Často toto je u rovnice vedení tepla (uvnitř dřeva
+  nejsou tepelné zdroje) a vlhkosti (uvnitř dřeva se nijak
+  nesyntetizuje voda).
+* Výraz popisující tok, tj. $\mathrm{div}(D\nabla u)$, může mít v
+  různých prostředí různou míru zjednodušení.
 
     * Nejjednodušší tvar je pro homogenní izotropní prostředí. Potom se jedná o rovnici typu (např. ve dvou rozměrech) $$\frac{\partial u}{\partial t}=\sigma + D\frac{\partial ^2 u}{\partial x^2}+ D\frac{\partial ^2 u}{\partial y^2}.$$
     * Pro ortotropní materiál (např dřevo) je možné identifikovat vlastní směry, ale v každém vlastním směru je jiná materiálová chrakteristika, tj. místo společného $D$ u obou členů s derivacemi podle souřadnic bude mít každý člen svoji konstantu. $$\frac{\partial u}{\partial t}=\sigma + D_x\frac{\partial ^2 u}{\partial x^2}+ D_y\frac{\partial ^2 u}{\partial y^2}$$
     * Pro ortotropní nehomogení materiál není možné pro členy v difuzní rovnici využít pravidlo pro derivaci konstanty a maximální míra zjednodušení je $$\frac{\partial u}{\partial t}=\sigma + \frac{\partial}{\partial x}\left(D_x\frac{\partial  u}{\partial x}\right) + \frac{\partial}{\partial y}\left(D_y\frac{\partial  u}{\partial y}\right).$$
 
- 
+# Integrály
+
+## Neurčitý integrál
+
+Neurčitý integrál má na vstupu funkci a na výstupu funkci. Je-li na vstupu rychlost, s jakou se mění veličina $F$ v čase, na výstupu je funkce popisující časový průběh veličiny $F$ v čase a ta je dána až na aditivní konstantu.
+
+## Newtonův integrál
+
+Newtonův integrál má na vstupu funkci a interval a na výstupu číselnou
+hodnotu. Je-li na vstupu rychlost, s jakou se mění veličina $F$ v čase
+a časový interval, na výstupu je změna veličiny $F$ za daný
+interval. Ta se počítá pomocí neurčitého integrálu jako rozdíl hodnot
+funkce $F$ za uvažovaný časový interval. Na aditivní konstantě u
+funkce $F$ nezáleží díky tomu, že pracujeme se změnou a ne s
+absolutními čísly. V případě konstantní rychlosti (integrál z
+konstantní funkce) se redukuje na násobení funkce a délky
+intervalu. Má tedy smysl pro procesy probíhající nekonstantní
+rychlostí.
+
+## Riemannův integrál
+
+Na vstupu je interval a funkce, na výstupu číselná hodnota. Je odvozen
+pro aditivní veličinu, kterou v případě konstantních parametrů
+počítáme pomocí součinu. Pokud parametry nejsou konstantní, přechází
+součin na integrál. Například práce konstantní síly je součin
+velikosti síly a posunutí, ale pro proměnnou sílu musíme práci počítat
+jako určitý integrál síly.
+
+Pro spojité funkce vychází stejně jako Newtonův integrál a takto se
+většinou i počítá, ale je možné jej i aproximovat numericky
+(lichoběžnákové pravidlo).
+
+## Dvojný integrál
+
+Jako Riemannův, ale studovaná funkce je definovaná nad dvourozměrnou
+množinou.
 
 # Maticový součin
 
@@ -104,8 +169,7 @@ Fourierův zákon, Darcyho zákon.
   původního směru. V řeči materiálů tedy materiálová odezva má stejný
   směr jako podnět, pokud je podnět ve vlastním směru. Například pokud
   tlak klesá směrem, ve kterém pórovité prostředí vede nejochotněji
-  tekutinu, tak tato tekutina proudí přesně ve směru maximálního
-  poklesu tlaku. Pokud tlak klesá jiným směrem, tok tekutiny se stáčí
+  tekutinu, tak tato tekutina proudí přesně ve směru maximálního poklesu tlaku. Pokud tlak klesá jiným směrem, tok tekutiny se stáčí
   do směru, ve kterém materiál vede tekutinu "ochotněji".
 * Vlastní vektory a čísla odpovídají směrům, ve kterých má reakce
   materiálu na vnější podnět maximum nebo minimum.
@@ -123,9 +187,9 @@ Fourierův zákon, Darcyho zákon.
 
 * Definice: $A A^{-1}=A^{-1}A=I$
 * Existuje pouze pokud je determinant matice $A$ nenulový.
-* Teoreticky je řešením soustavy lineárních rovnic $AX=B$ vektor $X=A^{-1}B$. V praxi je výpočet inverzní matice nestabilní a používáme inverzi jenom k jednodušším maticím (Jacobiho metoda používá inverzi k diagonální matici, Gaussova-Seidelova inverzi k trojúhelníkové matici, ale obě metody jsou iterační)
-* Je-li přechod mezi souřadnicemi $X$ a $X'$ dán vztahem $X=AX'$, v opačném směru platí $X'=A^{-1}X$.
-* Je-li fyzikální zákon (Hookův, Fickův, ...) mezi vektory ve tvaru $Y=AX$ a přechod do čárkovaných souřadnic je umožněn rovnicemi $Y=PY'$, $X=PX'$, je $Y'=P^{-1}AP X'$ a $P^{-1}AP$ je vyjádření tenzoru $A$ v čárkovaných souřadnicích. Používá se zejména při otočení souřadnic.
+* Inverzní matice se používá při studiu soustav lineárních rovnic. Teoreticky je řešením soustavy lineárních rovnic $AX=B$ vektor $X=A^{-1}B$. V praxi je výpočet inverzní matice nestabilní a používáme inverzi jenom k jednodušším maticím (Jacobiho metoda používá inverzi k diagonální matici, Gaussova-Seidelova inverzi k trojúhelníkové matici, ale obě metody jsou iterační)
+* Maticový součin se používá pro vyjádření transformace souřadnic, inverzní matice je potom nástroj pro cestu zpět k původním souřadnicícm. Je-li přechod mezi souřadnicemi $X$ a $X'$ dán vztahem $X=AX'$, v opačném směru platí $X'=A^{-1}X$.
+* Inverzní matice se používá pro vyjádření fyzikálních zákonů v soustavách souřadnic, které vzniknou pootočením původních souřadnic. Je-li fyzikální zákon (Hookův, Fickův, ...) mezi vektory ve tvaru $Y=AX$ a přechod do čárkovaných souřadnic je umožněn rovnicemi $Y=PY'$, $X=PX'$, je $Y'=P^{-1}AP X'$ a $P^{-1}AP$ je vyjádření tenzoru $A$ v čárkovaných souřadnicích. Používá se zejména při otočení souřadnic.
 
 # Determinant
 
@@ -142,8 +206,7 @@ Fourierův zákon, Darcyho zákon.
   metodě konečných diferencí hraje při aproximaci roli Taylorův
   polynom.
 * Univerzální metodou řešení je Gaussova eliminace, numericky
-  výhodnější pro diagonálně dominantní matice jsou iterační metody,
-  Jacobiho a Gaussova-Seidelova.
+  výhodnější pro soustavy s jedním řešením a pro diagonálně dominantní matice jsou iterační metody, například Jacobiho a Gaussova-Seidelova.
 * Ve vektorové podobě jde o vyjádření zadaného vektoru jako lineární
   kombinace jiných zadaných vektorů. Tedy například rozklad vektoru do
   daných směrů.
@@ -161,31 +224,58 @@ Udává, že běžné funkce jsou spojité v každém bodě, kde jsou definován
 
 ## Věta o souvislosti derivace a monotonie
 
-Představuje efektivní nástroj pro detekci množin, na kterých je funkce rostoucí nebo klesající.
+*Má-li funkce kladnou derivaci, je rostoucí. Má-li funkce zápornou derivaci, je klesající. *
+
+Představuje efektivní nástroj pro detekci množin, na kterých je funkce
+rostoucí nebo klesající.
 
 ## Věta o lineární aproximaci
 
-Jedno z nejdůležitějších využití derivace - lineární aproximace funkce. Využívá se například v odvození Newtonovy metody.
+Jedno z nejdůležitějších využití derivace - lineární aproximace
+funkce. Využívá se například v odvození tenzoru malých
+deformací. Vztahy získané linearizací přesných zákonů se 
+používají v "běžné" fyzice ($E=mgh$ nebo $E=\frac 12 mv^2$). Přes
+jednoduchost může být překvapivě silná, např. u Newtonovy metody
+řešení rovnic se každým krokem přibližně zdvojnásobí počet desetinných
+míst, která jsou správně.
 
 ## Taylorova věta
 
-Vyjadřuje skutečnost, že pokud se snažíme aproximovat funkci polynomem, je při zadaném stupni polynomu optimální aproximací Taylorův polynom. Tento polynom můžeme použít například pro aproximaci potenciálu v okolí lokálního extrému (první derivace tam je nulová a nijak by nepomohla) nebo pro aproximaci druhé derivace v metodě konečných diferencí (při řešení rovnice vedení tepla přibližnými metodami).
+Vyjadřuje skutečnost, že pokud se snažíme aproximovat funkci
+polynomem, je při zadaném stupni polynomu optimální aproximací
+Taylorův polynom. Tento polynom můžeme použít například pro aproximaci
+potenciálu v okolí lokálního extrému (první derivace tam je nulová a
+nijak by nepomohla) nebo pro aproximaci druhé derivace v metodě
+konečných diferencí (při řešení rovnice vedení tepla přibližnými
+metodami).
 
 ## Fermatova věta o lokálním extrému
 
-Fermatova věta umožňuje soustředit se při hledání extrémů na relativně málo bodů - na body, kde je derivace rovna nule nebo není definovaná vůbec.
+Fermatova věta umožňuje soustředit se při hledání extrémů na relativně
+málo bodů - na body, kde je derivace rovna nule nebo není definovaná
+vůbec.
 
 ## Věta o souvislosti monotonie s lokálními extrémy
 
-Efektivní nástroj, jak u spojitých funkcí detekovat lokální extrémy pomocí první derivace (ta souvisí s monotonií).
+*V bodě lokálního extrému derivace buď neexistuje nebo je nulová.*
+
+Efektivní nástroj, jak u spojitých funkcí detekovat lokální extrémy
+pomocí první derivace (ta souvisí s monotonií).
 
 ## Bolzanova věta
 
-Prostředek na nalezení intervalů, kde je zadaný výraz kladný nebo záporný. Na této větě je založeno například hledání lokálních extrémů pomocí derivace, protože potřebujeme intervaly, kde je derivace funkce kladná a kde je záporná.
+*Funkce která je na uzavřeném intervalu spojitá a mění zde znaménko má mezi znaménkovými změnami nulový bod.*
+
+Prostředek na nalezení intervalů, kde je zadaný výraz kladný nebo
+záporný. Na této větě je založeno například hledání lokálních extrémů
+pomocí derivace, protože potřebujeme intervaly, kde je derivace funkce
+kladná a kde je záporná.
 
 ## Výpočet divergence
 
-Divergence je důležitá veličina používaná pro obecnou formulaci zákonů zachování v rovnici kontinuity. V kartézských souřadnicích je možné ji vyjádřit pomocí parciálních derivací.
+Divergence je důležitá veličina používaná pro obecnou formulaci zákonů
+zachování v rovnici kontinuity. V kartézských souřadnicích je možné ji
+vyjádřit pomocí parciálních derivací.
 
 # Věty z integrálního počtu
 
@@ -234,16 +324,19 @@ diferenciální rovnice.
 # Věty z lineární algebry
 
 
-
 ## Věta o hodnosti matice ve schodovitém tvaru
 
 Spolu a větou identifikující operace zachovávající hodnost je to efektivní nástroj pro zjištění hodnosti matice nebo pro ověření lineární nezávislosti vektorů.
 
 ## Frobeniova věta
 
+*Soustava lineárních rovnic má řešení právě tehdy, když hodnosti matice soustavy a rozšířené matice soustavy jsou stejné.*
+
 Nutná a postačující podmínka řešitelnosti soustavy lineárních rovnic pomocí pojmů hodnost matice a hodnost rozšířené matice soustavy. 
 
 ## Věta o vlastních číslech symetrické matice
+
+*Reálná symetrická matice řádu $n$ má $n$ reálných vlastních čísel (počítáno i s násobností).*
 
 Vyjadřuje, že ve fyzikálně relevantních případech (matice je
 symetrický tenzor) existují vlastní čísla a vlastní směry. To je
