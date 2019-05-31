@@ -17,7 +17,7 @@ Derivace umožňují studovat a popisovat změny veličin, vyjadřovat kvantitat
 ## (Obyčejná) derivace $\frac{\mathrm df}{\mathrm dt}$. 
 
 * S touto derivací se pracuje u funkce jedné proměnné $f(t)$. Např. $f(t)=kt^2$, kde $k$ je parametr (reálné číslo).
-* Derivace je okamžitá rychlost změny veličiny $f$ vzhledem k $t$, tj. nárůst veličiny $f$ vyvolaný jednotkovým nárůstem veličiny $t$. (Prakticky však veličinu $t$ změníme o malou hodnotu a nárůst přepočítáme na jednotovou změnu.)
+* Derivace je okamžitá rychlost změny veličiny $f$ vzhledem k $t$, tj. nárůst veličiny $f$ vyvolaný jednotkovým nárůstem veličiny $t$. (Prakticky však veličinu $t$ změníme o malou hodnotu a nárůst přepočítáme na jednotkovou změnu.)
 * Jednotka derivace je stejná, jako bychom veličiny $f$ a $t$ dělili.
 * V modelech a při praktickém využití pracujeme s definicí derivace jako s rychlostí změny. Při výpočtu ale využíváme dostupné vzorce pro výpočet derivace. Například pro funkci z prvního bodu platí $\frac{\mathrm df}{\mathrm dt}=2kt.$
 
@@ -474,7 +474,7 @@ $$
 $$
  Považujeme-li složky matice $D$ za konstanty (nemusely by být, protože materiál nemusí být homogenní a může mít v jiných bodech jiné fyzikální vlastnosti), je možné psát rovnici ve tvaru
 $$
-\frac{\partial c}{\partial t}=D_x\frac{\partial^2 c}{\partial x^2}+D_y\frac{\partial^2 c}{\partial y^2}+D_z\frac{\partial^2 c}{\partial z^2}, \eqref{**}
+\frac{\partial c}{\partial t}=D_x\frac{\partial^2 c}{\partial x^2}+D_y\frac{\partial^2 c}{\partial y^2}+D_z\frac{\partial^2 c}{\partial z^2}, \tag{**}
 $$
 protože derivace konstantního násobku je násobek derivace.
 
@@ -484,8 +484,9 @@ V praxi je dřevo často s jistou přesností homogenní, ale difuzní
 koeficient dřeva závisí na vlhkosti, tedy vztah mezi gradientem
 vlhkosti a difuzním tokem není lineární. Přesto i v tomto případě
 používáme Fickův zákon, ovšem složky difuzního koeficientu
-nepovažujeme za konstanty, jsou závislé na $c$. Ani takovém případě si
-úpravu na rovnici (**) nemůžeme dovolit.
+nepovažujeme za konstanty, jsou závislé na $c$ a jejím prostřednictvím
+i na $x$. Ani takovém případě si úpravu na rovnici (**) nemůžeme
+dovolit.
 
 
 
