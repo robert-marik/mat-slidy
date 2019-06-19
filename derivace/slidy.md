@@ -33,18 +33,17 @@
 
 </div>
 
-
-
 Průměrnou rychlost určujeme tak, že změnu sledované veličiny
 přepočteme na jednotku času (u závislosti na čase), délky (u
 závislosti na poloze) nebo obecně na jednotku veličiny, na které
 sledovaná veličina závisí.
 
-Průměrná rychlost zastírá, co přesně se děje uvnitř intervalu, přes který průměrujeme.
+Průměrná rychlost s jakou se mění funkce $f$ na intervalu $[x,x+h]$ je dána vztahem $$\frac{f(x+h)-f(x)}h.$$
 
-Počítáme-li průměr přes stále kratší interval, nevýhoda průměrné
+Průměrná rychlost pracuje jenom s informací v koncových bodech intervalu a proto bohužel neobsahuje informaci, co přesně se děje uvnitř intervalu, přes který průměrujeme. Počítáme-li ale průměr přes stále kratší interval, nevýhoda průměrné
 rychlosti mizí. Cílem je počítat průměr přes interval prakticky
-nerozlišitelný od nuly. To by dalo okamžitou rychlost.
+nerozlišitelný od nuly. To by dalo okamžitou rychlost. [Numerický experiment](https://sagecell.sagemath.org/?z=eJyNkEtOwzAQhveVeoeRZak2MS0tCyQk36ELWKVplTi2HJQ6wU7ABXEQxIoDIA5RuBeTFpDYYcm_Z8b65nWXe2CTCBZyKECBm_DxyDf3QaYpoYZFTokgS__5vv148W7_Cn6nbN2EDlwONI0iJjajArqbKdDVyvhcPSKWWH460E8WeSDLz2ddKts87N8g1E3fagWtb4BaeUZJlo1HpvFgoHLAoshPYlKIuF4M1nqRFOgr9M_xXgiYz6KYz7DGnItw6zssIyBU7vDG4we_HI8AD44iUyMYw2bkT1cycj6zfBqqbVtXZrcxfV0znh2Rzu--4UMCyf4FY6AvAsN5-BHWUem2-5OJXLtSm8rpkvx2F-QgSYqKMmyiy4tasyEqwOq81H4zTHHley0A97vVB5t_AUUzhdA=&lang=sage&interacts=eJyLjgUAARUAuQ==) ukazuje, že u některých funkcí toto funguje pěkně, u některých bohužel ne.
+
 
 Pokud průměrujeme za stále kratší čas, čitatel i jmenovatel se blíží k
 nule a jsou potíže s interpretací zlomku. Nulou totiž není možné
