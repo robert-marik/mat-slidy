@@ -11,6 +11,9 @@ sed -i 's/<blockquote><p>Důsledek (\([^\.]*\))./<blockquote class="veta"><p cla
 sed -i 's/<blockquote><p>Důsledek\./<blockquote class="veta"><p class="vetaname">Důsledek.<\/p><p>/' index.html
 sed -i 's/<blockquote><p>Poznámka (\([^\.]*\))\./<blockquote class="poznamka"><p class="poznamkaname">Poznámka (\1).<\/p><p>/' index.html
 sed -i 's/<blockquote><p>Poznámka\./<blockquote class="poznamka"><p class="poznamkaname">Poznámka.<\/p><p>/' index.html
+sed -i 's/<blockquote><p>Příklad:/<blockquote class="priklad"><p><span class="prikladname">Příklad: <\/span>/' index.html
+
+
 
 #pandoc -t html --css my.css -s slidy.md -o index_p.html --mathjax=http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML 
 #pandoc -t slidy -V slidy-url=../ --css ../my.css --template ../my.deck -s slidy_kopie.md -o index_d.html --mathjax=http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML

@@ -2,6 +2,33 @@
 % Robert Mařík
 % podzim 2019
 
+# Motivace pro pojem funkce
+
+#### Funkce jedné proměnné
+
+Je dán vetknutý nosník na konci zatížený svislou silou $F$. Deformace nosníku $\delta$ na konci souvisí (skalární veličina) s velikostí zatěžující síly (skalární veličina). Pro studium problému je vhodné mít převodní pravidlo, které pro každé zatížení udává deformaci. Toto pravidlo bude z matematického úhlu pohledu funkce (funkce jedné proměnné). Může mít například formu
+$$\delta=\frac 1k F,$$
+kde $k$ je konstanta pro daný nosník (tuhost).
+
+#### Funkce více proměnných
+
+Tuhost nosníku závisí na jeho tvaru a fyzikálních charakteristikách. Například pro nosník obdélníkového průřezu délky $L$, výšky $h$ a šířky $w$ může mít tvar
+$$k=\alpha\frac{w h^3}{L^3},$$
+kde $\alpha$ je konstanta pro daný nosník (souvisí s použitým materiálem). Třem nezávislým hodnotám přiřazujeme jednu hodnotu. Toto je funkce tří proměnných.
+
+#### Vektorová funkce jedné proměnné
+
+Letecký radar [https://www.flightradar24.com](https://www.flightradar24.com) ukazuje aktuální polohu letadel. Každé letadlo, které je ve vzduchu, je v čase $t$ v místě popsaném dvěma zeměpisnými souřadnicemi. Pro rekonstrukci pohybu můžeme let chápat jako pravidlo, které jedné hodnotě (čas $t$) přiřadí dvojici hodnot (souřadnice). Protože tuto dvojici můžeme chápat i jako polohový vektor, nazývá se taková funkce vektorová funkce jedné proměnné.
+
+#### Vektorové pole
+
+Meteoradar [https://mapy.in-pocasi.cz/](https://mapy.in-pocasi.cz/) má možnost zobrazit vítr. Každému místu v ČR (popsáno dvěma souřadnicemi, tj. dvourozměrným vektorem) je přidělen dvourozměrný vektor rychlosti větru. Toto je příklad dvourozměrné vektorové funkce dvou proměnných, zkráceně mluvíme o dvourozměrném vektorovém poli.
+
+
+
+
+
+
 # Funkce jedné proměnné
 
 > Definice (funkce jedné proměnné).
@@ -14,13 +41,13 @@
   že $b$ je *obrazem prvku* $a$ při zobrazení $f$, resp. že $a$
   je *vzorem prvku* $b$ při zobrazení $f$.
 
-Poznámka:  Množina $A$ z definice
+> Poznámka (terminologie).  Množina $A$ z definice
   funkce se nazývá *definiční obor funkce $f$*.  Označujeme 
   $\mathrm D(f)$ (resp.  $\mathrm{Dom}(f)$). Je-li $M$ podmnožina definičního oboru, definujeme množinu $f(M)$ jako množinu všech obrazů bodů množiny $M$. Množina $f(\mathrm{Dom}(f))=b$ se nazývá *obor
     hodnot funkce $f$*.  Označujeme  $\mathrm H(f)$ (resp.
   $\mathrm{Im}(f)$).
-
-  Je-li $y=f(x)$ nazýváme proměnnou $x$ též *nezávislou
+>
+>  Je-li $y=f(x)$ nazýváme proměnnou $x$ též *nezávislou
     proměnnou* a proměnnou $y$ *závislou proměnnou*.
   *Grafem* funkce rozumíme množinu všech uspořádaných dvojic
   $[x,y]\in\mathbb R^2$ s vlastností $y=f(x)$.
@@ -45,13 +72,10 @@ je určeno jednoznačně, zavádíme následující pojem.
 
 > Věta (rovnice s prostou funkcí). Pokud je $f$ prostá funkce a platí $$f(x)=f(a),$$ potom platí $x=a.$
 
-Příklad: Funkce $\frac 1x$ je prostá a proto z rovnosti
-$\frac 1x = \frac 15$
+> Příklad: Funkce $\frac 1x$ je prostá a proto z rovnosti $\frac 1x = \frac 15$ 
 plyne $x=5$.
 
-Příklad: Funkce $x^2$ není prostá a proto z rovnosti
-$x^2 = 7^2$
-neplyne $x=7$.
+> Příklad: Funkce $x^2$ není prostá a proto z rovnosti $x^2 = 7^2$ neplyne $x=7$.
 
 
 # Vlastnosti funkcí jedné proměnné (inverzní funkce)
@@ -59,13 +83,12 @@ neplyne $x=7$.
 > Definice (inverzní funkce).   Nechť funkce $f: A\to B$ je prostá. Pravidlo, které každému $x$   z množiny $f(A)$ přiřadí to (jediné) $y$, pro které platí $f(y)=x$ se nazývá *inverzní funkce* k funkci $f$, označujeme   $\mathbf{f^{-1}}$.
 
 
-Poznámka: 
-  Symbol $f^{-1}(x)$ lze tedy chápat buď jako hodnotu inverzní funkce
+> Poznámka. Symbol $f^{-1}(x)$ lze tedy chápat buď jako hodnotu inverzní funkce
   k funkci $f$ v bodě $x$, nebo jako převrácenou hodnotu k číslu
   $f(x)$, tj jako $[f(x)]^{-1}=\frac{1}{f(x)}$. Nebude-li z kontextu
   zřejmé, o kterou variantu se jedná, musíme toto upřesnit.
 
-Příklad: Funkce $y=x^2$ není prostá na $\mathbb R$ a proto zde nemá inverzní funkci. Pokud definiční obor funkce $y=x^2$ zúžíme na nezáporná čísla, tj. požadujeme $x\geq 0$, je taková funkce prostá a inverzní funkcí je funkce $y=\sqrt x$.
+> Příklad: Funkce $y=x^2$ není prostá na $\mathbb R$ a proto zde nemá inverzní funkci. Pokud definiční obor funkce $y=x^2$ zúžíme na nezáporná čísla, tj. požadujeme $x\geq 0$, je taková funkce prostá a má inverzní funkci. Protože tato úloha má praktický význam, vyplatí se pro tuto inverzní funkcí zavést speciální označení. Jak dobře víme, inverzní funkcí je druhá odmocnina, tj. funkce $y=\sqrt x$.
 
 # Vlastnosti funkcí jedné proměnné (parita)
 
@@ -92,7 +115,7 @@ Sudé a liché funkce jsou, díky svým vlastnostem, v jistém smyslu pěkné. V
 > Věta (o rozkladu funkce na součet sudé a liché funkce) Platí $$f(x)=\frac{f(x)+f(-x)}2 + \frac{f(x)-f(-x)}2.$$
 Každou funkci definovanou na $(-\infty,\infty)$ je možné takto rozložit na součet sudé a liché funkce.
 
-Poznámka. Pro funkci $f(x)=e^x$ dostáváme
+> Příklad: Pro funkci $f(x)=e^x$ dostáváme
 $$e^x=\frac{e^x+e^{-x}}2-\frac{e^x-e^{-x}}2.$$ Dvě funkce na pravé
 straně mají význam v aplikacích a nazývají se hypebolický kosinus,
 $\cosh x$, a hyperbolický sinus, $\sinh x$.
@@ -119,11 +142,11 @@ nerovnice.
 >
 > Nespecifikujeme-li množinu $M$, máme na mysli, že uvedená vlastnost platí na celém definičním oboru funkce $f$.
 
-Poznámka: Je-li funkce $f$ rosoucí nebo klesající, je i prostá a nerovnice uvedené v předchozí definici jsou dokonce ekvivalentní. Můžeme tedy na obě strany nerovnice aplikovat tutéž rostoucí funkci, nebo rostoucí funkci z obou stran nerovnice vynechat.
-
-* Je-li $f$ rostoucí, platí $$x_1\leq x_2 \iff f(x_1)\leq f(x_2).$$
-* Je-li $f$ klesající, platí $$x_1\leq x_2 \iff f(x_1)\geq f(x_2).$$
-* Stejné vztahy platí o pro ostré nerovnosti.
+> Poznámka (monotonie z hlediska řešitelnosti nerovnic). Je-li funkce $f$ rostoucí nebo klesající, je i prostá a nerovnice uvedené v předchozí definici jsou dokonce ekvivalentní. Můžeme tedy na obě strany nerovnice aplikovat tutéž rostoucí funkci, nebo rostoucí funkci z obou stran nerovnice vynechat.
+>
+>* Je-li $f$ rostoucí, platí $$x_1\leq x_2 \iff f(x_1)\leq f(x_2).$$
+>* Je-li $f$ klesající, platí $$x_1\leq x_2 \iff f(x_1)\geq f(x_2).$$
+>* Stejné vztahy platí o pro ostré nerovnosti.
 
 Tyto poučky použijeme vždy, když rozvažujeme, zda můžeme k oběma
 stranám nerovnice přičíst stejné číslo (můžeme), zda můžeme obě strany
@@ -137,20 +160,20 @@ záporné) apod. Takových situací je mnoho a protože není v lidských
 silách si všechny pamatovat, stačí je míst spojeny s definicí rostoucí
 a klesající funkce.
 
-1. Funkce $\ln x$ a $\sqrt x$ jsou rostoucí a proto z nerovnic $$\ln x>\ln 6$$ a $$\sqrt x>\sqrt 6$$ plyne $x>6$. Zejména v druhém případě je nutné si uvědomit, že používáme definici rostoucí funkce a poznámku připojenou za tuto definici. Neumocňujeme obě strany nerovnice, jak by někdo mohl tento krok dezinterpretovat. 
-2. Funkce $\frac 1x$ a $y=x^2$ nejsou ani rostoucí ani klesající a proto z žádné z nerovností
+> Příklad: Funkce $\ln x$ a $\sqrt x$ jsou rostoucí a proto z nerovnic $$\ln x>\ln 6$$ a $$\sqrt x>\sqrt 6$$ plyne $$x>6.$$ Zejména v druhém případě je nutné si uvědomit, že používáme definici rostoucí funkce a poznámku připojenou za tuto definici. Neumocňujeme obě strany nerovnice, jak by někdo mohl tento krok dezinterpretovat. Umocněním obou stran nerovnice se obecně může změnit obor pravdivosti, proto tato operace u nerovnic není povolena.
+
+> Příklad: Funkce $\frac 1x$ a $y=x^2$ nejsou ani rostoucí ani klesající a proto z žádné z nerovností
 $$\frac 1x \leq \frac 15$$
 a
 $$x^2 \leq 5^2$$
 neplyne ani $x\leq 5$ ani $x\geq 5$.
-3. Funkce $\sqrt x$ nabývá nezáporných hodnot a funkce $\frac 1x$ je klesající na $(0,\infty)$. Proto z nerovnosti
+
+> Příklad: Funkce $\sqrt x$ nabývá nezáporných hodnot a funkce $\frac 1x$ je klesající na $(0,\infty)$. Proto z nerovnosti
 $$\frac 1{\sqrt x} \leq \frac 15$$
-plyne $\sqrt x\geq 5$. Druhá mocnina je na intervalu $(5,\infty)$ rostoucí a proto odsud plyne dále (umocněním obou stran nerovnice) $$x\geq 25.$$
-
-Poznámka. Obecně není nerovnice vzniklá umocněním obou stran nerovnice
-ekvivalentní nerovnici původní protože druhá mocnina není ani rostoucí
-ani klesající.
+plyne $$\sqrt x\geq 5=\sqrt {25}.$$ Druhá mocnina je na intervalu $(5,\infty)$ rostoucí a proto odsud plyne dále $$x\geq 25.$$
 
 
-# Funkce jedné a více proměnných, vektorové funkce
+# Funkce více proměnných
+
+# Vektorové funkce
 

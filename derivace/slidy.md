@@ -91,6 +91,7 @@ spojitosti.
 > Věta (spojitost elementárních funkcí). Všechny elementární funkce jsou spojité v každém vnitřním
   bodě svého definičního oboru.
 
+Podobně jako spojitost funkce jedné proměnné je definována spojitost funkcí více proměnných. Zůstane dokonce v platnosti předchozí věta. V naprosté většině základních praktických aplikací vystačíme s popisem pomocí elementárních funkcí a proto jsou funkce, se kterými pracujeme, zpravidla automaticky spojité. Opatrnost je nutné pouze tam, kde se od elementárních funkcí odchýlíme, například při použití nekonečných řad.
 
 > Poznámka. Body, v jejichž okolí je funkce ohraničená, ale je zde porušena spojitost, jsou například následující.
 > 

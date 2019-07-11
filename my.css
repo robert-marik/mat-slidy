@@ -106,3 +106,6 @@ li ul li { font-size: 85%; font-style: normal; }
 
 .poznamka {font-style: normal; }
 
+.priklad {font-style: normal; background-color:#eeeeee; border-style:none;}
+
+.prikladname {font-weight:bold;}
