@@ -1,5 +1,5 @@
 
-kde="derivace aproximace integraly integraly2 ode matice inverzni_matice soustavy vektorove_pole dvojny_integral shrnuti"
+kde="funkce derivace aproximace integraly integraly2 ode matice inverzni_matice soustavy vektorove_pole dvojny_integral shrnuti"
 
 for i in $kde
 do
