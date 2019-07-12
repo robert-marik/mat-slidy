@@ -146,7 +146,11 @@ rychlost s jakou veličina $f$ reaguje na změny veličiny $x$.
 * Má-li funkce $f$ kladnou derivaci na intervalu $I$, je na tomto intervalu rostoucí.
 * Má-li funkce $f$ zápornou derivaci na intervalu $I$, je na tomto intervalu klesající.
 
-**Příklad.** Těleso o teplotě $T$ je v místnosti o teplotě $T_0>T$. Z
+# Aplikace derivací (rychlost změny v čase)
+
+### Zákon ochlazování
+
+Těleso o teplotě $T$ je v místnosti o teplotě $T_0>T$. Z
 fyziky je známo (Newtonův zákon tepelné výměny), že rychlost s jakou
 roste teplota tělesa je úměrná teplotnímu rozdílu $T_0-T$.
 
@@ -160,27 +164,46 @@ dT}{\mathrm dt}=k(T_0-T),$$ kde $k$ je konstanta úměrnosti. Neznámou v
 této rovnici je funkce a v rovnici figuruje derivace této
 funkce. Takové rovnice se naučíme řešit později.
 
-# Narozeniny - uhlík 14C
 
-<div class='obtekat'>
+### Uhlík 14C a datování organických nálezů
 
-![Narozeniny uhlík 14, hojně používaný v matematických modelech.  Zdroj: pixabay.com](dort.jpg)
 
-</div>
-
-Dne 27.2.1940 (zítra 79 let) byl objeven uhlík $^{14}C$. Jedná se o
+V roce 1940 byl objeven uhlík $^{14}C$. Jedná se o
 radioaktivní prvek s mnoha skvělými vlastnostmi. Jednou z nich je
 vhodná rychlost rozpadu, která jej činí vhodným pro datování
 archeologických nálezů pozůstatků živých organismů
 
 * Rychlost, s jakou se mění množství (a tedy i koncentrace $y$ v daném
-  vzorku) nerozpadnutého radioaktivního materiálu je popsána rovnicí
-  $$\frac{\mathrm dy}{\mathrm dt}=-\lambda y,$$
-  kde $\lambda$ je konstanta úměrnosti. Tato rovnice je přirozeným
+  vzorku) nerozpadnutého radioaktivního materiálu je úměrná jeho množství (a tedy i koncentraci). Tato skutečnost je přirozeným
   důsledkem toho, že pro daný nestabilní izotop mají všechny atomy
   stejnou pravděpodobnost, že u nich dojde k rozpadu a tato
-  pravděpodobnost se s časem nemění.
-* Uhlík je na datování vhodný, protože jej během života absorbují živé organismy.
+  pravděpodobnost se s časem nemění. Kvantitativně je proces rozpadu popsán rovnicí
+  $$\frac{\mathrm dy}{\mathrm dt}=-\lambda y,$$
+  kde $\lambda$ je konstanta úměrnosti. 
+* Uhlík je na datování vhodný, protože jej během života absorbují živé organismy a protože poločas rozpadu jej činí vhodným pro datování většiny archeologicky zajímavých nálezů. (Pro datování vzorků stařích než 50 tisíc let je nutné použít jiný prvek, protože v tomto případě již uhlíku ve vzorku zůstane málo.)
+
+# Aplikace derivací (změna v prostoru)
+
+### Vedení tepla (dřevařství, nábytek, dřevostavby)
+
+Nerovnoměrnost rozložení teploty v tělese vede k vyrovnávání teplot
+přenosem tepla. Uvažujme teplotu $T$ tyče jako funkci polohy $x$ na
+tyči. Ke kvantitativnímu vyjádření vedení teplat je nutné vědět, jaký
+rozdíl teplot připadá na jednotku délky. V homogenním případě vydělíme
+teplotní rozdíl vzdáleností. V obecném případě rychlost s jakou se
+mění teplota podél tyče (gradient teploty) vyjadřujeme pomocí derivace
+$$\frac{\mathrm dT}{\mathrm dx}.$$ Využívá se v posuzování izolačních
+vlastností a při sušení dřeva.
+
+### Koryto řeky (krajinářství)
+
+Při přechodu říčního proudění v bystřinné hraje důležitou roli
+derivace průřezu koryta podle výšky koryta. Tato veličina vyjadřuje,
+jak rychle se mění obsah průřezu s rostoucí hladinou. Z obrázku je
+zřejmé, že tato derivace je rovna šířce koryta v hladině. V praxi je
+toto možné spočítat pro speciální tvary koryta, proto jsou vzorce pro
+vodní skok k dispozici jenom ve speciálních případech, jako například
+koryto obdélníkového tvaru.
 
 # Výpočet derivace
 
