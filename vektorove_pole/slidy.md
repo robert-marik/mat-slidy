@@ -472,7 +472,7 @@ V případě dřeva volíme pokud možno souřadné osy souhlasně s anatomický
 $$
 \frac{\partial c}{\partial t}=\frac{\partial }{\partial x}\left(D_x\frac{\partial c}{\partial x}\right)+\frac{\partial }{\partial y}\left(D_y\frac{\partial c}{\partial y}\right)+\frac{\partial }{\partial z}\left(D_z\frac{\partial c}{\partial z}\right)
 $$
- Považujeme-li složky matice $D$ za konstanty (nemusely by být, protože materiál nemusí být homogenní a může mít v jiných bodech jiné fyzikální vlastnosti), je možné psát rovnici ve tvaru
+ Považujeme-li složky matice $D$ za konstanty (nemusely by být, protože materiál nemusí být homogenní a může mít v jiných bodech jiné fyzikální vlastnosti, nebo odezva materiálu nemusí být přesně lineární a koeficient $D$ se může měnit s měnícím se $c$), je možné psát rovnici ve tvaru
 $$
 \frac{\partial c}{\partial t}=D_x\frac{\partial^2 c}{\partial x^2}+D_y\frac{\partial^2 c}{\partial y^2}+D_z\frac{\partial^2 c}{\partial z^2}, \tag{**}
 $$
@@ -527,7 +527,7 @@ $$\frac{\partial }{\partial x} \left(k_x \frac{\partial h}{\partial x}\right)
 =
 S\frac{\partial h}{\partial t}.
 $$
-Pokud jsou fyzikální vlastnosti stejné ve všech bodech uvažované oblasti, jsou $k_x$ a $k_y$ konstanty a úloha se dále redukuje na 
+Pokud jsou $k_x$ a $k_y$ konstanty (nezávisí ani na poloze ani na $h$, tj. předpokládáme homogenitu a lineární materiálové vztahy), úloha se dále redukuje na 
 $$k_x \frac{\partial^2 h}{\partial x^2}
 +
 k_y \frac{\partial^2 h}{\partial y^2}
@@ -562,6 +562,11 @@ $$\rho c\frac{\partial T}{\partial t}=D\left(\frac{\partial^2 T}{\partial x^2}+\
 Pro $\tau=\frac{Dt}{\rho c}$ (změna jednotky času) dostáváme
 $$\frac{\partial T}{\partial \tau}=\frac{\partial^2 T}{\partial x^2}+\frac{\partial^2 T}{\partial y^2}.$$
 
+Pro praktické využití připomeňme, že toto je odvozeno za předpokladu
+lineárních materiálových vztahů.  Někdy závisí $D$ na $T$ a potom $D$
+není možné považovat za konstantu a uvedenou redukci není možné
+provést, byť by byla homogenita materiálu zajištěna.
+
 ## Ortotropní materiál
 
 Materiál má dva charakteristické směry související s rovinami
@@ -580,3 +585,5 @@ Materiál má dva charakteristické směry související s rovinami symetrie a m
 
 Jako předchozí případ, ale $D_x$ a $D_y$ nezávisí na souřadnicích a jedná se tedy o konstanty. Podle pravidla pro derivaci konstantního násobku se rovnice (***) redukuje na 
 $$\rho c\frac{\partial T}{\partial t}=D_x\frac{\partial^2 T}{\partial x^2}+D_y\frac{\partial^2 T}{\partial y^2}.$$
+
+Podobně jako výše, tuto redukci není možné použít, pokud by složky matice $D$ závisely na $T$.

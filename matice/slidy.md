@@ -83,12 +83,15 @@ otočení směru.
 
 # Sčítání vektorů a integrace cesty u migrujících živočichů
 
+\iffalse
+
 <div class='obtekat'>
 
 ![Pouštní mravenec umí skvěle sčítat vektory. Bez této schopnosti by nenašel cestu domů. Zdroj: pixabay.com](mravenec.jpg)
 
 </div>
 
+\fi
 
 Staří námořníci navigovali tak, že zaznamenávali směr a rychlost
 pohybu. Z těchto informací je možné určit relativní polohu vzhledem k

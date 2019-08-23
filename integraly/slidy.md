@@ -80,6 +80,7 @@ Závislá proměnná|Derivace podle času|
 
 # Motivace: Jak z derivace křivky získat rovnici křivky?
 
+\iffalse
 
 <div class='obtekat'>
 
@@ -89,6 +90,8 @@ Závislá proměnná|Derivace podle času|
 ![Schema poloviny mostu se silamu působícími na část lana.](5.png)
 
 </div>
+
+\fi
 
 Na této úloze si připomeneme další roli derivace (směrnice tečny) a
 představíme si úžasný druh mostů – mosty zavěšené na nosných lanech,
@@ -352,11 +355,15 @@ následující přednášce.
 
 # Aplikace určitého integrálu (dráha)
 
+\iffalse
+
 <div class='obtekat'>
 
 ![Při pohybu proměnnou rychlostí je dráha integrálem rychlosti. Zdroj: pixabay.com](parasutista.jpg)
 
 </div>
+
+\fi
 
 
 1. Těleso pohybující se po dobu $\Delta t$ konstantní rychlostí $v$ po
@@ -376,6 +383,7 @@ následující přednášce.
 
 # Aplikace určitého integrálu (tlaková síla)
 
+\iffalse
 
 <div class='obtekat'>
 
@@ -388,6 +396,8 @@ následující přednášce.
  na myšlené vodorovné pásy dělící tuto stěnu.](prehrada.png)
 
 </div>
+
+\fi
 
 [Mojžíšův
 most](http://www.netherlands.cz/mkportal/modules/wiki/index.php/Moj%C5%BE%C3%AD%C5%A1%C5%AFv_most)
@@ -425,6 +435,8 @@ označíme $H$.
 
 # Aplikace určitého integrálu (práce při čerpání vody)
 
+\iffalse
+
 <div class='obtekat'>
 
 ![Mojžíšův most je z obou stran chráněný přehradou umožňující regulací
@@ -433,6 +445,8 @@ označíme $H$.
  http://veryhungryexplorer.com/the-day-i-nearly-walked-on-water/](mojzisuv_most_pod_vodou.jpg)
 
 </div>
+
+\fi
 
 Pokud potřebujeme vyčerpat vodu z rezervoáru, nádrže, rybníka nebo
 jezera, musíme ji dopravit za stěnu (za hráz, dostat na břeh,
@@ -466,6 +480,8 @@ kvádru by $S$ bylo konstantní a rovno obsahu dna.)
 
 # Aplikace určitého integrálu (moment setrvačnosti tyče nebo trámu)
 
+\iffalse
+
 <div class='obtekat'>
 
 ![Při posuzování stability rozhledny hraje moment setrvačnosti
@@ -476,6 +492,8 @@ http://tvstav.cz](bohdanka.jpg)
 ![Tyč rotující okolo kolmé osy.](4.png)
 
 </div>
+
+\fi
 
 * Kinetická energie tělesa o hmotnosti $m$ pohybujícího se posuvným
   pohybem rychlostí $v$ je dána vztEnergie potřebná k vyvolání
@@ -513,12 +531,16 @@ integrálem, ale závisí na poloze tyče vzhledem k ose otáčení.
 
 **Závěr.**
 
+\iffalse
+
 <div class='obtekat'>
 
 ![Provazochodec při přechodu přes Grand Canyon. Zdroj:
  cbsnews.com](wallenda.jpg)
 
 </div>
+
+\fi
 
 * Na roztočení tyče okolo konce je potřeba více energie, než na
   roztočení okolo středu. Čtyřikrát více. (Z praxe víme, že s dlouhým

@@ -43,7 +43,9 @@ ukážeme platnost následujících přibližných vzorců, které platí pro $x
 blízké k nule.  $$\sin x\approx x, \quad \cos x\approx 1,\qquad
 (1+x)^n=1+nx.$$ První dva vzorce využijeme později při popisu malých
 rotací v rovině.
- 
+
+\ifalse
+
 <div class='obtekat'>
 
 ![Vrcholek hory Chimborazo je místo nejvzdálenější od středu
@@ -51,6 +53,8 @@ rotací v rovině.
  zrychlení zde je nejmenší.  Zdroj: pixabay.com](chimborazo.jpg)
 
 </div>
+
+\fi
 
 **Příklad (gravitační potenciál v malých výškách nad zemí).**
 Gravitační potenciál $V$ ve vzdálenosti $r$ od středu koule

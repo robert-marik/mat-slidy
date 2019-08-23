@@ -188,12 +188,23 @@ archeologických nálezů pozůstatků živých organismů
 
 Nerovnoměrnost rozložení teploty v tělese vede k vyrovnávání teplot
 přenosem tepla. Uvažujme teplotu $T$ tyče jako funkci polohy $x$ na
-tyči. Ke kvantitativnímu vyjádření vedení teplat je nutné vědět, jaký
+tyči. Ke kvantitativnímu vyjádření vedení tepla je nutné vědět, jaký
 rozdíl teplot připadá na jednotku délky. V homogenním případě vydělíme
 teplotní rozdíl vzdáleností. V obecném případě rychlost s jakou se
 mění teplota podél tyče (gradient teploty) vyjadřujeme pomocí derivace
 $$\frac{\mathrm dT}{\mathrm dx}.$$ Využívá se v posuzování izolačních
 vlastností a při sušení dřeva.
+
+
+\iffalse
+
+<div class='obtekat'>
+
+![Derivace hraje roli při odvození podmínky pro vznik hydraulického skoku. Zdroj: Jonathan Ball, https://www.flickr.com/photos/jball359](jump.jpg)
+
+</div>
+
+\fi
 
 ### Koryto řeky (krajinářství)
 
@@ -224,7 +235,7 @@ probrání Taylorova polynomu, kdy se použije o něco obecnější postup.
   zatížený silou $F$. Průhyb $s$ uprostřed nosníku je dán vztahem
   $$s=\frac {F L^3}{4Ebh^3},\tag{♣}$$ kde $E$ je materiálová
   konstanta. Pro $h=20\,\mathrm{cm}$ je průhyb
-  $s=10\,\mathrm{cm}$. Jak se průhyb změní, pokud se $h$ sníží na
+  $s=10\,\mathrm{cm}$. Zjistěte, jak se průhyb mění při změnách výšky nosníku. Odhadněte, jak se průhyb změní, pokud se $h$ sníží na
   $18\,\mathrm{cm}$?
 
 **Řešení.** Relevantními veličinami jsou $s$ a $h$ a vzorec je tedy

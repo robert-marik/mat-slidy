@@ -468,6 +468,8 @@ kdy se jedná o minimum pětiletého průměru a kdy o maximum.
 
 # Práce při vytahování řetězu (přímý výpočet)
 
+\iffalse
+
 <div class='obtekat'>
 
 ![Visící řetěz. Při vytahování na střechu se zmenšuje síla, kterou je nutno překonávat.
@@ -475,7 +477,7 @@ kdy se jedná o minimum pětiletého průměru a kdy o maximum.
 
 </div>
 
-
+\fi
 
 Ze střechy budovy o výšce $50$ metrů visí řetěz dlouhý $30$
 metrů. Jeden metr řetězu váží dva kilogramy. Vypočítáme práci

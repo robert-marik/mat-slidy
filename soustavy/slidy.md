@@ -430,12 +430,16 @@ a $\sigma_{LL}=7.5$. Mimodiagonální složka udává komponentu $\sigma_{RL}=-4
 
 # Transformace tenzoru
 
+
+\iffalse
+
 <div class='obtekat'>
 
 ![Schopnost transformovat tenzory napětí nebo deformace  je důležitá u studia vrstvených materiálů. Na obrázku Jatawood, pro výrobu rukojetí nožů. Zdroj: jatagan.eu](jatawood.jpg)
 
 </div>
 
+\fi
 
 Úloha na transformaci tenzoru, kterou jsme řešili na minulém slidu je
 v aplikacích velmi důležitá. Proto existuje řada grafických nebo

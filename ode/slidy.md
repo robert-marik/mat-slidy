@@ -388,11 +388,15 @@ výstupem metody bude aproximace integrální křivky pomocí lomené čáry.
 
 # Transformace diferenciální rovnice
 
+\iffalse
+
 <div class='obtekat'>
 
 ![Letecký snímek údolí Vajont krátce po katastrofě. [Video](https://www.youtube.com/watch?v=UNWKHp2NYMc&feature=youtu.be&t=38m10s) ukazuje, že při modelování procesu ve zmenšeném měřítku je nutné transformovat ostatní veličiny, například čas. Pro nás klíčová slova v čase 39:21 dokumentu jsou "v přepočtu pro simulaci se jedná o zhruba čtyři sekundy". Čas ve zmenšeném modelu ubíhá jinou rychlostí než čas v reálném ději. Foto: Wikipedia.](Vajont.jpg)
 
 </div>
+
+\fi
 
 Naučíme se vyjadřovat diferenciální rovnici v jiných proměnných tak,
 aby bylo možné snížit počet parametrů v této rovnici. Pro jednoduchost
@@ -564,12 +568,16 @@ má tedy pravá strana derivaci různou od nuly, poznáme stabilitu z\ monotonie
 
 #  Příklad - časový rozestup mezi trolejbusy
 
+\iffalse
+
 <div class='obtekat'>
 
 
 ![Trolejbus jezdící okolo LDF. Dříve se běžně dlouho čekalo a poté jelo několik trolejbusů za sebou. s\ IDS JMK a koordinací dopravy k tomuto nedochází, ale občas trolejbus čeká na odjezd podle jízního řádu. Autor: Dezidor, CC BY 3.0.](trolejbus.jpg)
 
 </div>
+
+\fi
 
 Uvažujme dva trolejbusy jedoucí za sebou po stejné trati. Označme
 $x(t)$ jejich časový odstup. Pokud první trolejbus zastaví na určité
@@ -655,12 +663,16 @@ $$
 
 # Diferenciální rovnice růstu vodní kapky
 
+
+\iffalse
+
 <div class='obtekat'>
 
 ![Londýnská mlha. Dnes už to není jako za časů Sherloka Holmese. Poslední velká mlha (Pea soup fog) byla v roce 1952. Zdroj: Wikipedia.](london.jpg)
 
 </div>
 
+\fi
 
 
 Modelujme růst kulové kapky. Ta roste tak, že na povrchu kondenzují
@@ -700,12 +712,16 @@ pevné spojená s\ intenzivním uvolněním tepla.
 
 # Diferenciální rovnice vyšších řádů
 
+\iffalse
+
 <div class='obtekat'>
 
 ![Téměř veškerá klasická mechanika a dynamika pohybů se redukuje na studium diferenciálních rovnic druhého řádu. Ve vesmíru i\ na Zemi. Zdroj: pixabay.com.](satelit.jpg)
 
 </div>
 
+
+\fi
 
 Je-li $x$ poloha tělesa, je derivace $\frac{\mathrm dx}{\mathrm dt}$
 rychlost a druhá derivace $\frac{\mathrm d^2x}{\mathrm dt^2}$
@@ -744,11 +760,15 @@ přibližně a převádí se na řešení soustav lineárních rovnic.
 
 # Konečné diference
 
+\iffalse
+
 <div class='obtekat'>
 
 ![Tramvajový most v Brně Pisárkách z předpjatého betonu. Vede do zatáčky a ve stoupání. Analyticky vyřešit namáhání takového mostu je nereálné, podobné úlohy se řeší převodem na úlohy lineární algebry. Podobné síly mohou vznikat i v\ dřevěných konstrukcích a to i v\ případě, že  nosníky primárně nekonstruujeme jako předpjaté. Zdroj: www.moravskyturista.cz.](pisarky.jpg)
 
 </div>
+
+\fi
 
 
 Naučili jsme se numericky integrovat a řešit diferenciální rovnice a
@@ -775,11 +795,15 @@ bodech o $h$ doprava a doleva ve tvaru
 $$ \frac{\mathrm d^2f}{\mathrm dx^2}= \frac{\frac{f(x+h)-f(x)}{h} - \frac{f(x)-f(x-h)}{h}}{h} =\frac{f(x-h)-2f(x)+f(x+h)}{h^2}.  $$
 
 
+\iffalse
+
 <div class='obtekat'>
 
 ![Příhradový nosník. Vzpěry jsou namáhány v ose. Teorii vybudoval v 18. století L. Euler, ale začala se dále rozvíjet a využívat až po [sérii pádů](https://en.wikipedia.org/wiki/Cast-iron_architecture#Catastrophic_failures) příhradových železničních mostů v 19. století. Zdroj: www.ceskestavby.cz.](nosnik.jpg)
 
 </div>
+
+\fi
 
 **Příklad** (podle Autar Kaw et al.: [Finite Difference Method for
 Ordinary Differential
