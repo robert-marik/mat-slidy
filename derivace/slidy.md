@@ -146,7 +146,7 @@ rychlost s jakou veličina $f$ reaguje na změny veličiny $x$.
 * Má-li funkce $f$ kladnou derivaci na intervalu $I$, je na tomto intervalu rostoucí.
 * Má-li funkce $f$ zápornou derivaci na intervalu $I$, je na tomto intervalu klesající.
 
-# Aplikace derivací (rychlost změny v čase)
+# Aplikace derivací 1: Jak rychle? (změna v čase)
 
 ### Zákon ochlazování
 
@@ -182,7 +182,7 @@ archeologických nálezů pozůstatků živých organismů
   kde $\lambda$ je konstanta úměrnosti. 
 * Uhlík je na datování vhodný, protože jej během života absorbují živé organismy a protože poločas rozpadu jej činí vhodným pro datování většiny archeologicky zajímavých nálezů. (Pro datování vzorků stařích než 50 tisíc let je nutné použít jiný prvek, protože v tomto případě již uhlíku ve vzorku zůstane málo.)
 
-# Aplikace derivací (změna v prostoru)
+# Aplikace derivací 2: Jak strmě? (změna v prostoru)
 
 ### Vedení tepla (dřevařství, nábytek, dřevostavby)
 
@@ -218,9 +218,11 @@ koryto obdélníkového tvaru.
 
 # Výpočet derivace
 
-Viz přednáška a cvičení.
+* **Nikdy** (nebo alespoň skoro nikdy) nederivujeme pomocí definice, ale používáme vzorce pro derivace základnách elementárních funkcí a pro derivace matematických operací s funkcemi.
+* Viz cvičení v prvním týdnu.
 
-# Aplikace derivací (přibližná změna)
+
+# Aplikace derivací 3: Jak ctilivě? (reakce na změnu)
 
 > Poznámka.
 Buď $f:\mathbb R\to\mathbb R$ funkce taková, že má derivaci. Pokud se veličina $x$ změní z hodnoty $x_0$ o hodnotu $\Delta x$ (tj. nová hodnota je $x_0+\Delta x$), potom se $f$ mění přibližně o $f'(x_0)\Delta x$, tj. $$\Delta f\approx f'(x_0)\Delta x$$ neboli

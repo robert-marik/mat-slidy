@@ -44,7 +44,7 @@ blízké k nule.  $$\sin x\approx x, \quad \cos x\approx 1,\qquad
 (1+x)^n=1+nx.$$ První dva vzorce využijeme později při popisu malých
 rotací v rovině.
 
-\ifalse
+\iffalse
 
 <div class='obtekat'>
 
@@ -86,12 +86,15 @@ bodem $[x_0,f(x_0)]$, která má směrnici $f'(x_0)$. Proto se o derivaci
 
 # Motivace: Je možné chtít více než je lineární aproximace?
 
+\iffalse
+
 <div class='obtekat'>
 
 ![Pokud se rychlost růstu snižuje, je lineární aproximace nadhodnocená a funkční hodnoty jsou ve skutečnosti nižší.](tecna.png)
 
 </div>
 
+\fi
 
 Lineární aproximace vychází z předpokladu, že rychlost růstu (nebo
 poklesu) se příliš nemění. Někdy můžeme mít dodatečnou informaci o tom, jak se tato rychlost změní. Například pokud se bude rychlost
@@ -173,13 +176,16 @@ původně pro těleso na pružině. Veličina $r-1$ je výchylka z rovnovážn�
 # Motivace: Jak najít minimum potenciálu?
 
 
+\iffalse
+
+
 <div class='obtekat'>
 
 ![Znalost minima potenciální energie je často zásadní pro nalezení stabilní konfigurace systému. Od molekul po soustavy těles. Musíme mít univerzální postup, jak tato minima hledat.](taylor.png)
 
 </div>
 
-
+\fi
 
 V příkladě s aproximací potenciálu pomocí Taylorova polynomu se nám
 povedlo potenciál aproximovat pomocí kvadratické funkce v okolí
