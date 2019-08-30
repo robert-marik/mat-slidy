@@ -222,7 +222,7 @@ koryto obdélníkového tvaru.
 * Viz cvičení v prvním týdnu.
 
 
-# Aplikace derivací 3: Jak ctilivě? (reakce na změnu)
+# Aplikace derivací 3: Jak citlivě? (reakce na změnu)
 
 > Poznámka.
 Buď $f:\mathbb R\to\mathbb R$ funkce taková, že má derivaci. Pokud se veličina $x$ změní z hodnoty $x_0$ o hodnotu $\Delta x$ (tj. nová hodnota je $x_0+\Delta x$), potom se $f$ mění přibližně o $f'(x_0)\Delta x$, tj. $$\Delta f\approx f'(x_0)\Delta x$$ neboli

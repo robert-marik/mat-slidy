@@ -44,6 +44,8 @@ blízké k nule.  $$\sin x\approx x, \quad \cos x\approx 1,\qquad
 (1+x)^n=1+nx.$$ První dva vzorce využijeme později při popisu malých
 rotací v rovině.
 
+# Lineární aproximace v praxi
+
 \iffalse
 
 <div class='obtekat'>
@@ -75,6 +77,29 @@ potenciál v tíhovém poli Země. Tuto veličinu známe lépe ze vzorce pro
 potenciální energii tělesa o hmotnosti $m$, který má tvar $$E=mgh.$$
 
 [Online výpočet tíhového zrychlení](https://sagecell.sagemath.org/?z=eJxNjrEKgzAUAPdA_uFBB6Ngmlir7fDGji4OjoVHRQ22Rp6p31916nhwHDfSPBMWuihzc0usearU2hjgBD3T6oLzE73h5acl0BSkqLG4lNYYsytMrfsu4Dt4EIdBigqv-l5mRyfLj8yHln-DcSVWEUexFI3iGNNxP0iq8wYgRY-Nbl3XbaQY683qf4UjLIo=&lang=sage)
+
+
+**Příklad (potenciální a kinetická energie).**
+V předchozím příkladě je možné využít vztah 
+$$(1\pm x)^n\approx 1\pm nx
+,\quad \text{pro malé }x.$$
+Přepsáním gravitačního potenciálu $V$ do tvaru obsahujícího výšku nad zemí $h$
+a využitím lineární aproximace získáme
+\dm $$V = -G \frac{M}{R+h} =-G \frac{M}{R}\left (1+\frac hR\right)^{-1} \approx -G \frac{M}{R} + G \frac{M}{R^2} h =V_0+ g h,$$
+kde $g=G \frac{M}{R^2}$.
+
+Podobně
+aproximací přesných vztahů plynoucích z\ Einsteinovy teorie relativity získáme složku energie související s pohybem, tj. kinetickou energii
+\dm $$E=\frac{m_0c^2}{\sqrt{1-\frac {v^2}{c^2}}} =m_0 c^2 \left(1-\frac {v^2}{c^2}\right)^{-1/2} \approx m_0c^2+\frac 12 m_0v^2 $$
+pro $v$ mnohem menší než $c$. Snadno rozšifrujeme na konci klasický vzorec pro kinetickou energii $\frac 12 mv^2$.
+
+ Ač se jedná "jenom" o\ lineární aproximaci, je tento vzorec dokonce mnohem použitelnější, protože výpočet kinetické energie pomocí univerzálně platného vzorce při malých rychlostech zhavaruje na [zaokrouhlovacích chybách](https://sagecell.sagemath.org/?z=eJyVUTtvwjAQ3pH4DydYHFRI7Ja2DBnTpUOl_AAkY06NiR80DlbDr-8lPJqlQyUP9t3n73Fns5yvYQ6V9a3zoQW_O2DdnqYTlYvN5mUjntavQICmU5XpASFiayREsIuwZUueTCcxF1n6uHoew648cPRVtzsdtNKVh4B3gAaRQW3Tyu_h2GDEPToJdH5pp5Njo10Ls3ftsNWqloAOm0-NUBsZqNBZiGffKLTE4cFKMxKY3f7zVCxstohbca2MqD92qFw3sKAaSIze-eiNG1vd-9o7heTfVDJSeO38Cc7S140_ESZKpVUFiqKSasFzklO9XCFydrmnLHw1LeNLspHSO0ko4RwuNgoOo4dYOZbcHLJCLAuejEr_df8A_VgC4HfboKXOOXYB-wA09-CGgLGjPTivKInrB1dCDiVK86bR7BnPsmHLJbvs-W6uZOzveMtLJ0l-AGuRw0Q=&lang=sage&interacts=eJyLjgUAARUAuQ==).
+
+
+
+
+
+
 
 **Poznámka.** Lineární aproximace funkce je vlastně aproximace tečnou. Protože 
 pojem tečna ze střední školy chápeme jenom intuitivně, můžeme nyní pomocí
