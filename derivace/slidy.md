@@ -29,7 +29,7 @@
 
 <div class='obtekat'>
 
-![Průměr za kratší interval dává podrobnější informaci.  Zdroj: pixabay.com](mikroskop.jpg)
+![Určivání rychlosti na stále kratším intervalu je jako bychom se dívali na funkci stále lepším mikroskopem. Matematika se umí podívat dokonce "mikroskopem s nekonečně velkým rozlišením".  Zdroj: pixabay.com](mikroskop.jpg)
 
 </div>
 
@@ -218,7 +218,7 @@ koryto obdélníkového tvaru.
 
 # Výpočet derivace
 
-* **Nikdy** (nebo alespoň skoro nikdy) nederivujeme pomocí definice, ale používáme vzorce pro derivace základnách elementárních funkcí a pro derivace matematických operací s funkcemi.
+* **Nikdy** (nebo alespoň skoro nikdy) nederivujeme pomocí definice, ale používáme vzorce pro derivace základních elementárních funkcí a pro derivace matematických operací s funkcemi.
 * Viz cvičení v prvním týdnu.
 
 

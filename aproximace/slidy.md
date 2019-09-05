@@ -99,15 +99,17 @@ pro $v$ mnohem menší než $c$. Snadno rozšifrujeme na konci klasický vzorec 
 
 
 
+# Derivace a tečna
 
-
-**Poznámka.** Lineární aproximace funkce je vlastně aproximace tečnou. Protože 
+Lineární aproximace funkce je vlastně aproximace tečnou. Protože 
 pojem tečna ze střední školy chápeme jenom intuitivně, můžeme nyní pomocí
 derivace tečnu dokonce definovat. Z geometrického pohledu je tečna přímka
 bodem $[x_0,f(x_0)]$, která má směrnici $f'(x_0)$. Proto se o derivaci
 často mluví jako o směrnici tečny.
 
 > Definice (tečna). Nechť $f$ je funkce, která má v bodě $x_0$ derivaci $f(x_0)$. Přímka $$y=f(x_0)+f'(x_0)(x-x_0)$$ se nazývá *tečna ke grafu funkce* $f$ v bodě $x_0$.
+
+Díky souvislosti derivace s tečnou je derivace jedinečným nástrojem při popisu vlastností křivek. Příslušná oblast se nazývá diferenciální geometrie a je to jakási oblast mezi geometrií a diferenciálním počtem.
 
 # Motivace: Je možné chtít více než je lineární aproximace?
 
@@ -237,17 +239,25 @@ Předchozí věta eliminuje obrovské množství bodů z definičního oboru
 funkce. V prakticky využitelných případech nám po této eliminaci často
 zůstane jenom jediný bod, podobně jako v následující úloze.
 
+# Nosník maximální tuhosti
+
+
+\iffalse
 
 <div class='obtekat'>
 
-![K problému vyřezání co nejtužšího nosníku.](nosnik.png)
+![Ukázka zpracování kulatiny na trám sekerou. Zdroj: https://www.bladeforums.com](hewing.jpg)
+
+
+![K problému vyřezání co nejtužšího nosníku. Budme předpokládat krásný kmen, dokonalý válec bez vad, které by nás limitovaly při plánování, jak má výsledný trám vypadat.](nosnik.png)
 
 </div>
 
+\fi
 
-**Příklad.** Z kulatiny o průměru $d$ chceme vyříznout nosník
-obdélníkového tvaru, který se při zatížení co nejméně prohýbá. Z
-fyzikálních úvah plyne, že musí být maximální součin $bh^3$, kde $b$
+**Příklad.** Z kulatiny o průměru $d$ chceme získat nosník
+obdélníkového průřezu, který se při zatížení co nejméně prohýbá. Z
+fyzikálních úvah víme, že musí být maximální součin $bh^3$, kde $b$
 je šířka a $h$ výška nosníku.
 
 *Trik 1: Budeme měřit jednotky v násobcích průměru.* Proto je
@@ -279,8 +289,10 @@ a šířka bude rovna polovině průměru.
 [Online výpočet.](https://sagecell.sagemath.org/?z=eJwrSyzSUM9QSFHX5OVK08jQtM2IM9YqLiwq0UiJM9LNiDMCihdn5JdrpOmlZKaBVGAI6BXn55SlgmQAYWkWzQ==&lang=sage)
 
 
-**Poznámka.** Někdy se při studiu lokálních extrémů hodí dva následující triky.
+# Závěrečné poznámky k lokálním extrémům
 
+> Poznámka. Někdy se při studiu lokálních extrémů hodí dva následující triky.
+>
 1. Vhodnou volbou jednotek dokážeme eliminovat některé
 parametry. Přesněji, vhodnou volnou jednotek dokážeme některým
 parametrům dát konkrétní numerickou hodnotu. Vyšetřovaná funkce je
@@ -392,10 +404,6 @@ transformuje na bod $(u_{1}(x_{1},x_{2}),u_{2}(x_{1},x_{2})).$
 aproximací
 $$
 \begin{aligned}
-  u_{1}(x_{1}+\Delta x_{1}, x_{2})&\approx u_{1}+\frac{\partial u_{1}}{\partial x_{1}}\Delta x_{1}\\
-  u_{2}(x_{1}+\Delta x_{1}, x_{2})&\approx u_{2}+\frac{\partial u_{2}}{\partial x_{1}}\Delta x_{1}\\
-  u_{1}(x_{1}, x_{2}+\Delta x_{2})&\approx u_{1}+\frac{\partial u_{1}}{\partial x_{2}}\Delta x_{2}\\
-  u_{2}(x_{1}, x_{2}+\Delta x_{2})&\approx u_{2}+\frac{\partial u_{2}}{\partial x_{2}}\Delta x_{2}\\
   u_{1}(x_{1}+\Delta x_{1}, x_{2}+\Delta x_{2})&\approx u_{1}+\frac{\partial u_{1}}{\partial x_{1}}\Delta x_{1}+\frac{\partial u_{1}}{\partial x_{2}}\Delta x_{2}\\
   u_{2}(x_{1}+\Delta x_{1}, x_{2}+\Delta x_{2})&\approx u_{2}+\frac{\partial u_{2}}{\partial x_{1}}\Delta x_{1}+\frac{\partial u_{2}}{\partial x_{2}}\Delta x_{2}
   \end{aligned}
