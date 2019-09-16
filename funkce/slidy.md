@@ -58,7 +58,7 @@ Meteoradar [https://mapy.in-pocasi.cz/](https://mapy.in-pocasi.cz/) má možnost
 Výsadní postavení při popisu dějů a jevů v přírodě mají přímá a
 nepřímá úměrnost, známé ze střední školy.
 
-> Definice (přímá a nepřímá úměrnost) Veličina $y$ je *přímo úměrná* veličině $x$ jestliže existuje konstanta $k$ taková, že platí $$y=kx.$$
+> Definice (přímá a nepřímá úměrnost). Veličina $y$ je *přímo úměrná* veličině $x$ jestliže existuje konstanta $k$ taková, že platí $$y=kx.$$
 Veličina $y$ je *nepřímo úměrná* veličině $x$ jestliže existuje konstanta $k$ taková, že platí $$y=\frac kx.$$
 
 
