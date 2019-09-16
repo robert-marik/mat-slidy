@@ -29,7 +29,7 @@
 
 <div class='obtekat'>
 
-![Určivání rychlosti na stále kratším intervalu je jako bychom se dívali na funkci stále lepším mikroskopem. Matematika se umí podívat dokonce "mikroskopem s nekonečně velkým rozlišením".  Zdroj: pixabay.com](mikroskop.jpg)
+![Určování rychlosti na stále kratším intervalu je jako bychom se dívali na funkci stále lepším mikroskopem. Matematika se umí podívat dokonce "mikroskopem s nekonečně velkým rozlišením".  Zdroj: pixabay.com](mikroskop.jpg)
 
 </div>
 
@@ -148,6 +148,18 @@ rychlost s jakou veličina $f$ reaguje na změny veličiny $x$.
 
 # Aplikace derivací 1: Jak rychle? (změna v čase)
 
+\iffalse
+
+<div class='obtekat'>
+
+![Rychlost ochlazování není konstantní, ale závisí na rozdílu teplot, který se během ochlazování stírá. Proces se v čase zpomaluje. Zdroj: Iva Balk, pixabay.com](polivka.jpg)
+
+</div>
+
+\fi
+
+
+
 ### Zákon ochlazování
 
 Těleso o teplotě $T$ je v místnosti o teplotě $T_0>T$. Z
@@ -164,8 +176,20 @@ dT}{\mathrm dt}=k(T_0-T),$$ kde $k$ je konstanta úměrnosti. Neznámou v
 této rovnici je funkce a v rovnici figuruje derivace této
 funkce. Takové rovnice se naučíme řešit později.
 
+> Poznámka (smysl předchozího příkladu). Předchozí příklad je často v různých obměnách používán na modelování ochlazování kávy, což je proces, který většina lidí důvěrně zná. Nemáme pochopitelně ambice se domnívat, že bychom dokázali z této rovnice odvodit nějaké zásadní výsledky aplikovatelné při pití ranní kávy nebo při konzumaci horké polévky. Učíme se na malých věcech, abychom později mohli dělat věci velké. Na známých věcech se učíme aparát, který bude naším jediným nástrojem tam, kde intuice začne selhávat. Z tohoto příkladu je nutné si odnést, že derivace, jako rychlost změny, hraje roli při kvantitativním popisu dějů a při studia procesů, kdy s mění veličiny. Ať už doopravdy (studium pohybu nebo dějů, probíhajících v čase) nebo virtuálně (problémy spojené s mechanikou, včetně statiky, stability a deformací, často pracují s virtuálními změnami, tj. se změnami, které jsou sice z hlediska úlohy přípustné, ale příroda je z nějakého důvodu nerealizuje). Tedy naprostá většina dějů a jevů, které studujeme a chceme jim rozumět. Jakmile se v popisu fyzikálního zákona objeví slovo *rychlost*, někdy nahrazené souslovím *časová změna*, znamená to, že kvantitativní popis se děje pomocí derivací.
+
+\iffalse
+
+<div class='obtekat'>
+
+![Při datování pomocí radioaktivního uhlíku využíváme toho, že rychlost procesu souvisí s tím, jak dlouho proces probíhá. Podobně jako u ochlazování. Zdroj: http://geologylearn.blogspot.com/.](uhlik.jpg)
+
+</div>
+
+\fi
 
 ### Uhlík 14C a datování organických nálezů
+
 
 
 V roce 1940 byl objeven uhlík $^{14}C$. Jedná se o
@@ -180,7 +204,7 @@ archeologických nálezů pozůstatků živých organismů
   pravděpodobnost se s časem nemění. Kvantitativně je proces rozpadu popsán rovnicí
   $$\frac{\mathrm dy}{\mathrm dt}=-\lambda y,$$
   kde $\lambda$ je konstanta úměrnosti. 
-* Uhlík je na datování vhodný, protože jej během života absorbují živé organismy a protože poločas rozpadu jej činí vhodným pro datování většiny archeologicky zajímavých nálezů. (Pro datování vzorků stařích než 50 tisíc let je nutné použít jiný prvek, protože v tomto případě již uhlíku ve vzorku zůstane málo.)
+* Uhlík je na datování vhodný, protože jej během života absorbují živé organismy a protože poločas rozpadu jej činí vhodným pro datování většiny archeologicky zajímavých nálezů. (Pro datování vzorků stařích než 50 tisíc let je nutné použít jiný prvek, protože v tomto případě již uhlíku $^{14}C$ ve vzorku zůstane málo.)
 
 # Aplikace derivací 2: Jak strmě? (změna v prostoru)
 
@@ -251,7 +275,7 @@ h=18-20=-2\,\mathrm{cm}$$ a tomu odpovídá změna průhybu $$\Delta
 s=-\frac{3\times 80\,000}{(20)^4}(-2)=3\,\mathrm{cm}.$$ Průhyb se tedy
 zvětší o $3\,\mathrm{cm}$.
 
-> Poznámka. Proč nepočítáme přesně? Stačila by selská logika a změna
+> Poznámka (smysl předchozího příkladu). Proč nepočítáme přesně? Stačila by selská logika a změna
 funkce $s=\frac k{h^3}$ by byla
 $$\Delta s=\frac k{(h+\Delta h)^3}-\frac k{h^3}.\tag{♠}$$ Odpověď je
 překvapivá: pomocí derivací je vyjádření změny v naprosté většině
@@ -260,7 +284,8 @@ $$\Delta s\approx -\frac{3k}{h^4}\Delta h,$$ což je na další práci
 mnohem příjemnější výraz, než rozdíl dvou zlomků (♠). Skutečnost, že platí
 pouze pro malé $\Delta h$ nás nijak neomezuje. Většinou se tento
 aparát používá tam, kde se chyba limitním přechodem "stáhne na
-nulu".
+nulu". Navíc, ukazujeme koncept. *Důležité je si z příkladu odnést, že derivace umožní analyzovat, jak vypočítané veličiny reagují na změny ve vstupních datech. Výsledkem může být například maximální teoretická přesnost se kterou je možné vypočítat výslednou veličinu při vstupních datech zatížených chybou nebo nějakým způsobem nejistých (zákon šíření chyb).*
+
 
 \iffalse
 
@@ -320,9 +345,9 @@ Studujme vedení tepla v jednorozměrné tyči. Teplota je funkcí dvou
 proměnných, polohy a času.
 
 > Poznámka. Potřebujeme fyzikální zákony řídící vedení tepla.  Bez nich matematika
-model vedení tepla nemá jak naformulovat. Tyto zákony je potřeba matematice "dodat zvenku" a jsou následující.
+model vedení tepla nemá jak naformulovat. Tyto zákony je potřeba matematice dodat "z venku", z aplikované vědy. Tou je v tomto případě fyzika, jindy může být biologie nebo geologie. Jakmile jsou potřebné zákony a případně materiálové vztahy k dispozici, stavé se problém čistě matematickým a fyzika přijde ke slovu při závěrečné interpretaci. Použijeme následující fyzikální fakta. 
 >
-* Rozdíl teplot má za následek pohyb tepla. Velikost toku tepla je úměrná
+* Rozdílem teplot vzniká tok tepla. Velikost toku tepla je úměrná
 teplotnímu rozdílu.
 * Tok tepla je aditivní veličina, tj. celkový tok průřezem je součinem
 toku vztaženého na jednotku průřezu a obsahu průřezu.
@@ -348,8 +373,8 @@ na centimetr.
     derivace je kladná, ale teplo teče doleva, tedy tok musí být záporný.
     * Veličina $k$ je konstanta úměrnosti
     umožňující překalibrování změny prostorového rozložení teploty na
-    rychlost toku tepla.
-    * Průřez $S$ ve vzorci figuruje z fyzikálního zákona. Vyjadřuje
+    tok tepla jendotkovým průřezem (první odrážka).
+    * Průřez $S$ ve vzorci figuruje z fyzikálního zákona (druhá odrážka). Vyjadřuje
     zřejmý fakt, že pokud máme při jinak stejných podmínkách tyč násobně
     většího průřezu, teče tyčí více tepla.
 * *Potřebujeme zjistit, kolik tepla, které přiteče do nějakého bodu, v
@@ -357,7 +382,7 @@ tomto bodě "zůstane" a kolik tepla odteče dále.* Tedy potřebuji vědět, ja
 roste rychlost toku podél tyče je $\frac{\partial q}{\partial x}$. My pro kladný ohřev
 potřebujeme pokles toku tepla, tedy násobíme záporným znaménkem a dostáváme
 $-\frac{\partial q}{\partial x}$.
-* *Víme, kolik tepla se v daném místě spotřebuje na zvýšení teploty a tuto hodnotu musíme převést na změnu teploty. Opět se jedná o jakési překalibrování, které ještě souvisí s dalšími fyzikálními vlastnostmi jako je tepelná kapacita a hmotnost v daném místě. Tedy přesněji hustota hmotnosti.* Teplo $-\frac{\partial q}{\partial x}$ je teplo, které každou časovou jednotku "zůstává" v
+* *Víme, kolik tepla se v daném místě spotřebuje na zvýšení teploty a tuto hodnotu musíme převést na změnu teploty (třetí odrážka). Opět se jedná o jakési překalibrování, které ještě souvisí s dalšími fyzikálními vlastnostmi jako je měrná tepelná kapacita a hmotnost jednotkového množství látky objemu v daném místě.* Teplo $-\frac{\partial q}{\partial x}$ je teplo, které každou časovou jednotku "zůstává" v
 bodě $x$. Toto teplo se "použije" na zvýšení teploty. Vztažením
 rovnice (**) na jednotku délky  a času dostáváme
 $$\frac{Q}{\Delta x\Delta t}=\frac {m}{\Delta x} c\frac{\Delta T}{\Delta t}$$ a v bodě $x$ a v čase $t$ ("nekonečně malá oblast" a "nekonečně krátký časový interval" ) proto platí
