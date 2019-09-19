@@ -438,12 +438,19 @@ rovnici (*). Tuto informaci je však nutno interpretovat v kontextu
 definice nových proměnných. Například to, že všechna řešení rovnice (**) konvergují k nule
 znamená, že všechna řešení rovnice (*) konvergují k $T_0$. To, že řešení rovnice (**) klesne na poloviční hodnotu za čas $\ln 2$ znamená, že vzdálenost řešení rovnice (*) od rovnovážného stavu se na polovinu zmenší za čas $\frac 1k \ln 2$.
 
-Proces eliminace parametrů z modelu popsaného diferenciální rovnicí se
-nazývá nondimenzionalizace modelu, protože eliminaci parametrů je
-vhodné provádět tak, aby výsledné nové veličiny vycházely bez
-fyzikálních jednotek. K tomu se provádí rozbor jednotek jednotlivých
-veličin. V jednoduchých případech však stačí primitivní postup
-popsaný v odstavcích výše a ukázaný na příkladu.
+> Poznámka (nondimenzinalizace, rozměrová analýza).  Proces eliminace
+parametrů z modelu popsaného diferenciální rovnicí se nazývá
+nondimenzionalizace nebo rozměrová analýza modelu, protože eliminaci
+parametrů je vhodné provádět tak, aby výsledné nové veličiny vycházely
+bez fyzikálních jednotek. K tomu se provádí rozbor jednotek
+jednotlivých veličin. V jednoduchých případech však stačí primitivní
+postup popsaný v odstavcích výše a ukázaný na příkladu. V tomto
+příkladě veličina $x$ nemá fyzikální jednotku, pŕotože je součinem
+konstanty $k$ (s jednotkou $\mathrm s^{-1}$) a času $t$ (s jednotkou
+$\mathrm s$), Kromě toho by bylo vhodné měřit i teplotu ne ve stupních
+celsia, ale v jednotkách, které "vyplynou" z úlohy a jsou pro danou
+úlohu přirozené. V tomto smyslu se k nondimenzionalizaci vrátíme během
+semestru při studiu rovnice vedení tepla a příslušné okrajové úlohy.
 
 U méně zřejmých úloh zkušenosti ukazují, že je vhodné volit transformaci tak, aby vznikly veličiny bezrozměrné, které nemají fyzikální jednotku. Například v
 Horáček, Fyzikální a mechanické vlastnosti dřeva I je zavedena [bezrozměrná vlhkost, bezrozměrný čas a bezrozměrná vzdálenost](https://is.mendelu.cz/eknihovna/opory/zobraz_cast.pl?cast=9180;lang=cz) na straně 61 pro rovnici popisující difuzi a [charakteristická délka, Biotovo číslo (bezrozměrná tepelná vodivost) a bezrozměrná teplota, bezrozměrný čas a bezrozměrná vzdálenost](https://is.mendelu.cz/eknihovna/opory/zobraz_cast.pl?cast=9182;lang=cz) pro rovnici popisující vedení tepla na stranách 88 a 89.

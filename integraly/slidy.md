@@ -496,10 +496,7 @@ http://tvstav.cz](bohdanka.jpg)
 \fi
 
 * Kinetická energie tělesa o hmotnosti $m$ pohybujícího se posuvným
-  pohybem rychlostí $v$ je dána vztEnergie potřebná k vyvolání
-  rotačního pohybu je úměrná momentu setrvačnosti. Moment setrvačnosti
-  je tedy jakousi mírou odolnosti vůči silám, které se jej snaží uvést
-  do rotačního pohybu. Větší ahem $E=\frac 12 mv^2$. Kinetická energie
+  pohybem rychlostí $v$ je dána vztahem $E=\frac 12 mv^2$. Kinetická energie
   tělesa o momentu setrvačnosti $J$ pohybujícího se otáčivým pohybem
   úhlovou rychlostí $\omega$ je dána vztahem $E=\frac 12 J\omega
   ^2$. Odsud vidíme, že energie potřebná k vyvolání rotačního pohybu
