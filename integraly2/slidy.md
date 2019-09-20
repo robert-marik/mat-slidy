@@ -554,12 +554,14 @@ kdybychom řetěz nepřetáčeli, jenom odpojili dolních 10 metrů a tuto
 
 Ještě možná stojí za rozvážení fakt, že při otočení řetězu okolo
 středu se nekoná práce. Tato skutečnost se dá opět dokázat myšlenkovým
-rozdělením řetězu na kousky a sečtením práce nutné pro přemístění těchto
-kousků. Ta bude kladná pro kousky pod těžištěm, záporná pro kousky nad
-těžištěm a výsledný součet bude nulový. Na podobném principu pracuje
-lodní výtah Falkrik Wheel. Práce potřebná pro otočení výtahu a
-vytažení lodě nahoru (nebo spuštění dolů nebo obojí současně) je
-překvapivě malá -- stačí jenom vykompenzovat třecí síly v
+rozdělením řetězu na kousky a sečtením práce nutné pro přemístění
+těchto kousků. Ta bude kladná pro kousky pod těžištěm, záporná pro
+kousky nad těžištěm a výsledný součet bude nulový. Na podobném
+principu pracuje lodní výtah Falkrik Wheel. Práce potřebná pro otočení
+výtahu a vytažení lodě nahoru (nebo spuštění dolů nebo obojí současně)
+je překvapivě malá -- jedna loď potenciální energii získává, druhá loď
+stejně velkou potenciální energii ztrácí (pokud není loď, použije se
+místo lodi voda) a stačí jenom vykompenzovat třecí síly v
 mechanismu. V minulosti zde byla soustava 11 zdymadel a lodě touto
 soustavou proplouvaly celý den.
 

@@ -479,8 +479,8 @@ zatížených zaokrouhlováním a dalším zjemňováním přesnost ztrácíme.
 Zajímavá léčka je v samé podstatě výpočtů na počítači a to v
 reprezentaci desetinných čísel ve dvojkové soustavě. Například číslo
 0.1 je ve dvojkové soustavě periodické! Proto desetinásobným sečtením
-tohoto čísla nedostaneme (překvapivě) jedničku! Je to podobné, jako
-bychom třikrát sečetli jednu třetinu v desetinném tvaru
+tohoto čísla ve dvojkové soustavě nedostaneme (překvapivě) jedničku! Je to podobné, jako
+bychom v námi běžně používané dvojkové soustavě třikrát sečetli jednu třetinu v desetinném tvaru
 reprezentovaném konečným počtem desetinných míst, tj. například
 třikrát sečetli číslo $0.33333333$. Nedostaneme přesně jedničku. 
 
