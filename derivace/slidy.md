@@ -350,11 +350,10 @@ model vedení tepla nemá jak naformulovat. Tyto zákony je potřeba matematice 
 >
 * Rozdílem teplot vzniká tok tepla. Velikost toku tepla je úměrná
 teplotnímu rozdílu.
-* Tok tepla je aditivní veličina, tj. celkový tok průřezem je součinem
-toku vztaženého na jednotku průřezu a obsahu průřezu.
 * Teplota se zvyšuje dodáním tepla. Pro zvýšení teploty tělesa o
 hmotnosti $m$ o hodnotu $\Delta T$ je nutné dodat $$Q=mc\Delta T,\tag{**}$$ kde
 $c$ je měrná tepelná kapacita.
+* Budeme vztahy formulovat pro změny za časovou jednotku a pro jednotkový objem (tedy místo hmotnosti $m$, změny teploty $\Delta T$ a tepla $Q$ máme hustotu $\rho$, rychlost změny teploty $\frac{\partial T}{\partial t}$ a rychlost s jakou dodáváme teplo do daného místa vztažená na jednotkový objemu).
 
 V dalším už nastupuje matematický popis a ve vhodných chvílích vždy
 použijeme výše uvedené fyzikální zákony. Mluvíme o teple, ale jako
@@ -366,34 +365,29 @@ difuze namísto rovnice vedení tepla).
 $\frac{\partial T}{\partial x}$ v jednotkách (například) stupeň Celsia
 na centimetr.
 * *Potřebujeme změnu teploty podél tyče převést na veličinu popisující
-  proudění tepla.* Rychlost toku tepla průřezem o obsahu $S$ tyče je
-  $q=-kS\frac{\partial T}{\partial x}$.
-    * Znaménko mínus vyjadřuje dává do souladu skutečnosti, že teplo teče z míst s vyšší teplotou
+  proudění tepla.* Tok tepla je úměrný veličině popisující změnu rozložení tepla v prostoru,
+  $$q=-k\frac{\partial T}{\partial x}.\tag{***}$$
+    * Znaménko mínus vyjadřuje skutečnost, že teplo teče z míst s vyšší teplotou
     do míst s menší teplotou a že tok uvažujeme kladný, pokud teče ve
     směru osy $x$. Přesněji, pokud teplota roste směrem doprava, parciální
     derivace je kladná, ale teplo teče doleva, tedy tok musí být záporný.
     * Veličina $k$ je konstanta úměrnosti
     umožňující překalibrování změny prostorového rozložení teploty na
     tok tepla jendotkovým průřezem (první odrážka).
-    * Průřez $S$ ve vzorci figuruje z fyzikálního zákona (druhá odrážka). Vyjadřuje
-    zřejmý fakt, že pokud máme při jinak stejných podmínkách tyč násobně
-    většího průřezu, teče tyčí více tepla.
-* *Potřebujeme zjistit, kolik tepla, které přiteče do nějakého bodu, v
-tomto bodě "zůstane" a kolik tepla odteče dále.* Tedy potřebuji vědět, jak se mění tok tepla podél tyče. Rychlost s jakou
+* *Potřebujeme zjistit, kolik tepla za jednotku času přiteče do nějakého bodu a v
+tomto bodě "zůstane". Množství, které zůstane, je rozdílem mezi množstvím, které přiteče, a množstvím, které odteče.* Tedy potřebuji vědět, jak se mění tok tepla podél tyče. Rychlost s jakou
 roste rychlost toku podél tyče je $\frac{\partial q}{\partial x}$. My pro kladný ohřev
 potřebujeme pokles toku tepla, tedy násobíme záporným znaménkem a dostáváme
 $-\frac{\partial q}{\partial x}$.
 * *Víme, kolik tepla se v daném místě spotřebuje na zvýšení teploty a tuto hodnotu musíme převést na změnu teploty (třetí odrážka). Opět se jedná o jakési překalibrování, které ještě souvisí s dalšími fyzikálními vlastnostmi jako je měrná tepelná kapacita a hmotnost jednotkového množství látky objemu v daném místě.* Teplo $-\frac{\partial q}{\partial x}$ je teplo, které každou časovou jednotku "zůstává" v
-bodě $x$. Toto teplo se "použije" na zvýšení teploty. Vztažením
-rovnice (**) na jednotku délky  a času dostáváme
-$$\frac{Q}{\Delta x\Delta t}=\frac {m}{\Delta x} c\frac{\Delta T}{\Delta t}$$ a v bodě $x$ a v čase $t$ ("nekonečně malá oblast" a "nekonečně krátký časový interval" ) proto platí
-$$-\frac {\partial q}{\partial x}=S\rho c\frac{\partial T}{\partial t}.$$ Zde jsme navíc využili hustotu (přesněji objemovou hustotu hmotnosti) $\rho = \frac mV =\frac{m}{S\Delta x}$.
+bodě $x$. Toto teplo se "použije" na zvýšení teploty. Z
+rovnice (**) pro jednotku času a jednotku objemu 
+$$-\frac {\partial q}{\partial x}=\rho c\frac{\partial T}{\partial t}.$$
 * Po dosazení za $q$ dostáváme
-$$-\frac{\partial}{\partial x}\left(-kS\frac{\partial T}{\partial x}\right)=S\rho c\frac{\partial T}{\partial t}.$$
+$$-\frac{\partial}{\partial x}\left(-k\frac{\partial T}{\partial x}\right)=\rho c\frac{\partial T}{\partial t}.$$
 * Derivace konstantního násobku je konstantní násobek
-derivace. Veličina $k$ by v nehomogenním prostředí konstantní být
-nemusela a proto ji z opatrnosti necháme na svém místě, znaménko mínus a obsah průřezu $S$
-však konstantní jsou. Obsah $S$ je navíc na obou stranách rovnice a zkrátí se. Toto vede na finální tvar
+derivace. Veličina $k$ by konstantní být
+nemusela a proto ji z opatrnosti necháme na svém místě. Může v ní být nehomogenita nebo se může měnit s teplotou, tj. vztah (***) může být nelineární. Znaménko mínus reprezentuje násobení konstantou $-1$. Toto vede na finální tvar
 $$\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)=\rho c\frac{\partial T}{\partial t}.$$
 
 **Shrnutí.** V odvození vidíme, že rovnice vedení tepla je vlastně
