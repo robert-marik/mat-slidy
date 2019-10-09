@@ -137,7 +137,7 @@ derivace atd.
 Aproximaci funkce $\cos x\approx 1$ odvozenou výše, kdy aproximujeme
 vlastně konstantní funkcí, je možné také chápat jako selhání lineární
 aproximace. Následující slidy a pojem Taylorův plynom nám umožní najít
-prostředek pro aproximaci i v těchto přéípadech.
+prostředek pro aproximaci i v těchto případech.
 
 
 # Taylorův polynom a polynomiální aproximace v 1D
