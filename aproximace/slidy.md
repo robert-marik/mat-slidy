@@ -42,7 +42,7 @@ Výše uvedený vzorec není těžké rozšifrovat.
 ukážeme platnost následujících přibližných vzorců, které platí pro $x$
 blízké k nule.  $$\sin x\approx x, \quad \cos x\approx 1,\qquad
 (1+x)^n=1+nx.$$ První dva vzorce využijeme později při popisu malých
-rotací v rovině.
+rotací v rovině. Mnoho důležitých aplikací těchto vzorců ve fyzice je na webu [fyzikální olympiády](http://fyzikalniolympiada.cz/studijni-texty) v dokumentu [Aproximace ve fyzikálních úlohách](http://fyzikalniolympiada.cz/texty/aproxim.pdf).
 
 # Lineární aproximace v praxi
 
@@ -134,6 +134,11 @@ To znamená že budeme studovat derivaci derivace, derivaci derivace
 derivace atd.
 
 
+Aproximaci funkce $\cos x\approx 1$ odvozenou výše, kdy aproximujeme
+vlastně konstantní funkcí, je možné také chápat jako selhání lineární
+aproximace. Následující slidy a pojem Taylorův plynom nám umožní najít
+prostředek pro aproximaci i v těchto přéípadech.
+
 
 # Taylorův polynom a polynomiální aproximace v 1D
 
@@ -197,8 +202,13 @@ energii pružiny o tuhosti $k$ ve tvaru $$U=\frac 12 kx^2.$$ Molekuly či
 atomy popsané tímto potenciálem se chovají jako tělesa na pružině o tuhosti $k=72$. Pro atom o hmotnosti $m$ tedy například platí vzorec pro
 úhlovou frekvenci oscilací $\omega = \sqrt{\frac km}$, odvozený
 původně pro těleso na pružině. Veličina $r-1$ je výchylka z rovnovážného stavu.
+Analogicky se chovají pružné konstrukce. V klidu jsou ve stavu s minimální potenciální energií a při vychýlení z tohoto stavu o malou hodnotu začínají kmitat. Pokud aproximujeme potenciál pomocí Taylorova polynomu, z koeficientu u kvadratického člene můžeme určit frekvenci těchto oscilací.
+
+\iffalse
 
 [Online výpočet a obrázek.](https://sagecell.sagemath.org/?z=eJxljkEKwjAQRfeF3GF2SXCMzVi6yy1KlkJQQaE1YSya3t7JQjfuHv-_-cwrsdGsreoiBPAHPnmCPZDAqLpJsujWtM2ZDaNHErEu9wfWJVUpe3dEUl3xwmXOq4mGLYK4P8vKSaFvP_33COcs-0Hz9dIeed7y28jiDgohbKIEj9D80LuxUUvcYD-S5jQL&lang=sage)
+
+\fi
 
 # Motivace: Jak najít minimum potenciálu?
 
