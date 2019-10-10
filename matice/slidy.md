@@ -330,7 +330,10 @@ Maticový součin
   
   * je asociativní $$(AB)C=A(BC)=ABC,$$
   * je distributivní vzhledem ke sčítání $$A(B+C)=AB+AC\qquad \text {a}\qquad (B+C)A=BA+CA,$$
-  * není však komutativní ($AB$ je obecně různé od $BA$, proto v předchozím máme roznásobování závorky zleva i zprava).
+  * není však komutativní ($AB$ je obecně různé od $BA$, proto v předchozím máme roznásobování závorky zleva i zprava),
+  * ale při násobení skalárem komutativní je:
+  $$A(\lambda B)=\lambda (AB),$$
+  kde $\lambda$ je reálné číslo a $A$ a $B$ jsou matice.
 
 Můžeme tedy měnit uzávorkování, můžeme
 roznásobovat závorky, nesmíme však měnit pořadí matic při násobení.

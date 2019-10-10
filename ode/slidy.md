@@ -424,35 +424,23 @@ uvedeme si je v kontextu vhodném pro studium diferenciálních rovnic.
   dy}{\mathrm dx}$ při studiu diferenciálních rovnic více v oblibě než
   zápis Newtonův, $y'$.
 
-**Příklad.** Diferenciální rovnice tepelné výměny $$\frac{\mathrm dT}{\mathrm dt}=-k(T-T_0)\tag{*}$$ obsahuje dva parametry, teplotu okolního protředí $T_0$ a konstantu $k$ související s\ fyzikálními vlastnostmi prostředí. Postupně můžeme posunout hodnotu $T$ o $T_0$
-$$\frac{\mathrm d(T-T_0)}{\mathrm dt}=-k(T-T_0)$$
+**Příklad.** Diferenciální rovnice tepelné výměny $$\frac{\mathrm dT}{\mathrm dt}=-k(T-T_\infty), \quad T(0)=T_0\tag{*}$$ obsahuje tři parametry: teplotu okolního protředí $T_\infty$, počáteční teplotu $T_0$ a konstantu $k$ související s\ fyzikálními vlastnostmi prostředí. Postupně můžeme posunout  teplotní stupnici tak, aby teplota okolí byla nula a počáteční teplota jedna, tj. hodnotu $T$ snížíme o $T_\infty$ a upravíme dílek stupnice $(T_0-T_\infty)$-krát
+$$\frac{\mathrm d\left(\frac{T-T_\infty}{T_0-T_\infty}\right)}{\mathrm dt}=-k\frac{T-T_\infty}{T_0-T_\infty}$$
 vydělit konstantou $k$
-$$\frac{\mathrm d(T-T_0)}{k\mathrm dt}=-(T-T_0)$$
+$$\frac{\mathrm d\left(\frac{T-T_\infty}{T_0-T_\infty}\right)}{k\mathrm dt}=-\frac{T-T_\infty}{T_0-T_\infty}$$
 a přeškálovat pomocí konstanty $k$ čas
-$$\frac{\mathrm d(T-T_0)}{\mathrm d(kt)}=-(T-T_0).$$
-Po substituci $y=T-T_0$, $x=kt$ má rovnice tvar
-$$\frac{\mathrm d y}{\mathrm d x}=-y. \tag{**}$$
+$$\frac{\mathrm d\left(\frac{T-T_\infty}{T_0-T_\infty}\right)}{\mathrm d(kt)}=-\frac{T-T_\infty}{T_0-T_\infty}.$$
+Po substituci $y=\frac{T-T_\infty}{T_0-T_\infty}$, $x=kt$ má úloha tvar
+$$\frac{\mathrm d y}{\mathrm d x}=-y,\quad y(0)=1. \tag{**}$$
 Nová rovnice (**) *neobsahuje žádné parametry* a proto je pro studium
 jednodušší. Přesto je v ní obsažena veškerá informace obsažená v
 rovnici (*). Tuto informaci je však nutno interpretovat v kontextu
 definice nových proměnných. Například to, že všechna řešení rovnice (**) konvergují k nule
 znamená, že všechna řešení rovnice (*) konvergují k $T_0$. To, že řešení rovnice (**) klesne na poloviční hodnotu za čas $\ln 2$ znamená, že vzdálenost řešení rovnice (*) od rovnovážného stavu se na polovinu zmenší za čas $\frac 1k \ln 2$.
 
-> Poznámka (nondimenzinalizace, rozměrová analýza).  Proces eliminace
-parametrů z modelu popsaného diferenciální rovnicí se nazývá
-nondimenzionalizace nebo rozměrová analýza modelu, protože eliminaci
-parametrů je vhodné provádět tak, aby výsledné nové veličiny vycházely
-bez fyzikálních jednotek. K tomu se provádí rozbor jednotek
-jednotlivých veličin. V jednoduchých případech však stačí primitivní
-postup popsaný v odstavcích výše a ukázaný na příkladu. V tomto
-příkladě veličina $x$ nemá fyzikální jednotku, pŕotože je součinem
-konstanty $k$ (s jednotkou $\mathrm s^{-1}$) a času $t$ (s jednotkou
-$\mathrm s$), Kromě toho by bylo vhodné měřit i teplotu ne ve stupních
-celsia, ale v jednotkách, které "vyplynou" z úlohy a jsou pro danou
-úlohu přirozené. V tomto smyslu se k nondimenzionalizaci vrátíme během
-semestru při studiu rovnice vedení tepla a příslušné okrajové úlohy.
-
-U méně zřejmých úloh zkušenosti ukazují, že je vhodné volit transformaci tak, aby vznikly veličiny bezrozměrné, které nemají fyzikální jednotku. Například v
+> Poznámka (nondimenzinalizace, rozměrová analýza).  Proces eliminace parametrů z modelu popsaného diferenciální rovnicí se nazývá nondimenzionalizace nebo rozměrová analýza modelu, protože eliminaci parametrů je vhodné provádět tak, aby výsledné nové veličiny vycházely bez fyzikálních jednotek. K tomu se provádí rozbor jednotek jednotlivých veličin. V jednoduchých případech však stačí primitivní postup popsaný v odstavcích výše a ukázaný na příkladu. V tomto příkladě veličina $x$ nemá fyzikální jednotku, protože je součinem konstanty $k$ (s jednotkou $\mathrm s^{-1}$) a času $t$ (s jednotkou $\mathrm s$). Je možné ji považovat za *bezrozměrný čas*. Veličina $y$ také nemá fyzikální jednotku, protože je podílem dvou teplot a je možné ji považovat za *bezrozměrnou teplotu*. 
+>
+>V této úloze bylo zavedení nových veličin přirozené. I u méně zřejmých úloh zkušenosti ukazují, že je vhodné volit transformaci tak, aby vznikly veličiny bezrozměrné, které nemají fyzikální jednotku. Například v
 Horáček, Fyzikální a mechanické vlastnosti dřeva I je zavedena [bezrozměrná vlhkost, bezrozměrný čas a bezrozměrná vzdálenost](https://is.mendelu.cz/eknihovna/opory/zobraz_cast.pl?cast=9180;lang=cz) na straně 61 pro rovnici popisující difuzi a [charakteristická délka, Biotovo číslo (bezrozměrná tepelná vodivost) a bezrozměrná teplota, bezrozměrný čas a bezrozměrná vzdálenost](https://is.mendelu.cz/eknihovna/opory/zobraz_cast.pl?cast=9182;lang=cz) pro rovnici popisující vedení tepla na stranách 88 a 89.
 
 \iffalse 
@@ -836,3 +824,23 @@ algebra, kterému se začneme věnovat na příští přednášce.
 
 Pro analogickou úlohu se vzpěrnou tlakovou pevností dřeva viz
 též A. Požgaj, Štruktúra a vlastnosti dreva str. 359.
+
+
+
+# Shrnutí, hlavní myšlenky
+
+\iffalse
+
+<div class='obtekat'>
+
+![A jaká je hlavní message? Zdroj: pixabay.com](../message.jpg)
+
+</div>
+
+
+\fi
+
+* Aplikované vědy (fyzika, biologie, nauka o materiálu, hydrologie) přirozeně formulují své zákony a poznatky mimo jiné i kvantitavině a pomocí pojmů vyjadřujících rychlsti změn. Při přepisu těchto zákonitostí do matematických modelů používáme derivaci jako rychlost růstu (případně záporně vzatou derivaci, jako rychlost poklesu). 
+* Pokud známým způsobem souvisí změna veličiny popisující stav systému s velikostí této veličiny, je příslušným matematickým modelem diferenciální rovnice.
+* Naučili jsme se základní diferenciální rovnice řešit analyticky, numericky a naučili jsme se i rovnice transformovat do jiných proměnných, které mohou být pro studium problému přínosnější, než původní veličiny.
+

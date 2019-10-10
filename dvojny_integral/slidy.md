@@ -130,7 +130,8 @@ veličiny a proto se "dobře snáší" se sčítáním (ať už integrovaných
 funkcí, nebo integračních oborů) a s násobení integrované funkce
 konstantnou. Přesněji, platí následující věty.
 
-> Věta (linearita dvojného integrálu).   Buď $f_1$, $f_2$ funkce integrovatelné v $\Omega$ a $c_1$, $c_2$   libovolná reálná čísla. Platí $$     \iint_{\Omega} \bigl[c_1f_1(x,y)+c_2f_2(x,y)\bigr]\mathrm dx\mathrm dy     =     c_1\iint_{\Omega} f_1(x,y)\mathrm dx\mathrm dy+     c_2\iint_{\Omega} f_2(x,y)\mathrm dx\mathrm dy $$
+> Věta (linearita dvojného integrálu).   Buď $f_1$, $f_2$ funkce integrovatelné v $\Omega$ a $c_1$, $c_2$   libovolná reálná čísla. Platí
+\dm$$     \iint_{\Omega} \bigl[c_1f_1(x,y)+c_2f_2(x,y)\bigr]\mathrm dx\mathrm dy     =     c_1\iint_{\Omega} f_1(x,y)\mathrm dx\mathrm dy+     c_2\iint_{\Omega} f_2(x,y)\mathrm dx\mathrm dy $$
 
 > Věta (aditivita vzhledem k oboru integrace).  Nechť je množina $\Omega$ rozdělena na dvě oblasti $\Omega_1$   a $\Omega_2$, které mají společné nejvýše hraniční body. Platí $$     \iint_\Omega f(x,y)\mathrm dx\mathrm dy=     \iint_{\Omega_1} f(x,y)\mathrm dx\mathrm dy+     \iint_{\Omega_2} f(x,y)\mathrm dx\mathrm dy. $$
 
@@ -433,20 +434,20 @@ Nechť $m=\iint \sigma(x,y)\,\mathrm dx\mathrm dy$, $y_0=\frac
 a moment setrvačnosti vzhledem k ose jdoucí těžištěm rovnoběžně s osou
 $x$. Moment setrvačnosti vhledem k ose  $x$ je
 $$I_{x0}=\iint y^2\sigma(x,y)\,\mathrm dx\mathrm dy.$$
-Platí
+Platí (píšeme zkráceně $\sigma$ místo $\sigma(x,y)$)
 $$\begin{aligned}
 I_{xT}&=\iint_M
-(y-y_0)^2\sigma(x,y)\,\mathrm dx\mathrm dy\\
+(y-y_0)^2\sigma\,\mathrm dx\mathrm dy\\
 &=\iint_M
-(y^2-2yy_0+y_0^2)\sigma(x,y)\,\mathrm dx\mathrm dy\\
+(y^2-2yy_0+y_0^2)\sigma\,\mathrm dx\mathrm dy\\
 &=\iint_M
-y^2\sigma(x,y)\,\mathrm dx\mathrm dy
+y^2\sigma\,\mathrm dx\mathrm dy
 -2y_0
 \iint_M
-y\sigma(x,y)\,\mathrm dx\mathrm dy
+y\sigma\,\mathrm dx\mathrm dy
 +y_0^2
 \iint_M
-\sigma(x,y)\,\mathrm dx\mathrm dy\\
+\sigma\,\mathrm dx\mathrm dy\\
 &=I_{x0}
 -2y_0 m y_0
 +

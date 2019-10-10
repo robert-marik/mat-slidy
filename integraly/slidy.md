@@ -195,8 +195,9 @@ $$\int 2x^4-e^{4x}+\frac 1x\,\mathrm dx=\frac 25 x^5 -\frac 14 e^{4x}+\ln |x|+C$
 
 **Příklad.** Teplota klesá rychlostí $\frac{\mathrm dT}{\mathrm
 dt}=-0.1 e^{-0.01 t} \,{}^\circ \mathrm C/\mathrm{min}.$ Teplota jako
-funkce času je dána integrálem $$T=\int - 0.1 e^{-0.01t} \,\mathrm
-dt=10 e^{-0.01t}+C.$$ Hodnota $C$ souvisí s počáteční teplotou. Je-li
+funkce času je dána integrálem
+\dm $$T=\int - 0.1 e^{-0.01t} \,\mathrm dt=\frac{-0.1}{-0.01} e^{-0.01t}+C = 10 e^{-0.01t}+C.$$
+Hodnota $C$ souvisí s počáteční teplotou. Je-li
 například počáteční teplota $28 ^\circ \mathrm{C}$, dosadíme do vztahu
 pro $T$ hodnoty $T=28 ^\circ \mathrm{C}$ a $t=0$ a ze vzniklé rovnice
 určíme $C$. Dostáváme takto podmínku $$28=10 e^0 +C,$$ která implikuje
@@ -551,3 +552,22 @@ integrálem, ale závisí na poloze tyče vzhledem k ose otáčení.
   tyč (pro Grand Canyon 9.1 metrů a 20 kilogramů, viz [Nik
   Wallenda](https://en.wikipedia.org/wiki/Nik_Wallenda#Canyon_walk)).
 
+
+
+# Shrnutí, hlavní myšlenky
+
+\iffalse
+
+<div class='obtekat'>
+
+![A jaká je hlavní message? Zdroj: pixabay.com](../message.jpg)
+
+</div>
+
+
+\fi
+
+* Někdy máme zadánu rychlost, s jakou se mění veličina a potřebujeme znát funkční předpis pro tuto veličinu, tj. hodnotu v libovolném čase.  To je úloha inverzní k derivaci a řeší ji neurčitý integrál.
+* Při zadané rychlosti změny není možné bez zadání výchozího stavu určit hodnotu veličiny, která se mění. Je možné vypočítat jenom změnu této veličiny za určitý časový úsek (Newtonův určitý integrál) anebo je řešení dáno až na počáteční stav vyjádřený integrační konstantou v neurčitém integrálu.
+* Někdy potřebujeme veličinu, která nás zajímá, najít posečítáním nekonečně mnoha příspěvků. Toto je v stiuaci, kdy se "za běhu" mění parametry úlohy, například se mění rychlost pohybu. V tomto případě používáme Riemannův určitý integrál, který je definovaný jinak než Newtonův, ale v prakticky zajímavých úlohách se počítá stejně.
+* Další aplikací procesu opačného k derivování je úloha, kdy jsou vlastnosti křivky popsány pomocí derivace a hledáme rovnici pro tuto křivku. Příkladem jsou úlohy ve stavitelství a studiu materiálu (ohybová čára nosníku).

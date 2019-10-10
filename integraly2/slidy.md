@@ -566,3 +566,23 @@ mechanismu. V minulosti zde byla soustava 11 zdymadel a lodě touto
 soustavou proplouvaly celý den.
 
 \fi
+
+
+
+
+# Shrnutí, hlavní myšlenky
+
+\iffalse
+
+<div class='obtekat'>
+
+![A jaká je hlavní message? Zdroj: pixabay.com](../message.jpg)
+
+</div>
+
+
+\fi
+
+* Naučili jsme se některé triky pro integrály: určitý integrál se dá numericky aproximovat a neurčitý integrál se dá převést metodou per-partés nebo substitucí na jiný integrál, v optimálním případě na integrál vhodný pro aplikaci vzorců.
+* Integrál, resp. střední hodnota funkce,  slouží jako náhrada aritmetického průměru v situacích, kdy počítáme průměr z někonečně mnoha veličin a vzorec pro klaiský aritmetický průměr selhává.
+* Integrál je také nástrojem, který nás dokáže vymanit ze světa elementárních funkcí a můžeme pomocí tohoto integrálu definovat funkce, které nejsou elementární. Základním prostředkem je integrál jako funkce horní meze. Toto se využívá například ve statistice. Vedlejším produktem je věta zaručující existenci primitivní funkce pro libovolnou spojitou funkci.
