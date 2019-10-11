@@ -193,7 +193,7 @@ gradientu teploty. Viz Wikipedia a heslo Thermophoresis.
 
 # Speciální případy vztahu mezi gradientem a tokem
 
-Uvažujme vztah mezi gradientem a tokem ve tvaru $$\vec j=-K\nabla \varphi,$$ kde $K$ je symetrický tenzor. Gradient má ve trorozměrném případě vyjádření
+Uvažujme vztah mezi gradientem a tokem ve tvaru $$\vec j=-K\nabla \varphi,$$ kde $K$ je symetrický tenzor. Gradient má ve trojrozměrném případě vyjádření
 $$\nabla \varphi =\left(\frac{\partial \varphi}{\partial x},\frac{\partial \varphi}{\partial y},\frac{\partial \varphi}{\partial z}\right)^T$$
 a ve 2D
 $$\nabla \varphi =\left(\frac{\partial \varphi}{\partial x},\frac{\partial \varphi}{\partial y}\right)^T.$$ 
@@ -279,10 +279,21 @@ $\vec j=-k\nabla \varphi$, kde $k$ je konstanta a vektory toku a gradientu mají
 
 <div class='obtekat'>
 
-![Divergence a tok pole $\vec q=(0,q_y, q_z)$ krychlí. Tok je zobrazen vždy ve středu stěny. Červené vektory vstupují do krychle a příslušné toky se počítají záporně. Modré vystupují ven a počítají se kladně. V tomto případě je celková bilance kladná, z objemu více vyteče, než vteče dovnitř. Divergence je kladná. Pokud v krychli množství veličiny neubývá, musí tam být zdroj této veličiny.](divergence.png)
+![Divergence a tok pole $\vec q=(0,Q, R)$ tělesem nenulového objemu. Tok je zobrazen vždy ve středu stěny. Červené vektory vstupují do krychle a příslušné toky se počítají záporně. Modré vystupují ven a počítají se kladně. V tomto případě je celková bilance kladná, z objemu více vyteče, než vteče dovnitř. Divergence je kladná. Pokud v krychli množství veličiny neubývá, musí tam být zdroj této veličiny.](divergence.png)
 
 </div>
 
+Budeme sledovat tok vektorového pole a bude nás zajímat, o kolik se tok v daném místě mění.
+
+* Pro jednoduchost rozdělíme tok na tři nezávislé části ve směru jednotlivých os a vztáhneme vše k jednotkám času a průřezu, tj. budeme uvažovat hustotu toku nějaké fyzikální veličiny.
+* Je-li tato hustota toku popsána vektorovým polem  $\vec q=(P,Q,R)$ v jednotkách kilogram na metr čtvererční za sekundu, znamená to, že kolmým průřezem jednotkového obsahu projde za jednotku času $P$ kilogramů sledované látky, jejíž tok popisujeme. Často se pracuje i s objemovým tokem, kdy možství neměříme v kilogramech ale v metrech krychlových a například při ustáleném proudění v trubici (hydrodynamika) je tok roven vektoru rychlosti a při proudění porézním materiálem (proudění podzemní vody) je roven filtrační rychlosti.
+* Derivace $\frac{\partial P}{\partial x}$ udává, o kolik studovaný tok v daném místě vzroste ve směru osy $x$ a tento nárůst je vztažený na jednotku délky.
+* Ve směru osy $y$ máme tok vyjádřený veličinou $Q$ a proto nás podobně zajímá $\frac{\partial Q}{\partial y}$.
+* Analogicky $\frac{\partial R}{\partial z}$.
+* Celková změna toku bude součtem všech tří příspěvků. Pokud je kladná, znamená to, že z daného místa více veličiny vytéká, než kolik teče dovnitř. Pokud je záporná, je tomu naopak. Jestli se v případě nerovnováhy v daném místě může proudící veličina tvořit nebo spotřebovávat nebo akumulovat nebo jestli jí v daném místě může zbývat již nejzjistíme, záleží na charakteru proudící veličiny a na okolnostech s tímto prouděním spojených. Tuto informaci nám pro další popis musí dodat externí věda (obecná fyzika, fyzika materiálu, fyzika životního prostředí, hydrologie, pedologie, ...).
+* Při preciznější argumentnaci dávající do souvislosti paricální derivace jednotlivých komponent toku s tím, co se reálně s vektorovým polem děje, je nutné si pomoci stejně jako u derivací, tj. uvažovat ne dané místo, ale jistý konečně velký objem (viz obrázek), vztáhnout dané veličiny na jednotku objemu a rozměry tohoto objemu limitně stáhnout k nule. Toto však již přesahuje ambice v našem kurzu a jedná se o formalismus, kterému se vyhneme přímým představením hotového výsledku.
+
+<!--
 Budeme sledovat tok vektorového pole ze zvoleného 
 místa. Vyjádříme bilanci, o kolik je větší tok vektorového pole z
 daného místa ven ve srovnání s tokem tohoto pole dovnitř (viz krychlička na obrázku). Protože
@@ -298,7 +309,10 @@ $$Q_{in}+Q_{out}=
 \left(\frac {\partial q_y}{\partial y}+\frac {\partial q_z}{\partial z}\right)\Delta x\Delta y\Delta z.
 $$
 V případě proudění i v ose $x$ bude přítomen ještě další analogický člen charakterizující tuto dodatečnou položku. 
-Těmito úvahami je motivována následující definice a věta. (Definice je maličko nepřesná, protože nemáme nástroje pro pečlivější formulaci.)
+
+-->
+
+Výše uvedenými úvahami je motivována následující definice a věta. (Definice je maličko nepřesná, protože nemáme nástroje pro pečlivější formulaci.)
 
 > Definice (divergence). *Divergence* vektorového pole $\vec F$ v daném bodě je převis toku vektorového pole z tohoto místa nad tokem do tohoto místa. Tento tok se počítá přes hranici infinitezimálně malého referenčního tělesa a je vztažený na jednotku objemu. Divergenci vektorového pole $\vec F$ označujeme $\mathop{\mathrm{div}}\vec F$ nebo $\nabla \cdot \vec F$.
 
@@ -439,7 +453,7 @@ kde $\rho$ je hustota.
 Tato rovnice napsána pro vzduch je jednou z rovnic používaných při [modelování vývoje počasí](http://www-history.mcs.st-and.ac.uk/HistTopics/Weather_forecasts.html)
 
 Pro nestlačitelnou tekutinu je hustota dále konstantní a odsud
-dostáváme $$\mathop{\mathrm{div}} \vec u =0.$$ Důsledkem této rovnice
+dostáváme ve stacionárním stavu $$     \mathop{\mathrm{div}} \vec u =0.$$ Důsledkem této rovnice
 je zvýšení rychlosti molekul pohybující se nestlačitelné tekutiny při
 proudění místem s menším průřezem.
 
@@ -472,7 +486,7 @@ V případě dřeva volíme pokud možno souřadné osy souhlasně s anatomický
 $$
 \frac{\partial c}{\partial t}=\frac{\partial }{\partial x}\left(D_x\frac{\partial c}{\partial x}\right)+\frac{\partial }{\partial y}\left(D_y\frac{\partial c}{\partial y}\right)+\frac{\partial }{\partial z}\left(D_z\frac{\partial c}{\partial z}\right)
 $$
- Považujeme-li složky matice $D$ za konstanty (nemusely by být, protože materiál nemusí být homogenní a může mít v jiných bodech jiné fyzikální vlastnosti, nebo odezva materiálu nemusí být přesně lineární a koeficient $D$ se může měnit s měnícím se $c$), je možné psát rovnici ve tvaru
+ Považujeme-li složky matice $D$ za konstanty (nemusely by být, protože materiál nemusí být homogenní a může mít v jiných bodech jiné fyzikální vlastnosti, nebo odezva materiálu nemusí být přesně lineární a koeficienty $D_i$ se mohou měnit s měnícím se $c$), je možné psát rovnici ve tvaru
 $$
 \frac{\partial c}{\partial t}=D_x\frac{\partial^2 c}{\partial x^2}+D_y\frac{\partial^2 c}{\partial y^2}+D_z\frac{\partial^2 c}{\partial z^2}, \tag{**}
 $$
@@ -485,7 +499,7 @@ koeficient dřeva závisí na vlhkosti, tedy vztah mezi gradientem
 vlhkosti a difuzním tokem není lineární. Přesto i v tomto případě
 používáme Fickův zákon, ovšem složky difuzního koeficientu
 nepovažujeme za konstanty, jsou závislé na $c$ a jejím prostřednictvím
-i na $x$. Ani takovém případě si úpravu na rovnici (**) nemůžeme
+i na $x$. V takovém případě si úpravu na rovnici (**) nemůžeme
 dovolit.
 
 
@@ -551,23 +565,20 @@ Stacionární stav znamená, že stavové veličiny nezávisí na čase. Derivac
 $$\mathop{\mathrm{div}} (D\nabla T)=0.$$
 
 
-## Homogenní izotropní materiál
+## Homogenní izotropní materiál a lineární materiálové vztahy
 
 Materiál má ve všech místech (homogenní) a ve všech směrech (izotropní) stejné vlastnosti.
+Veličina $D$ je reálná skalární veličina (konstanta).
 
-Veličina $D$ je reálná skalární veličina (konstanta). Podle pravidla derivace konstantního násobku se rovnice (***) redukuje na  
+Podle pravidla derivace konstantního násobku se rovnice (***) redukuje na  
 $$\rho c\frac{\partial T}{\partial t}=D\mathop{\mathrm{div}} (\nabla T)$$
 a ve složkách
 $$\rho c\frac{\partial T}{\partial t}=D\left(\frac{\partial^2 T}{\partial x^2}+\frac{\partial^2 T}{\partial y^2}\right).$$
 Pro $\tau=\frac{Dt}{\rho c}$ (změna jednotky času) dostáváme
 $$\frac{\partial T}{\partial \tau}=\frac{\partial^2 T}{\partial x^2}+\frac{\partial^2 T}{\partial y^2}.$$
 
-Pro praktické využití připomeňme, že toto je odvozeno za předpokladu
-lineárních materiálových vztahů.  Někdy závisí $D$ na $T$ a potom $D$
-není možné považovat za konstantu a uvedenou redukci není možné
-provést, byť by byla homogenita materiálu zajištěna.
 
-## Ortotropní materiál
+## Ortotropní materiál, nehomogenní nebo nelineární
 
 Materiál má dva charakteristické směry související s rovinami
 symetrie. Zvolíme soustavu souřadnic tak, aby osy byly orientovány ve
@@ -579,11 +590,31 @@ $$\rho c\frac{\partial T}{\partial t}=\frac{\partial }{\partial x}\left(D_x\frac
 
 
 
-## Homogenní ortotropní materiál
+## Homogenní ortotropní materiál a lineární materiálové vztahy
 
-Materiál má dva charakteristické směry související s rovinami symetrie a materiálové charakteristiky jsou ve všech místech stejné.
-
-Jako předchozí případ, ale $D_x$ a $D_y$ nezávisí na souřadnicích a jedná se tedy o konstanty. Podle pravidla pro derivaci konstantního násobku se rovnice (***) redukuje na 
+Materiál má dva charakteristické směry související s rovinami symetrie a materiálové charakteristiky jsou ve všech místech stejné a nezávislá na $T$.
+Stejné jako předchozí případ, ale $D_x$ a $D_y$ jsou konstanty. Podle pravidla pro derivaci konstantního násobku se rovnice (***) redukuje na 
 $$\rho c\frac{\partial T}{\partial t}=D_x\frac{\partial^2 T}{\partial x^2}+D_y\frac{\partial^2 T}{\partial y^2}.$$
 
-Podobně jako výše, tuto redukci není možné použít, pokud by složky matice $D$ závisely na $T$.
+
+
+
+
+# Shrnutí, hlavní myšlenky
+
+\iffalse
+
+<div class='obtekat'>
+
+![A jaká je hlavní message? Zdroj: pixabay.com](../message.jpg)
+
+</div>
+
+
+\fi
+
+* Pomocí gradientu a aparátu lineární algebry můžeme vyjářit vztah mezi pohybem fyzikální veličiny a mechanismem, který tento pohyb iniciuje. Většinou se jedná o vztah mezi vektorovým polem toku a gradientem jistého skalárního pole. 
+* Pomocí paridálních derivací a divergence dokážeme určit, jestli se v nějakém místě veličina přenášená místem "ztrácí" nebo "přibývá".
+* Dokážme dokonce s rozumnou itepretací, čím případné ubývání přenášené veličiny může být způsobeno (zdroje nebo akumulace a daném místě), zformulovat rovnici, která dané proudění plně popisuje. Výsledkem jsou rovnice vedení tepla, rovnice difuze, rovnice proudění podzemní vody a jiné.
+* Obecná rovnice odvozená podle předchozích bodů je příliš obecná a pro práci se ji snažíme nějak konkretizovat. Například zjednodušit, pokud máme informaci o charakteru materiálových vztahů (lineární/nelineární) a materiálu (homogenní/nehomogenní). Jiným zjednodušením je, pokud se zajímáme o stacionární stav, který se nastolí po dosažení rovnováhy.
+
