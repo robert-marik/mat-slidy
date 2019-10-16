@@ -17,13 +17,39 @@
 
 S využitím aparátu derivací jsme v minulé přednášce poznali a naučili se ve cvičení řešit úlohy tří základních různých typů:
 
-1. *K funkci najdi její derivaci, tj. rychlost změny.* Toto je klasické derivování, případně doplněné o slovní interpretaci derivace. Použijmeme vzorce a jedná se o čistě manulální dovednost. Vstupem je funkce, výstupem její derivace a případně slovní invetpretace této derivace. Příkladů je spousta na webu i v učebnicích.
+1. *K funkci najdi její derivaci, tj. rychlost změny.* Toto je klasické derivování, případně doplněné o slovní interpretaci derivace. Použijeme vzorce a jedná se o čistě manuální dovednost. Vstupem je funkce, výstupem její derivace a případně slovní interpretace této derivace. Příkladů je spousta na webu i v učebnicích.
 1. *Ze zadaného vztahu mezi dvěma veličinami najdi vztah mezi rychlostmi změn těchto veličin.* Jako vedlejší produkt mimo jiné využíváme dovednosti derivování z předchozího bodu a vždy derivujeme složenou funkci: vzorec vyjadřující jednu veličinu pomocí druhé je vnější složka a druhá veličina, resp. její závislost na čase, je složka vnitřní. Vstupem je vztah mezi veličinami a rychlost, s jakou se jedna z veličin mění, výstupem je rychlost, s jakou se mění veličina druhá.
-1. *Ze zadaného slovního popisu nějakého děje sestav matematický model.* Ve slovním modelu je zmíněna rychlost, tu matematicky přepisujeme jako derivaci a tato rychlost je v nějaké relaci s ostatními veličinami. Odsud sestavujeme rovnici. Vstupem je mechanismus popisující vývoj systému, výstupem matematický model ve formě rovnice obsahující neznámou funkci popisující stav systému a její derivaci. V průbehu semestru se takovéto rovnice naučíme řešit, nejprve se však detailněji koukneme na to, abychom poznali i další role derivace.
+1. *Ze zadaného slovního popisu nějakého děje sestav matematický model.* Ve slovním modelu je zmíněna rychlost, tu matematicky přepisujeme jako derivaci a tato rychlost je v nějaké relaci s ostatními veličinami. Odsud sestavujeme rovnici. Vstupem je mechanismus popisující vývoj systému, výstupem matematický model ve formě rovnice obsahující neznámou funkci popisující stav systému a její derivaci. V průběhu semestru se takovéto rovnice naučíme řešit, nejprve se však detailněji koukneme na to, abychom poznali i další role derivace.
+
+# Motivace: Dvě formule pro jednu věc?
 
 
 
-# Motivace: Derivace dělá funkci předvídatelnoulnou
+## Kinetická energie
+
+
+<div class='obtekat'>
+
+![Newton a Einstein. Každý dodá vzorec pro kinetickou energii, vzorce jsou jiné  a přesto oba správně. Zdroj: https://www.science.org.au/curious/space-time/gravity](newton-and-einstein.png)
+
+</div>
+
+
+* Einstein a 4. ročník SŠ: Celková energie tělesa o klidové hmotnosti $m_0$ je $$E=mc^2=\frac{m_0 c^2}{\sqrt{1-\frac {v^2}{c^2}}}.$$ Pro nulovou rychlost dostáváme klidovou energii a rozdíl je kinetická energie, tj. kinetická energie je
+$$E_k= \frac{m_0 c^2}{\sqrt{1-\frac {v^2}{c^2}}} - m_0c^2.$$
+* Newton a 1. ročník SŠ: Kinetická energie je $$E_k=\frac 12 mv^2.$$ Hmotnost při pohybu nesouvisí s rychlostí a proto je jedno, jestli píšeme $m$ nebo $m_0.$
+* Zmatený student: **Oba vzorce jsou evidentně zcela odlišné. Dokonce ani nemají stejný definiční obor. Ve fyzice se říká, že Einsteinův vzorec platí pro libovolné rychlosti a Newtonův pro malé rychlosti. Ale libovolné rychlosti zahrnují i malé rychlosti! Jak je možné, že Newtonův vztah není obsažen ve vztahu podle Einsteina?**
+
+
+## Potenciál gravitačního pole
+
+* U povrchu Země: Potenciál gravitačního pole ve výšce $h$ nad nulovou hladinou je $$V=gh.$$ Známe ze vzorce pro kinetickou energii $E=mgh$.
+* Kdekoliv mimo zeměkouli: Potenciál ve vzdálenosti $r$ od středu Země je $$V=-G \frac Mr,$$ kde $M$ je hmotnost Země a $G$ gravitační konstanta.
+* Zmatený student: **Oba vzorce jsou evidentně zcela odlišné. V jednom je přímá úměrnost vzhledem k výšce nad zemí, v druhém nepřímá úměrnost vzhledem ke vzdálenosti od středu. Ale místa blízko povrchu Země jsou současně mimo zeměkouli. Který vzorec použít a jak je vůbec možné, že máme dva různé vzorce pro stejnou veličinu?**
+
+
+
+# Motivace: Derivace dělá funkci předvídatelnou
 
 <div class='obtekat'>
 
@@ -104,13 +130,15 @@ $$(1\pm x)^n\approx 1\pm nx
 ,\quad \text{pro malé }x.$$
 Přepsáním gravitačního potenciálu $V$ do tvaru obsahujícího výšku nad zemí $h$
 a využitím lineární aproximace získáme
-\dm $$V = -G \frac{M}{R+h} =-G \frac{M}{R}\left (1+\frac hR\right)^{-1} \approx -G \frac{M}{R} + G \frac{M}{R^2} h =V_0+ g h,$$
+\dm $$V = -G \frac{M}{R+h} =-G \frac{M}{R}\left (1+\frac hR\right)^{-1} \approx -G \frac MR\left(1+(-1)\frac hR\right) =-G \frac{M}{R} + G \frac{M}{R^2} h$$
+a po zavedení nových konstant
+$$ V\approx V_0+ g h,$$
 kde $g=G \frac{M}{R^2}$.
 
 Podobně
 aproximací přesných vztahů plynoucích z\ Einsteinovy teorie relativity získáme složku energie související s pohybem, tj. kinetickou energii
 \dm $$E=\frac{m_0c^2}{\sqrt{1-\frac {v^2}{c^2}}} =m_0 c^2 \left(1-\frac {v^2}{c^2}\right)^{-1/2} \approx m_0c^2+\frac 12 m_0v^2 $$
-pro $v$ mnohem menší než $c$. Snadno rozšifrujeme na konci klasický vzorec pro kinetickou energii $\frac 12 mv^2$.
+pro $v$ mnohem menší než $c$. Snadno rozšifrujeme, že s rychlostí souvisí jenom druhý sčítanec a že se jedná o klasický vzorec pro kinetickou energii $\frac 12 mv^2$.
 
  Ač se jedná "jenom" o\ lineární aproximaci, je tento vzorec dokonce mnohem použitelnější, protože výpočet kinetické energie pomocí univerzálně platného vzorce při malých rychlostech zhavaruje na [zaokrouhlovacích chybách](https://sagecell.sagemath.org/?z=eJyVUTtvwjAQ3pH4DydYHFRI7Ja2DBnTpUOl_AAkY06NiR80DlbDr-8lPJqlQyUP9t3n73Fns5yvYQ6V9a3zoQW_O2DdnqYTlYvN5mUjntavQICmU5XpASFiayREsIuwZUueTCcxF1n6uHoew648cPRVtzsdtNKVh4B3gAaRQW3Tyu_h2GDEPToJdH5pp5Njo10Ls3ftsNWqloAOm0-NUBsZqNBZiGffKLTE4cFKMxKY3f7zVCxstohbca2MqD92qFw3sKAaSIze-eiNG1vd-9o7heTfVDJSeO38Cc7S140_ESZKpVUFiqKSasFzklO9XCFydrmnLHw1LeNLspHSO0ko4RwuNgoOo4dYOZbcHLJCLAuejEr_df8A_VgC4HfboKXOOXYB-wA09-CGgLGjPTivKInrB1dCDiVK86bR7BnPsmHLJbvs-W6uZOzveMtLJ0l-AGuRw0Q=&lang=sage&interacts=eJyLjgUAARUAuQ==).
 
@@ -155,7 +183,7 @@ derivace atd.
 
 Aproximaci funkce $\cos x\approx 1$ odvozenou výše, kdy aproximujeme
 vlastně konstantní funkcí, je možné také chápat jako selhání lineární
-aproximace. Následující slidy a pojem Taylorův plynom nám umožní najít
+aproximace. Následující slidy a pojem Taylorův polynom nám umožní najít
 prostředek pro aproximaci i v těchto případech.
 
 
@@ -473,6 +501,6 @@ semestru dopracujeme, nazývá tenzor malých deformací.
 
 \fi
 
-* Derivace udává trend ve změnách veličin a díky tomu umožňuje za určitých okolností nahrazovat komplikované funkční vztahy pomocí vztahů lineárních. Toto nazýváme lineární aproximace a je to jedna za zásadních metod, jak se inženýři zjednodušují úlohy, které by byly jinak neřešitelné.
-* Derivace dokáže detekovat růst a klesání funkce a diky tomu dokážeme také detekovat body, kde se růst zastaví a změní na klesání nebo naopak. Tyto body nás přirozeně zajímají, protože v těchto bodech je studovaná veličina maximální nebo minimální a tom má dopad při minimalizaci nákladů, maximalizaci pevnosti či zisku a jiných úlohách z praktického života.
-* Pokud trend (rychlost změny, derivace) nestačí k podchycení zásadních vlastností veličiny (nastává v lokálním extrému nebo v případě, že potřebujeme lepší aproximaci než je aproximace lineární), máme k dispozici nástroje i v tomto případě (derivace vyšších řádů a Taylorův polynom).
+* Derivace udává trend ve změnách veličin a díky tomu umožňuje za určitých okolností nahrazovat komplikované funkční vztahy pomocí vztahů lineárních. Toto nazýváme lineární aproximace a je to jedna za zásadních metod, jak si inženýři zjednodušují úlohy, které by byly jinak neřešitelné.
+* Derivace dokáže detekovat růst a klesání funkce a díky tomu dokážeme také detekovat body, kde se růst zastaví a změní na klesání nebo naopak. Tyto body nás přirozeně zajímají, protože v těchto bodech je studovaná veličina maximální nebo minimální a to má dopad při minimalizaci nákladů, maximalizaci pevnosti či zisku a jiných úlohách z praktického života.
+* Pokud trend (rychlost změny, derivace) nestačí k podchycení zásadních vlastností veličiny (nastává v lokálním extrému nebo v případě, že potřebujeme lepší aproximaci, než je aproximace lineární), máme k dispozici nástroje i v tomto případě: derivace vyšších řádů a Taylorův polynom.

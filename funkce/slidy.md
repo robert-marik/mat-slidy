@@ -167,21 +167,21 @@ nerovnice.
 >
 >* Je-li $f$ rostoucí, platí $$x_1\leq x_2 \iff f(x_1)\leq f(x_2).$$
 >* Je-li $f$ klesající, platí $$x_1\leq x_2 \iff f(x_1)\geq f(x_2).$$
->* Stejné vztahy platí o pro ostré nerovnosti.
+>* Stejné vztahy platí i pro ostré nerovnosti.
 
 Tyto poučky použijeme vždy, když rozvažujeme, zda můžeme k oběma
 stranám nerovnice přičíst stejné číslo (můžeme), zda můžeme obě strany
 nerovnice vynásobit stejným nenulovým číslem (můžeme, ale pokud
-násobíme, obrací se směr nerovnosti), zda můžeme obě strany nerovnice
-logaritmovat logaritmem o stejném základě (můžeme , ale v případě
-logaritmu a základě menším než $1$ se obrací směr nerovnosti), umocnit
-(nemůžeme, leda bychom měli dodatečnou informaci například o tom, že
-obě strany nerovnice jsou kladné nebo obě strany nerovnice jsou
-záporné) apod. Takových situací je mnoho a protože není v lidských
-silách si všechny pamatovat, stačí je míst spojeny s definicí rostoucí
-a klesající funkce.
+násobíme záporným číslem, obrací se směr nerovnosti), zda můžeme obě
+strany nerovnice logaritmovat logaritmem o stejném základě (můžeme,
+ale v případě logaritmu a základě menším než $1$ se obrací směr
+nerovnosti), umocnit (nemůžeme, leda bychom měli dodatečnou informaci
+například o tom, že obě strany nerovnice jsou kladné nebo obě strany
+nerovnice jsou záporné) apod. Takových situací je mnoho a protože není
+v lidských silách si všechny pamatovat, stačí je míst spojeny s
+definicí rostoucí a klesající funkce.
 
-**Příklad.** Funkce $\ln x$ a $\sqrt x$ jsou rostoucí a proto z nerovnic $$\ln x>\ln 6$$ a $$\sqrt x>\sqrt 6$$ plyne $$x>6.$$ Zejména v druhém případě je nutné si uvědomit, že používáme definici rostoucí funkce a poznámku připojenou za tuto definici. Neumocňujeme obě strany nerovnice, jak by někdo mohl tento krok dezinterpretovat. Umocněním obou stran nerovnice se obecně může změnit obor pravdivosti, proto tato operace u nerovnic není povolena.
+**Příklad.** Funkce $\ln x$ a $\sqrt x$ jsou rostoucí a proto z nerovnic $$\ln x>\ln 6$$ a $$\sqrt x>\sqrt 6$$ plyne $$x>6.$$ Zejména v druhém případě je nutné si uvědomit, že používáme definici rostoucí funkce a poznámku připojenou za tuto definici. Nestačí říct, že umocňujeme obě strany nerovnice, jak by někdo mohl tento krok dezinterpretovat. Umocněním obou stran nerovnice se obecně může změnit obor pravdivosti, proto tato operace u nerovnic není povolena. My máme speciální případ nerovnice s nezápornými stranami.
 
 **Příklad.** Funkce $\frac 1x$ a $y=x^2$ nejsou ani rostoucí ani klesající a proto z žádné z nerovností
 $$\frac 1x \leq \frac 15$$
