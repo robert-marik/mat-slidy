@@ -1,6 +1,6 @@
 % Integrál, integrál a integrál
 % Robert Mařík
-% 12. 3. 2019
+% 12. 3. 2019, podzim 2019
 
 
 Naučili jsme se pracovat s derivacemi, tedy s rychlostí změny.
@@ -335,16 +335,20 @@ zobecnit na libovolný počet intervalů a pro libovolnou po částech
 konstantní funkci.
 
 Prostředky matematické analýzy je možné "zjemňovat dělení do
-nekonečna". Díky tomu není nutné se omezovat na po částech konstantní
-funkce, ale postup bude fungovat i pro velmi obecné funkce. Výsledným
-produktem je Riemannův integrál. Tento integrál je velmi názorný, ale
-poměrně obtížně se počítá, pokud postupujeme přímo podle
-definice. Pokud však je funkce v určitém smyslu pěkná (má primitivní
-funkci na intervalu, který uvnitř obsahuje interval $[a,b]$) jsou
-Riemannův a Newtonův integrál stejné. Proto mezi nimi nerozlišujeme,
-používáme jeden pojem **určitý integrál** a počítáme jej pomocí
-definice Newtonova integrálu. Obsah obrazce pod křivkou $f(x)$ je
-roven $$S=\int_a^b f(x)\,\mathrm dx.$$
+nekonečna", přesněji, můžeme použít limitní přechod podobný limitnímu
+předchodu, který v definici derivace převedl podíl (průměrnou
+rychlost) na derivaci (okamžitou rychlost). Díky tomu není nutné se
+omezovat na po částech konstantní funkce, ale postup bude fungovat i
+pro velmi obecné funkce. Výsledným produktem je Riemannův
+integrál.
+
+Riemannův integrál je velmi názorný, ale poměrně obtížně se
+počítá, pokud postupujeme přímo podle definice. Pokud však je funkce v
+určitém smyslu pěkná (má primitivní funkci na intervalu, který uvnitř
+obsahuje interval $[a,b]$) jsou Riemannův a Newtonův integrál
+stejné. Proto mezi nimi nerozlišujeme, používáme jeden pojem **určitý
+integrál** a počítáme jej pomocí definice Newtonova integrálu. Obsah
+obrazce pod křivkou $f(x)$ je roven $$S=\int_a^b f(x)\,\mathrm dx.$$
 
 V teorii Riemannova integrálu má vzorec
 $$\int_a^b f(x)\mathrm dx=\left[F(x)\right]_a^b=F(b)-F(a)$$
@@ -432,6 +436,53 @@ označíme $H$.
    Tento vztah je stejný, jako kdyby na celou plochu o velikosti $LH$
    působila tlaková síla vyvolaná tlakem $\frac 12 H\rho g$,
    tj. tlakem v poloviční hloubce.
+
+
+# Aplikace určitého integrálu (tok potrubím)
+
+
+\iffalse
+
+<div class='obtekat'>
+
+![Parabolické rozložení rychlosti v toku je nejen v potrubí, ale můžeme někdy pozorovat přímo v přírodě. Zdroj: pixabay.com (Anders Sandberg).](flow.jpg)
+
+</div>
+
+\fi
+
+V předchozím příkladě jsme "krájeli" přehradu na vodorovné pásy,
+protože ve vodorovném směru byl konstantní parametr, který jsme
+potřebovali mít konstantní pro výpočet k celkovému příspěvku. V
+následujícím případě je obdobný parametr konstantní na kružnicích a
+proto budeme dělit a sčítat příspěvky pomocí mezikruží.
+
+V potrubí o poloměru $R$ teče viskozní tekutina tak, že uprostřed má
+maximální rychlost a u stěn nulovou. Rychlost ve vzdálenosti $r$ od
+osy potrubí je dána vztahem $$v(r)=v_{max}\frac{R^2-r^2}{R^2}.$$
+Střední rychlost dostaneme jako celkový tok potrubím dělený obsahem
+$S=\pi R^2$. Tok v případě konstantní rychlosti je součinem rychlosti
+a obsahu průřezu. V případě rychlosti nekonstantní rozdělíme průřez na
+části $\Delta S$, na každé části určíme příspěvek k celkovému toku a
+poté vše sečteme, tj.  $$Q=\sum_{\text{průřez}} v(r)\Delta S$$ Protože
+rychlost závisí na $r$, je stejná na kružnicích a proto se jeví vhodné
+rozdělit průřez na mezikruží a sečíst přes poloměr těchto
+mezikruží. Budeme tedy integrovat přes proměnnou $r$. Vyjádření $Q$
+přepíšeme do tvaru $$Q=\sum_{\text{průřez}} v(r)\frac{\Delta S}{\Delta
+r}\Delta r$$ a limitním přechodem se změní suma na integrál a podíl
+změn na derivaci, tj.  $$Q=\int_0^R v(r)\frac{\mathrm d S}{\mathrm d
+r}\,\mathrm d r =\int_0^R v_{max}\frac{R^2-r^2}{R^2}\frac{\mathrm d
+S}{\mathrm d r}\,\mathrm d r .$$ Odsud pomocí $S=\pi r^2$,
+$\frac{\mathrm dS}{\mathrm dr}=2\pi r$ dostáváme po vytknutí konstant,
+roznásobení závorek a integraci 
+\dm$$Q=\frac{2\pi v_{max}}{R^2}\int_0^R (R^2-r^2)r\,\mathrm dr=\frac{2\pi v_{max}}{R^2}\left[R^2\frac{r^2}{2}-\frac {r^4}4\right]_0^R =\frac{2\pi v_{max}}{R^2} \frac{R^4}{4} =\frac{v_{max}}{2} \pi R^2.$$ 
+Tok je tedy formálně stejný, jako by voda tekla v celém průřezu
+rychlostí poloviční ve srovnání s maximální rychlostí ve středu
+trubice. Proto je $\frac {v_{max}}2$ nazývána střední profilová rychlost průřezu. 
+
+
+(Volně podle Dana Říhová a Jana Marková, Poznámky k přednáškám z Hydrauliky, přednáška č. 3.)
+
 
 
 # Aplikace určitého integrálu (práce při čerpání vody)
@@ -569,5 +620,5 @@ integrálem, ale závisí na poloze tyče vzhledem k ose otáčení.
 
 * Někdy máme zadánu rychlost, s jakou se mění veličina a potřebujeme znát funkční předpis pro tuto veličinu, tj. hodnotu v libovolném čase.  To je úloha inverzní k derivaci a řeší ji neurčitý integrál.
 * Při zadané rychlosti změny není možné bez zadání výchozího stavu určit hodnotu veličiny, která se mění. Je možné vypočítat jenom změnu této veličiny za určitý časový úsek (Newtonův určitý integrál) anebo je řešení dáno až na počáteční stav vyjádřený integrační konstantou v neurčitém integrálu.
-* Někdy potřebujeme veličinu, která nás zajímá, najít posečítáním nekonečně mnoha příspěvků. Toto je v stiuaci, kdy se "za běhu" mění parametry úlohy, například se mění rychlost pohybu. V tomto případě používáme Riemannův určitý integrál, který je definovaný jinak než Newtonův, ale v prakticky zajímavých úlohách se počítá stejně.
+* Někdy potřebujeme veličinu, která nás zajímá, najít posečítáním nekonečně mnoha příspěvků. Toto je v situaci, kdy se "za běhu" mění parametry úlohy, například se během pohybu mění rychlost pohybu. V tomto případě používáme Riemannův určitý integrál, který je definovaný jinak než Newtonův, ale v prakticky zajímavých úlohách se počítá stejně.
 * Další aplikací procesu opačného k derivování je úloha, kdy jsou vlastnosti křivky popsány pomocí derivace a hledáme rovnici pro tuto křivku. Příkladem jsou úlohy ve stavitelství a studiu materiálu (ohybová čára nosníku).
