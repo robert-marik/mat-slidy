@@ -520,39 +520,30 @@ Podzemní vodou se rozumí voda přítomná pod zemským povrchem, která teče 
 
 Stavovou veličinou při proudění podzemní vody s [volnou hladinou](https://cs.wikipedia.org/wiki/Hladina_podzemn%C3%AD_vody) je [piezometrická
 výška](https://cs.wikipedia.org/wiki/Hladina_podzemn%C3%AD_vody) $h$. (Pro jednoduchost si představme hladinu podzemní vody.)
+Často je vertikální proudění zanedbatelné a úloha není trojrozměrná, ale ve
+skutečnosti dvourozměrná a pro třetí souřadnici klademe $$\frac{\partial h}{\partial z}=0$$ ([Dupuitův předpoklad](https://en.wikipedia.org/wiki/Dupuit%E2%80%93Forchheimer_assumption)).
 
 Obecný tvar rovnice kontinuity pro podzemní vodu, ve kterém
 uvažujeme nestlačitelnou kapalinu, nestacionární stav a 
-zdroje či spotřebiče (například prosak do jiných geologických vrstev, mimo vodní kolektor)
+zdroje (vsak srážek a podobně) či spotřebiče (například prosak do jiných geologických vrstev, mimo vodní kolektor)
 má [tvar](https://is.muni.cz/th/eqgoo/dp.pdf)
 $$\mathop{\mathrm{div}} \vec q=-S\frac{\partial h}{\partial t}+P,$$
-kde $\vec q$ je tok, $P$
-je celkový objem ze zdrojů, $h$ je piezometrická výška  a 
- $S$ je měrná objemová zásobnost (kolik vody se uvolní z\ jednotkového množství půdy při změně piezometrické výšky o jednotku). 
-Tato rovnice vyjadřuje, že rozdíl mezi množstvím vody, které z místa vyteče a množstvím, které do místa vteče, je dán vydatností zdroje v tomto místě a tím, kolik vody v tomto místě ubude díky snížení piezometrické hladinyhladiny podzemní vody (u volné hladiny jde zejména o snížení hladiny podzemní vody, u napjaté hladiny souvisí zejména se změnou pórovitosti při změně tlaku).
+kde $\vec q$ je tok (množství vody, které pod zemí teče daným místem na metr délky kolmé k toku), $P$
+je celkový objem ze zdrojů (množství vody, které dodají zdroje na metr čtvereční za jednotku času, jedná se v tomto případě o součet za celou výšku vodního kolektoru), $h$ je piezometrická výška  a 
+ $S$ je měrná objemová zásobnost (kolik vody se uvolní na jednotkovém obsahu půdy při změně piezometrické výšky o jednotku). 
+Tato rovnice vyjadřuje, že rozdíl mezi množstvím vody, které z místa vyteče a množstvím, které do místa vteče, je dán vydatností zdroje v tomto místě a tím, kolik vody v tomto místě ubude díky snížení piezometrické hladiny (u volné hladiny jde zejména o snížení hladiny podzemní vody, u napjaté hladiny souvisí zejména se změnou pórovitosti při změně tlaku).
 
-S Darcyho zákonem vyjádřeným pomocí piezometrické výšky, tj. $$\vec q=-k\nabla h,$$ a bez dodatečných zdrojů ($P=0$) obdržíme
-$$\mathop{\mathrm{div}} \left(k\nabla h\right)=S\frac{\partial h}{\partial t}.$$
-Často je vertikální proudění zanedbatelné a úloha není trojrozměrná, ale ve
-skutečnosti dvourozměrná a pro třetí souřadnici klademe $$\frac{\partial h}{\partial z}=0$$ ([Dupuitův předpoklad](https://en.wikipedia.org/wiki/Dupuit%E2%80%93Forchheimer_assumption)). Pokud je možnost zvolit soustavu tak, že geometrické vlastnosti jsou v souladu s fyzikálními (jedna osa je ve směru největší a druhá ve směru nejmenší vodivosti), je tenzor $k$ diagonální  a rovnice se redukuje na
-$$\frac{\partial }{\partial x} \left(k_x \frac{\partial h}{\partial x}\right)
+S Darcyho zákonem vyjádřeným pomocí piezometrické výšky, tj. $$\vec q=-T\nabla h,$$  obdržíme
+$$-\mathop{\mathrm{div}} \left(T\nabla h\right)=-S\frac{\partial h}{\partial t}+P,$$
+tj.
+$$S\frac{\partial h}{\partial t}=\mathop{\mathrm{div}} \left(T\nabla h\right)+P, $$
+kde $T$ je transmisivita (zpravidla vodivost $k$ z 3D varianty Darcyho zákona, vynásobená tloušťkou zvodnělé vrstvy).
+ Pokud je možnost zvolit soustavu tak, že geometrické vlastnosti jsou v souladu s fyzikálními (jedna osa je ve směru největší a druhá ve směru nejmenší vodivosti), je tenzor $T$ diagonální  a rovnice se redukuje na
+$$S\frac{\partial h}{\partial t}=\frac{\partial }{\partial x} \left(T_x \frac{\partial h}{\partial x}\right)
 +
-\frac{\partial }{\partial y} \left(k_y \frac{\partial h}{\partial y}\right)
-=
-S\frac{\partial h}{\partial t}.
+\frac{\partial }{\partial y} \left(T_y \frac{\partial h}{\partial y}\right)
++P.
 $$
-Pokud jsou $k_x$ a $k_y$ konstanty (nezávisí ani na poloze ani na $h$, tj. předpokládáme homogenitu a lineární materiálové vztahy), úloha se dále redukuje na 
-$$k_x \frac{\partial^2 h}{\partial x^2}
-+
-k_y \frac{\partial^2 h}{\partial y^2}
-=
-S\frac{\partial h}{\partial t}.
-$$
-
-Pro ustálené proudění ($h$ se nemění v čase) v těchto rovnicích platí
-$$\frac{\partial h}{\partial t}=0.$$
-Je-li navíc $k_x=k_y$ (izotropie, stejné vlastnosti ve obou hlavních směrech a tedy i ve všech směrech ostatních), redukuje se tato rovnice popisující proudění podzemní vody na rovnici
-$$\frac{\partial ^2 h}{\partial x^2}+\frac{\partial^2 h}{\partial y^2}=0.$$
 
 # Rovnice vedení tepla ve 2D v různých podmínkách
 

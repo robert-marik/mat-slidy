@@ -521,7 +521,7 @@ kvádru by $S$ bylo konstantní a rovno obsahu dna.)
    \,\mathrm dx.$$
 4. Pro nádrže ve tvaru kvádru by veličina $S$ byla konstantní a
    integrál by vycházel $$W=S\rho g\int_0^H x\,\mathrm dx=S\rho
-   g\left[\frac 12 x^2\right]_0^H=S\rho g\frac 12 H^2=(SH\rho)\frac 12
+   g\left[\frac 12 x^2\right]_0^H=S\rho g\frac 12 H^2=(SH\rho)g\frac 12
    H.$$ Výraz $SH\rho$ je celková hmotnost. Práce je tedy stejná, jako
    kdybychom těleso o stejné hmotnosti jako je hmotnost vodní masy
    zvedli z poloviční hloubky pod hladinou na úroveň hladiny. Je to
