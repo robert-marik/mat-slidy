@@ -107,7 +107,7 @@ v komplikovaném prostředí.
 Další informace: [Wikipedia, Path integration](https://en.wikipedia.org/wiki/Path_integration)
 
 
-# Lineární kombinace, lineární závislost a nezávislost vektorů
+# Lineární kombinace
 
 > Definice (lineární kombinace).
 > Nechť $\vec u_1$, $\vec u_2$, $\dots$ $\vec u_k$ je
@@ -128,6 +128,29 @@ kde $t_1$, $t_2$, $\dots$, $t_k$ jsou nějaká reálná čísla, se nazývá
 </div>
 
 
+**Příklad.** Lichoběžníkové pravidlo   $$
+    \int_a^bf(x)\,\mathrm dx\approx \frac h2\Bigl(
+    {y_0}+2y_1+2y_2+\cdots+2y_{n-1}+{y_n}\Bigr).
+  $$  
+ukazuje, že určitý integrál je možno aproximovat lineární kombinací
+funkčních hodnot na pravidelné mřížce rozdělující obor integrace. Koeficienty lineární kombinace jsou dvojky s vyjímkou prvního  a posledního koeficientu, které jsou jednotkové. Existují i další aproximační vzorce, které používají jiné koeficienty a jsou založeny například na aproximaci funkce parabolami namísto přímek.
+
+
+**Příklad.** V metodě konečných diferencí (viz závěr přednášky o diferenciálních rovnicích)  se derivace aproximují výrazy, které jsou lineární kombinací po sobě jdoucích funkčních hodnot hledané funkce na pravidelné mřížce. Pro konkrétnost, pro derivaci pomocí centrální diference máme
+$$\frac{\mathrm df}{\mathrm dx}\approx\frac{f(x+h)-f(x-h)}{2h}
+=\frac 1{2h}f(x+h)-\frac 1{2h}f(x-h),
+$$
+pro derivaci pomocí dopředné diference
+$$\frac{\mathrm df}{\mathrm dx}\approx\frac{f(x+h)-f(x)}{h}
+=\frac 1{h}f(x+h)-\frac 1{h}f(x)
+,$$
+a pro druhou derivaci
+$$ \frac{\mathrm d^2f}{\mathrm dx^2}\approx\frac{f(x-h)-2f(x)+f(x+h)}{h^2}=
+\frac{1}{h^2} f(x-h) 
+- \frac{2}{h^2} f(x) + \frac{1}{h^2} f(x+h) $$
+
+
+# Lineární závislost a nezávislost vektorů
 
 V $n$-rozměrném prostoru existuje $n$-tice vektorů, pomocí
 nichž můžeme dostat libovolný vektor jako lineární kombinaci. Taková
@@ -146,13 +169,15 @@ $$\vec v=(4,3)=2(2,1)+1(0,1)=2\vec \varepsilon_1+\vec \varepsilon_2$$
 a souřadnice vektoru $\vec v=(4,3)$ v nové bázi jsou $\begin{bmatrix} 2\\1 \end{bmatrix} _{\varepsilon_1,\varepsilon_2}$. Tady vidíme
 výhodu "pěkné volby" bázových vektorů.
 
+Aby použití souřadnic mělo smysl, musí existovat jediná možnost jak daný vektor vyjádřit pomocí lineární kombinace zadaných bázových vektorů. Tato úloha se dá redukovat na úlohu, zda taková jednozačnost existuje u nulového vektoru. Tím je motivována následující úvaha a z ní vyplývající definice.
+
 Výsledkem triviální lineární kombinace, tj. lineární kombinace s
-nulovými koeficienty, je nulový vektor.  Pokud vektory bázi netvoří,
-nemusí být vyjádření lineární kombinace jednoznačné. Dokonce tedy
-nulový vektor můžeme dostat i jinak, než jako triviální lineární
-kombinaci. Ukazuje se, že je důležité rozlišovat mezi těmito případy a
-proto si na jejich rozlišení zavedeme nové pojmy, lineární závislost a
-nezávislost.
+nulovými koeficienty, je nulový vektor.  Pro některé vektory můžeme
+nulový vektor dostat i jako jinou lineární kombinaci, než je ta
+triviální. Ukazuje se, že je důležité identifikovat tyto případy a pro
+rozlišení toho, zda se nulový vektor dá nebo nedá vyádřit jako
+netriviální lineární kombinace zavedeme nové pojmy, lineární závislost
+a nezávislost.
 
 
 > Definice (lineární závislost a nezávislost).
@@ -741,7 +766,7 @@ hydrodynamických a disperzních jevů, kap. 3.3.
 
 <div class='obtekat'>
 
-![Rozložení teploty na tepelně vodivé desce je možné přibližně zkoumat metodami lineární algebry.](deska.png)
+![Rozložení teploty na tepelně vodivé desce je možné přibližně zkoumat metodami lineární algebry. A až na některé triviální případy jinou možnost vlastně nemáme, protože přesné řešení rovnice vedení tepla je v prakticky zajímavých případech nereálné. Podobně to je s mechanickým namáháním nebo transportem látek porézním prostředím.](deska.png)
 
 </div>
 
