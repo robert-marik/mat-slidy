@@ -310,7 +310,7 @@ vzorec pro integrování určitého integrálu substituční metodou je v
 následující větě.
 
 > Věta (substituční metoda pro určitý integrál). Platí $$\int_a^b f(\varphi (x))\varphi'(x)\,\mathrm dx=\int_{\varphi
-  (a)}^{\varphi(b)} f(t)\,\mathrm.$$
+  (a)}^{\varphi(b)} f(t)\,\mathrm dt.$$
 
 Meze tedy podléhají stejné transformaci, jako integrovaná
 proměnná. Pokud používáme substituci $t=\varphi(x)$, potom v dolní

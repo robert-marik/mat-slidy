@@ -655,6 +655,10 @@ $$
 \int_{y_0}^y \frac{\mathrm{d}t}{g(t)}=\int_{x_0}^x f(t)\mathrm{d}t.
 $$
 
+Pro diferenciální rovnici se separovanými proměnnými je možné vyslovit jednodušší postačující podmínku pro jednoznačnost řešení.
+
+> Věta (existence a jednoznačnost řešení Cauchyovy úlohy pro rovnici se separovanými proměnnými). Je-li $g(y_0)\neq 0$, má počáteční úloha $$y'=f(x)g(y),\qquad y(x_0)=y_0$$ právě jedno řešení definované v nějakém okolí počáteční podmínky.
+
 
 # Diferenciální rovnice růstu vodní kapky
 
@@ -693,17 +697,19 @@ Všimněte si, že počáteční úloha s\ počáteční podmínkou $V(0)=0$ má
 konstantní nulové řešení $$V(t)=0$$ a nenulové řešení
 $$V(t)=(k_0t)^3.$$ Máme zde tedy nejednoznačnost v řešení počáteční
 úlohy. Tato nejednoznačnost není v rozporu s\ větou o existenci a
-jednoznačnosti řešení, protože pravá strana nemá ohraničnou derivaci
-podle $V$. A\ nejednoznačnost má v tomto případě dokonce fyzikální
-význam. Plynné skupenství může existovat i\ pod bodem
-kondenzace. Takovému jevu se říká přechlazená pára. Aby došlo ke
-kondenzaci, musí být k dispozici kondenzační jádra, například
-nečistoty ve vzduchu. Proto ve znečištěném ovzduší dochází častěji ke
-kondenzaci a tvorbě mlhy. Své by o tom mohli vyprávět obyvatelé
-Londýna, kteří se proslulých mlh zbavili poté, co se omezilo topení
-uhlím. My dnes spíše známe přechlazenou tekutinu ve formě hřejících
-polštářků, kde se po lupnutí plíškem spustí přeměna skupenství na
-pevné spojená s\ intenzivním uvolněním tepla.
+jednoznačnosti řešení, protože pravá strana je nulová (podmínka pro
+separovatelnou rovnici není splněna) a nemá ohraničnou derivaci podle
+$V$ (podmínka pro obecnou rovnici také není splněna). A\
+nejednoznačnost má v tomto případě dokonce fyzikální význam. Plynné
+skupenství může existovat i\ pod bodem kondenzace. Takovému jevu se
+říká přechlazená pára. Aby došlo ke kondenzaci, musí být k dispozici
+kondenzační jádra, například nečistoty ve vzduchu. Proto ve
+znečištěném ovzduší dochází častěji ke kondenzaci a tvorbě mlhy. Své
+by o tom mohli vyprávět obyvatelé Londýna, kteří se proslulých mlh
+zbavili poté, co se omezilo topení uhlím. My dnes spíše známe
+přechlazenou tekutinu ve formě hřejících polštářků, kde se po lupnutí
+plíškem spustí přeměna skupenství na pevné spojená s\ intenzivním
+uvolněním tepla.
 
 # Diferenciální rovnice vyšších řádů
 
