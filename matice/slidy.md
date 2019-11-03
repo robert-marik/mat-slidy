@@ -569,6 +569,7 @@ Výše popsané chování pozorujeme i u proudění podzemní vody, kde hnací s
 
 **Matematický prostředek, který umožňuje snadno vektoru změnit velikost nebo i směr je právě matice a maticový součin.**
 
+Na následujícím slidu se naučíme hledat v materiálu "směry brázd".
 
 # Vlastní čísla a vlastní vektory
 
