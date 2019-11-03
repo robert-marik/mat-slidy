@@ -561,7 +561,9 @@ Tuto matici budeme potřebovat při studiu deformace při odvození matematické
 \fi
 
 
-Matice chápejme jako zobrazení, které má na vstupu vektor a na výstupu opět vektor. Užitečnost si můžeme charakterizovat na proudění vody po povrchu země. Voda teče z kopce dolů, tento směr však můžeme ovlinit vyoráním brázd. Hnací síla je gravitace, která směřuje z kopce dolů. Odezvou na gravitaci je tok vody, který směřuje velkou rychlostí dolů, pokud je pooráno po spádnici, malou rychlostí dolů, pokud je pooráno po vrstevnici a odkloněným směrem od směru z kopce dolů, pokud brázdy vedou našikmo. 
+Matice chápejme jako zobrazení, které má na vstupu vektor a na výstupu opět vektor. Vstupem bývá většinou podnět, kde rozhodující je nejenom síla podnětu, ale i jeho směr. Například nerovnováha tlaku. Výstupem bývá odezva, například proudění vyvolané nerovnováhou tlaku. Tato odezva v izotropním prostředí má směr podnětu, v prostředí s určitou strukturou by se však směr odezvy mohl odchýlit. 
+
+Užitečnost maticového součinu v materiálovém inženýrství si můžeme znázornit na proudění vody po povrchu země. Voda teče z kopce dolů, tento směr však můžeme ovlinit vyoráním brázd. Hnací síla je gravitace, která směřuje z kopce dolů. Odezvou na gravitaci je tok vody, který směřuje velkou rychlostí dolů, pokud je pooráno po spádnici, malou rychlostí dolů, pokud je pooráno po vrstevnici a odkloněným směrem od směru z kopce dolů, pokud brázdy vedou našikmo. V materiálu se může odehrávat totéž.  
 
 **Matematický prostředek, který umožňuje snadno vektoru změnit velikost nebo i směr je právě matice a maticový součin.**
 
