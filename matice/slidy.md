@@ -563,9 +563,9 @@ Tuto matici budeme potřebovat při studiu deformace při odvození matematické
 
 Matice chápejme jako zobrazení, které má na vstupu vektor a na výstupu opět vektor. Užitečnost si můžeme charakterizovat na proudění vody po povrchu země. Voda teče z kopce dolů, tento směr však můžeme ovlinit vyoráním brázd. Hnací síla je gravitace, která směřuje z kopce dolů. Odezvou na gravitaci je tok vody, který směřuje velkou rychlostí dolů, pokud je pooráno po spádnici, malou rychlostí dolů, pokud je pooráno po vrstevnici a odkloněným směrem od směru z kopce dolů, pokud brázdy vedou našikmo. 
 
-Matematický prostředek, který umožňuje snadno vektoru změnit velikost nebo i směr je právě matice a maticový součin.
+**Matematický prostředek, který umožňuje snadno vektoru změnit velikost nebo i směr je právě matice a maticový součin.**
 
-Výše popsané chování pozorujeme i u proudění podzmení vody, kde hnací silou kromě hladiny podzmení vody může být tlak, nebo u proudění vody ve dřevě, kde hnací silou definující pojem "z kopce dolů" je nerovnoměrnost v rozložení koncentrace vody ve dřevě (jedna část dřeva má větší vlhkost než jiná část).
+Výše popsané chování pozorujeme i u proudění podzemní vody, kde hnací silou kromě hladiny podzmení vody může být tlak, nebo u proudění vody ve dřevě, kde hnací silou definující pojem "z kopce dolů" je nerovnoměrnost v rozložení koncentrace vody ve dřevě (jedna část dřeva má větší vlhkost než jiná část) nebo  nerovnoměrnost v teplotě (termodifuze, Sorettův efekt, transport vlhkosti vyvolaný rozdílem teplot).
 
 # Vlastní čísla a vlastní vektory
 
@@ -602,7 +602,7 @@ vlastní hodnotě.
 vlastní vektor $(0,1)$ příslušný vlastní hodnotě $0$. Protože vlastními vektory jsou i nenulové násobky, je vlastním vektorem každý nenulový vektor, který má nulovou druhou komponentu (vlastní hodnota je $3$) nebo první komponentu (vlastní hodnota je $0$).
 
 **Příklad.** Platí $\begin{pmatrix} 3 & -2\\ -1 & 4 \end{pmatrix} \begin{pmatrix}   2\\1 \end{pmatrix} = \begin{pmatrix}   4\\2 \end{pmatrix}$
-a matice $\begin{pmatrix} 3 & -2\\ -1 & 4 \end{pmatrix}$ má vlastní vektor $(2,1)$ příslušný vlastní hodnotě $2$. Vlatním vektorem je i každý nenulovvý násobek vektoru $(2,1)$.
+a matice $\begin{pmatrix} 3 & -2\\ -1 & 4 \end{pmatrix}$ má vlastní vektor $(2,1)$ příslušný vlastní hodnotě $2$. Vlastním vektorem je i každý nenulovvý násobek vektoru $(2,1)$.
 
 **Příklad.** Stacionární stav Markovova řetězce je vlastním vektorem
 matice, která tento řetězec reprezentuje. Příslušná vlastní hodnota je
