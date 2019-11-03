@@ -136,18 +136,10 @@ ukazuje, že určitý integrál je možno aproximovat lineární kombinací
 funkčních hodnot na pravidelné mřížce rozdělující obor integrace. Koeficienty lineární kombinace jsou dvojky s vyjímkou prvního  a posledního koeficientu, které jsou jednotkové. Existují i další aproximační vzorce, které používají jiné koeficienty a jsou založeny například na aproximaci funkce parabolami namísto přímek.
 
 
-**Příklad.** V metodě konečných diferencí (viz závěr přednášky o diferenciálních rovnicích)  se derivace aproximují výrazy, které jsou lineární kombinací po sobě jdoucích funkčních hodnot hledané funkce na pravidelné mřížce. Pro konkrétnost, pro derivaci pomocí centrální diference máme
-$$\frac{\mathrm df}{\mathrm dx}\approx\frac{f(x+h)-f(x-h)}{2h}
-=\frac 1{2h}f(x+h)-\frac 1{2h}f(x-h),
-$$
-pro derivaci pomocí dopředné diference
-$$\frac{\mathrm df}{\mathrm dx}\approx\frac{f(x+h)-f(x)}{h}
-=\frac 1{h}f(x+h)-\frac 1{h}f(x)
-,$$
+**Příklad.** V metodě konečných diferencí (viz závěr přednášky o diferenciálních rovnicích)  se derivace aproximují výrazy, které jsou lineární kombinací po sobě jdoucích funkčních hodnot hledané funkce na pravidelné mřížce délky $h$. Pro konkrétnost, pro první derivaci máme
+$$\frac{\mathrm df}{\mathrm dx}\approx\frac{f(x+h)-f(x-h)}{2h} =\frac 1{2h}f(x+h)-\frac 1{2h}f(x-h), $$
 a pro druhou derivaci
-$$ \frac{\mathrm d^2f}{\mathrm dx^2}\approx\frac{f(x-h)-2f(x)+f(x+h)}{h^2}=
-\frac{1}{h^2} f(x-h) 
-- \frac{2}{h^2} f(x) + \frac{1}{h^2} f(x+h) $$
+$$ \frac{\mathrm d^2f}{\mathrm dx^2}\approx\frac{f(x-h)-2f(x)+f(x+h)}{h^2}=\frac{1}{h^2} f(x-h) - \frac{2}{h^2} f(x) + \frac{1}{h^2} f(x+h).$$
 
 
 # Lineární závislost a nezávislost vektorů
@@ -487,7 +479,7 @@ Další informace:
 
 * [Z. Pospíšil, Maticové populační modely](http://portal.matematickabiologie.cz/index.php?pg=analyza-a-modelovani-dynamickych-biologickych-dat--maticove-populacni-modely--prolog--leslieho-model-rustu-populace#pro14)
 
-# Matice jako zobrazení
+# Matice jako zobrazení v geometrii
 
 <div class='obtekat'>
 
@@ -556,6 +548,25 @@ $$R_{\theta,0}=
 $$
 Tuto matici budeme potřebovat při studiu deformace při odvození matematického popisu malých deformací.
 
+# Matice jako zobrazení v materiálovém inženýrství
+
+\iffalse 
+
+<div class='obtekat'>
+
+![Na poli voda teče v podstatě z kopce, ale brázdy tvořící strukturu pole můžou směr stáčet a případně tok zpomalovat. Totéž se může dít a děje v řadě porézních materiálů. Zdroj: pixino.com](pole.jpg)
+
+</div>
+
+\fi
+
+
+Matice chápejme jako zobrazení, které má na vstupu vektor a na výstupu opět vektor. Užitečnost si můžeme charakterizovat na proudění vody po povrchu země. Voda teče z kopce dolů, tento směr však můžeme ovlinit vyoráním brázd. Hnací síla je gravitace, která směřuje z kopce dolů. Odezvou na gravitaci je tok vody, který směřuje velkou rychlostí dolů, pokud je pooráno po spádnici, malou rychlostí dolů, pokud je pooráno po vrstevnici a odkloněným směrem od směru z kopce dolů, pokud brázdy vedou našikmo. 
+
+Matematický prostředek, který umožňuje snadno vektoru změnit velikost nebo i směr je právě matice a maticový součin.
+
+Výše popsané chování pozorujeme i u proudění podzmení vody, kde hnací silou kromě hladiny podzmení vody může být tlak, nebo u proudění vody ve dřevě, kde hnací silou definující pojem "z kopce dolů" je nerovnoměrnost v rozložení koncentrace vody ve dřevě (jedna část dřeva má větší vlhkost než jiná část).
+
 # Vlastní čísla a vlastní vektory
 
 U zobrazování vektorů pomocí maticového násobení nás velice zajímá, které směry se zachovávají, tj. kdy bude obrazem vektoru jeho násobek.
@@ -566,14 +577,22 @@ Vlastní čísla se nazývají též vlastní hodnoty matice. Každý nenulový
 vlastní násobek vlastního vektoru je vlastní vektor příslušný téže
 vlastní hodnotě.
 
+> Poznámka (vlastní vektory a materiálové inženýrství). Vlastní vektory jsou nesmírně důležité, protože definují směry, podél nichž se zobrazení chová "pěkně". Tímto zobrazením může být třeba to, jak se působení vnější síly na těleso projeví na deformaci tohoto tělesa nebo jak se gradient teploty nebo vlhkosti projeví na proudění tepla či vody ve dřevě, půdě nebo jiném materiálu. Často se v aplikacích maticové zobrazení objevuje v *konstitučních vztazích*, vztazích mezi podnětem a materiálovou odezvou. Vlastní směry jsou tedy směry, ve kterých má odezva stejný směr jako podnět.  
+>
+> Pro pravidelně rostlé dřevo je snadné tyto směry určit, jsou to anatomické směry dřeva. Pro zkroucené dřevo nebo při studiu proudění vody, vzduchu či ropy v půdě to již tak snadné není a je nutné tyto směry vypočítat. To se naučíme později.
+
+\iffalse
+
 <div class='obtekat'>
 
 ![Dřevo není izotropní materiál a nemá stejné vlastnosti v každém směru. Existují ale tři výrazné směry, vzhledem k nimž se dají mechanické a fyzikální vlastnosti popsat snadněji, než vhledem ke směrům ostatním. Matematicky se jedná o vlastní vektory příslušných maticových fyzikálních veličin. Zdroj: http://woodpoint.sk](drevo.png)
 
 </div>
 
+\fi
 
-**Příklad.** Matice rotace z minulého slidu nemá žádnou vlastní hodnotu (pokud tedy
+
+**Příklad.** Matice rotace nemá žádnou vlastní hodnotu (pokud tedy
   uvažujeme vlastní hodnoty v množině reálných čísel), protože pootočením se
   změní směr všech vektorů. Vlastní hodnoty existují pouze pro otočení o násobky $180^\circ$.
 
@@ -603,19 +622,6 @@ zajímavé.
 hodnotu. Příslušný vlastní vektor definuje rozložení četnosti
 zastoupení jednotlivých věkových kategorií u populace ve stacionárním
 stavu. (Toto není tvrzení patrné na první pohled, ale dá se dokázat.)
-
-Vlastní vektory jsou nesmírně důležité, protože definují směry, podél
-nichž se zobrazení chová "pěkně". Tímto zobrazením může být třeba to,
-jak se působení vnější síly na těleso projeví na deformaci tohoto
-tělesa nebo jak se gradient teploty nebo vlhkosti projeví na proudění
-tepla či vody ve dřevě, půdě nebo jiném materiálu. Často se v
-aplikacích maticové zobrazení objevuje v *konstitučních vztazích*,
-vztazích mezi podnětem a materiálovou odezvou. Vlastní směry jsou tedy směry, ve kterých má odezva stejný směr jako podnět. 
-
-Pro pravidelně rostlé dřevo je snadné tyto směry určit, jsou to
-anatomické směry dřeva. Pro zkroucené dřevo nebo při studiu proudění
-vody, vzduchu či ropy v půdě to již tak snadné není a je nutné tyto
-směry vypočítat. To se naučíme později.
 
 V aplikacích často bývá matice "symetrická podle diagonály" a u takové
 matice vlastní vektory vždy existují. Co se přesně myslí pod pojmem
