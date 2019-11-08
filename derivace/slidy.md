@@ -225,20 +225,27 @@ vlastností a při sušení dřeva.
 
 <div class='obtekat'>
 
+![Řez korytem. Voda zaplňuje koryto odspodu, tj. změna v množství vody v korytě se projeví nahoře, kde je šířka koryta $B$. Zdroj: Wikipedia.](channel.png)
+
+
 ![Derivace hraje roli při odvození podmínky pro vznik hydraulického skoku. Zdroj: Jonathan Ball, https://www.flickr.com/photos/jball359](jump.jpg)
 
 </div>
+
+
 
 \fi
 
 ### Koryto řeky (krajinářství)
 
-Při přechodu říčního proudění v bystřinné hraje důležitou roli
-derivace průřezu koryta podle výšky koryta. Tato veličina vyjadřuje,
-jak rychle se mění obsah průřezu s rostoucí hladinou. Z obrázku je
-zřejmé, že tato derivace je rovna šířce koryta v hladině. V praxi je
-toto možné spočítat pro speciální tvary koryta, proto jsou vzorce pro
-vodní skok k dispozici jenom ve speciálních případech, jako například
+Uvažume příčný řez korytem řeky, jak je na obrázku. 
+Z tohoto obrázku je
+zřejmé, že při zvyšování obsahu průřezu roste hladina. Pokud by stěny byly svislé (tj. $B$ nezávislé na $h$), byla  by změna průřezu $\Delta A$ (například v milimetrech čtverečních) vyvolaná změnou výšky $\Delta h$ (například v milimetrech) rovna šířce řeky $B$ v milimetrech, protože koryto by bylo obdélníkové a podíl obsahu obdélníka a jeho výšky je šířka. V případě nekonstantního $B$ dostáváme místo podílu derivaci, tj. $$\frac{\mathrm d A}{\mathrm dh}=B.$$ 
+Derivace průřezu koryta podle výšky koryta hraje důležitou roli například při přechodu říčního proudění v bystřinné. Tato veličina vyjadřuje,
+jak rychle se mění obsah průřezu s rostoucí hladinou. 
+V praxi je
+ možné ji spočítat pro speciální tvary koryta, proto jsou vzorce pro
+vodní skok související s tímto přechodem k dispozici jenom ve speciálních případech, jako například
 koryto obdélníkového tvaru.
 
 # Výpočet derivace

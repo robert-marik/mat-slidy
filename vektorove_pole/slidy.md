@@ -502,9 +502,28 @@ nepovažujeme za konstanty, jsou závislé na $c$ a jejím prostřednictvím
 i na $x$. V takovém případě si úpravu na rovnici (**) nemůžeme
 dovolit.
 
+# Rovnice mělké vody
+
+\iffalse
+
+<div class='obtekat'>
+
+![Řez korytem. Divergence toku (zvýšení průtoku) se projeví úbytkem vody v řezu a následně snížením hladiny. Zdroj: Wikipedia.](channel.png)
+
+</div>
+
+\fi
 
 
-# Proudění podzemní vody
+Pro jednorozměrné proudění nestlačitelné tekutiny korytem o obsahu průřezu $A$ platí, že při absenci zdrojů se změna toku $Q$ se projeví ve změně průřezu. Zvýšení průtoku na jednotkové délce koryta je jednorozměrná divergence $Q$, tj. $\frac{\partial Q}{\partial x}$. Změna množství v daném průřezu obsahu $A$ za časovou jednotku je vzhledem k nestlačitelnosti rovna $\frac{\partial A}{\partial t}$. Rovnice popisující proudění má tvar
+$$\frac{\partial A}{\partial t} + \frac{\partial Q}{\partial x}  =0. $$
+Pokud chceme množství měřit pomocí hloubky $h$, platí podle pravidla pro derivaci složené funkce 
+$$\frac{\partial A}{\partial t} =\frac{\partial A}{\partial h} \frac{\partial h}{\partial t}=B \frac{\partial h}{\partial t},$$
+kde $B$ je šířka hladiny. Rovnice má potom tvar
+$$B\frac{\partial h}{\partial t} + \frac{\partial Q}{\partial x}  =0. $$
+Toto je jedna z forem zápisu tzv. *Saint-Venantovy rovnice*, nazývané též *rovnice mělké vody*. Je to jenom rovnice kontinuity, tj. nejsou zde konstituční vztahy. Proto v ní jsou dvě funkce, tok $Q$ definující pohyb stavové veličiny a výška hladiny $h$ definující množství stavové veličiny.
+
+# Rovnice podzemní vody
 
 \iffalse
 
@@ -608,4 +627,5 @@ $$\rho c\frac{\partial T}{\partial t}=D_x\frac{\partial^2 T}{\partial x^2}+D_y\f
 * Pomocí paridálních derivací a divergence dokážeme určit, jestli se v nějakém místě veličina přenášená místem "ztrácí" nebo "přibývá".
 * Dokážme dokonce s rozumnou itepretací, čím případné ubývání přenášené veličiny může být způsobeno (zdroje nebo akumulace a daném místě), zformulovat rovnici, která dané proudění plně popisuje. Výsledkem jsou rovnice vedení tepla, rovnice difuze, rovnice proudění podzemní vody a jiné.
 * Obecná rovnice odvozená podle předchozích bodů je příliš obecná a pro práci se ji snažíme nějak konkretizovat. Například zjednodušit, pokud máme informaci o charakteru materiálových vztahů (lineární/nelineární) a materiálu (homogenní/nehomogenní). Jiným zjednodušením je, pokud se zajímáme o stacionární stav, který se nastolí po dosažení rovnováhy.
+* Posláním široké škály příkladů různých specifikací rovnice kontinuity (vedení tepla, prouděni povrchové a podzemní vody a další) je, aby si student uvědomil čiroký záběr obecné formulace rovnice kontinuity. Na zkoušku se naučte obecnou rovnici a jenom informativně si přečtěte její specální případy. Obory pracující se dřevem (dřevařství, nábytek, dřevostavby) si uložte do paměti rovnice popisující modelování tepla a vlhkosti ve dřevě. Budou se vám hodit  ve studiu. Na krajinářství se zase zaměřte na modelování vody.
 
