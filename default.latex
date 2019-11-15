@@ -9,6 +9,8 @@ $else$
 \usepackage{lmodern}
 $endif$
 
+\usepackage[rightline=false, leftline=false, leftmargin=0pt,innerleftmargin=0pt,rightmargin=0pt,innerrightmargin=0pt,tikz]{mdframed}
+
 \usepackage[margin=1cm, bottom=1in, top=1in]{geometry}\everymath{\displaystyle}
 
 $if(linestretch)$
@@ -217,10 +219,23 @@ $endif$
 \def\pismenoV{V}
 \def\pismenoD{D}
 \def\pismenoE{e}
+
+%\def\uloztoken#1#2#3;;;;{\def\ulozene{#1}\def\ulozeneB{#2}}
+%\def\zahlavi #1.{\uloztoken #1;;;;\noindent\textbf{\ignorespaces #1.}
+%\ifx\ulozene\pismenoD\ifx\ulozeneB\pismenoE\else\let\ulozene\pismenoV\fi\fi
+%\ifx\ulozene\pismenoV\itshape\fi}
+
+\renewenvironment{quote}{\par\medskip\zahlavi}{\konec}
 \def\uloztoken#1#2#3;;;;{\def\ulozene{#1}\def\ulozeneB{#2}}
-\def\zahlavi #1.{\uloztoken #1;;;;\noindent\textbf{\ignorespaces #1.}
-\ifx\ulozene\pismenoD\ifx\ulozeneB\pismenoE\else\let\ulozene\pismenoV\fi\fi
-\ifx\ulozene\pismenoV\itshape\fi}
+\def\zahlavi #1.{\uloztoken #1;;;;%
+  \gdef\konec{\par\medskip}%
+\ifx\ulozene\pismenoD\ifx\ulozeneB\pismenoE\begin{mdframed}[linewidth=1pt]\gdef\konec{\end{mdframed}}\message{^^J DEFINICE ^^J}\fi\fi
+\ifx\ulozene\pismenoV\itshape\begin{mdframed}\gdef\konec{\end{mdframed}}\fi
+\noindent\textbf{\ignorespaces #1.}
+\message{^^J #1 ^^J}
+}
+
+
 \def\dm\[#1\]{\begin{dmath*} #1\end{dmath*}}
 
 $for(header-includes)$

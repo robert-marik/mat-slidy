@@ -523,7 +523,7 @@ předchozích ukázek v ní nejsou konstituční vztahy. Proto v ní jsou dvě
 funkce, tok $Q$ definující pohyb stavové veličiny a průřez $A$
 definující množství stavové veličiny. Někdy je vhodnější pracovat se
 stavovou veličinou $h$. Jak jsme viděli v úvodní přednášce o
-derivacích, platí $\frac{\mathrm dA}{\mathrm h}=B$.
+derivacích, platí $\frac{\mathrm dA}{\mathrm dh}=B$.
 
 # Rovnice podzemní vody
 
