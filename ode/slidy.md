@@ -674,7 +674,7 @@ záleží na tom, co dalšího hodláme s\ řešením dělat. Pro většinu výp
 je však explicitní tvar vhodnější než tvar implicitní a proto se o něj
 vždy snažíme.
 
-V případě počáteční podmínky $y(x_0) = y_0$ je možné spojit třetí a čtvrtý krok a použít určitý integrál
+> Poznámka (zápis partikulárního řešení pomocí určitého integrálu). V případě počáteční podmínky $y(x_0) = y_0$ je možné spojit třetí a čtvrtý krok a použít určitý integrál
 $$
 \int_{y_0}^y \frac{\mathrm{d}t}{g(t)}=\int_{x_0}^x f(t)\mathrm{d}t.
 $$
