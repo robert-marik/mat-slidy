@@ -187,7 +187,7 @@ vždy. Příkladem je termodifuze, což je pohyb prvků vyvolaný
 nerovnoměrným rozložením teploty. Například při difúzi vody ve dřevě s
 nerovnoměrným rozložením teploty je tok dán vztahem $$\vec J=-D\nabla c - sD\nabla T, $$
 kde $s$ je koeficient termodifuze. Na rozdíl od předchozích zákonů, u
-Sortetova efektu dochází k transportu nejenom ve
+Soretova efektu dochází k transportu nejenom ve
 směru maximálního poklesu (záporného gradientu) teploty, ale někdy i ve směru 
 gradientu teploty. Viz Wikipedia a heslo Thermophoresis.
 
@@ -286,12 +286,12 @@ $\vec j=-k\nabla \varphi$, kde $k$ je konstanta a vektory toku a gradientu mají
 Budeme sledovat tok vektorového pole a bude nás zajímat, o kolik se tok v daném místě mění.
 
 * Pro jednoduchost rozdělíme tok na tři nezávislé části ve směru jednotlivých os a vztáhneme vše k jednotkám času a průřezu, tj. budeme uvažovat hustotu toku nějaké fyzikální veličiny.
-* Je-li tato hustota toku popsána vektorovým polem  $\vec q=(P,Q,R)$ v jednotkách kilogram na metr čtvereční za sekundu, znamená to, že kolmým průřezem jednotkového obsahu projde za jednotku času $P$ kilogramů sledované látky, jejíž tok popisujeme. Často se pracuje i s objemovým tokem, kdy možství neměříme v kilogramech ale v metrech krychlových a například při ustáleném proudění v trubici (hydrodynamika) je tok roven vektoru rychlosti a při proudění porézním materiálem (proudění podzemní vody) je roven filtrační rychlosti.
+* Je-li tato hustota toku popsána vektorovým polem  $\vec q=(P,Q,R)$ v jednotkách kilogram na metr čtvereční za sekundu, znamená to, že kolmým průřezem jednotkového obsahu projde za jednotku času $P$ kilogramů sledované látky, jejíž tok popisujeme. Často se pracuje i s objemovým tokem, kdy množství neměříme v kilogramech ale v metrech krychlových a například při ustáleném proudění v trubici (hydrodynamika) je tok roven vektoru rychlosti a při proudění porézním materiálem (proudění podzemní vody) je roven filtrační rychlosti.
 * Derivace $\frac{\partial P}{\partial x}$ udává, o kolik studovaný tok v daném místě vzroste ve směru osy $x$ a tento nárůst je vztažený na jednotku délky.
 * Ve směru osy $y$ máme tok vyjádřený veličinou $Q$ a proto nás podobně zajímá $\frac{\partial Q}{\partial y}$.
 * Analogicky $\frac{\partial R}{\partial z}$.
-* Celková změna toku bude součtem všech tří příspěvků. Pokud je kladná, znamená to, že z daného místa více veličiny vytéká, než kolik teče dovnitř. Pokud je záporná, je tomu naopak. Jestli se v případě nerovnováhy v daném místě může proudící veličina tvořit nebo spotřebovávat nebo akumulovat nebo jestli jí v daném místě může zbývat již nejzjistíme, záleží na charakteru proudící veličiny a na okolnostech s tímto prouděním spojených. Tuto informaci nám pro další popis musí dodat externí věda (obecná fyzika, fyzika materiálu, fyzika životního prostředí, hydrologie, pedologie, ...).
-* Při preciznější argumentnaci dávající do souvislosti paricální derivace jednotlivých komponent toku s tím, co se reálně s vektorovým polem děje, je nutné si pomoci stejně jako u derivací, tj. uvažovat ne dané místo, ale jistý konečně velký objem (viz obrázek), vztáhnout dané veličiny na jednotku objemu a rozměry tohoto objemu limitně stáhnout k nule. Toto však již přesahuje ambice v našem kurzu a jedná se o formalismus, kterému se vyhneme přímým představením hotového výsledku.
+* Celková změna toku bude součtem všech tří příspěvků. Pokud je kladná, znamená to, že z daného místa více veličiny vytéká, než kolik teče dovnitř. Pokud je záporná, je tomu naopak. Jestli se v případě nerovnováhy v daném místě může proudící veličina tvořit nebo spotřebovávat nebo akumulovat nebo jestli jí v daném místě může zbývat již nezjistíme, záleží na charakteru proudící veličiny a na okolnostech s tímto prouděním spojených. Tuto informaci nám pro další popis musí dodat externí věda (obecná fyzika, fyzika materiálu, fyzika životního prostředí, hydrologie, pedologie, ...).
+* Při preciznější argumentaci dávající do souvislosti parciální derivace jednotlivých komponent toku s tím, co se reálně s vektorovým polem děje, je nutné si pomoci stejně jako u derivací, tj. uvažovat ne dané místo, ale jistý konečně velký objem (viz obrázek), vztáhnout dané veličiny na jednotku objemu a rozměry tohoto objemu limitně stáhnout k nule. Toto však již přesahuje ambice v našem kurzu a jedná se o formalismus, kterému se vyhneme přímým představením hotového výsledku.
 
 <!--
 Budeme sledovat tok vektorového pole ze zvoleného 
@@ -516,14 +516,14 @@ dovolit.
 
 Pro jednorozměrné proudění nestlačitelné tekutiny korytem o obsahu průřezu $A$ stavová veličina vyjadřuje množství vody v korytě a tato stavová veličina je přenášena tokem $Q$, který je součinem rychlosti (nebo střední rychlosti v případě, že rychlost je rozložena nerovnoměrně) a obsahu průřezu. Stavovou veličinou může být buď obsah v řezu (viz obrázek a Cross sectional area) nebo výška hladiny (Water depth). Rovnice se zpravidla uvažuje opět bez zdrojů a vyjadřuje, že při absenci zdrojů se změna toku $Q$ se projeví ve změně průřezu. Zvýšení průtoku na jednotkové délce koryta je jednorozměrná divergence $Q$, tj. $\frac{\partial Q}{\partial x}$. Změna množství v daném průřezu obsahu $A$ za časovou jednotku je vzhledem k nestlačitelnosti rovna $\frac{\partial A}{\partial t}$. Rovnice popisující proudění má tvar
 $$\frac{\partial A}{\partial t} + \frac{\partial Q}{\partial x}  =0. $$
-Toto je jedna z forem zápisu tzv. *Saint-Venantovy rovnice*, nazývané též *rovnice mělké vody*. Používá se k modelování toku povrchové vody nebo k modelování vln cunami. 
+Toto je jedna z forem zápisu tzv. *Saint-Venantovy rovnice*, nazývané též *rovnice mělké vody*. Používá se k modelování toku povrchové vody, modelování pohybu vzduch při předpovědích počasí nebo k modelování vln cunami. 
 
 Z matematického hlediska je to jenom rovnice kontinuity, na rozdíl od
 předchozích ukázek v ní nejsou konstituční vztahy. Proto v ní jsou dvě
 funkce, tok $Q$ definující pohyb stavové veličiny a průřez $A$
 definující množství stavové veličiny. Někdy je vhodnější pracovat se
 stavovou veličinou $h$. Jak jsme viděli v úvodní přednášce o
-derivacích, platí $\frac{\mathrm dA}{\mathrm h}=B$.
+derivacích, platí $\frac{\mathrm dA}{\mathrm d h}=B$. Abychom mohli celou rovnici převést na tvar pracující se stavovou veličinou $h$, je nutné udělat nějaké dodatečné předpoklady, jako například pracovat s konkrétním tvarem koryta.
 
 # Rovnice podzemní vody
 
@@ -625,9 +625,9 @@ $$\rho c\frac{\partial T}{\partial t}=D_x\frac{\partial^2 T}{\partial x^2}+D_y\f
 
 \fi
 
-* Pomocí gradientu a aparátu lineární algebry můžeme vyjářit vztah mezi pohybem fyzikální veličiny a mechanismem, který tento pohyb iniciuje. Většinou se jedná o vztah mezi vektorovým polem toku a gradientem jistého skalárního pole. 
-* Pomocí paridálních derivací a divergence dokážeme určit, jestli se v nějakém místě veličina přenášená místem "ztrácí" nebo "přibývá".
-* Dokážme dokonce s rozumnou itepretací, čím případné ubývání přenášené veličiny může být způsobeno (zdroje nebo akumulace a daném místě), zformulovat rovnici, která dané proudění plně popisuje. Výsledkem jsou rovnice vedení tepla, rovnice difuze, rovnice proudění podzemní vody a jiné.
+* Pomocí gradientu a aparátu lineární algebry můžeme vyjádřit vztah mezi pohybem fyzikální veličiny a mechanismem, který tento pohyb iniciuje. Většinou se jedná o vztah mezi vektorovým polem toku a gradientem jistého skalárního pole. 
+* Pomocí parciálních derivací a divergence dokážeme určit, jestli se v nějakém místě veličina přenášená místem "ztrácí" nebo "přibývá".
+* Dokážeme dokonce s rozumnou interpretací, čím případné ubývání přenášené veličiny může být způsobeno (zdroje nebo akumulace a daném místě), zformulovat rovnici, která dané proudění plně popisuje. Výsledkem jsou rovnice vedení tepla, rovnice difuze, rovnice proudění podzemní vody a jiné.
 * Obecná rovnice odvozená podle předchozích bodů je příliš obecná a pro práci se ji snažíme nějak konkretizovat. Například zjednodušit, pokud máme informaci o charakteru materiálových vztahů (lineární/nelineární) a materiálu (homogenní/nehomogenní). Jiným zjednodušením je, pokud se zajímáme o stacionární stav, který se nastolí po dosažení rovnováhy.
-* Posláním široké škály příkladů různých specifikací rovnice kontinuity (vedení tepla, prouděni povrchové a podzemní vody a další) je, aby si student uvědomil široký záběr obecné formulace rovnice kontinuity. Na zkoušku se naučte obecnou rovnici a jenom informativně si přečtěte její specální případy. Obory pracující se dřevem (dřevařství, nábytek, dřevostavby) si uložte do paměti rovnice popisující modelování tepla a vlhkosti ve dřevě. Budou se vám hodit  ve studiu. Na krajinářství se zase zaměřte na modelování vody.
+* Posláním široké škály příkladů různých specifikací rovnice kontinuity (vedení tepla, proudění povrchové a podzemní vody a další) je, aby si student uvědomil široký záběr obecné formulace rovnice kontinuity. Na zkoušku se naučte obecnou rovnici a jenom informativně si přečtěte její speciální případy. Obory pracující se dřevem (dřevařství, nábytek, dřevostavby) si uložte do paměti rovnice popisující modelování tepla a vlhkosti ve dřevě. Budou se vám hodit  ve studiu. Na krajinářství se zase zaměřte na modelování vody.
 

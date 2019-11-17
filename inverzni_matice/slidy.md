@@ -490,7 +490,7 @@ $P^{-1}AP$ je diagonální.
 Častým úkolem je zapsat vztahy mezi veličinami tak, aby byly co
 nejjednodušší a proto jeden z častých úkolů v lineární algebře bývá
 takovou šikovnou bázi nalézt. Nastíníme neoptimističtější variantu
-postupu, připadné detaily a řešení zádrhelů je možné najít v odborné
+postupu, případné detaily a řešení zádrhelů je možné najít v odborné
 literatuře. Zpravidla vyjadřujeme zobrazení v bázi tvořené
 ortonormálními vlastními vektory matice $A$. Sloupce matice $P$ jsou
 vlastní vektory matice $A$. Pokud je matice $A$ symetrická, je matice
@@ -531,7 +531,7 @@ Následující poučka je fyzikálně ověřený fakt, že vztah mezi složkami
 tenzoru napětí a tenzoru deformace je lineární. To nás nepřekvapí,
 protože z přednášek o derivacích na začátku semestru víme, že
 **jakákoliv** funkční závislost se dá linearizovat. Podstatné zde však
-je, že interval, na kterém má linerizace smysl, není příliš malý,
+je, že interval, na kterém má linearizace smysl, není příliš malý,
 tj. že tato linearizace platí pro prakticky významné případy.
 
 > **Hookův zákon deformace (volná slovní formulace).** Do určité hranice zatížení je libovolná složka tenzoru deformace úměrná libovolné složce tenzoru napětí.
@@ -577,7 +577,7 @@ $\sigma_{23}$, $\sigma_{13}$ a $\sigma_{12}$ mají jenom jednu
 nenulovou složku.
 
 Pokud bychom použili k popisu obecnou soustavu souřadnic, nebylo by
-možné se na symetrii odvolávat. Matice $C$ by obsahovala včechny prvky
+možné se na symetrii odvolávat. Matice $C$ by obsahovala všechny prvky
 a bylo by nutné hledat bázi, v níž je její vyjádření nejjednodušší. U
 dřeva je však snadné rozpoznat význačné směry. Když soustavu souřadnic
 zvolíme tak, aby byla v souladu s těmito význačnými směry, docílíme

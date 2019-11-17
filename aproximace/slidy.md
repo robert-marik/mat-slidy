@@ -441,7 +441,7 @@ souřadnicemi, je nutno uvažovat dvě funkce (pro každou souřadnici
 jednu funkci) a každá funkce závisí na dvou proměnných (na obou
 souřadnicích). Popis, který si představíme, využijeme při popisu
 matematického namáhání při odvození veličin, na nichž je založen obecný
-Hookův zákon dávající do souvislosti deformaci materálu a působení
+Hookův zákon dávající do souvislosti deformaci materiálu a působení
 vnější síly.
 
 Lineární aproximaci funkce jedné proměnné můžeme zapsat ve tvaru

@@ -161,13 +161,13 @@ $$\vec v=(4,3)=2(2,1)+1(0,1)=2\vec \varepsilon_1+\vec \varepsilon_2$$
 a souřadnice vektoru $\vec v=(4,3)$ v nové bázi jsou $\begin{bmatrix} 2\\1 \end{bmatrix} _{\varepsilon_1,\varepsilon_2}$. Tady vidíme
 výhodu "pěkné volby" bázových vektorů.
 
-Aby použití souřadnic mělo smysl, musí existovat jediná možnost jak daný vektor vyjádřit pomocí lineární kombinace zadaných bázových vektorů. Tato úloha se dá redukovat na úlohu, zda taková jednozačnost existuje u nulového vektoru. Tím je motivována následující úvaha a z ní vyplývající definice.
+Aby použití souřadnic mělo smysl, musí existovat jediná možnost jak daný vektor vyjádřit pomocí lineární kombinace zadaných bázových vektorů. Tato úloha se dá redukovat na úlohu, zda taková jednoznačnost existuje u nulového vektoru. Tím je motivována následující úvaha a z ní vyplývající definice.
 
 Výsledkem triviální lineární kombinace, tj. lineární kombinace s
 nulovými koeficienty, je nulový vektor.  Pro některé vektory můžeme
 nulový vektor dostat i jako jinou lineární kombinaci, než je ta
 triviální. Ukazuje se, že je důležité identifikovat tyto případy a pro
-rozlišení toho, zda se nulový vektor dá nebo nedá vyádřit jako
+rozlišení toho, zda se nulový vektor dá nebo nedá vyjádřit jako
 netriviální lineární kombinace zavedeme nové pojmy, lineární závislost
 a nezávislost.
 
@@ -250,7 +250,7 @@ například historií předchozích stavů. Aplikace zahrnují například
 modelování vegetace na stanovištích (zájmová oblast je rozdělena na
 stanoviště a ke každému stanovišti je přiřazen převažující typ
 vegetace), pro modelování změn druhového složení v lese nebo v
-krajině, ale i v hydrologickych modelech, předpovědi počasí a
+krajině, ale i v hydrologických modelech, předpovědi počasí a
 jinde. Základní model má řadu rozšíření a ukážeme si jej jen v
 nejjednodušší formě a na případě dvou stavů.
 
@@ -420,9 +420,9 @@ přestěhovaných opačným směrem. Tento stacionární stav se dá najít opak
 
 Takový rekurentní vzorec je možno chápat jako jakýsi stavový automat,
 který řídí přepínání mezi dvěma stavy (obyvatel města, obyvatel
-vesnice). V matematice se nazývá *Markovův řetězec*. Protože unitř
+vesnice). V matematice se nazývá *Markovův řetězec*. Protože uvnitř
 matice jsou pravděpodobnosti a v každém sloupci vždy nastane právě
-jeden z jevů, který tyto pravděpodobonosti reprezentují, je součet
+jeden z jevů, který tyto pravděpodobnosti reprezentují, je součet
 čísel v každém sloupci matice roven jedné. V obecných stavových
 modelech, kde se nepracuje s pravděpodobností, jako je například
 Leslieho model růstu populace níže, tato podmínka platit nemusí.
@@ -563,7 +563,7 @@ Tuto matici budeme potřebovat při studiu deformace při odvození matematické
 
 Matice chápejme jako zobrazení, které má na vstupu vektor a na výstupu opět vektor. Vstupem bývá většinou podnět, kde rozhodující je nejenom síla podnětu, ale i jeho směr. Například nerovnováha tlaku. Výstupem bývá odezva, například proudění vyvolané nerovnováhou tlaku. Tato odezva v izotropním prostředí má směr podnětu, v prostředí s určitou strukturou by se však směr odezvy mohl odchýlit. 
 
-Užitečnost maticového součinu v materiálovém inženýrství si můžeme znázornit na proudění vody po povrchu země. Voda teče z kopce dolů, tento směr však můžeme ovlinit vyoráním brázd. Hnací síla je gravitace, která směřuje z kopce dolů. Odezvou na gravitaci je tok vody, který směřuje velkou rychlostí dolů, pokud je pooráno po spádnici, malou rychlostí dolů, pokud je pooráno po vrstevnici a pokud je pooráno našikmo, tak něco mezi směrem dolů a směrem brázdy. V materiálu se může odehrávat totéž. 
+Užitečnost maticového součinu v materiálovém inženýrství si můžeme znázornit na proudění vody po povrchu země. Voda teče z kopce dolů, tento směr však můžeme ovlivnit vyoráním brázd. Hnací síla je gravitace, která směřuje z kopce dolů. Odezvou na gravitaci je tok vody, který směřuje velkou rychlostí dolů, pokud je pooráno po spádnici, malou rychlostí dolů, pokud je pooráno po vrstevnici a pokud je pooráno našikmo, tak něco mezi směrem dolů a směrem brázdy. V materiálu se může odehrávat totéž. 
 
 Výše popsané chování pozorujeme i u proudění podzemní vody, kde hnací silou kromě hladiny podzemní vody může být tlak, nebo u proudění vody ve dřevě, kde hnací silou definující pojem "z kopce dolů" je nerovnoměrnost v rozložení koncentrace vody ve dřevě (jedna část dřeva má větší vlhkost než jiná část) nebo  nerovnoměrnost v teplotě (termodifuze, Sorettův efekt, transport vlhkosti vyvolaný rozdílem teplot). Výsledné proudění však nemusí přesně sledovat pokles koncentrace vlhkosti. Například dřevo vede podélně vlhkost zpravidla více než desetkrát lépe než v jiných směrech a chová se tedy, jako by v něm byly brázdy odklánějící vodu do podélného směru.
 

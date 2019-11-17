@@ -18,7 +18,7 @@ různými hloubkami a podobně.
 
 V následujícím textu rozvineme některé poznatky o integrálu, odvodíme
 si některé pokročilejší metody pro výpočet, ukážeme si, že každá
-spojitá funkce má primitivní funkcni a také otevřeme cestu k
+spojitá funkce má primitivní funkci a také otevřeme cestu k
 definování funkcí, které nejsou elementární.
 
 # Vlastnosti integrálu
@@ -164,7 +164,7 @@ shrnut v několika následujících bodech.
   možné například použít funkční hodnotu v dolní mezi a tím dostaneme
   dolní odhad pro výsledný integrál.
 
-**Příklad.** Zahradnická firma vytáhla pařez a maloktraktorem jej
+**Příklad.** Zahradnická firma vytáhla pařez a malotraktorem jej
 odtáhla o 20 metrů bokem. Vzhledem k nepravidelnému tvaru a tažení po
 různých druzích povrchu po cestě se síla měnila. Pracovníkovi se
 podařilo odhadnout sílu během pohybu. Závislost síly na dráze
@@ -584,5 +584,5 @@ soustavou proplouvaly celý den.
 \fi
 
 * Naučili jsme se některé triky pro integrály: určitý integrál se dá numericky aproximovat a neurčitý integrál se dá převést metodou per-partés nebo substitucí na jiný integrál, v optimálním případě na integrál vhodný pro aplikaci vzorců.
-* Integrál, resp. střední hodnota funkce,  slouží jako náhrada aritmetického průměru v situacích, kdy počítáme průměr z někonečně mnoha veličin a vzorec pro klaiský aritmetický průměr selhává.
+* Integrál, resp. střední hodnota funkce,  slouží jako náhrada aritmetického průměru v situacích, kdy počítáme průměr z nekonečně mnoha veličin a vzorec pro klasický aritmetický průměr selhává.
 * Integrál je také nástrojem, který nás dokáže vymanit ze světa elementárních funkcí a můžeme pomocí tohoto integrálu definovat funkce, které nejsou elementární. Základním prostředkem je integrál jako funkce horní meze. Toto se využívá například ve statistice. Vedlejším produktem je věta zaručující existenci primitivní funkce pro libovolnou spojitou funkci.

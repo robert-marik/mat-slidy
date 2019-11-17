@@ -47,13 +47,13 @@
 * Derivace umožní detekovat monotonii.
 * Derivace umožní kvantitativně pracovat s rychlostí změny a tím umožní lineární
   aproximaci. Ta se uplatní při přibližných výpočtech (odvození
-  Newtonovy věty, u paricálních derivací odvození tenzoru malých
+  Newtonovy věty, u parciálních derivací odvození tenzoru malých
   deformací a odvození vzorce pro divergenci vektorového pole).
 * Derivace umožní formulovat modely založené na rychlostech, kdy
   rychlost měnící se veličiny souvisí s velikostí této nebo jiné 
   veličiny. Většina fyzikálních zákonů je v tomto
   tvaru. (Např. Newtonův zákon ochlazování, rychlost s jakou se mění
-  teplota tělesa při tepelené výměně je úměrná rozdílu teplot.)
+  teplota tělesa při tepelné výměně je úměrná rozdílu teplot.)
 * Vzorec pro derivaci složené funkce se používá i v případě, že jsou
   dvě veličiny svázány vzorcem, jedna veličina se mění zadanou
   rychlostí a snažíme se identifikovat, jakou rychlostí se mění
@@ -88,8 +88,9 @@ Fourierův zákon, Darcyho zákon.
 * Definice: Divergence vektorového pole je celková bilance toku z
   daného místa přes hranici myšlené (nekonečně malé) množiny, dělená
   mírou (objemem ve 3D nebo plochou ve 2D) této množiny.
-* Rovice kontinuity je vyjádření říkající, že rychlost změny stavové
-  veličiny v daném místě je dána vzdatností zdrojů v tomto místě
+* V 1D je divergence parciální derivace jednorozměrného toku podle prostorové proměnné. Odpovídá to tomu, že při proudění jedním směrem (představme si nataženou hadici) nemusí v jiném průřezu být stejný průtok. 
+* Rovnice kontinuity je vyjádření říkající, že rychlost změny stavové
+  veličiny v daném místě je dána vydatností zdrojů v tomto místě
   zmenšené o tok z daného místa.
 * K rovnici kontinuity často přidáváme konstituční zákon. Většinou má
   roli vztahu vyjadřujícího, že intenzita toku je záporně vzatý
@@ -138,7 +139,7 @@ jako určitý integrál síly.
 
 Pro spojité funkce vychází stejně jako Newtonův integrál a takto se
 většinou i počítá, ale je možné jej i aproximovat numericky
-(lichoběžnákové pravidlo).
+(lichoběžníkové pravidlo).
 
 ## Dvojný integrál
 
@@ -188,7 +189,7 @@ množinou.
 * Definice: $A A^{-1}=A^{-1}A=I$
 * Existuje pouze pokud je determinant matice $A$ nenulový.
 * Inverzní matice se používá při studiu soustav lineárních rovnic. Teoreticky je řešením soustavy lineárních rovnic $AX=B$ vektor $X=A^{-1}B$. V praxi je výpočet inverzní matice nestabilní a používáme inverzi jenom k jednodušším maticím (Jacobiho metoda používá inverzi k diagonální matici, Gaussova-Seidelova inverzi k trojúhelníkové matici, ale obě metody jsou iterační)
-* Maticový součin se používá pro vyjádření transformace souřadnic, inverzní matice je potom nástroj pro cestu zpět k původním souřadnicícm. Je-li přechod mezi souřadnicemi $X$ a $X'$ dán vztahem $X=AX'$, v opačném směru platí $X'=A^{-1}X$.
+* Maticový součin se používá pro vyjádření transformace souřadnic, inverzní matice je potom nástroj pro cestu zpět k původním souřadnicím. Je-li přechod mezi souřadnicemi $X$ a $X'$ dán vztahem $X=AX'$, v opačném směru platí $X'=A^{-1}X$.
 * Inverzní matice se používá pro vyjádření fyzikálních zákonů v soustavách souřadnic, které vzniknou pootočením původních souřadnic. Je-li fyzikální zákon (Hookův, Fickův, ...) mezi vektory ve tvaru $Y=AX$ a přechod do čárkovaných souřadnic je umožněn rovnicemi $Y=PY'$, $X=PX'$, je $Y'=P^{-1}AP X'$ a $P^{-1}AP$ je vyjádření tenzoru $A$ v čárkovaných souřadnicích. Používá se zejména při otočení souřadnic.
 
 # Determinant

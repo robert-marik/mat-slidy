@@ -1,5 +1,6 @@
 \nonstopmode
 \documentclass[twocolumn,$if(fontsize)$$fontsize$,$endif$$if(lang)$$babel-lang$,$endif$$if(papersize)$$papersize$paper,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{$documentclass$}
+\usepackage{xcolor}
 $if(beamerarticle)$
 \usepackage{beamerarticle} % needs to be loaded first
 $endif$
@@ -10,6 +11,7 @@ $else$
 $endif$
 
 \usepackage[margin=1cm, bottom=1in, top=1in]{geometry}\everymath{\displaystyle}
+\usepackage[innerleftmargin=3pt, innerrightmargin=3pt, leftline=false, rightline=false, skipabove=0pt, skipbelow=0pt, linewidth = 1pt]{mdframed}
 
 $if(linestretch)$
 \usepackage{setspace}
@@ -213,15 +215,22 @@ $endif$
 
 \let\oldcaption\caption
 \def\caption#1{{\oldcaption{\footnotesize \itshape  #1}}}
-\renewenvironment{quote}{\par\medskip\zahlavi}{\par\medskip}
+\renewenvironment{quote}{\par\medskip\zahlavi}{\konec}
 \def\pismenoV{V}
 \def\pismenoD{D}
 \def\pismenoE{e}
 \def\uloztoken#1#2#3;;;;{\def\ulozene{#1}\def\ulozeneB{#2}}
-\def\zahlavi #1.{\uloztoken #1;;;;\noindent\textbf{\ignorespaces #1.}
-\ifx\ulozene\pismenoD\ifx\ulozeneB\pismenoE\else\let\ulozene\pismenoV\fi\fi
-\ifx\ulozene\pismenoV\itshape\fi}
+\def\zahlavi #1.{\uloztoken #1;;;;\noindent%
+\def\konec{\par\bigskip}
+\ifx\ulozene\pismenoD\ifx\ulozeneB\pismenoE\begin{mdframed}[linecolor=blue, innerrightmargin=0pt, innerleftmargin=0pt]\def\konec{\end{mdframed}}\else\let\ulozene\pismenoV\fi\fi
+\ifx\ulozene\pismenoV\itshape\begin{mdframed}[linecolor=gray,backgroundcolor=yellow]\def\konec{\end{mdframed}}\fi
+\textbf{\upshape \ignorespaces #1.}
+}
+
+\rightskip 0 pt plus 1 em
+
 \def\dm\[#1\]{\begin{dmath*} #1\end{dmath*}}
+
 
 $for(header-includes)$
 $header-includes$

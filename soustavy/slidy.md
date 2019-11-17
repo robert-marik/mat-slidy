@@ -533,7 +533,7 @@ $$
 $$
 To znamená, že lokální extrémy diagonálních prvků nastávají v
 okamžiku, kdy jsou prvky mimo diagonálu nulové. Toto pozorování
-pefektně ladí s výsledky, které známe v lineární algebře i bez hledání
+perfektně ladí s výsledky, které známe v lineární algebře i bez hledání
 lokálních extrémů a bez derivací. Náznak tohoto konceptu si představíme na dalších
 stránkách. Budeme potřebovat připomenout definici vlastních
 vektorů.

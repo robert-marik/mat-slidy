@@ -275,7 +275,7 @@ sílu. Ovšem jenom v extrémně pěkných případech.
 
 * Dráha rovnoměrného pohybu je určena vzorcem $$s=vt.\tag{1}$$ Tento
   vzorec není použitelný pro pohyb proměnnou rychlostí. Z kapitoly o
-  neurčitém interálu víme, že obecný vzorec je $$s=\int v\,\mathrm
+  neurčitém integrálu víme, že obecný vzorec je $$s=\int v\,\mathrm
   dt.\tag{2}$$ Pokud je $v$ konstantní, vzorec (1) je důsledkem vzorce
   (2).
 * Hydrostatická tlaková síla $F$ působící ve vodě v hloubce $h$ na
@@ -336,7 +336,7 @@ konstantní funkci.
 
 Prostředky matematické analýzy je možné "zjemňovat dělení do
 nekonečna", přesněji, můžeme použít limitní přechod podobný limitnímu
-předchodu, který v definici derivace převedl podíl (průměrnou
+přechodu, který v definici derivace převedl podíl (průměrnou
 rychlost) na derivaci (okamžitou rychlost). Díky tomu není nutné se
 omezovat na po částech konstantní funkce, ale postup bude fungovat i
 pro velmi obecné funkce. Výsledným produktem je Riemannův
@@ -620,5 +620,5 @@ integrálem, ale závisí na poloze tyče vzhledem k ose otáčení.
 
 * Někdy máme zadánu rychlost, s jakou se mění veličina a potřebujeme znát funkční předpis pro tuto veličinu, tj. hodnotu v libovolném čase.  To je úloha inverzní k derivaci a řeší ji neurčitý integrál.
 * Při zadané rychlosti změny není možné bez zadání výchozího stavu určit hodnotu veličiny, která se mění. Je možné vypočítat jenom změnu této veličiny za určitý časový úsek (Newtonův určitý integrál) anebo je řešení dáno až na počáteční stav vyjádřený integrační konstantou v neurčitém integrálu.
-* Někdy potřebujeme veličinu, která nás zajímá, najít posečítáním nekonečně mnoha příspěvků. Toto je v situaci, kdy se "za běhu" mění parametry úlohy, například se během pohybu mění rychlost pohybu. V tomto případě používáme Riemannův určitý integrál, který je definovaný jinak než Newtonův, ale v prakticky zajímavých úlohách se počítá stejně.
+* Někdy potřebujeme veličinu, která nás zajímá, najít posčítáním nekonečně mnoha příspěvků. Toto je v situaci, kdy se "za běhu" mění parametry úlohy, například se během pohybu mění rychlost pohybu. V tomto případě používáme Riemannův určitý integrál, který je definovaný jinak než Newtonův, ale v prakticky zajímavých úlohách se počítá stejně.
 * Další aplikací procesu opačného k derivování je úloha, kdy jsou vlastnosti křivky popsány pomocí derivace a hledáme rovnici pro tuto křivku. Příkladem jsou úlohy ve stavitelství a studiu materiálu (ohybová čára nosníku).

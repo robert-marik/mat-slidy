@@ -543,7 +543,7 @@ se budou řešení chovat.
     * Pro $k<0$ je funkce (♣♣) na intervalu $[0,\infty)$
     blíží k nule. Ať je počáteční podmínka libovolná, všechna řešení se
     v čase blíží k nule. Jakákoliv
-    odchylka od rovnovážného stavu neohraničeně časem vymízí. Nulové
+    odchylka od rovnovážného stavu neohraničeně časem vymizí. Nulové
     řešení je stabilní.
 
 Vyzbrojeni předchozími speciálními případy budeme sledovat řešení
@@ -605,7 +605,7 @@ $x(t)$. Naším úkolem je zjistit, jak se $x(t)$ mění s\ rostoucím $t$.
 
 Předpokládejme, že
 
-* první vůz jede konstatní rychlostí (není dopravní špička)
+* první vůz jede konstantní rychlostí (není dopravní špička)
 * pokud žádní pasažéři nečekají na druhý vůz, druhý vůz se
   pohybuje rychleji než první vůz a oba vozy se "sjedou", tj. $x(t)$
   klesá, pokud na druhý vůz nečekají žádní pasažéři
@@ -679,7 +679,7 @@ $$
 \int_{y_0}^y \frac{\mathrm{d}t}{g(t)}=\int_{x_0}^x f(t)\mathrm{d}t.
 $$
 
-Počáteční úloha má jediné řešení, pokud má pravá strana ohraničenou pariální derivace podle $y$, jak je zmíněno v úvodu přednášky. Nicméně pro diferenciální rovnici se separovanými proměnnými je možné vyslovit následující mnohem jednodušší postačující podmínku pro jednoznačnost řešení.
+Počáteční úloha má jediné řešení, pokud má pravá strana ohraničenou parciální derivace podle $y$, jak je zmíněno v úvodu přednášky. Nicméně pro diferenciální rovnici se separovanými proměnnými je možné vyslovit následující mnohem jednodušší postačující podmínku pro jednoznačnost řešení.
 
 > Věta (existence a jednoznačnost řešení Cauchyovy úlohy pro rovnici se separovanými proměnnými). Je-li $g(y_0)\neq 0$, má počáteční úloha $$y'=f(x)g(y),\qquad y(x_0)=y_0$$ právě jedno řešení definované v nějakém okolí počáteční podmínky.
 
@@ -722,7 +722,7 @@ konstantní nulové řešení $$V(t)=0$$ a nenulové řešení
 $$V(t)=(k_0t)^3.$$ Máme zde tedy nejednoznačnost v řešení počáteční
 úlohy. Tato nejednoznačnost není v rozporu s\ větou o existenci a
 jednoznačnosti řešení, protože pravá strana je nulová (podmínka pro
-separovatelnou rovnici není splněna) a nemá ohraničnou derivaci podle
+separovatelnou rovnici není splněna) a nemá ohraničenou derivaci podle
 $V$ (podmínka pro obecnou rovnici také není splněna). A\
 nejednoznačnost má v tomto případě dokonce fyzikální význam. Plynné
 skupenství může existovat i\ pod bodem kondenzace. Takovému jevu se
@@ -877,7 +877,7 @@ též A. Požgaj, Štruktúra a vlastnosti dreva str. 359.
 
 \fi
 
-* Aplikované vědy (fyzika, biologie, nauka o materiálu, hydrologie) přirozeně formulují své zákony a poznatky mimo jiné i kvantitavině a pomocí pojmů vyjadřujících rychlsti změn. Při přepisu těchto zákonitostí do matematických modelů používáme derivaci jako rychlost růstu (případně záporně vzatou derivaci, jako rychlost poklesu). 
+* Aplikované vědy (fyzika, biologie, nauka o materiálu, hydrologie) přirozeně formulují své zákony a poznatky mimo jiné i kvantitativně a pomocí pojmů vyjadřujících rychlosti změn. Při přepisu těchto zákonitostí do matematických modelů používáme derivaci jako rychlost růstu (případně záporně vzatou derivaci, jako rychlost poklesu). 
 * Pokud známým způsobem souvisí změna veličiny popisující stav systému s velikostí této veličiny, je příslušným matematickým modelem diferenciální rovnice. S tímto jsme se setkali již mnohokrát ve cvičení během semestru.
-* Naučili jsme se základní diferenciální rovnice řešit analyticky, řekli jsme si, že se dají řešit numericky (v praxi využijmeme předpřipravené procedury a proto se touto problematikou nemusíme zabývat do hloubky) a naučili jsme se i rovnice transformovat do jiných proměnných, které mohou být pro studium problému přínosnější, než původní veličiny.
+* Naučili jsme se základní diferenciální rovnice řešit analyticky, řekli jsme si, že se dají řešit numericky (v praxi využijeme předpřipravené procedury a proto se touto problematikou nemusíme zabývat do hloubky) a naučili jsme se i rovnice transformovat do jiných proměnných, které mohou být pro studium problému přínosnější, než původní veličiny.
 

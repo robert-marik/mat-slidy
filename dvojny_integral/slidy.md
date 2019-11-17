@@ -128,7 +128,7 @@ $$ \iint_\Omega f(x,y)\mathrm{d}S.$$
 Dvojný integrál je odvozen (tak jako všechny integrály) pro aditivní
 veličiny a proto se "dobře snáší" se sčítáním (ať už integrovaných
 funkcí, nebo integračních oborů) a s násobení integrované funkce
-konstantnou. Přesněji, platí následující věty.
+konstantou. Přesněji, platí následující věty.
 
 > Věta (linearita dvojného integrálu).   Buď $f_1$, $f_2$ funkce integrovatelné v $\Omega$ a $c_1$, $c_2$   libovolná reálná čísla. Platí
 \dm$$     \iint_{\Omega} \bigl[c_1f_1(x,y)+c_2f_2(x,y)\bigr]\mathrm dx\mathrm dy     =     c_1\iint_{\Omega} f_1(x,y)\mathrm dx\mathrm dy+     c_2\iint_{\Omega} f_2(x,y)\mathrm dx\mathrm dy $$
@@ -143,7 +143,7 @@ konstantnou. Přesněji, platí následující věty.
 V\ závislosti na tom, jakými nerovnostmi množinu $\Omega$ definujeme,
 můžeme pro výpočet dvojného integrálu použít následující věty. Tyto
 věty udávají, jak je možno dvojný integrál přepsat jako dva iterované
-integály funkce jedné proměnné, tzv. dvojnásobný integrál. Mají název
+integrály funkce jedné proměnné, tzv. dvojnásobný integrál. Mají název
 **Fubiniovy věty**.
 
 
@@ -412,7 +412,7 @@ tedy *váženým průměrem* těžišť jednotlivých složek, kde váha každé
 složky je určena její hmotností. Protože se jedná o vážený průměr,
 tj. vlastně o lineární kombinaci bodů, kdy součet koeficientů je roven
 jedné, okamžitě vidíme, že těžiště složeného obrazce je na úsečce mezi
-těžištmi jednotlivých částí.
+těžišťmi jednotlivých částí.
 
 Zobecnění výše uvedených myšlenek na množinu rozdělenou na více částí
 je již snadné.
@@ -424,7 +424,7 @@ Nechť je dána množina $M$ s plošnou hustotou $\sigma(x,y)$. *Ukážeme,
 že vzhledem k ose procházející těžištěm je nejmenší moment
 setrvačnosti.* Ukážeme si dále, že pomocí momentu setrvačnosti
 vzhledem k ose procházející těžištěm je možné vyjádřit momenty
-setrvačnosti i k libovolným rovnoběžným osám. Pro jednotkovou pološnou
+setrvačnosti i k libovolným rovnoběžným osám. Pro jednotkovou plošnou
 hustotu dostáváme jako speciální případ vzorce pro kvadratický moment,
 důležité ve statice.
 
