@@ -589,7 +589,7 @@ pozitivní odpověď na tuto otázku udávají věty na následujícím slidu.
 
 <div class='obtekat'>
 
-![Popis pomocí diagonálních matic dokáže odfiltrovat některé nepříjemné jevy spojené s anizotropií. Prvky v diagonále jsou poté vpravdě třešinky na dortu ... Zdroj: pixabay.cpom. ](diagonal.jpg)
+![Pokud je tenzor spojený s materiálovou chrakteristikou v diagonálním tvaru, redukuje se složitost problému. Podobná redukce složitosti je i při jiných příležotostech, například při skládání Rubikovy kostky pomocí metody [Human Thistlethwaite Algorithm](https://www.speedsolving.com/wiki/index.php/Human_Thistlethwaite_Algorithm). V této metodě se úloha nejprve redukuje na jednodušší úlohu, kdy každá barva je buď ve svojí straně nebo protilehlé. Tak je možné složit kostku buď bez nepříjemného učení se umělých algoritmů (člověk), nebo do 20 tahů (stroj a nejlepší lidé).](rubik.svg)
 
 </div>
 
