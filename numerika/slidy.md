@@ -24,7 +24,8 @@ krokem se přibližně zdvojnásobí počet míst, která máme správně.
 
 Z\ lineární aproximace funkce $f$ v bodě $a$
 $$f(x)\approx f(a)+f'(a)(x-a)$$
-pro $a=x_n$, $x=x_{n+1}$, $f(x_{n+1})=0$ dostáváme iterační vzorec
+pro $a=x_n$, $x=x_{n+1}$, $f(x_{n+1})=0$ dostáváme
+$$0=f(x_n)+f'(x_n)(x_{n+1}-x_n)$$ a po osamostatnění $x_{n+1}$ přímo iterační vzorec
 $$x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)}.$$
 
 **Příklad.**
