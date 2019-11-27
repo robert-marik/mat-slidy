@@ -62,7 +62,7 @@ Rovnice vedení tepla v jedné dimenzi (prostup tepla stěnou, vedení
 tepla tyčí) má tvar (viz minulá přednáška) $$\rho c \frac{\partial T}{\partial
 t}=D\frac{\partial ^2 T}{\partial x^2},$$ kde $T(x,t)$ je teplota v
 místě $x$ a čase $t$, $\rho$ je hustota, $c$ je měrná tepelná
-kapacita, $D$ je difuzní koeficient. Pro úplnou formulaci úlohy na
+kapacita, $D$ je teplotní vodivost. Pro úplnou formulaci úlohy na
 nalezení teploty v jednotlivých místech stěny musíme zadat polohu
 stěny, teplotu na vnějším a vnitřním okraji stěny a počáteční
 rozložení teploty ve stěně. Nechť tedy okraje jsou $x=0$ a $x=L$, a

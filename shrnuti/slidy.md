@@ -19,10 +19,10 @@
 ## Rostoucí funkce
 
 * Definice: Rostoucí funkce  zachovává uspořádání vzorů i pro funkční hodnoty.
-* Můžeme je detekovat pomocí znaménka derivace.
+* Rostoucí funkční můžeme detekovat pomocí znaménka derivace.
 * Podobně je definována klesající funkce. U spojitých funkcí změna
   růstu na klesání nebo naopak signalizuje lokální extrém.
-* Umožní modifikovat úlohu na lokální extrémy. Například úloha s nosníkem maximální tuhosti: úloha $x^3\sqrt{1-x^2}\to\max$ je na intervalu $x\in (0,\infty)$
+* Monotonie umožní modifikovat úlohu na lokální extrémy. Například úloha s nosníkem maximální tuhosti: úloha $x^3\sqrt{1-x^2}\to\max$ je na intervalu $x\in (0,\infty)$
   ekvivalentní mnohem jednodušší úloze pro druhou mocninu funkce,
   tj. $x^6(1-x^2)\to\max$.
 
