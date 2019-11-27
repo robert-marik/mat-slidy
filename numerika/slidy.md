@@ -108,8 +108,8 @@ veličina se nazývá Fourierovo číslo. Obdobným postupem získáme jiná
 čísla důležitá pro popis jiných procesů, jako jsou Biotovo číslo
 (vedení tepla), Reynoldsovo číslo (proudění tekutin), Froudeho číslo
 (proudění tekutin) apod. Podobná nondimenzionalizace pro vlhkostní
-pole ve dřevě je ve skriptu Horáček P., Fyzikální a mechanické
-vlastnosti dřeva.
+pole ve dřevě je v publikaci Horáček P., Fyzikální a mechanické
+vlastnosti dřeva. Viz též [eopora](https://is.mendelu.cz/eknihovna/opory/zobraz_cast.pl?cast=9180), rovnice (144) a rovnice následující.
 
 
 # Metoda konečných diferencí
@@ -136,12 +136,7 @@ $$\begin{aligned}
 \end{aligned}
 $$
 a odsud
-$$
-\frac {\partial ^2 f}{\partial x^2}
-+ \frac {\partial ^2 f}{\partial y^2}
-\approx
-\frac{1}{h^2}[f(x+h,y)+f(x-h,y)+f(x,y+h)+f(x,y-h)-4f(x,y)].
-$$
+\dm$$ \frac {\partial ^2 f}{\partial x^2} + \frac {\partial ^2 f}{\partial y^2} \approx \frac{1}{h^2}[f(x+h,y)+f(x-h,y)+f(x,y+h)+f(x,y-h)-4f(x,y)]. $$
 Z rovnice $$\frac {\partial ^2 f}{\partial x^2}
 + \frac {\partial ^2 f}{\partial y^2}
 =0,$$
