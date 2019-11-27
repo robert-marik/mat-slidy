@@ -5,7 +5,7 @@
 # Newtonova metoda
 
 Newtonova metoda (též Newtonova Raphsonova metoda) je metoda pro
-numerické řešeí rovnic. to používáme v případě, že není možné (nebo
+numerické řešení rovnic. To používáme v případě, že není možné (nebo
 není účelné) řešit rovnici přesně a snažíme se najít přibližné
 řešení.
 
