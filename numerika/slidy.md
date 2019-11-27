@@ -22,11 +22,14 @@ konverguje ke kořeni studované rovnice a to velmi rychle: každým
 krokem se přibližně zdvojnásobí počet míst, která máme správně.
 
 
-Z\ lineární aproximace funkce $f$ v bodě $a$
-$$f(x)\approx f(a)+f'(a)(x-a)$$
-pro $a=x_n$, $x=x_{n+1}$, $f(x_{n+1})=0$ dostáváme
-$$0=f(x_n)+f'(x_n)(x_{n+1}-x_n)$$ a po osamostatnění $x_{n+1}$ přímo iterační vzorec
-$$x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)}.$$
+Z\ lineární aproximace funkce $f$ v bodě $a$ $$f(x)\approx
+f(a)+f'(a)(x-a)$$ pro $a=x_n$, $x=x_{n+1}$, $f(x_{n+1})=0$ dostáváme
+$$0=f(x_n)+f'(x_n)(x_{n+1}-x_n)$$ a po osamostatnění $x_{n+1}$ přímo
+iterační vzorec $$x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)}.$$ Tento vzorec
+používáme opakovaně až do dosažení požadované přesnosti. Obvyklým
+testem pro ukončení výpočtu je porovnání dvou po sobě jdoucích
+iterací. Pokud se v rámci požadované přesnosti shodují, výpočet končí
+a známe přibližné řešení zadané rovnice.
 
 **Příklad.**
 Zkusme najít číslo takové, jehož kosinus je stejný jako toto číslo. 
