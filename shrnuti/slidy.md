@@ -160,7 +160,7 @@ množinou.
   matice, Markovovy řetězce).
 * Umožňuje efektivně zapsat soustavu lineárních rovnic.
 * Umožňuje přecházet k jiným souřadnicovým systémům, např. umožňuje
-  pootočení soustavy souřadnic.
+  pootočení soustavy souřadnic. To se dělá zejména v případě, že v jiné soustavě je formulace problému jednodušší, například je systém charakterizován diagonální maticí, namísto symetrické matice. O jednoduchosti diagonálních matic viz níže.
 
 # Vlastní číslo a vlastní vektor matice
 
@@ -211,7 +211,15 @@ množinou.
 * Ve vektorové podobě jde o vyjádření zadaného vektoru jako lineární
   kombinace jiných zadaných vektorů. Tedy například rozklad vektoru do
   daných směrů.
+  
 
+# Diagonální matice
+
+* Součin matice $A$ s diagonální maticí $D$ je snadné, protože v součinem $AD$ je matice, která má sloupce tvořené násobky sloupců matice $A$.
+* Determinant diagonální matice je součin prvků v diagonále. 
+* Vlastní čísla diagonální matice jsou právě čísla v diagonále. Příslušné vlastní vektory jsou jednotkové vektory se směru jednotlivých os.
+* Po transformaci symetrické matice do soustavy souřadnic ve které osy míří do vlastních směrů je výsledná matice diagonální a proto má všechny pěkné vlastnosti uvedené v předchozích bodech.
+* Soustava lineárních rovnic s diagonální maticí je triviální. Stejně tak nalezení inverzní matice je triviální záležistost. Toho můžeme využít i v případě, že soustava nemá diagonální matici, ale matici, která je k diagonální matici jenom v jistém smyslu blízká. Tovo využívají základní iterační metody pro řešení soustav, zejména Jacobiho metoda.
 
 # Věty z diferenciálního počtu
 

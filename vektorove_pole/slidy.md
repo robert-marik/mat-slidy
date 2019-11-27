@@ -142,7 +142,7 @@ Difuzí se například dřevo zbavuje vlhkosti při vysoušení.
 V letech 1855 a 1856 francouzský inženýr H. Darcy pokusy prokázal
 přímou úměru mezi rozdílem tlaků na koncích
 trubice naplněné porézní zeminou (jednalo se vlastně o rozdíl výšek
-pro šikmou trubici) a rychlost proudění vody touto trubicí. Tok
+pro šikmou trubici) a rychlostí proudění vody touto trubicí. Tok
 (množství vody, která proteče jednotkovou plochou za jednotku času) je
 dán vztahem $$\vec q=-K\nabla p,$$ kde $p$ je tlak a $K$ je koeficient
 vodivosti (někdy též koeficient filtrace), v obecném případě
@@ -210,7 +210,7 @@ $$
 jejíž komponenty splňují $k_{ij}=k_{ji}$. Často jsou všechny
 veličiny kladné a prvky v hlavní diagonále jsou dominantní.
 
-Komponenty vektoru $\vec j=(j_x, j_y, j_z)$ jsou
+Komponenty vektoru $\vec j=(j_x, j_y, j_z)^T$ jsou
 $$
 \begin{aligned}
   j_x&=-k_{11}\frac{\partial \varphi}{\partial x}-k_{12}\frac{\partial \varphi}{\partial y}-k_{13}\frac{\partial \varphi}{\partial z},\\

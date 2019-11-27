@@ -579,7 +579,7 @@ pozitivní odpověď na tuto otázku udávají věty na následujícím slidu.
 > Symetrická čtvercová matice $A$  řádu $n$ má $n$ reálných vlastních čísel (počítáno i s případnou násobností).
 
 > Věta (diagonalizace symetrické matice).
-> Nechť má symetrická čtvercová matice $A$ řádu $n$ celkem $n$ reálných různých vlastních čísel $\lambda_i$. Označme odpovídajícé vlastní vektory jednotkové délky $\vec v_i$.
+> Nechť má symetrická čtvercová matice $A$ řádu $n$ celkem $n$ reálných různých vlastních čísel $\lambda_i$. Označme odpovídající vlastní vektory jednotkové délky $\vec v_i$.
 >
 >* Matice $P$ sestavená tak, že sloupce této matice jsou tvořeny vektory $\vec v_i$ je ortogonální.
 >* Matice $D$ definovaná vztahem $$D=P^TAP$$ je diagonální.
