@@ -117,7 +117,7 @@ vlastnosti dřeva. Viz též [eopora](https://is.mendelu.cz/eknihovna/opory/zobr
 Vraťme se s aparátem matematického popis vedení tepla k úloze hledání
 rozložení teploty na čtvercové desce, kterou jsme představili v
 přednášce o lineární algebře: Je dána deska čtvervého tvaru, jejíž okraje udržujeme na konstatních teplotách (každý okraj obecně na jiné teplotě) a hledáme rovnovéžné rozložení teploty. Dvourozměrná rovnice vedení tepla pro homogenní izotropní desku s materiálovými charakteristikami $\rho$, $c$ a $D$ má tvar
-$$\rho x \frac{\partial T}{\partial t}=D\frac{\partial^2 T}{\partial x^2}+D\frac{\partial^2 T}{\partial y^2}.$$
+$$\rho c \frac{\partial T}{\partial t}=D\frac{\partial^2 T}{\partial x^2}+D\frac{\partial^2 T}{\partial y^2}.$$
 Ve stacionárním stavu se teplota nemění s časem a proto je levá strana nulová a rovnice se redukuje na
 $$\frac{\partial^2 T}{\partial x^2}+\frac{\partial^2 T}{\partial y^2}=0.$$
 
