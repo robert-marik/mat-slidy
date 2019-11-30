@@ -40,6 +40,19 @@ matic, ke kterým inverzní matice existuje, pomocí determinantu matice.
 Inverzní matice k součinu dvou matic je součinem jednotlivých inverzních matic, ale v opačném pořadí, tj. $$(AB)^{-1}=B^{-1}A^{-1}.$$
 
 
+\iffalse
+
+<div class='obtekat'>
+
+![Klasickým permutačním hlavolamem je Rubikova kostka. Na něm si můžeme vyzkoušet některé vlastnoti maticového součinu jako nekomutativita nebo nutnost změny pořadí při invertování maticového součinu. Zdroj: congerdesign, pixabay.com.](rubik.jpg)
+
+</div>
+
+\fi
+
+
+**Příklad.** Pomocí matic a jejich součinu je možné zapsat libovolnou permutaci konečněprvkové množiny. Známým permutačním hlavolamem je Rubikova kostka. Na ní snadno vidíme, že pokud kostku zamícháme ze složeného stavu tahem v horní stěně a poté v pravé stěně, pro opětovné složení musíme vracet tahy v opačném pořadí, tj. nejdřív vrátit tah v pravé stěně a poté ve stěně horní. Pěkně to jde vidět na [následující animaci](https://alg.cubing.net/?alg=R_U_%0A%2F%2F_dva_tahy,_ka%C5%BEd%C3%BD_je_mo%C5%BEn%C3%A9_reprezentovat_matic%C3%AD_permutace_%0AU-_R-_%0A%2F%2F_vr%C3%A1cen%C3%AD_tah%C5%AF_v_opa%C4%8Dn%C3%A9m_po%C5%99ad%C3%AD_slo%C5%BE%C3%AD_kostku_zp%C4%9Bt), kterou můžete spustit nebo přehrávat po jednotlivých krocích.
+
 # Využití inverzní matice pro řešení soustavy lineárních rovnic
 
 \iffalse
@@ -52,7 +65,7 @@ Inverzní matice k součinu dvou matic je součinem jednotlivých inverzních ma
 
 \fi
 
-Z minulé přednášky víme, že pomocí maticového násobení je možné soustavu lineárních rovnic zapsat ve tvaru $$AX=B,$$ kde $A$ je matice soustavy, $X$ je sloupcový vektor neznámých a $B$ je vektor pravých stran. Po vynásobení tohoto vztahu inverzní maticí zleva dostáváme
+Z minulé přednášky víme, že pomocí maticového násobení je možné soustavu lineárních rovnic zapsat ve tvaru $$AX=B,$$ kde $A$ je matice soustavy, $X$ je sloupcový vektor neznámých a $B$ je vektor pravých stran. Pokud má matice $A$ inverzní matici, můžeme pomocí této matice soustavu vyřešit. Po vynásobení rovnice inverzní maticí zleva dostáváme
 $$A^{-1}(AX)=A^{-1}B$$
 a po uplatnění asociativního zákona 
 $$(A^{-1}A)X=A^{-1}B.$$

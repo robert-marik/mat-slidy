@@ -62,7 +62,7 @@ chceme pracovat) a tok se přepočítává na jednotkovou plochu.
 
 # Tok a gradient v konstitutivních zákonech
 
-> Poznámka (konstitutivní zákony). V aplikacích často formulujeme pomocí gradientu a toku vektorového pole *konstitutivní zákony*. To jsou zákony nebo vztahy mezi fyzikálními veličinami specifickými pro danou látku nebo materiál a udávají odezvu tohoto materiálu na externí stimul. Viz. též [Wikipedie](https://en.wikipedia.org/wiki/Constitutive_equation).
+> Poznámka (konstitutivní zákony). V aplikacích často formulujeme pomocí gradientu a toku vektorového pole *konstitutivní zákony*. To jsou zákony nebo vztahy mezi fyzikálními veličinami specifickými pro danou látku nebo materiál a udávají odezvu tohoto materiálu na externí stimul. Viz též [Wikipedie](https://en.wikipedia.org/wiki/Constitutive_equation).
 
 \iffalse
 

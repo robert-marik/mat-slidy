@@ -183,6 +183,9 @@ množinou.
   pootočení z matice popisující změnu polohy bodů v tělese,
   tj. (matematicky vyjádřeno) k rozkladu matice na součet symetrické a
   antisymetrické matice.
+* Pro speciální matice (ortogonální) je transponovaná matice současně
+  maticí inverzní. Takové matice přirozeně vychází například při
+  transformaci matice do souřadnic mířících vlastními směry matice.
 
 # Inverzní matice
 
@@ -324,6 +327,14 @@ integrovatelné, tj. mohou být rychlostmi změn veličin.
 
 
 # Věty o diferenciálních rovnicích 
+
+## Věta o jednoznačnosti řešení počáteční úlohy
+
+Uváděli jsme si celkem dvě věty, které zajistí jednoznačnost
+řešení. Jednu speciální pro diferenciální rovnici se separovanými
+proměnnými, kdy stačí kontrolovat nenulovost pravé strany a druhou pro
+obecnou diferenciální rovnici, kdy stačí kontrolovat ohraničenost
+parciální derivace pravé strany podle $y$.
 
 ## Věta o stabilitě řešení rovnice $y'=f(y)$
 
