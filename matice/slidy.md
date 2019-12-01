@@ -356,13 +356,27 @@ Můžeme tedy měnit uzávorkování, můžeme
 roznásobovat závorky, nesmíme však měnit pořadí matic při násobení.
 
 
-Maticové násobení má neutrální prvek. Tímto prvkem je čtvercová
+# Neutrální prvek maticového součinu
+
+U každé operace nás zajímá neutrální prvek, což je prvek, který se v dané operaci nijak neprojeví. Třeba u sčítání čísel je neutrálním prvkem nula, při násobení čísel je neutrálním prvkem jednička. Pokud nějaký prvek potřebujeme zapsat ve tvaru součinu, zapíšeme ho jako součin sebe sama s jedničkou. To využijeme například při vytýkání ve kterém u vytýkaného prvku nefiguruje v některém členu druhý součinitel, jako třeba ve výpočtu $$3x^2+x=3x \cdot x + 1\cdot x = (3x+1)\cdot x.$$ Ukážeme si, že podobný neutrální prvek existuje i u násobení matic a trik podobný výše uvedenému využijeme později, až budeme mluvit o vlastních vektorech matice.
+
+Neutrálním prvkem při násobení matic čtvercových  je čtvercová
 matice, která má jedničky v hlavní diagonále a nuly mimo tuto
 diagonálu. Tato matice se nazývá *jednotková matice* a označuje
 $I$. Mají-li čtvercové matice $A$ a $I$ stejný počet řádků a sloupců,
-platí $$AI=IA=A.$$ Například pro matice $3\times 3$ je jednotková
-matice $$ I= \begin{pmatrix} 1&0&0\\ 0&1&0\\ 0&0&1 \end{pmatrix} .$$
+platí $$AI=IA=A.$$ 
 
+Například pro matice $3\times 3$ je jednotková matice $$ I=
+\begin{pmatrix} 1&0&0\\ 0&1&0\\ 0&0&1 \end{pmatrix} .$$ Je-li $A$
+matice $3\times 3$, kterou násobíme zprava maticí $I$, výsledná matice
+$AI$ bude mít tři sloupce (matice $I$ má tři sloupce), v prvním
+sloupci bude první sloupec matice $A$ (lineární kombinace sloupců
+matice $A$ s koeficientem 1 pro první sloupec a koeficienty 0 pro
+všechny další sloupce) atd. Jako výsledek součinu dostaneme přirozeně
+matici $A$. Že stejný výsledek dostaneme i pro opačné pořadí v součinu
+je možné pro nějaký konkrétní případ ověřit přímo a že toto funguje
+obecně se nejsnáze ukáže, až si představíme operaci transponování
+matice a její vztah k maticovému součinu.
 
 # Markovovy řetězce
 

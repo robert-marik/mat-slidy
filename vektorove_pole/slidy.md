@@ -406,7 +406,7 @@ V této rovnici není zahrnut případ, kdy se veličina přenáší ještě i p
 
 \fi
 
-Důležitým speciálním případem rovnice kontinuity je vedení tepla. V tomto případě je stavovou rovnicí teplota $T$. Teplota je přenášená tokem tepla $\vec j$. Rovnice kontinuity vyjadřuje, že energie
+Důležitým speciálním případem rovnice kontinuity je vedení tepla. V tomto případě je stavovou veličinou vnitřní energie, ale pro větší pohodlí rovnici formulujeme pro teplotu $T$. Vnitřní energie je přenášená tokem tepla $\vec j$. Rovnice kontinuity vyjadřuje, že energie
 nemizí ani se netvoří. Proto má rovnice vedení tepla zpravidla nulový
 člen vyjadřující vydatnost zdrojů a tvar        
 $$\rho c\frac{\partial T}{\partial t}+\mathop{\mathrm{div}}\vec j = 0,\tag{1}$$
@@ -471,7 +471,7 @@ proudění místem s menším průřezem.
 \fi
 
 Jedná se o rovnici kontiunity pro koncentraci vody $c$. Voda ve dřevě
-nevzniká ani nezaniká, jenom se transportuje mimo dřevo. Proto v
+nevzniká ani nezaniká, jenom se při sušení transportuje mimo dřevo. Proto v
 rovnici nebudou zdroje. Příslušným konstitutivním zákonem je Fickův
 zákon. Rovnice popisující tento proces má tvar
 $$\frac{\partial c}{\partial t}=\mathrm{\mathop{div}}(D\nabla c)\tag{*}$$
@@ -508,7 +508,6 @@ dovolit.
 <div class='obtekat'>
 
 ![Řez korytem. Divergence toku (zvýšení průtoku) se projeví úbytkem vody v řezu a následně snížením hladiny. Zdroj: Wikipedia.](channel.png)
-
 </div>
 
 \fi
@@ -522,7 +521,7 @@ Z matematického hlediska je to jenom rovnice kontinuity, na rozdíl od
 předchozích ukázek v ní nejsou konstituční vztahy. Proto v ní jsou dvě
 funkce, tok $Q$ definující pohyb stavové veličiny a průřez $A$
 definující množství stavové veličiny. Někdy je vhodnější pracovat se
-stavovou veličinou $h$. Jak jsme viděli v úvodní přednášce o
+stavovou veličinou $h$. Jak jsme zmínili v úvodní přednášce o
 derivacích, platí $\frac{\mathrm dA}{\mathrm d h}=B$. Abychom mohli celou rovnici převést na tvar pracující se stavovou veličinou $h$, je nutné udělat nějaké dodatečné předpoklady, jako například pracovat s konkrétním tvarem koryta.
 
 # Rovnice podzemní vody
