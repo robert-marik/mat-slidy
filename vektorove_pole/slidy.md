@@ -582,7 +582,12 @@ $$\mathop{\mathrm{div}} \vec q=-S\frac{\partial h}{\partial t}+P,$$
 kde $\vec q$ je tok (množství vody, které pod zemí teče daným místem na metr délky kolmé k toku), $P$
 je celkový objem ze zdrojů (množství vody, které dodají zdroje na metr čtvereční za jednotku času, jedná se v tomto případě o součet za celou výšku vodního kolektoru), $h$ je piezometrická výška  a 
  $S$ je měrná objemová zásobnost (kolik vody se uvolní na jednotkovém obsahu půdy při změně piezometrické výšky o jednotku). 
-Tato rovnice vyjadřuje, že rozdíl mezi množstvím vody, které z místa vyteče a množstvím, které do místa vteče, je dán vydatností zdroje v tomto místě a tím, kolik vody v tomto místě ubude díky snížení piezometrické hladiny (u volné hladiny jde zejména o snížení hladiny podzemní vody, u napjaté hladiny souvisí zejména se změnou pórovitosti při změně tlaku).
+Tato rovnice vyjadřuje, že množství vody, které se v daném místě přidá
+do celkového proudění, je součtem množství, které v daném místě
+vygenerují zdroje a množstvím, které se v tomto místě vezme ze zásob
+díky snížení piezometrické hladiny (u volné hladiny jde zejména o
+snížení hladiny podzemní vody, u napjaté hladiny souvisí zejména se
+změnou pórovitosti při změně tlaku).
 
 S Darcyho zákonem vyjádřeným pomocí piezometrické výšky, tj. $$\vec q=-T\nabla h,$$  obdržíme
 $$-\mathop{\mathrm{div}} \left(T\nabla h\right)=-S\frac{\partial h}{\partial t}+P,$$
