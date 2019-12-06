@@ -141,6 +141,8 @@ $$e^x=\frac{e^x+e^{-x}}2-\frac{e^x-e^{-x}}2.$$ Dvě funkce na pravé
 straně mají význam v aplikacích a nazývají se hypebolický kosinus,
 $\cosh x$, a hyperbolický sinus, $\sinh x$.
 
+**Příklad.** Je-li funkce $f(x)$ polynom, potom rozkladem na sudou a lichou část dostaneme polynomy, které jsou tvořeny členy původního polynomu tak, že sudá část obsahuje právě členy se sudým exponentem a lichá část právě členy s lichým exponentem.
+
 
 # Vlastnosti funkcí jedné proměnné (monotonie)
 

@@ -70,14 +70,15 @@ Buď $f:\mathbb R\to\mathbb R$ funkce, která má derivaci. V okolí bodu $x_0$
 $$f(x)\approx f(x_0)+ \frac{\mathrm df(x_0)}{\mathrm dx}(x-x_0).$$
 
 
-Výše uvedený vzorec není těžké rozšifrovat.
-
-* Veličina $f(x)$ je funkční hodnota v bodě $x$, tu chceme odhadnout.
-* Veličina $f(x_0)$ je známá funkční hodnota v bodě $x_0$, to je
-  výchozí bod pro odhad.
-* veličina $f'(x_0)(x-x_0)$ je odhad změny veličiny $f$ vyvolané
-  změnou veličiny $x$ z $x_0$ o $\Delta x=x-x_0$ tak, jak jsme jej
-  používali v minulé přednášce.
+> Poznámka. Výše uvedený vzorec není těžké rozšifrovat.
+>
+>* Veličina $f(x)$ je funkční hodnota v bodě $x$, tu chceme odhadnout.
+>* Veličina $f(x_0)$ je známá funkční hodnota v bodě $x_0$, to je
+>  výchozí bod pro odhad.
+>* Veličina $f'(x_0)$ je odhad změny veličiny $f$ způsobený jednotkovou změnou vstupních dat (zvýšení hodnoty $x_0$ o jednotku). Tento faktor ještě v dalším kroku musíme přizpůsobit tomu, že změna vstupních dat není jednotková, což uděláme s využitím přímé úměrnosti.
+>* Veličina $f'(x_0)(x-x_0)$ je odhad změny veličiny $f$ vyvolané
+>  změnou veličiny $x$ z $x_0$ o $\Delta x=x-x_0$ tak, jak jsme jej
+>  používali v minulé přednášce.
 
 **Příklad (růst stromu).** Strom má v roce 2019 výšku 3 metry a roste
   rychlostí 0.5 metru za rok. V roce $x$ je jeho výška dána vzorcem
@@ -282,6 +283,8 @@ pouze na určitém intervalu, třeba i krátkém).
 
 # Lokální extrémy spojitých funkcí
 
+Náledující definice si všímají bodů které mají tu vlastnost, že v okolí není možné najít body buď s vyšší funkční hodnotou (potom se jedná o lokální maximum, nikde v okolí mi funkce neukáže více) nebo s nižší funkční hodnotou (analogicky, lokální minimum).
+
 > Definice (lokální extrémy). Nechť $f\colon \mathbb R\to\mathbb R$.
 >
 >* Řekneme, že $f$ má v bodě $x_0$ *lokální maximum*, pokud platí $$f(x)\leq f(x_0)$$ pro všechna $x$ z nějakého okolí bodu $x_0$.
@@ -386,7 +389,7 @@ kladnou derivaci a intervalů, kde má funkce zápornou derivaci.
 
 <div class='obtekat'>
 
-![Bolzanova věta je jedna z těch, které člověka nepřekvapí.](bolzano.png)
+![Bolzanova věta je jedna z těch, které člověka nepřekvapí. Pokud se má funkce spojitě přehoupnout z jedné strany osy na druhou, musí tuto osu někde protnout.](bolzano.png)
 
 </div>
 

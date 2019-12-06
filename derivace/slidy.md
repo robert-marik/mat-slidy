@@ -148,6 +148,7 @@ rychlost s jakou veličina $f$ reaguje na změny veličiny $x$.
 
 # Aplikace derivací 1: Jak rychle? (změna v čase)
 
+
 \iffalse
 
 <div class='obtekat'>
@@ -159,8 +160,13 @@ rychlost s jakou veličina $f$ reaguje na změny veličiny $x$.
 \fi
 
 
+Derivace v bodě, pokud ji nahlížíme z hlediska časové změny veličiny,
+která nás zajímá, je okamžitá rychlost s jakou se mění tato
+veličina. 
+
 
 ### Zákon ochlazování
+
 
 Horké těleso o teplotě $T$ je v chladnější místnosti o teplotě $T_0$. Z
 fyziky je známo (Newtonův zákon tepelné výměny), že rychlost s jakou
@@ -209,6 +215,10 @@ archeologických nálezů pozůstatků živých organismů
 
 # Aplikace derivací 2: Jak strmě? (změna v prostoru)
 
+Derivace v bodě, pokud ji nahlížíme z hlediska prostorové změny
+veličiny, která nás zajímá, je míra, jak nerovnomerně je veličina
+rozložena v prostoru.
+
 ### Vedení tepla (dřevařství, nábytek, dřevostavby)
 
 Nerovnoměrnost rozložení teploty v tělese vede k vyrovnávání teplot
@@ -255,6 +265,12 @@ koryto obdélníkového tvaru.
 
 
 # Aplikace derivací 3: Jak citlivě? (reakce na změnu)
+
+Derivace v bodě, pokud ji nahlížíme z hlediska citlivosti reakce
+funkce na změnu vstupních dat, udává, jaký vliv má jednotková změna ve
+vstupních datech na zmenu funkční hodnoty funkce. Pokud změna ve
+vstupních datech není jednotková ale násobek jednotkové změny, je i
+odezva násobná.
 
 > Poznámka.
 Buď $f:\mathbb R\to\mathbb R$ funkce taková, že má derivaci. Pokud se veličina $x$ změní z hodnoty $x_0$ o hodnotu $\Delta x$ (tj. nová hodnota je $x_0+\Delta x$), potom se $f$ mění přibližně o $f'(x_0)\Delta x$, tj. $$\Delta f\approx f'(x_0)\Delta x$$ neboli

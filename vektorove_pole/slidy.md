@@ -334,7 +334,7 @@ nezřídlové. Absence zdrojů magnetického pole se projevuje tak, že rozříz
 
 # Výpočet gradientu a divergence
 
-Viz přednáška.
+Viz přednáška. V ZS 2019 přeskočit (kumulace rektorských a děkanských volen, dodělávala se lineární algebra).
 
 # Rovnice kontinuity
 
@@ -385,12 +385,43 @@ $$
 neboli $$\frac{\partial
 \rho}{\partial t}+\mathop{\mathrm{div}}\vec j = \sigma.$$
 Tato rovnice se nazývá *rovnice kontinuity* a díky své obecnosti
-popisuje širokou škálu problémů týkajících se živé i neživé přírody. V
-matematice často rovnice uvažujeme v právě tomto tvaru.  Při
+popisuje širokou škálu problémů týkajících se živé i neživé přírody.
+
+>Poznámka (fyzikální interpretace členů stavové rovnice).
+>
+>* Člen $\frac{\partial \rho}{\partial t}$ udává, jak rychle se mění
+   stavová veličina $\rho$. Pokud studujeme systém v ustáleném stavu,
+   kdy se stavová veličina nemění v čase, je tento člen nulový. Tomuto
+   se říká *stacionární stav* a *stacionární rovnice
+   kontinuity*. Stacionární rovnice kontinuity typicky popisuje systémy po dosažení rovnovážného
+   stavu.
+>* Člen $\sigma$ udává vydatnost zdrojů stavové veličiny, přičemž
+   spotřebiče jsou uvažovány jako zdroje záporné vydatnosti. Tento
+   člen tedy udává, kolik stavové veličiny v tomto místě vzniká. Pokud
+   zdroje neexistují, jedná se o *bezzdrojovou rovnici*.
+>* Člen $\mathop{\mathrm{div}} \vec j$ udává v daném bodě změnu ve velikosti
+   proudění přenášejícím stavovou veličinu. Přesněji, udává, o kolik více veličiny z
+   daného místa vyteče ve srovnání s množstvím veličiny, které do
+   tohoto místa vteče. Tento člen je v rovnici kontinuity přítomen vždy, bez něj by rovnice kontinuity ztratila smysl (resp. redukovala by se na triiviální případ, kdy veličina v daném místě vzniká danou rychlostí a zůstává zde, tj. problém řešitelný čistě integrováním).
+
+V matematice často rovnice uvažujeme ve výše uvedeném tvaru.  Při
 praktickém použití většinou preferujeme názornou interpretaci
 jednotlivých veličin a proto se v rovnici mohou objevit další
 konstanty úměrnosti, které umožní sladit jednotky a fyzikální
-interpretaci členů. Někdy se naopak snažíme konstanty co nejvíce redukovat metodami transformace popsanými v přednášce o diferenciálních rovnicích. Proto volíme vhodné násobky veličin vystupujících v matematické formulaci tak, aby se co nejvíce konstant eliminovalo, případně shluklo do jediné veličiny. Zkušenosti ukazují, že je vhodné volit veličiny bezrozměrné. Například v publikaci P. Horáček, Fyzikální a mechanické vlastnosti dřeva I je zavedena [bezrozměrná vlhkost, bezrozměrný čas a bezrozměrná vzdálenost](https://is.mendelu.cz/eknihovna/opory/zobraz_cast.pl?cast=9180;lang=cz) na straně 61 pro rovnici popisující difuzi a [charakteristická délka, Biotovo číslo (bezrozměrná tepelná vodivost) a bezrozměrná teplota, bezrozměrný čas a bezrozměrná vzdálenost](https://is.mendelu.cz/eknihovna/opory/zobraz_cast.pl?cast=9182;lang=cz) pro rovnici popisující vedení tepla na stranách 88 a 89.
+interpretaci členů. Někdy se naopak snažíme konstanty co nejvíce
+redukovat metodami transformace popsanými v přednášce o
+diferenciálních rovnicích. Proto volíme vhodné násobky veličin
+vystupujících v matematické formulaci tak, aby se co nejvíce konstant
+eliminovalo, případně shluklo do jediné veličiny. Zkušenosti ukazují,
+že je vhodné volit veličiny bezrozměrné. Například v publikaci
+P. Horáček, Fyzikální a mechanické vlastnosti dřeva I je zavedena
+[bezrozměrná vlhkost, bezrozměrný čas a bezrozměrná
+vzdálenost](https://is.mendelu.cz/eknihovna/opory/zobraz_cast.pl?cast=9180;lang=cz)
+na straně 61 pro rovnici popisující difuzi a [charakteristická délka,
+Biotovo číslo (bezrozměrná tepelná vodivost) a bezrozměrná teplota,
+bezrozměrný čas a bezrozměrná
+vzdálenost](https://is.mendelu.cz/eknihovna/opory/zobraz_cast.pl?cast=9182;lang=cz)
+pro rovnici popisující vedení tepla na stranách 88 a 89.
 
 V této rovnici není zahrnut případ, kdy se veličina přenáší ještě i prouděním hmotného prostředí (konvekce).
 

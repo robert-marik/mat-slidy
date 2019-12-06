@@ -316,7 +316,7 @@ dispozici. Nikoliv až v další iteraci jako u Jacobiho metody. Metoda
 konverguje za stejných podmínek jako Jacobiho metoda, ale rychleji a
 přesto nevznikají vyšší nároky na výpočetní výkon.
 
-Použijeme příklad z [Wikipedie]().
+Použijeme příklad z [Wikipedie](https://en.wikipedia.org/wiki/Gauss%E2%80%93Seidel_method#An_example_for_the_equation_version).
 Soustavu $$\begin{array}{rrrrl}
 10x_1 &-   x_2 &+  2x_3 &       & = 6, \\
  -x_1 &+ 11x_2 &-   x_3 &+ 3x_4 & =  25, \\
