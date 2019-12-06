@@ -402,7 +402,7 @@ popisuje širokou škálu problémů týkajících se živé i neživé přírod
 >* Člen $\mathop{\mathrm{div}} \vec j$ udává v daném bodě změnu ve velikosti
    proudění přenášejícím stavovou veličinu. Přesněji, udává, o kolik více veličiny z
    daného místa vyteče ve srovnání s množstvím veličiny, které do
-   tohoto místa vteče. Tento člen je v rovnici kontinuity přítomen vždy, bez něj by rovnice kontinuity ztratila smysl (resp. redukovala by se na triiviální případ, kdy veličina v daném místě vzniká danou rychlostí a zůstává zde, tj. problém řešitelný čistě integrováním).
+   tohoto místa vteče. Tento člen je v rovnici kontinuity přítomen vždy, bez něj by rovnice kontinuity ztratila smysl (resp. redukovala by se na triviální případ, kdy veličina v daném místě vzniká danou rychlostí a zůstává zde, tj. problém řešitelný čistě integrováním).
 
 V matematice často rovnice uvažujeme ve výše uvedeném tvaru.  Při
 praktickém použití většinou preferujeme názornou interpretaci
