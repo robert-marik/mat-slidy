@@ -449,7 +449,7 @@ dodaného tepla na stavovou a lépe měřitelnou veličinu, na změnu teploty.
 >
 >* Veličina $\frac{\partial T}{\partial t}$ udává rychlost růstu teploty tělesa a koeficient $\rho c$ tuto hodnotu přepočítává na údaj, jak rychle roste vnitřní energie tělesa (kinetická energie molekul.)
 >* Člen $\mathop{\mathrm{div}}\vec j$ udává, kolik vnitřní energie se v daném místě ubývá za jednotku času vlivem proudění. Vzhledem k absenci zdrojů je to také jediný mechanismus, jak v daném místě může vnitřní energie přibývat či ubývat.
->* Rovnice (1) vyjadřuje to, že pokud z daného místa více energie odtéká, než kolik do místa proudí, tj. $\mathop{\mathrm{div}}\vec j$ je kladná, dojde v tomto místě ke snižení teploty.
+>* Rovnice (1) vyjadřuje to, že pokud z daného místa více energie odtéká, než kolik do místa proudí, tj. $\mathop{\mathrm{div}}\vec j$ je kladná, dojde v tomto místě k odpovídajícímu snižení teploty.
 
 Pokud k tomuto tvaru rovnice kontinuity přidáme Fourierův zákon a divergenci převedeme na druhou stranu rovnice,
 získáme
@@ -666,5 +666,5 @@ $$\rho c\frac{\partial T}{\partial t}=D_x\frac{\partial^2 T}{\partial x^2}+D_y\f
 * Pomocí parciálních derivací a divergence dokážeme určit, jestli se v nějakém místě veličina přenášená místem "ztrácí" nebo "přibývá".
 * Dokážeme dokonce s rozumnou interpretací, čím případné ubývání přenášené veličiny může být způsobeno (zdroje nebo akumulace a daném místě), zformulovat rovnici, která dané proudění plně popisuje. Výsledkem jsou rovnice vedení tepla, rovnice difuze, rovnice proudění podzemní vody a jiné.
 * Obecná rovnice odvozená podle předchozích bodů je příliš obecná a pro práci se ji snažíme nějak konkretizovat. Například zjednodušit, pokud máme informaci o charakteru materiálových vztahů (lineární/nelineární) a materiálu (homogenní/nehomogenní). Jiným zjednodušením je, pokud se zajímáme o stacionární stav, který se nastolí po dosažení rovnováhy.
-* Posláním široké škály příkladů různých specifikací rovnice kontinuity (vedení tepla, proudění povrchové a podzemní vody a další) je, aby si student uvědomil široký záběr obecné formulace rovnice kontinuity. Na zkoušku se naučte obecnou rovnici a jenom informativně si přečtěte její speciální případy. Obory pracující se dřevem (dřevařství, nábytek, dřevostavby) si uložte do paměti rovnice popisující modelování tepla a vlhkosti ve dřevě. Budou se vám hodit  ve studiu. Na krajinářství se zase zaměřte na modelování vody.
+* Posláním široké škály příkladů různých specifikací rovnice kontinuity (vedení tepla, proudění povrchové a podzemní vody a další) je, aby si student uvědomil široký záběr obecné formulace rovnice kontinuity. Na zkoušku se naučte obecnou rovnici a jenom informativně si přečtěte její speciální případy. Obory pracující se dřevem (dřevařství, nábytek, dřevostavby) si uložte do paměti rovnice popisující modelování tepla a vlhkosti ve dřevě. Budou se vám hodit  ve studiu. Na krajinářství se zase zaměřte na modelování vody, mělké i podzmení.
 
