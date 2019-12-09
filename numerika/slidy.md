@@ -182,10 +182,11 @@ mnoha jsou předpřipravené modely, předdefinované fyzikální úlohy a
 někdy dokonce databáze materiálových vlastností. V jiných programech
 je řešená rovnice plně pod kontrolou autora modelu a je možné snadno
 řešit i multifyzikální úlohy (například současně modelovat teplotu a
-vlhkost v materiálu). Zástupce druhé skupiny je FlexPDE firmy [PDE Solutions Inc.](https://www.pdesolutions.com/) Úloha s
-ochlazováním čtvercové desky, na kterou jsmě několikrát jako na
-motivaci narazili v lineární algebře a připomněli na předchozím slidu
-by měla následující zápis a výstup.
+vlhkost v materiálu). Zástupce druhé skupiny je FlexPDE firmy [PDE
+Solutions Inc.](https://www.pdesolutions.com/) Úloha s rozložením
+tepoty na čtvercové desce se zadanými teplotami na okrajích, na kterou
+jsmě několikrát jako na motivaci narazili v lineární algebře a
+připomněli na předchozím slidu, by měla následující zápis a výstup.
 
 ~~~
 TITLE 'Stacionarni teplota pro ctvercovou deska se zadanou teplotou na okrajich' 
