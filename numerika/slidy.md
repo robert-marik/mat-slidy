@@ -191,7 +191,7 @@ by měla následující zápis a výstup.
 TITLE 'Stacionarni teplota pro ctvercovou deska se zadanou teplotou na okrajich' 
 VARIABLES T 
 EQUATIONS T: div(grad(T))=0
-INITIAL VALUES T =10
+INITIAL VALUES T=10
 
 BOUNDARIES
 REGION 1
