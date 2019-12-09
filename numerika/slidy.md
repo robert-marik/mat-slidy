@@ -116,7 +116,7 @@ vlastnosti dřeva. Viz též [eopora](https://is.mendelu.cz/eknihovna/opory/zobr
 
 Vraťme se s aparátem matematického popis vedení tepla k úloze hledání
 rozložení teploty na čtvercové desce, kterou jsme představili v
-přednášce o lineární algebře: Je dána deska čtvervého tvaru, jejíž okraje udržujeme na konstatních teplotách (každý okraj obecně na jiné teplotě) a hledáme rovnovéžné rozložení teploty. Dvourozměrná rovnice vedení tepla pro homogenní izotropní desku s materiálovými charakteristikami $\rho$, $c$ a $D$ má tvar
+přednášce o lineární algebře: Je dána deska čtvervého tvaru, jejíž okraje udržujeme na konstatních teplotách (každý okraj obecně na jiné teplotě) a hledáme rovnovážné rozložení teploty. Dvourozměrná rovnice vedení tepla pro homogenní izotropní desku s materiálovými charakteristikami $\rho$, $c$ a $D$ má tvar
 $$\rho c \frac{\partial T}{\partial t}=D\frac{\partial^2 T}{\partial x^2}+D\frac{\partial^2 T}{\partial y^2}.$$
 Ve stacionárním stavu se teplota nemění s časem a proto je levá strana nulová a rovnice se redukuje na
 $$\frac{\partial^2 T}{\partial x^2}+\frac{\partial^2 T}{\partial y^2}=0.$$
@@ -174,3 +174,39 @@ tepelné nebo mechanické namáhání, tok podzemní i povrchové vody a
 další důležité praktické aplikace. Uživatel jenom zadá geometrii, typ
 problému a okrajové a počáteční podmínky a program vypočte potřebná
 řešení a dle požadavků je různým způsobem interpretuje.
+
+# Ukázka programu FlexPDE
+
+Existuje široká škála programů pro řešení diferenciálních rovnic. V
+mnoha jsou předpřipravené modely, předdefinované fyzikální úlohy a
+někdy dokonce databáze materiálových vlastností. V jiných programech
+je řešená rovnice plně pod kontrolou autora modelu a je možné snadno
+řešit i multifyzikální úlohy (například současně modelovat teplotu a
+vlhkost v materiálu). Zástupce druhé skupiny je FlexPDE firmy [PDE Solutions Inc.](https://www.pdesolutions.com/) Úloha s
+ochlazováním čtvercové desky, na kterou jsmě několikrát jako na
+motivaci narazili v lineární algebře a připomněli na předchozím slidu
+by měla následující zápis a výstup.
+
+~~~
+TITLE 'Stacionarni teplota pro ctvercovou deska se zadanou teplotou na okrajich' 
+VARIABLES T 
+EQUATIONS T: div(grad(T))=0
+INITIAL VALUES T =10
+
+BOUNDARIES
+REGION 1
+    START(0,0) VALUE(T)=30 LINE TO (1,0) 
+    VALUE(T)=40 LINE TO (1,1)
+    VALUE(T)=20 LINE TO (0,1) 
+    VALUE(T)=10 LINE TO CLOSE 
+
+PLOTS
+  CONTOUR(T)
+  SURFACE(T)
+END
+~~~
+
+
+![Teplota znázorněná pomocí izoterm.](ctvercova_deska_01_001.png)
+
+![Teplota znázorněná pomocí barev a 3D grafu.](ctvercova_deska_02_001.png)
