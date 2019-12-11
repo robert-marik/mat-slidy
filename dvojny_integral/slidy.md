@@ -366,21 +366,17 @@ Odsud máme okamžitě několik pozorování
 * Pro nosník čtvercového průřezu ($a=b$) roste tuhost se čtvrtou
   mocninou rozměrů. Obsah (a tedy i hmotnost) roste s druhou
   mocninou. Pokud tedy u nosníku se čtvercovým průřezem zdvojnásobíme
-  množství materiálu, tuhost vzroste čtyřnásobně. Pokud nosník
-  vyrobíme s dutinou tak, že uprostřed čtverce vznikne dutina opět ve
-  tvaru čtverce, vzroste tuhost třikrát oproti situaci, kdy bychom
-  stejné množství materiálu použili na výrobu nosníku čtvercového
-  průřezu.
+  množství materiálu, tuhost vzroste čtyřnásobně. Toto si můžeme představit tak, že jsme původní nosník obalili trubkou vyrobenou ze stejného množství materiálu. Protože společná tuhost je čtyřnásobná, znamená to, že přidaná trubka má trojnásobnou tuhost než původní tyč. Proto se v konstrukcích nepoužívají tyče, ale trubky nebo analogické struktury (I-čka apod). I příroda zná tyto zákonitosti a kosti tvořící opěrný aparát živočichů jsou trubkovitého tvaru. 
 * Pro čtvercový průřez roste tuhost se čtvrtou mocninou délky
-  strany. Podobná závislost musí být u\ každého průřezu
-  jednoparametrického tvaru, například pro kruh. Jako na nosník s\ kruhovým průřezem můžeme pohlížet i\ na stromy. Například strom, ve
+  strany $$I_x=\frac 1{12} a^4.$$  Stejná závislost (přímá úměrnost mezi kvadratickým momentem a čtvrtou mocninou rozměru) musí být u\ každého průřezu
+  jednoparametrického tvaru, například pro kruh. To plyne například z věty nazývané [Buckinghamův $\Pi$ teorém](https://en.wikipedia.org/wiki/Buckingham_%CF%80_theorem). Jako aplikaci uvažujme strom modelovaný jako nosník s\ kruhovým průřezem. Například strom, ve
   kterém je dutina o\ velikosti poloviny průměru kmene většinou vyvolá
   obavy ze stability. I když taková dutina vypadá obrovská, tuhost se
   sníží o\ původní tuhost vynásobenou koeficientem
   $$(0.5)^4=0.0625\approx 6\%.$$ 
   Vidíme, že i s hrozivě vypadající dutinou má kmen pořád tuhost 
   $94\%$ původní tuhosti (za předpokladu dutiny uprostřed
-  kmene). Pevnost roste jenom s třetí
+  kmene). Z hlubšího fyzikálního rozboru, který je nyní nad rámec našeho popisu,  pevnost roste jenom s třetí
   mocninou a proto odolnost vůči zlomení klesne o něco více než
   tuhost.
 
@@ -480,7 +476,7 @@ v těžišti množiny a o stejné hmotnosti jako je hmotnost množiny vzhledem k
 Vzorec pro tlakovou sílu $F=pS$ není možné použít například pro
 výpočet celkové síly působící na svislou stěnu nebo hráz, protože tlak $p$ se
 mění s hloubkou a není tedy konstantní na celém průřezu o obsahu
-$S$. Pro obdélníkovou stěnu jsme úlohu vyřešili (viz Mojžíšův most) pomocí integrálu, pro stěnu obecného tvaru použijeme integrál dvojný.
+$S$. Pro obdélníkovou stěnu jsme úlohu vyřešili (viz [Mojžíšův most](http://user.mendelu.cz/marik/mt/mat-slidy/integraly/index_h.html#aplikace-ur%C4%8Dit%C3%A9ho-integr%C3%A1lu-tlakov%C3%A1-s%C3%ADla)) pomocí integrálu, pro stěnu obecného tvaru použijeme integrál dvojný.
 
 Uvažujme svislou rovinnou hráz $M$. Hrází je přitom myšlena rovinná
 množina s jednotkovou plošnou hustotou, ne postavený trojrozměrný

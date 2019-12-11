@@ -116,7 +116,7 @@ vlastnosti dřeva. Viz též [eopora](https://is.mendelu.cz/eknihovna/opory/zobr
 
 Vraťme se s aparátem matematického popis vedení tepla k úloze hledání
 rozložení teploty na čtvercové desce, kterou jsme představili v
-přednášce o lineární algebře: Je dána deska čtvervého tvaru, jejíž okraje udržujeme na konstatních teplotách (každý okraj obecně na jiné teplotě) a hledáme rovnovážné rozložení teploty. Dvourozměrná rovnice vedení tepla pro homogenní izotropní desku s materiálovými charakteristikami $\rho$, $c$ a $D$ má tvar
+přednášce o lineární algebře: Je dána deska čtvercového tvaru, jejíž okraje udržujeme na konstatních teplotách (každý okraj obecně na jiné teplotě) a hledáme rovnovážné rozložení teploty. Dvourozměrná rovnice vedení tepla pro homogenní izotropní desku s materiálovými charakteristikami $\rho$, $c$ a $D$ má tvar
 $$\rho c \frac{\partial T}{\partial t}=D\frac{\partial^2 T}{\partial x^2}+D\frac{\partial^2 T}{\partial y^2}.$$
 Ve stacionárním stavu se teplota nemění s časem a proto je levá strana nulová a rovnice se redukuje na
 $$\frac{\partial^2 T}{\partial x^2}+\frac{\partial^2 T}{\partial y^2}=0.$$
@@ -185,11 +185,11 @@ je řešená rovnice plně pod kontrolou autora modelu a je možné snadno
 vlhkost v materiálu). Zástupce druhé skupiny je FlexPDE firmy [PDE
 Solutions Inc.](https://www.pdesolutions.com/) Úloha s rozložením
 tepoty na čtvercové desce se zadanými teplotami na okrajích, na kterou
-jsmě několikrát jako na motivaci narazili v lineární algebře a
+jsme několikrát jako na motivaci narazili v lineární algebře a
 připomněli na předchozím slidu, by měla následující zápis a výstup.
 
 ~~~
-TITLE 'Stacionarni teplota pro ctvercovou deska se zadanou teplotou na okrajich' 
+TITLE 'Stacionarni teplota pro ctvercovou desku se zadanou teplotou na okrajich' 
 VARIABLES T 
 EQUATIONS T: div(grad(T))=0
 INITIAL VALUES T=10
@@ -206,6 +206,10 @@ PLOTS
   SURFACE(T)
 END
 ~~~
+
+Rovnice je v popisu modelu zadána jako divergence gradientu, což v kartézských souřadnicích ve 2D vede právě na rovnici 
+$$\frac{\partial^2 T}{\partial x^2}+\frac{\partial^2 T}{\partial y^2}=0.$$
+Jiná forma zápisu je přímo pomocí druhých parciálních derivací ve tvaru `DXX(T)+DYY(T)=0`.
 
 
 ![Teplota znázorněná pomocí izoterm.](ctvercova_deska_01_001.png)
