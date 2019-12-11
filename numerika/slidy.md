@@ -60,9 +60,13 @@ Vidíme, že proces opravdu neuvěřitelně rychle konverguje k\ řešení rovni
 
 Rovnice vedení tepla v jedné dimenzi (prostup tepla stěnou, vedení
 tepla tyčí) má tvar (viz minulá přednáška) $$\rho c \frac{\partial T}{\partial
-t}=D\frac{\partial ^2 T}{\partial x^2},$$ kde $T(x,t)$ je teplota v
+t}=\frac{\partial }{\partial x} \left(D\frac{\partial  T}{\partial x}\right),$$ kde $T(x,t)$ je teplota v
 místě $x$ a čase $t$, $\rho$ je hustota, $c$ je měrná tepelná
-kapacita, $D$ je teplotní vodivost. Pro úplnou formulaci úlohy na
+kapacita, $D$ je teplotní vodivost.
+Pro homogenní stěnu nebo tyč a lineární materiálovou odezvu je $D$ konstanta a můžeme ji vytknout z derivace na pravé straně a psát
+$$\rho c \frac{\partial T}{\partial
+t}=D\frac{\partial^2  T}{\partial x^2}.$$
+Pro úplnou formulaci úlohy na
 nalezení teploty v jednotlivých místech stěny musíme zadat polohu
 stěny, teplotu na vnějším a vnitřním okraji stěny a počáteční
 rozložení teploty ve stěně. Nechť tedy okraje jsou $x=0$ a $x=L$, a
@@ -83,7 +87,7 @@ t}&=D\frac 1{L^2}\frac{\partial ^2 \xi}{\partial \mu^2},\\
 kde $f_\xi(\mu)$ je počáteční rozložení teploty transformované do nových veličin.
 Přepíšeme-li rovnici na tvar
 $$\frac 1{\frac {D}{L^2\rho c}} \frac{\partial \xi}{\partial
-t}=D\frac 1{L^2}\frac{\partial ^2 \xi}{\partial \mu^2},$$
+t}=\frac{\partial ^2 \xi}{\partial \mu^2},$$
 vidíme, že zavedení bezrozměrného času vztahem $\tau=\frac{Dt}{\rho c L^2}$ redukuje úlohu z původního tvaru (kde každý člen má svůj fyzikální význam a přímou interpretaci)
 $$\boxed{\begin{aligned}
 \rho c \frac{\partial T}{\partial

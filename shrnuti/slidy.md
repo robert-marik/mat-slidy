@@ -66,7 +66,7 @@
 * Je důležitý při studiu materiálové odezvy, protože podnětem pro reakci
 materiálu bývá gradient stavové veličiny, viz například Fickův zákon,
 Fourierův zákon, Darcyho zákon.
-* Gradient (přesněji vektor z parciálních derivací podle prostorových proměnných) umožní formulovat fyzikální zákony charakterizující proudění stavové veličiny způsobené nerovnoměrným prostorovým rozložením této veličiny. (Například teplota se mění dodáním nebo odebráním tepla a teplo proudí ve směru daném Fourierovým zákonem. V izotropním protředí tedy ve směru gradientu vyásobeného faktorem $-1$, tj. ve směru maximálního poklesu teploty.)
+* Gradient (přesněji vektor z parciálních derivací podle prostorových proměnných) umožní formulovat fyzikální zákony charakterizující proudění stavové veličiny způsobené nerovnoměrným prostorovým rozložením této veličiny. (Například teplota se mění dodáním nebo odebráním tepla a teplo proudí ve směru daném Fourierovým zákonem. V izotropním protředí tedy ve směru gradientu teploty vynásobeného faktorem $-1$, tj. ve směru maximálního poklesu teploty.)
 
 ## Obyčejná derivace versus parciální
 
