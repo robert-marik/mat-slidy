@@ -22,8 +22,8 @@ konverguje ke kořeni studované rovnice a to velmi rychle: každým
 krokem se přibližně zdvojnásobí počet míst, která máme správně.
 
 
-Z\ lineární aproximace funkce $f$ v bodě $a$ $$f(x)\approx
-f(a)+f'(a)(x-a)$$ pro $a=x_n$, $x=x_{n+1}$, $f(x_{n+1})=0$ dostáváme
+Z\ lineární aproximace funkce $f$ v bodě $x_0$ $$f(x)\approx
+f(x_0)+f'(x_0)(x-x_0)$$ pro $x_0=x_n$, $x=x_{n+1}$, $f(x_{n+1})=0$ dostáváme
 $$0=f(x_n)+f'(x_n)(x_{n+1}-x_n)$$ a po osamostatnění $x_{n+1}$ přímo
 iterační vzorec $$x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)}.$$ Tento vzorec
 používáme opakovaně až do dosažení požadované přesnosti. Obvyklým
@@ -118,7 +118,7 @@ vlastnosti dřeva. Viz též [eopora](https://is.mendelu.cz/eknihovna/opory/zobr
 
 # Metoda konečných diferencí
 
-Vraťme se s aparátem matematického popis vedení tepla k úloze hledání
+Vraťme se s aparátem matematického popisu vedení tepla k úloze hledání
 rozložení teploty na čtvercové desce, kterou jsme představili v
 přednášce o lineární algebře: Je dána deska čtvercového tvaru, jejíž okraje udržujeme na konstatních teplotách (každý okraj obecně na jiné teplotě) a hledáme rovnovážné rozložení teploty. Dvourozměrná rovnice vedení tepla pro homogenní izotropní desku s materiálovými charakteristikami $\rho$, $c$ a $D$ má tvar
 $$\rho c \frac{\partial T}{\partial t}=D\frac{\partial^2 T}{\partial x^2}+D\frac{\partial^2 T}{\partial y^2}.$$
@@ -130,9 +130,7 @@ Použijeme stejnou myšlenku jako v lineární algebře: rozdělíme desku
 této sítě, tj. v rozích jednotlivých čtverců, na které je deska
 čtvercovou sítí rozdělena.
 
-Z kapitoly o Taylorově polynomu a z kapitoly o diferenciálních rovnicích víme, že druhou derivaci funkce jedné proměnné můžeme aproximovat vztahem
-$$f''(x)\approx \frac{1}{h^2}[f(x+h)-2f(x)+f(x-h)].$$
-Podobně pro parciální derivace funkce dvou proměnných $f(x,y)$ dostáváme
+Z přednášky o derivacích a aproximaci víme, že funkci můžeme aproximovat v okolí námi zvoleného bodu Taylorovým polynomem a v kapitole o diferenciálních rovnicích jsme tuto aproximaci použili pro aproximaci druhé derivace konečnými diferencemi ve tvaru $$f''(x)\approx \frac{1}{h^2}[f(x+h)-2f(x)+f(x-h)].$$ Podobně pro parciální derivace funkce dvou proměnných $f(x,y)$ dostáváme
 
 $$\begin{aligned}
 \frac {\partial ^2 f}{\partial x^2}&\approx \frac{1}{h^2}[f(x+h,y)-2f(x,y)+f(x-h,y)]\\
