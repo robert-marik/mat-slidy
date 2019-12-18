@@ -436,7 +436,7 @@ dodaného tepla na stavovou a lépe měřitelnou veličinu, na změnu teploty.
 > Poznámka (interpretace členů).
 >
 >* Veličina $\frac{\partial T}{\partial t}$ udává rychlost růstu teploty tělesa a koeficient $\rho c$ tuto hodnotu přepočítává na údaj, jak rychle roste vnitřní energie tělesa (kinetická energie molekul.)
->* Člen $\mathop{\mathrm{div}}\vec j$ udává, kolik vnitřní energie se v daném místě ubývá za jednotku času vlivem proudění. Vzhledem k absenci zdrojů je to také jediný mechanismus, jak v daném místě může vnitřní energie přibývat či ubývat.
+>* Člen $\mathop{\mathrm{div}}\vec j$ udává, kolik vnitřní energie se v daném místě ubývá za jednotku času vlivem vedení tepla. Vzhledem k absenci zdrojů je to také jediný mechanismus, jak v daném místě může vnitřní energie přibývat či ubývat.
 >* Rovnice (1) vyjadřuje to, že pokud z daného místa více energie odtéká, než kolik do místa proudí, tj. $\mathop{\mathrm{div}}\vec j$ je kladná, dojde v tomto místě k odpovídajícímu snižení teploty.
 
 Pokud k tomuto tvaru rovnice kontinuity přidáme Fourierův zákon a divergenci převedeme na druhou stranu rovnice,
@@ -455,7 +455,7 @@ V literatuře věnované problematice dřeva se rovnice vedení tepla ve dřev�
 
 V některých případech nemusí být člen charakterizující zdroje
 nulový. Teplo může vznikat například při tření nebo při průchodu
-elektrického proudu transformací z jiného druhu energie.
+elektrického proudu transformací z jiného druhu energie. Dále teplo vzniká například při betonování po [přidání vody do cementu](http://www.ebeton.cz/pojmy/hydratacni-teplo), známý je problém jak [uchladit Hooverovu přehradu](http://www.ebeton.cz/encyklopedie/hooverova-prehrada) při stavbě.
 
 
 # Proudění tekutiny v mechanice kontinua
