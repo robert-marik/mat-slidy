@@ -97,9 +97,9 @@ záleží na konkrétní situaci, zvyklostech v příslušném podoboru, nebo
 na přístupu autora. Není proto naší ambicí vést výklad dopodrobna,
 všímejme si jenom základních myšlenek.
 
-# Vybrané konstitutivní zákony
+# Vícerozměrné konstitutivní zákony
 
-Zákony uvedené níže byly často odvozeny v jednorozměrném případě. V moderní formulaci používáme obecný vektorový zápis, který zohledňuje i směr. Konstanta úměrnosti potom zprostředkovává vztah mezi dvěma
+Zákony uvedené níže byly často odvozeny v jednorozměrném případě a letmo zmíněny v přednášce [Derivace II](../aproximace). V moderní formulaci používáme obecný vektorový zápis, který zohledňuje i směr. Konstanta úměrnosti potom zprostředkovává vztah mezi dvěma
 vektory. Jedná se tedy z matematického pohledu o matici, která umožní
 nejenom změnit délku vektoru a jeho jednotku, ale i směr. Tato matice
 se navíc při změně báze transformuje speciálním způsobem, tak jako

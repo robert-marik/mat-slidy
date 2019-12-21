@@ -11,7 +11,7 @@ $else$
 $endif$
 
 \usepackage[margin=1cm, bottom=1in, top=1in]{geometry}\everymath{\displaystyle}
-\usepackage[innerleftmargin=3pt, innerrightmargin=3pt, leftline=false, rightline=false, skipabove=0pt, skipbelow=0pt, linewidth = 1pt]{mdframed}
+\usepackage[innerleftmargin=3pt, innerrightmargin=3pt, leftline=false, rightline=false, skipabove=0pt, skipbelow=0pt, linewidth = 1pt, nobreak=true]{mdframed}
 
 $if(linestretch)$
 \usepackage{setspace}
@@ -221,7 +221,7 @@ $endif$
 \def\pismenoE{e}
 \def\uloztoken#1#2#3;;;;{\def\ulozene{#1}\def\ulozeneB{#2}}
 \def\zahlavi #1.{\uloztoken #1;;;;\noindent%
-\def\konec{\par\bigskip}
+\def\konec{\par\bigskip}%
 \ifx\ulozene\pismenoD\ifx\ulozeneB\pismenoE\begin{mdframed}[linecolor=blue, innerrightmargin=0pt, innerleftmargin=0pt]\def\konec{\end{mdframed}}\else\let\ulozene\pismenoV\fi\fi
 \ifx\ulozene\pismenoV\itshape\begin{mdframed}[linecolor=gray,backgroundcolor=yellow]\def\konec{\end{mdframed}}\fi
 \textbf{\upshape \ignorespaces #1.}

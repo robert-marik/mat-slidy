@@ -13,20 +13,34 @@ do
 
   cd $i
   pandoc --template ../default.latex slidy.md -o slidy.tex
+  pandoc slidy.md -o $jj.tex
   vlna slidy.tex
   sed -i 's/♣/\\ensuremath{\\clubsuit}/g' slidy.tex
   sed -i 's/♠/\\ensuremath{\\spadesuit}/g' slidy.tex
   sed -i 's/\\begin{longtable}/{\\centering\\begin{supertabular}/g' slidy.tex
   sed -i 's/\\end{longtable}/\\end{supertabular}\\par}/g' slidy.tex
+
+  sed -i 's/♣/\\ensuremath{\\clubsuit}/g' $jj.tex
+  sed -i 's/♠/\\ensuremath{\\spadesuit}/g' $jj.tex
+  sed -i 's/\\begin{longtable}/{\\centering\\begin{supertabular}/g' $jj.tex
+  sed -i 's/\\end{longtable}/\\end{supertabular}\\par}/g' $jj.tex
+
   vlna pdfslide.tex
   pdflatex slidy.tex
   pdflatex slidy.tex
   cp slidy.pdf ../$i.pdf
-  cp slidy.pdf ../$jj.pdf
+  #cp slidy.pdf ../$jj.pdf
   cd ..
   rsync -e "ssh -o StrictHostKeyChecking=no" -av $i cornus.mendelu.cz:html/mt/mat-slidy/
 done
 
 
-pdftk ??.pdf cat output mat_slidy_all.pdf
-rm ??.pdf
+rm tex/??.tex
+cp */??.tex tex/
+cd tex
+export TEXINPUTS=.:..//:
+pdflatex all
+pdflatex all
+
+mv all.pdf ../mat_slidy_all.pdf
+#rm ??.pdf

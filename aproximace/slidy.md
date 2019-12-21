@@ -90,7 +90,7 @@ blízké k nule.  $$\sin x\approx x, \quad \cos x\approx 1,\qquad
 (1+x)^n=1+nx.$$ První dva vzorce využijeme později při popisu malých
 rotací v rovině. Mnoho důležitých aplikací těchto vzorců ve fyzice je na webu [fyzikální olympiády](http://fyzikalniolympiada.cz/studijni-texty) v dokumentu [Aproximace ve fyzikálních úlohách](http://fyzikalniolympiada.cz/texty/aproxim.pdf).
 
-# Lineární aproximace v praxi
+# Lineární aproximace v některých fyzikáních zákonech
 
 \iffalse
 
@@ -141,10 +141,30 @@ aproximací přesných vztahů plynoucích z\ Einsteinovy teorie relativity zís
 \dm $$E=\frac{m_0c^2}{\sqrt{1-\frac {v^2}{c^2}}} =m_0 c^2 \left(1-\frac {v^2}{c^2}\right)^{-1/2} \approx m_0c^2+\frac 12 m_0v^2 $$
 pro $v$ mnohem menší než $c$. Snadno rozšifrujeme, že s rychlostí souvisí jenom druhý sčítanec a že se jedná o klasický vzorec pro kinetickou energii $\frac 12 mv^2$.
 
- Ač se jedná "jenom" o\ lineární aproximaci, je tento vzorec dokonce mnohem použitelnější, protože výpočet kinetické energie pomocí univerzálně platného vzorce při malých rychlostech zhavaruje na [zaokrouhlovacích chybách](https://sagecell.sagemath.org/?z=eJyVUTtvwjAQ3pH4DydYHFRI7Ja2DBnTpUOl_AAkY06NiR80DlbDr-8lPJqlQyUP9t3n73Fns5yvYQ6V9a3zoQW_O2DdnqYTlYvN5mUjntavQICmU5XpASFiayREsIuwZUueTCcxF1n6uHoew648cPRVtzsdtNKVh4B3gAaRQW3Tyu_h2GDEPToJdH5pp5Njo10Ls3ftsNWqloAOm0-NUBsZqNBZiGffKLTE4cFKMxKY3f7zVCxstohbca2MqD92qFw3sKAaSIze-eiNG1vd-9o7heTfVDJSeO38Cc7S140_ESZKpVUFiqKSasFzklO9XCFydrmnLHw1LeNLspHSO0ko4RwuNgoOo4dYOZbcHLJCLAuejEr_df8A_VgC4HfboKXOOXYB-wA09-CGgLGjPTivKInrB1dCDiVK86bR7BnPsmHLJbvs-W6uZOzveMtLJ0l-AGuRw0Q=&lang=sage&interacts=eJyLjgUAARUAuQ==).
+ Ač se jedná "jenom" o\ lineární aproximaci, je  vzorec $E=\frac 12 mv^2$ dokonce mnohem použitelnější, protože výpočet kinetické energie pomocí univerzálně platného relativistického vzorce při malých rychlostech v praxi obvykle zhavaruje na [zaokrouhlovacích chybách](https://sagecell.sagemath.org/?z=eJyVUTtvwjAQ3pH4DydYHFRI7Ja2DBnTpUOl_AAkY06NiR80DlbDr-8lPJqlQyUP9t3n73Fns5yvYQ6V9a3zoQW_O2DdnqYTlYvN5mUjntavQICmU5XpASFiayREsIuwZUueTCcxF1n6uHoew648cPRVtzsdtNKVh4B3gAaRQW3Tyu_h2GDEPToJdH5pp5Njo10Ls3ftsNWqloAOm0-NUBsZqNBZiGffKLTE4cFKMxKY3f7zVCxstohbca2MqD92qFw3sKAaSIze-eiNG1vd-9o7heTfVDJSeO38Cc7S140_ESZKpVUFiqKSasFzklO9XCFydrmnLHw1LeNLspHSO0ko4RwuNgoOo4dYOZbcHLJCLAuejEr_df8A_VgC4HfboKXOOXYB-wA09-CGgLGjPTivKInrB1dCDiVK86bR7BnPsmHLJbvs-W6uZOzveMtLJ0l-AGuRw0Q=&lang=sage&interacts=eJyLjgUAARUAuQ==).
 
+# Lineární aproximace a jednorozměrné materiálové vztahy
 
+\iffalse
 
+<div class='obtekat'>
+
+![Podnět a materiálová odezva v případě mechanického namáhání oceli s malým obsahem uhlíku. Pěkně vidíme lineární závislost v okolí počátku a odklon od lineární závislosti pro velké namáhání. Zdroj: https://en.wikipedia.org, Breakeydown](Stress_Strain_Ductile_Material.jpg)
+
+</div>
+
+\fi
+
+V inženýrské praxi často potřebujeme modelovat odezvu materiálu reagujícího na vnější podnět. Může se jednat například o změnu délky při mechanickém namáhání, tok tepla materiálem při tepelném namáhání, tok tekutiny porézním materiálem (dřevo, půda) při difuzi nebo rozdílu tlaků a podobně. 
+
+Pokusíme se modelovat funkci dávající do souvislosti velikost podnětu a reakci materiálu.
+
+* Je přirozené, že při nulovém podnětu není žádná odezva a proto funkce  prochází počátkem.
+* S velikostí podnětu odezva na tento podnět roste a proto funkce v okolí počátku má kladnou derivaci a roste.
+* Z lineární aproximace vidíme, že pro $x_0=0$ a $f(0)=0$ se vzorec pro lineární aproximaci redukuje na $$f(x)\approx f'(0)x,$$ tj. na přímou úměrnost.
+* Ukazuje se, že v řadě praktických úloh je uvedená aproximace dobrá na dostatečně dlouhém intervalu a podle typu úlohy má tato aproximace povahu fyzikálního zákona a svůj vlastní název.  Nejčastěji se setkáme se s *Hookovým zákonem* pro deformaci materiálu (relativní prodloužení je úměrné normálovému napětí), *Darcyho zákonem* pro tok tekutiny půdou (filtrační rychlost je úměrná záporně vzatému hydraulickému gradientu), *Fickovým zákonem* pro difuzi (hustota difuzniho toku je úměrná záporně vzatému gradientu koncentrace) a *Fourierovým zákonem* pro vedení tepla v materiálu (hustota tepelného toku je úměrná záporně vzatému gradientu teploty). Později, v přednášce o zákonech zachování ve vektorovém poli ke konci semestru, si tyto závislosti naformulujeme ve vícerozměrném prostředí a hlavně ve tvaru, který umožní zohlednit práci s neizotropními materiály (různé fyzikální vlastnosti v různých směrech).
+* Matematicky je tedy povaha přímé úměrnosti v materiálových vztazích zřejmá a experimentálně je možné ověřit, pro jaké oblasti platí. Toto nám však mnohdy nestačí a snažíme se tyto vztahy ještě odvodit ze základních fyzikálních vztahů a z představy jak daný proces funguje. To otevírá možnosti potvrdit si, že naše představa o chování materiálu je správná.
+* V některých velmi speciálních případech dokonce umíme určit materiálovou charakteristiku výpočtem namísto měření. Pro praktické využití tato dovednost není významná (můžeme vypočítat například koeficient filtrace pro půdu složenou z částic ve tvaru stejně velkých kuliček, v praxi se však s takovým materiálem setkáme nanejvýš při speciálních aplikacích v laboratoři), ale dává nám to důležitý prostor pro ověření fyzikálních hypotéz a matematických postupů.
 
 
 # Derivace a tečna
@@ -187,19 +207,18 @@ vlastně konstantní funkcí, je možné také chápat jako selhání lineární
 aproximace. Následující slidy a pojem Taylorův polynom nám umožní najít
 prostředek pro aproximaci i v těchto případech.
 
-
-# Taylorův polynom a polynomiální aproximace v 1D
+# Derivace vyšších řádů
 
 > Definice (druhá a další vyšší derivace).
 >
 >* *Druhou derivací* rozumíme derivaci derivace. Označujeme $f''(x)$ nebo $\frac{\mathrm d^2 f}{\mathrm dx^2}$. 
 >* Podobně *$k$-tou derivací* rozumíme derivaci $(k-1)$-ní derivace. Označujeme $f^{(k)}(x)$ nebo $\frac{\mathrm d^k f}{\mathrm dx^k}$. 
 >
->Platí tedy $$\frac {\mathrm d^2 f}{\mathrm dx^2}=\frac {\mathrm d}{\mathrm dx} \left(\frac {\mathrm d f}{\mathrm dx}\right),\quad  
-\frac {\mathrm d^kf}{\mathrm dx^k}=\frac {\mathrm d}{\mathrm dx}
+>Platí tedy $$\frac {\mathrm d^2 f}{\mathrm dx^2}:=\frac {\mathrm d}{\mathrm dx} \left(\frac {\mathrm d f}{\mathrm dx}\right),\quad  
+\frac {\mathrm d^kf}{\mathrm dx^k}:=\frac {\mathrm d}{\mathrm dx}
 \left(\frac {\mathrm d^{k-1}f}{\mathrm dx^{k-1}}\right)  $$
 aneb
-$$f''=(f')', 
+$$f'':=(f')', 
 \quad f'''=(f'')', \quad f^{(k)}={(f^{(k-1)})'}.$$
 
 Označení derivací pomocí čárek se nazývá Lagrangeova notace, označení
@@ -215,6 +234,14 @@ exponentem přirozené číslo, po konečném počtu kroků se exponent sníží
 na nulu, funkce tedy bude konstantní a všechny další derivace budou
 nulové. 
 * Polynomy mají všechny derivace od jistého řádu rovny nule.
+
+Podobně je možné pracovat s parciálními derivacemi parciálních derivací. Například $$\frac{\partial ^2 f}{\partial x^2}:=\frac{\partial }{\partial x}\left(\frac{\partial f}{\partial x}\right)$$
+$$\frac{\partial ^2 f}{\partial y^2}:=\frac{\partial }{\partial y}\left(\frac{\partial f}{\partial y}\right)$$
+nebo 
+$$\frac{\partial ^2 f}{\partial x\partial y}:=\frac{\partial }{\partial y}\left(\frac{\partial f}{\partial x}\right).$$
+
+# Taylorův polynom a polynomiální aproximace v 1D
+
 
 > Definice (Taylorův polynom).
 > *Taylorův polynom* stupně $n$ pro funkci $f$ v bodě $x_0$ je polynom 
@@ -434,7 +461,7 @@ nemění. Přirozeně nenastává ani tam, kde funkce není definována.
 
 <div class='obtekat'>
 
-![Působením síly se element materiálu může posunout, rotovat, deformovat. Tunto změnu potřebujeme zachytit.](deformace.png)
+![Působením síly se element materiálu může posunout, rotovat, deformovat. Tuto změnu potřebujeme zachytit. Zdroj: https://physics.stackexchange.com/questions/311716/geometric-derivation-of-the-infinitesimal-strain-tensor/311744](deformace.png)
 
 </div>
 
@@ -459,8 +486,8 @@ $$
 
 Uvažujme nyní mechanické namáhání, kdy se těleso posunuje, rotuje a
 deformuje vlivem působení vnější síly a bod $(x_{1}, x_{2})$ se
-transformuje na bod $(u_{1}(x_{1},x_{2}),u_{2}(x_{1},x_{2})).$
-Čtverec $ABCD$ na obrázku se zobrazí na obrazec $A'B'C'D'$. Pomocí lineárních
+posune o $(u_{1}(x_{1},x_{2}),u_{2}(x_{1},x_{2})).$
+Pomocí lineárních
 aproximací
 $$
 \begin{aligned}
@@ -468,14 +495,7 @@ $$
   u_{2}(x_{1}+\Delta x_{1}, x_{2}+\Delta x_{2})&\approx u_{2}+\frac{\partial u_{2}}{\partial x_{1}}\Delta x_{1}+\frac{\partial u_{2}}{\partial x_{2}}\Delta x_{2}
   \end{aligned}
 $$
-dostáváme aproximace polohy bodů $B'$, $C'$ a $D'$ založené na
-relativní poloze bodů $B$, $C$ a $D$ vzhledem k $A$ a na změně polohy
-bodu $A$. Bod $C$ je od bodu $A$ vzdálen o $\Delta x_{1}$ ve
-vodorovném směru a o $\Delta x_{2}$ ve svislém směru. Bod $C'$ je
-vzhledem k bodu $A'$ umístěn o $\frac{\partial u_{1}}{\partial
-x_{1}}\Delta x_{1}+\frac{\partial u_{1}}{\partial x_{2}}\Delta x_{2}$
-doprava a $\frac{\partial u_{2}}{\partial x_{1}}\Delta
-x_{1}+\frac{\partial u_{2}} {\partial x_{2}}\Delta x_{2}$ nahoru. Při
+dostáváme aproximace této transformace. Při
 transformaci ve $3D$ je situace podobná, jenom jsou zde další členy
 od třetích souřadnic. Aby se situace nestala nepřehlednou, je klasický
 způsob zápisu neudržitelný. Nástroj pro přehlednou formulaci lineární
@@ -484,11 +504,12 @@ a maticového násobení. Poté budeme díky lineární aproximaci schopni
 zformulovat souvislost mezi deformací a působením vnější síly.
 
 Za výše uvedenou lineární aproximaci však platíme jistou daň. Lineární
-zobrazení mimo jiné transformuje přímky na přímky a rovnoběžky na
-rovnoběžky. Deformaci nakreslenou na obrázku tím pádem nemůžeme
-podchytit. Lineární aproximace je přesná jenom pro relativně malé
-deformace. Proto se také výsledný produkt, ke kterému se v průběhu
-semestru dopracujeme, nazývá tenzor malých deformací.
+zobrazení mimo jiné transformuje přímky na přímky, rovnoběžky na
+rovnoběžky, střed úsečky na střed úsečky. Deformaci, která tyto
+podmínky nesplňuje, tím pádem nemůžeme podchytit. Lineární aproximace
+je přesná jenom pro relativně malé deformace. Proto se také výsledný
+produkt, ke kterému se v průběhu semestru dopracujeme, nazývá tenzor
+malých deformací.
 
 
 # Shrnutí, hlavní myšlenky

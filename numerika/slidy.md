@@ -52,10 +52,6 @@ Rovnici $$x=\cos x$$ nejprve přepíšeme do tvaru $$x-\cos x=0$$ a hledáme vla
 Vidíme, že proces opravdu neuvěřitelně rychle konverguje k\ řešení rovnice.
 
 	
-\fi
-
-
-
 # Nondimenzionalizace a bezrozměrné veličiny
 
 Rovnice vedení tepla v jedné dimenzi (prostup tepla stěnou, vedení

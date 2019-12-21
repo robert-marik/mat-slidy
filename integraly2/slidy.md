@@ -112,7 +112,7 @@ $$\frac 12 \int_0^2 2x^2-1 \,\mathrm dx=\frac 12 \left[\frac 23 x^3-x\right]_0^2
 
 
 **Příklad.** (Podle Leah Edelstein-Keshet: Integral Calculus with
-Applications to the Life Sciences) Health Canada dlouhodobě monitoruje
+Applications to the Life Sciences). Health Canada dlouhodobě monitoruje
 chřipku. Ze získaných dat vyplývá, že u této nemoci existuje sezonní
 cyklus s krátkou periodou a dlouhodobý dvacetiletý cyklus s dlouhou
 periodou. Je-li $t$ čas v měsících, je počet nemocných (ve stotisících

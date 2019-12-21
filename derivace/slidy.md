@@ -120,7 +120,7 @@ Buď $y=f(x)$ funkce definovaná na nějakém otevřeném intervalu.
 
 > Definice (derivace). *Derivací* funkce $f$ v bodě $x$ rozumíme
 limitu
-$$\frac{\mathrm df}{\mathrm dx}=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h},$$
+$$\frac{\mathrm df}{\mathrm dx}:=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h},$$
 pokud tato limita existuje a je konečná.
 
 Derivaci funkce $f$ v bodě $x_0$ označujeme $f'(x_0)$ nebo
@@ -217,7 +217,7 @@ archeologických nálezů pozůstatků živých organismů
 
 Derivace v bodě, pokud ji nahlížíme z hlediska prostorové změny
 veličiny, která nás zajímá, je míra, jak nerovnomerně je veličina
-rozložena v prostoru.
+rozložena v prostoru. Často se tato veličina nazývá gradient, zejména pokud nepracujeme v jednorozměrném případě, ale pokud popisujeme děj probíhající v rovině nebo v prostoru. 
 
 ### Vedení tepla (dřevařství, nábytek, dřevostavby)
 
@@ -351,8 +351,8 @@ celek.
 # Parciální derivace
 
 > Definice (parciální derivace). Buď $f\colon \mathbb R^2\to\mathbb R$ funkce dvou proměnných,  $x$ a $y$, tj. $f(x,y)$. Výraz
-$$\frac{\partial f}{\partial x}=\lim_{h\to 0}\frac{f(x+h,y)-f(x,y)}h$$ se nazývá *parciální derivace funkce $f$ podle $x$*. Podobně,
-$$\frac{\partial f}{\partial y}=\lim_{h\to 0}\frac{f(x,y+h)-f(x,y)}h$$ je *parciální derivace funkce $f$ podle $y$*.
+$$\frac{\partial f}{\partial x}:=\lim_{h\to 0}\frac{f(x+h,y)-f(x,y)}h$$ se nazývá *parciální derivace funkce $f$ podle $x$*. Podobně,
+$$\frac{\partial f}{\partial y}:=\lim_{h\to 0}\frac{f(x,y+h)-f(x,y)}h$$ je *parciální derivace funkce $f$ podle $y$*.
 
 Podobně můžeme definovat parciální derivaci pro funkce libovolného
 konečného počtu proměnných. V těchto parciálních derivacích vlastně
@@ -434,7 +434,7 @@ pohybu.
 > Definice (gradient). Buď $f(x,y)$ funkce dvou proměnných, která má
 parciální derivace. *Gradientem* funkce $f$ rozumíme
 vektor
-$$\mathop{\text{grad}}f=\left(\frac{\partial f}{\partial
+$$\mathop{\text{grad}}f:=\left(\frac{\partial f}{\partial
     x},\frac{\partial f}{\partial y}\right).$$
 
 **Poznámka.** Formálně též často píšeme
