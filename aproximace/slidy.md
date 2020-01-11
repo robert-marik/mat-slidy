@@ -310,7 +310,7 @@ pouze na určitém intervalu, třeba i krátkém).
 
 # Lokální extrémy spojitých funkcí
 
-Náledující definice si všímají bodů které mají tu vlastnost, že v okolí není možné najít body buď s vyšší funkční hodnotou (potom se jedná o lokální maximum, nikde v okolí mi funkce neukáže více) nebo s nižší funkční hodnotou (analogicky, lokální minimum).
+Následující definice si všímají bodů které mají tu vlastnost, že v okolí není možné najít body buď s vyšší funkční hodnotou (potom se jedná o lokální maximum, nikde v okolí mi funkce neukáže více) nebo s nižší funkční hodnotou (analogicky, lokální minimum).
 
 > Definice (lokální extrémy). Nechť $f\colon \mathbb R\to\mathbb R$.
 >
