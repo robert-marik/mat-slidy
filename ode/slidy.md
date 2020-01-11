@@ -354,6 +354,7 @@ integrální křivky vodorovně. Proto se křivky, kde je $\varphi(x,y)$
 konstantní, nazývají **izokliny**.
 
 
+<!--
 # Numerické řešení IVP
 
 
@@ -409,6 +410,7 @@ výstupem metody bude aproximace integrální křivky pomocí lomené čáry.
 * [dfield](http://math.rice.edu/~dfield/dfpp.html)
 * [Sage](http://user.mendelu.cz/marik/akademie/sagecell.php?short=1&in=f%28x%2Cy%29%3Dy*%28x-y%29%0A%0Aymin%2C+ymax+%3D+0%2C+2%0A%0Aics1%3D%5B0%2C0.1%5D%0Aics2%3D%5B0%2C1%5D%0A%0AP2%3Ddesolve_rk4%28f%28x%2Cy%29%2Cy%2Cics%3Dics1%2Civar%3Dx%2Cend_points%3D%5B0%2C3%5D%2Coutput%3D%27slope_field%27%29%0AP1%3Ddesolve_rk4%28f%28x%2Cy%29%2Cy%2Cics%3Dics2%2Civar%3Dx%2Cend_points%3D%5B0%2C3%5D%2Coutput%3D%27plot%27%2C+color%3D%27red%27%29%0A%0A%28P1%2BP2%29.show%28ymax%3Dymax%2Cymin%3Dymin%29)
 
+-->
 
 # Transformace diferenciální rovnice
 
@@ -465,6 +467,8 @@ znamená, že všechna řešení rovnice (*) konvergují k $T_0$. To, že řeše
 >V této úloze bylo zavedení nových veličin přirozené. I u méně zřejmých úloh zkušenosti ukazují, že je vhodné volit transformaci tak, aby vznikly veličiny bezrozměrné, které nemají fyzikální jednotku. Například v
 *Horáček, Fyzikální a mechanické vlastnosti dřeva I* je zavedena [bezrozměrná vlhkost, bezrozměrný čas a bezrozměrná vzdálenost](https://is.mendelu.cz/eknihovna/opory/zobraz_cast.pl?cast=9180;lang=cz) na straně 61 pro rovnici popisující difuzi a [charakteristická délka, Biotovo číslo (bezrozměrná tepelná vodivost) a bezrozměrná teplota, bezrozměrný čas a bezrozměrná vzdálenost](https://is.mendelu.cz/eknihovna/opory/zobraz_cast.pl?cast=9182;lang=cz) pro rovnici popisující vedení tepla na stranách 88 a 89.
 
+<!--
+
 \iffalse 
 
 # Malá odbočka - zaokrouhlovací chyby v numerických výpočtech
@@ -514,6 +518,8 @@ Excel](https://support.microsoft.com/en-us/help/78113/floating-point-arithmetic-
 
 \fi
 
+-->
+
 # ODE tvaru $\frac{\mathrm dy}{\mathrm dx}=f(y)$
 
 Rovnice $$\frac{\mathrm dy}{\mathrm dx}=f(y)\tag{♣}$$ se nazývá
@@ -527,6 +533,12 @@ se budou řešení chovat.
 * Je-li $f(y_0)=0$, je konstantní funkce $y(x)=y_0$ řešením rovnice
   (♣). Protože derivace konstantní funkce je nula, vidíme, že řešením
   rovnice $$f(y)=0$$ obdržíme všechna konstantní řešení rovnice (♣).
+* Konstantní řešení představují rovnovážný stav. Často nás zajímá,
+  jestli při vychýlení z tohoto rovnovážného stavu má systém tendenci
+  se vrátit do původního stavu, nebo se od původního stavu dále
+  odchylovat. Na tuto otázku dává odpověď následující věta.
+
+<!--
 * Rovnici $$\frac{\mathrm dy}{\mathrm d x}=ky,$$ kde $k$ je konstanta,
   je možno přetransformovat na rovnici $\frac{\mathrm dy}{\mathrm
   d(kx)}=y$, kterou jsme studovali na jednom z úvodních slidů.  Proto
@@ -559,6 +571,8 @@ a po substituci $Y=y-y_0$, $k=f'(y_0)$ dostáváme rovnici
 $$\frac{\mathrm dY}{\mathrm dx}=kY,$$
 což je rovnice typu (♣). Stabilitu takové rovnice máme prozkoumánu a
 proto můžeme udělat následující závěr.
+
+-->
 
 > Věta (stabilita konstantních řešení). Jestliže platí $f(y_0)=0$, je
   konstantní funkce $y(x)=y_0$ konstantním řešením rovnice
@@ -793,21 +807,14 @@ přibližně a převádí se na řešení soustav lineárních rovnic.
 
 \fi
 
+Pro numerické řešení diferenciálních rovnic je vhodné umět nahradit derivace veličinami, se kterými se lépe formulují numerické modely. 
 
-Naučili jsme se numericky integrovat a řešit diferenciální rovnice a
-naskýtá se otázka, jak to je s\ numerickým derivováním. Základním
+Základním
 přístupem je vynechání limitního přechodu v definici derivace
 $$\frac{\mathrm df}{\mathrm dx}=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}.$$
 Tedy $$\frac{\mathrm df}{\mathrm dx}\approx\frac{f(x+h)-f(x)}{h}.$$ Okamžitá rychlost je nahrazena
 průměrnou rychlostí na intervalu $(x,x+h).$ Tento podíl se nazývá
-dopředná poměrná diference. Pokud použijeme toto nahrazení v
-diferenciální rovnici
-$$\frac{\mathrm df}{\mathrm dx}=\varphi(x,y),$$
-dostaneme 
-$$\frac{f(x+h)-f(x)}{h}=\varphi(x,y)$$
-a odsud
-$$f(x+h)=h\varphi(x,y)+f(x),$$
-což je vlastně Eulerova metoda řešení diferenciální rovnice prvního řádu. 
+dopředná poměrná diference. 
 
 Jiná aproximace vychází z Taylorova polynomu druhého řádu napsaného pro $f(x+h)$ a $f(x-h)$, tj. ze vztahů
 $$\begin{aligned}
