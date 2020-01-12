@@ -735,8 +735,7 @@ $$V(t)=(k_0t)^3.$$ Máme zde tedy nejednoznačnost v řešení počáteční
 úlohy. Tato nejednoznačnost není v rozporu s\ větou o existenci a
 jednoznačnosti řešení, protože pravá strana je nulová (podmínka pro
 separovatelnou rovnici není splněna) a nemá ohraničenou derivaci podle
-$V$ (podmínka pro obecnou rovnici také není splněna). A\
-nejednoznačnost má v tomto případě dokonce fyzikální význam. Plynné
+$V$ (podmínka pro obecnou rovnici také není splněna). A\ nejednoznačnost má v tomto případě dokonce fyzikální význam. Plynné
 skupenství může existovat i\ pod bodem kondenzace. Takovému jevu se
 říká přechlazená pára. Aby došlo ke kondenzaci, musí být k dispozici
 kondenzační jádra, například nečistoty ve vzduchu. Proto ve
