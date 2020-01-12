@@ -2,6 +2,18 @@
 % Robert Mařík
 % 7.5.2019
 
+
+V praxi pracujeme s řadou veličin, které se počítají tak, že se parametr systému násobí obsahem. 
+
+* Z plošné hustoty a obsahu násobením obdržíme hmotnost. 
+* Z hloubky nádrže a obsahu obdržíme násobením objem. 
+* Z tlaku a obsahu obdržíme násobením tlakovou sílu. 
+
+Je však otázka, jak tento přístup použít v případě, že daný parametr není po celé ploše na které je rozložen konstantní. Deska může být nehomogenní, nádrž nemusí mít vodorovné dno a ponořená deska nemusí mít všechny své části ve stejné hloubce. 
+
+Řešení této nesnáze je použití dvojného integrálu, který si nyní představíme.
+
+
 \iffalse
 
 # Motivace 1 (hmotnost nehomogenní desky)
@@ -298,7 +310,7 @@ Fubiniovy věty. Ke slovu přijde spíše numerický výpočet integrálu.
   osu $x$ je $\rho(x,y)=y$ a pro osu $y$ je $\rho (x,y)=x$. Pro osu
   procházející kolmo počátkem je $\rho(x,y)=\sqrt{x^2+y^2}$.
 
-# Fyzikální aplikace dvojného integrálu (pokračování)
+# Techniké aplikace dvojného integrálu
 
 
 \iffalse
@@ -318,7 +330,8 @@ Fubiniovy věty. Ke slovu přijde spíše numerický výpočet integrálu.
   $\sigma(x,y)=1$, anglicky *second moment of area*) je veličina,
   která hraje podstatnou roli v\ mechanice (nábytek, stavby) při
   dimenzování (polic, nosných tyčí, nosníků).
-* Vzorce pro obsah $x$-ovou souřadnici těžiště ($x_0$), $y$-ovou
+* V technické praxi zpravidla neuvažujeme nekonstantní plošnou hustotu. Potom je možné je bez újmy na obecnosti nahradit jedničkou.
+  Vzorce pro obsah, $x$-ovou souřadnici těžiště ($x_0$), $y$-ovou
   souřadnici těžiště ($y_0$), kvadratický moment vzhledem k\ ose $x$
   ($I_x$) a kvadratický moment vzhledem k\ ose $y$ ($I_y$) (pro množinu $M$ s plošnou hustotou $1$) jsou
   $$
