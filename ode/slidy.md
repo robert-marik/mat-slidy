@@ -333,7 +333,7 @@ Jedná se o diferenciální rovnice, kde zrychlení (derivace rychlosti) a časo
 </div>
 
 Protože derivace funkce v bodě udává směrnici tečny ke grafu funkce
-v tomto bodě, lze rovnici $$y'=\varphi(x,y)\tag{1}$$ chápat jako předpis, který
+v tomto bodě, lze rovnici $$\frac{\mathrm dy}{\mathrm dx}=\varphi(x,y)\tag{1}$$ chápat jako předpis, který
 každému bodu v rovině přiřadí směrnici tečny k integrální křivce,
 která tímto bodem prochází.  Sestrojíme-li v dostatečném počtu
 (například i náhodně zvolených) bodů $[x,y]$ v rovině vektory
@@ -378,7 +378,7 @@ bodu, odkud opět integrální křivku aproximujeme tečnou.  Směrnici
 tečny zjistíme z diferenciální rovnice, buď přímo z derivace (Eulerova
 metoda).
 
-Vyjdeme-li z počáteční úlohy $$y'=\varphi(x,y), \quad y(x_0)=y_0,$$
+Vyjdeme-li z počáteční úlohy $$\frac{\mathrm dy}{\mathrm dx}=\varphi(x,y), \quad y(x_0)=y_0,$$
 má lineární aproximace řešení v bodě $[x_0,y_0]$ tvar $$y=y_0+\varphi(x_0,y_0)(x-x_0).$$
 Funkční hodnotu v bodě $x=x_1$ označíme $y_1$ a tento bod bude dalším  body lomené čáry, tj. $$y_1=y_0+\varphi(x_0,y_0)(x_1-x_0).$$
 Hodnota $x_1-x_0$ je krok Eulerovy metody označovaný $h$. Tento postup opkaujeme s počáteční podmínkou $y(x_1)=y_1$.
@@ -577,7 +577,7 @@ proto můžeme udělat následující závěr.
 > Věta (stabilita konstantních řešení). Jestliže platí $f(y_0)=0$, je
   konstantní funkce $y(x)=y_0$ konstantním řešením rovnice
   $$\frac{\mathrm dy}{\mathrm dx}=f(y).$$ Toto řešení je stabilní
-  pokud $f'(y_0)<0$ a nestabilní pokud $f'(y_0)>0$.
+  pokud $\frac{\mathrm df}{\mathrm dx}(y_0)<0$ a nestabilní pokud $\frac{\mathrm df}{\mathrm dx}(y_0)>0$.
 
 Pro grafickou intepretaci je vhodné připomenout, že funkce s kladnou
 derivací jsou rostoucí a funkce se zápornou derivací klesající. Pokud
@@ -650,7 +650,7 @@ R. L. Devaney, G.  R. Hall: Differential equations, Cengage Learning
 
 
 > Definice (ODE se separovanými proměnnými). Diferenciální rovnice tvaru
-> $$    y'=f(x)g(y) \tag{S}$$
+> $$    \frac{\mathrm dy}{\mathrm dx}=f(x)g(y) \tag{S}$$
 > kde $f$ a $g$ jsou funkce spojité na (nějakých) otevřených intervalech
 > se nazývá *obyčejná diferenciální rovnice se separovanými proměnnými.*
 
@@ -693,7 +693,7 @@ $$
 
 Počáteční úloha má jediné řešení, pokud má pravá strana ohraničenou parciální derivace podle $y$, jak je zmíněno v úvodu přednášky. Nicméně pro diferenciální rovnici se separovanými proměnnými je možné vyslovit následující mnohem jednodušší postačující podmínku pro jednoznačnost řešení.
 
-> Věta (existence a jednoznačnost řešení Cauchyovy úlohy pro rovnici se separovanými proměnnými). Je-li $g(y_0)\neq 0$, má počáteční úloha $$y'=f(x)g(y),\qquad y(x_0)=y_0$$ právě jedno řešení definované v nějakém okolí počáteční podmínky.
+> Věta (existence a jednoznačnost řešení Cauchyovy úlohy pro rovnici se separovanými proměnnými). Je-li $g(y_0)\neq 0$, má počáteční úloha $$\frac{\mathrm dy}{\mathrm dx}=f(x)g(y),\qquad y(x_0)=y_0$$ právě jedno řešení definované v nějakém okolí počáteční podmínky.
 
 
 # Diferenciální rovnice růstu vodní kapky
