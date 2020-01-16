@@ -10,12 +10,12 @@
 
 <div class='obtekat'>
 
-![Pro provedení konkrétního výpočtu jsou nutná detailní znalosti výpočetního nástroje. Pro zvládnutí šířky aplikací je naopak nutný mít dostatečný nadhled zastírající jednotlivé detaily. Zdroj: pixabay.com](sunset.jpg)
+![Derivace je důležitým kolečkem v mechanismu, jakým popisujeme svět okolo nás. Umí zachytit a popsat změnu a rychlost. Je však nutné ji zasadit do patřičného kontextu. Zdroj: pixabay.com](stroj.jpg)
 
 </div>
 
 
-S využitím aparátu derivací jsme v minulé přednášce poznali a naučili se ve cvičení řešit úlohy tří základních různých typů:
+S využitím aparátu derivací jsme v minulé přednášce poznali a naučili nebo naučíme se ve cvičení řešit úlohy tří základních různých typů:
 
 1. *K funkci najdi její derivaci, tj. rychlost změny.* Toto je klasické derivování, případně doplněné o slovní interpretaci derivace. Použijeme vzorce a jedná se o čistě manuální dovednost. Vstupem je funkce, výstupem její derivace a případně slovní interpretace této derivace. Příkladů je spousta na webu i v učebnicích.
 1. *Ze zadaného vztahu mezi dvěma veličinami najdi vztah mezi rychlostmi změn těchto veličin.* Jako vedlejší produkt mimo jiné využíváme dovednosti derivování z předchozího bodu a vždy derivujeme složenou funkci: vzorec vyjadřující jednu veličinu pomocí druhé je vnější složka a druhá veličina, resp. její závislost na čase, je složka vnitřní. Vstupem je vztah mezi veličinami a rychlost, s jakou se jedna z veličin mění, výstupem je rychlost, s jakou se mění veličina druhá.
@@ -30,7 +30,7 @@ vstupních datech na zmenu funkční hodnoty funkce. Pokud změna ve
 vstupních datech není jednotková ale násobek jednotkové změny, je i
 odezva násobná.
 
-> Poznámka.
+> Poznámka (derivace jako měřítko citlivosti funkce na změnu vstupních dat).
 Buď $f:\mathbb R\to\mathbb R$ funkce taková, že má derivaci. Pokud se veličina $x$ změní z hodnoty $x_0$ o hodnotu $\Delta x$ (tj. nová hodnota je $x_0+\Delta x$), potom se $f$ mění přibližně o $f'(x_0)\Delta x$, tj. $$\Delta f\approx f'(x_0)\Delta x$$ neboli
 $$\Delta f\approx \frac{\mathrm df(x_0)}{\mathrm dx}\Delta x.$$ Tato aproximace je použitelná pro malé hodnoty $\Delta x$. 
 
@@ -76,7 +76,7 @@ Buď $f:\mathbb R\to\mathbb R$ funkce, která má derivaci. V okolí bodu $x_0$
 $$f(x)\approx f(x_0)+ \frac{\mathrm df(x_0)}{\mathrm dx}(x-x_0).$$
 
 
-> Poznámka. Výše uvedený vzorec není těžké rozšifrovat.
+> Poznámka (slovní intepretace vzorce pro lineární aproxiamci). Výše uvedený vzorec není těžké rozšifrovat.
 >
 >* Veličina $f(x)$ je funkční hodnota v bodě $x$, tu chceme odhadnout.
 >* Veličina $f(x_0)$ je známá funkční hodnota v bodě $x_0$, to je
@@ -86,9 +86,15 @@ $$f(x)\approx f(x_0)+ \frac{\mathrm df(x_0)}{\mathrm dx}(x-x_0).$$
 >  změnou veličiny $x$ z $x_0$ o $\Delta x=x-x_0$ tak, jak jsme jej
 >  používali v minulé přednášce.
 
+> Poznámka (alternativní vzorec pro lineární aproxiamci). Vzorec pro lineární aproximaci se často píše v ekvivalentním tvaru
+$$f(x+h)\approx f(x)+f'(x)h,$$
+což získáme dosazením $x+h$ za $x$ a $x$ za $x_0$.
+
 **Příklad (růst stromu).** Strom má v roce 2019 výšku 3 metry a roste
   rychlostí 0.5 metru za rok. V roce $x$ je jeho výška dána vzorcem
   $$h(x)=3+0.5(x-2019).$$
+
+
 
 **Příklad (aproximace důležitých funkcí v okolí nuly).** Ve cvičení
 ukážeme platnost následujících přibližných vzorců, které platí pro $x$
@@ -192,7 +198,7 @@ Díky souvislosti derivace s tečnou je derivace jedinečným nástrojem při po
 
 <div class='obtekat'>
 
-![Pokud se rychlost růstu snižuje, je lineární aproximace nadhodnocená a funkční hodnoty jsou ve skutečnosti nižší.](tecna.png)
+![Teorie založené na lineárních aproximacích vyřešily mnoho důležitých úloh, ale pokud by příroda fungovala lineárně jako celek, nemohli bychom sestrojit například laser. Ten je založený na nelineární optice a materiálech s nelineární materiálovou odezvou. Neměli bychom řezací stroje, ale ani laserová ukazovátka. Zdroj: pixabay.com](laser.jpg)
 
 </div>
 
@@ -209,10 +215,11 @@ To znamená že budeme studovat derivaci derivace, derivaci derivace
 derivace atd.
 
 
-Aproximaci funkce $\cos x\approx 1$ odvozenou výše, kdy aproximujeme
-vlastně konstantní funkcí, je možné také chápat jako selhání lineární
-aproximace. Následující slidy a pojem Taylorův polynom nám umožní najít
-prostředek pro aproximaci i v těchto případech.
+Aproximaci funkce $\cos x\approx 1$ zmíněnou výše (odvodíme ve
+cvičení), kdy aproximujeme vlastně konstantní funkcí, je možné také
+chápat jako selhání lineární aproximace. Následující slidy a pojem
+Taylorův polynom nám umožní najít prostředek pro aproximaci i v těchto
+případech.
 
 # Derivace vyšších řádů
 
@@ -256,9 +263,24 @@ $$\frac{\partial ^2 f}{\partial x\partial y}:=\frac{\partial }{\partial y}\left(
 tj.
 \dm$$T(x)=f(x_0)+\frac {\mathrm df(x_0)}{\mathrm dx}(x-x_0)+\frac{1}{2!} \frac {\mathrm d^2f(x_0)}{\mathrm dx^2} (x-x_0)^2+\cdots +\frac{1}{n!}\frac {\mathrm d^nf(x_0)}{\mathrm dx^n}(x-x_0)^n.$$
 
-> Věta (Taylorova věta s Lagrangeovým tvarem zbytku).
-> Platí $$f(x)-T(x)=\frac{1}{(n+1)!}\frac {\mathrm d^{n+1}f(\xi)}{\mathrm dx^{n+1}}(x-x_0)^{n+1},$$
-kde $\xi\in(x_0,x)$ je vhodné číslo. Pravá strana této rovnice je blízká k nule, pokud je $n$ dostatečně velké, $x$ dostatečně blízko k $x_0$ a $(n+1)$-ní derivace funkce $f$ je relativně malá. V těchto případech je $$f(x)\approx T(x).$$
+
+Taylorův polynom je nejlepší aproximace funkce $f$ polynomem. Je možné
+ukázat, že rozdíl $$f(x)-T(x)$$ je blízký k nule, pokud je $n$
+dostatečně velké, $x$ dostatečně blízko k $x_0$ a $(n+1)$-ní derivace
+funkce $f$ je relativně malá. V těchto případech je $$f(x)\approx
+T(x).$$ Často používáme aproximaci v nule. V tomto případě dostáváme
+následující větu. V ní $O(x^{n+1})$ je takzvané [Landauovo velké
+O](https://cs.wikipedia.org/wiki/Landauova_notace). Tímto zápisem je
+vyjádřen člen, který je pro $x$ blízká k nule v absolutní hodnotě
+menší než násobek funkce $x^{n+1}$, tj. v počátku konverguje k nule
+stejně rychle nebo rychleji.
+
+
+> Věta (Taylorova aproximace v okolí nuly) Platí
+\dm$$f(x)=f(0)+f'(0)x+\frac{1}{2!}f''(0)x^2+\cdots +\frac{1}{n!}f^{(n)}(0)x^n+O(x^{n+1}),$$
+resp. v posnut=m tavru
+\dm$$f(x+h)=f(x)+f'(x)h+\frac{1}{2!}f''(x)h^2+\cdots +\frac{1}{n!}f^{(n)}(x)h^n+O(h^{n+1}),$$
+pokud existují spojité derivace funkce $f$ do řádu $n+1$.
 
 **Příklad.** $$
 \begin{aligned}
