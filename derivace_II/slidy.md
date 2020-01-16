@@ -318,7 +318,7 @@ Analogicky se chovají pružné konstrukce. V klidu jsou ve stavu s minimální 
 
 
 
-# Vlastnosti funkcí jedné proměnné (prostá funkce)
+# Prostá funkce
 
 Někdy jsme v situaci, že známe výsledek po působení nějaké funkce a
 potřebujeme zrekonstruovat vstupní hodnotu. Řešíme tedy pro zadanou
@@ -341,12 +341,15 @@ plyne $x=5$.
 **Příklad.** Funkce $x^2$ není prostá a proto z rovnosti $x^2 = 7^2$ neplyne $x=7$.
 
 
-# Vlastnosti funkcí jedné proměnné (inverzní funkce)
+# Inverzní funkce
 
 > Definice (inverzní funkce).   Nechť funkce $f: A\to B$ je prostá. Pravidlo, které každému $x$   z množiny $f(A)$ přiřadí to (jediné) $y$, pro které platí $f(y)=x$ se nazývá *inverzní funkce* k funkci $f$, označujeme   $\mathbf{f^{-1}}$.
 
 
-> Poznámka. Symbol $f^{-1}(x)$ lze tedy chápat buď jako hodnotu inverzní funkce
+> Poznámka (inverzní funkce pří řešení rovnic). Jinak zapsáno, je-li $$f(y)=x$$ a $f$ má inverzní funkci, platí
+$$y=f^{-1}(x).$$ Jedná se o zobecnění pouček jak "převádět výrazy na druhou stranu rovnice".
+
+Symbol $f^{-1}(x)$ lze tedy chápat buď jako hodnotu inverzní funkce
   k funkci $f$ v bodě $x$, nebo jako převrácenou hodnotu k číslu
   $f(x)$, tj jako $[f(x)]^{-1}=\frac{1}{f(x)}$. Nebude-li z kontextu
   zřejmé, o kterou variantu se jedná, musíme toto upřesnit.
@@ -359,7 +362,8 @@ plyne $x=5$.
 Newtonova metoda (též Newtonova Raphsonova metoda) je metoda pro
 numerické řešení rovnic. To používáme v případě, že není možné (nebo
 není účelné) řešit rovnici přesně a snažíme se najít přibližné
-řešení.
+řešení. Například neznáme inverzní funkci, nebo s touto funkcí neumíme
+pracovat.
 
 
 Budeme hledat řešení rovnice $$f(x)=0.$$ Budeme postupovat tak, že
