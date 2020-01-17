@@ -320,9 +320,9 @@ Díky tomuto je dokonce možné snadno najít vztahy mezi objemem a povrchem $$V
 Poučka založená na poznatku, že fyzikální zákony je možno vyjadřovat v
 různých jednotkách. Jedná se o zobecnění rozměrové analýzy.
 
-> Věta (Buckinghamův Π teorém). Rovnici $$F(x_1,x_2,\dots,x_n)=0,$$ která vyjadřuje fyzikální zákon a obsahuje
+> Věta (Buckinghamův Π teorém). Rovnici $$F(x_1,x_2,\dots,x_n)=0,$$ resp. $$x_1=F(x_2,\dots,x_n),$$ která vyjadřuje fyzikální zákon a obsahuje
 $n$ veličin (včetně fyzikálních a materiálových konstant) a $m$ nezávislých
-jednotek je možno zapsat jako rovnici vyjádřenou pomocí $n-m$
+jednotek je možno zapsat jako rovnici vyjádřenou pomocí $(n-m)$
 bezrozměrných parametrů $$f(\pi_1,\pi_2,\dots,\pi_{n-m})=0.$$
 
 <div class='obtekat'>
@@ -340,12 +340,12 @@ vztah mezi veličinami odhalíme (až na detaily typu multiplikativní
 konstanta) jenom z fyzikálních jednotek, bez hlubší znalosti
 fyzikálního pozadí problematiky.
 
-**Příklad.** Pro nalezení přepočtu mezi objemem koule $V$ (v metrech
-krychlových) a povrchem koule (v metrech čtverečních) máme $n=2$ a
-$m=1$. Tedy vztah se dá zapsat pomocí jedné bezrozměrné veličiny,
-například $\pi_1=V^2 S^{-3}$, tj. $$f(V^2 S^{-3})=0.$$ Je-li $k$
-nulový bod funkce $f$, lze psát $$V^2 S^{-3}=k$$ a $$V^2=\sqrt k
-S^{3}.$$ 
+**Příklad (vztah mezi objemem a povrchem koule).** Pro nalezení
+přepočtu $$F(V,S)=0$$ mezi objemem koule $V$ (v metrech krychlových) a povrchem
+koule $S$ (v metrech čtverečních) máme $n=2$ a $m=1$. Tedy vztah se dá
+zapsat pomocí jedné bezrozměrné veličiny, například $\pi_1=V^2
+S^{-3}$, tj. $$f(V^2 S^{-3})=0.$$ Je-li $k$ nulový bod funkce $f$, lze
+psát $$V^2 S^{-3}=k$$ a $$V^2=\sqrt k S^{3}.$$
 
 V předchozím příkladě jsme viděli stejný výsledek, jaký jsme dostali
 v předchozím textu díky podobnosti. Současně ukazuje cestu v případech, kdy
@@ -353,15 +353,15 @@ podobnost není možné využít, ale zůstává zachováno to, že veličiny je
 možné zkombinovat jediným možným způsobem tak, aby jednotky ladily.
 
 
-**Příklad.** Veličinou ovlivňující tuhost nosníku při daném
+**Příklad (tuhost nosníků).** Veličinou ovlivňující tuhost nosníku při daném
 materiálovém složení je kvadratický moment průřezu $I$ v jednotkách
-metr na čvrtou. Pokud je průřez nosníku daný jenom jedním délkovým
+metr na čtvrtou. Pokud je průřez nosníku daný jenom jedním délkovým
 parametrem $a$ (například čtvercový nebo kruhový průřez), máme stejný
-případ jako výše: $n=2$ a $m=1$. Tedy stejně jako v předchozím
+případ jako výše: $n=2$ a $m=1$. Tedy vztah mezi kvadratickým průřezem a rozměrem $$I=F(a)$$ stejně jako v předchozím
 příkladě existuje konstanta $k$ taková, že $$I=ka^4.$$ Po seznámení se
-s dvojným integrálem uvídme, že pro čtvercový průřez je $k=\frac
+s dvojným integrálem uvídme, že pro čtvercový průřez o straně čtverce $a$ je $k=\frac
 1{12}.$ Pro obdélníkový průřez o rozměrech $w$ a $h$ toto neplatí,
-protože je $m=3$ ($a$, $b$, $I$) a $n=1$ (metr). Pokud však víme, že
+protože je $m=3$ (tři veličiny $a$, $b$, $I$) a $n=1$ (metr). Pokud však víme, že
 dva nosníky vedle sebe se prohýbají stejně, jako by byly spojeny,
 můžeme místo kvadratického momentu průřezu pracovat s kvadratickým
 momentem na jednotku šířky a potom stejně jako v minulém případě
