@@ -232,7 +232,7 @@ Derivaci funkce $f$ v bodě $x_0$ označujeme $f'(x_0)$ nebo
 $\frac{\mathrm df(x_0)}{\mathrm dx}$. Derivaci v libovolném bodě potom
 $f'$, $f'(x)$ nebo $\frac{\mathrm df}{\mathrm dx}$. Zápis $\frac{\mathrm df}{\mathrm dx}$ je Leibnizova notace, zápis $f'$ je Lagrangeova notace. 
 
-> Poznámka. Rozšifrování definice derivace:
+> Poznámka (slovní interpretace definice derivace).
 >
 * Výraz z čitatele, tj. $f(x+h)-f(x)$, je změna veličiny $f$ na intervalu $[x,x+h]$. Často označujeme též $\Delta f$.
 * Podíl, tj. $\frac{f(x+h)-f(x)}h$ je změna veličiny $f$ na intervalu $[x,x+h]$ přepočítaná na jednotku veličiny $x$, tj. v jistém smyslu průměrná rychlost na tomto intervalu. Často označujeme též $\frac{\Delta f}{\Delta x}$.

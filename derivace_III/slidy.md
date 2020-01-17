@@ -4,7 +4,7 @@
 
 
 
-# Vlastnosti funkcí jedné proměnné (parita)
+# Parita funkce
 
 V následující definici se budeme zajímat o to, jestli existuje nějaký
 vztah mezi funkční hodnotou v bodě $x$ z definičního oboru a v bodě
@@ -58,7 +58,7 @@ vrcholu paraboly. To je častá úloha, protože systémy s potenciální
 energií se často nacházejí ve stavu blízkému minimu této
 energie. Otázka je, jak toto minimum najít. Budeme řešit poněkud
 obecnější úlohu, jak hledat nejenom minimální hodnotu, ale i maximální
-hodnotu. Zaměříme se na minima a maxima, která jsou lokální (platná
+hodnotu. Zaměříme se na minima a maxima, která jsou lokální (s funkcí pracujeme
 pouze na určitém intervalu, třeba i krátkém). 
 
 # Lokální extrémy spojitých funkcí
@@ -189,6 +189,123 @@ nemění. Přirozeně nenastává ani tam, kde funkce není definována.
 
 
 
+
+# Triky pro práci s funkcemi 1
+
+Následující triky jsme viděli v příkladě s vytesáním nosníku maximální tuhosti z kulatiny. 
+
+1. Vhodnou volbou jednotek dokážeme eliminovat některé
+parametry. Přesněji, vhodnou volnou jednotek dokážeme některým
+parametrům dát konkrétní numerickou hodnotu. Vyšetřovaná funkce je
+potom často jednodušší.
+1. Je-li $g$ rostoucí, potom z definice rostoucí funkce plynou ekvivalence
+$$
+\begin{gathered}
+  f(x)\leq f(x_0) \iff   g(f(x))\leq g(f(x_0)),\\
+    f(x)\geq f(x_0) \iff   g(f(x))\geq g(f(x_0))
+\end{gathered}
+$$
+a proto funkce $f(x)$ a $g(f(x))$ mají lokální extrémy ve stejných
+bodech. Toho je možné využít, pokud vidíme, že při vhodné volbě funkce
+$g$ by byla funkce $g(f(x))$ vhodnější pro hledání lokálních
+extrémů. Podobně je možné uvažovat i pro klesající funkce $g$, ale
+protože klesající funkce obrací směr nerovností, mění se lokální
+maximum na lokální minimum a naopak.
+
+<!--
+
+Dva útvary jsou podobné, jestli jeden vznikne z druhého zvětšením všech délek na jejich $k$-násobek. Pro $k$-krát zvětšený útvar platí, že všechny jeho rozměry jsou $k$-krát větší, všechny jeho plochy jsou $k^2$-krát větší a všechny jeho objemy jsou $k^3$-krát větší. Podobné útvary jsou vždy definovány jedním parametrem, například u kruhu a koule stačí zadat poloměr. U krychle stačí zadat délku jedné strany nebo délku stěnové uhlopříčky nebo délku tělesové uhlopříčky. U válce, který má stejnou výšku jako průměr podstavy stačí zadat výšku nebo poloměr podstavy. U kužele s vrcholovým úhlem $45^\circ$ stačí zadat výšku nebo poloměr podstavy a je tím dán celý kužel. U takových těles platí pro jakýkoliv povrch (povrch koule, povrch kužele, povrch pláště kužele, povrch válce, povrch válcové plochy, ...)
+$$S=k_1r^2$$ a pro jakýkoliv objem
+$$V=k_2r^3,$$ kde $k_1$ a $k_2$ jsou konstanty a $r$ vhodný délkový parametr.  Tyto konstanty mají dokonce pěknou interpretaci - odpovídají obsahu nebo objemu pro $r=1$ a ve většině případů je známe, protože například pro kouli nebo kužel máme přesný vzorec založený na poloměru.
+Díky tomuto je dokonce možné snadno najít vztahy mezi objemem a povrchem $$V=k_3 S^{3/2}$$ a $$S=k_4 V^{2/3}.$$ Tyto vztahy je snadné si pamatovat, stačí se řídit tím, že mocnina musí být taková, aby vycházely správné jednotky. Metodami středoškolské matematiky dokonce dokážeme dokonce konstanty $k_1$ až $k_4$ najít pro jednotlivá tělesa jako je koule apod. Často nás však přesná hodnota konstanty nezajímá a jde nám jenom o charakter funkční závislosti, o přímou úměrnost mezi vhodnými mocninami. Vztahy stejného typu platí například i pro kužel s konstantním úhlem u vrcholu. To je možné využít při skladování sypkého materiálu (písek nasypaný na hromadu zaujme tvar kužele, úhel u vrcholu je daný vlastnostmi písku) nebo vyprazdňování nádrže ve tvaru trychtýře. Podobnost nacházíme i v živé přírodě, výrazná je například u ryb, kdy velká ryba je často tvarově blízká zvětšené malé rybě (viz S. Vogel, Comparative biomechanics, kap. 3). Formálně je podobné úvahy možno zobecnit pomocí [Buckinghamova $\Pi$ teorému](http://geo.mff.cuni.cz/seismosoft/Pi-teorem.pdf).
+
+-->
+
+
+# Buckinghamův $\Pi$ teorém
+
+<div class='obtekat'>
+
+![Nejslavnější aplikace rozměrové analýzy a Buckinghamova $\Pi$ teorému je odhad energie atomové bomby Trinity. Energie (20kt TNT) byla přísně tajná, ale pomocí rozměrové analýzy a veřejně publikované fotky v časopise Life ji G. I. Taylor odhadl na 22kt TNT bez složitých výpočtů. Zdroj: http://chalkdustmagazine.com/features/the-buckingham-pi-theorem-and-the-atomic-bomb/](trinity.jpg)
+
+</div>
+
+
+
+Existují tělesa, která jsou závislá jenom na jednom délkovém parametru
+a pokud tento délkový parametr zvětšíme $k$-krát, povrchy a obsahy na
+tomto tělese se zvětšují $k^2$-krát a objemy $k^3$-krát. To je princip
+známý z elementární matematiky jako podobnost. Proto objem koule o
+poloměru $r$ je objem koule o jednotkovém poloměru vynásobený faktorem
+$r^3$ a analogické tvrzení platí i pro krychli. Podobnost nacházíme i
+v živé přírodě. Výrazná je například u ryb, kdy velká ryba je často
+tvarově blízká zvětšené malé rybě (viz S. Vogel, Comparative
+biomechanics, kap. 3). V technických aplikacích najdeme stejný princip
+u skladování sypkého materiálu (písek nasypaný na hromadu zaujme tvar
+kužele, úhel u vrcholu je daný vlastnostmi písku) nebo vyprazdňování
+nádrže ve tvaru trychtýře (tekutina má tvar kužele s úhlem u vrcholu
+daným trychtýřem).
+
+Rozšíření podobnosti je rozměrová analýza. Ta je založená na poznatku,
+že fyzikální zákony je možno vyjadřovat v různých jednotkách. Formální
+postup umožňuje například následující věta.
+
+> Věta (Buckinghamův Π teorém). Rovnici $$F(x_1,x_2,\dots,x_n)=0,$$ resp. $$x_1=F(x_2,\dots,x_n),$$ která vyjadřuje fyzikální zákon a obsahuje
+$n$ veličin (včetně fyzikálních a materiálových konstant) vyjádřených pomocí $m$ základních
+jednotek je možno zapsat jako rovnici vyjádřenou pomocí $(n-m)$
+bezrozměrných parametrů, tj. $$f(\pi_1,\pi_2,\dots,\pi_{n-m})=0,$$
+nebo
+$$\pi_1=f(\pi_2,\dots,\pi_{n-m}).$$
+
+
+Formální tvar a metoda výběru bezrozměrných parametrů jsou v tuto
+chvíli pro nás poměrně komplikované a proto bude nejjednodušší si
+problematiku ukázat na příkladech. Jejich hlavním smyslem je to, že
+vztah mezi veličinami odhalíme (až na detaily typu multiplikativní
+konstanta) jenom z fyzikálních jednotek, bez hlubší znalosti
+fyzikálního pozadí problematiky.
+
+**Příklad (vztah mezi objemem a povrchem koule).** Pro nalezení
+přepočtu mezi objemem koule $V$ (v metrech krychlových) a povrchem
+koule $S$ (v metrech čtverečních) máme $n=2$ (veličiny $S$ a $V$) a
+$m=1$ (jediná základní jednotka metr). Tedy platí $n-m=1$ a vztah se
+dá zapsat pomocí jedné bezrozměrné veličiny. Pro tuto veličinu
+existuje jenom jediná možná varianta: $\pi_1=V^2 S^{-3}$. Potom je
+funkce $f$ konstantní a pro nějakou hodnotu $k$ platí $$V^2 S^{-3}=k$$
+a odsud $$V^2=k S^{3}.$$ Tedy vhodné mocniny objemu a obsahu jsou si
+úměrné. Tento výsledek je možné získat i kombinací vzorců $V=\frac 43
+\pi r^3$ a $S=4\pi r^2$, ovšem je nutná znalost těchto vzorců a
+provedení netriválního množství matematických výpočtů. Jako výsledek
+takové detailnější analýzy bychom navíc věděli, jaká je hodnota
+konstanty úměrnosti $k$. My jsme si však chtěli ukázat dosažení
+výsledku s minimální námahou a s minimálními vstupními znalostmi,
+abychom podobný postup mohli používa i v jiných případech, kdy
+alternativní postup nemáme k dispozici.
+
+
+**Příklad (tuhost nosníků čtvercového a kruhového průřezu).** Veličinou ovlivňující tuhost nosníku při
+daném materiálovém složení je kvadratický moment průřezu $I$ v
+jednotkách metr na čtvrtou. Pokud je průřez nosníku daný jenom jedním
+délkovým parametrem $a$ (například čtvercový nebo kruhový průřez),
+máme stejný případ jako výše: $n=2$ a $m=1$. Vztah mezi
+kvadratickým průřezem $I$ a rozměrem $a$ se dá vyjádřit pomocí jedné bezrozměrné veličiny a  máme vlastně jenom jedinou možnost jako tuto veličinu sestavit: $$\pi_1=\frac {I}{a^4}.$$ Stejně jako v předchozím
+příkladě existuje konstanta $k$ taková, že $$\frac I{a^4}=k,$$ tj. $I=ka^4$. Po seznámení se
+s dvojným integrálem uvídme, že pro čtvercový průřez o straně čtverce
+$a$ je $k=\frac 1{12}.$
+
+
+**Příklad (tuhost nosníků obdélníkového průřezu).** Budeme
+pokračovat v předchozím příkladě. Pro obdélníkový průřez o rozměrech
+$w$ krát $h$ je $m=3$ (tři veličiny $a$, $b$, $I$) a $n=1$
+(jedná základní jednotka metr). Pokud však víme, že dva nosníky vedle sebe se prohýbají
+stejně, jako by byly spojeny, můžeme místo kvadratického momentu
+průřezu pracovat s kvadratickým momentem na jednotku šířky $\frac Iw$
+v jednotkách metr na třetí a potom stejně jako v minulém případě
+existuje konstanta $k$ taková, že $$\frac Iw=kh^3,$$ tj. $$I=kwh^3.$$
+To je přesně v souladu s tvrzením, které jsme použili v příkladu s
+maximalizací tuhosti nosníku obdélníkového průřezu.
+
+
 # Vektorové funkce
 
 Výstupem funkce je vektor. Vstupem je buď reálné číslo (funkce jedné proměnné), nebo vektor. V prvním případě se jedná o parametrickou křivku v [rovině](https://sagecell.sagemath.org/?z=eJxTVghILErMTS0pykzOrlSoSkxJzEtUyC7KLMtO5OXi5SqxLUss0lAvUdfk5SqAq4wvyMkv0YhOzi_WKNHUUSjOzAPSsToKGgY6BZmamgDCkhs_&lang=sage&interacts=eJyLjgUAARUAuQ==) nebo v [prostoru](https://sagecell.sagemath.org/?z=eJxTVghILErMTS0pykzOrlSoSkxJzEtUyC7KLMtO5OXi5SqxLUss0lAvUdfk5SqAq4wvyMkvMU7RiC7RSs4v1ijR1FEo0SrOzAOxSmJ1FDQMdMy0CjI1NQHngx4S&lang=sage&interacts=eJyLjgUAARUAuQ==), ve druhém případě bývá zpravidla na vstupu stejný počet veličin jako na výstupu a jedná se o vektorové pole (každému bodu v rovině je přiřazen [rovinný vektor](https://sagecell.sagemath.org/?z=eJyr0KnUqbItSyzSUK9QqFSoUtfk5SrIyS-JL0tNLskvik_LTM1J0dDQrdSp0NRR0KjQ0TXUMQSxKqGsxOICoMr4osSSzHxbQ00A7BcYPA==&lang=sage&interacts=eJyLjgUAARUAuQ==), každému bodu v prostoru je přiřazen [prostorový vektor](https://sagecell.sagemath.org/?z=eJwrzUtJTcvMS00BABLKA7M=&lang=sage&interacts=eJyLjgUAARUAuQ==)). Vektory zapisujeme pomocí jejich komponent následovně.
@@ -211,24 +328,20 @@ pohybu.
 > Definice (gradient). Buď $f(x,y)$ funkce dvou proměnných, která má
 parciální derivace. *Gradientem* funkce $f$ rozumíme
 vektor
-$$\mathop{\text{grad}}f:=\left(\frac{\partial f}{\partial
+$$\nabla f:=\left(\frac{\partial f}{\partial
     x},\frac{\partial f}{\partial y}\right).$$
 
 **Poznámka.** Formálně též často píšeme
-$$\left(\frac{\partial}{\partial x},\frac\partial{\partial y}\right)f$$
-nebo
-$$\nabla f,$$
+$$\left(\frac{\partial}{\partial x},\frac\partial{\partial y}\right)f,$$
 kde
 $\nabla=\left(\frac{\partial}{\partial x},\frac\partial{\partial
     y}\right)$ je operátor, se kterým pracujeme jako s
 vektorem. Nazývá se *nabla* nebo *Hamiltonův operátor*. 
 
-> Poznámka (fyzikální význam gradientu). Výsledkem gradientu je vektor ve směru maximálního růstu veličiny $f$. Délka tohoto vektoru je nárůst veličiny na intervalu jednotkové délky. V praxi nás většinou zajímá směr maximálního poklesu, tj. $-\nabla f$.
+> Poznámka (fyzikální význam gradientu). Výsledkem gradientu je vektor ve směru maximálního růstu veličiny $f$. Délka tohoto vektoru je nárůst veličiny $f$ na intervalu jednotkové délky. V praxi nás většinou zajímá směr maximálního poklesu, tj. $-\nabla f$.
 
 
 # Lineární aproximace rovinné transformace
-
-
 
 <div class='obtekat'>
 
@@ -236,7 +349,10 @@ vektorem. Nazývá se *nabla* nebo *Hamiltonův operátor*.
 
 </div>
 
-Následující pasáže rozšiřují lineární aproximaci na případ, kdy chceme
+Následující pasáže jsou motivací pro tematický celek, kterému se
+začneme věnovat na další přednášce.
+
+Rozšiřují lineární aproximaci na případ, kdy chceme
 popsat transformaci roviny. Protože v tomto případě pracujeme se dvěma
 souřadnicemi, je nutno uvažovat dvě funkce (pro každou souřadnici
 jednu funkci) a každá funkce závisí na dvou proměnných (na obou
@@ -282,89 +398,3 @@ je přesná jenom pro relativně malé deformace. Proto se také výsledný
 produkt, ke kterému se v průběhu semestru dopracujeme, nazývá tenzor
 malých deformací.
 
-
-# Triky pro práci s funkcemi 1
-
-Následující triky jsme viděli v příkladě s vytesáním nosníku maximální tuhosti z kulatiny. 
-
-1. Vhodnou volbou jednotek dokážeme eliminovat některé
-parametry. Přesněji, vhodnou volnou jednotek dokážeme některým
-parametrům dát konkrétní numerickou hodnotu. Vyšetřovaná funkce je
-potom často jednodušší.
-1. Je-li $g$ rostoucí, potom z definice rostoucí funkce plynou ekvivalence
-$$
-\begin{gathered}
-  f(x)\leq f(x_0) \iff   g(f(x))\leq g(f(x_0)),\\
-    f(x)\geq f(x_0) \iff   g(f(x))\geq g(f(x_0))
-\end{gathered}
-$$
-a proto funkce $f(x)$ a $g(f(x))$ mají lokální extrémy ve stejných
-bodech. Toho je možné využít, pokud vidíme, že při vhodné volbě funkce
-$g$ by byla funkce $g(f(x))$ vhodnější pro hledání lokálních
-extrémů. Podobně je možné uvažovat i pro klesající funkce $g$, ale
-protože klesající funkce obrací směr nerovností, mění se lokální
-maximum na lokální minimum a naopak.
-
-# Triky pro práci s funkcemi 1
-
-
-Dva útvary jsou podobné, jestli jeden vznikne z druhého zvětšením všech délek na jejich $k$-násobek. Pro $k$-krát zvětšený útvar platí, že všechny jeho rozměry jsou $k$-krát větší, všechny jeho plochy jsou $k^2$-krát větší a všechny jeho objemy jsou $k^3$-krát větší. Podobné útvary jsou vždy definovány jedním parametrem, například u kruhu a koule stačí zadat poloměr. U krychle stačí zadat délku jedné strany nebo délku stěnové uhlopříčky nebo délku tělesové uhlopříčky. U válce, který má stejnou výšku jako průměr podstavy stačí zadat výšku nebo poloměr podstavy. U kužele s vrcholovým úhlem $45^\circ$ stačí zadat výšku nebo poloměr podstavy a je tím dán celý kužel. U takových těles platí pro jakýkoliv povrch (povrch koule, povrch kužele, povrch pláště kužele, povrch válce, povrch válcové plochy, ...)
-$$S=k_1r^2$$ a pro jakýkoliv objem
-$$V=k_2r^3,$$ kde $k_1$ a $k_2$ jsou konstanty a $r$ vhodný délkový parametr.  Tyto konstanty mají dokonce pěknou interpretaci - odpovídají obsahu nebo objemu pro $r=1$ a ve většině případů je známe, protože například pro kouli nebo kužel máme přesný vzorec založený na poloměru.
-Díky tomuto je dokonce možné snadno najít vztahy mezi objemem a povrchem $$V=k_3 S^{3/2}$$ a $$S=k_4 V^{2/3}.$$ Tyto vztahy je snadné si pamatovat, stačí se řídit tím, že mocnina musí být taková, aby vycházely správné jednotky. Metodami středoškolské matematiky dokonce dokážeme dokonce konstanty $k_1$ až $k_4$ najít pro jednotlivá tělesa jako je koule apod. Často nás však přesná hodnota konstanty nezajímá a jde nám jenom o charakter funkční závislosti, o přímou úměrnost mezi vhodnými mocninami. Vztahy stejného typu platí například i pro kužel s konstantním úhlem u vrcholu. To je možné využít při skladování sypkého materiálu (písek nasypaný na hromadu zaujme tvar kužele, úhel u vrcholu je daný vlastnostmi písku) nebo vyprazdňování nádrže ve tvaru trychtýře. Podobnost nacházíme i v živé přírodě, výrazná je například u ryb, kdy velká ryba je často tvarově blízká zvětšené malé rybě (viz S. Vogel, Comparative biomechanics, kap. 3). Formálně je podobné úvahy možno zobecnit pomocí [Buckinghamova $\Pi$ teorému](http://geo.mff.cuni.cz/seismosoft/Pi-teorem.pdf).
-
-
-
-# Buckinghamův $\Pi$ teorém
-
-Poučka založená na poznatku, že fyzikální zákony je možno vyjadřovat v
-různých jednotkách. Jedná se o zobecnění rozměrové analýzy.
-
-> Věta (Buckinghamův Π teorém). Rovnici $$F(x_1,x_2,\dots,x_n)=0,$$ resp. $$x_1=F(x_2,\dots,x_n),$$ která vyjadřuje fyzikální zákon a obsahuje
-$n$ veličin (včetně fyzikálních a materiálových konstant) a $m$ nezávislých
-jednotek je možno zapsat jako rovnici vyjádřenou pomocí $(n-m)$
-bezrozměrných parametrů $$f(\pi_1,\pi_2,\dots,\pi_{n-m})=0.$$
-
-<div class='obtekat'>
-
-![Nejslavnější aplikace věty je odhad energie atomové bomby Trinity. Energie (20kt TNT) byla přísně tajná, ale pomocí rozměrové analýzy a veřejně publikované fotky v časopise Life ji G. I. Taylor odhadl na 22kt TNT bez složitých výpočtů. Zdroj: http://chalkdustmagazine.com/features/the-buckingham-pi-theorem-and-the-atomic-bomb/](trinity.jpg)
-
-</div>
-
-
-
-Formální tvar a metoda výběru bezrozměrných parametrů jsou v tuto
-chvíli pro nás poměrně komplikované a proto bude nejjednodušší si
-problemtiku ukázat na příkladech. Jejich hlavním smyslem je to, že
-vztah mezi veličinami odhalíme (až na detaily typu multiplikativní
-konstanta) jenom z fyzikálních jednotek, bez hlubší znalosti
-fyzikálního pozadí problematiky.
-
-**Příklad (vztah mezi objemem a povrchem koule).** Pro nalezení
-přepočtu $$F(V,S)=0$$ mezi objemem koule $V$ (v metrech krychlových) a povrchem
-koule $S$ (v metrech čtverečních) máme $n=2$ a $m=1$. Tedy vztah se dá
-zapsat pomocí jedné bezrozměrné veličiny, například $\pi_1=V^2
-S^{-3}$, tj. $$f(V^2 S^{-3})=0.$$ Je-li $k$ nulový bod funkce $f$, lze
-psát $$V^2 S^{-3}=k$$ a $$V^2=\sqrt k S^{3}.$$
-
-V předchozím příkladě jsme viděli stejný výsledek, jaký jsme dostali
-v předchozím textu díky podobnosti. Současně ukazuje cestu v případech, kdy
-podobnost není možné využít, ale zůstává zachováno to, že veličiny je
-možné zkombinovat jediným možným způsobem tak, aby jednotky ladily.
-
-
-**Příklad (tuhost nosníků).** Veličinou ovlivňující tuhost nosníku při daném
-materiálovém složení je kvadratický moment průřezu $I$ v jednotkách
-metr na čtvrtou. Pokud je průřez nosníku daný jenom jedním délkovým
-parametrem $a$ (například čtvercový nebo kruhový průřez), máme stejný
-případ jako výše: $n=2$ a $m=1$. Tedy vztah mezi kvadratickým průřezem a rozměrem $$I=F(a)$$ stejně jako v předchozím
-příkladě existuje konstanta $k$ taková, že $$I=ka^4.$$ Po seznámení se
-s dvojným integrálem uvídme, že pro čtvercový průřez o straně čtverce $a$ je $k=\frac
-1{12}.$ Pro obdélníkový průřez o rozměrech $w$ a $h$ toto neplatí,
-protože je $m=3$ (tři veličiny $a$, $b$, $I$) a $n=1$ (metr). Pokud však víme, že
-dva nosníky vedle sebe se prohýbají stejně, jako by byly spojeny,
-můžeme místo kvadratického momentu průřezu pracovat s kvadratickým
-momentem na jednotku šířky a potom stejně jako v minulém případě
-existuje konstanta $k$ taková, že $$\frac Iw=kh^3,$$ tj. $$I=kwh^3.$$
-To je přesně v souladu s tvrzením, které jsme použili v příkladu s
-maximalizací tuhosti nosníku obdélníkového průřezu.

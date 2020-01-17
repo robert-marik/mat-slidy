@@ -184,7 +184,6 @@ hodností pro řádky matice, se dají přeformulovat i pro sloupce matice.
 
 # Existence a jednoznačnost řešení soustavy lineárních rovnic  
 
-
 V případě, že matice soustavy je čtvercová již víme, že řešení je
 určeno jednoznačně právě tehdy, když má matice soustavy matici
 inverzní.  O počtu řešení v obecném případě obdélníkové matice, kdy
