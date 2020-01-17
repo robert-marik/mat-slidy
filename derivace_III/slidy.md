@@ -1,7 +1,6 @@
-% Derivace & friends III
+% Derivace a další užitečné nástroje
 % Robert Mařík
 % 2020
-
 
 
 # Parita funkce
@@ -279,7 +278,7 @@ provedení netriválního množství matematických výpočtů. Jako výsledek
 takové detailnější analýzy bychom navíc věděli, jaká je hodnota
 konstanty úměrnosti $k$. My jsme si však chtěli ukázat dosažení
 výsledku s minimální námahou a s minimálními vstupními znalostmi,
-abychom podobný postup mohli používa i v jiných případech, kdy
+abychom podobný postup mohli používat i v jiných případech, kdy
 alternativní postup nemáme k dispozici.
 
 
@@ -289,21 +288,23 @@ jednotkách metr na čtvrtou. Pokud je průřez nosníku daný jenom jedním
 délkovým parametrem $a$ (například čtvercový nebo kruhový průřez),
 máme stejný případ jako výše: $n=2$ a $m=1$. Vztah mezi
 kvadratickým průřezem $I$ a rozměrem $a$ se dá vyjádřit pomocí jedné bezrozměrné veličiny a  máme vlastně jenom jedinou možnost jako tuto veličinu sestavit: $$\pi_1=\frac {I}{a^4}.$$ Stejně jako v předchozím
-příkladě existuje konstanta $k$ taková, že $$\frac I{a^4}=k,$$ tj. $I=ka^4$. Po seznámení se
+příkladě existuje konstanta $k$ taková, že $\frac I{a^4}=k,$ tj. $$I=ka^4.$$ Po seznámení se
 s dvojným integrálem uvídme, že pro čtvercový průřez o straně čtverce
 $a$ je $k=\frac 1{12}.$
 
 
-**Příklad (tuhost nosníků obdélníkového průřezu).** Budeme
-pokračovat v předchozím příkladě. Pro obdélníkový průřez o rozměrech
-$w$ krát $h$ je $m=3$ (tři veličiny $a$, $b$, $I$) a $n=1$
-(jedná základní jednotka metr). Pokud však víme, že dva nosníky vedle sebe se prohýbají
-stejně, jako by byly spojeny, můžeme místo kvadratického momentu
-průřezu pracovat s kvadratickým momentem na jednotku šířky $\frac Iw$
-v jednotkách metr na třetí a potom stejně jako v minulém případě
-existuje konstanta $k$ taková, že $$\frac Iw=kh^3,$$ tj. $$I=kwh^3.$$
-To je přesně v souladu s tvrzením, které jsme použili v příkladu s
-maximalizací tuhosti nosníku obdélníkového průřezu.
+**Příklad (tuhost nosníků obdélníkového průřezu).** Budeme pokračovat
+v předchozím příkladě. Pro obdélníkový průřez o rozměrech $w$ krát $h$
+je $m=3$ (tři veličiny $w$, $h$, $I$) a $n=1$ (jediná základní
+jednotka metr). Pokud však víme, že dva nosníky vedle sebe se
+prohýbají stejně, jako by byly spojeny, víme, že mezi $I$ a $w$ msuí
+být přímá úměrnost. Proto můžeme místo kvadratického momentu průřezu
+pracovat s kvadratickým momentem na jednotku šířky $\frac Iw$ v
+jednotkách metr na třetí a potom stejně jako v minulém případě
+existuje konstanta $k$ taková, že $\frac Iw=kh^3,$ tj. $$I=kwh^3.$$ To
+je přesně v souladu s tvrzením, které jsme použili v příkladu s
+maximalizací tuhosti nosníku obdélníkového průřezu, kdy jsme tvrdili,
+že mírou tuhosti je součin $wh^3$.
 
 
 # Vektorové funkce

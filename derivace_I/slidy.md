@@ -1,6 +1,6 @@
-% Derivace & friends
+% Derivace funkce
 % Robert Mařík
-% 2019
+% 2020
 
 
 
@@ -53,7 +53,7 @@ Veličina $y$ je *nepřímo úměrná* veličině $x$ jestliže existuje konstan
 
 
 
-# Vlastnosti funkcí jedné proměnné (monotonie)
+# Monotonie funkce
 
 V následující definici jsou nejdůležitější pojmy
 rostoucí a  klesající funkce. Názorně

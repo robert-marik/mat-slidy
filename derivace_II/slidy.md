@@ -1,6 +1,6 @@
-% Derivace & friends II
+% Derivace a lineární aproximace
 % Robert Mařík
-% 2019
+% 2020
 
 
 
@@ -27,7 +27,7 @@ S využitím aparátu derivací jsme v minulé přednášce poznali a naučili
 
 Derivace v bodě, pokud ji nahlížíme z hlediska citlivosti reakce
 funkce na změnu vstupních dat, udává, jaký vliv má jednotková změna ve
-vstupních datech na zmenu funkční hodnoty funkce. Pokud změna ve
+vstupních datech na změnu funkční hodnoty funkce. Pokud změna ve
 vstupních datech není jednotková ale násobek jednotkové změny, je i
 odezva násobná.
 
@@ -71,6 +71,12 @@ nulu". Navíc, ukazujeme koncept. *Důležité je si z příkladu odnést, že d
 
 
 # Lineární aproximace v 1D
+
+Pokud se funkce mění, můžeme odhad změny z přechozího odstavce přičíst k
+funkční hodnotě a tím máme odhad funkční hodnoty po změně. Toto je
+principem lineární aproximace, neuvěřitelně jednoduché a přitom velice
+mocné techniky používané inženýry k tomu, aby se popis problémů a
+řešení úloh vůbec daly efektivně zvládnout.
 
 > Věta.
 Buď $f:\mathbb R\to\mathbb R$ funkce, která má derivaci. V okolí bodu $x_0$ platí přibližný vzorec $$f(x)\approx f(x_0)+ f'(x_0)(x-x_0)$$ neboli
@@ -279,7 +285,7 @@ stejně rychle nebo rychleji.
 
 > Věta (Taylorova aproximace v okolí nuly) Platí
 \dm$$f(x)=f(0)+f'(0)x+\frac{1}{2!}f''(0)x^2+\cdots +\frac{1}{n!}f^{(n)}(0)x^n+O(x^{n+1}),$$
-resp. v posnut=m tavru
+resp. v posnutém tvaru
 \dm$$f(x+h)=f(x)+f'(x)h+\frac{1}{2!}f''(x)h^2+\cdots +\frac{1}{n!}f^{(n)}(x)h^n+O(h^{n+1}),$$
 pokud existují spojité derivace funkce $f$ do řádu $n+1$.
 
@@ -344,6 +350,10 @@ plyne $x=5$.
 
 # Inverzní funkce
 
+Inverzní úloha je tak trošku jako reverzní inženýrství. Máme výsledek
+a potřebujeme znát vstupní data. U funkcí to je supersnadné, u
+konstrukcí supersložité. Užitečné je ale obojí.
+
 > Definice (inverzní funkce).   Nechť funkce $f: A\to B$ je prostá. Pravidlo, které každému $x$   z množiny $f(A)$ přiřadí to (jediné) $y$, pro které platí $f(y)=x$ se nazývá *inverzní funkce* k funkci $f$, označujeme   $\mathbf{f^{-1}}$.
 
 
@@ -372,7 +382,7 @@ vyjdeme z nějaké aproximace řešení (získáme například graficky nebo
 zkusmo hrubou výpočetní silou) a tuto aproximaci budeme postupně
 zpřesňovat. Postup zpřesňování je takový, že v dosažené aproximaci
 funkci nahradíme lineární funkcí a další aproximace (zpřesnění
-předchozí aproximace) bude v nulovém bodu této lineární funkce. Za
+předchozí aproximace) bude v nulovém bodě této lineární funkce. Za
 poměrně snadno splnitelných předpokladů (začneme dostatečně blízko
 nulového bodu a funkce má v nulovém bodě nenulovou derivaci) postup
 konverguje ke kořeni studované rovnice a to velmi rychle: každým
