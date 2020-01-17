@@ -344,21 +344,27 @@ fyzikálního pozadí problematiky.
 krychlových) a povrchem koule (v metrech čtverečních) máme $n=2$ a
 $m=1$. Tedy vztah se dá zapsat pomocí jedné bezrozměrné veličiny,
 například $\pi_1=V^2 S^{-3}$, tj. $$f(V^2 S^{-3})=0.$$ Je-li $k$
-nulový bod funkce $f$, lze psát $$V^2 S^{-3}=k$$ a $$V=\sqrt k
-S^{3/2}=k_3 S^{3/2}.$$
+nulový bod funkce $f$, lze psát $$V^2 S^{-3}=k$$ a $$V^2=\sqrt k
+S^{3}.$$ 
+
+V předchozím příkladě jsme viděli stejný výsledek, jaký jsme dostali
+v předchozím textu díky podobnosti. Současně ukazuje cestu v případech, kdy
+podobnost není možné využít, ale zůstává zachováno to, že veličiny je
+možné zkombinovat jediným možným způsobem tak, aby jednotky ladily.
 
 
-**Příklad.** Veličinou udávající tuhost nosníku je kvadratický moment
-průřezu $I$ v jednotkách metr na čvrtou. Pokud je průřez nosníku daný
-jenom jedním délkovým parametrem $a$ (například čtvercový nebo kruhový
-průřez), máme stejný případ jako výše: $n=2$ a $m=1$. Tedy stejně jako
-v předchozím příkladě existuje konstanta $k$ taková, že $$I=ka^4.$$ Po
-seznámení se s dvojným integrálem uvídme, že pro čtvercový průřez je
-$k=\frac 1{12}.$ Pro obdélníkový průřez o rozměrech $w$ a $h$ toto
-neplatí, protože je $m=3$ ($a$, $b$, $I$) a $n=1$ (metr). Pokud však
-víme, že dva nosníky vedle sebe se prohýbají stejně, jako by byly
-spojeny, můžeme místo kvadratického momentu průřezu pracovat s
-kvadratickým momentem na jednotku šířky a potom stejně jako v minulém
-případě existuje konstanta $k$ taková, že $$\frac Iw=kh^3,$$
-tj. $$I=kwh^3.$$ To je přesně v souladu s tvrzením, které jsme použili
-v příkladu s maximalizací tuhosti nosníku obdélníkového průřezu.
+**Příklad.** Veličinou ovlivňující tuhost nosníku při daném
+materiálovém složení je kvadratický moment průřezu $I$ v jednotkách
+metr na čvrtou. Pokud je průřez nosníku daný jenom jedním délkovým
+parametrem $a$ (například čtvercový nebo kruhový průřez), máme stejný
+případ jako výše: $n=2$ a $m=1$. Tedy stejně jako v předchozím
+příkladě existuje konstanta $k$ taková, že $$I=ka^4.$$ Po seznámení se
+s dvojným integrálem uvídme, že pro čtvercový průřez je $k=\frac
+1{12}.$ Pro obdélníkový průřez o rozměrech $w$ a $h$ toto neplatí,
+protože je $m=3$ ($a$, $b$, $I$) a $n=1$ (metr). Pokud však víme, že
+dva nosníky vedle sebe se prohýbají stejně, jako by byly spojeny,
+můžeme místo kvadratického momentu průřezu pracovat s kvadratickým
+momentem na jednotku šířky a potom stejně jako v minulém případě
+existuje konstanta $k$ taková, že $$\frac Iw=kh^3,$$ tj. $$I=kwh^3.$$
+To je přesně v souladu s tvrzením, které jsme použili v příkladu s
+maximalizací tuhosti nosníku obdélníkového průřezu.
