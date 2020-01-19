@@ -64,6 +64,16 @@ velikosti.
 
 # Střední hodnota
 
+\iffalse
+
+<div class='obtekat'>
+
+![Když materiálová konstanta není konstantní, můžeme ji zprůměrovat integrálem. Zdroj: Cengel, Ghajar: Heat and Mass Transfer: Fundamentals and Applications.](tepelna_vodivost.png)
+
+</div>
+
+\fi
+
 Určitou souvislost s monotonií vzhledem k funkci má otázka, zda je
 možné funkci definovanou na intervalu $[a,b]$ nahradit funkcí
 konstantní tak, aby obě funkce měly stejný integrál. V praxi to
@@ -98,11 +108,16 @@ výšce $b-a$. Tedy $$\int_a^b f(x)\,\mathrm dx=(b-a)\frac{f(a)+f(b)}2$$
 a střední hodnota lineární funkce je tedy průměrem hodnoty na začátku
 a na konci intervalu.
 
+> Poznámka (střední hodnota materiálové konstanty). Tepelná vodivost materiálu podobeného analýze tepelně-izolačních vlastností nemusí být konstantní v celém rozsahu teplot, ale může se měnit s teplotou. Pokud je známa  funkce $k(T)$, je střední hodnota tepelné vodivosti v tepelném rozsahu od $T_1$ do $T_2$ dána vztahem (viz Cengel. ) $$k_{avg}=\frac 1{T_2-T_1} \int_{T_1}^{T_2} k(T)\,\mathrm dT$$ V praxi nemáme analytický předpis pro funkci $k(T)$, ale funkce je dána v několika bodech tabulkou. Takové funkce můžeme integrovat numericky, což bude ukázáno v další části této přednášky.
+
+
 **Příklad.** Střední hodnota funkce $y=2x^2-1$ na intervalu $[0,2]$ je
 $$\frac 12 \int_0^2 2x^2-1 \,\mathrm dx=\frac 12 \left[\frac 23 x^3-x\right]_0^2=\frac 12 \left[\frac 23 8-2 - 0\right]=\frac 53.$$
 
 [Online výpočet.](https://sagecell.sagemath.org/?z=eJwz1DfSyswrSU0vSixJ1TDSqogz0jXU0ajQMdAx0tQEAIuACEI=&lang=sage)
 
+
+<!--
 
 <div class='obtekat'>
 
@@ -132,6 +147,7 @@ tomuto příkladu vrátíme.
 
 [Online výpočet.](https://sagecell.sagemath.org/?z=eJxtjs0KgzAQhO-C75BbNj9iErG3XD3nFcTGIAQjcSn27du0pT_Q2-x8M8xexgwUKaurGZDZKe2wLe2JIxMvrY0ql6mr8JX4uENxdQva8J4RTpYVfcgjepjhYBIOiRJFz7Vh95W6ctpuMeGbKtkrVZAzTxB-gCRTiilbmv2ZShKX1e94jd7Spilvu-7ZGv63QvZ-feS0cEa47gb9BD-U&lang=sage)
 
+-->
 
 # Numerická aproximace určitého integrálu
 
@@ -227,6 +243,7 @@ Odhadneme celkovou vykonanou práci.
     {y_0}+2y_1+2y_2+\cdots+2y_{n-1}+{y_n}\Bigr).
   $$  
 
+<!--
 
 # Integrace metodou per partés
 
@@ -264,6 +281,7 @@ $${\begin{aligned} u&= \ln x & u'&=\frac 1x \\ v'&=1 & v&=x\end{aligned}}$$
 můžeme vypočítat integrál
 $$\int \ln x\,\mathrm dx=x\ln x-\int \frac 1x x\,\mathrm dx=x\ln x-\int 1\,\mathrm dx=x\ln x-x+c.$$
 
+-->
 
 # Integrace substituční metodou
 
@@ -403,6 +421,8 @@ $$f(a^r)=\int_1^{a^r}\frac 1t\,\mathrm dt= \int _1^a \frac
 1{s^r}rs^{r-1}\,\mathrm ds= r\int _1^a\frac 1s\,\mathrm ds=rf(a).$$
 
 
+<!--
+
 # Model eliminace chřipky
 
 V příkladě u střední hodnoty jsme se zabývali problémem eliminace chřipky a zjistili, že potřebujeme najít minimum funkce
@@ -428,7 +448,12 @@ $$\begin{aligned}\frac{\mathrm d\overline I}{\mathrm dt_0}
 \\&=\frac 1{60} \Bigl(I(t_0+60)-I(t_0)\Bigr)
 \end{aligned}
 $$
-Minimum tedy najdeme z podmínky $I(t_0)=I(t_0+60).$ Po dosazení vztahu pro funkci $I$ tedy řešíme rovnici
+Minimum tedy najdeme z podmínky $I(t_0)=I(t_0+60).$ Po dosazení vztahu pro funkci $I$ a potřebných výpočtech, které jsou záležitostí středoškolské matematiky a proto k nim teď nebudeme odbočovat, abychom neztratili linii výpočtu, dostaneme 
+$t_0=90+120k$, kde $k$ je libovolné celé číslo.
+
+-->
+
+<!-- tedy řešíme rovnici
 \dm $$ \cos\left(\frac \pi 6 t\right)+\cos\left(\frac \pi {120} t\right)+2 = \cos\left(\frac \pi 6 (t+60)\right)+\cos\left(\frac \pi {120} (t+60)\right)+2 $$
 tj. (následující výpočty jsou sice dlouhé, ale jedná se běžnou středoškolskou matematiku a práci s goniometrickými funkcemi)
 $$
@@ -457,7 +482,12 @@ $$
 -1
 $$
 Tato rovnice má řešení $\frac \pi {120} t=\frac 34\pi +k\pi$ tj.
-$t=90+120k$. Vzhledem k povaze problému se střídají maxima a minima
+$t=90+120k$.
+-->
+
+<!--
+
+Vzhledem k povaze problému se střídají maxima a minima
 funkce $\overline I(t_0)$. Toto je ještě nutné rozvážit, abychom s
 očkováním nezačali v době, kdy by byly náklady naopak
 maximální. Vzhledem ke snadné praktické interpretaci je však zřejmé,
@@ -465,6 +495,7 @@ maximální. Vzhledem ke snadné praktické interpretaci je však zřejmé,
 předchází dlouhodobé minimum výskytu chřipky. Odsud snadno rozlišíme,
 kdy se jedná o minimum pětiletého průměru a kdy o maximum.
 
+-->
 
 # Práce při vytahování řetězu (přímý výpočet)
 

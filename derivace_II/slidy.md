@@ -275,19 +275,21 @@ Taylorův polynom je nejlepší aproximace funkce $f$ polynomem. Je možné
 ukázat, že rozdíl $$f(x)-T(x)$$ je blízký k nule, pokud je $n$
 dostatečně velké, $x$ dostatečně blízko k $x_0$ a $(n+1)$-ní derivace
 funkce $f$ je relativně malá. V těchto případech je $$f(x)\approx
-T(x).$$ Často používáme aproximaci v nule. V tomto případě dostáváme
-následující větu. V ní $O(x^{n+1})$ je takzvané [Landauovo velké
+T(x).$$  V tomto případě dostáváme
+následující větu. V ní $O((x-x_0)^{n+1})$ je takzvané [Landauovo velké
 O](https://cs.wikipedia.org/wiki/Landauova_notace). Tímto zápisem je
-vyjádřen člen, který je pro $x$ blízká k nule v absolutní hodnotě
-menší než násobek funkce $x^{n+1}$, tj. v počátku konverguje k nule
-stejně rychle nebo rychleji.
-
+vyjádřen člen, který je pro $x$ blízká k $x_0$ v absolutní hodnotě
+menší než násobek funkce $(x-x_0)^{n+1}$, tj. v bodě $x_0$ konverguje k nule
+stejně rychle nebo rychleji jako mocniná funkce s exponentem $n+1$.
 
 > Věta (Taylorova aproximace v okolí nuly) Platí
-\dm$$f(x)=f(0)+f'(0)x+\frac{1}{2!}f''(0)x^2+\cdots +\frac{1}{n!}f^{(n)}(0)x^n+O(x^{n+1}),$$
-resp. v posnutém tvaru
-\dm$$f(x+h)=f(x)+f'(x)h+\frac{1}{2!}f''(x)h^2+\cdots +\frac{1}{n!}f^{(n)}(x)h^n+O(h^{n+1}),$$
+\dm$$f(x)=T(x)+O((x-x_0)^{n+1}),$$
+resp. pro $x=x_0+h$
+\dm$$f(x_0+h)=f(x_0)+f'(x_0)h+\frac{1}{2!}f''(x_0)h^2+\cdots +\frac{1}{n!}f^{(n)}(x_0)h^n+O(h^{n+1}),$$
 pokud existují spojité derivace funkce $f$ do řádu $n+1$.
+
+Často používáme aproximaci v nule. Potom dostáváme pro proximaci v okolí nuly
+\dm$$f(x)=f(0)+f'(0)x+\frac{1}{2!}f''(0)x^2+\cdots +\frac{1}{n!}f^{(n)}(0)x^n+O(x^{n+1}).$$
 
 **Příklad.** $$
 \begin{aligned}
