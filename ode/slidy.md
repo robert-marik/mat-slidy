@@ -794,42 +794,13 @@ v praxi vyskytují v poměrně komplikovaných situacích (posuzování ne
 jednoho nosníku, ale celé konstrukce) a proto se zpravidla řeší
 přibližně a převádí se na řešení soustav lineárních rovnic. 
 
-# Konečné diference
+# Diferenciální rovnice metodou konečných diferencí
 
-\iffalse
-
-<div class='obtekat'>
-
-![Tramvajový most v Brně Pisárkách z předpjatého betonu. Vede do zatáčky a ve stoupání. Analyticky vyřešit namáhání takového mostu je nereálné, podobné úlohy se řeší převodem na úlohy lineární algebry. Podobné síly mohou vznikat i v\ dřevěných konstrukcích a to i v\ případě, že  nosníky primárně nekonstruujeme jako předpjaté. Zdroj: www.moravskyturista.cz.](pisarky.jpg)
-
-</div>
-
-\fi
-
-Pro numerické řešení diferenciálních rovnic je vhodné umět nahradit derivace veličinami, se kterými se lépe formulují numerické modely. 
-
-Základním
-přístupem je vynechání limitního přechodu v definici derivace
-$$\frac{\mathrm df}{\mathrm dx}=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}.$$
-Tedy $$\frac{\mathrm df}{\mathrm dx}\approx\frac{f(x+h)-f(x)}{h}.$$ Okamžitá rychlost je nahrazena
-průměrnou rychlostí na intervalu $(x,x+h).$ Tento podíl se nazývá
-dopředná poměrná diference. 
-
-Jiná aproximace vychází z Taylorova polynomu druhého řádu napsaného pro $f(x+h)$ a $f(x-h)$, tj. ze vztahů
-$$\begin{aligned}
-f(x+h)&\approx f(x)+f'(x)h+\frac 12 f''(x)h^2\\
-f(x-h)&\approx f(x)-f'(x)h+\frac 12 f''(x)h^2
-\end{aligned}$$
-Pokud tyto vztahy sečteme a odečteme, dostaneme 
-$$\begin{aligned}
-f(x+h)+f(x-h)&\approx2f(x)+ f''(x)h^2\\
-f(x+h)-f(x-h)&\approx2f'(x)h.
-\end{aligned}$$
-Odsud dostáváme aproximace první a druhé derivace
+Z přednášek o derivaci máme aproximace derivací
 $$ \frac{\mathrm d f}{\mathrm dx}=f'(x)\approx  \frac{f(x+h)-f(x-h)}{2h}  $$
-a
+a 
 $$ \frac{\mathrm d^2f}{\mathrm dx^2}=f''(x)\approx  \frac{f(x-h)-2f(x)+f(x+h)}{h^2}.  $$
-
+Využijeme tuto informaci k ukázce použití na příkladu nosníku s kombinovaným namá ním.
 
 \iffalse
 

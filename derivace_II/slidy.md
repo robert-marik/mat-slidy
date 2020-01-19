@@ -324,9 +324,6 @@ Analogicky se chovají pružné konstrukce. V klidu jsou ve stavu s minimální 
 \fi
 
 
-
-
-
 # Prostá funkce
 
 Někdy jsme v situaci, že známe výsledek po působení nějaké funkce a
@@ -420,7 +417,43 @@ Rovnici $$x=\cos x$$ nejprve přepíšeme do tvaru $$x-\cos x=0$$ a hledáme vla
 
 Vidíme, že proces opravdu neuvěřitelně rychle konverguje k\ řešení rovnice.
 
-	
+
+# Konečné diference a aproximace derivace
+
+\iffalse
+
+<div class='obtekat'>
+
+![Tramvajový most v Brně Pisárkách z předpjatého betonu. Vede do zatáčky a ve stoupání. Analyticky vyřešit namáhání takového mostu je nereálné, podobné úlohy se řeší převodem úlohy obsahující derivace na úlohy lineární algebry. Podobné síly mohou vznikat i v\ dřevěných konstrukcích a to i v\ případě, že  nosníky primárně nekonstruujeme jako předpjaté. Zdroj: www.moravskyturista.cz.](pisarky.jpg)
+
+</div>
+
+\fi
+
+Pro numerické řešení rovnic obsahujících derivace je vhodné umět nahradit derivace veličinami, se kterými se lépe pracuje v numerických výpočtech. 
+
+Základním
+přístupem je vynechání limitního přechodu v definici derivace
+$$\frac{\mathrm df}{\mathrm dx}=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}.$$
+Tedy $$\frac{\mathrm df}{\mathrm dx}\approx\frac{f(x+h)-f(x)}{h}.$$ Okamžitá rychlost je nahrazena
+průměrnou rychlostí na intervalu $(x,x+h).$ Tento podíl se nazývá
+*dopředná poměrná diference*. 
+
+Jiná aproximace vychází z Taylorova polynomu druhého řádu napsaného pro $f(x+h)$ a $f(x-h)$, tj. ze vztahů
+$$\begin{aligned}
+f(x+h)&\approx f(x)+f'(x)h+\frac 12 f''(x)h^2\\
+f(x-h)&\approx f(x)-f'(x)h+\frac 12 f''(x)h^2
+\end{aligned}$$
+Pokud tyto vztahy sečteme a odečteme, dostaneme 
+$$\begin{aligned}
+f(x+h)+f(x-h)&\approx2f(x)+ f''(x)h^2\\
+f(x+h)-f(x-h)&\approx2f'(x)h.
+\end{aligned}$$
+Odsud dostáváme aproximaci první derivace pomocí *centrální diference*
+$$ \frac{\mathrm d f}{\mathrm dx}=f'(x)\approx  \frac{f(x+h)-f(x-h)}{2h}  $$
+a druhé derivace
+$$ \frac{\mathrm d^2f}{\mathrm dx^2}=f''(x)\approx  \frac{f(x-h)-2f(x)+f(x+h)}{h^2}.  $$
+Protože používáme aproximaci kvadratickým polynomem, je aproximace derivace pomocí centrální diference přesnější než aproximace pomocí dopředné diference.
 
 # Shrnutí, hlavní myšlenky
 
