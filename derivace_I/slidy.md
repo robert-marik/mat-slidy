@@ -125,13 +125,14 @@ plyne $$\sqrt x\geq 5=\sqrt {25}.$$ Druhá mocnina je na intervalu $(5,\infty)$ 
 
 </div>
 
-Budeme sa zajímat o to, jak rychle se mění funkční hodnoty v čase nebo při změnách vstupních dat. V souvislosti s obrázkem nás může napadnout mnoho významů poujmu rychlost. 
+Budeme sa zajímat o to, jak rychle se mění funkční hodnoty v čase nebo při změnách vstupních dat. V souvislosti s obrázkem nás může napadnout mnoho významů pojmu rychlost. 
 
 * Jakou rychlost (v kilometrech za hodinu) může automobil vyvinout?
-* Jak rychle (v metrech na kilometr za hodinu) se prodlužuje brzdná dráha při zbyšující se rychlosti?
+* Ja rychl (v kilometrech za hodinu za sekundu) automobil zrychluje?
+* Jak rychle (v metrech na kilometr za hodinu) se prodlužuje brzdná dráha při zvyšující se rychlosti?
 * Jak rychle (v tisících kilometrů na kilopascal) klesá životnost pnemumatik při přehuštění?
 * Jak rychle (v litrech na 100 kilometrů na kilometr za hodinu) roste spotřeba auta při vyšší průměrné cestovní rychlosti?
-* Jak rychle (v Kč na automobil) rostou náklady výrobce automobilů při zvyšování produkce?
+* Jak rychle (v tisících Kč na automobil) rostou náklady výrobce automobilů při zvyšování produkce?
 
 
 # Koncept (průměrná rychlost a okamžitá)
