@@ -550,7 +550,7 @@ se budou řešení chovat.
     znaménka konstanty $C$) na intervalu $[0,\infty)$. Jakákoliv
     odchylka od rovnovážného stavu neohraničeně naroste, konstantní
     řešení $y=0$ se proto klasifikuje jako nestabilní.
-    * Pro $k<0$ je funkce (♣♣) na intervalu $[0,\infty)$
+    * Pro $k<0$ se funkce (♣♣) na intervalu $[0,\infty)$
     blíží k nule. Ať je počáteční podmínka libovolná, všechna řešení se
     v čase blíží k nule. Jakákoliv
     odchylka od rovnovážného stavu neohraničeně časem vymizí. Nulové

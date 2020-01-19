@@ -7,6 +7,14 @@
 # Funkce jedné proměnné
 
 
+<div class='obtekat'>
+
+![Strom je z mechanického hlediska také nosník.  Svislý a velmi komplikovaný. Zdroj: pixabay.com](strom.jpg)
+
+</div>
+
+
+
 Příklad. Je dán vetknutý nosník na konci zatížený svislou silou $F$. Deformace nosníku $\delta$ na konci souvisí (skalární veličina) s velikostí zatěžující síly (skalární veličina). Pro studium problému je vhodné mít převodní pravidlo, které pro každé zatížení udává deformaci. Toto pravidlo bude z matematického úhlu pohledu funkce (funkce jedné proměnné). Může mít například formu
 $$\delta=\frac 1k F,$$
 kde $k$ je konstanta pro daný nosník (tuhost).
@@ -110,7 +118,6 @@ plyne $$\sqrt x\geq 5=\sqrt {25}.$$ Druhá mocnina je na intervalu $(5,\infty)$ 
 
 # Koncept (různé pojetí rychlosti)
 
-Budeme sa zajímat o to, jak rychle se mění funkční hodnoty v čase nebo při změnách vstupních dat.
 
 <div class='obtekat'>
 
@@ -118,16 +125,13 @@ Budeme sa zajímat o to, jak rychle se mění funkční hodnoty v čase nebo př
 
 </div>
 
+Budeme sa zajímat o to, jak rychle se mění funkční hodnoty v čase nebo při změnách vstupních dat. V souvislosti s obrázkem nás může napadnout mnoho významů poujmu rychlost. 
 
-* Jak rychle (v kilometrech za hodinu) se pohybuje atlet, kůň nebo baseballový balon?
-* Jak rychle (v metrech za rok) roste strom do výšky?
-* Jak rychle (v kubických metrech za rok) roste strom (tj. jak rychle přibývá na objemu)?
-* Jak rychle (ve stupních Celsia za hodinu) klesá teplota uvnitř stavby?
-* Jak rychle (ve stupních Celsia na centimetr) se mění teplota ve vnější zdi oddělující vytopený dům a venkovní prostředí?
-* Jak rychle (v newtonech na metr) klesá gravitační síla při vzdalování se od Země?
-* Jak rychle (v Kč na litr) rostou náklady výrobce pivovaru při zvyšování produkce?
-* Jak rychle (v metrech krychlových na metr) klesá hustota vzduchu s výškou nad zemí?
-* Jak rychle (v litrech na kilometr za hodinu) roste spotřeba auta při vyšší průměrné cestovní rychlosti?
+* Jakou rychlost (v kilometrech za hodinu) může automobil vyvinout?
+* Jak rychle (v metrech na kilometr za hodinu) se prodlužuje brzdná dráha při zbyšující se rychlosti?
+* Jak rychle (v tisících kilometrů na kilopascal) klesá životnost pnemumatik při přehuštění?
+* Jak rychle (v litrech na 100 kilometrů na kilometr za hodinu) roste spotřeba auta při vyšší průměrné cestovní rychlosti?
+* Jak rychle (v Kč na automobil) rostou náklady výrobce automobilů při zvyšování produkce?
 
 
 # Koncept (průměrná rychlost a okamžitá)
