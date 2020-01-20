@@ -497,7 +497,7 @@ $$\frac{\partial \rho}{\partial t} + \mathop{\mathrm{div}} (\rho \vec {u}) = 0,$
 kde $\rho$ je hustota. 
 Tato rovnice napsána pro vzduch je jednou z rovnic používaných při [modelování vývoje počasí](http://www-history.mcs.st-and.ac.uk/HistTopics/Weather_forecasts.html)
 
-Pro nestlačitelnou tekutinu je hustota dále konstantní. Ve stacionárním stavu je derivace podle času nulová. Kterákoliv z těchto podmínek redukuje rovnici na  $$ \mathop{\mathrm{div}} \vec u =0.$$ Důsledkem této rovnice
+Pro nestlačitelnou tekutinu je hustota konstantní. Ve stacionárním stavu je derivace podle času nulová. Kterákoliv z těchto podmínek redukuje rovnici na  $$ \mathop{\mathrm{div}} \vec u =0.$$ Důsledkem této rovnice
 je zvýšení rychlosti molekul pohybující se nestlačitelné tekutiny při
 proudění místem s menším průřezem.
 
@@ -621,7 +621,7 @@ i na $x$.
 
 <div class='obtekat'>
 
-![Difuzní rovnice umí popsat proudění podzemní vody. Díky tomu dokážeme zabránit kontaminacím pitné vody z chemickcýh provozů. Zdroj: pixabay.com.](voda.jpg)
+![Difuzní rovnice umí popsat proudění podzemní vody. Díky tomu dokážeme zabránit kontaminacím pitné vody z chemických provozů. Zdroj: pixabay.com.](voda.jpg)
 
 </div>
 
@@ -652,7 +652,7 @@ měřitelnou veličinu, *piezometrickou výšku*
 $h$. Přírůstek množství podzemní vody za časovou jednotku na jednotkové ploše v daném
 místě zvodně má tvar $S_S \frac{\partial h}{\partial t}$, kde $S_S$ je
 *specifická zásobnost*.  Úměrnost mezi gradientem piezometrické výšky a
-filtračním tokem byla prokázána experimentálně a je známa jako *Darcyho
+filtračním tokem  zprostředkovává *Darcyho
 zákon*. Difuzní rovnice  má tvar
 $$      {S_S\frac{\partial h}{\partial t}=  \sigma + \nabla\cdot \bigl(T\nabla h\bigr),}$$ kde $T$ je transmisivita zvodnělé vrstvy. Tato rovnice se nazývá *rovnice podzemní vody*. Zdroje jsou nejčastěji zasakovací nebo odvodňovací vrty, dále studny, poldry, výkopy nebo zářezy. Informace získané z rovnice podzemní vody se využívají například
   k ochraně lomů, dolů a stavebních jam před *zaplavením*, k hospodaření s *pitnou vodou*,  k ochraně před šířením *kontaminace z chemických
