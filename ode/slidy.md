@@ -597,6 +597,9 @@ má tedy pravá strana derivaci různou od nuly, poznáme stabilitu z\ monotonie
   tento stacionární stav dostává stále blíže ke stavu nestacionárnímu a
   rovnováha je tedy poněkud křehká. 
 
+
+<!--
+
 #  Příklad - časový rozestup mezi trolejbusy
 
 \iffalse
@@ -645,6 +648,7 @@ přijede několik trolejbusů těsně za sebou. (Podle knihy P.  Blanchard,
 R. L. Devaney, G.  R. Hall: Differential equations, Cengage Learning
 (2006), 828 pp.)
 
+-->
 
 # ODE tvaru $\frac{\mathrm dy}{\mathrm dx}=f(x)g(y)$ (rovnice se separovanými proměnnými)
 

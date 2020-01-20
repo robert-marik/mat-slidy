@@ -37,6 +37,7 @@ $$\nabla f =\left(\frac{\partial f}{\partial x},\frac{\partial f}{\partial y},\f
 
 # Vektorové pole
 
+
 <div class='obtekat'>
 
 ![Vektorové pole vykreslené v náhodných bodech v prostoru. Je vhodné pro popis proudění.](3d_pole.png)
@@ -161,6 +162,18 @@ kinetickou energii nebo osmózu a kapilární jevy.
 
 ## Fourierův zákon (vedení tepla)
 
+
+\iffalse
+
+<div class='obtekat'>
+
+![Na hranici tělesa je tok tepla dán okrajovou podmínkou vyjádřenou Fourierovým zákonem.  Zdroj: Cengel, Ghajar: Heat and Mass Transfer.](rozhrani.png)
+
+</div>
+
+\fi
+
+
 Fourierův zákon se týká vedení tepla a vyjadřuje, 
 že vektor hustoty tepelného toku $\vec q$ je úměrný gradientu teploty $\nabla T$
 a má opačný směr, tj. 
@@ -185,6 +198,18 @@ směru maximálního poklesu (záporného gradientu) teploty, ale někdy i ve s
 gradientu teploty. Viz Wikipedia a heslo Thermophoresis.
 
 # Speciální případy vztahu mezi gradientem a tokem
+
+
+\iffalse
+
+<div class='obtekat'>
+
+![Formálně jsou všechny konstitutivní zákony stejné a jsou stejné i jako zákon mezi elektrickým proudem a napětím. Proto je možné izolační vrstvy modelovat pomocí elektrických obvodů, rezistorů a vzorců pro jejich spojování z Ohmova zákona. Na obrázku je řez stěnou z dutých cihel a izolace. Zdroj: Cengel, Ghajar: Heat and Mass Transfer.](rezistory.png)
+
+</div>
+
+\fi
+
 
 Uvažujme vztah mezi gradientem a tokem ve tvaru $$\vec j=-K\nabla \varphi,$$ kde $K$ je symetrický tenzor. Gradient má ve trojrozměrném případě vyjádření
 $$\nabla \varphi =\left(\frac{\partial \varphi}{\partial x},\frac{\partial \varphi}{\partial y},\frac{\partial \varphi}{\partial z}\right)^T$$
@@ -270,11 +295,16 @@ $\vec j=-k\nabla \varphi$, kde $k$ je konstanta a vektory toku a gradientu mají
 
 # Divergence
 
+
+\iffalse
+
 <div class='obtekat'>
 
 ![Divergence a tok pole $\vec q=(0,Q, R)$ tělesem nenulového objemu. Tok je zobrazen vždy ve středu stěny. Červené vektory vstupují do krychle a příslušné toky se počítají záporně. Modré vystupují ven a počítají se kladně. V tomto případě je celková bilance kladná, z objemu více vyteče, než vteče dovnitř. Divergence je kladná. Pokud v krychli množství veličiny neubývá, musí tam být zdroj této veličiny.](divergence.png)
 
 </div>
+
+\fi
 
 Budeme sledovat tok vektorového pole a bude nás zajímat, o kolik se tok v daném místě mění.
 
@@ -326,7 +356,7 @@ nezřídlové. Absence zdrojů magnetického pole se projevuje tak, že rozříz
 
 # Výpočet gradientu a divergence
 
-Viz přednáška. V ZS 2019 přeskočit (kumulace rektorských a děkanských volen, dodělávala se lineární algebra).
+Viz přednáška. 
 
 # Rovnice kontinuity
 
@@ -475,8 +505,7 @@ $$\frac{\partial \rho}{\partial t} + \mathop{\mathrm{div}} (\rho \vec {u}) = 0,$
 kde $\rho$ je hustota. 
 Tato rovnice napsána pro vzduch je jednou z rovnic používaných při [modelování vývoje počasí](http://www-history.mcs.st-and.ac.uk/HistTopics/Weather_forecasts.html)
 
-Pro nestlačitelnou tekutinu je hustota dále konstantní a odsud
-dostáváme ve stacionárním stavu $$     \mathop{\mathrm{div}} \vec u =0.$$ Důsledkem této rovnice
+Pro nestlačitelnou tekutinu je hustota dále konstantní. Ve stacionárním stavu je derivace podle času nulová. Kterákoliv z těchto podmínek redukuje rovnici na  $$ \mathop{\mathrm{div}} \vec u =0.$$ Důsledkem této rovnice
 je zvýšení rychlosti molekul pohybující se nestlačitelné tekutiny při
 proudění místem s menším průřezem.
 

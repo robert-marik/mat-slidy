@@ -47,8 +47,10 @@ kde $k$ je konstanta pro daný nosník (tuhost).
 Výsadní postavení při popisu dějů a jevů v přírodě mají přímá a
 nepřímá úměrnost, známé ze střední školy.
 
-> Definice (přímá a nepřímá úměrnost). Veličina $y$ je *přímo úměrná* veličině $x$ jestliže existuje konstanta $k$ taková, že platí $$y=kx.$$
+> Definice (přímá a nepřímá úměrnost). Veličina $y$ je *přímo úměrná* veličině $x$ jestliže existuje konstanta $k$ taková, že platí $$y=kx.$$ 
 Veličina $y$ je *nepřímo úměrná* veličině $x$ jestliže existuje konstanta $k$ taková, že platí $$y=\frac kx.$$
+
+**Poznámka.** Je-li veličina $y$ úměrná veličině $x$, píšeme $$y\sim x.$$ Je-li navíc konstanta úměrnosti blízká jedničce, tj. $x$ a $y$ jsou blízké, píšeme $$y\approx x.$$ Pro nepřímou úměrnost píšeme $$y\sim \frac 1x.$$
 
 
 **Příklad.**

@@ -622,13 +622,7 @@ $$A=
 $$
 Ukážeme si řešení úlohy bez použití vzorců, jenom prostředky lineární algebry.
 Charakteristický polynom této matice je
-$$
-\det(A-\lambda I)=
-\begin{vmatrix}
-  20-\lambda & 30 \\ 30 & -10-\lambda
-\end{vmatrix}=
-(20-\lambda)(-10-\lambda)-30^2=\lambda^2-10\lambda-1100
-$$
+\dm$$\det(A-\lambda I)= \begin{vmatrix}   20-\lambda & 30 \\ 30 & -10-\lambda \end{vmatrix}= (20-\lambda)(-10-\lambda)-30^2=\lambda^2-10\lambda-1100 $$
 s kořeny $\lambda_1\approx 38.54$ a $\lambda_2\approx -28.54$. To
 budou prvky v hlavní diagonále po transformaci tenzoru.
 
