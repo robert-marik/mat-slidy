@@ -31,12 +31,9 @@ potřeby matematické formulace fyzikálních zákonů gradient uvažujeme jako 
 vektor
 $$\nabla f =\begin{pmatrix}\frac{\partial f}{\partial x}\\\mathstrut \frac{\partial f \mathstrut}{\partial y \mathstrut}\\\frac{\partial f}{\partial z}\end{pmatrix}.$$
 Pro úsporu místa jej někdy píšeme v transponovaném tvaru
-$$\nabla f =\left(\frac{\partial f}{\partial x},\frac{\partial f}{\partial y},\frac{\partial f}{\partial z}\right)^T.$$ Gradient je vektor, který má směr odpovídající směru nejrychlejšího růstu skalární veličiny a velikost je stejná jako derivace v daném směru.
+$$\nabla f =\left(\frac{\partial f}{\partial x},\frac{\partial f}{\partial y},\frac{\partial f}{\partial z}\right)^T.$$ Gradient je vektor, který má směr odpovídající směru nejrychlejšího růstu skalární veličiny a velikost odpovídá změně veličiny na jednotku délky.
 
-
-
-# Vektorové pole
-
+# Transportní jevy
 
 <div class='obtekat'>
 
@@ -44,25 +41,54 @@ $$\nabla f =\left(\frac{\partial f}{\partial x},\frac{\partial f}{\partial y},\f
 
 </div>
 
+  Pochopení a modelování transportních dějů je
+  důležité pro většinu technických oborů. Podstata těchto dějů je často
+  odlišná, přesto mají navenek podobné chování a tím je umožněn
+  jednotný přístup při matematickém modelování.
 
-Vektorové pole je vektorová funkce, dvou nebo tří proměnných. Můžeme
-si ji představit jako zobrazení, které každému bodu v rovině nebo v prostoru přiřadí vektor. Proto je vhodné tyto veličiny použít při
-popisu proudění. Ať už hmatatelných látek (tekutina, elektrony) nebo
-obecnější veličiny (teplo, elektrická intenzita). 
+Příklady transportních dějů
 
-> Poznámka (stavová veličina). Veličiny charakterizující stav tělesa se nazývají *stavové veličiny*. Tyto veličiny závisí jenom na současném stavu a ne na historii, jak se těleso do daného stavu dostalo. Některé stavové veličiny se mohou měnit ("přenášet") tokem definovaným pomocí vhodného vektorového pole. Tok tohoto pole danou plochou vyjadřuje, kolik stavové veličiny projde touto plochou za jednotku času, přepočteno na jednotku povrchu plochy. 
+* povrchová voda
+* podzemní voda
+* teplo
+* voda ve dřevě
 
-Příkladem stavové veličiny může být množství vody v jednotkovém objemu
-dřeva, tj. koncentrace vody ve dřevě. Protože se voda ve dřevě může
-pohybovat, je tato stavová veličina přenášena jistým vektorovým polem
-(rychlostní pole). Tok tohoto pole v daném bodě vyjadřuje, kolik vody
-projde rovinnou plochou v daném místě za jednotku času. Orientace
-plochy se volí dle potřeby (podle toho, se kterou komponentou proudění
-chceme pracovat) a tok se přepočítává na jednotkovou plochu.
+Obecná bilance veličiny, která má zdroje a spotřebiče a je přenášena tokem vypadá následovně.
+
+* Existuje veličina, spojitě rozložená v prostoru, charakterizující stav systému. Tuto veličinu budeme nazývat
+    *stavovou veličinou* a její hustotu označíme $u$.
+* Stavová veličina se může v prostoru přemisťovat *tokem* $\vec
+    \jmath$.
+* Stavová veličina může vznikat a zanikat.
+    *Zdroje* i *spotřebiče* budeme
+    uvažovat společně a jejich vydatnost rozlišíme
+    znaménkem: spotřebiče budou zdroje se zápornou vydatností. Celkovou vydatnost zdrojů a spotřebičů v daném místě, tj.
+    množství veličiny vygenerované na jednotku objemu (nebo plochy,
+    nebo délky, podle počtu dimenzí v úloze) za jednotku času,
+    označíme $\sigma$.
+
+
+Zákon zachování (se zohledněním toku a zdrojů) je vlastně celková
+bilance stavové veličiny. Přirozeným jazykem je možno tuto bilanci
+formulovat následovně.  
+
+> Přírůstek množství veličiny je součtem přírůstku ze zdrojů a přírůstku způsobeného tokem.
+
+Toto je jednoduchý, ale přitom neuvěřitelně silný nástroj, který
+umožní popsat řadu zcela odlišných dějů. Pro použití v matematickém
+modelu ale musíme jednotlivé pojmy kvantifikovat. Měřit rychlost, s
+jakou se mění množství veličiny v daném místě umíme pomocí derivace
+podle času. Měřit změny v toku přenášejícím sledovanou veličinu jsme
+se naučili jako jednu z aplikací parciálních derivací: jedná se o
+záporně vzatou derivaci podle prostorové proměnné vynásobenou
+fyzikální materiálovou konstantou. Ještě se musíme naučit měřit intenzitu toku a její změny ve dvou nebo třech dimenzích.
+
 
 # Tok a gradient v konstitutivních zákonech
 
-> Poznámka (konstitutivní zákony). V aplikacích často formulujeme pomocí gradientu a toku vektorového pole *konstitutivní zákony*. To jsou zákony nebo vztahy mezi fyzikálními veličinami specifickými pro danou látku nebo materiál a udávají odezvu tohoto materiálu na externí stimul. Viz též [Wikipedie](https://en.wikipedia.org/wiki/Constitutive_equation).
+> Poznámka (konstitutivní zákony). V aplikacích často formulujeme
+zákony nebo vztahy mezi fyzikálními veličinami specifickými pro danou látku nebo materiál a udávají odezvu tohoto materiálu na externí stimul. Tyto zákony se nazývají *konstitutivní zákony* a formulujeme je pomocí gradientu a toku vektorového pole. Viz též [Wikipedie](https://en.wikipedia.org/wiki/Constitutive_equation).
+
 
 \iffalse
 
@@ -371,47 +397,28 @@ Viz přednáška.
 
 \fi
 
-Zformulujeme zákon zachování pro zcela obecný případ zachovávající se veličiny. Díky obecnému přístupu jsou rozsáhlé aplikace, ale k nim je nutné dodat další informace o studovaném problému (z biologie, geologie, fyziky, ...).
+* Přírůstek stavové veličiny za jednotku času v jednotkovém objemu
+  (nebo ploše, nebo délce, podle dimenzionality úlohy) je derivace
+  hustoty $u$ podle času.
+  $$\text{Přírůstek}=\frac{\partial u}{\partial t}$$
+*  Přírůstek veličiny v jednotkovém objemu (nebo ploše, nebo délce) za
+  jednotku času způsobený tokem $\vec \jmath$ je záporně vzatá divergence
+  vektorového pole $\vec \jmath$. Tento přírůstek je způsobený snížením
+  toku, proto má předřazeno záporné znaménko.
+$$    \text{
+        Přírůstek způsobený tokem
+}=-\nabla\cdot \vec \jmath$$
 
-Předpokládejme, že tok vektorového pole přenáší nějakou stavovou
-veličinu (veličinu, která charakterizuje stav látky nebo
-tělesa). Množství této veličiny v jednotkovém objemu tělesa označíme
-$\rho$. Budeme uvažovat obecný nestacionární stav, kdy se $\rho$ může
-měnit s časem.
-
-* Daným místem může protékat vektorové pole a celková bilance
-(tj. množství, které vyteče za jednotku času z jednotkového objemu
-sníženo o množství, které doteče) nemusí být nulová. Tato celková
-bilance je v každém místě vyjádřena divergencí vektorového pole.
-* Někdy se stavová veličina může v daném místě kumulovat, nebo může
-ubývat. Rychlost s jakou množství stavové veličiny v daném místě
-přibývá je dáno parciální derivací $\frac{\partial \rho}{\partial t}$.
-* V obecném případě stavová veličina přenášená vektorovým polem může vznikat
-nebo zanikat a tedy mohou být přítomny zdroje nebo spotřebiče této
-stavové veličiny. Jejich vydatnost (přesněji množství stavové
-veličiny, které vyprodukují v jednotkovém objemu za jednotku času)
-označíme $\sigma$, přičemž spotřebiče bereme jako zdroje se zápornou
-vydatností.
-
-> Rovnice kontinuity je matematické vyjádření zákona zachování. Udává, že pro libovolnou malou reprezentativní část tělesa je rychlost změny množství stavové veličiny dáno celkovou vydatností zdrojů v této části snížené o tok z této části tělesa ven. 
-
-Pro přesné odvození pro libovolnou část objemu
-nemáme bohužel v základním kurzu matematiky dostatečné matematické prostředky.  (Bylo by nutné mít některá zobecnění integrálu.) I tak se však můžeme pokusit o jakousi bilanci v obecném místě tělesa pomocí hustoty stavové veličiny
-a divergence a detailnější popis je možné doplnit po prostudování dalších partií s nezbytnými matematickými nástroji. 
-
-Podle výše uvedeného platí
-$$\frac{\partial \rho}{\partial t}
-=\sigma-\mathop{\mathrm{div}}  \vec j
+Matematickou formulací celkové bilance  je **rovnice kontinuity**.
 $$
-neboli $$\frac{\partial
-\rho}{\partial t}+\mathop{\mathrm{div}}\vec j = \sigma.$$
-Tato rovnice se nazývá *rovnice kontinuity* a díky své obecnosti
-popisuje širokou škálu problémů týkajících se živé i neživé přírody.
+      {\frac{\partial u}{\partial t}=\sigma -\nabla\cdot \vec \jmath}   $$
 
->Poznámka (fyzikální interpretace členů stavové rovnice).
+    
+
+>Poznámka (fyzikální interpretace členů rovnice kontinuity).
 >
->* Člen $\frac{\partial \rho}{\partial t}$ udává, jak rychle se mění
-   stavová veličina $\rho$. Pokud studujeme systém v ustáleném stavu,
+>* Člen $\frac{\partial u}{\partial t}$ udává, jak rychle se mění
+   hustota stavové veličiny $u$. Pokud studujeme systém v ustáleném stavu,
    kdy se stavová veličina nemění v čase, je tento člen nulový. Tomuto
    se říká *stacionární stav* a *stacionární rovnice
    kontinuity*. Stacionární rovnice kontinuity typicky popisuje systémy po dosažení rovnovážného
@@ -420,11 +427,11 @@ popisuje širokou škálu problémů týkajících se živé i neživé příro
    spotřebiče jsou uvažovány jako zdroje záporné vydatnosti. Tento
    člen tedy udává, kolik stavové veličiny v tomto místě vzniká. Pokud
    zdroje neexistují, jedná se o *bezzdrojovou rovnici*.
->* Člen $\mathop{\mathrm{div}} \vec j$ udává v daném bodě změnu ve velikosti
+>* Člen $\nabla\cdot \vec j$ udává v daném bodě změnu ve velikosti
    proudění přenášejícím stavovou veličinu. Přesněji, udává, o kolik více veličiny z daného místa vyteče ve srovnání s množstvím veličiny, které do
-   tohoto místa vteče. Tento člen je v rovnici kontinuity přítomen vždy, bez něj by rovnice kontinuity ztratila smysl (resp. redukovala by se na triviální případ, kdy veličina v daném místě vzniká danou rychlostí a zůstává zde, tj. problém řešitelný čistě integrováním).
+   tohoto místa vteče. Jinak řečeno, udává, o kolik zeslábne v daném místě tok $\vec \jmath$. Tento člen je v rovnici kontinuity přítomen vždy, bez něj by rovnice kontinuity ztratila smysl (resp. redukovala by se na triviální případ, kdy veličina v daném místě vzniká danou rychlostí a zůstává zde, tj. problém řešitelný čistě integrováním).
 
-V matematice často rovnice uvažujeme ve výše uvedeném tvaru.  Při
+V matematice často rovnici kontinuity uvažujeme ve výše uvedeném tvaru.  Při
 praktickém použití většinou preferujeme názornou interpretaci
 jednotlivých veličin a proto se v rovnici mohou objevit další
 konstanty úměrnosti, které umožní sladit jednotky a fyzikální
@@ -444,49 +451,34 @@ pro rovnici popisující vedení tepla na stranách 88 a 89.
 
 V této rovnici není zahrnut případ, kdy se veličina přenáší ještě i prouděním hmotného prostředí (konvekce).
 
-# Vedení tepla
 
-\iffalse
+# Rovnice mělké vody
 
 <div class='obtekat'>
 
-![Rovnice vedení tepla se využívá při modelování ohřevu nebo ochlazování. Zdroj: pixabay.com.](chladic.jpg)
+\iffalse 
 
-</div>
+![Rovnici kontiuity známe ze středoškolské fyziky pro ustálené proudění. Naše obecnější formulace umí zachytit i nestacionární stav. Zdroj: pixabay.](ricka.jpg)
 
 \fi
 
-Důležitým speciálním případem rovnice kontinuity je vedení tepla. V tomto případě je stavovou veličinou vnitřní energie, ale pro větší pohodlí rovnici formulujeme pro teplotu $T$. Vnitřní energie je přenášená tokem tepla $\vec j$. Rovnice kontinuity vyjadřuje, že energie
-nemizí ani se netvoří. Proto je rovnice vedení tepla zpravidla bezzdrojová a má tvar        
-$$\rho c\frac{\partial T}{\partial t}+\mathop{\mathrm{div}}\vec j = 0,\tag{1}$$
-kde $T$ je teplota, $\vec j$ tok tepla. Konstanty $\rho$ a $c$ jsou
-hustota a měrná tepelná kapacita a slouží k přepočtení množství
-dodaného tepla na stavovou a lépe měřitelnou veličinu, na změnu teploty.
+</div>
 
-> Poznámka (interpretace členů).
->
->* Veličina $\frac{\partial T}{\partial t}$ udává rychlost růstu teploty tělesa a koeficient $\rho c$ tuto hodnotu přepočítává na údaj, jak rychle roste vnitřní energie tělesa (kinetická energie molekul.)
->* Člen $\mathop{\mathrm{div}}\vec j$ udává, o kolik v daném místě roste tok. Tolik vnitřní energie v daném místě ubývá za jednotku času. Vzhledem k absenci zdrojů je to také jediný mechanismus, jak v daném místě může vnitřní energie přibývat či ubývat.
->* Rovnice (1) vyjadřuje to, že pokud z daného místa více energie odtéká, než kolik do místa proudí, tj. $\mathop{\mathrm{div}}\vec j$ je kladná, dojde v tomto místě k odpovídajícímu snížení teploty.
 
-Pokud k tomuto tvaru rovnice kontinuity přidáme Fourierův zákon a divergenci převedeme na druhou stranu rovnice,
-získáme
-$$\rho c\frac{\partial T}{\partial t}=\mathop{\mathrm{div}} (D\nabla T).$$ 
-To je zobecnění rovnice vedení tepla v jedné dimenzi, kterou jsme
-odvodili primitivními prostředky (jenom pomocí parciálních derivací, bez gradientu a divergence) ve tvaru
-$$\rho c\frac{\partial T}{\partial t}=\frac{\partial}{\partial x}\left(D\frac{\partial T}{\partial x}\right)$$
-v úvodní přednášce.
+Rovnici kontinuity můžeme použít pro popis vody v řečišti. Úloha je jednodimenzionální a tok $Q$ je skalární veličina. Divergence toku se díky jednodimenzionálnosti redukuje na derivaci podle prostorové proměnné $\frac{\partial Q}{\partial x}$. Zachovávající se veličinou je množství vody. Hustota zachovávající se veličiny je množství vody na metr délky toku, tj. \textit{průtočný průřez} $A$ (obsah průřezu říčního toku  v daném místě). Zdroje zpravidla neuvažujeme, tj. $\sigma=0$. Rovnice kontinuity má potom tvar 
+$$
+      {\frac{\partial A}{\partial t}= - {\frac{\partial Q}{\partial x}}}
+$$
+a nazývá se Saint-Venantova rovnice nebo též *rovnice mělké vody*. Tato rovnice se používá při popisu *proudění v korytě* nebo při modelování *vln tsunami*.
 
-Ze střední školy známe [makroskopickou formu](https://cs.wikipedia.org/wiki/M%C4%9Brn%C3%A1_tepeln%C3%A1_kapacita#Vztah) rovnice (1) $$mc\Delta T=Q.$$ Ta je
-zformulována pro těleso jako celek a $Q$ se uvažuje v opačném smyslu
-než v rovnici kontinuity (teplo je kladné, pokud jej dodáváme).
-
-V literatuře věnované problematice dřeva se rovnice vedení tepla ve dřevě označuje jako Druhý Fourierův zákon (P. Horáček, Fyzikální a mechanické vlastnosti dřeva I, str. 88).
-
-V některých případech nemusí být člen charakterizující zdroje
-nulový. Teplo může vznikat například při tření nebo při průchodu
-elektrického proudu transformací z jiného druhu energie. Dále teplo vzniká například při betonování po [přidání vody do cementu](http://www.ebeton.cz/pojmy/hydratacni-teplo), známý je problém jak [uchladit Hooverovu přehradu](http://www.ebeton.cz/encyklopedie/hooverova-prehrada) při stavbě.
-
+V rovnici jsou dvě funkce, tok $Q$ definující pohyb stavové veličiny a
+průřez $A$ definující množství stavové veličiny. Někdy je vhodnější
+pracovat se stavovou veličinou $h$ udávající výšku hladiny. Jak jsme
+zmínili v úvodní přednášce o derivacích, je derivace $\frac{\mathrm
+dA}{\mathrm d h}$ rovna šířce hladiny. Abychom mohli celou rovnici
+převést na tvar pracující jenom se stavovou veličinou $h$, je nutné udělat
+nějaké dodatečné předpoklady, jako například pracovat s konkrétním
+tvarem koryta.
 
 # Proudění tekutiny v mechanice kontinua
 
@@ -511,37 +503,107 @@ proudění místem s menším průřezem.
 
 [Středoškolský makroskopický tvar](https://cs.wikipedia.org/wiki/Rovnice_kontinuity#Rovnice_kontinuity_ve_st%C5%99edo%C5%A1kolsk%C3%A9_fyzice) jednorozměrné rovnice kontinuity pro proudění nestlačitelné tekutiny je $$S u = \mathrm{konst}.$$
 
-# Proudění vody ve dřevě
+
+
+# Difuzní rovnice
+
+Difuzní rovnice je rovnice kontiuity s dosazeným konstitučním vztahem
+pro tok.  Použijeme-li pro kvantifikaci souvislosti toku a gradientu
+lineární aproximaci, je možné psát
+$$      \vec \jmath=-D\nabla u,$$
+kde $D$ konstanta
+úměrnosti. Pokud tok $\vec \jmath$ a gradient $\nabla u$ leží v jedné přímce,
+je $D$ reálné číslo, jinak je $D$ matice. Například při
+studiu pohybu vody ve dřevě se voda řídí nejen směrem maximálního
+poklesu vlhkosti, ale stáčí se současně do podélného směru, ve kterém dřevo
+vede vlhkost nejlépe. V takovém případě je $D$ matice. 
+Spojením rovnice kontinuity a vztahu  pro tok stavové veličiny dostáváme  *difuzní rovnici*
+$$
+      {\frac{\partial u}{\partial t}=\sigma + \nabla\cdot \bigl(D\nabla u\bigr)}$$
+    
+
+# Vedení tepla
 
 \iffalse
 
 <div class='obtekat'>
 
-![Proudění vody ve dřevě nás zajímá zejména u sušení. Ale podobně můžeme modelovat i vlhnutí. Zdroj: Wikipedia (Hbkrako).](drevo.jpg)
+![Stromy umí ochlazovat své okolí. Ulice v Melbourne vyfocená termokamerou to dokazuje. A difuzní rovnice toto dokáže modelovat. Photograph: City of Melbourne. Zdroj: theguardian.com.](teplo.jpg)
 
 </div>
 
 \fi
 
-Jedná se o rovnici kontiunity pro koncentraci vody $c$. Voda ve dřevě
-nevzniká ani nezaniká, jenom se při sušení transportuje mimo dřevo. Proto v rovnici nebudou zdroje. Příslušným konstitutivním zákonem je Fickův
-zákon. Rovnice popisující tento proces má tvar
-$$\frac{\partial c}{\partial t}=\mathrm{\mathop{div}}(D\nabla c)\tag{*}$$
-anebo (po započtení Soretova efektu)
-$$\frac{\partial c}{\partial t}=\mathrm{\mathop{div}}(D\nabla c+sD\nabla T).$$
-Ve druhém případě musíme tuto rovnici uvažovat společně s rovnicí
-vedení tepla a mít tedy úlohu na soustavu dvou rovnic pro dvě
-modelovaná pole.
+Důležitým speciálním případem difuzní rovnice je rovnice vedení tepla.
+Stavovou veličinou, která se zachovává v úlohách s vedením tepla, je vnitřní energie ve
+formě tepla. Zpravidla nemá smysl uvažovat členy vyjadřující
+zdroje, tj. $\sigma =0$. Protože teplo neměříme přímo, je vhodnější
+model formulovat pro teplotu $T$. Jsou-li $\varrho$ a $c$ po řadě hustota a měrná tepelná kapacita materiálu, má člen vyjadřující změnu hustoty
+energie v daném místě tvar
+$\varrho c\frac{\partial T}{\partial t}.$ Úměrnost mezi gradientem
+teploty a tokem tepla zprostředkovává
+*Fourierův zákon*. Difuzní rovnice má v tomto případě tvar
+$${\varrho c\frac{\partial T}{\partial t}=  \nabla\cdot\bigl(D\nabla T\bigr)}$$
 
-V případě dřeva volíme pokud možno souřadné osy souhlasně s anatomickými směry dřeva a matice $D$ je poté diagonální. Proto se (*) redukuje na
+> Poznámka (interpretace rovnice vedení tepla).
+>
+>* Veličina $\frac{\partial T}{\partial t}$ udává rychlost růstu teploty tělesa a koeficient $\rho c$ tuto hodnotu přepočítává na údaj, jak rychle roste vnitřní energie tělesa (kinetická energie molekul.)
+>* Výraz $D\nabla T$ udává (až na znaménko), jak se nerovnoměrnost v rozložení teploty vyrovnává tokem tepla. Přesněji, tok tepla je $-D\nabla T$.
+>* Člen $\nabla\cdot(D\nabla T)$ udává, kolik tepla z celkového toku v daném místě zůstává a podílí se na zvýšení teploty. Vzhledem k absenci zdrojů je to také jediný mechanismus, jak v daném místě může vnitřní energie přibývat či ubývat.
+>* Rovnice jako celek vyjadřuje to, že pokud z daného místa více energie odtéká, než kolik do místa proudí, tj. divergence $\nabla\cdot (D\nabla T)$ je kladná, dojde v tomto místě k odpovídajícímu snižení teploty.
+
+\iffalse
+
+<div class='obtekat'>
+
+![Na rozhraní vrstev ve vrstveném materiálu je spojité teplotní pole a tok tepla.  Zdroj: Cengel, Ghajar: Heat and Mass Transfer.](vrstvy.png)
+
+</div>
+
+\fi
+
+
+Tato rovnice je zobecnění rovnice vedení tepla v jedné dimenzi, kterou jsme
+odvodili primitivními prostředky (jenom pomocí parciálních derivací, bez gradientu a divergence) ve tvaru
+$$\rho c\frac{\partial T}{\partial t}=\frac{\partial}{\partial x}\left(D\frac{\partial T}{\partial x}\right)$$
+v úvodní přednášce.
+
+Rovnice vedení tepla se používá například při *tepelné ochraně budov*, při modelování *tepelných ostrovů* v krajině, při *tepelné modifikaci dřeva*, nebo při studiu *permafrostu*. 
+
+V literatuře věnované problematice dřeva se rovnice vedení tepla ve dřevě označuje jako Druhý Fourierův zákon (P. Horáček, Fyzikální a mechanické vlastnosti dřeva I, str. 88).
+
+V některých případech nemusí být člen charakterizující zdroje
+nulový. Teplo může vznikat například při tření nebo při průchodu
+elektrického proudu transformací z jiného druhu energie. Dále teplo vzniká například při betonování po [přidání vody do cementu](http://www.ebeton.cz/pojmy/hydratacni-teplo), známý je problém jak [uchladit Hooverovu přehradu](http://www.ebeton.cz/encyklopedie/hooverova-prehrada) při stavbě.
+
+# Voda v porézním materiálu 
+
+\iffalse
+
+<div class='obtekat'>
+
+![Difuzní rovnice se používá k modelování sušení dřeva. Zdroj: pixabay.com.](drevo.jpg)
+
+</div>
+
+\fi
+
+
+
+V porézním materiálu voda prostupuje materiálem a zachovává se její
+množství, což bude stavová veličina. Hustotu tohoto množství, tj. obsah vody v jednotce
+objemu, označíme $c$ a pro tuto veličinu formulujeme matematický
+model. Zdroje neuvažujeme. Úměrnost mezi gradientem koncentrace vody a
+jejím tokem zprostředkovává *Fickův
+zákon*. Modelem je potom  difuzní rovnice bez zdrojů.
 $$
-\frac{\partial c}{\partial t}=\frac{\partial }{\partial x}\left(D_x\frac{\partial c}{\partial x}\right)+\frac{\partial }{\partial y}\left(D_y\frac{\partial c}{\partial y}\right)+\frac{\partial }{\partial z}\left(D_z\frac{\partial c}{\partial z}\right)
-$$
- Považujeme-li složky matice $D$ za konstanty (nemusely by být, protože materiál nemusí být homogenní a může mít v jiných bodech jiné fyzikální vlastnosti, nebo odezva materiálu nemusí být přesně lineární a koeficienty $D_i$ se mohou měnit s měnícím se $c$), je možné psát rovnici ve tvaru
-$$
-\frac{\partial c}{\partial t}=D_x\frac{\partial^2 c}{\partial x^2}+D_y\frac{\partial^2 c}{\partial y^2}+D_z\frac{\partial^2 c}{\partial z^2}, \tag{**}
-$$
-protože derivace konstantního násobku je násobek derivace.
+      {\frac{\partial c}{\partial t}= \nabla\cdot \bigl(D\nabla c\bigr)}
+	  $$
+  Tato rovnice se používá například při modelování procesu
+  *sušení dřeva* v sušárnách nebo při modelování *dřeva
+    ve vlhkém prostředí*. Stejná rovnice napsaná pro vzduch se používá
+  k modelování proudění v atmosféře při *předpovídání počasí*.
+
 
 V literatuře věnované problematice dřeva se rovnice difuze použitá na modelování vlhkosti ve dřevě označuje jako Druhý Fickův zákon (A. Požgaj a kol., Štruktúra a vlastnosti dreva, str. 202, P. Horáček, Fyzikální a mechanické vlastnosti dřeva I, str. 60).
 
@@ -550,30 +612,8 @@ koeficient dřeva závisí na vlhkosti, tedy vztah mezi gradientem
 vlhkosti a difuzním tokem není lineární. Přesto i v tomto případě
 používáme Fickův zákon, ovšem složky difuzního koeficientu
 nepovažujeme za konstanty, jsou závislé na $c$ a jejím prostřednictvím
-i na $x$. V takovém případě si úpravu na rovnici (**) nemůžeme
-dovolit.
+i na $x$.
 
-# Rovnice mělké vody
-
-\iffalse
-
-<div class='obtekat'>
-
-![Řez korytem. Divergence toku (zvýšení průtoku) se projeví úbytkem vody v řezu a následně snížením hladiny. Zdroj: Wikipedia.](channel.png)
-</div>
-
-\fi
-
-
-Pro jednorozměrné proudění nestlačitelné tekutiny korytem o obsahu průřezu $A$ stavová veličina vyjadřuje množství vody v korytě a tato stavová veličina je přenášena tokem $Q$, který je součinem rychlosti (nebo střední rychlosti v případě, že rychlost je rozložena nerovnoměrně) a obsahu průřezu. Stavovou veličinou může být buď obsah v řezu (viz obrázek a Cross sectional area) nebo výška hladiny (Water depth). Rovnice se zpravidla uvažuje opět bez zdrojů a vyjadřuje, že při absenci zdrojů se změna toku $Q$ se projeví ve změně průřezu. Zvýšení průtoku na jednotkové délce koryta je jednorozměrná divergence $Q$, tj. $\frac{\partial Q}{\partial x}$. Změna množství v daném průřezu obsahu $A$ za časovou jednotku je vzhledem k nestlačitelnosti rovna $\frac{\partial A}{\partial t}$. Rovnice popisující proudění má tvar
-$$\frac{\partial A}{\partial t} + \frac{\partial Q}{\partial x}  =0. $$
-Toto je jedna z forem zápisu tzv. *Saint-Venantovy rovnice*, nazývané též *rovnice mělké vody*. Používá se k modelování toku povrchové vody, modelování pohybu vzduch při předpovědích počasí nebo k modelování vln cunami. 
-
-Z matematického hlediska je to jenom rovnice kontinuity, na rozdíl od
-předchozích ukázek v ní nejsou konstituční vztahy. Proto v ní jsou dvě
-funkce, tok $Q$ definující pohyb stavové veličiny a průřez $A$
-definující množství stavové veličiny. Někdy je vhodnější pracovat se
-stavovou veličinou $h$. Jak jsme zmínili v úvodní přednášce o derivacích, platí $\frac{\mathrm dA}{\mathrm d h}=B$. Abychom mohli celou rovnici převést na tvar pracující se stavovou veličinou $h$, je nutné udělat nějaké dodatečné předpoklady, jako například pracovat s konkrétním tvarem koryta.
 
 # Rovnice podzemní vody
 
@@ -581,44 +621,44 @@ stavovou veličinou $h$. Jak jsme zmínili v úvodní přednášce o derivací
 
 <div class='obtekat'>
 
-![Modelování pohybu podzemní vody je důležité pro nastavení správného režimu hospodaření s vodou, nebo pro účinnou ochranu zdrojů vody před kontaminací. Zdroj: pixabay.com.](voda.jpg)
+![Difuzní rovnice umí popsat proudění podzemní vody. Díky tomu dokážeme zabránit kontaminacím pitné vody z chemickcýh provozů. Zdroj: pixabay.com.](voda.jpg)
 
 </div>
 
 \fi
 
-Podzemní vodou se rozumí voda přítomná pod zemským povrchem, která teče porézním prostředím tvořeným propustnými horninami a geologickými vrstvami nad nepropustnou vrstvou (volná hladina) nebo mezi dvěma nepropustnými vrstvami (napjatá hladina). 
+Proudění podzemní vody je vlastně úloha s řekou se zasypaným
+korytem. Taková voda teče ve srovnání s povrchovou vodou velmi pomalu,
+protože prosakuje půdou. Prostor, kde se podzemní voda nachází, se
+nazývá *zvodeň*. Stejně jako řeka v korytě na povrchu, i voda
+v podzemní zvodni teče v jistém smyslu "z kopce". V tomto případě
+však kromě nadmořské výšky může hrát roli i rozdíl tlaků nebo další
+efekty. Vliv všech těchto efektů shrnujeme do jediného pojmu
+*piezometrická výška*. Směr "z kopce" pro podzemní vodu je
+poté směr poklesu piezometrické výšky. V daném místě se může voda
+hromadit, to poznáme nárůstem hladiny spodní vody. Také může
+z hlediska zvodně část vody zanikat, například pokud je zde čerpaná
+studna nebo průsak do jiné zvodně. Voda může ve zvodni i vznikat,
+například zasakovacím vrtem nebo průsakem dešťových srážek. Pokud do
+celkové bilance započteme rozdíl mezi přítokem a odtokem a všechny
+zdroje a spotřebiče, množství vody se zachovává.
 
-Stavovou veličinou vyjadřující množství vody v daném místě při proudění podzemní vody s [volnou hladinou](https://cs.wikipedia.org/wiki/Hladina_podzemn%C3%AD_vody) je [piezometrická
-výška](https://cs.wikipedia.org/wiki/Hladina_podzemn%C3%AD_vody) $h$. (Pro jednoduchost si představme hladinu podzemní vody.)
-Často je vertikální proudění zanedbatelné a úloha není trojrozměrná, ale ve
-skutečnosti dvourozměrná a pro třetí souřadnici klademe $$\frac{\partial h}{\partial z}=0$$ ([Dupuitův předpoklad](https://en.wikipedia.org/wiki/Dupuit%E2%80%93Forchheimer_assumption)).
+Podzemní zvodeň je typickým porézním materiálem, přesto k modelování
+vody v tomto prostředí přistupujeme speciálním způsobem. Úloha se většinou uvažuje ve dvou dimenzích, protože
+horizontální rozměry zvodně jsou mnohem větší než její
+hloubka. Zachovává se množství vody, ale stejně
+jako u vedení tepla je výhodné formulovat model pro lépe
+měřitelnou veličinu, *piezometrickou výšku*
+$h$. Přírůstek množství podzemní vody za časovou jednotku na jednotkové ploše v daném
+místě zvodně má tvar $S_S \frac{\partial h}{\partial t}$, kde $S_S$ je
+*specifická zásobnost*.  Úměrnost mezi gradientem piezometrické výšky a
+filtračním tokem byla prokázána experimentálně a je známa jako *Darcyho
+zákon*. Difuzní rovnice  má tvar
+$$      {S_S\frac{\partial h}{\partial t}=  \sigma + \nabla\cdot \bigl(T\nabla h\bigr),}$$ kde $T$ je transmisivita zvodnělé vrstvy. Tato rovnice se nazývá *rovnice podzemní vody*. Zdroje jsou nejčastěji zasakovací nebo odvodňovací vrty, dále studny, poldry, výkopy nebo zářezy. Informace získané z rovnice podzemní vody se využívají například
+  k ochraně lomů, dolů a stavebních jam před *zaplavením*, k hospodaření s *pitnou vodou*,  k ochraně před šířením *kontaminace z chemických
+  provozů*. Aplikace jsou dále v detekci zdroje kontaminace pitné vody a odhadu rychlosti  šíření kontaminace, včetně 
+*kontaminace slanou mořskou vodou* v přímořských oblastech.
 
-Obecný tvar rovnice kontinuity pro podzemní vodu, ve kterém
-uvažujeme nestlačitelnou kapalinu, nestacionární stav a 
-zdroje (vsak srážek a podobně) či spotřebiče (například prosak do jiných geologických vrstev, mimo vodní kolektor)
-má [tvar](https://is.muni.cz/th/eqgoo/dp.pdf)
-$$\mathop{\mathrm{div}} \vec q=-S\frac{\partial h}{\partial t}+P,$$
-kde $\vec q$ je tok (množství vody, které pod zemí teče daným místem na metr délky kolmé k toku), $P$
-je celkový objem ze zdrojů (množství vody, které dodají zdroje na metr čtvereční za jednotku času, jedná se v tomto případě o součet za celou výšku vodního kolektoru), $h$ je piezometrická výška  a 
- $S$ je měrná objemová zásobnost (kolik vody se uvolní na jednotkovém obsahu půdy při změně piezometrické výšky o jednotku). 
-Tato rovnice vyjadřuje, že množství vody, které se v daném místě přidá
-do celkového proudění, je součtem množství, které v daném místě
-vygenerují zdroje a množstvím, které se v tomto místě vezme ze zásob
-díky snížení piezometrické hladiny (u volné hladiny jde zejména o snížení hladiny podzemní vody, u napjaté hladiny souvisí zejména se
-změnou pórovitosti při změně tlaku).
-
-S Darcyho zákonem vyjádřeným pomocí piezometrické výšky, tj. $$\vec q=-T\nabla h,$$  obdržíme
-$$-\mathop{\mathrm{div}} \left(T\nabla h\right)=-S\frac{\partial h}{\partial t}+P,$$
-tj.
-$$S\frac{\partial h}{\partial t}=\mathop{\mathrm{div}} \left(T\nabla h\right)+P, $$
-kde $T$ je transmisivita (zpravidla vodivost $k$ z 3D varianty Darcyho zákona, vynásobená tloušťkou zvodnělé vrstvy).
- Pokud je možnost zvolit soustavu tak, že geometrické vlastnosti jsou v souladu s fyzikálními (jedna osa je ve směru největší a druhá ve směru nejmenší vodivosti), je tenzor $T$ diagonální  a rovnice se redukuje na
-$$S\frac{\partial h}{\partial t}=\frac{\partial }{\partial x} \left(T_x \frac{\partial h}{\partial x}\right)
-+
-\frac{\partial }{\partial y} \left(T_y \frac{\partial h}{\partial y}\right)
-+P.
-$$
 
 # Rovnice vedení tepla ve 2D v různých podmínkách
 
