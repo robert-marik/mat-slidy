@@ -1,6 +1,6 @@
 % Vektorová pole, tok, zákony zachování
 % Robert Mařík
-% 30.4.2019
+% 2019-2020
 
 # Připomenutí derivací
 
@@ -501,9 +501,11 @@ $$\frac{\partial \rho}{\partial t} + \mathop{\mathrm{div}} (\rho \vec {u}) = 0,$
 kde $\rho$ je hustota. 
 Tato rovnice napsána pro vzduch je jednou z rovnic používaných při [modelování vývoje počasí](http://www-history.mcs.st-and.ac.uk/HistTopics/Weather_forecasts.html)
 
-Pro nestlačitelnou tekutinu je hustota konstantní. Ve stacionárním stavu je derivace podle času nulová. Kterákoliv z těchto podmínek redukuje rovnici na  $$ \mathop{\mathrm{div}} \vec u =0.$$ Důsledkem této rovnice
-je zvýšení rychlosti molekul pohybující se nestlačitelné tekutiny při
-proudění místem s menším průřezem.
+Pro nestlačitelnou tekutinu je hustota konstantní, což eliminuje
+nestacionární člen a redukuje rovnici na $$ \mathop{\mathrm{div}} \vec
+u =0.$$ Důsledkem této rovnosti je zvýšení rychlosti molekul
+pohybující se nestlačitelné tekutiny při proudění místem s menším
+průřezem.
 
 [Středoškolský makroskopický tvar](https://cs.wikipedia.org/wiki/Rovnice_kontinuity#Rovnice_kontinuity_ve_st%C5%99edo%C5%A1kolsk%C3%A9_fyzice) jednorozměrné rovnice kontinuity pro proudění nestlačitelné tekutiny je $$S u = \mathrm{konst}.$$
 
