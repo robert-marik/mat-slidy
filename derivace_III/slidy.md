@@ -399,3 +399,18 @@ je přesná jenom pro relativně malé deformace. Proto se také výsledný
 produkt, ke kterému se v průběhu semestru dopracujeme, nazývá tenzor
 malých deformací.
 
+# Shrnutí, hlavní myšlenky
+
+\iffalse
+
+<div class='obtekat'>
+
+![A jaká je hlavní message? Zdroj: pixabay.com](../message.jpg)
+
+</div>
+
+
+\fi
+
+* Derivace dokáže detekovat růst a klesání funkce a díky tomu dokážeme také detekovat body, kde se růst zastaví a změní na klesání nebo naopak. Tyto body nás přirozeně zajímají, protože v těchto bodech je studovaná veličina maximální nebo minimální a to má dopad při minimalizaci nákladů, maximalizaci pevnosti či zisku a jiných úlohách z praktického života.
+* Silným nástrojem dokáží být i jednodušší postupy, jako například rozměrová analýza reprezentovaná Buckinghamovým $\Pi$ teorémem.

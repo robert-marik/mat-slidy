@@ -9,7 +9,7 @@
 
 <div class='obtekat'>
 
-![Strom je z mechanického hlediska také nosník.  Svislý a velmi komplikovaný. Zdroj: pixabay.com](strom.jpg)
+![Strom je z mechanického hlediska také nosník.  Svislý a velmi komplikovaný. Zdroj: pixabay.com](strom_vitr.jpg)
 
 </div>
 
@@ -50,7 +50,7 @@ nepřímá úměrnost, známé ze střední školy.
 > Definice (přímá a nepřímá úměrnost). Veličina $y$ je *přímo úměrná* veličině $x$ jestliže existuje konstanta $k$ taková, že platí $$y=kx.$$ 
 Veličina $y$ je *nepřímo úměrná* veličině $x$ jestliže existuje konstanta $k$ taková, že platí $$y=\frac kx.$$
 
-**Poznámka.** Je-li veličina $y$ úměrná veličině $x$, píšeme $$y\sim x.$$ Je-li navíc konstanta úměrnosti blízká jedničce, tj. $x$ a $y$ jsou blízké, píšeme $$y\approx x.$$ Pro nepřímou úměrnost píšeme $$y\sim \frac 1x.$$
+**Poznámka.** Je-li veličina $y$ úměrná veličině $x$, píšeme $$y\sim x\text{ nebo }y\propto x.$$ Je-li navíc konstanta úměrnosti blízká jedničce, tj. $x$ a $y$ jsou blízké, píšeme $$y\approx x.$$ Pro nepřímou úměrnost píšeme podobně $y\sim \frac 1x$, $y\propto \frac 1x$ a $y\sim \frac 1x.$
 
 
 **Příklad.**
