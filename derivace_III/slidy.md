@@ -184,10 +184,54 @@ nemění. Přirozeně nenastává ani tam, kde funkce není definována.
 
 **Příklad.** Najděte lokální extrém funkce $y=\frac{x^3}{x+2}$. Derivace je $y'=\frac{2(x+3)x^2}{(x+2)^2}$.
 
-Řešení příkladů bude na přednášce. Další příklady ve cvičení.
+
+# Kritická tloušťka izolace trubky
 
 
+\iffalse
 
+<div class='obtekat'>
+
+![Na rozdíl od tepelné izolace rovné stěny, u trubek neplatí za každé situace že více izolace vede k menším ztrátám. Zdroj: pixabay.com](kotelna_trubky.jpg)
+
+</div>
+
+\fi
+
+Následující příklad je poněkud překvapivý. Přidáváním izolace okolo
+horké trubky se zvyšuje plocha která je v konstaktu s vnějším
+prostředím a tím se zintenzivňuje proces přdávání tepla do okolí. Tato
+ztráta by dokonce mohla být vyšší než zisk z přidání izolace mezi
+hornou trubku a vnější prostředí. Pokusíme se podchytit tento
+děj. Nejprve ukážeme, že přidávání izolace může být kontraproduktivní
+a potom se uklidníme tím, že v praktickém životě při izolování
+topenářských trubek tento problém nemáme.
+
+Teplo $Q$, které projde za jednotku času při ustáleném vedení tepla povrchem trubky délky $L$ o vniřním poloměru $r$, vnějším poloměru $R$ je dáno vztahem 
+$$\frac Q{2\pi Lk} \ln \frac{R}{r}=T_1-T_2,\tag{*}$$ kde $T_1$ je teplota uvnitř, $T_2$ teplota na vnějším okraji a $k$ je tepelná vodivost materiálu. Tento vzorec odvodíme později. 
+
+Teplo, které za jednotku času vyzáří plocha trubky o poloměru $R$ a teplotě $T_2$ do okolí o teplotě $T_\infty$ je přímo úměrná rozdílu teplot a povrchu, tj. platí $$Q=h 2\pi  R L(T_2-T_\infty).$$ Odsud
+$$\frac Q{h 2\pi RL}= T_2-T_\infty.\tag{**}$$
+Sečtením ohvězdičkovaných vztahů dostaneme 
+$$ \frac{Q}{2\pi L}\left(\frac 1k \ln \frac{R}{r}+\frac 1{h R}\right) = T_1-T_\infty.$$
+Tento vzorec popisuje tepelné ztráty při izolaci trubky o vnitřním poloměru $r$ a teplotě $T_1$ izolací o vnějším poloměru $R$ ve vnější teplotě $T_\infty$. Parametry izolace jsou tepelná vodivost $k$ a s koeficient prostupu tepla $h$. Budeme sledovat, jak se chová veličina $Q$ (tepelné ztráty) jako funkce proměnné $R$. 
+$$Q=2\pi L\frac {T_1-T\infty}{\frac 1k \ln \frac{R}{r}+\frac 1{h R}}$$
+Pokud chceme minimalizovat tepelné ztráty $Q$, musíme maximalizovat jmenovatel
+$$f(R)=\frac 1k \ln \frac{R}{r}+\frac 1{h R}=\frac 1k \ln R -\frac 1k \ln r+\frac 1{h} R^{-1}.$$
+Ostatní veličiny jsou totiž konstantní. 
+Platí 
+$$\frac {\mathrm d f}{\mathrm dR}=\frac 1k \frac 1R+\frac 1h (-1)R^{-2}
+=\frac {Rh-k}{khR^2}.$$
+Derivace je nulová pro $$R=\frac kh$$ a v okolí tohoto bodu mění
+znaménko ze záprného na kladné. Proto má funkce $f(R)$ v tomto bodě
+minimum. To odpovídá maximu funkce $Q$. Hodnota $R=\frac kh$ tedy
+odpovídá maximu funkce teplených ztrát $Q$. Pro menší poloměr izolace
+přidávání další izolace paradoxně zvyšuje tepelné ztráty.
+
+Při použití běžných materiálů pro izolaci vodovodních a topenářských
+trubek je však podíl $\frac kh$ tak malý, že při praktické realizaci s
+ním nemusíme pracovat a materiál se chová dle očekávání, tj. více
+izolace znamená menší ztráty.
 
 # Triky pro práci s funkcemi 1
 
