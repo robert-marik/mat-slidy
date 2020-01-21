@@ -59,7 +59,7 @@ Inverzní matice k součinu dvou matic je součinem jednotlivých inverzních ma
 
 <div class='obtekat'>
 
-![Inverzní matice umožní zapsat elegantně řešení i neuvěřitelně komplexní a složité soustavy rovnic. Pro praktické počítání ji však budeme muset ještě o něco vylepšit na iterační metodu. Zdroj: pixabay.com.](matrix.jpg)
+![Inverzní matice umožní zapsat elegantně řešení i neuvěřitelně komplexní a složité soustavy rovnic. Pro praktické počítání se však tato metoda moc nehodí a budeme ji muset ještě o něco vylepšit na iterační metodu. Zdroj: pixabay.com.](matrix.jpg)
 
 </div>
 
@@ -81,34 +81,19 @@ násobení. Bohužel, výpočet inverzní matice je zpravidla velmi drahý
 tento postup užitečným teoretickým nástrojem, ale v praxi postupujeme
 poněkud odlišně.
 
-# Inverzní matice k matici $2\times 2$
+# Inverzní matice k matici popisující rotaci v rovině
 
-Inverzní matice k matici $$A= \begin{pmatrix}   a & b \\ c&d \end{pmatrix}\tag{*}$$
-je $$A^{-1}=\frac{1}{ad-bc} \begin{pmatrix}   d & -b \\ -c &a \end{pmatrix}.$$
-
-Ze vzorce vidíme, že matice inverzní k matici (*) neexistuje, pokud platí $$ad-bc=0,$$
-tj. $$ad=bc$$ a $$\frac ab=\frac cd.$$ Toto nastane právě tehdy, když jeden řádek bude násobkem druhého, nebo ekvivalentně pokud jeden sloupec bude násobkem druhého.
-
-
-**Příklad.** Pro matici rotace $$R_\theta=\begin{pmatrix}
+Pro matici rotace $$R_\theta=\begin{pmatrix}
   \cos\theta & -\sin \theta\\
   \sin\theta & \cos\theta
 \end{pmatrix}$$ z minulé přednášky platí
-\dm $$(R_\theta)^{-1}=\frac{1}{\cos^2\theta+\sin^2\theta}\begin{pmatrix}   \cos\theta & \sin \theta\\   -\sin\theta & \cos\theta \end{pmatrix} = \begin{pmatrix}   \cos\theta & \sin \theta\\   -\sin\theta & \cos\theta \end{pmatrix} = \begin{pmatrix}   \cos(-\theta) & -\sin (-\theta)\\   \sin(-\theta) & \cos(-\theta) \end{pmatrix} =R_{-\theta},$$
+\dm $$(R_\theta)^{-1}=R_{-\theta} =  \begin{pmatrix}   \cos(-\theta) & -\sin (-\theta)\\   \sin(-\theta) & \cos(-\theta) \end{pmatrix} =
+\begin{pmatrix}   \cos\theta & \sin \theta\\   -\sin\theta & \cos\theta \end{pmatrix}$$
 což je přirozené pokud si uvědomíme, že inverzní operací k pootočení
 roviny o úhel $\theta$ je pootočení roviny o úhel opačný.
 
 Odsud mimo jiné vidíme, že platí
-$$\begin{pmatrix}
-  \cos\theta & -\sin \theta\\
-  \sin\theta & \cos\theta
-\end{pmatrix}^{-1}=\begin{pmatrix}
-  \cos\theta & \sin \theta\\
-  -\sin\theta & \cos\theta
-\end{pmatrix} =\begin{pmatrix}
-  \cos\theta & -\sin \theta\\
-  \sin\theta & \cos\theta
-\end{pmatrix}^T,$$
+\dm$$(R_\theta)^{-1}=\begin{pmatrix}   \cos\theta & -\sin \theta\\   \sin\theta & \cos\theta \end{pmatrix}^{-1}=\begin{pmatrix}   \cos\theta & \sin \theta\\   -\sin\theta & \cos\theta \end{pmatrix} =\begin{pmatrix}   \cos\theta & -\sin \theta\\   \sin\theta & \cos\theta \end{pmatrix}^T=(R_\theta)^T,$$
 tj. že inverzní a transponovaná matice jsou v případě matice rotace stejné. To je velká náhoda, ale přesto matice s touto vlastností hrají tak důležitou roli, že si vysloužily vlastní název představený na dalším slidu.
 
 # Ortogonální matice
@@ -324,7 +309,9 @@ $$
 =ad-bc
 $$
 
-Tento determinant je přesně výraz, který jsme viděli ve jmenovateli vzorce pro inverzní matici ke čtvercové matici druhého řádu.
+Tento determinant je roven nule právě tehdy, když je jeden řádek
+matice násobkem druhého a to bude právě tehdy když je jeden sloupec
+matice násobkem druhého.
 
 # Determinant matice $3\times 3$ (Sarusovo pravidlo)
 
