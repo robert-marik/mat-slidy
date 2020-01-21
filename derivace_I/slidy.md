@@ -7,12 +7,15 @@
 # Funkce jedné proměnné
 
 
+\iffalse
+
 <div class='obtekat'>
 
 ![Strom je z mechanického hlediska také nosník.  Svislý a velmi komplikovaný. Zdroj: pixabay.com](strom_vitr.jpg)
 
 </div>
 
+\fi
 
 
 Příklad. Je dán vetknutý nosník na konci zatížený svislou silou $F$. Deformace nosníku $\delta$ na konci souvisí (skalární veličina) s velikostí zatěžující síly (skalární veličina). Pro studium problému je vhodné mít převodní pravidlo, které pro každé zatížení udává deformaci. Toto pravidlo bude z matematického úhlu pohledu funkce (funkce jedné proměnné). Může mít například formu

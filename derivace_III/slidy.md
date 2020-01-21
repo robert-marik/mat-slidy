@@ -216,20 +216,22 @@ maximum na lokální minimum a naopak.
 Dva útvary jsou podobné, jestli jeden vznikne z druhého zvětšením všech délek na jejich $k$-násobek. Pro $k$-krát zvětšený útvar platí, že všechny jeho rozměry jsou $k$-krát větší, všechny jeho plochy jsou $k^2$-krát větší a všechny jeho objemy jsou $k^3$-krát větší. Podobné útvary jsou vždy definovány jedním parametrem, například u kruhu a koule stačí zadat poloměr. U krychle stačí zadat délku jedné strany nebo délku stěnové uhlopříčky nebo délku tělesové uhlopříčky. U válce, který má stejnou výšku jako průměr podstavy stačí zadat výšku nebo poloměr podstavy. U kužele s vrcholovým úhlem $45^\circ$ stačí zadat výšku nebo poloměr podstavy a je tím dán celý kužel. U takových těles platí pro jakýkoliv povrch (povrch koule, povrch kužele, povrch pláště kužele, povrch válce, povrch válcové plochy, ...)
 $$S=k_1r^2$$ a pro jakýkoliv objem
 $$V=k_2r^3,$$ kde $k_1$ a $k_2$ jsou konstanty a $r$ vhodný délkový parametr.  Tyto konstanty mají dokonce pěknou interpretaci - odpovídají obsahu nebo objemu pro $r=1$ a ve většině případů je známe, protože například pro kouli nebo kužel máme přesný vzorec založený na poloměru.
-Díky tomuto je dokonce možné snadno najít vztahy mezi objemem a povrchem $$V=k_3 S^{3/2}$$ a $$S=k_4 V^{2/3}.$$ Tyto vztahy je snadné si pamatovat, stačí se řídit tím, že mocnina musí být taková, aby vycházely správné jednotky. Metodami středoškolské matematiky dokonce dokážeme dokonce konstanty $k_1$ až $k_4$ najít pro jednotlivá tělesa jako je koule apod. Často nás však přesná hodnota konstanty nezajímá a jde nám jenom o charakter funkční závislosti, o přímou úměrnost mezi vhodnými mocninami. Vztahy stejného typu platí například i pro kužel s konstantním úhlem u vrcholu. To je možné využít při skladování sypkého materiálu (písek nasypaný na hromadu zaujme tvar kužele, úhel u vrcholu je daný vlastnostmi písku) nebo vyprazdňování nádrže ve tvaru trychtýře. Podobnost nacházíme i v živé přírodě, výrazná je například u ryb, kdy velká ryba je často tvarově blízká zvětšené malé rybě (viz S. Vogel, Comparative biomechanics, kap. 3). Formálně je podobné úvahy možno zobecnit pomocí [Buckinghamova $\Pi$ teorému](http://geo.mff.cuni.cz/seismosoft/Pi-teorem.pdf).
+Díky tomuto je dokonce možné snadno najít vztahy mezi objemem a povrchem $$V=k_3 S^{3/2}$$ a $$S=k_4 V^{2/3}.$$ Tyto vztahy je snadné si pamatovat, stačí se řídit tím, že mocnina musí být taková, aby vycházely správné jednotky. Metodami středoškolské matematiky dokonce dokážeme dokonce konstanty $k_1$ až $k_4$ najít pro jednotlivá tělesa jako je koule apod. Často nás však přesná hodnota konstanty nezajímá a jde nám jenom o charakter funkční závislosti, o přímou úměrnost mezi vhodnými mocninami. Vztahy stejného typu platí například i pro kužel s konstantním úhlem u vrcholu. To je možné využít při skladování sypkého materiálu (písek nasypaný na hromadu zaujme tvar kužele, úhel u vrcholu je daný vlastnostmi písku) nebo vyprazdňování nádrže ve tvaru trychtýře. Podobnost nacházíme i v živé přírodě, výrazná je například u ryb, kdy velká ryba je často tvarově blízká zvětšené malé rybě (viz S. Vogel, Comparative biomechanics, kap. 3). Formálně je podobné úvahy možno zobecnit pomocí [Buckinghamova Pi-teorému](http://geo.mff.cuni.cz/seismosoft/Pi-teorem.pdf).
 
 -->
 
 
-# Buckinghamův $\Pi$ teorém
+# Buckinghamův $\Pi$-teorém
+
+\iffalse
 
 <div class='obtekat'>
 
-![Nejslavnější aplikace rozměrové analýzy a Buckinghamova $\Pi$ teorému je odhad energie atomové bomby Trinity. Energie (20kt TNT) byla přísně tajná, ale pomocí rozměrové analýzy a veřejně publikované fotky v časopise Life ji G. I. Taylor odhadl na 22kt TNT bez složitých výpočtů. Zdroj: http://chalkdustmagazine.com/features/the-buckingham-pi-theorem-and-the-atomic-bomb/](trinity.jpg)
+![Nejslavnější aplikace rozměrové analýzy a Buckinghamova $\Pi$-teorému je odhad energie atomové bomby Trinity. Energie (20kt TNT) byla přísně tajná, ale pomocí rozměrové analýzy a veřejně publikované fotky v časopise Life ji G. I. Taylor odhadl na 22kt TNT bez složitých výpočtů. Zdroj: http://chalkdustmagazine.com/features/the-buckingham-pi-theorem-and-the-atomic-bomb/](trinity.jpg)
 
 </div>
 
-
+\fi
 
 Existují tělesa, která jsou závislá jenom na jednom délkovém parametru
 a pokud tento délkový parametr zvětšíme $k$-krát, povrchy a obsahy na
@@ -249,7 +251,7 @@ Rozšíření podobnosti je rozměrová analýza. Ta je založená na poznatku,
 že fyzikální zákony je možno vyjadřovat v různých jednotkách. Formální
 postup umožňuje například následující věta.
 
-> Věta (Buckinghamův Π teorém). Rovnici $$F(x_1,x_2,\dots,x_n)=0,$$ resp. $$x_1=F(x_2,\dots,x_n),$$ která vyjadřuje fyzikální zákon a obsahuje
+> Věta (Buckinghamův Pi-teorém). Rovnici $$F(x_1,x_2,\dots,x_n)=0,$$ resp. $$x_1=F(x_2,\dots,x_n),$$ která vyjadřuje fyzikální zákon a obsahuje
 $n$ veličin (včetně fyzikálních a materiálových konstant) vyjádřených pomocí $m$ základních
 jednotek je možno zapsat jako rovnici vyjádřenou pomocí $(n-m)$
 bezrozměrných parametrů, tj. $$f(\pi_1,\pi_2,\dots,\pi_{n-m})=0,$$
