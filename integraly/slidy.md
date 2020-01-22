@@ -1,6 +1,6 @@
 % Integrál, integrál a integrál
 % Robert Mařík
-% 12. 3. 2019, podzim 2019
+% 2019-2020
 
 
 Naučili jsme se pracovat s derivacemi, tedy s rychlostí změny.
@@ -191,14 +191,17 @@ $$
 
 $$\int 2x^4-e^{4x}+\frac 1x\,\mathrm dx=\frac 25 x^5 -\frac 14 e^{4x}+\ln |x|+C$$
 
-# Aplikace neurčitého integrálu
+# Funkční předpis z rychlosti změny a výchozího stavu
 
-**Příklad.** Teplota klesá rychlostí $\frac{\mathrm dT}{\mathrm
-dt}=-0.1 e^{-0.01 t} \,{}^\circ \mathrm C/\mathrm{min}.$ Teplota jako
+*Teplota klesá rychlostí $\frac{\mathrm dT}{\mathrm dt}=-0.1 e^{-0.01
+t} \,{}^\circ \mathrm C/\mathrm{min}.$ Cílem je najít teplotu jako
+funkci času. Dodatečná informace je, že počáteční teplota je $28
+^\circ \mathrm{C}$.*
+
+Teplota jako
 funkce času je dána integrálem
 \dm $$T=\int - 0.1 e^{-0.01t} \,\mathrm dt=\frac{-0.1}{-0.01} e^{-0.01t}+C = 10 e^{-0.01t}+C.$$
-Hodnota $C$ souvisí s počáteční teplotou. Je-li
-například počáteční teplota $28 ^\circ \mathrm{C}$, dosadíme do vztahu
+Hodnota $C$ souvisí s počáteční teplotou. Protože počáteční teplota je $28 ^\circ \mathrm{C}$, dosadíme do vztahu
 pro $T$ hodnoty $T=28 ^\circ \mathrm{C}$ a $t=0$ a ze vzniklé rovnice
 určíme $C$. Dostáváme takto podmínku $$28=10 e^0 +C,$$ která implikuje
 $C=18 ^\circ \mathrm C$. Funkce udávající závislost
@@ -253,11 +256,13 @@ Snadným důsledkem definice určitého integrálu je následující věta.
 \end{aligned}
 $$
 
-# Aplikace určitého integrálu (časová změna teploty)
+# Změna funkce z rychlosti změny (časová změna teploty)
 
-**Příklad.** Teplota klesá rychlostí
+*Teplota klesá rychlostí
 $\frac{\mathrm dT}{\mathrm dt}=-0.1 e^{-0.01 t} \,{}^\circ \mathrm
-C/\mathrm{min}.$ Neurčitý integrál
+C/\mathrm{min}.$ Cílem je určit pokles teploty za první hodinu a pokles teploty za druhou hodinu.*
+
+Neurčitý integrál
 $$\int - 0.1 e^{-0.01t} \,\mathrm dt=10 e^{-0.01t}+C$$
 jsme vypočítali v podkapitole s neurčitým integrálem. Potřebovali jsme
 ještě znát počáteční hodnotu teploty a našli jsme teplotu jako funkci
@@ -265,7 +270,7 @@ ještě znát počáteční hodnotu teploty a našli jsme teplotu jako funkci
 
 Nyní zapojíme určitý integrál. Nepotřebujeme informaci o počáteční
 teplotě, ale zato jsme schopni určit jenom změnu teploty za daný
-časový interval. Například za první hodinu bude změna teploty
+časový interval. Za první hodinu bude změna teploty
 \dm$$\int_0^{60} - 0.1 e^{-0.01t} \,\mathrm dt=\left[10 e^{-0.01t}\right]_0^{60}= 10 e^{-0.01\cdot 60} - 10 e^{-0.01\cdot 0}\approx  -4.5 ^\circ \mathrm C.$$
 Za druhou hodinu bude změna teploty
 \dm$$\int_{60}^{120} - 0.1 e^{-0.01t} \,\mathrm dt=\left[10 e^{-0.01t}\right]_{60}^{120}= 10 e^{-0.01\cdot 120} - 10 e^{-0.01\cdot 60}\approx  -2.5 ^\circ \mathrm C. $$
@@ -275,11 +280,18 @@ Za druhou hodinu bude změna teploty
 > Poznámka (změna veličiny pomocí rychlosti). Pokud se veličina $f(t)$ mění v časovém intervalu od $t=a$ do $t=b$ rychlostí $r(t)$, je změna veličiny $f$ za tento časový okamžik rovna $$\Delta f=f(b)-f(a)=\int_a^b r(t)\,\mathrm dt.$$
 
 
-# Aplikace určitého integrálu (prostorová změna teploty)
+# Změna funkce z rychlosti změny (prostorová změna teploty)
 
-**Příklad.** Mějme ustálené proudění tepelnou izolací mezi dvěma soustřednými válcovými plochami. Délka izolace je $L$, vnitřní a vnější poloměr jsou $r$ a $R$. Teploty uvnitř a vně jsou $T_1$ a $T_2$. Izolací prostupuje teplo rychlostí $Q$, tj. každou myšlenou válcovou plochou o poloměru $x$ projde za jednotku času teplo $Q$. Z Fourierova zákona plyne, že teplo, které projde jednotkovou plochou za jednotku času je úměrné záporně vzatému gradientu prostorové změně teploty, tj. 
+*Mějme ustálené proudění tepelnou izolací mezi dvěma soustřednými válcovými plochami. Délka izolace je $L$, vnitřní a vnější poloměr jsou $r$ a $R$. Teploty uvnitř a vně jsou $T_1$ a $T_2$. Izolací prostupuje teplo rychlostí $Q$, tj. každou myšlenou válcovou plochou o poloměru $x$ projde za jednotku času teplo $Q$. Cílem je najít vztah dávající uvedené veličiny do souvislosti. Odvodíme vztah, který jsme použili v přednášce o lokálních extrémech a slíbili dokázat později.*
+
+Z Fourierova zákona plyne, že teplo, které projde jednotkovou plochou
+za jednotku času, je úměrné záporně vzatému gradientu prostorové změně
+teploty, tj.
 $$\frac{Q}{2\pi xL}=-k\frac {\mathrm dT}{\mathrm dx},$$
-kd $k$ je tepelná vodivost. Tento zákon definuje rychlost, s jakou se mění teplota v prostoru a my jej použijeme ke stanovení vztahu mezi tokem tepla a teplotním rozdílem mezi vnější a vnitřní stranou izolace. Snadnou úpravou dostáváme
+kde $k$ je tepelná vodivost. Tento zákon definuje rychlost, s jakou se
+mění teplota v prostoru a my jej použijeme ke stanovení vztahu mezi
+tokem tepla a teplotním rozdílem mezi vnější a vnitřní stranou
+izolace. Snadnou úpravou dostáváme
 $$\frac {\mathrm dT}{\mathrm dx} =-\frac{Q}{2k\pi xL}$$
 a odsud
 $$\Delta T= \int_r^R -\frac{Q}{2k\pi xL}\,\mathrm dx=-\frac{Q}{2k\pi L}\int_r^R \frac 1x\,\mathrm dx.$$
@@ -383,7 +395,7 @@ je, že v některých případech je vhodné postupovat naopak a určit
 neurčitý integrál pomocí integrálu určitého, což si ukážeme v
 následující přednášce.
 
-# Aplikace určitého integrálu (dráha)
+# Nasčítání příspěvků k celkové dráze
 
 \iffalse
 
@@ -411,7 +423,7 @@ následující přednášce.
    okamžik pohybu, platí $$s=\int_a^b v(t)\,\mathrm dt.$$
 
 
-# Aplikace určitého integrálu (tlaková síla)
+# Nasčítání příspěvků k celkové síle na přehradu
 
 \iffalse
 
@@ -463,7 +475,7 @@ označíme $H$.
    tj. tlakem v poloviční hloubce.
 
 
-# Aplikace určitého integrálu (tok potrubím)
+# Nasčítání příspěvků k celkovému toku potrubím
 
 
 \iffalse
@@ -509,53 +521,7 @@ trubice. Proto je $\frac {v_{max}}2$ nazývána střední profilová rychlost pr
 (Volně podle Dana Říhová a Jana Marková, Poznámky k přednáškám z Hydrauliky, přednáška č. 3.)
 
 
-
-# Aplikace určitého integrálu (práce při čerpání vody)
-
-\iffalse
-
-<div class='obtekat'>
-
-![Mojžíšův most je z obou stran chráněný přehradou umožňující regulací
- výšky vody v okolí mostu, vzhledem k charakteru krajiny v Holandsku
- však není překvapení, že může být i zatopený. Zdroj:
- http://veryhungryexplorer.com/the-day-i-nearly-walked-on-water/](mojzisuv_most_pod_vodou.jpg)
-
-</div>
-
-\fi
-
-Pokud potřebujeme vyčerpat vodu z rezervoáru, nádrže, rybníka nebo
-jezera, musíme ji dopravit za stěnu (za hráz, dostat na břeh,
-...). Představme si, že po opadnutí vody v okolí Mojžíšova mostu
-zůstane uvnitř voda, kterou je potřeba vyčerpat. Tím se most proměnil
-v nádrž o hloubce $H$. Povrch hladiny ve chvíli, kdy je voda $x$
-jednotek délky pod okrajem mostu označme $S$. (Pro nádrž ve tvaru
-kvádru by $S$ bylo konstantní a rovno obsahu dna.)
-
-1. Pro vyzvednutí tělesa o hmotnosti $m$ o výšku $h$ musíme vykonat
-   práci $W=mgh,$ abychom vykompenzovali nárůst potenciální energie.
-2. Vodu v nádrži rozdělíme na vodorovné vrstvy o výšce $\Delta
-   x$. Hmotnost vrstvy o výšce $\Delta x$ v hloubce $x$ pod okrajem
-   nádrže bude $\Delta m=S\Delta x\rho$ a abychom vodu dostali přes
-   okraj, musíme vykonat práci $$\Delta W=\Delta m gx=S\Delta x\rho
-   gx.$$
-3. Celková práce na vyčerpání vody se vypočte jako součet jednotlivých
-   příspěvků. Spojitě se měnící veličinu sčítáme integrálem, což vede
-   na vztah $$W=\int_0^H S\rho gx \,\mathrm dx=\rho g\int_0^H Sx
-   \,\mathrm dx.$$
-4. Pro nádrže ve tvaru kvádru by veličina $S$ byla konstantní a
-   integrál by vycházel $$W=S\rho g\int_0^H x\,\mathrm dx=S\rho
-   g\left[\frac 12 x^2\right]_0^H=S\rho g\frac 12 H^2=(SH\rho)g\frac 12
-   H.$$ Výraz $SH\rho$ je celková hmotnost. Práce je tedy stejná, jako
-   kdybychom těleso o stejné hmotnosti jako je hmotnost vodní masy
-   zvedli z poloviční hloubky pod hladinou na úroveň hladiny. Je to
-   stejná práce, jakou bychom vykonali, kdyby všechna voda byla
-   stlačena v těžišti a my bychom tuto vodu zvedli na úroveň okraje
-   nádrže.
-
-
-# Aplikace určitého integrálu (moment setrvačnosti tyče nebo trámu)
+# Nasčítání příspěvků k celkovému momentu setrvačnosti tyče
 
 \iffalse
 

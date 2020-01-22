@@ -201,6 +201,54 @@ $$W=\frac 12 \tau g h_1^2$$ a numericky $W=8829\,\mathrm J.$ Protože vytáhnout
 
 > Poznámka (práce konaná silou proměnné velikosti). Práce vykonaná silou $F(x)$ při přemístění tělesa z polohy $x=a$ do polohy $x=b$ je $$W=\int_a^b F(x)\,\mathrm dx.$$ Jako speciální případ dostáváme pro konstantní sélu $F$ středoškolský vzorec $$W=Fs,$$ kde $s=b-a$ je posunutí.
 
+
+
+# Práce při čerpání vody
+
+\iffalse
+
+<div class='obtekat'>
+
+![Mojžíšův most je z obou stran chráněný přehradou umožňující regulací
+ výšky vody v okolí mostu, vzhledem k charakteru krajiny v Holandsku
+ však není překvapení, že může být i zatopený. Zdroj:
+ http://veryhungryexplorer.com/the-day-i-nearly-walked-on-water/](mojzisuv_most_pod_vodou.jpg)
+
+</div>
+
+\fi
+
+Pokud potřebujeme vyčerpat vodu z rezervoáru, nádrže, rybníka nebo
+jezera, musíme ji dopravit za stěnu (za hráz, dostat na břeh,
+...). Představme si, že po opadnutí vody v okolí Mojžíšova mostu, se
+kterým jsme se seznámili na minulé přednášce, zůstane uvnitř voda. Tu
+je potřeba vyčerpat. Tím se most proměnil v nádrž o hloubce
+$H$. Povrch hladiny ve chvíli, kdy je voda $x$ jednotek délky pod
+okrajem mostu označme $S$. (Pro nádrž ve tvaru kvádru by $S$ bylo
+konstantní a rovno obsahu dna.)
+
+1. Pro vyzvednutí tělesa o hmotnosti $m$ o výšku $h$ musíme vykonat
+   práci $W=mgh,$ abychom vykompenzovali nárůst potenciální energie.
+2. Vodu v nádrži rozdělíme na vodorovné vrstvy o výšce $\Delta
+   x$. Hmotnost vrstvy o výšce $\Delta x$ v hloubce $x$ pod okrajem
+   nádrže bude $\Delta m=S\Delta x\rho$ a abychom vodu dostali přes
+   okraj, musíme vykonat práci $$\Delta W=\Delta m gx=S\Delta x\rho
+   gx.$$
+3. Celková práce na vyčerpání vody se vypočte jako součet jednotlivých
+   příspěvků. Spojitě se měnící veličinu sčítáme integrálem, což vede
+   na vztah $$W=\int_0^H S\rho gx \,\mathrm dx=\rho g\int_0^H Sx
+   \,\mathrm dx.$$
+4. Pro nádrže ve tvaru kvádru by veličina $S$ byla konstantní a
+   integrál by vycházel $$W=S\rho g\int_0^H x\,\mathrm dx=S\rho
+   g\left[\frac 12 x^2\right]_0^H=S\rho g\frac 12 H^2=(SH\rho)g\frac 12
+   H.$$ Výraz $SH\rho$ je celková hmotnost. Práce je tedy stejná, jako
+   kdybychom těleso o stejné hmotnosti jako je hmotnost vodní masy
+   zvedli z poloviční hloubky pod hladinou na úroveň hladiny. Je to
+   stejná práce, jakou bychom vykonali, kdyby všechna voda byla
+   stlačena v těžišti a my bychom tuto vodu zvedli na úroveň okraje
+   nádrže.
+
+
 # Numerická aproximace určitého integrálu
 
 Následující myšlenka se si týká výlučně určitého integrálu, ale dále v
