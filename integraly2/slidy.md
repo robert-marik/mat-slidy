@@ -68,7 +68,7 @@ velikosti.
 
 <div class='obtekat'>
 
-![Když materiálová konstanta není konstantní, můžeme ji zprůměrovat integrálem. Zdroj: Cengel, Ghajar: Heat and Mass Transfer: Fundamentals and Applications.](tepelna_vodivost.png)
+![Když materiálová konstanta není konstantní a chceme ji zprůměrovat, použijeme integrální střední hodnotu. Zdroj: Cengel, Ghajar: Heat and Mass Transfer.](tepelna_vodivost.png)
 
 </div>
 
@@ -108,7 +108,7 @@ výšce $b-a$. Tedy $$\int_a^b f(x)\,\mathrm dx=(b-a)\frac{f(a)+f(b)}2$$
 a střední hodnota lineární funkce je tedy průměrem hodnoty na začátku
 a na konci intervalu.
 
-> Poznámka (střední hodnota materiálové konstanty). Tepelná vodivost materiálu podobeného analýze tepelně-izolačních vlastností nemusí být konstantní v celém rozsahu teplot, ale může se měnit s teplotou. Pokud je známa  funkce $k(T)$, je střední hodnota tepelné vodivosti v tepelném rozsahu od $T_1$ do $T_2$ dána vztahem (viz Cengel. ) $$k_{avg}=\frac 1{T_2-T_1} \int_{T_1}^{T_2} k(T)\,\mathrm dT$$ V praxi nemáme analytický předpis pro funkci $k(T)$, ale funkce je dána v několika bodech tabulkou. Takové funkce můžeme integrovat numericky, což bude ukázáno v další části této přednášky.
+> Poznámka (střední hodnota materiálové konstanty). Tepelná vodivost materiálu podobeného analýze tepelně-izolačních vlastností nemusí být konstantní v celém rozsahu teplot, ale může se měnit s teplotou. Pokud je známa  funkce $k(T)$, je střední hodnota tepelné vodivosti v tepelném rozsahu od $T_1$ do $T_2$ dána vztahem (viz Cengel, Ghajar: Heat and Mass Transfer) $$k_{avg}=\frac 1{T_2-T_1} \int_{T_1}^{T_2} k(T)\,\mathrm dT$$ V praxi nemáme analytický předpis pro funkci $k(T)$, ale funkce je dána v několika bodech tabulkou. Takové funkce můžeme integrovat numericky, což bude ukázáno v další části této přednášky.
 
 
 **Příklad.** Střední hodnota funkce $y=2x^2-1$ na intervalu $[0,2]$ je
@@ -148,6 +148,58 @@ tomuto příkladu vrátíme.
 [Online výpočet.](https://sagecell.sagemath.org/?z=eJxtjs0KgzAQhO-C75BbNj9iErG3XD3nFcTGIAQjcSn27du0pT_Q2-x8M8xexgwUKaurGZDZKe2wLe2JIxMvrY0ql6mr8JX4uENxdQva8J4RTpYVfcgjepjhYBIOiRJFz7Vh95W6ctpuMeGbKtkrVZAzTxB-gCRTiilbmv2ZShKX1e94jd7Spilvu-7ZGv63QvZ-feS0cEa47gb9BD-U&lang=sage)
 
 -->
+
+
+# Práce při vytahování řetězu
+
+\iffalse
+
+<div class='obtekat'>
+
+![Visící řetěz. Při vytahování na střechu se zmenšuje síla, kterou je nutno překonávat.
+ Zdroj: pixabay.com](chain.jpg)
+
+</div>
+
+\fi
+
+Ze střechy budovy o výšce $50$ metrů visí řetěz dlouhý $30$
+metrů. Jeden metr řetězu váží dva kilogramy. Vypočítáme práci
+potřebnou pro povytažení řetězu o deset metrů a poté práci potřebnou
+pro úplné vytažení řetězu.
+
+Z fyziky víme, že na těleso o hmotnosti $m$ působí síla $F$ daný vztahem $$F=mg,$$ kde $g$
+je tíhové zrychlení a že práce $W$ konaná silou $F$ po dráze $s$ je rovna
+součinu $$W=Fs.$$
+
+Pokud z budovy visí $h$ metrů řetězu o lineární hustotě
+$\tau=2\,\mathrm{kg}/\mathrm m$, je nutné při vytahování řetězu zvedat těleso o hmotnosti $h\tau$, tj.
+vyvinout sílu $$F=h\tau g.$$ Při vytahování řetězu se délka visící
+části zkracuje a změna délky $\Delta h$ je záporná. Při povytažení
+řetězu o délku $|\Delta h|=-\Delta h$ je nutné vykonat práci $$\Delta
+W=F|\Delta h|=-h\tau g \Delta h.$$
+
+Při povytažení o 10 metrů řetěz vytahujeme spojitě od $h_1=30$ po
+$h_2=20$. Celková práce je
+$$\begin{aligned}W&=\int_{h_1}^{h_2}-h\tau g\,\mathrm dh=\tau g\int_{h_2}^{h_1}h\,\mathrm dh
+=\tau g\left[\frac 12 h^2\right]_{h_2}^{h_1}\\&
+=\tau g\left[\frac 12 h_1^2 - \frac 12 h_2^2\right]=\frac 12 \tau g (h_1^2-h_2^2)
+\\&=\frac 12 \tau g (h_1-h_2)(h_1+h_2).
+\end{aligned}
+$$
+Pro $\tau =2\,\mathrm{kg}\,\mathrm m^{-1}$ a $g=9.81\,
+\mathrm{kg}\,\mathrm{m}\,\mathrm {s}^{-2}$ dostáváme $W=4905\,\mathrm
+J.$ Formálně je tento výsledek stejný, jako bychom hmotnost dolních
+$h_1-h_2$ metrů řetězu soustředili do středu tohoto úseku (tedy do
+úrovně $\frac 12 (h_1+h_2)$ metrů pod střechu) a poté tento hmotný bod
+přemístili konstantní silou po dráze $\frac 12 (h_1+h_2)$ na střechu.
+
+Práci pro vytažení celého řetězu dostaneme volbou $h_2=0$. Tedy
+$$W=\frac 12 \tau g h_1^2$$ a numericky $W=8829\,\mathrm J.$ Protože vytáhnout první třetinu nejtěžší, očekáváme, že práce potřebná pro vytažení celého řetězu bude menší než trojnásobek práce nutné pro povytažení o třetinu. Toto se přirozeně potvrzuje porovnáním numerických hodnot.
+
+[Online výpočet.](https://sagecell.sagemath.org/?z=eJwrSyzSUC9JLFVIV8hQyDBUyDBS1-TlKs7IL9fIzCtJTS9KLElV0NDN0AKq0UrX0cjQyTDUyTDS1CROlUaGka0BsWqBArZGOum2lnoWQBFDW2MDoLitEYX6wdoBxXNBdg==&lang=sage)
+
+> Poznámka (práce konaná silou proměnné velikosti). Práce vykonaná silou $F(x)$ při přemístění tělesa z polohy $x=a$ do polohy $x=b$ je $$W=\int_a^b F(x)\,\mathrm dx.$$ Jako speciální případ dostáváme pro konstantní sélu $F$ středoškolský vzorec $$W=Fs,$$ kde $s=b-a$ je posunutí.
 
 # Numerická aproximace určitého integrálu
 
@@ -497,59 +549,10 @@ kdy se jedná o minimum pětiletého průměru a kdy o maximum.
 
 -->
 
-# Práce při vytahování řetězu (přímý výpočet)
-
-\iffalse
-
-<div class='obtekat'>
-
-![Visící řetěz. Při vytahování na střechu se zmenšuje síla, kterou je nutno překonávat.
- Zdroj: pixabay.com](chain.jpg)
-
-</div>
-
-\fi
-
-Ze střechy budovy o výšce $50$ metrů visí řetěz dlouhý $30$
-metrů. Jeden metr řetězu váží dva kilogramy. Vypočítáme práci
-potřebnou pro povytažení řetězu o deset metrů a poté práci potřebnou
-pro úplné vytažení řetězu.
-
-Z fyziky víme, že na těleso o hmotnosti $m$ působí síla $F$ daný vztahem $$F=mg,$$ kde $g$
-je tíhové zrychlení a že práce $W$ konaná silou $F$ po dráze $s$ je rovna
-součinu $$W=Fs.$$
-
-Pokud z budovy visí $h$ metrů řetězu o lineární hustotě
-$\tau=2\,\mathrm{kg}/\mathrm m$, je nutné při vytahování řetězu zvedat těleso o hmotnosti $h\tau$, tj.
-vyvinout sílu $$F=h\tau g.$$ Při vytahování řetězu se délka visící
-části zkracuje a změna délky $\Delta h$ je záporná. Při povytažení
-řetězu o délku $|\Delta h|=-\Delta h$ je nutné vykonat práci $$\Delta
-W=F|\Delta h|=-h\tau g \Delta h.$$
-
-Při povytažení o 10 metrů řetěz vytahujeme spojitě od $h_1=30$ po
-$h_2=20$. Celková práce je
-$$\begin{aligned}W&=\int_{h_1}^{h_2}-h\tau g\,\mathrm dh=\tau g\int_{h_2}^{h_1}h\,\mathrm dh
-=\tau g\left[\frac 12 h^2\right]_{h_2}^{h_1}\\&
-=\tau g\left[\frac 12 h_1^2 - \frac 12 h_2^2\right]=\frac 12 \tau g (h_1^2-h_2^2)
-\\&=\frac 12 \tau g (h_1-h_2)(h_1+h_2).
-\end{aligned}
-$$
-Pro $\tau =2\,\mathrm{kg}\,\mathrm m^{-1}$ a $g=9.81\,
-\mathrm{kg}\,\mathrm{m}\,\mathrm {s}^{-2}$ dostáváme $W=4905\,\mathrm
-J.$ Formálně je tento výsledek stejný, jako bychom hmotnost dolních
-$h_1-h_2$ metrů řetězu soustředili do středu tohoto úseku (tedy do
-úrovně $\frac 12 (h_1+h_2)$ metrů pod střechu) a poté tento hmotný bod
-přemístili konstantní silou po dráze $\frac 12 (h_1+h_2)$ na střechu.
-
-Práci pro vytažení celého řetězu dostaneme volbou $h_2=0$. Tedy
-$$W=\frac 12 \tau g h_1^2$$ a numericky $W=8829\,\mathrm J.$ Protože vytáhnout první třetinu nejtěžší, očekáváme, že práce potřebná pro vytažení celého řetězu bude menší než trojnásobek práce nutné pro povytažení o třetinu. Toto se přirozeně potvrzuje porovnáním numerických hodnot.
-
-[Online výpočet.](https://sagecell.sagemath.org/?z=eJwrSyzSUC9JLFVIV8hQyDBUyDBS1-TlKs7IL9fIzCtJTS9KLElV0NDN0AKq0UrX0cjQyTDUyTDS1CROlUaGka0BsWqBArZGOum2lnoWQBFDW2MDoLitEYX6wdoBxXNBdg==&lang=sage)
-
 
 # Řetěz jinak (pomocí změny potenciální energie)
 
-Vypočítáme předchozí příklad tak, že určíme změnu potenciální energie
+Vypočítáme příklad z prací při vytahování řetězu tak, že určíme změnu potenciální energie
 řetězu. Práci $W$ vykonanou při vyzvednutí tělesa o hmotnosti $m$ o výšku
 $h$ vypočteme jako změnu potenciální energie v tíhovém poli Země,
 tj. $$W=mgh.$$ Komplikace v tomto případě je, že každou část řetězu

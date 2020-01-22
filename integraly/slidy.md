@@ -205,6 +205,10 @@ $C=18 ^\circ \mathrm C$. Funkce udávající závislost
 teploty místnosti na čase je $$T=\left(18+10 e^{-0.01
 t}\right)\,{}^\circ \mathrm C.$$
 
+
+> Poznámka (veličina vypočtená z rychlosti). Pokud se veličina $f(t)$ mění v čase rychlostí $r(t)$, platí $$f(t)=\int r(t)\,\mathrm dt,$$ přičemž pravá strana je dána jednoznačně až na aditivní konstantu. To koresponduje s pozorováním, že rychlost změn k jednoznačné identifikaci časového průběhu měnící se veličiny nestačí. Je potřeba mít zadán ještě výchozí stav.
+
+
 **Příklad.** Na jednom z předchozích slidů jsme viděli, že křivka,
 která je přirozená pro nosné lano zavěšeného mostu, splňuje rovnici
 $$y'=\frac{\mu g}{T}x.$$ Pouze za této podmínky bude lano namáháno ve
@@ -249,7 +253,7 @@ Snadným důsledkem definice určitého integrálu je následující věta.
 \end{aligned}
 $$
 
-# Aplikace určitého integrálu (změna teploty)
+# Aplikace určitého integrálu (časová změna teploty)
 
 **Příklad.** Teplota klesá rychlostí
 $\frac{\mathrm dT}{\mathrm dt}=-0.1 e^{-0.01 t} \,{}^\circ \mathrm
@@ -267,6 +271,27 @@ Za druhou hodinu bude změna teploty
 \dm$$\int_{60}^{120} - 0.1 e^{-0.01t} \,\mathrm dt=\left[10 e^{-0.01t}\right]_{60}^{120}= 10 e^{-0.01\cdot 120} - 10 e^{-0.01\cdot 60}\approx  -2.5 ^\circ \mathrm C. $$
 
 [Online výpočet.](https://sagecell.sagemath.org/?z=eJwrSyzSUC9R1-TlStMo0VSwVdA10DNU0FJIrSjQADINDLVKgHIFRZl5JQpAnJpelFiSqgFSq6NRomOgY2agiUfezEDH0AioAgB6XhvR&lang=sage)
+
+> Poznámka (změna veličiny pomocí rychlosti). Pokud se veličina $f(t)$ mění v časovém intervalu od $t=a$ do $t=b$ rychlostí $r(t)$, je změna veličiny $f$ za tento časový okamžik rovna $$\Delta f=f(b)-f(a)=\int_a^b r(t)\,\mathrm dt.$$
+
+
+# Aplikace určitého integrálu (prostorová změna teploty)
+
+**Příklad.** Mějme ustálené proudění tepelnou izolací mezi dvěma soustřednými válcovými plochami. Délka izolace je $L$, vnitřní a vnější poloměr jsou $r$ a $R$. Teploty uvnitř a vně jsou $T_1$ a $T_2$. Izolací prostupuje teplo rychlostí $Q$, tj. každou myšlenou válcovou plochou o poloměru $x$ projde za jednotku času teplo $Q$. Z Fourierova zákona plyne, že teplo, které projde jednotkovou plochou za jednotku času je úměrné záporně vzatému gradientu prostorové změně teploty, tj. 
+$$\frac{Q}{2\pi xL}=-k\frac {\mathrm dT}{\mathrm dx},$$
+kd $k$ je tepelná vodivost. Tento zákon definuje rychlost, s jakou se mění teplota v prostoru a my jej použijeme ke stanovení vztahu mezi tokem tepla a teplotním rozdílem mezi vnější a vnitřní stranou izolace. Snadnou úpravou dostáváme
+$$\frac {\mathrm dT}{\mathrm dx} =-\frac{Q}{2k\pi xL}$$
+a odsud
+$$\Delta T= \int_r^R -\frac{Q}{2k\pi xL}\,\mathrm dx=-\frac{Q}{2k\pi L}\int_r^R \frac 1x\,\mathrm dx.$$
+Protože platí
+$$\int _r^R \frac 1x \,\mathrm dx= [\ln x]_r^R = \ln R-\ln r = \ln \frac Rr,$$
+dostáváme po dosazení a vynásobení minus jedničkou vztah
+$$-\Delta T=T_1-T_2=\frac{Q}{2k\pi L}\ln \frac Rr,$$
+který jsme použili v přednášce o lokálních extrémech a slíbili dokázat
+později.
+
+> Poznámka (změna veličiny pomocí rychlosti). Pokud se veličina $f(x)$ mění v ose $x$ na intervalu od $t=a$ do $t=b$ rychlostí $r(x)$ (tj. $r(x)=\frac{\mathrm df(x)}{\mathrm dx}$), je změna veličiny $f$ na intervalu $[a,b]$ rovna $$\Delta f=f(b)-f(a)=\int_a^b r(x)\,\mathrm dx.$$
+
 
 # Další motivace
 

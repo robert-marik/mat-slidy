@@ -22,7 +22,16 @@ opačném.
 Graf sudé funkce je osově souměrný podle osy $y$.  Graf liché funkce
 je středově souměrný podle bodu $[0,0]$.
 
-Sudé a liché funkce jsou, díky svým vlastnostem, v jistém smyslu pěkné. V matematice se často snažíme zapsat nějaký objekt pomocí podobných pěkných objektů. Uvidíme toto například později při popisu deformace. Jako ukázku přístupu si můžeme už teď ukázat následující snadnou (a pravděpodobně málo užitečnou) větu.
+U sudé funkce stačí mít algoritmus nebo tabulky pro kladné argumenty. Například kosinus je sudá funkce a platí $$\cos(-x)=\cos(x).$$ Analogicky pro funkci sinus jako pro lichou funkci platí $$\sin(-x)=-\sin (x).$$
+
+Sudé a liché funkce jsou, díky svým vlastnostem, v jistém smyslu
+pěkné. V matematice se často snažíme zapsat nějaký objekt pomocí
+podobných pěkných objektů. Uvidíme toto například později při popisu
+deformace. Jako ukázku přístupu si můžeme už teď ukázat následující
+snadnou větu. Věta je teď asi málo užitečná, ale naučíme se na ní
+trik, kterým později rozdělíme složitější objekt (matici) na součet
+dvou jiných a šikovějších objektů (součet symetrické a antisymetrické
+matice).
 
 
 > Věta (o rozkladu funkce na součet sudé a liché funkce). Platí $$f(x)=\frac{f(x)+f(-x)}2 + \frac{f(x)-f(-x)}2.$$
@@ -198,17 +207,26 @@ nemění. Přirozeně nenastává ani tam, kde funkce není definována.
 
 \fi
 
-Následující příklad je poněkud překvapivý. Přidáváním izolace okolo
-horké trubky se zvyšuje plocha která je v kontaktu s vnějším
-prostředím a tím se zintenzivňuje proces přidávání tepla do okolí. Tato
-ztráta by dokonce mohla být vyšší než zisk z přidání izolace mezi
-horkou trubku a vnější prostředí. Pokusíme se podchytit tento
-děj. Nejprve ukážeme, že přidávání izolace může být kontraproduktivní
-a potom se uklidníme tím, že v praktickém životě při izolování
-topenářských trubek tento problém nemáme.
+Následující příklad je poněkud překvapivý. Představme si, že
+potřebujeme obalit horkou trubku izolací, abychom snížili tepelné
+ztráty. Izolace se zahřeje od trubky a vyzařuje teplo do
+okolí. Vyzářené teplo je úměrné rozdílu teploty povrchu izolace a
+teploty vnějšího okolí a také plošnému obsahu povrchu izolace (větší
+plocha více vyzáří). Roli hraje i kvalita povrchu, to je skryto v
+příslušné konstantě úměrnosti. S daným materiálem potřebujeme tedy u
+izolace dosáhnout toho, aby její teplota a povrch byly co
+nejmenší. Teplotu snížíme, pokud uděláme izolaci silnější, to ovšem
+zvýší její povrch. A z většího povrchu se vyzáří více tepla. Přidávání
+izolace by tedy mohlo být kontraproduktivní. Zdá se to být proti
+logice, ale logika nás někdy může zavést na zcestí a stojí za to jev
+prozkoumat.
+
+Nejprve ukážeme, že přidávání izolace opravdu může zvýšit tepelné
+ztráty, ale potom se uklidníme tím, že v praktickém životě, například
+při izolování topenářských trubek, tento problém nemáme. 
 
 Teplo $Q$, které projde za jednotku času při ustáleném vedení tepla povrchem trubky délky $L$ o vnitřním poloměru $r$, vnějším poloměru $R$ je dáno vztahem 
-$$\frac Q{2\pi Lk} \ln \frac{R}{r}=T_1-T_2,\tag{*}$$ kde $T_1$ je teplota uvnitř, $T_2$ teplota na vnějším okraji a $k$ je tepelná vodivost materiálu. Tento vzorec odvodíme později. 
+$$\frac Q{2\pi Lk} \ln \frac{R}{r}=T_1-T_2,\tag{*}$$ kde $T_1$ je teplota uvnitř, $T_2$ teplota na vnějším okraji a $k$ je tepelná vodivost materiálu. Tento vzorec odvodíme později v přednášce o integrálu. 
 
 Teplo, které za jednotku času vyzáří plocha trubky o poloměru $R$ a teplotě $T_2$ do okolí o teplotě $T_\infty$ je přímo úměrná rozdílu teplot a povrchu, tj. platí $$Q=h 2\pi  R L(T_2-T_\infty).$$ Odsud
 $$\frac Q{h 2\pi RL}= T_2-T_\infty.\tag{**}$$
@@ -226,12 +244,29 @@ Derivace je nulová pro $$R=\frac kh$$ a v okolí tohoto bodu mění
 znaménko ze záporného na kladné. Proto má funkce $f(R)$ v tomto bodě
 minimum. To odpovídá maximu funkce $Q$. Hodnota $R=\frac kh$ tedy
 odpovídá maximu funkce tepelných ztrát $Q$. Pro menší poloměr izolace
-přidávání další izolace paradoxně zvyšuje tepelné ztráty.
+přidávání další izolace paradoxně zvyšuje tepelné ztráty. Nazývá se *kritický poloměr izolace*.
+
+
+
+\iffalse
+
+<div class='obtekat'>
+
+![Elektrikáři vidí problém tepla poněkud jinak, než topenáři. Potřebují se tepla naopak zbavovat. Zdroj: pixabay.com](izolovane_draty.jpg)
+
+</div>
+
+\fi
 
 Při použití běžných materiálů pro izolaci vodovodních a topenářských
-trubek je však podíl $\frac kh$ tak malý, že při praktické realizaci s
+trubek je však kritický poloměr tak malý, že při praktické realizaci s
 ním nemusíme pracovat a materiál se chová dle očekávání, tj. více
 izolace znamená menší ztráty.
+
+Inženýr, který má navrhnout izolaci elektrického vodiče ovšem vidí
+problém trochu jinak. Potřebuje naopak tepelné ztráty maximalizovat
+aby se vodič zbavoval tepla vytvořeného průchodem elektrického
+proudu. Proto by izolace neměla překročit kritický poloměr.
 
 # Triky pro práci s funkcemi 1
 
