@@ -2,55 +2,6 @@
 % Robert Mařík
 % listopad 2019
 
-# Newtonova metoda
-
-Newtonova metoda (též Newtonova Raphsonova metoda) je metoda pro
-numerické řešení rovnic. To používáme v případě, že není možné (nebo
-není účelné) řešit rovnici přesně a snažíme se najít přibližné
-řešení.
-
-
-Budeme hledat řešení rovnice $$f(x)=0.$$ Budeme postupovat tak, že
-vyjdeme z nějaké aproximace řešení (získáme například graficky nebo
-zkusmo hrubou výpočetní silou) a tuto aproximaci budeme postupně
-zpřesňovat. Postup zpřesňování je takový, že v dosažené aproximaci
-funkci nahradíme lineární funkcí a další aproximace (zpřesnění
-předchozí aproximace) bude v nulovém bodu této lineární funkce. Za
-poměrně snadno splnitelných předpokladů (začneme dostatečně blízko
-nulového bodu a funkce má v nulovém bodě nenulovou derivaci) postup
-konverguje ke kořeni studované rovnice a to velmi rychle: každým
-krokem se přibližně zdvojnásobí počet míst, která máme správně.
-
-
-Z\ lineární aproximace funkce $f$ v bodě $x_0$ $$f(x)\approx
-f(x_0)+f'(x_0)(x-x_0)$$ pro $x_0=x_n$, $x=x_{n+1}$, $f(x_{n+1})=0$ dostáváme
-$$0=f(x_n)+f'(x_n)(x_{n+1}-x_n)$$ a po osamostatnění $x_{n+1}$ přímo
-iterační vzorec $$x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)}.$$ Tento vzorec
-používáme opakovaně až do dosažení požadované přesnosti. Obvyklým
-testem pro ukončení výpočtu je porovnání dvou po sobě jdoucích
-iterací. Pokud se v rámci požadované přesnosti shodují, výpočet končí
-a známe přibližné řešení zadané rovnice.
-
-**Příklad.**
-Zkusme najít číslo takové, jehož kosinus je stejný jako toto číslo. 
-Rovnici $$x=\cos x$$ nejprve přepíšeme do tvaru $$x-\cos x=0$$ a hledáme vlastně řešení nulový bod funkce $f(x)=x-\cos x$. Po dosazení $f'(x)=1+\sin x$ získáváme iterační vzorec $$x_{n+1}=x_n-\frac{x_n-\cos x_n}{1+\sin x_n}$$ a jednotlivé iterace s počátečním odhadem $x_0=1$ a s\ aproximací na 80 desetinných míst [dávají postupně](https://sagecell.sagemath.org/?z=eJyrsDXk5UrLL1LIVMjMUyhKzEtP1TDXtOLlUgCCCluNCl0gSs4v1qjQ1NTXMNQuzswDMTX18jRSMtMzS4ptLQw0IaoLijLzShQqAJbBFls=&lang=sage&interacts=eJyLjgUAARUAuQ==) následující hodnoty.
-
-\bgroup \scriptsize
-
-~~~
-0.75036386784024389303494230668217685324699306585535903096658315202443061372724844
-0.73911289091136167036058529090489023400289283673565690732340797067262734474030949
-0.73908513338528396976012512085680433288953312317018897963123060924114905347788420
-0.73908513321516064166170262568502637232522326252964269151340253531790167136371866
-0.73908513321516064165531208767387340401342077636703525840515904303894688001184009
-0.73908513321516064165531208767387340401341175890075746496568063577328465488354759
-0.73908513321516064165531208767387340401341175890075746496568063577328465488354759
-~~~
-
-\egroup
-
-Vidíme, že proces opravdu neuvěřitelně rychle konverguje k\ řešení rovnice.
-
 	
 # Nondimenzionalizace a bezrozměrné veličiny
 
