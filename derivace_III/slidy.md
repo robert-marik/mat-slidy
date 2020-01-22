@@ -88,7 +88,7 @@ zůstane jenom jediný bod, podobně jako v následující úloze.
 ![Ukázka zpracování kulatiny na trám sekerou. Zdroj: https://www.bladeforums.com](hewing.jpg)
 
 
-![K problému vyřezání co nejtužšího nosníku. Budme předpokládat krásný kmen, dokonalý válec bez vad, které by nás limitovaly při plánování, jak má výsledný trám vypadat.](nosnik.png)
+![K problému vyřezání co nejtužšího nosníku. Budeme předpokládat krásný kmen, dokonalý válec bez vad, které by nás limitovaly při plánování, jak má výsledný trám vypadat.](nosnik.png)
 
 </div>
 
@@ -199,15 +199,15 @@ nemění. Přirozeně nenastává ani tam, kde funkce není definována.
 \fi
 
 Následující příklad je poněkud překvapivý. Přidáváním izolace okolo
-horké trubky se zvyšuje plocha která je v konstaktu s vnějším
-prostředím a tím se zintenzivňuje proces přdávání tepla do okolí. Tato
+horké trubky se zvyšuje plocha která je v kontaktu s vnějším
+prostředím a tím se zintenzivňuje proces přidávání tepla do okolí. Tato
 ztráta by dokonce mohla být vyšší než zisk z přidání izolace mezi
-hornou trubku a vnější prostředí. Pokusíme se podchytit tento
+horkou trubku a vnější prostředí. Pokusíme se podchytit tento
 děj. Nejprve ukážeme, že přidávání izolace může být kontraproduktivní
 a potom se uklidníme tím, že v praktickém životě při izolování
 topenářských trubek tento problém nemáme.
 
-Teplo $Q$, které projde za jednotku času při ustáleném vedení tepla povrchem trubky délky $L$ o vniřním poloměru $r$, vnějším poloměru $R$ je dáno vztahem 
+Teplo $Q$, které projde za jednotku času při ustáleném vedení tepla povrchem trubky délky $L$ o vnitřním poloměru $r$, vnějším poloměru $R$ je dáno vztahem 
 $$\frac Q{2\pi Lk} \ln \frac{R}{r}=T_1-T_2,\tag{*}$$ kde $T_1$ je teplota uvnitř, $T_2$ teplota na vnějším okraji a $k$ je tepelná vodivost materiálu. Tento vzorec odvodíme později. 
 
 Teplo, které za jednotku času vyzáří plocha trubky o poloměru $R$ a teplotě $T_2$ do okolí o teplotě $T_\infty$ je přímo úměrná rozdílu teplot a povrchu, tj. platí $$Q=h 2\pi  R L(T_2-T_\infty).$$ Odsud
@@ -223,9 +223,9 @@ Platí
 $$\frac {\mathrm d f}{\mathrm dR}=\frac 1k \frac 1R+\frac 1h (-1)R^{-2}
 =\frac {Rh-k}{khR^2}.$$
 Derivace je nulová pro $$R=\frac kh$$ a v okolí tohoto bodu mění
-znaménko ze záprného na kladné. Proto má funkce $f(R)$ v tomto bodě
+znaménko ze záporného na kladné. Proto má funkce $f(R)$ v tomto bodě
 minimum. To odpovídá maximu funkce $Q$. Hodnota $R=\frac kh$ tedy
-odpovídá maximu funkce teplených ztrát $Q$. Pro menší poloměr izolace
+odpovídá maximu funkce tepelných ztrát $Q$. Pro menší poloměr izolace
 přidávání další izolace paradoxně zvyšuje tepelné ztráty.
 
 Při použití běžných materiálů pro izolaci vodovodních a topenářských
@@ -335,7 +335,7 @@ délkovým parametrem $a$ (například čtvercový nebo kruhový průřez),
 máme stejný případ jako výše: $n=2$ a $m=1$. Vztah mezi
 kvadratickým průřezem $I$ a rozměrem $a$ se dá vyjádřit pomocí jedné bezrozměrné veličiny a  máme vlastně jenom jedinou možnost jako tuto veličinu sestavit: $$\pi_1=\frac {I}{a^4}.$$ Stejně jako v předchozím
 příkladě existuje konstanta $k$ taková, že $\frac I{a^4}=k,$ tj. $$I=ka^4.$$ Po seznámení se
-s dvojným integrálem uvídme, že pro čtvercový průřez o straně čtverce
+s dvojným integrálem uvidíme, že pro čtvercový průřez o straně čtverce
 $a$ je $k=\frac 1{12}.$
 
 
@@ -343,7 +343,7 @@ $a$ je $k=\frac 1{12}.$
 v předchozím příkladě. Pro obdélníkový průřez o rozměrech $w$ krát $h$
 je $m=3$ (tři veličiny $w$, $h$, $I$) a $n=1$ (jediná základní
 jednotka metr). Pokud však víme, že dva nosníky vedle sebe se
-prohýbají stejně, jako by byly spojeny, víme, že mezi $I$ a $w$ msuí
+prohýbají stejně, jako by byly spojeny, víme, že mezi $I$ a $w$ musí
 být přímá úměrnost. Proto můžeme místo kvadratického momentu průřezu
 pracovat s kvadratickým momentem na jednotku šířky $\frac Iw$ v
 jednotkách metr na třetí a potom stejně jako v minulém případě

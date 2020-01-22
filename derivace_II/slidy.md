@@ -72,7 +72,7 @@ nulu". Navíc, ukazujeme koncept. *Důležité je si z příkladu odnést, že d
 
 # Lineární aproximace v 1D
 
-Pokud se funkce mění, můžeme odhad změny z přechozího odstavce přičíst k
+Pokud se funkce mění, můžeme odhad změny z předchozího odstavce přičíst k
 funkční hodnotě a tím máme odhad funkční hodnoty po změně. Toto je
 principem lineární aproximace, neuvěřitelně jednoduché a přitom velice
 mocné techniky používané inženýry k tomu, aby se popis problémů a
@@ -93,7 +93,7 @@ $$f(x)\approx f(x_0)+ \frac{\mathrm df(x_0)}{\mathrm dx}(x-x_0).$$
 >  změnou veličiny $x$ z $x_0$ o $\Delta x=x-x_0$ tak, jak jsme jej
 >  používali v minulé přednášce.
 
-> Poznámka (alternativní vzorec pro lineární aproxiamci). Vzorec pro lineární aproximaci se často píše v ekvivalentním tvaru
+> Poznámka (alternativní vzorec pro lineární aproximaci). Vzorec pro lineární aproximaci se často píše v ekvivalentním tvaru
 $$f(x+h)\approx f(x)+f'(x)h,$$
 což získáme dosazením $x+h$ za $x$ a $x$ za $x_0$.
 
@@ -110,7 +110,7 @@ blízké k nule.  $$\sin x\approx x, \quad \cos x\approx 1,\qquad
 rotací v rovině. Mnoho důležitých aplikací těchto vzorců ve fyzice je na webu [fyzikální olympiády](http://fyzikalniolympiada.cz/studijni-texty) v dokumentu [Aproximace ve fyzikálních úlohách](http://fyzikalniolympiada.cz/texty/aproxim.pdf).
 
 
-# Lineární aproximace v některých fyzikáních zákonech
+# Lineární aproximace v některých fyzikálních zákonech
 
 \iffalse
 
@@ -280,7 +280,7 @@ následující větu. V ní $O((x-x_0)^{n+1})$ je takzvané [Landauovo velké
 O](https://cs.wikipedia.org/wiki/Landauova_notace). Tímto zápisem je
 vyjádřen člen, který je pro $x$ blízká k $x_0$ v absolutní hodnotě
 menší než násobek funkce $(x-x_0)^{n+1}$, tj. v bodě $x_0$ konverguje k nule
-stejně rychle nebo rychleji jako mocniná funkce s exponentem $n+1$.
+stejně rychle nebo rychleji jako mocninná funkce s exponentem $n+1$.
 
 > Věta (Taylorova aproximace v okolí nuly) Platí
 \dm$$f(x)=T(x)+O((x-x_0)^{n+1}),$$
@@ -288,7 +288,7 @@ resp. pro $x=x_0+h$
 \dm$$f(x_0+h)=f(x_0)+f'(x_0)h+\frac{1}{2!}f''(x_0)h^2+\cdots +\frac{1}{n!}f^{(n)}(x_0)h^n+O(h^{n+1}),$$
 pokud existují spojité derivace funkce $f$ do řádu $n+1$.
 
-Často používáme aproximaci v nule. Potom dostáváme pro proximaci v okolí nuly
+Často používáme aproximaci v nule. Potom dostáváme pro aproximaci v okolí nuly
 \dm$$f(x)=f(0)+f'(0)x+\frac{1}{2!}f''(0)x^2+\cdots +\frac{1}{n!}f^{(n)}(0)x^n+O(x^{n+1}).$$
 
 **Příklad.** $$

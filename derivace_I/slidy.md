@@ -130,12 +130,12 @@ plyne $$\sqrt x\geq 5=\sqrt {25}.$$ Druhá mocnina je na intervalu $(5,\infty)$ 
 
 </div>
 
-Budeme sa zajímat o to, jak rychle se mění funkční hodnoty v čase nebo při změnách vstupních dat. V souvislosti s obrázkem nás může napadnout mnoho významů pojmu rychlost. 
+Budeme se zajímat o to, jak rychle se mění funkční hodnoty v čase nebo při změnách vstupních dat. V souvislosti s obrázkem nás může napadnout mnoho významů pojmu rychlost. 
 
 * Jakou rychlost (v kilometrech za hodinu) může automobil vyvinout?
-* Ja rychl (v kilometrech za hodinu za sekundu) automobil zrychluje?
+* Ja rychle (v kilometrech za hodinu za sekundu) automobil zrychluje?
 * Jak rychle (v metrech na kilometr za hodinu) se prodlužuje brzdná dráha při zvyšující se rychlosti?
-* Jak rychle (v tisících kilometrů na kilopascal) klesá životnost pnemumatik při přehuštění?
+* Jak rychle (v tisících kilometrů na kilopascal) klesá životnost pneumatik při přehuštění?
 * Jak rychle (v litrech na 100 kilometrů na kilometr za hodinu) roste spotřeba auta při vyšší průměrné cestovní rychlosti?
 * Jak rychle (v tisících Kč na automobil) rostou náklady výrobce automobilů při zvyšování produkce?
 
@@ -326,12 +326,12 @@ archeologických nálezů pozůstatků živých organismů
   pravděpodobnost se s časem nemění. Kvantitativně je proces rozpadu popsán rovnicí
   $$\frac{\mathrm dy}{\mathrm dt}=-\lambda y,$$
   kde $\lambda$ je konstanta úměrnosti. 
-* Uhlík je na datování vhodný, protože jej během života absorbují živé organismy a protože poločas rozpadu jej činí vhodným pro datování většiny archeologicky zajímavých nálezů. (Pro datování vzorků stařích než 50 tisíc let je nutné použít jiný prvek, protože v tomto případě již uhlíku $^{14}C$ ve vzorku zůstane málo.)
+* Uhlík je na datování vhodný, protože jej během života absorbují živé organismy a protože poločas rozpadu jej činí vhodným pro datování většiny archeologicky zajímavých nálezů. (Pro datování vzorků starších než 50 tisíc let je nutné použít jiný prvek, protože v tomto případě již uhlíku $^{14}C$ ve vzorku zůstane málo.)
 
 # Aplikace derivací 2: Jak strmě? (změna v prostoru)
 
 Derivace v bodě, pokud ji nahlížíme z hlediska prostorové změny
-veličiny, která nás zajímá, je míra, jak nerovnomerně je veličina
+veličiny, která nás zajímá, je míra, jak nerovnoměrně je veličina
 rozložena v prostoru. Často se tato veličina nazývá gradient, zejména pokud nepracujeme v jednorozměrném případě, ale pokud popisujeme děj probíhající v rovině nebo v prostoru. 
 
 ### Vedení tepla (dřevařství, nábytek, dřevostavby)
@@ -518,9 +518,9 @@ se projeví zvýšením teploty v daném bodě.
 
 \fi
 
-* Aplikované vědy (fyzika, biologie, nauka o materiálu, hydrologie) přirozeně formulují své zákony a poznatky mimo jiné i kvantitavině a pomocí pojmů vyjadřujících rychlosti změn. Doteď jsme aparátem střední školy uměli počítat jenom průměrně rychlosti za daný časový interval, s derivací dostáváme do ruky nástroj pro práci s okamžitými rychlostmi. 
+* Aplikované vědy (fyzika, biologie, nauka o materiálu, hydrologie) přirozeně formulují své zákony a poznatky mimo jiné i kvantitativně a pomocí pojmů vyjadřujících rychlosti změn. Doteď jsme aparátem střední školy uměli počítat jenom průměrně rychlosti za daný časový interval, s derivací dostáváme do ruky nástroj pro práci s okamžitými rychlostmi. 
 * Jakmile ve slovním popisu procesu slyšíme slovo rychlost, znamená to, že při matematickém modelování hraje pravděpodobně důležitou roli derivace. Okamžitá rychlost je derivace. Jenom v krásných případech probíhajících konstantní rychlostí můžeme tuto rychlost počítat pomocí podílu, jak to známe u rychlosti pohybu. 
-* Naučili jsme se nebo se naučíme pomocí vzorců derivovat bežné funkce.
+* Naučili jsme se nebo se naučíme pomocí vzorců derivovat běžné funkce.
 * Derivace umožní předpovědět, co se stane s veličinou, která závisí na jiné veličině a tato jiná veličina se mění známou rychlostí. Ze vztahu, který dává do souvislosti hodnoty dvou veličin, můžeme určit pomocí derivací vztah, dávající do souvislosti rychlosti změn těchto veličin.
 * V případě nutnosti umíme rozšířit derivace i do světa funkcí více proměnných. Děláme to tak, že sledujeme rychlost změny způsobenou vždy změnou jenom jedné veličiny. Proto příslušné derivace nazýváme parciální. (Parciální znamená v tomto smyslu částečný.)
 
