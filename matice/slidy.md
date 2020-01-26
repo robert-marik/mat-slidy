@@ -80,6 +80,7 @@ u|=\sqrt{u_1^2+u_2^2}$. Násobení vektoru kladným číslem odpovídá
 změně délky vektoru. Násobení záporným číslem odpovídá změně délky a
 otočení směru.
 
+<!--
 
 # Sčítání vektorů a integrace cesty u migrujících živočichů
 
@@ -106,6 +107,7 @@ v komplikovaném prostředí.
 
 Další informace: [Wikipedia, Path integration](https://en.wikipedia.org/wiki/Path_integration)
 
+-->
 
 # Lineární kombinace
 
@@ -141,7 +143,7 @@ $$\frac{\mathrm df}{\mathrm dx}\approx\frac{f(x+h)-f(x-h)}{2h} =\frac 1{2h}f(x+h
 a pro druhou derivaci
 $$ \frac{\mathrm d^2f}{\mathrm dx^2}\approx\frac{f(x-h)-2f(x)+f(x+h)}{h^2}=\frac{1}{h^2} f(x-h) - \frac{2}{h^2} f(x) + \frac{1}{h^2} f(x+h).$$
 
-
+ 
 # Lineární závislost a nezávislost vektorů
 
 V $n$-rozměrném prostoru existuje $n$-tice vektorů, pomocí
@@ -778,6 +780,7 @@ hydrodynamických a disperzních jevů, kap. 3.3.
 
 # Rozložení teploty na tepelně vodivé desce
 
+Na závěr si ukážeme, že pomocí lineární algebry a maticového počtu je možno popsat funkci dvou proměnných popisující rozložení teploty na tepelně vodivé desce. Postup je takový, že budeme sledovat teplotu v referenčních bodech. Požadavek, že teploty v okolních bodech mají odpovídat našim představám o vedení tepla vyjádříme kvantitavivně pomocí vhodné matice.
 
 \iffalse 
 
@@ -878,10 +881,7 @@ později například naučíme chytře využít toho, že každý řádek má v
 hlavní diagonále větší číslo, než je součet zbylých čísel v tomto
 řádku.
 
-**Poznámka.** Ukážeme řešení soustavy (1) iterační metodou. Zatím
-budeme postupovat intuitivně, vyjdeme z libovolného odhadu řešení
-a teplotu v každém bodě budeme opakovaně nahrazovat průměrem teplot v
-okolních bodech, dokud se hodnoty neustálí. Kdy tento postup funguje a jak se dá zformalizovat si ukážeme později (Jaobiho metoda).
+> Poznámka (iterační metoda). Soustavu (1) je možno vyřešit iterační metodou. Je možno postupovat intuitivně. Vyjdeme z libovolného odhadu řešení a teplotu v každém bodě budeme opakovaně nahrazovat průměrem teplot v okolních bodech, dokud se hodnoty neustálí. Kdy tento postup funguje a jak se dá zformalizovat si ukážeme později (Jaobiho metoda).
 
 [Online výpočet.](https://sagecell.sagemath.org/?z=eJxljcEKgzAMhu-C75Cb6Ra2WMsGAw_6FAXx0IPbPGhHlS2PvzoYIoaEhD__l1Tl4ObQCzYNU06xWmp-nThOe61VaVKvUMF0YboymWV1moMbp5efOoy2twuYSQ6iQQoQk0XNrqjkJJqkIDE7dHr6DyBWB3us1dlsQc30zx149wF66EeI4qMD1KxuaQIxbDluDi4v0KovMJNFkw==&lang=sage&interacts=eJyLjgUAARUAuQ==)
 

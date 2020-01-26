@@ -3,7 +3,6 @@
 % 16.4.2019
 
 
-
 # Varianty zápisu soustavy lineárních rovnic
 
 

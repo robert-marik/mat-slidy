@@ -376,8 +376,6 @@ Pojmy lineární algebry spolu krásně souvisí.
 > Věta. Buď $A$ čtvercová matice řádu $n$. Následující výroky
    jsou ekvivalentní:
 >
-1. Řádky matice $A$ jsou tvořeny lineárně nezávislými vektory.
-1. Sloupce matice $A$ jsou tvořeny lineárně nezávislými vektory.
 1. K matici $A$ existuje matice inverzní $A^{-1}$.
 1. Matice $A$ je  regulární, tj. $\det A\neq 0$.
 1. Soustava lineárních rovnic $$AX=B$$ má pro libovolnou pravou stranu $B$ jediné řešení.

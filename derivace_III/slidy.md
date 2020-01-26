@@ -154,12 +154,17 @@ kladnou derivaci a intervalů, kde má funkce zápornou derivaci.
 
 # Bolzanova věta
 
-
 <div class='obtekat'>
 
 ![Bolzanova věta je jedna z těch, které člověka nepřekvapí. Pokud se má funkce spojitě přehoupnout z jedné strany osy na druhou, musí tuto osu někde protnout.](bolzano.png)
 
 </div>
+
+Pro nalezení intervalů, kde je výraz závislý na jedné proměnné kladný
+a kde záporný je vynikajícícm nástrojem Bolzanova věta představená v
+následujících odstavcích. Hodí se například pro nalezení intervalů,
+kde má funkce kladnou a kde zápornou derivaci, což využijeme při
+nelezení intervalů, kde je funkce rostoucí a kde klesající.
 
 Bolzanova věta je poměrně názorné tvrzení. Hlavním přínosem pražského
 matematika Bernarda Bolzana bylo, že si uvědomil, že toto tvrzení není
@@ -233,7 +238,7 @@ $$\frac Q{h 2\pi RL}= T_2-T_\infty.\tag{**}$$
 Sečtením ohvězdičkovaných vztahů dostaneme 
 $$ \frac{Q}{2\pi L}\left(\frac 1k \ln \frac{R}{r}+\frac 1{h R}\right) = T_1-T_\infty.$$
 Tento vzorec popisuje tepelné ztráty při izolaci trubky o vnitřním poloměru $r$ a teplotě $T_1$ izolací o vnějším poloměru $R$ ve vnější teplotě $T_\infty$. Parametry izolace jsou tepelná vodivost $k$ a s koeficient prostupu tepla $h$. Budeme sledovat, jak se chová veličina $Q$ (tepelné ztráty) jako funkce proměnné $R$. 
-$$Q=2\pi L\frac {T_1-T\infty}{\frac 1k \ln \frac{R}{r}+\frac 1{h R}}$$
+$$Q(R)=2\pi L\frac {T_1-T\infty}{\frac 1k \ln \frac{R}{r}+\frac 1{h R}}$$
 Pokud chceme minimalizovat tepelné ztráty $Q$, musíme maximalizovat jmenovatel
 $$f(R)=\frac 1k \ln \frac{R}{r}+\frac 1{h R}=\frac 1k \ln R -\frac 1k \ln r+\frac 1{h} R^{-1}.$$
 Ostatní veličiny jsou totiž konstantní. 
@@ -246,7 +251,7 @@ minimum. To odpovídá maximu funkce $Q$. Hodnota $R=\frac kh$ tedy
 odpovídá maximu funkce tepelných ztrát $Q$. Pro menší poloměr izolace
 přidávání další izolace paradoxně zvyšuje tepelné ztráty. Nazývá se *kritický poloměr izolace*.
 
-
+[Online graf funkce](https://sagecell.sagemath.org/?z=eJw1jkuOgzAQRPdI3KGlLGIzngDZc4JkM4h91CGOaOzYlmMswemnmc-upH6vqg8w6KCt07CliGmFEAlo89ZndAQpLnezwozGw3NxZtSQnZ7fNHkIDL10XH5wHPWpLA5wyWgpYaLMdmBbTwoccqux-ICkg_UJYdbAqnYIma9vfx9pnCD67UF2gb3ol1z_P0DwxlvijbIYbq0abuSeae1a1ZRFVFcObVkYNXXnPWSM4tgfZVl8iV525ypQda0Em59_pqxFW5vKOtHXUX60tZiqXrKwz4rdUqJXzYnrGqnWF7mukd96J18r&lang=sage&interacts=eJyLjgUAARUAuQ==)
 
 \iffalse
 
@@ -259,7 +264,7 @@ přidávání další izolace paradoxně zvyšuje tepelné ztráty. Nazývá se 
 \fi
 
 Při použití běžných materiálů pro izolaci vodovodních a topenářských
-trubek je však kritický poloměr tak malý, že při praktické realizaci s
+trubek je kritický poloměr tak malý, že při praktické realizaci s
 ním nemusíme pracovat a materiál se chová dle očekávání, tj. více
 izolace znamená menší ztráty.
 
@@ -270,12 +275,11 @@ proudu. Proto by izolace neměla překročit kritický poloměr.
 
 # Triky pro práci s funkcemi 1
 
-Následující triky jsme viděli v příkladě s vytesáním nosníku maximální tuhosti z kulatiny. 
 
 1. Vhodnou volbou jednotek dokážeme eliminovat některé
 parametry. Přesněji, vhodnou volnou jednotek dokážeme některým
 parametrům dát konkrétní numerickou hodnotu. Vyšetřovaná funkce je
-potom často jednodušší.
+potom často jednodušší. Viděli jsme v příkladě s vytesáním nosníku maximální tuhosti z kulatiny. 
 1. Je-li $g$ rostoucí, potom z definice rostoucí funkce plynou ekvivalence
 $$
 \begin{gathered}
@@ -286,9 +290,19 @@ $$
 a proto funkce $f(x)$ a $g(f(x))$ mají lokální extrémy ve stejných
 bodech. Toho je možné využít, pokud vidíme, že při vhodné volbě funkce
 $g$ by byla funkce $g(f(x))$ vhodnější pro hledání lokálních
-extrémů. Podobně je možné uvažovat i pro klesající funkce $g$, ale
-protože klesající funkce obrací směr nerovností, mění se lokální
-maximum na lokální minimum a naopak.
+extrémů. Viděli jsme v příkladě s vytesáním nosníku maximální tuhosti z kulatiny. 
+1. Podobně jako v předchozím bodě je možné uvažovat i klesající funkce
+$g$. Ale protože klesající funkce obrací směr nerovností, mění se
+lokální maximum na lokální minimum a naopak. 
+$$
+\begin{gathered}
+  f(x)\leq f(x_0) \iff   g(f(x))\geq g(f(x_0)),\\
+    f(x)\geq f(x_0) \iff   g(f(x))\leq g(f(x_0))
+\end{gathered}
+$$
+Viděli jsme v příkladě s
+tepelnými ztrátami tepelně izolovaných trubek. Zde jsme využili toho,
+že zúžení funkce $\frac 1x$ na kladná čísla je klesající.
 
 <!--
 
@@ -311,6 +325,9 @@ Díky tomuto je dokonce možné snadno najít vztahy mezi objemem a povrchem $$V
 </div>
 
 \fi
+
+Naučíme se, že některé vztahy mezi veličinami se dají určit z
+fyzikálních jednotek těchto veličin.
 
 Existují tělesa, která jsou závislá jenom na jednom délkovém parametru
 a pokud tento délkový parametr zvětšíme $k$-krát, povrchy a obsahy na

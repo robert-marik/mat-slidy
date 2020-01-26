@@ -282,6 +282,18 @@ Za druhou hodinu bude změna teploty
 
 # Změna funkce z rychlosti změny (prostorová změna teploty)
 
+\iffalse
+
+<div class='obtekat'>
+
+![Nákres pro nalezení vzorce pro tok tepla válcovou izolací.](izolace_schema.jpg)
+
+</div>
+
+\fi
+
+
+
 *Mějme ustálené proudění tepelnou izolací mezi dvěma soustřednými válcovými plochami. Délka izolace je $L$, vnitřní a vnější poloměr jsou $r$ a $R$. Teploty uvnitř a vně jsou $T_1$ a $T_2$. Izolací prostupuje teplo rychlostí $Q$, tj. každou myšlenou válcovou plochou o poloměru $x$ projde za jednotku času teplo $Q$. Cílem je najít vztah dávající uvedené veličiny do souvislosti. Odvodíme vztah, který jsme použili v přednášce o lokálních extrémech a slíbili dokázat později.*
 
 Z Fourierova zákona plyne, že teplo, které projde jednotkovou plochou
@@ -302,7 +314,7 @@ $$-\Delta T=T_1-T_2=\frac{Q}{2k\pi L}\ln \frac Rr,$$
 který jsme použili v přednášce o lokálních extrémech a slíbili dokázat
 později.
 
-> Poznámka (změna veličiny pomocí rychlosti). Pokud se veličina $f(x)$ mění v ose $x$ na intervalu od $t=a$ do $t=b$ rychlostí $r(x)$ (tj. $r(x)=\frac{\mathrm df(x)}{\mathrm dx}$), je změna veličiny $f$ na intervalu $[a,b]$ rovna $$\Delta f=f(b)-f(a)=\int_a^b r(x)\,\mathrm dx.$$
+> Poznámka (změna veličiny pomocí rychlosti). Pokud se veličina $f(x)$ mění v prostoru v závislosti na jedné veličině rozložené na úsečce na intervalu od $x=a$ do $x=b$ rychlostí $r(x)$ (tj. $r(x)=\frac{\mathrm df(x)}{\mathrm dx}$), je změna veličiny $f$ na intervalu $[a,b]$ rovna $$\Delta f=f(b)-f(a)=\int_a^b r(x)\,\mathrm dx.$$
 
 
 # Další motivace

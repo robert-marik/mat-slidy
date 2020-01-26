@@ -21,7 +21,7 @@ then
    done
    echo '</table></div></html>' >> index.html
 
-   #rsync -e "ssh -o StrictHostKeyChecking=no" -av index.html cornus.mendelu.cz:html/mt/mat-slidy/
+   rsync -e "ssh -o StrictHostKeyChecking=no" -av index.html cornus.mendelu.cz:html/mtk/mat-slidy/
 fi  
 
 for i in $kde
@@ -33,7 +33,7 @@ do
   bash prikaz
   cd ..
 
-  #rsync -e "ssh -o StrictHostKeyChecking=no" -av $i cornus.mendelu.cz:html/mt/mat-slidy/
+  rsync -e "ssh -o StrictHostKeyChecking=no" -av $i cornus.mendelu.cz:html/mtk/mat-slidy/
 done
 
 #rsync -e "ssh -o StrictHostKeyChecking=no" -av my.css cornus.mendelu.cz:html/mt/mat-slidy
