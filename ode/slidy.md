@@ -297,18 +297,17 @@ splňující diferenciální rovnici.
   tohoto procesu umožní nalezení ekonomicky výhodné ale přitom trvale
   udržitelné strategie lovu.
 
+\iffalse
+
 
 # Příklad - lovci meteoritů z ČSSR a ČR
 
-\iffalse
 
 <div class='obtekat'>
 
 ![Tři dosud nalezené meteority Benešov. foto: Pavel Spurný, převzato z https://dvojka.rozhlas.cz/](benesov.jpeg)
 
 </div>
-
-\fi
 
 
 
@@ -322,6 +321,8 @@ Meteority s vystopovaným původem jsou extrémně vzácné (do roku 2000 jenom 
 Použité metody jsou popsány například v článku *Ceplecha, Revelle: Fragmentation model of meteoroid motion, mass loss, and radiation in the atmosphere, Meteoritics & Planetary Science 40, Nr 1, 35–54 (2005).* Například ztráta rychlosti třením v atmosféře je modelována rovnicí $$\frac{\mathrm dv}{\mathrm dt}=-K\rho m^{-1/3}v^{2}$$ a ztráta hmotnosti vypařováním 
 $$\frac{\mathrm dm}{\mathrm dt}=-K\sigma \rho m^{2/3}v^3.$$
 Jedná se o diferenciální rovnice, kde zrychlení (derivace rychlosti) a časová změna hmotnosti (derivace hmotnosti podle času, rychlost, s jakou ubývá hmotnost)  je úměrná vhodným mocninám těchto veličin.
+
+\fi
 
 
 # Geometrická interpretace ODE

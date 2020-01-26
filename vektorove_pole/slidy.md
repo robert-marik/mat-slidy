@@ -35,11 +35,15 @@ $$\nabla f =\left(\frac{\partial f}{\partial x},\frac{\partial f}{\partial y},\f
 
 # Transportní jevy
 
+\ifalse 
+
 <div class='obtekat'>
 
 ![Pro popis proudění je vhodné vektorové pole. Zde je ve 3D a vykreslené v náhodných bodech v prostoru.](3d_pole.png)
 
 </div>
+
+\fi
 
   Pochopení a modelování transportních dějů je
   důležité pro většinu technických oborů. Podstata těchto dějů je často
@@ -556,7 +560,7 @@ $${\varrho c\frac{\partial T}{\partial t}=  \nabla\cdot\bigl(D\nabla T\bigr)}$$
 >* Veličina $\frac{\partial T}{\partial t}$ udává rychlost růstu teploty tělesa a koeficient $\rho c$ tuto hodnotu přepočítává na údaj, jak rychle roste vnitřní energie tělesa (kinetická energie molekul.)
 >* Výraz $D\nabla T$ udává (až na znaménko), jak se nerovnoměrnost v rozložení teploty vyrovnává tokem tepla. Přesněji, tok tepla je $-D\nabla T$.
 >* Člen $\nabla\cdot(D\nabla T)$ udává, kolik tepla z celkového toku v daném místě zůstává a podílí se na zvýšení teploty. Vzhledem k absenci zdrojů je to také jediný mechanismus, jak v daném místě může vnitřní energie přibývat či ubývat.
->* Rovnice jako celek vyjadřuje to, že pokud z daného místa více energie odtéká, než kolik do místa proudí, tj. divergence $\nabla\cdot (D\nabla T)$ je kladná, dojde v tomto místě k odpovídajícímu snižení teploty.
+>* Rovnice jako celek vyjadřuje to, že pokud z daného místa více energie odtéká, než kolik do místa proudí, dojde v tomto místě k odpovídajícímu snížení teploty. V tomto bodě je totiž divegrence toku $\nabla\cdot (-D\nabla T)$ kladná a výraz z rovnice $\nabla\cdot (D\nabla T)$ je proto záporný.
 
 \iffalse
 
