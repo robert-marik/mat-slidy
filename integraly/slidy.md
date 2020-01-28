@@ -277,7 +277,7 @@ Za druhou hodinu bude změna teploty
 
 [Online výpočet.](https://sagecell.sagemath.org/?z=eJwrSyzSUC9R1-TlStMo0VSwVdA10DNU0FJIrSjQADINDLVKgHIFRZl5JQpAnJpelFiSqgFSq6NRomOgY2agiUfezEDH0AioAgB6XhvR&lang=sage)
 
-> Poznámka (změna veličiny pomocí rychlosti). Pokud se veličina $f(t)$ mění v časovém intervalu od $t=a$ do $t=b$ rychlostí $r(t)$, je změna veličiny $f$ za tento časový okamžik rovna $$\Delta f=f(b)-f(a)=\int_a^b r(t)\,\mathrm dt.$$
+> Poznámka (změna veličiny vypočtená pomocí rychlosti). Pokud se veličina $f(t)$ mění v časovém intervalu od $t=a$ do $t=b$ rychlostí $r(t)$, je změna veličiny $f$ za tento časový okamžik rovna $$\Delta f=f(b)-f(a)=\int_a^b r(t)\,\mathrm dt.$$
 
 
 # Změna funkce z rychlosti změny (prostorová změna teploty)
@@ -314,7 +314,11 @@ $$-\Delta T=T_1-T_2=\frac{Q}{2k\pi L}\ln \frac Rr,$$
 který jsme použili v přednášce o lokálních extrémech a slíbili dokázat
 později.
 
-> Poznámka (změna veličiny pomocí rychlosti). Pokud se veličina $f(x)$ mění v prostoru v závislosti na jedné veličině rozložené na úsečce na intervalu od $x=a$ do $x=b$ rychlostí $r(x)$ (tj. $r(x)=\frac{\mathrm df(x)}{\mathrm dx}$), je změna veličiny $f$ na intervalu $[a,b]$ rovna $$\Delta f=f(b)-f(a)=\int_a^b r(x)\,\mathrm dx.$$
+Stejný princip funguje pro libovolné ustálené proudění radiálním směrem při konstantní materiálové charakteristice. Stejný přístup je možné použít pro proudění podzemní vody popsané Darcyho zákonem (namísto Fourierova zákona) pro zvodeň namísto izolace (zvodeň je prostor kde se nachází a teče podzemní voda, tj. něco jako podzemní rybník nebo řeka zasypaná pískem nasáklým vodou) a piezometrickou výšku $h$ namísto teploty (piezometrická výška udává, jak vysoko vystoupá voda ve zkušebním vrtu). Pokud máme zvodeň s napjatou hladinou (voda je pod tlakem sevřena mezi dvěma nepropustnými vrstvami), je vodivost konstantní. Rovnice popisující tuto situaci má tvar $$h-h_0=\frac{Q}{2\pi T}\ln \frac r{r_0}$$ a nazývá se [Thiemova rovnice](https://en.wikipedia.org/wiki/Aquifer_test#Steady-state_Thiem_solution).
+
+Pokud sledujeme prostup tepla izolací, jejíž teplotní vodivost se mění s teplotou, není veličina $k$ konstantní a proto výše uvedený postup není možné realizovat a odvozený vzorec pro takový případ neplatí. Stejná situace nastává u podzemní vody a proudění s volnou hladinou (není horní nepropustná vrstva zvodně). Takové úlohy vedou na jinou problematiku, kterou se naučíme řešit v kapitole s diferenciálními rovnicemi.
+
+> Poznámka (změna veličiny vypočtená pomocí rychlosti). Pokud se veličina $f$ mění podél přímky v závislosti na veličině $x$ na intervalu od $x=a$ do $x=b$ rychlostí $r(x)$ (tj. $r(x)=\frac{\mathrm df(x)}{\mathrm dx}$), je změna veličiny $f$ na intervalu $[a,b]$ rovna $$\Delta f=f(b)-f(a)=\int_a^b r(x)\,\mathrm dx.$$
 
 
 # Další motivace
