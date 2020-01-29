@@ -43,6 +43,8 @@ padding:5px;
 
 .titlepage h1 {border-bottom:none; color: #222; color: #006131;}
 
+h1{ clear:both;}
+
 div.toolbar {background-color: #006131;}
 .toolbar  a:link {color: white;}
 .toolbar  a {color: white;}
@@ -99,3 +101,17 @@ blockquote p {padding: 2px;}
 .poznamkaname {color:#cccccc; background-color:#006131; font-weight:bold; padding:3px; margin:0px; font-weight: bold.}
 
 .poznamka {background-color:#eeeeee; border-color:#006131;}
+
+li ul li { font-size: 85%; font-style: normal; }
+
+.poznamka {font-style: normal; }
+
+.priklad {font-style: normal; background-color:#eeeeee; border-style:none;}
+
+.prikladname {font-weight:bold;}
+
+
+a[href*="sagecell"] {
+    background: transparent url(sage18.png) center right no-repeat;
+    padding-right: 20px;
+}

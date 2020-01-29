@@ -115,3 +115,7 @@ a[href*="sagecell"] {
     background: transparent url(sage18.png) center right no-repeat;
     padding-right: 20px;
 }
+
+
+.tlacitko {background-color:#006131; width:90%;display:inline-block;padding:5px; font-weight:bold; color:white;}
+.tlacitko img {width:30px; float:left; vertical-align: middle;}
