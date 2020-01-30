@@ -417,6 +417,34 @@ Rovnici $$x=\cos x$$ nejprve přepíšeme do tvaru $$x-\cos x=0$$ a hledáme vla
 
 Vidíme, že proces opravdu neuvěřitelně rychle konverguje k\ řešení rovnice.
 
+**Příklad.**
+Někdy je možné použít ad hoc iterační techniku. Například rovnici $$x^4+7x-7=0$$ můžeme přepsat do tvaru $$x=\frac 17 (7-x^4)$$ a iterační vzorec
+$$x_{n+1}=\frac 17 (7-x_n^4)$$ s počátečním odhadem $x=1$ dává po deseti iteracích [tři desetiná místa shodná](https://sagecell.sagemath.org/?z=eJxTVqiIM9E2r9A1tzXg5VJWqLA11DdX0DDXBQpr8nLxcgEFeLnS8osUMhUy8xSKEvPSUzVMDTSteLkUgKDCNk8DqEELqkETIlpQlJlXoqCRqVOhCQAgthZa&lang=sage&interacts=eJyLjgUAARUAuQ==).
+
+~~~
+0 0.857142857142857
+1 0.922889272327007
+2 0.896366455780602
+3 0.907775917517455
+4 0.902989981267125
+5 0.905019667139163
+6 0.904162819564782
+7 0.904525248412642
+8 0.904372074163256
+9 0.904436833065177
+~~~
+
+Vidíme konvergenci a iterační vzorec jsme našli s minimálním úsilím. Rychlost konvergence však není nijak velká a riziko, že výpočet nebude konvergovat roste se složitostí rovnice a silně závisí na zkušenostech uživatele s touto technikou. Newtonova metoda $$x_{n+1}=x_n-\frac{x_n^4+7x_n-7}{4x_n^3+7}$$ je jistější a se stejným počátečním odhadem konverguje mnohem rychleji, což ukazuje následující [výpočet](https://sagecell.sagemath.org/?z=eJwljDEKgDAMAPdA_hBwSdTSikpA6FcEB5UuVYpDnm_RG4_jGrJ16tScxoDQkMXBK7G6qgUBoQqE4yqUKGUqWz53noMsCFSxmNkcf4-2TsTz1No6diryF3dJ-SFOvckLTdwZiw==&lang=sage&interacts=eJyLjgUAARUAuQ==).
+
+~~~
+0 0.909090909090909
+1 0.904428379310109
+2 0.904417592410086
+3 0.904417592352745
+4 0.904417592352745
+~~~
+
+Ad hoc iterace použijeme například při odvození Jacobiho metody pro iterační řešení soustavy diferenciálních rovnic.
 
 # Konečné diference a aproximace derivace
 
