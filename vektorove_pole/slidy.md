@@ -35,7 +35,7 @@ $$\nabla f =\left(\frac{\partial f}{\partial x},\frac{\partial f}{\partial y},\f
 
 # Transportní jevy
 
-\ifalse 
+\iffalse 
 
 <div class='obtekat'>
 
