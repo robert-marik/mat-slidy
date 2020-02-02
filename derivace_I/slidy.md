@@ -452,7 +452,7 @@ model vedení tepla nemá jak naformulovat. Tyto zákony je potřeba matematice 
 * Rozdílem teplot vzniká tok tepla. Velikost toku tepla je úměrná
 teplotnímu rozdílu.
 * Teplota se zvyšuje dodáním tepla. Pro zvýšení teploty tělesa o
-hmotnosti $m$ o hodnotu $\Delta T$ je nutné dodat $$Q=mc\Delta T,\tag{**}$$ kde
+hmotnosti $m$ o hodnotu $\Delta T$ je nutné dodat $$Q=mc\Delta T,\tag{*}$$ kde
 $c$ je měrná tepelná kapacita.
 * Budeme vztahy formulovat pro změny za časovou jednotku a pro jednotkový objem (tedy místo hmotnosti $m$, změny teploty $\Delta T$ a tepla $Q$ máme hustotu $\rho$, rychlost změny teploty $\frac{\partial T}{\partial t}$ a rychlost s jakou dodáváme teplo do daného místa vztažená na jednotkový objemu).
 
@@ -477,7 +477,7 @@ $\frac{\partial T}{\partial x}$ v jednotkách (například) stupeň Celsia
 na centimetr.
 * *Potřebujeme změnu teploty podél tyče převést na veličinu popisující
   proudění tepla.* Tok tepla je úměrný veličině popisující změnu rozložení tepla v prostoru,
-  $$q=-k\frac{\partial T}{\partial x}.\tag{***}$$
+  $$q=-k\frac{\partial T}{\partial x}.\tag{**}$$
     * Znaménko mínus vyjadřuje skutečnost, že teplo teče z míst s vyšší teplotou
     do míst s menší teplotou a že tok uvažujeme kladný, pokud teče ve
     směru osy $x$. Přesněji, pokud teplota roste směrem doprava, parciální
@@ -492,13 +492,13 @@ potřebujeme pokles toku tepla, tedy násobíme záporným znaménkem a dostáv�
 $-\frac{\partial q}{\partial x}$.
 * *Víme, kolik tepla se v daném místě spotřebuje na zvýšení teploty a tuto hodnotu musíme převést na změnu teploty (třetí odrážka). Opět se jedná o jakési překalibrování, které ještě souvisí s dalšími fyzikálními vlastnostmi jako je měrná tepelná kapacita a hmotnost jednotkového množství látky objemu v daném místě.* Teplo $-\frac{\partial q}{\partial x}$ je teplo, které každou časovou jednotku "zůstává" v
 bodě $x$. Toto teplo se "použije" na zvýšení teploty. Z
-rovnice (**) pro jednotku času a jednotku objemu 
+rovnice (*) pro jednotku času a jednotku objemu 
 $$-\frac {\partial q}{\partial x}=\rho c\frac{\partial T}{\partial t}.$$
 * Po dosazení za $q$ dostáváme
 $$-\frac{\partial}{\partial x}\left(-k\frac{\partial T}{\partial x}\right)=\rho c\frac{\partial T}{\partial t}.$$
 * Derivace konstantního násobku je konstantní násobek
 derivace. Veličina $k$ by konstantní být
-nemusela a proto ji z opatrnosti necháme na svém místě. Může v ní být nehomogenita nebo se může měnit s teplotou, tj. vztah (***) může být nelineární. Znaménko mínus reprezentuje násobení konstantou $-1$. Toto vede na finální tvar
+nemusela a proto ji z opatrnosti necháme na svém místě. Může v ní být nehomogenita nebo se může měnit s teplotou, tj. vztah (**) může být nelineární. Znaménko mínus reprezentuje násobení konstantou $-1$. Toto vede na finální tvar
 $$\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)=\rho c\frac{\partial T}{\partial t}.$$
 
 **Shrnutí.** V odvození vidíme, že rovnice vedení tepla je vlastně
