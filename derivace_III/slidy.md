@@ -30,7 +30,7 @@ U sudé funkce stačí mít algoritmus nebo tabulky pro kladné argumenty. Např
 
 Sudé a liché funkce jsou, díky svým vlastnostem, v jistém smyslu
 pěkné. V matematice se často snažíme zapsat nějaký objekt pomocí
-podobných pěkných objektů. Uvidíme toto například později při popisu
+podobných pěkných objektů. Uvidíme to později například při popisu
 deformace. Jako ukázku přístupu si můžeme už teď ukázat následující
 snadnou větu. Věta je teď asi málo užitečná, ale naučíme se na ní
 trik, kterým později rozdělíme složitější objekt (matici) na součet
