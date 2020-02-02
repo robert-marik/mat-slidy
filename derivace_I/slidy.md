@@ -249,7 +249,7 @@ $f'$, $f'(x)$ nebo $\frac{\mathrm df}{\mathrm dx}$. Zápis $\frac{\mathrm df}{\m
 * Limita v definici derivace stahuje délku intervalu, na kterém počítáme průměrnou rychlost, k nule. Tím se z průměrné rychlosti stane okamžitá rychlost.
 
 
-Derivace funkce $f$ podle proměnné $x$ tedy vyjdřuje, o kolik se změní veličina $f$, pokud se veličina $x$ změní o jednotku při zachování stejné rychlosti změny. Je to podobné jako údaj o rychlosti na tachometru. Tenb udává, kolik kilometrů ujedeme za hodinu. Od skutečně uražené dráhy se tento údaj může lišit, protože pohyb může trvat třeba jenom deseti minut. A kdyby jízda opravdu trvala hodinu, mohlo vlivem jízdy v zácpě dojít k podstatnému nesouladu se skutečně uraženou dráhou. Přesto je okamžitá rychlost ukazovaná na tachometru při jízdě automobilem užitečná veličina a nemáme problémy s jejím chápáním.
+Derivace funkce $f$ podle proměnné $x$ tedy vyjadřuje, o kolik se změní veličina $f$, pokud se veličina $x$ změní o jednotku při zachování stejné rychlosti změny. Je to podobné jako údaj o rychlosti na tachometru. Tenb udává, kolik kilometrů ujedeme za hodinu. Od skutečně uražené dráhy se tento údaj může lišit, protože pohyb může trvat třeba jenom deseti minut. A kdyby jízda opravdu trvala hodinu, mohlo vlivem jízdy v zácpě dojít k podstatnému nesouladu se skutečně uraženou dráhou. Přesto je okamžitá rychlost ukazovaná na tachometru při jízdě automobilem užitečná veličina a nemáme problémy s jejím chápáním.
 
 Jednotka derivace je stejná, jako jednotka podílu $\frac {f(x)}x$.
 
