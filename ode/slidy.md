@@ -805,7 +805,7 @@ Z přednášek o derivaci máme aproximace derivací
 $$ \frac{\mathrm d f}{\mathrm dx}=f'(x)\approx  \frac{f(x+h)-f(x-h)}{2h}  $$
 a 
 $$ \frac{\mathrm d^2f}{\mathrm dx^2}=f''(x)\approx  \frac{f(x-h)-2f(x)+f(x+h)}{h^2}.  $$
-Využijeme tuto informaci k ukázce použití na příkladu nosníku s kombinovaným namá ním.
+Využijeme tuto informaci k ukázce použití na příkladu nosníku s kombinovaným namáháním.
 
 \iffalse
 
