@@ -300,7 +300,20 @@ Po tomto výpočtu je prvních pět cifer aproximace $\ln 2$ správně. Tady vid
 
 [Online výpočet.](https://sagecell.sagemath.org/?z=eJx1jrsKwkAQRfuF_YcBmxmMidHKws4_0E4sloQ8IJkJMYm7fr2bNSAErGY4F869BVo6N4yYbi0lmO4skVblQmeolVYbuEwGbsY10svkoJPGsbROqyIeAkUb7aMTxc9KXjgb_vDZdfUONlxDJTnL4MA3HQgM5JOMYLpebN2arPY1rfjTj292WfXr9_-yYNQqmO9BETNStFqEaXL8BuU6CPhBH7pTT2k=&lang=sage)
 
-**Příklad.** Výraz $$V(r)=\frac 1{r^{12}}-\frac 2{r^6}=r^{-12}-2r^{-6}$$ je (až na konstanty, které pro pohodlí volíme pevně) Lennard-Jonesův potenciál často používaný pro interakci mezi atomy nebo molekulami. Napíšeme Taylorův polynom druhého stupně v bodě $r=1$. K tomu potřebujeme znát funkční hodnotu a hodnotu prvních dvou derivací v tomto bodě.
+# Odbočka: od vazeb mezi atomy k materiálovým vlastnostem
+
+\iffalse
+
+<div class='obtekat'>
+
+![Stůl z kompozitního materiálu. U řady materiálů je možné ze struktury vypočítat fyzikální vlastnosti ještě dříve, než tyto materiály vůbec vyrobíme. Zdroj: http://seiboncarbon.com.au](table-detail.jpg)
+
+</div>
+
+\fi
+
+
+Výraz $$V(r)=\frac 1{r^{12}}-\frac 2{r^6}=r^{-12}-2r^{-6}$$ je (až na konstanty, které pro pohodlí volíme pevně) Lennard-Jonesův potenciál často používaný pro interakci mezi atomy nebo molekulami. Napíšeme Taylorův polynom druhého stupně v bodě $r=1$. K tomu potřebujeme znát funkční hodnotu a hodnotu prvních dvou derivací v tomto bodě.
 $$\begin{aligned}
 V(1)&=1-2=-1\\
 \frac{\mathrm dV}{\mathrm dr}&=-12r^{-13}-2(-6)r^{-7}\Bigr|_{r=1}=-12+12=0\\
@@ -312,10 +325,15 @@ Konstanta $-1$ je nezajímavá, souvisí s nulovou hladinou potenciálu a nulov
 
 Lineární člen chybí a kvadratický člen je analogický potenciální
 energii pružiny o tuhosti $k$ ve tvaru $$U=\frac 12 kx^2.$$ Molekuly či
-atomy popsané tímto potenciálem se chovají jako tělesa na pružině o tuhosti $k=72$. Pro atom o hmotnosti $m$ tedy například platí vzorec pro
+atomy popsané tímto potenciálem se chovají jako tělesa na pružině o tuhosti $k=72$ kmitající okolo rovnovážné polohy odpovídající $r=1$. Pro atom o hmotnosti $m$ tedy například platí vzorec pro
 úhlovou frekvenci oscilací $\omega = \sqrt{\frac km}$, odvozený
-původně pro těleso na pružině. Veličina $r-1$ je výchylka z rovnovážného stavu.
-Analogicky se chovají pružné konstrukce. V klidu jsou ve stavu s minimální potenciální energií a při vychýlení z tohoto stavu o malou hodnotu začínají kmitat. Pokud aproximujeme potenciál pomocí Taylorova polynomu, z koeficientu u kvadratického člene můžeme určit frekvenci těchto oscilací.
+původně pro těleso na pružině. Analogicky se chovají pružné konstrukce. V klidu jsou ve stavu s minimální potenciální energií a při vychýlení z tohoto stavu o malou hodnotu začínají kmitat.
+
+* Pokud aproximujeme potenciál pomocí Taylorova polynomu, z koeficientu u kvadratického člene můžeme určit frekvenci oscilací.
+* Dále můžeme tímto způsobem určit pevnost vazby a tím pro daný materiál určit Youngův modul pružnosti, tj. konstantu úměrnosti mezi deformací materiálu a tahovým nebo tlakovým napětí v materiálu.
+* Poloha rovnovážné polohy, resp. její závislost na teplotě (pokud bychom do matematického modelu dodali skutečné parametry i s jejich teplotní závislostí) zase definuje koeficient teplotní roztažnosti materiálu.
+
+Takovým způsobem můžeme u materiálu se známou strukturou odhadnout fyzikální vlastnosti výpočtem. To je důležité, protože teoretické předpovídání vlastností materiálu otevírá cestu k navrhování nových materiálů s výhodnějšími vlastnostmi. materiál můžeme prozkoumat ješte dříve, než jej vyrobíme a dostaneme na stůl.
 
 \iffalse
 
