@@ -407,24 +407,29 @@ Derivace je vhodná ke studiu fyzikálních procesů na makroskopické
 tělesa nebo množství tekutiny v daném objemu jsou vhodné (obyčejné)
 derivace.
 
-Někdy však požadujeme detailnější informace o celém procesu, abychom
-měli přesnější popis a dokázali odhalit vliv všech relevantních
-parametrů. U tepelné výměny bychom například sledovali, jak se teplo
-předává z jednoho místa tělesa do druhého místa a jak prostupuje
-tělesem. Takový pohled je nutný například při studiu procesu, který
-není stacionární v čase. Při tomto pohledu již musíme znát teplotu
-nejen jako funkci času, ale i jako funkci prostorových souřadnic.
-Musíme tedy pracovat modelem, kdy teplota, nebo obecně nějaká stavová
-veličina, závisí na více faktorech. Musíme tedy pracovat s funkcemi
-více proměnných a studovat, jak se mění vzhledem k jednotlivým
-proměnným. To je přesně úkol pro diferenciální počet funkcí více
-proměnných a *parciální derivace*.
+Někdy výše uvedený přístup není možný. Například při studiu tepelného
+pole v materiálech rozlišujeme (pomocí takzvaného Biotova čísla) na
+jednu stranu případy, kdy vedení tepla není podstatné a těleso lze
+uvažovat jako celek mající ve všech částech stejnou teplotu, a na
+druhou stranu případy, kdy je nutné pracovat s prostorovým rozložením
+tepla v tělese. Druhá varianta typicky nastává například u úloh na
+tepelnou modifikaci dřeva, kdy teplo prostupuje do vzorku a musíme být
+schopni modelovat tento proces. Teplota se mění s časem i s
+polohou. Skutečně, v jeden okamžik mohou mít různé body různou teplotu
+a proto teplota závisí na poloze. Podobně, v daném místě se teplota
+může měnit s časem a proto teplota závisí i na poloze.  Při modelování
+takového procesu již musíme znát teplotu nejen jako funkci času, ale i
+jako funkci prostorových souřadnic.  Musíme tedy být schopni pracovat
+modelem, kdy teplota, nebo obecně nějaká stavová veličina, závisí na
+více faktorech. To si vynucuje práci s funkcemi více proměnných a
+studium toho, jak se mění vzhledem k jednotlivým proměnným. To je
+přesně úkol pro diferenciální počet funkcí více proměnných a
+*parciální derivace*.
 
 Výsledkem tohoto přístupu je formulace zákonů v diferenciálním
 tvaru. Tento tvar říká, co se děje v konkrétním místě a dává lepší
-náhled na fyzikální podstatu. Proto tomuto přístupu často dáváme
-přednost před makroskopickým pohledem na těleso jako na jeden
-celek. 
+náhled na fyzikální podstatu. Tento přístup používáme, pokud není
+možný makroskopický pohled na těleso jako na jeden celek.
 
 \fi
 
