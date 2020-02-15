@@ -26,9 +26,9 @@ definování funkcí, které nejsou elementární.
 
 <div class='obtekat'>
 
-![Natlakovaná válcová nádoba modeluje i trubku pod tlakem. Takové trubky praskají podélně, protože v tom směru je dvojnásobné tahové napětí. Na obrázku jsou vodovodní truibky roztrhané mrazem. Zdroj: http://datagenetics.com/blog/december22013, Ian Mercer.](popraskane_trubky.jpg)
+![Natlakovaná válcová nádoba modeluje i trubku pod tlakem. Takové trubky praskají podélně, protože v tom směru je dvojnásobné tahové napětí. Na obrázku jsou vodovodní trubky roztrhané mrazem. Zdroj: http://datagenetics.com/blog/december22013, Ian Mercer.](popraskane_trubky.jpg)
 
-![Schema válové nádoby pod tlakem a řezy, v nichž počítáme namáhání.](hoop_stress.png)
+![Schema válcové nádoby pod tlakem a řezy, v nichž počítáme namáhání.](hoop_stress.png)
 
 </div>
 
@@ -41,15 +41,16 @@ Směrem radiálně od osy se tlaková síla rozkládá na celou plochu pláště
 
 Vypočteme poslední složku přispívající k namáhání pláště válce, obvodové napětí. K tomu musíme vypočítat sílu, která působí po obvodě válce, tj. která se snaží vále croytrhnout podle řezu B. Tento řez má obsah (červeně vyznačeno) $2Lh$. N2jtěžší bude najít celkvoou sílu, která od sebe oddaluje dvě poloviny pláště. To je místo, kde zapojíme integrál. 
 
-Kousek pláště válce odpovídající úhlu $\Delta \alpha$ má obsah $rL\Delta \alpha$ a tlaková síla na tento kousek je součin tlaku a obsahu, tj. $$\Delta F=pS=p Lr\Delta \alpha .$$ Směr je kolmý k plášti válce a s vodorovnou osou svírá úhel $\alpha$.  Průmět této síly do vodorovného směru je $$\Dela F_x=pLr\Delta \alpha \cos \alpha$$ a tyto příspěvky musíme posečítat na intervalu $\alpha \in \left[-\frac\pi 2,\frac \pi 2\right]$. Celková síla, která se snaží nádobu roztrhnout podélně je 
-\dm$$F=\int_{-\frac \pi2}^{\frac \pi 2} prL \cos \alpha \,\mathrm d \alpha 
-=prL [\sin \alpha]_{-\frac \pi 2}^{\frac \pi 2}=prL [\sin\frac \pi 2 -\sin(-\frac \pi2 )]=2p rL.$$ Povrch na který tato síla působí odpovídá dvěma podélnám hranám, tj. má obsah $2Lh$ a napětí je tedy 
-$$\sigma_{h}=\frac{2pLr}{2Lh}=\frac{pr}h.$$ Toto napětí je tedy dvojnásobné než napětí v podélné ose. 
+Kousek pláště válce odpovídající úhlu $\Delta \alpha$ má obsah $rL\Delta \alpha$ a tlaková síla na tento kousek je součin tlaku a obsahu, tj. $$\Delta F=pS=p Lr\Delta \alpha .$$ Směr je kolmý k plášti válce a s vodorovnou osou svírá úhel $\alpha$.  Průmět této síly do vodorovného směru je $$\Delta F_x=pLr\Delta \alpha \cos \alpha$$ a tyto příspěvky musíme posečítat na intervalu $\alpha \in \left[-\frac\pi 2,\frac \pi 2\right]$. Celková síla, která se snaží nádobu roztrhnout podélně je 
+\dm$$F_x=\int_{-\frac \pi2}^{\frac \pi 2} prL \cos \alpha \,\mathrm d \alpha 
+=prL [\sin \alpha]_{-\frac \pi 2}^{\frac \pi 2}=prL [\sin\frac \pi 2 -\sin(-\frac \pi2 )]=2p rL.$$ Povrch na který tato síla působí odpovídá dvěma podélnám hranám (červeně na řezu B), tj. má obsah $2Lt$ a napětí je tedy 
+$$\sigma_{h}=\frac{2pLr}{2Lt}=\frac{pr}t=2\sigma_p.$$ Vidíme, že toto napětí je dvojnásobkem napětí v podélné ose. 
 
-Ještě je vhodné ověřit, že svislý průmět, tj . $$\Delta F_y=pLr\Delta \alpha \sin \alpha$$ k namáhání něpřispívá, protože 
-\dm$$F=\int_{-\frac \pi2}^{\frac \pi 2} prL \sin \alpha \,\mathrm d \alpha 
+Ještě je vhodné ověřit, že svislý průmět, tj . $$\Delta F_y=pLr\Delta \alpha \sin \alpha$$ k namáhání nepřispívá, protože 
+\dm$$F_y=\int_{-\frac \pi2}^{\frac \pi 2} prL \sin \alpha \,\mathrm d \alpha 
 =0.$$ To však je možné očekávat i ze symetrie.
 
+Pokud se chcete dozvědět více, zkuste Google a heslo "hoop stress".
 
 # Vlastnosti integrálu
 
