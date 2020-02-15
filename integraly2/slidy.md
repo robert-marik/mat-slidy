@@ -21,6 +21,36 @@ si některé pokročilejší metody pro výpočet, ukážeme si, že každá
 spojitá funkce má primitivní funkci a také otevřeme cestu k
 definování funkcí, které nejsou elementární.
 
+# Připomenutí aplikací. Proč trubky praskají podélně?
+
+
+<div class='obtekat'>
+
+![Natlakovaná válcová nádoba modeluje i trubku pod tlakem. Takové trubky praskají podélně, protože v tom směru je dvojnásobné tahové napětí. Na obrázku jsou vodovodní truibky roztrhané mrazem. Zdroj: http://datagenetics.com/blog/december22013, Ian Mercer.](popraskane_trubky.jpg)
+
+![Schema válové nádoby pod tlakem a řezy, v nichž počítáme namáhání.](hoop_stress.png)
+
+</div>
+
+
+Uvažujme natlakovanou válcovou nádobu s tlakem $p$, výškou $L$, poloměrem podstavy $r$ a stěnou o tloušťce $t$. 
+
+Vypočteme namáhání silou v oce, tj. namáhání řezu A. Obsah řezu (vyšrafováno červeně) je $2\pi r h$. Na dno a víko působí síla $F=p\pi r^2$ a v řezu A kolmém na osu válce je tahové napětí $$\sigma_{p} = \frac FS=\frac {p\pi r^2}{2\pi rt}=\frac {pr}{2t}.$$ 
+
+Směrem radiálně od osy se tlaková síla rozkládá na celou plochu pláště válce a v tomto směru je tahové napětí minimální. 
+
+Vypočteme poslední složku přispívající k namáhání pláště válce, obvodové napětí. K tomu musíme vypočítat sílu, která působí po obvodě válce, tj. která se snaží vále croytrhnout podle řezu B. Tento řez má obsah (červeně vyznačeno) $2Lh$. N2jtěžší bude najít celkvoou sílu, která od sebe oddaluje dvě poloviny pláště. To je místo, kde zapojíme integrál. 
+
+Kousek pláště válce odpovídající úhlu $\Delta \alpha$ má obsah $rL\Delta \alpha$ a tlaková síla na tento kousek je součin tlaku a obsahu, tj. $$\Delta F=pS=p Lr\Delta \alpha .$$ Směr je kolmý k plášti válce a s vodorovnou osou svírá úhel $\alpha$.  Průmět této síly do vodorovného směru je $$\Dela F_x=pLr\Delta \alpha \cos \alpha$$ a tyto příspěvky musíme posečítat na intervalu $\alpha \in \left[-\frac\pi 2,\frac \pi 2\right]$. Celková síla, která se snaží nádobu roztrhnout podélně je 
+\dm$$F=\int_{-\frac \pi2}^{\frac \pi 2} prL \cos \alpha \,\mathrm d \alpha 
+=prL [\sin \alpha]_{-\frac \pi 2}^{\frac \pi 2}=prL [\sin\frac \pi 2 -\sin(-\frac \pi2 )]=2p rL.$$ Povrch na který tato síla působí odpovídá dvěma podélnám hranám, tj. má obsah $2Lh$ a napětí je tedy 
+$$\sigma_{h}=\frac{2pLr}{2Lh}=\frac{pr}h.$$ Toto napětí je tedy dvojnásobné než napětí v podélné ose. 
+
+Ještě je vhodné ověřit, že svislý průmět, tj . $$\Delta F_y=pLr\Delta \alpha \sin \alpha$$ k namáhání něpřispívá, protože 
+\dm$$F=\int_{-\frac \pi2}^{\frac \pi 2} prL \sin \alpha \,\mathrm d \alpha 
+=0.$$ To však je možné očekávat i ze symetrie.
+
+
 # Vlastnosti integrálu
 
 
