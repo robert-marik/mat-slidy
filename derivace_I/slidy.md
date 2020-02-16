@@ -382,6 +382,36 @@ koryto obdélníkového tvaru.
 * Viz cvičení v prvním týdnu.
 
 
+## Přece jenom jeden příklad
+
+\iffalse
+
+<div class='obtekat'>
+
+![Matematické kyvadlo je hmotný bod na nehmotném závěsu. Aproximací je relativně těžký objekt relativně malého objemu na lehkém závěsu. Zdroj: pixabay.com, geralt.](kyvadlo_hodinky.jpg)
+
+</div>
+
+\iffalse
+
+Perioda matematického kyvadla délky $L$ je dána vzorcem $T=2\pi
+\sqrt{\frac Lg}$. Tento vzorec je možno přepsat do tvaru
+$$T=\frac{2\pi}{\sqrt g} \sqrt L, $$ který ukazuje, že perioda je
+úměrná odmocnině délky kyvadla.
+
+Pro derivování použijeme vzorec pro derivaci konstantního násobku a mocniné funkce. 
+\dm$$\frac {\mathrm d T}{\mathrm dL}=\frac{\mathrm d}{\mathrm dL}\left(\frac{2\pi}{\sqrt g} \sqrt L\right)=\frac{2\pi}{\sqrt g} \frac{\mathrm d}{\mathrm dL}\left (L^{\frac 12}\right)=\frac{2\pi}{\sqrt g}\frac 12 L^{-\frac 12}=\frac{\pi}{\sqrt{gL}}.
+$$
+Tento výraz udává v jednotkách sekunda na metr, jak rychle se prodlužuje perioda kyvadla při prodloužení délky kyvadla. Například pro $L=2\,\mathrm m$ je derivace číselně rovna $0.71\,\mathrm{s}\,\mathrm{m}^{-1}.$ Prodloužení dvoumetrového kyvadla o metr prodlouží periodu o $0.71$ sekundy. Protože derivace je okamžitá rychlost změny a na delším intervalu se tato rychlost může změnit, je blíže realitě spíše formulace pro jednotky tisíckrát menší: "Prodloužení kyvadla o milimetr prodlouží periodu o $0.71$ milisekundy."
+
+Pokud se kyvadlo délky $L=2\,\mathrm m$ prodlužuje (po přenesení ze zimy do vytopené místnosti se závěs se prodlužuje teplotní roztažností), je rychlost prodlužování $\frac{\mathrm dL}{\mathrm dt}$ a rychlost, s jakou roste perioda je (s použitím pravidla pro derivaci složené funkce) 
+$$ \frac{\mathrm dT}{\mathrm dt} = \frac{\mathrm dT}{\mathrm dL} \frac{\mathrm dL}{\mathrm dt} = \frac{\pi}{\sqrt {gL}}\frac{\mathrm dL}{\mathrm dt}$$
+Pokud se kyvadlo prodlužuje rychlostí $0.5$ milimetru za sekundu, je $$\frac{\mathrm dL}{\mathrm dt}=0.000\,5\,\mathrm{m}\,\mathrm{s}^{-1}$$ a 
+$$\frac{\mathrm dT}{\mathrm dt} =\frac {\pi}{\sqrt{2\cdot 9.81}} 0.000\,5=0.00035$$
+Derivace vychází bez jednotky (sekunda lomeno sekundou se zkrátí) a je možné ji přepsat do tvaru 
+$$\frac{\mathrm dT}{\mathrm dt} =0.35 \frac{\mathrm{ms}}{\mathrm{s}}.$$
+Perioda kyvadla se prodlužuje rychlostí $0.35$ milisekundy za sekundu.
+
 # Funkce více proměnných
 
 Funkce má na vstupu více proměnných, na výstupu reálné číslo. Některé pojmy, jako například monotonie, ztrácejí ve světě funkcí více proměnných smysl, například monotonie nebo inverzní funkce. Proměnné značíme pomocí jejich fyzikálního označení. Bez fyzikálního kontextu zpravidla používáme funkce dvou, tří, nebo $n$ proměnných v následujícím tvaru.
