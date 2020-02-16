@@ -447,7 +447,7 @@ tepelnou modifikaci dřeva, kdy teplo prostupuje do vzorku a musíme být
 schopni modelovat tento proces. Teplota se mění s časem i s
 polohou. Skutečně, v jeden okamžik mohou mít různé body různou teplotu
 a proto teplota závisí na poloze. Podobně, v daném místě se teplota
-může měnit s časem a proto teplota závisí i na poloze.  Při modelování
+může zvyšovat i snižovat a proto teplota závisí i na čase.  Při modelování
 takového procesu již musíme znát teplotu nejen jako funkci času, ale i
 jako funkci prostorových souřadnic.  Musíme tedy být schopni pracovat
 modelem, kdy teplota, nebo obecně nějaká stavová veličina, závisí na
