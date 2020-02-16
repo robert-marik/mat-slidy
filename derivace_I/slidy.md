@@ -392,7 +392,7 @@ koryto obdélníkového tvaru.
 
 </div>
 
-\iffalse
+\fi
 
 Perioda matematického kyvadla délky $L$ je dána vzorcem $T=2\pi
 \sqrt{\frac Lg}$. Tento vzorec je možno přepsat do tvaru
