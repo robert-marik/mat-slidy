@@ -32,7 +32,7 @@ do
   cp slidy.pdf ../$i.pdf
   #cp slidy.pdf ../$jj.pdf
   cd ..
-  rsync -e "ssh -o StrictHostKeyChecking=no" -av $i cornus.mendelu.cz:html/mtk/mat-slidy/
+  #rsync -e "ssh -o StrictHostKeyChecking=no" -av $i cornus.mendelu.cz:html/mtk/mat-slidy/
 done
 
 
@@ -42,8 +42,9 @@ cd tex
 export TEXINPUTS=.:..//:
 pdflatex all
 pdflatex all
-
 mv all.pdf ../mat_slidy_all.pdf
-rsync -e "ssh -o StrictHostKeyChecking=no" -av mat_slidy_all.pdf cornus.mendelu.cz:html/mtk/mat-slidy/
+
+cd ..
+rsync -e "ssh -o StrictHostKeyChecking=no" -av *.pdf cornus.mendelu.cz:html/mtk/mat-slidy/
 
 #rm ??.pdf
