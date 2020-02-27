@@ -350,10 +350,10 @@ Rozšíření podobnosti je rozměrová analýza. Ta je založená na poznatku,
 že fyzikální zákony je možno vyjadřovat v různých jednotkách. Formální
 postup umožňuje například následující věta.
 
-> Věta (Buckinghamův Pi-teorém). Rovnici $$F(x_1,x_2,\dots,x_n)=0,$$ resp. $$x_1=F(x_2,\dots,x_n),$$ která vyjadřuje fyzikální zákon a obsahuje
+> Věta (Buckinghamův Pi-teorém). Rovnici $$F_0(x_1,x_2,\dots,x_n)=0,$$ resp. $$x_1=F(x_2,\dots,x_n),$$ která vyjadřuje fyzikální zákon a obsahuje
 $n$ veličin (včetně fyzikálních a materiálových konstant) vyjádřených pomocí $m$ základních
 jednotek je možno zapsat jako rovnici vyjádřenou pomocí $(n-m)$
-bezrozměrných parametrů, tj. $$f(\pi_1,\pi_2,\dots,\pi_{n-m})=0,$$
+bezrozměrných parametrů, tj. $$f_0(\pi_1,\pi_2,\dots,\pi_{n-m})=0,$$
 nebo
 $$\pi_1=f(\pi_2,\dots,\pi_{n-m}).$$
 
@@ -364,6 +364,8 @@ problematiku ukázat na příkladech. Jejich hlavním smyslem je to, že
 vztah mezi veličinami odhalíme (až na detaily typu multiplikativní
 konstanta) jenom z fyzikálních jednotek, bez hlubší znalosti
 fyzikálního pozadí problematiky.
+
+**Příklad (vztah mezi rychlostí, dráhou a dobou u pohybu konstantní rychlostí).** U pohybu konstantní rychlostí jsou relevantní parametry rychlost $v$ v kilometrech za hodinu, doba $t$ v hodinách a dráha $s$ v kilometrech. To jsou tři veličiny vyjádřené pomocí dvou základních jednotek. Existuje tedy jediná bezrozměrná veličina, pomocí které je možno zapsat souvislost mezi parametry pohybu. Tu je možno sestavit jediným možným způsobem (až na případné mocniny) a to ve tvaru $$\pi_1=\frac{vt}{s}.$$ Podle Buckinghamova teorému tato veličina musí být konstantní, tj. musí platit $\frac{vt}{s}=k$ pro nějakou konstantu $k$. Prozkoumáním modelového případu, kdy rychlost, dráha i čas jsou jednotkové, vidíme, že konstanta musí být rovna jedné a proto platí $$\frac{vt}{s}=1.$$ Odsud již snadno nalezneme $v=\frac{s}{t}$ a další variace vzorce pro rovnoměrný pohyb tak jak je známe ze základní školy.
 
 **Příklad (vztah mezi objemem a povrchem koule).** Pro nalezení
 přepočtu mezi objemem koule $V$ (v metrech krychlových) a povrchem
@@ -382,12 +384,23 @@ výsledku s minimální námahou a s minimálními vstupními znalostmi,
 abychom podobný postup mohli používat i v jiných případech, kdy
 alternativní postup nemáme k dispozici.
 
+\iffalse
+
+<div class='obtekat'>
+
+![Vánoční strom pro Prahu v prosinci 2019. Ořezání průměru kmene na polovinu sníží tuhost kmene cca 16-krát (za předpokladu homogenity, ve skutečnosti je to ještě výraznější). Vánoční strom v Praze proto musí držet ocelová lana. Zdroj: Pražský deník](strom_praha_2019.jpg)
+
+</div>
+
+\fi
+
+
 
 **Příklad (tuhost nosníků čtvercového a kruhového průřezu).** Veličinou ovlivňující tuhost nosníku při
 daném materiálovém složení je kvadratický moment průřezu $I$ v
 jednotkách metr na čtvrtou. Pokud je průřez nosníku daný jenom jedním
 délkovým parametrem $a$ (například čtvercový nebo kruhový průřez),
-máme stejný případ jako výše: $n=2$ a $m=1$. Vztah mezi
+máme stejný případ jako výše, kdy počet parametrů o jedničku převyšuje počet základních jednotek: $n=2$ a $m=1$. Vztah mezi
 kvadratickým průřezem $I$ a rozměrem $a$ se dá vyjádřit pomocí jedné bezrozměrné veličiny a  máme vlastně jenom jedinou možnost jako tuto veličinu sestavit: $$\pi_1=\frac {I}{a^4}.$$ Stejně jako v předchozím
 příkladě existuje konstanta $k$ taková, že $\frac I{a^4}=k,$ tj. $$I=ka^4.$$ Po seznámení se
 s dvojným integrálem uvidíme, že pro čtvercový průřez o straně čtverce
