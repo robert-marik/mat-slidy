@@ -231,12 +231,14 @@ prozkoumat.
 
 Nejprve ukážeme, že přidávání izolace opravdu může zvýšit tepelné
 ztráty, ale potom se uklidníme tím, že v praktickém životě, například
-při izolování topenářských trubek, tento problém nemáme. 
+při izolování topenářských trubek, tento problém nemáme. Potřebujeme
+dva vzorce, které dodá fyzika, poté již budeme pracovat čistě
+matematicky.
 
 Teplo $Q$, které projde za jednotku času při ustáleném vedení tepla povrchem trubky délky $L$ o vnitřním poloměru $r$, vnějším poloměru $R$ je dáno vztahem 
 $$\frac Q{2\pi Lk} \ln \frac{R}{r}=T_1-T_2,\tag{*}$$ kde $T_1$ je teplota uvnitř, $T_2$ teplota na vnějším okraji a $k$ je tepelná vodivost materiálu. Tento vzorec odvodíme později v přednášce o integrálu. 
 
-Teplo, které za jednotku času vyzáří plocha trubky o poloměru $R$ a teplotě $T_2$ do okolí o teplotě $T_\infty$ je přímo úměrná rozdílu teplot a povrchu, tj. platí $$Q=h 2\pi  R L(T_2-T_\infty).$$ Odsud
+Teplo $Q$, které za jednotku času vyzáří plocha trubky o poloměru $R$ a teplotě $T_2$ do okolí o teplotě $T_\infty$, vztažené na jednotku povrchu trubky, je přímo úměrné rozdílu teplot a povrchu, tj. platí $$\frac{Q}{2\pi  R L}=h (T_2-T_\infty).$$ Odsud
 $$\frac Q{h 2\pi RL}= T_2-T_\infty.\tag{**}$$
 Sečtením ohvězdičkovaných vztahů dostaneme 
 $$ \frac{Q}{2\pi L}\left(\frac 1k \ln \frac{R}{r}+\frac 1{h R}\right) = T_1-T_\infty.$$
