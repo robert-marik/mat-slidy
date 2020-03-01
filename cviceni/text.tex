@@ -623,6 +623,20 @@ Najděte lineární aproximace funkcí $\sin x$, $\cos x$ a~${(1+x)^n}$ v okol�
 \textit{První dvě aproximace využijeme později pro odvození tvaru matice malých rotací, což je důležité při studiu deformace materiálů. Poslední můžeme využít například pro to, abychom z relativistického vzorce pro  celkovou energii extrahovali část závislou na rychlosti, tj. kinetickou energii (na přednášce).
 }
 
+\reseni
+
+$f(x)\approx f(x_0)+f'(x_0)(x-x_0)$
+\begin{enumerate}[a)]
+\item $f(x)=\sin x$, $x_0=0$,\\ $f(0)=\sin 0=0$,\\ $f'(x)=(\sin(x))'=\cos x$,\\ $f'(0)=\cos (0)=1$
+  $$\sin(x)\approx 0+1\cdot (x-0)=x$$
+\item $f(x)=\cos x$, $x_0=0$,\\ $f(0)=\cos 0=1$,\\ $f'(x)=(\cos(x))'=-\sin x$,\\ $f'(0)=-\sin (0)=0$
+  $$\cos(x)\approx 1+0\cdot (x-0)=1$$
+\item $f(x)=(1+x)^n$, $x_0=0$,\\ $f(0)=(1+0)^n=1$,\\ $f'(x)=((1+x)^n)'=n(1+x)^{n-1}$,\\ $f'(0)=n(1+0)^{n-1}=n$
+  $$(1+x)^n\approx 1+n\cdot (x-0)=1+nx$$
+\end{enumerate}
+
+\konec
+
 
 \stranka
 \subsection{Lineární aproximace} \label{aproximace}Veličina $y$ je funkce proměnné $x$. Najděte její lineární aproximaci v okolí zadaného bodu.
@@ -640,6 +654,27 @@ populace v prostředí s nosnou kapacitou $K$. Aproximace v okolí bodu
 $x=0$ odpovídá velmi malé populaci. Proto se konstanta úměrnosti ze
 získané lineární aproximace nazývá \emph{invazní parametr}.
 }
+
+
+\def\qty(#1){\left(#1\right)}
+
+\reseni
+
+\begin{enumerate}[1)]
+\item $f(x)=xe^x$, $x_0=0$,\\ $f(0)=0e^0=0$,\\ $f'(x)=(xe^x)'=e^x+x e^x$,\\ $f'(0)=e^0+0e^0=e^0=1$
+  $$xe^x\approx 0+1\cdot (x-0)=x$$
+\item $f(x)=rx\qty(1-\frac xK)$, $x_0=0$,\\ $f(0)=r0\qty(1-\frac 0K)=0$,\\ $f'(x)=\qty(rx-r\frac 1K x^2)'=r-\frac{2r}K x$,\\ $f'(0)=r-\frac{2r}{K} \cdot 0=r$
+  $$rx\qty(1-\frac xK)\approx 0+r(x-0)=rx$$
+\item $f(x)=rx\qty(1-\frac xK)$, $x_0=K$,\\ $f(K)=rK\qty(1-\frac KK)=rK(1-1)=0$,\\ $f'(x)=\qty(rx-r\frac 1K x^2)'=r-\frac{2r}K x$,\\ $f'(K)=r-\frac{2r}{K} \cdot K=r-2r=-r$
+  $$rx\qty(1-\frac xK)\approx 0-r(x-K)=-r(x-K)=r(K-x)$$
+  Poslední aproximaci je možno přepsat do tvaru
+  $$rx\qty(1-\frac xK)\approx  rK\qty(1-\frac xK)$$
+\item $f(x)=\sqrt x$, $x_0=1$,\\ $f(1)=\sqrt 1=1$,\\ $f'(x)=\qty(x^{\frac 12})'=\frac 12 x^{-\frac 12}$,\\ $f'(1)=\frac 12$
+  $$\sqrt x \approx 1+\frac 12 (x-1)$$
+\item $f(x)=\frac 1{\sqrt x}$, $x_0=1$,\\ $f(1)=\frac 1{\sqrt 1}=1$,\\ $f'(x)=\qty(x^{-\frac 12})'=-\frac 12 x^{-\frac 32}$,\\ $f'(1)=-\frac 12$
+  $$\frac 1{\sqrt x} \approx 1-\frac 12 (x-1)$$
+\end{enumerate}
+\konec
 
 \stranka
 
@@ -659,6 +694,12 @@ Použijte tento výpočet k lineární aproximaci funkce \eqref{1} pro malá $x
 % počtu. Vždy však je k~dispozici i přesný postup, založený na
 % derivacích.
 
+\reseni
+
+Přímým dosazením dostáváme $f(0)=\frac {a0}{b+0}=0$, $f'(0)=\frac{ab}{(b+0)^2}=\frac {ab}{b^2}=\frac ab$ a odsud
+$$f'(x)\approx 0+\frac ab (x-0)=\frac ab x.$$
+\konec
+
 \stranka
 
 \subsection{Lineární aproximace kvalifikovaným odhadem}
@@ -673,7 +714,7 @@ kde v hranaté závorce je lineární aproximace funkce $g$ a tato aproxiamce je
 Situace je jednoduchá zejména v případě, kdy funkce $g$ je lineární a
 je sama svojí lineární aproximací. Ukažte, že s uvedenou výbavou je možno
 napsat lineární aproximace prvních tří funkcí z příkladu
-\ref{aproximace} přímo a bez výpočtu. Ukažte, že pro výpočet není nutný a výsledek se dá kvalifikovaně odhadnout i v
+\ref{aproximace} přímo a bez výpočtu. Ukažte, že výpočet není nutný a výsledek se dá kvalifikovaně odhadnout i v
 přechozím příkladě s kinetikou Michaelise a Mentenové. Pro tyto účely použijte trivilání identitu
 \begin{equation*}
   \frac {ax}{b+x}=x\cdot\frac {a}{b+x}.
@@ -681,6 +722,20 @@ přechozím příkladě s kinetikou Michaelise a Mentenové. Pro tyto účely po
 
 \reseni
 
+Obecný vzorec je
+$$f(x)\approx f(x_0)+f'(x_0)(x-x_0).$$
+
+Vztah $$g(x)\approx g'(x_0)(x-x_0)$$ z něj plyne okamžitě použitím funkce $g$ a podmínky $g(x_0)=0$.
+
+Pro funkci $f(x)=g(x)h(x)$ v našem případě máme
+$$
+\begin{aligned}
+f(x_0)&=g(x_0)h(x_0)=0\cdot  h(x_0)=0\\
+f'(x_0)&=g'(x_0)h(x_0)+g(x_0)h'(x_0)=g'(x_0)h(x_0)+0\cdot h'(x_0)=g'(x_0)h(x_0)\\
+\end{aligned}
+$$
+a přímým dosazením
+$$f(x)\approx 0+g'(x_0)h(x_0)(x-x_0)=\Bigl[g'(x_0)(x-x_0)\Bigr]h(x_0)$$
 \begin{enumerate}
 \item Funkce $f(x)=xe^x$ má v $x=0$ první součinitel nulový a druhý součinitel nenulový a platí $e^0=1$. V okolí $x=0$ je první součinitel
   lineární.  Proto v okolí
@@ -695,6 +750,10 @@ $\left(1-\frac 0K\right)=1$. V okolí $x=0$ je první součinitel lineární a v
    druhý součinitel $\left(1-\frac xK\right)$ nulový. Druhý součinitel je lineární. Proto v okolí
   $x=K$ platí
   $$rx\left(1-\frac xK\right)\approx rK\left(1-\frac xK\right)=r(K-x).$$
+\item Funkce $f(x)=x\frac {a}{b+x}$ má v bodě $x=0$ první součinitel $x$ nulový  a
+   druhý součinitel $\frac {a}{b+x}$ nenulový a roven $\frac ab$. První součinitel je lineární. Proto v okolí
+  $x=0$ platí
+  $$x\frac a{b+x}\approx x\frac ab.$$
 \end{enumerate}
 
 \konec
