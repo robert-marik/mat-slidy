@@ -435,6 +435,8 @@ a $\sigma_{LL}=7.5$. Mimodiagonální složka udává komponentu $\sigma_{RL}=-4
 
 ![Schopnost transformovat tenzory napětí nebo deformace  je důležitá u studia vrstvených materiálů. Na obrázku Jatawood, pro výrobu rukojetí nožů. Zdroj: jatagan.eu](jatawood.jpg)
 
+![U šikmého lepeného spoje se používá transformace do roviny spoje k posouzení únosnosti tohoto spoje. Lepidlo má definovanou pevnost spoje při normálovém a smykovém namáhání a transformace nám prozdradí, jak se namáhání $P$ projeví v těchto směrech a zda lepidlo spoj udrží.](spoj_drevo_sikmy.jpg)
+
 </div>
 
 \fi
@@ -587,7 +589,7 @@ pozitivní odpověď na tuto otázku udávají věty na následujícím slidu.
 
 <div class='obtekat'>
 
-![Pokud je tenzor spojený s materiálovou chrakteristikou v diagonálním tvaru, redukuje se složitost problému. Podobná redukce složitosti je i při jiných příležotostech, například při skládání Rubikovy kostky pomocí metody [Human Thistlethwaite Algorithm](https://www.speedsolving.com/wiki/index.php/Human_Thistlethwaite_Algorithm). V této metodě se úloha nejprve redukuje na jednodušší úlohu, kdy každá barva je buď ve svojí straně nebo protilehlé. Tak je možné složit kostku buď bez nepříjemného učení se umělých algoritmů (člověk), nebo do 20 tahů (stroj a nejlepší lidé).](rubik.svg)
+![Pokud je tenzor spojený s materiálovou chrakteristikou v diagonálním tvaru, redukuje se složitost problému. Podobná redukce složitosti je i při jiných příležitostech, například při skládání Rubikovy kostky pomocí metody [Human Thistlethwaite Algorithm](https://www.speedsolving.com/wiki/index.php/Human_Thistlethwaite_Algorithm). V této metodě se úloha nejprve redukuje na jednodušší úlohu, kdy každá barva je buď ve svojí straně nebo protilehlé. Tak je možné složit kostku buď bez nepříjemného učení se umělých algoritmů (člověk), nebo do 20 tahů (stroj a nejlepší lidé).](rubik.svg)
 
 </div>
 
@@ -613,13 +615,23 @@ transformační pravidla. Nicméně je to mimo jiné i matice a proto vše
 výše uvedené platí i pro tenzory.
 
 
-Ve videu [https://www.youtube.com/watch?v=xdxVpC856ms](https://www.youtube.com/watch?v=xdxVpC856ms) je pomocí vzorců odvozován diagonální tvar tenzoru napětí
+Transformace tenzorů je užitečná a důležitá činnosti. Bohužel však vzorce s touto transformací spojené nejsou natolik zapamatovatelné, aby bylo obvyklé s nimi pracovat. Možnosti jsou v zásadě tři.
+
+* Mít vzorce v psané podobě po ruce a pouze do nich dosazovat.
+* Mít k dispozici jednoduše zapamatovatelný postup, jak s transformacemi pracovat. Takový postup existuje, nazývá se [Mohrova kružnice](https://cs.wikipedia.org/wiki/Mohrova_kru%C5%BEnice) a po zapracování se jedná o efektivní grafickou metodu pro transforamci tenzorů. Zpravidla je v literatuře popsána pro tenzor napětí, funguje však obecně.
+* Pracovat pouze s elementárními prostředky lineární algebry. Narozdíl od předchozích bodů máme přehled o tom, co a proč děláme (oproti vzorcům) a nemusíme se učit další metodu (oproti Mohrově kružnici).
+
+Ukážeme si postup na jednoduchém příkladě. Pro srovnání je možno postup založený na dosazování do vzorců  shlédnout na [https://www.youtube.com/watch?v=xdxVpC856ms](https://www.youtube.com/watch?v=xdxVpC856ms).
+
+
+**Příklad.**
+Odvodíme diagonální tvar tenzoru napětí
 $$A=
 \begin{pmatrix}
   20 & 30 \\ 30 & -10
 \end{pmatrix}.
 $$
-Ukážeme si řešení úlohy bez použití vzorců, jenom prostředky lineární algebry.
+Tím najdeme maximální hodnotu normálového napětí a směr, ve kterém působí.
 Charakteristický polynom této matice je
 \dm$$\det(A-\lambda I)= \begin{vmatrix}   20-\lambda & 30 \\ 30 & -10-\lambda \end{vmatrix}= (20-\lambda)(-10-\lambda)-30^2=\lambda^2-10\lambda-1100 $$
 s kořeny $\lambda_1\approx 38.54$ a $\lambda_2\approx -28.54$. To

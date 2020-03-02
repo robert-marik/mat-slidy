@@ -682,7 +682,7 @@ $$A=
   0 & 4 \\ -4 & 0
 \end{pmatrix}.
 $$
-Tento trik použijeme pro odvození tvaru tenzoru malých deformací.
+Tento trik použijeme pro odvození tvaru tenzoru malých deformací, ze zobrazení takto totiž dokážeme odfiltrovat část související s pootočením a část, která s pootočením nesouvisí. Ta druhá nás zajímá, protože popisuje deformaci. O tom, že postup funguje a že dostaneme dvě samostatné transformace, které po skložení v libovolném pořadí dají transformaci původní, nás přesvědčí [přímý výpočet](https://sagecell.sagemath.org/?z=eJylkctugzAQRfeR8g-WsggE0ipkzYJ_YIcQmtquOgE8Fja06dfXvOJKRZWq7kbyPed67AG64Ci1wYZUdYnXKXlM12O432VpC7bDj6AoLtFGuowLT_rEtSwdbN7oPchCxg7sEwQoYE6GXMaMy6amAZjtQJlX6lrgcr_L0-yMQiqL9l4tvcmEC7mEWOBH4tKMUmIL1LvOvDL3Nr08J6cgj_KnqUCTkUEYOo87k07La2AcjPXeEQRPnn-Q4Ap-obOpdiqPNlY4bG7MSGgaUMANOT5sONpg1sE_fJrIuidSuH7EeLnTrB4NLmBsr90Dgm6wnvgX6r8bkQ3sJoWi1oU7EF4Fs-tvKtLAlVxdXyY14W0=&lang=sage&interacts=eJyLjgUAARUAuQ==).
 
 
 > Věta (souvislost transponování matice a maticového součinu). Pro čtvercové matice platí $$(AB)^T=B^T A^T.$$
