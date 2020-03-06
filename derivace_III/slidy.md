@@ -19,13 +19,26 @@ opačném.
   sudá nebo lichá.
 
 
+\iffalse
+
+
+<div class='obtekat'>
+
+![Tepelná modifikace dřeva ve VCJR Útěchov. Úloha je symetrická, teplo prostupuje do dřeva stejným způsobem shora jako zespoda. Díky tomu je složitost úlohy poloviční. Zdroj: J. Dömény.](teplotni_modifikace.jpg)
+
+</div>
+
+\fi
+
+
+
 Graf sudé funkce je osově souměrný podle osy $y$.  Graf liché funkce
 je středově souměrný podle bodu $[0,0]$.
 
 U sudé funkce stačí mít algoritmus nebo tabulky pro kladné argumenty. Například kosinus je sudá funkce a platí $$\cos(-x)=\cos(x).$$ Analogicky pro funkci sinus jako pro lichou funkci platí $$\sin(-x)=-\sin (x).$$
 
 
-> Poznámka (využití sudosti v materiálovém inženýrství). Funkční hodnoty sudé funkce jsou rozloženy smytericky podle osy $y$. Pokud víme, že úloha bude mít osově symetrické řešení, můžeme tuto znalost použít a hledat řešení mezi sudými funkcemi. Například při řešení prostupu tepla deskou, kdy stejný fyzikální proces probíhá na obou stranách desky, je přirozené modelovat jenom polovinu desky a uprostřed nastavit podmínku, která umožní sudé prodloužení do druhé poloviny. Většinou to bývá nulovost derivace. Proto se například při nestacionární difuzi používá v definici bezrozměrného času, který charakterizuje fyzikální proces, polovina tloušťky materiálu. Viz P. Horáček, Fyzikální a mechanické vlastnosti dřeva I nebo odpovídající [e-opora](https://is.mendelu.cz/eknihovna/opory/zobraz_cast.pl?cast=9180).
+> Poznámka (využití sudosti v materiálovém inženýrství). Funkční hodnoty sudé funkce jsou rozloženy symetricky podle osy $y$. Pokud víme, že úloha bude mít osově symetrické řešení, můžeme tuto znalost použít a hledat řešení mezi sudými funkcemi. Například při řešení prostupu tepla deskou, kdy stejný fyzikální proces probíhá na obou stranách desky, je přirozené modelovat jenom polovinu desky a uprostřed nastavit podmínku, která umožní sudé prodloužení do druhé poloviny. Většinou to bývá nulovost derivace. Proto se například při nestacionární difuzi používá v definici bezrozměrného času, který charakterizuje fyzikální proces, polovina tloušťky materiálu. Viz P. Horáček, Fyzikální a mechanické vlastnosti dřeva I nebo odpovídající [e-opora](https://is.mendelu.cz/eknihovna/opory/zobraz_cast.pl?cast=9180).
 
 
 Sudé a liché funkce jsou, díky svým vlastnostem, v jistém smyslu
@@ -96,6 +109,9 @@ zůstane jenom jediný bod, podobně jako v následující úloze.
 \iffalse
 
 <div class='obtekat'>
+
+![Ukázka zpracování kulatiny na trám ve VCJR v Útěchově. Zdroj: J. Dömény.](vyrezavani_tramu.jpg)
+
 
 ![Ukázka zpracování kulatiny na trám sekerou. Zdroj: https://www.bladeforums.com](hewing.jpg)
 
@@ -409,6 +425,19 @@ s dvojným integrálem uvidíme, že pro čtvercový průřez o straně čtverce
 $a$ je $k=\frac 1{12}.$
 
 
+
+\iffalse
+
+<div class='obtekat'>
+
+
+![Nosníky obdélníkového průřezu. Trojnásobný nosník má devětkrát vetší tuhost než nosníky tři. Slepením tří nosníků k sobě zvýšíme tuhost devětkrát ve srovnání s případem, kdy bychom je na sebe volně položili.](nosniky_unod.jpg)
+
+</div>
+
+\fi
+
+
 **Příklad (tuhost nosníků obdélníkového průřezu).** Budeme pokračovat
 v předchozím příkladě. Pro obdélníkový průřez o rozměrech $w$ krát $h$
 je $m=3$ (tři veličiny $w$, $h$, $I$) a $n=1$ (jediná základní
@@ -421,6 +450,8 @@ existuje konstanta $k$ taková, že $\frac Iw=kh^3,$ tj. $$I=kwh^3.$$ To
 je přesně v souladu s tvrzením, které jsme použili v příkladu s
 maximalizací tuhosti nosníku obdélníkového průřezu, kdy jsme tvrdili,
 že mírou tuhosti je součin $wh^3$.
+
+Tuhost nosníku roste se třetí mocninou. Pokud více nosníků pokládáme na sebe, tuhost se sčítá a tuhost roste linárně, s první mocninou. Slepené nosníky se chovají jako jediný nosník. Pokud tři nosníky položíme na sebe, vzroste tuhost třikrát. Pokud je slepíme nebo spojíme hřebíky, vzroste tuhost 27-krát. Tři spojené nosníky mají tedy devítinásobnou tuhost v porovnání se třemi na sobě volně položenými.
 
 
 # Vektorové funkce
