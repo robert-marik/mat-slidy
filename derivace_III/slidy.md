@@ -451,7 +451,7 @@ je přesně v souladu s tvrzením, které jsme použili v příkladu s
 maximalizací tuhosti nosníku obdélníkového průřezu, kdy jsme tvrdili,
 že mírou tuhosti je součin $wh^3$.
 
-Tuhost nosníku roste se třetí mocninou. Pokud více nosníků pokládáme na sebe, tuhost se sčítá a tuhost roste linárně, s první mocninou. Slepené nosníky se chovají jako jediný nosník. Pokud tři nosníky položíme na sebe, vzroste tuhost třikrát. Pokud je slepíme nebo spojíme hřebíky, vzroste tuhost 27-krát. Tři spojené nosníky mají tedy devítinásobnou tuhost v porovnání se třemi na sobě volně položenými.
+Tuhost nosníku roste se třetí mocninou. Pokud více nosníků pokládáme na sebe, tuhost se sčítá. Tuhost roste linárně. Pokud tři nosníky položíme na sebe, vzroste tuhost třikrát. Slepené nosníky se chovají jako jediný nosník. Pokud tři nosníky slepíme nebo spojíme hřebíky, vzroste tuhost 27-krát. Tři spojené nosníky mají tedy devítinásobnou tuhost v porovnání se třemi na sobě volně položenými.
 
 
 # Vektorové funkce
