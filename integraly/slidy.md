@@ -193,6 +193,18 @@ $$\int 2x^4-e^{4x}+\frac 1x\,\mathrm dx=\frac 25 x^5 -\frac 14 e^{4x}+\ln |x|+C$
 
 # Funkční předpis z rychlosti změny a výchozího stavu
 
+\iffalse
+
+<div class='obtekat'>
+
+![Napětí na kondenzátoru při měření elektrického odporu RC členem se mění exponenciální rychlostí. Úloha najít vývoj napětí v čase je formálně stejná, jako tato úloha s exponenciálně klesající teplotou. Zdroj: https://www.handymantips.org/](how-to-measure-wood-moisture-content.jpg)
+
+</div>
+
+\fi
+
+
+
 *Teplota klesá rychlostí $\frac{\mathrm dT}{\mathrm dt}=-0.1 e^{-0.01
 t} \,{}^\circ \mathrm C/\mathrm{min}.$ Cílem je najít teplotu jako
 funkci času. Dodatečná informace je, že počáteční teplota je $28
@@ -207,6 +219,8 @@ určíme $C$. Dostáváme takto podmínku $$28=10 e^0 +C,$$ která implikuje
 $C=18 ^\circ \mathrm C$. Funkce udávající závislost
 teploty místnosti na čase je $$T=\left(18+10 e^{-0.01
 t}\right)\,{}^\circ \mathrm C.$$
+
+**Poznámka (vlhkost dřeva elektrickou metodou).** Podobný výpočet se využívá u měření elektrického odporu dřeva pro stanovení vlhkosti. Protože elektrický odpor dřeva je velký, není vhodné pro určení elektrického odporu použít Ohmův zákon a změřený proud a napětí. Jedna z možností je měření času nutného k nabití nebo vybití kondenzátoru přes odpor. V případě nabíjení proud exponenciálně klesá (zdůvodníme později v přednášce věnované diferenciálním rovnicím) a proto (díky elektrickým vlastnostem kondenzátoru) exponenciálně klesá i rychlost, s jakou roste napětí na kondenzátoru. Toto napětí je nutné pro výpočet odporu. Pokud známe rychlost, s jakou se napětí mění, určíme napětí integrováním a znalostí napětí na začátku nabíjení.
 
 
 > Poznámka (veličina vypočtená z rychlosti). Pokud se veličina $f(t)$ mění v čase rychlostí $r(t)$, platí $$f(t)=\int r(t)\,\mathrm dt,$$ přičemž pravá strana je dána jednoznačně až na aditivní konstantu. To koresponduje s pozorováním, že rychlost změn k jednoznačné identifikaci časového průběhu měnící se veličiny nestačí. Je potřeba mít zadán ještě výchozí stav.
