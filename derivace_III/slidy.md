@@ -364,7 +364,7 @@ kužele, úhel u vrcholu je daný vlastnostmi písku) nebo vyprazdňování
 nádrže ve tvaru trychtýře (tekutina má tvar kužele s úhlem u vrcholu
 daným trychtýřem).
 
-Rozšíření podobnosti je rozměrová analýza. Ta je založená na poznatku,
+Rozšíření myšlenky podobnosti je rozměrová analýza. Ta je založená na poznatku,
 že fyzikální zákony je možno vyjadřovat v různých jednotkách. Formální
 postup umožňuje například následující věta.
 
@@ -381,7 +381,7 @@ chvíli pro nás poměrně komplikované a proto bude nejjednodušší si
 problematiku ukázat na příkladech. Jejich hlavním smyslem je to, že
 vztah mezi veličinami odhalíme (až na detaily typu multiplikativní
 konstanta) jenom z fyzikálních jednotek, bez hlubší znalosti
-fyzikálního pozadí problematiky.
+fyzikálního pozadí. Stačí identifikovat relevantní parametry.
 
 **Příklad (vztah mezi rychlostí, dráhou a dobou u pohybu konstantní rychlostí).** U pohybu konstantní rychlostí jsou relevantní parametry rychlost $v$ v kilometrech za hodinu, doba $t$ v hodinách a dráha $s$ v kilometrech. To jsou tři veličiny vyjádřené pomocí dvou základních jednotek. Existuje tedy jediná bezrozměrná veličina, pomocí které je možno zapsat souvislost mezi parametry pohybu. Tu je možno sestavit jediným možným způsobem (až na případné mocniny) a to ve tvaru $$\pi_1=\frac{vt}{s}.$$ Podle Buckinghamova teorému tato veličina musí být konstantní, tj. musí platit $\frac{vt}{s}=k$ pro nějakou konstantu $k$. Prozkoumáním modelového případu, kdy rychlost, dráha i čas jsou jednotkové, vidíme, že konstanta musí být rovna jedné a proto platí $$\frac{vt}{s}=1.$$ Odsud již snadno nalezneme $v=\frac{s}{t}$ a další variace vzorce pro rovnoměrný pohyb tak jak je známe ze základní školy.
 
@@ -408,6 +408,9 @@ alternativní postup nemáme k dispozici.
 
 ![Vánoční strom pro Prahu v prosinci 2019. Ořezání průměru kmene na polovinu sníží tuhost kmene cca 16-krát (za předpokladu homogenity, ve skutečnosti je to ještě výraznější). Vánoční strom v Praze proto musí držet ocelová lana. Zdroj: Pražský deník](strom_praha_2019.jpg)
 
+
+![Nosníky obdélníkového průřezu. Trojnásobný nosník má devětkrát vetší tuhost než nosníky tři. Slepením tří nosníků k sobě zvýšíme tuhost devětkrát ve srovnání s případem, kdy bychom je na sebe volně položili.](nosniky_unod.jpg)
+
 </div>
 
 \fi
@@ -426,18 +429,6 @@ $a$ je $k=\frac 1{12}.$
 
 
 
-\iffalse
-
-<div class='obtekat'>
-
-
-![Nosníky obdélníkového průřezu. Trojnásobný nosník má devětkrát vetší tuhost než nosníky tři. Slepením tří nosníků k sobě zvýšíme tuhost devětkrát ve srovnání s případem, kdy bychom je na sebe volně položili.](nosniky_unod.jpg)
-
-</div>
-
-\fi
-
-
 **Příklad (tuhost nosníků obdélníkového průřezu).** Budeme pokračovat
 v předchozím příkladě. Pro obdélníkový průřez o rozměrech $w$ krát $h$
 je $m=3$ (tři veličiny $w$, $h$, $I$) a $n=1$ (jediná základní
@@ -451,7 +442,16 @@ je přesně v souladu s tvrzením, které jsme použili v příkladu s
 maximalizací tuhosti nosníku obdélníkového průřezu, kdy jsme tvrdili,
 že mírou tuhosti je součin $wh^3$.
 
-Tuhost nosníku roste se třetí mocninou. Pokud více nosníků pokládáme na sebe, tuhost se sčítá. Tuhost roste linárně. Pokud tři nosníky položíme na sebe, vzroste tuhost třikrát. Slepené nosníky se chovají jako jediný nosník. Pokud tři nosníky slepíme nebo spojíme hřebíky, vzroste tuhost 27-krát. Tři spojené nosníky mají tedy devítinásobnou tuhost v porovnání se třemi na sobě volně položenými.
+Pokud více nosníků pokládáme na sebe nebo vedle sebe, tuhost se
+sčítá. Pokud nosníky vedle sebe slepíme bočními hranami, nic se
+nezmění, protože na spoji není žádné tahové napětí. Tuhost tedy roste
+linárně s šířkou. Pokud tři nosníky položíme na sebe, vzroste tuhost
+na trojnásobek jednoho nosníku.  Tuhost nosníku však také roste se
+třetí mocninou výšky.  Nosníky položené na sebe a slepené se chovají
+jako jediný nosník. Pokud tři nosníky slepíme nebo spojíme hřebíky,
+vzroste tuhost $3^3$-krát, tj. 27-krát v porovnání s jediným
+nosníkem. Tři spojené nosníky mají tedy devítinásobnou tuhost v
+porovnání se třemi na sobě volně položenými.
 
 
 # Vektorové funkce
