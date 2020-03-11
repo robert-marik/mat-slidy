@@ -1,0 +1,317 @@
+~~NOTOC~~
+
+<html>
+
+<style>
+li img {float:right;}
+
+ol > li {clear:both;}
+
+h2 span {color:gray; font-size:70%;}
+
+.abutton {
+color: gray;
+font-size:60%;
+}
+
+.informace {border-left: thick double #ccc; padding-left: 1em;}
+
+.dvasloupce { 
+	    -webkit-columns: auto 2; /* Chrome, Safari, Opera */
+	    -moz-columns: auto 2; /* Firefox */
+	    columns: auto 2;
+
+    -webkit-column-rule: 4px solid #aaa; /* Chrome, Safari, Opera */
+    -moz-column-rule: 4px solid #aaa; /* Firefox */
+    column-rule: 4px solid #aaa;
+}
+
+.rozbalit_ul:hover {cursor:pointer;}
+
+ol li em {color: gray; font-weight: bold;}
+
+#__prednasky ol li ul li {font-weight: bolder;}
+
+#__prednasky ol li ul li + li {font-weight: normal;}
+
+/*  http://www.456bereastreet.com/archive/201105/styling_ordered_list_numbers/ */
+ol {
+    counter-reset:li; /* Initiate a counter */
+    margin-left:0; /* Remove the default left margin */
+    padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+    position:relative; /* Create a positioning context */
+    margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+    padding:4px 8px; /* Add some spacing around the content */
+    list-style:none; /* Disable the normal item numbering */
+    border-top:2px solid #666;
+    background:#f6f6f6;
+}
+.new ol > li:before {
+    content:counter(li); /* Use the counter as content */
+    counter-increment:li; /* Increment the counter by 1 */
+    /* Position and style the number */
+    position:absolute;
+    top:-2px;
+    left:-2em;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    width:2em;
+    /* Some space between the number and the content in browsers that support
+       generated content but not positioning it (Camino 2 is one example) */
+    margin-right:8px;
+    padding:4px;
+    border-top:2px solid #666;
+    color:#fff;
+    background:#666;
+    font-weight:bold;
+    font-family:"Helvetica Neue", Arial, sans-serif;
+    text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.old,.old li {color:gray}
+
+
+</style>
+
+<div style="float:right; max-width:300px; clear:both; padding:10px;">
+<img src="../mtk/mtk_logo.jpg" >
+
+<span style="color:gray; font-size:small">V 21. století má každý nástroje pro simulace na dosah ruky. I pojetí matematiky je proto vhodné posunout od "jak vypočítat jednoduchý příklad" k "jak naformulovat a zadat užitečný model". Na obrázku je měření teplotního toku dřevěným panelem ve VCJR v Útěchově. Popis transportu energie a hmoty bude jeden z našich hlavních cílů.</span>
+</div>
+</html>
+
+
+
+<markdown>
+Matematika (bakalářský stupeň, LDF)
+==================================
+
+</markdown>
+<html>
+Tato stránka obsahuje materiály pro letní semestr, jaro a léto 2019/2020.
+Zimní semestr 2019-2020 je <a href="http://user.mendelu.cz/marik/wiki/doku.php?id=matematika">zde.</a>
+</html>
+<markdown>
+
+Předmět odpovídá obecným úvodům do matematiky na technicky zaměřených
+oborech s jednosemestrální výukou matematiky. Obsahuje diferenciální a
+integrální počet a lineární algebru. Je však pojetím a skladbou
+příkladů silně zaměřen na praktické využití matematiky ve vědách o
+přírodě a přírodních materiálech. Toto pojetí zahrnuje dřevo
+(dřevařství, arboristika, nábytek, dřevostavby), půdu (krajinářství) i
+ekosystémy (lesnictví).
+
+* Proto derivaci poznáme jako nástroj pro
+detekci prostorové nebo časové změny veličiny. Nikoliv jako směrnici
+tečny z obecně zaměřených učebnic nebo Wikipedie.
+* Integrál poznáme především jako cestu od rychlosti změny k velikosti této změny. Nikoliv jako
+obsah obrazce. To je sice obvyklá představa, ale v materiálovém
+inženýrství málo užitečná.
+* Lineární algebru nezaměříme na soustavy
+lineárních rovnic, které za nás dnes řeší počítače tak, že vše vlastně
+probíhá na pozadí a my o tom ani nevíme. Zaměříme se raději na využití
+vyjadřovacích prostředků lineární algebry v popisu materiálů, které
+mají význačné směry ve kterých se liší jejich fyzikální
+vlastnosti. Dřevo totiž mezi takové materiály bezesporu patří.
+
+Jak plyne z předešlých odstavců, předmět se malinko liší od obecně
+zaměřených matematických přednášek. Ke zvládnutí čistě matematického
+aparátu existuje v online i tištěné podobě nepřeberné množství snadno
+dostupného materiálu. Všechno potřebovat nebudeme. Ale budeme
+potřebovat poznatky, které se z takové záplavy informací těžko
+vyzobávají a v těch ryze matematicky orientovaných materiálech ani
+nejsou. Proto je silně doporučeno sledovat náplň kurzu a přizpůsobit
+tomu práci během semestru a výběr literatury. To poněkud zvyšuje
+nároky na studenty, ale je nutné si uvědomit, že cílem předmětu není
+přispět k výchově poloprofesionálních matematiků, jak tomu může být na
+obecně zaměřených oborech. Chceme otevřít dveře poznání studentům,
+kteří mají ambice studovat přírodu a prostředí okolo nás prostředky
+dostupnými v 21. století.
+
+
+Kombinovaná forma, letní semestr 2019/2020
+---------------------------------
+
+Výuka neprobíhá. Případné zkoušky po domluvě.
+
+</markdown>
+<html>
+</html><markdown>
+
+
+Presenční forma, letní semestr 2019/2020
+------------------------------
+
+</markdown><html>
+<div class="new">
+</html><markdown>
+
+* Náplň bude aktualizována jak poběží výuka se zohledněním aktuální situace.
+* [Prezentace do cvičení](http://user.mendelu.cz/marik/mtk/mat-cviceni-screen.pdf)
+* [Zápisky k přednáškám](http://user.mendelu.cz/marik/mtk/notes)
+
+
+1. 18.2.2020 [![01.jpg](../mtk/mat-slidy/pics/01.jpg)](../mtk/mat-slidy/derivace_I) *Přednáška o derivacích, základním stavebním kamenu pro studium funkcí. Naučíme se matematicky popsat rychlost. Ve cvičení se naučíme derivovat a tuto znalost využijeme v týdnech bezprostředně následujících. Naučíme se například pro veličiny spojené fyzikálním vzorcem najít souvislost mezi rychlostmi změn těchto veličin. Jedna z aplikací je měření odporu dřeva pro stanovení vlhkosti.*
+   * Přednáška Derivace I
+   * Cvičení: Výpočet derivací. 
+1.  25.2.2019 [![02.jpg](../mtk/mat-slidy/pics/02.jpg)](../mtk/mat-slidy/derivace_II) *Naučíme se využít derivace k rozumné aproximaci funkcí a fyzikálních zákonů. Tím se mnoho vztahů stane významně jednoduššími a matematické modely se stanou spočitatelnými i bez superpočítačů. Ukážeme si dále polynomiální aproximaci, která umožní zachytit jevy z podstaty nelineární, jako je například laser. Ale rozebereme si i řešitelnost rovnic a možnosti jejich numerického řešení.*
+   * Přednáška: Derivace II
+   * Cvičení: Využití derivací v matematických modelech
+1. 3.3.2019 ![koronavirus](../images/koronavirus.jpg) *Domácí výuka. Instrukce šly sérií mailů, ale pro jistotu shrnuji vše pohromadě zde.*
+   * Prostudujte epidemický [model SIR](http://user.mendelu.cz/marik/wiki/doku.php?id=SIR_epidemie) a prozkoumejte, jak umíme numericky simulovat matematické modely. **Není nutné nic odevzdávat, ale v zadání je dobrovolný úkol za 2 body. Termín odevzdání je obnovení kontaktní výuky na MENDELU.** Odevzdání mailem na marik@mendelu.cz jako jediné PDF. Předpokládaný formát odevzdávaných prací byl zaslán mailem a je odkazován na konci zadání.
+   * Vyzkoušeteje si jestli umíte [derivace](http://user.mendelu.cz/marik/wiki/doku.php?id=derivace) polynomů a příbuzných funkcí. Není nutné odevzdávat, řešení pošlu na stránku později. Jeden příklad tohoto typu bude první polovina prvního testu ve cvičení, jedná se tedy o přípravu na tento test.
+   * Pokuste se naformulovat [spojité modely](http://user.mendelu.cz/marik/wiki/doku.php?id=spojite_modely) dvanácti vybraných reálných situací. Nic není nutné odevzdávat, ale kdo chtěl tak mohl odevzdat do 9.3.2020, 10:00 CET a podle správnosti mohl získat jeden nebo dva bonusové body. Nyní jsou již u zadání zveřejněna i řešení. Schopnost naformulovat model kvantitativní cestou, aby se dal dále prozkoumat, je důležitá. Jedná se proto o oblíbenou součást zkouškové písemky. 
+   * Výše uvedené instrukce byly zaslány [mailem](http://user.mendelu.cz/marik/mtk/mail1.txt) 2.3.2020. a [mailem](http://user.mendelu.cz/marik/mtk/mail2.txt) 3.3.2020.
+   * Případné nejasnosti emailem nebo přes diskusní fórum k předmětu v UISe.
+1. 10.3.2019 ![koronavirus](../images/koronavirus.jpg) *Domácí výuka. Instrukce šly mailem, ale pro jistotu shrnuji zde na jednom místě s ostatními materiály.*
+   * Seznamte se s [matematickými modely](http://user.mendelu.cz/marik/wiki/doku.php?id=skudce) lesního škůdce. **Zadání obsahuje dobrovolné úkoly za jejichž splnění v termínu do 17.3.2020, 9:00 CET jsou 4 body do celkového hodnocení.** Na konci zadání je očekávaný formát, ve kterém očekávám výstupy.
+   * Provičte si počítání [rychlostí změn](http://user.mendelu.cz/marik/wiki/doku.php?id=rychlosti) souvisejících veličin. Není nutné odevzdávat, řešení se objeví na webu později. Jeden příklad tohoto typu bude druhá polovina prvního testu na bonusové body ve cvičení.
+   * Výše uvedené instrukce byly zaslány [mailem](http://user.mendelu.cz/marik/mtk/mail3.txt) 6.3.2020 dopoledne.
+   * Případné nejasnosti emailem nebo přes diskusní fórum k předmětu v UISe.
+1.  17.3.2019  [![03.jpg](../mtk/mat-slidy/pics/03.jpg)](../mtk/mat-slidy/derivace_III) *Další využití derivací, tentokrát zaměřeno na extrémy. Naučíme se hledat optimální stavy systému. Ukážeme si příklady v souladu s intuicí (pokud chci vyřezat co nejtužší nosník z kulatiny, musím řezat obdélníkový profil) i jdoucí proti intuici (tlustší izolace okolo horké trubky nemusí znamenat menší tepelné ztráty, existuje takzvaný kritický poloměr izolace). Seznámíme s pojmem gradient, který dokáže identifikovat směr podnětů dávajících do pohybu vedení tepla nebo transport látek. A poprvé se seznámíme s bezrozměrnými veličinami, které přijdou ke slovu i později.*
+   * Přednáška: Derivace III
+   * Cvičení: Derivace součinu a podílu, lineární aproximace, numerické derivování.
+1.  24.3.2020  [![04.jpg](../mtk/mat-slidy/pics/04.jpg)](../mtk/mat-slidy/integraly) *Derivaci jsme poznali jako míru měřící rychlost změn a nyní si uvedeme opačnou úlohu. Znalost rychlosti s jakou se mění nějaká veličina nám umožní najít tuto veličinu. Naučíme se například najít změnu teploty u procesu, u kterého intenzita tepelné výměny klesá s časem.*
+   * Přednáška: Tři přístupy k integrálu. Základní výpočet a využití.
+   * Cvičení: *První test.* Lokální extrémy funkce
+1. 31.3.2020  [![05.jpg](../mtk/mat-slidy/pics/05.jpg)](../mtk/mat-slidy/integraly2)
+ *Integrály pro pokročilé. Naučíme se numericky aproximovat určitý integrál a dokonce otevřeme vrátka mimo svět elementárních funkcí.*
+   * Přednáška: Monotonie určitého integrálu, aditivita určitého
+     integrálu vzhledem k mezím, substituce v
+     neurčitém a určitém integrálu, určitý integrál jako funkce meze,
+     existence primitivní funkce, střední hodnota, numerická aproximace.
+   * Cvičení: Základní integrační metody a interpretace integrálu.
+1.  7.4.2020  [![06.jpg](../mtk/mat-slidy/pics/06.jpg)](../mtk/mat-slidy/ode)
+ *Fyzikální zákony formulujeme pomocí rychlostí změn (derivací) a důsledky hledáme řešením vzniklých rovnic, zpravidla vhodným integrováním. Problematika spadá do oblasti diferenciálních rovnic. Diferenciální rovnice jsou ale i ideálním nástrojem i pro modelování růstu populací v ekologii nebo odtoku srážek z regionu. Formulovat diferenciální rovnice již umíme díky derivacím. Teď si znalosti prohloubíme, utřídíme. Poznáme problematiku existence a jednoznačnosti řešení. Naučíme se redukovat počet parametrů v modelu popisujícím přírodní proces díky zavedení bezrozměrných veličin.*
+   * Přednáška: Diferenciální rovnice. 
+   * Cvičení: Výpočet integrálů pomocí substituce, střední hodnota, další aplikace určitého integrálu.
+1.  14.4.2020 [![07.jpg](../mtk/mat-slidy/pics/07.jpg)](../mtk/mat-slidy/matice)
+ *V materiálovém inženýrství potřebujeme často zohlednit, že v jednom směru má materiál jiné vlastnosti než ve směru jiném. Příroda má v materiálu jakési dálnice pro transport vody nebo tepla. Matice, které poznáme na této přednášce, jsou skvělým prostředkem pro zachycení tohoto jevu. Také matice poznáme jako nástroj na studium deformací materiálu. Podíváme se i na vedení tepla, zatím bez rovnice vedení tepla.*
+   * Přednáška: Vektory, matice a operace s maticemi.
+   * Cvičení: Diferenciální rovnice. 
+1. 21.4.2020 [![08.jpg](../mtk/mat-slidy/pics/08.jpg)](../mtk/mat-slidy/inverzni_matice)
+ *Při řešení praktických úloh sice pomocí fyziky zpravidla snadno sestavíme diferenciální rovnici popisující daný jev, ale vyřešit rovnici efektivně bývá i v relativně jednoduchých případech nemožné. Například velice záleží na geometrii úlohy, tj. tvaru studovaného tělesa apod. Zpravidla se takové úlohy převádí na řešení soustav lineárních rovnic. Proto soustavy patří k malé násobilce inženýra a v této přednášce se je mimo jiné naučíme řešit numericky.*
+   * Přednáška: Determinanty a inverzní matice. 
+   * Cvičení: Matice.
+1. 28.4.2020  [![09.jpg](../mtk/mat-slidy/pics/09.jpg)](../mtk/mat-slidy/soustavy)
+ *Má-li materiál v jednom směru výrazně odlišné vlastnosti než ve směru jiném, můžeme tuto vlastnost zohlednit v matematickém modelu a snažit se najít směry, ve kterých je popis úlohy nejjednodušší. Týká se zejména dřeva, které má silně odlišné vlastnosti v různých směrech. Ukážeme si, jak najít tyto zásadní směry (využívá se řešení soustav lineárních rovnic) a jak se materiálové charakteristiky při popisu, který tyto směry bere v úvahu, zjednodušují (diagonalizace matice).*
+   * Přednáška: Soustavy lineárních rovnic, vlastní vektory, otočení soustavy souřadnic, soustava souřadnic volená podle vlastních vektorů matice.
+   * Cvičení: Determinanty, soustavy rovnic.
+1.  5.5.2020  [![10.jpg](../mtk/mat-slidy/pics/10.jpg)](../mtk/mat-slidy/vektorove_pole)
+ *Zákony zachování jsou základními stavebními kameny mnoha technických výpočtů zabývajících se transportem látky, energie, či jakékoliv veličiny. Prakticky všechny mají jednotné matematické pozadí  a stejnou formu (rovnice kontinuity, resp. rovnice difuze, resp. rovnice vedeni tepla), kterou si představíme v této přednášce. Ukážeme si jednotný aparát pro popis sušení dřeva, vedení tepla, proudění vody v korytě a proudění podzemní vody.*
+   * Přednáška: Divergence a tok vektorového pole, rovnice kontinuity a vedení tepla.
+   * Cvičení:  Hlavní cvičení. 
+1. 12.5.2020 [![11.jpg](../mtk/mat-slidy/pics/11.jpg)](../mtk/mat-slidy/dvojny_integral)
+ *Integrály je někdy nutné uvažovat i ve více proměnných. Třeba pokud veličina, kterou studujeme, není rozložena v jedné dimenzi podél přímky, ale v rovině. Technické aplikace jsou například při studiu odolnosti nosníků vůči deformaci (kvadratický moment průřezu). Geometrické aplikace jsou například při výpočtech objemů těles nepravidelného tvaru, jako jezero s známým profilem dna.* 
+   * Přednáška: Dvojný integrál.
+   * Cvičení: *Druhý test.* Vlastní vektory a vlastní hodnoty.
+1. 19.5.2020 [![12.jpg](../mtk/mat-slidy/pics/12.jpg)](../mtk/mat-slidy/numerika)
+*Numerické modelování je silná zbraň, ale množství parametrů, které je nutno nastavit, by úlohu komplikovalo. Na rovnici vedení tepla si ukážeme zavedení bezrozměrných veličin, které toto množství parametrů sníží. Navazuje na problematiku transformace diferenciální rovnice do bezrozměrných veličin. To jsme nakousli během semestru a teď si dovednosti rozšíříme.*
+   * Přednáška: Rozměrová analýza, zavedení bezrozměrných veličin.
+   * Cvičení: Parciální derivace, gradient, divergence, rovnice kontinuity a difuzní rovnice.
+
+</markdown><html>
+<!--
+1. [![13.jpg](../mtk/mat-slidy/pics/13.jpg)](../mtk/mat-slidy/) *Jdeme do finiše. K některým pojmům má smysl se vrátit. Nyní s kvalitnějšími nástroji než jsme měli v době, kdy jsme se s nimi seznámili poprvé.*
+   * Přednáška: Nevešlo se (koronavir)
+   * Cvičení: Nevešlo se (koronavir)
+1. [![14.jpg](../mtk/mat-slidy/pics/14.jpg)](../mtk/mat-slidy/) **Rezerva pro případ hlavního cvičení nebo vstup do reálného světa představením vybrané aplikace matematiky.**
+   * Přednáška: Nevešlo se (koronavir)
+   * Cvičení: Nevešlo se (koronavir)
+-->
+</div>
+</html><markdown>
+
+Literatura 
+----------
+
+
+### Základní literatura
+
+* [Slidy](http://user.mendelu.cz/marik/mtk/mat-slidy/) a všechny slidy [v jednom PDF](http://user.mendelu.cz/marik/mtk/mat-slidy/mat_slidy_all.pdf) (bude se aktualizovat během semestru podle skutečné náplně)
+* Cvičení: Text s cvičeními bude postupně aktualizován a rozšiřován, jak poběží semestr. 
+  [text](http://user.mendelu.cz/marik/mtk/mat-cviceni.pdf)
+  [prezentace](http://user.mendelu.cz/marik/mtk/mat-cviceni-screen.pdf)
+  [text s řešeními](http://user.mendelu.cz/marik/mtk/mat-cviceni-reseni.pdf)
+  [prezentace s řešeními](http://user.mendelu.cz/marik/mtk/mat-cviceni-screen-reseni.pdf)
+
+
+### Další literatura
+
+* Učebnice [Došlá, Z.,  Liška, P., Matematika pro nematematické obory s aplikacemi v přírodních a technických vědách.](http://www.modreknihkupectvi.cz/product.php?id_product=2349) 1. vyd. Praha: Grada Publishing, a.s., 2014. 304 s. ISBN 978-80-247-5322-5.
+* Skripta Rádl, P., Černá, B., Stará, L, Základy vyšší matematiky, 3. vyd. Brno: Mendelova univerzita v Brně, 2014. 176 s. ISBN 978-80-7509-110-9.
+* [Vzorce a triky pro derivace a integrály](http://user.mendelu.cz/marik/mt/vzorce.pdf)
+* [Starý učební text ode mě](http://user.mendelu.cz/marik/wiki/kraj/master.pdf)
+
+<!--
+### Materiály z předchozích let
+
+* [Moje materiály](?id=matematika_old) z let 2018-2019
+* [Přednášky](http://user.mendelu.cz/marik/mt/prednasky/) z letního semestru 2019
+* [Cvičení](http://user.mendelu.cz/marik/mt/cviceni/) z letního semestru 2019
+* [Moje materiály](?id=matematika_old2) z let 2009 až 2011
+* [Materiály](http://user.mendelu.cz/smykalov/) dr. Smýkalové, do roku 2018
+-->
+
+
+
+Ukončení
+--------
+
+* Na **cvičení je účast povinná a kontrolovaná**. Jsou povoleny nejvýše dvě neúčasti, v případě více neúčastí je nutné vypočítat příklady navíc.
+* Celkem **8 bodů do celkového hodnocení** je možno získat za práci během semestru, 4 body za přednášky a 2*2 body za testy ve cvičení.
+    * Na přednášce je účast nepovinná. Bude kontrolována s bonusem za dostatečnou účast:
+       * za nejvýše dvě neúčasti je bonus 4 body ke zkouškové písemce,
+       * za tři neúčasti bonus 3 body,
+       * za čtyři neúčasti bonus 2 body,
+       * více neúčastí bez bonusu.
+    * Ve cvičení se budou v průběhu semestru psát dva kratičké
+      testy. Nejsou povinné, na každý je možno získat dva bonusové body.
+* Zkouška bude písemná, složená ze dvou částí. První část (cca 0% až 20%, podíl bude specifikován během semestru) se zaměří na základní poznatky a jejich využití. U druhé části bude možno používat **vlastnoruční zápisky z přednášky nebo cvičení a vlastnoručně vypočítané příklady**. Studenti se specifickými potřebami (je nutno mít oficiálně vyřízeno přes studijní oddělení) mohou nahradit vlastnoruční zápisky jiným materiálem, na kterém se domluví se zkoušejícím v první polovině semestru.
+* Opakující studenti mají stejné podmínky jako neopakující. Jedinou výjimkou je, že mají tolerovánu neúčast ve cvičení. Mohou stejně jako ostatní získat bonusové body během semestru.
+* Klasifikace:
+    *    A: 40 a více
+    *    B: 35-39
+    *    C: 31-34
+    *    D: 27-30
+    *    E: 23-26
+* Písemky za dva předchozí semestry [jsou k dispozici ke stažení](http://user.mendelu.cz/marik/mtk/pisemky/).
+
+
+**Update 3.3.2020 po opatření rektorky kvůli koronaviru**
+*Mailem budou zadávány samostatné práce. Náplň těchto prací může být zohledněna ve zkoušce. Součástí zadání některých prací může být nabídka dalších bonusových bodů. Podmínkou hodnocení alespoň E je zisk 23 bodů v součtu bodů z písemky a bonusových bodů a současně alespoň 11 bodů z písemky. Bonusové body za přednášku se budou udělovat podle slíbeného pouze pokud bude realizováno alespoň 6 přednášek. V opačném případě se budou krátit nebo se nebudou zohledňovat. Termín do kdy je možno udělovat bonusové body za SIR model je opětovné zahájení výuky. Další úkoly budou mít v zadání stanoven deadline.*
+
+
+*Obrázky: pixabay.com*
+</markdown>
+
+
+
+<html>
+
+
+<script type="text/javascript"
+	src="http://user.mendelu.cz/marik/js/jquery.shorten.1.0.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+	
+		$(".ssschovavat").shorten({
+	"showChars" : 150,
+	"moreText"	: "pokračovat",
+	"lessText"	: "méně",
+});
+	
+	});
+</script>
+
+
+
+
+</html>
