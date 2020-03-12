@@ -412,6 +412,25 @@ Derivace vychází bez jednotky (sekunda lomeno sekundou se zkrátí) a je možn
 $$\frac{\mathrm dT}{\mathrm dt} =0.35 \frac{\mathrm{ms}}{\mathrm{s}}.$$
 Perioda kyvadla se prodlužuje rychlostí $0.35$ milisekundy za sekundu.
 
+# Rychlost nabíjení kondenzátoru
+
+\iffalse
+
+<div class='obtekat'>
+
+![Napětí na kondenzátoru při měření elektrického odporu RC členem se mění exponenciální rychlostí. Úloha najít vývoj napětí v čase má několik fází. První z nich je ze znalosti vztahu mezi napětím a nábojem najít souvislost mezi změnami těchto veličin. Zdroj: https://www.handymantips.org/](how-to-measure-wood-moisture-content.jpg)
+
+</div>
+
+\fi
+
+Elektrický odpor dřeva a mnoha dalších stavebních materiálů souvisí s vlhkostí a tato souvislost je umožňuje sestrojení vlhkoměru. Protože elektrický odpor těchto materiálů je velký, není vhodné pro určení elektrického odporu použít Ohmův zákon a změřený proud a napětí. Jedna z možností je měření času nutného k nabití nebo vybití kondenzátoru přes odpor. Napětí $U$ na kondenzátoru o kapacitě $C$ souvisí s nábojem na kondenzátoru vztahem $$U=\frac 1C Q.$$ Derivováním tohoto vztahu podle času dostaneme vztah mezi rychlostmi změn těchto veličin ve tvaru
+$$\frac{\mathrm dU}{\mathrm dt}=\frac 1C \frac{\mathrm dQ}{\mathrm dt}.$$
+Veličina $\frac{\mathrm dQ}{\mathrm dt}$ je nabíjecí proud. Ten dokážeme určit analýzou elektrického obvodu, jak si ukážeme v přednášce o diferenciálních rovnicích. Tím budeme znát derivaci $\frac{\mathrm dU}{\mathrm dt}$ a najít napětí jako funkci času z derivace se naučíme v přednášce o integrálech. Důležitým prvním krokem při analýze uvažoivaného elektrického zapojení je však souvislost časové změny napětí a časové změny náboje, tj. derivace dvou souvisejících veličin.
+
+
+
+
 # Funkce více proměnných
 
 Funkce má na vstupu více proměnných, na výstupu reálné číslo. Některé pojmy, jako například monotonie, ztrácejí ve světě funkcí více proměnných smysl, například monotonie nebo inverzní funkce. Proměnné značíme pomocí jejich fyzikálního označení. Bez fyzikálního kontextu zpravidla používáme funkce dvou, tří, nebo $n$ proměnných v následujícím tvaru.
@@ -427,7 +446,7 @@ Funkce má na vstupu více proměnných, na výstupu reálné číslo. Některé
 
 <div class='obtekat'>
 
-![Tepelně modifikované dřevo (napravo). Jak rychle uvnitř roste teplota? Jak dlouho musíme tepelně opracovávat, aby se teplota dostatečně zvýšila v celém objemu? Zdroj: Wikipedia](termowood.jpg)
+![Teplotní modifikace dřeva ve VCJR v Útěchově. Jak rychle uvnitř roste teplota? Jak dlouho musíme tepelně opracovávat, aby se teplota dostatečně zvýšila v celém objemu? Zdroj: J. Dömény.](termowood.jpg)
 
 </div>
 
