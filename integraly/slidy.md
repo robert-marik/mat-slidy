@@ -210,6 +210,7 @@ t} \,{}^\circ \mathrm C/\mathrm{min}.$ Cílem je najít teplotu jako
 funkci času. Dodatečná informace je, že počáteční teplota je $28
 ^\circ \mathrm{C}$.*
 
+Pouřijeme skutečnost, že integrál konsntantního násobku je konsntantní násobek integrálu a vzorec $$\int e^{ax}\,\mathrm{d}x=\frac 1a e^{ax}+c.$$
 Teplota jako
 funkce času je dána integrálem
 \dm $$T=\int - 0.1 e^{-0.01t} \,\mathrm dt=\frac{-0.1}{-0.01} e^{-0.01t}+C = 10 e^{-0.01t}+C.$$
