@@ -290,7 +290,7 @@ teplotě, ale zato jsme schopni určit jenom změnu teploty za daný
 Za druhou hodinu bude změna teploty
 \dm$$\int_{60}^{120} - 0.1 e^{-0.01t} \,\mathrm dt=\left[10 e^{-0.01t}\right]_{60}^{120}= 10 e^{-0.01\cdot 120} - 10 e^{-0.01\cdot 60}\approx  -2.5 ^\circ \mathrm C. $$
 
-[Online výpočet.](https://sagecell.sagemath.org/?z=eJwrSyzSUC9R1-TlStMo0VSwVdA10DNU0FJIrSjQADINDLVKgHIFRZl5JQpAnJpelFiSqgFSq6NRomOgY2agiUfezEDH0AioAgB6XhvR&lang=sage)
+[Online výpočet.](https://sagecell.sagemath.org/?z=eJwrSyzSUC9R1-TlStMo0VSwVdA10DNU0FJIrSjQADINDLVKgHIFRZl5JQoaQCI1vSixJFUDpFhHo0THQMfMQFMTnwozAx1DI5AaANtfHHM=&lang=sage&interacts=eJyLjgUAARUAuQ==)
 
 > Poznámka (změna veličiny vypočtená pomocí rychlosti). Pokud se veličina $f(t)$ mění v časovém intervalu od $t=a$ do $t=b$ rychlostí $r(t)$, je změna veličiny $f$ za tento časový okamžik rovna $$\Delta f=f(b)-f(a)=\int_a^b r(t)\,\mathrm dt.$$
 
