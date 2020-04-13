@@ -538,10 +538,10 @@ K tomu si přidejme, že příspěvky k deformaci, způsobené různými složka
 $$
 \begin{pmatrix}\varepsilon_{11}\\\varepsilon_{22}\\\varepsilon_{33}\\\varepsilon_{23}\\\varepsilon_{13}\\\varepsilon_{12}\end{pmatrix}
     =
-    C
+    S
 \begin{pmatrix}\sigma_{11}\\\sigma_{22}\\\sigma_{33}\\\sigma_{23}\\\sigma_{13}\\\sigma_{12}\end{pmatrix},
 $$
-kde $C$ je čtvercová $6\times 6$ matice.
+kde $S$ je čtvercová $6\times 6$ matice.
 
 <div class='obtekat'>
 
@@ -550,23 +550,23 @@ kde $C$ je čtvercová $6\times 6$ matice.
 </div>
 
 
-Fyzikální úvahy ukazují, že matice $C$ je určitě symetrická a obsahuje celkem ne 36, ale jenom 21 nezávislých
-veličin. Nazývá se *matice tuhosti*. V obecném případě tedy musíme
+Fyzikální úvahy ukazují, že matice $S$ je určitě symetrická a obsahuje celkem ne 36, ale jenom 21 nezávislých
+veličin. Nazývá se *matice poddajnosti*. V obecném případě tedy musíme
 pro popis deformace mít celkem 21 materiálových konstant. Tento počet
 se však výrazně redukuje, pokud je materiál například izotropní nebo
 ortotropní. Například ortotropní materiál jakým je dřevo, můžeme
 umístit do soustavy souřadnic tak, aby byl invariantní vůči symetrii
 podle jednotlivých průměten. Poté je [možné
 odvodit](https://en.wikipedia.org/wiki/Orthotropic_material#Stiffness_and_compliance_matrices_in_orthotropic_elasticity),
-že nejobecnější možný tvar matice $C$ je
-$$ C=
+že nejobecnější možný tvar matice $S$ je
+$$ S=
    \begin{pmatrix}
-  C_{11} & C_{12} & C_{13} & 0 & 0 & 0 \\
-C_{12} & C_{22} & C_{23} & 0 & 0 & 0  \\
-C_{13} & C_{23} & C_{33} & 0 & 0 & 0 \\
-0 & 0 & 0  & C_{44} & 0 & 0 \\
-0 & 0 & 0  & 0 & C_{55} & 0\\
-0 & 0 & 0  & 0 & 0 & C_{66} \end{pmatrix},$$
+  S_{11} & S_{12} & S_{13} & 0 & 0 & 0 \\
+S_{12} & S_{22} & S_{23} & 0 & 0 & 0  \\
+S_{13} & S_{23} & S_{33} & 0 & 0 & 0 \\
+0 & 0 & 0  & S_{44} & 0 & 0 \\
+0 & 0 & 0  & 0 & S_{55} & 0\\
+0 & 0 & 0  & 0 & 0 & S_{66} \end{pmatrix},$$
 tj. tvar, obsahující jenom devět materiálových konstant. Odsud vidíme,
 že v takovém materiálu se smykové napětí projeví jenom na jedné
 komponentě tenzoru deformace, protože poslední tři sloupce, které
@@ -575,20 +575,20 @@ $\sigma_{23}$, $\sigma_{13}$ a $\sigma_{12}$ mají jenom jednu
 nenulovou složku.
 
 Pokud bychom použili k popisu obecnou soustavu souřadnic, nebylo by
-možné se na symetrii odvolávat. Matice $C$ by obsahovala všechny prvky
+možné se na symetrii odvolávat. Matice $S$ by obsahovala všechny prvky
 a bylo by nutné hledat bázi, v níž je její vyjádření nejjednodušší. U
 dřeva je však snadné rozpoznat význačné směry. Když soustavu souřadnic
 zvolíme tak, aby byla v souladu s těmito význačnými směry, docílíme
-tohot, že obdržíme matici $C$ již přímo ve tvaru s co nejvíce nulami.
+tohot, že obdržíme matici $S$ již přímo ve tvaru s co nejvíce nulami.
 
 Někdy je vhodné umět určit napětí pomocí deformací. K tomu stačí
-Hookův zákon vynásobit maticí $C^{-1}$ a obdržíme
+Hookův zákon vynásobit maticí $S^{-1}$ a obdržíme
 $$
 \begin{pmatrix}\sigma_{11}\\\sigma_{22}\\\sigma_{33}\\\sigma_{23}\\\sigma_{13}\\\sigma_{12}\end{pmatrix}=
-C^{-1}
+S^{-1}
 \begin{pmatrix}\varepsilon_{11}\\\varepsilon_{22}\\\varepsilon_{33}\\\varepsilon_{23}\\\varepsilon_{13}\\\varepsilon_{12}\end{pmatrix}.
 $$
-Matice $C^{-1}$ se nazývá *matice poddajnosti* a označuje $S$. 
+Matice $S^{-1}$ se nazývá *matice tuhosti* a označuje $C$. 
 
 Souvislostí vlastních vektorů matice tuhosti a matice poddajnosti
 (nebo obecněji souvislostí vlastních vektorů matice a matice inverzní)

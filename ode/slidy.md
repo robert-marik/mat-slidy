@@ -609,7 +609,7 @@ proto můžeme udělat následující závěr.
 > Věta (stabilita konstantních řešení). Jestliže platí $f(y_0)=0$, je
   konstantní funkce $y(x)=y_0$ konstantním řešením rovnice
   $$\frac{\mathrm dy}{\mathrm dx}=f(y).$$ Toto řešení je stabilní
-  pokud $\frac{\mathrm df}{\mathrm dx}(y_0)<0$ a nestabilní pokud $\frac{\mathrm df}{\mathrm dx}(y_0)>0$.
+  pokud $\frac{\mathrm df}{\mathrm dy}(y_0)<0$ a nestabilní pokud $\frac{\mathrm df}{\mathrm dy}(y_0)>0$.
 
 Pro grafickou intepretaci je vhodné připomenout, že funkce s kladnou
 derivací jsou rostoucí a funkce se zápornou derivací klesající. Pokud
