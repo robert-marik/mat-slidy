@@ -1,6 +1,6 @@
-% Lineární algebra (inverzní matice a determinanty)
+% Inverzní matice, determinanty
 % Robert Mařík
-% 9.4.2019
+% duben 2020
 
 
 
@@ -44,42 +44,14 @@ Inverzní matice k součinu dvou matic je součinem jednotlivých inverzních ma
 
 <div class='obtekat'>
 
-![Klasickým permutačním hlavolamem je Rubikova kostka. Na něm si můžeme vyzkoušet některé vlastnoti maticového součinu jako nekomutativita nebo nutnost změny pořadí při invertování maticového součinu. Zdroj: congerdesign, pixabay.com.](rubik.jpg)
+![Klasickým permutačním hlavolamem je Rubikova kostka. Na něm si můžeme vyzkoušet některé vlastnosti maticového součinu jako nekomutativita nebo nutnost změny pořadí při invertování maticového součinu. Zdroj: congerdesign, pixabay.com.](rubik.jpg)
 
 </div>
 
 \fi
-
 
 **Příklad.** Pomocí matic a jejich součinu je možné zapsat libovolnou permutaci konečněprvkové množiny. Známým permutačním hlavolamem je Rubikova kostka. Na ní snadno vidíme, že pokud kostku zamícháme ze složeného stavu tahem v horní stěně a poté v pravé stěně, pro opětovné složení musíme vracet tahy v opačném pořadí, tj. nejdřív vrátit tah v pravé stěně a poté ve stěně horní. Pěkně to jde vidět na [následující animaci](https://alg.cubing.net/?alg=R_U_%0A%2F%2F_dva_tahy,_ka%C5%BEd%C3%BD_je_mo%C5%BEn%C3%A9_reprezentovat_matic%C3%AD_permutace_%0AU-_R-_%0A%2F%2F_vr%C3%A1cen%C3%AD_tah%C5%AF_v_opa%C4%8Dn%C3%A9m_po%C5%99ad%C3%AD_slo%C5%BE%C3%AD_kostku_zp%C4%9Bt), kterou můžete spustit nebo přehrávat po jednotlivých krocích.
 
-# Využití inverzní matice pro řešení soustavy lineárních rovnic
-
-\iffalse
-
-<div class='obtekat'>
-
-![Inverzní matice umožní zapsat elegantně řešení i neuvěřitelně komplexní a složité soustavy rovnic. Pro praktické počítání se však tato metoda moc nehodí a budeme ji muset ještě o něco vylepšit na iterační metodu. Zdroj: pixabay.com.](matrix.jpg)
-
-</div>
-
-\fi
-
-Z minulé přednášky víme, že pomocí maticového násobení je možné soustavu lineárních rovnic zapsat ve tvaru $$AX=B,$$ kde $A$ je matice soustavy, $X$ je sloupcový vektor neznámých a $B$ je vektor pravých stran. Pokud má matice $A$ inverzní matici, můžeme pomocí této matice soustavu vyřešit. Po vynásobení rovnice inverzní maticí zleva dostáváme
-$$A^{-1}(AX)=A^{-1}B$$
-a po uplatnění asociativního zákona 
-$$(A^{-1}A)X=A^{-1}B.$$
-Protože výraz v závorce je součinem matice s maticí inverzní, je tento
-součin roven jednotkové matici, která je neutrálním prvkem při
-násobení a proto okamžitě dostáváme řešení soustavy ve tvaru 
-$$X=A^{-1}B.$$
-Jako přirozený důsledek vidíme, že řešení je určeno
-jednoznačně. Známe-li inverzní matici, můžeme řešení dokonce vypočítat
-pro libovolnou pravou stranu velmi pohodlně a rychle pomocí maticového
-násobení. Bohužel, výpočet inverzní matice je zpravidla velmi drahý
-(vyžaduje velké množství operací) a numericky málo stabilní. Proto je
-tento postup užitečným teoretickým nástrojem, ale v praxi postupujeme
-poněkud odlišně.
 
 # Inverzní matice k matici popisující rotaci v rovině
 
@@ -106,170 +78,372 @@ $n$ celkem $n$ lineárně nezávislých jednotkových vlastních vektorů,
 potom matice vytvořená tak, že sloupce nebo řádky matice jsou tyto
 vektory, je ortogonální.
 
-# Inverzní matice k diagonální matici
 
-Diagonální matice (tj. matice, které mají nenulové prvky jenom na hlavní
-diagonále) se vzhledem k násobení chovají velice hezky: součinem je
-taková matice, která je diagonální a na hlavní diagonále má prvky
-vytvořené jako součin odpovídajících prvků násobených matic.
 
+# Matice přechodu do pootočené soustavy souřadnic
+
+
+
+
+\iffalse
+
+<div class='obtekat'>
+
+![Matice rotace a maticové násobení umožňuje vyjáření souřadnic v různých vzájemně pootočených souřadných soustavách.](souradnice.png)
+
+</div>
+
+\fi
+
+
+Předpokládejme, že v rovině jsou dány dvě kartézské soustavy souřadnic $\mathcal B$ a $\mathcal B'$, které jsou vzájemně pootočené o úhel $\theta$. V těchto soustavách budou souřadnice $(x,y)^T$ a $(x',y')^T$. Je-li soustava $\mathcal B'$ otočená oproti soustavě $\mathcal B$ o úhel $\theta$ proti směru hodinových ručiček, má (viz obrázek) jednotkový vektor ve směru osy $x'$ v bázi $\mathcal B$ souřadnice $(\cos(\theta),\sin(\theta))^T$ a jednotkový vektor ve směru osy $y'$ má v bázi $\mathcal B$ souřadnice $(-\sin(\theta),\cos(\theta))^T$. Proto je vztah mezi souřadnicemi dán maticovým součinem $$\begin{pmatrix}x\\y\end{pmatrix}_{\mathcal B}=
+\begin{pmatrix}
+  \cos\theta & -\sin \theta\\
+  \sin\theta & \cos\theta
+\end{pmatrix}\begin{pmatrix}x'\\y'\end{pmatrix}_{\mathcal B'}.
 $$
-\begin{pmatrix}
-  2&0&0 \\
-  0&3&0 \\
-  0&0&12  
-\end{pmatrix}
-\begin{pmatrix}
-  5&0&0 \\
-  0&7&0 \\
-  0&0&1  
-\end{pmatrix}
+Matice $$R=\begin{pmatrix}
+  \cos\theta & -\sin \theta\\
+  \sin\theta & \cos\theta
+\end{pmatrix}$$
+je matice, kterou jsme poznali jako matici rotace. Je to matice, která svým působením pootočí vektor který ji násobí zprava o úhel $\theta$ proti směru hodinových ručiček.
+Ve výše uvedením kontextu se tato matice nazývá maticí přechodu mezi oběma uvažovanými souřadnými systémy. Matice přechodu umožňuje najít souřadnice
+vektoru v jedné souřadné soustavě pomocí souřadnic vektoru v souřadné soustavě vzniklé pootočením díky vztahu
+$$\begin{pmatrix}x\\y\end{pmatrix}_{\mathcal B}=
+R\begin{pmatrix}x'\\y'\end{pmatrix}_{\mathcal B'}.
+$$
+Tato matice má inverní matici a proto evidentně můžeme mezi souřadnicemi přecházet i v opačném směru vztahem
+$$R^{-1}\begin{pmatrix}x\\y\end{pmatrix}_{\mathcal B}
 =
-\begin{pmatrix}
-  10&0&0 \\
-  0&21&0 \\
-  0&0&12  
-\end{pmatrix}
+\begin{pmatrix}x'\\y'\end{pmatrix}_{\mathcal B'}.
 $$
 
-Proto je snadné zařídit, aby v hlavní diagonále vyšly jedničky. Stačí
-uvažovat podobně jako v následujícím příkladě.
+
+V inženýrských problémech je častou aplikací lineární algebry
+transformace úlohy do vhodných souřadnic, ve kterých je popis
+jednodušší. Zpravidla se jedná o prosté otočení. Toto se používá při
+studiu dřeva, které má anatomicky význačné směry, při studiu
+vrstvených materiálů, při studiu chování vodorovně uložených
+geologických vrstev. Nemusí však vždy jít jenom o materiál s
+charakteristickými směry. Transformace mezi souřadnicemi se používá
+například v letectví, kdy je jedna souřadná soustava spojena s trupem
+a další dvě jsou pootočené ve směru křídel šípovitě připojených k
+trupu.
+
+ 
+Matici transformace popisující otočení souřadnic budeme zkráceně označovat $R$, pokud budeme potřebovat zdůraznit velikost úhlu, použijeme $R(\theta)$ a pokud budeme potřebovat matici rozepsat ve složkách, budeme zkracovat výrazy $\cos\theta$ a $\sin\theta$ na $C$ a $S$ a psát
+$$R=
+\begin{pmatrix}
+  C & -S \\ S & C
+\end{pmatrix}.
 $$
+Potom například platí
+$$R^{-1}=
 \begin{pmatrix}
-  2&0&0 \\
-  0&3&0 \\
-  0&0&12  
-\end{pmatrix}
-\begin{pmatrix}
-  \frac 12&0&0 \\
-  0&\frac 13&0 \\
-  0&0&\frac1{12}  
-\end{pmatrix}
-=
-\begin{pmatrix}
-  1&0&0 \\
-  0&1&0 \\
-  0&0&1  
-\end{pmatrix}
-$$
-a tedy
-$$
-\begin{pmatrix}
-  2&0&0 \\
-  0&3&0 \\
-  0&0&12  
-\end{pmatrix}^{-1}
-=
-\begin{pmatrix}
-  \frac 12&0&0 \\
-  0&\frac 13&0 \\
-  0&0&\frac1{12}  
+  C & S \\ -S & C
 \end{pmatrix}.
 $$
 
+# Zobrazení v různých soustavách souřadnic
 
-# Iterační metoda řešení soustav lineárních rovnic
+Ukážeme si důležité využití matice přechodu. Předpokládejme, že máme
+zobrazení $f\colon X\to Y$, které je možno charakterizovat maticemi.  Na
+vstupu i výstupu je tedy vektor.
+Může se jednat třeba o zobrazení, které působícím silám přiřadí
+deformaci tělesa, což uvidíme v Hookově zákoně později. Může
+se jednat také o zobrazení, které vektoru charakterizujícímu změnu tlaku v
+podzemní vodě nebo změnu koncentrace vody ve dřevě přiřadí směr proudění. (Směr podnětu a výsledného proudění si nemusí odpovídat,
+protože voda je poháněna rozdílem tlaků ve směru největšího poklesu
+tlaku nebo rozdílem koncentrací se směru největšího poklesu koncentrace, ale současně si v anizotropním prostředí hledá cestu nejmenšího
+odporu).
 
-Na předchozím slidu jsme viděli, že je jednoduché najít inverzní
-matici k matici diagonální. Toho využijeme pro řešení soustavy
-lineárních rovnic iterační metodou. Představíme si nejednodušší, přesto však velmi mocnou metodu, **Jacobiho metodu**.
+Nechť je naše zobrazení vyjádřeno v nějaké souřadné soustavě $\mathcal
+B$ maticí $A$, tj. $$Y=AX,$$ kde $X$ a $Y$ jsou souřadnice vzoru a
+obrazu v souřadné soustavě $\mathcal B$. Budeme chtít toto zobrazení
+vyjádřit v jiné soustavě. Například v soustavě $\mathcal B'$ takové,
+že platí $X=PX'$ a $Y=PY'$, kde čárkovaná písmena jsou souřadnice v
+čárkované souřadné soustavě $\mathcal B'$. Dosazením získáme $$PY'=APX'$$ a po
+vynásobení inverzní maticí $$P^{-1}(PY')=P^{-1}(APX'),$$ tj
+$$Y'=(P^{-1}AP)X'.$$ V pootočených souřadnicích $\mathcal B'$ je tedy zobrazení charakterizováno
+maticí $P^{-1}AP$. Pro vhodně zvolenou matici $P$ může být matice v
+nové bázi podstatně jednodušší než matice v bázi původní.
 
-V minulé přednášce jsme modelovali rozložení teploty ve dvourozměrné
-desce pomocí soustavy rovnic
+
+<!-- 
+V následujícím příkladě si ukážeme, že vhodně zvolenou maticí $P$
+můžeme dosáhnout toho, že $P^{-1}AP$ je diagonální matice. Na dalším
+slidu již rovnou zvolíme vhodnou bázi a matice, která bude sice
+impozantních rozměrů $6\times 6$, bude plná nul a proto relativně pěkná. 
+
+**Příklad.**
+Pro matice $A=
+\begin{pmatrix}
+  1 & 0 \\ 1 &2
+\end{pmatrix}$
+a $P=
+\begin{pmatrix}
+  0& -1 \\ 1 &1
+\end{pmatrix}$
+platí (po chvilce počítání)
+$$  P^{-1}AP=
+\begin{pmatrix}
+  2& 0 \\ 0 & 1
+\end{pmatrix}.
 $$
+Odsud vidíme, že v souřadnicích ke kterým bychom přešli pomocí matice
+$P$ je vyjádření zobrazení matice $A$ mnohem jednodušší, protože matice
+$P^{-1}AP$ je diagonální.
+
+-->
+
+
+
+Častým úkolem je zapsat vztahy mezi veličinami tak, aby byly co
+nejjednodušší a proto jeden z častých úkolů v lineární algebře bývá
+takovou šikovnou bázi nalézt. Nastíníme neoptimističtější variantu
+postupu, případné detaily a řešení zádrhelů je možné najít v odborné
+literatuře. Zpravidla vyjadřujeme zobrazení v bázi tvořené
+ortonormálními vlastními vektory matice $A$. Sloupce matice $P$ jsou
+vlastní vektory matice $A$. Pokud je matice $A$ symetrická, je matice
+$P$ navíc ortogonální, její inverze je tedy matice
+transponovaná. Tomuto procesu se říká diagonalizace matice, protože
+$P^{-1}AP$ vychází diagonální a v diagonále vychází právě vlastní
+čísla matice.
+
+Stejným způsobem se transformují i tenzory.
+
+\iffalse
+
+[Ukázka](https://sagecell.sagemath.org/?z=eJytkU1v2zAMhu8G_B8INEWkRM3ioOlNB5-GHQb4sJuRFYqtzmoV0ZNlr_Gw_z469ryP9lJgBkzT4ks9fMFUnlTw5pnl-V7sDiLfUTxwuAI6N4WOo-y3InnXfPWB7bm42f1Kh5b5eBbQFZvglWtqbDTjMN8HtddFhWULJUJjnrBzGo6q1xBHVxAUHWA7FSihioFGg1NtYU4aKqtLFaDGvtSPJo7iqKnwG7AqnCzzy0Uqr5uFgEU2fJfXzKqgn1nKxZhknB6apVelcqbr0Z8ly7diSy6SKSYUt5u9SDZ3Qzb-U43_y8o-f79JfqQTagSwbGNcp_1gmq_SVTbyJu8dOOwudi-jv5n_P1YRR3j0qj_LPFt1ugjomeHwgB4MGAeXmQ5x9OHje1mjcYGNcgEFWvRy6XW5FLSgXsvbLV_XaM9f0L2uUraulCQzfG2N06-J-Iiidz3iLgPMgFl7tK3-WzxyJ_mDsVZ-8q3-A_qid1gfo2bSNDVZv_e0FpQJ_wkl8e8J&lang=sage&interacts=eJyLjgUAARUAuQ==)
+
+\fi
+
+# Praktická aplikace: transformace tenzoru
+
+<div class='obtekat'>
+
+![Úloha na transformaci tenzoru napětí do anatomických směrů dřeva. Znázorněná krychlička je jenom reprezentující element většího tělesa. Zdroj: A. Požgaj a kol., Štruktúra a vlastnosti drevá. ](pozgaj.jpg)
+
+![Stejná úloha jako výše (leta ve dřevě jdou pod úhlem 30 stupňů a transformujeme do tohoto směru) méně inženýrským přístupem.](kytara_leta.png)
+
+![U šikmého lepeného spoje se používá transformace do roviny spoje k posouzení únosnosti tohoto spoje. Lepidlo má definovanou pevnost spoje při normálovém a smykovém namáhání a transformace nám prozradí, jak se předpokládané namáhání projeví v těchto směrech a zda lepidlo spoj udrží.](spoj_drevo_sikmy.jpg)
+
+</div>
+
+V knize A. Požgaj a kol., Štruktúra a vlastnosti drevá, je následující
+úloha. Dřevo v konfiguraci podle obrázku je namáháno pouze tahovou
+silou svisle, tedy tenzor napětí má jenom jednu nenulovou
+složku. Naším cílem je pootočit souřadnou soustavu tak, aby byl tenzor
+napětí vyjádřen v anatomických směrech dřeva. Úloha je v knize vyřešena pomocí směrových kosinů. Ukážeme si alternativní způsob, který je výhodný v tom, že využívá pouze základní aparát lineární algebry. Původní souřadnice
+$(x_1,x_2)$ označíme $(x,y)$, osa $x$ směřuje vodorovně vpravo (v obrázku $x_2$) a osa $y$ nahoru (v obrázku $x_1$). Tenzor napětí je $A=
 \begin{pmatrix}
- \phantom{-}4&-1& \phantom{-}0&-1\\
- -1& \phantom{-}4&-1& \phantom{-}0\\
- \phantom{-}0 &-1& \phantom{-}4&-1\\
- -1& \phantom{-}0&-1& \phantom{-}4
-\end{pmatrix}
+  0 & 0\\0& 10
+\end{pmatrix}$ (tah pouze ve směru osy $y$). Souřadnice je nutno pootočit o $30$ stupňů po směru hodinových ručiček, tj. v záporném směru. [Nový tenzor napětí](https://sagecell.sagemath.org/?z=eJx9ULtuwzAM3A34HwhkiCzIrVwXQRcPSZYODVB4NTIorhArsSVDD6PJH_U7-mOVH6mRoQUX8ng83HEBb0JypqUAVh_5QTMCrVJWldxDClIKxrpWOo-Cabh28JqHQcc0WtqKW7aMwiDPGma1-ERFUSqDBjwisRFy6vekmAcyc_Z7f72brymhnkpJQoeNq3idxSl9TF4obkUYtFpIC0gilD8Yd5hksrgnRhHe4Xt8hCOv1NcC3tX1yE59wEaVYoijuktZwVl5e47ASUh2hmunai6_v0CZSxho9pG1orcQBuv7oGlKsV-PiVZj7_3309PzvIJf4pBq84_I7WxSWf0psp1FktvXxqdJtMZbvIl-AGVpkmc=&lang=sage&interacts=eJyLjgUAARUAuQ==) je $$R(30^\circ)AR(-30^\circ)=
 \begin{pmatrix}
-  x_1\\x_2\\x_3\\x_4
+   2.5 & -4.3\\
+-4.3&  7.5
+\end{pmatrix}.$$ V nových souřadnicích je směr $y'$ podélný a proto $\sigma_{RR}=2.5$
+a $\sigma_{LL}=7.5$. Mimodiagonální složka udává komponentu $\sigma_{RL}=-4.3$, smykové napětí. Tento výsledek je stejný, jako výsledek získaný jiným postupem v knize, pomocí směrových kosinů. Použili jsme však jenom základní nástroje lineární algebry.
+
+Výše uvedený výpočet se používá, když chceme najít deformaci vyvolanou působícím napětím. Protože konstanty udávající materiálovou odezvu máme změřeny v anatomických směrech dřeva, je nutno nejprve zjistit, jaké namáhání je v těchto směrech, pomocí materiálových konstant zjistíme, jaká je deformace v těchto směrech a poté zpětnou transformací přepočítáme tuto deformaci do původních souřadnic.
+
+Stejný výpočet používáme, pokud se snažíme transformovat působící napětí při posouzení, jaké smykové a jaké normálové napětí působí na šikmý lepený spoj. Pokud je spoj pod úhlem $30$ stupňů a v ose $y$ působí tahové napětí $10\,\mathrm{MPa}$, potom  normálové napětí namáhající tento spoj je $7.5\,\mathrm{MPa}$ a smykové napětí $4.3\,\mathrm{MPa}$.
+
+# Obecné vzorce pro transformaci tenzoru
+
+\iffalse
+
+<div class='obtekat'>
+
+![Schopnost transformovat tenzory napětí nebo deformace  je důležitá u studia vrstvených materiálů. Ty umožní anizotropii potlačit (překližka) nebo zvýraznit (lyže, luk). Někdy vrstvíme jen tak, pro krásu. Na obrázku Jatawood, pro výrobu rukojetí nožů. Zdroj: jatagan.eu](jatawood.jpg)
+
+</div>
+
+\fi
+
+Úloha na transformaci tenzoru, kterou jsme řešili na minulém slidu je
+v aplikacích velmi důležitá. Proto existuje řada grafických nebo
+inženýrských metod na řešení tohoto úkolu. Tyto metody jsou důvtipné a názorné, například metoda Mohrovy kružnice, oproti lineární algebře však mají zásadní nevýhodu: uživatel se musí stále učit něco nového a dostává návod "jak", nikoliv "proč". Použitím aparátu lineární algebry, stejně jako dokážeme v pootočených souřadnicích vyjádřit libovolné zobrazení, dokážeme vyjádřit v pootočených souřadnicích i libovolný tenzor. Vzorce jsou stejné a navíc při otočení v rovině je matice rotace ortogonální, tj. inverzní matice je maticí transponovanou. Pro symetrický tenzor $A=
+\begin{pmatrix}
+  a_{11} & a_{12} \\ a_{12} & a_{22}
+\end{pmatrix}$
+dostáváme v souřadnicích otočených o úhel $\theta$ proti směru hodinových ručiček
+$$\begin{pmatrix}
+  a'_{11} & a'_{12} \\ a'_{12} & a'_{22}
 \end{pmatrix}
 =
 \begin{pmatrix}
-  30\\60\\70\\40
+  C&S\\-S&C
+\end{pmatrix}
+\begin{pmatrix}
+  a_{11} & a_{12} \\ a_{12} & a_{22}
+\end{pmatrix}
+\begin{pmatrix}
+  C&-S\\S&C
+\end{pmatrix},
+$$
+kde [po výpočtu](https://sagecell.sagemath.org/?z=eJyFUMtugzAQvFvyP1hcYpCNCsdKHCKOkXLAvRFaORGolsBGxkElX981aaDpQ7G8fsx4Z8c7Sks37r12ksgkgUiJTFNy9EBOxCbECKMi66Sz6oOWZc64qFgpWF5VwG1XBtKZzwcWVgYq8wuMequ0I8GLlXpojO3MKPVEXK0vxj4fNP9zBBjtM0qL2Pm03gw1DcNoGxVhPKiub1UzvTXntqXhrcB-qXTQO9P1RtfaTT8KBMvr8qmCuV6TCuYd669fAEgu9uVJKwK_Vqf6X_c8IDAwmpO-Ne81ZQIijUSU-y7C2WP8BnDYmA9AObDQwavQ1dYst1raGe2saSVReqztRZvBPXZ25w8jOmvGw_k4UJFxEUYz8KvLn3iLnc0=&lang=sage&interacts=eJyLjgUAARUAuQ==)
+$$
+\begin{aligned}
+a'_{11}&=C^2a_{11}  + S^2a_{22} + 2CSa_{12},\\
+a'_{22}&=S^2a_{11}  + C^2a_{22} - 2CSa_{12},\\
+a'_{12}&=-CSa_{11} + CSa_{22} + (C^2 - S^2)a_{12}.
+\end{aligned}\tag{*}
+$$
+Tento vztah je lineání vzhledem ke všem komponentám a je možné jej zapsat pomocí maticového násobení
+$$
+\begin{pmatrix}
+  a'_{11}\\a'_{22}\\a'_{12}
+\end{pmatrix}
+=
+\begin{pmatrix}
+  C^2 & S^2 & 2CS\\
+  S^2 & C^2 & -2CS\\
+  -CS  & CS & C^2-S^2
+\end{pmatrix}
+\begin{pmatrix}
+  a_{11}\\a_{22}\\a_{12}
 \end{pmatrix}.
 $$
-Pro
-$$A=\begin{pmatrix}
- \phantom{-}4&-1& \phantom{-}0&-1\\
- -1& \phantom{-}4&-1& \phantom{-}0\\
- \phantom{-}0 &-1& \phantom{-}4&-1\\
- -1& \phantom{-}0&-1& \phantom{-}4
-\end{pmatrix}, \quad
-X=\begin{pmatrix}
-  x_1\\x_2\\x_3\\x_4
-\end{pmatrix}
-,\quad
-B=\begin{pmatrix}
-  30\\60\\70\\40
-\end{pmatrix}
+Tento vztah je uveden i v literatuře A. Požgaj a kol., Štruktúra a vlastnosti
+drevá, a v e-opoře [Fyzikální a mechanické vlastnosti
+dřeva](https://is.mendelu.cz/eknihovna/opory/zobraz_cast.pl?cast=9178). Zde
+je také uvedena jedna z aplikací, transformace tenzoru deformací
+naměřených při bobtnání dřeva. V této úloze je nutno tenzor deformací transformovat do anatomických směrů dřeva. To je
+možné udělat po změření sklonu vláken a pootočení tenzoru o příslušný
+úhel.
+
+<!-- Získáme diagonální tenzor, který má v diagonále deformace v
+anatomických osách dřeva. Jednodušší alternativou je určení vlastních hodnot
+tenzoru deformace pomocí charakteristického polynomu, což je v tomto
+případě polynom kvadratický. Která vlastní hodnota patří ke kterému
+směru určíme ze znalosti uspořádání koeficientů bobtnání dřeva v
+jednotlivých směrech podle velikosti. Při použití vlastních hodnot je
+výhodou, že používáme standardní nástroje lineární algebry a metoda je
+použitelná bez znalosti úhlu, který svírají vlákna dřeva s osami
+soustavy, ve které určujeme tenzor deformace. -->
+
+Inverzní operací je pootočení o úhel $-\theta$ a proto je snadné najít inverzní transformaci: vzhledem k sudosti funkce $\cos$ a lichosti funkce $\sin$ stačí změnit znaménko u členů s $S$, tj. 
 $$
-tedy $$AX=B.\tag{1}$$
-
-Rozdělíme matici $A$ na součet diagonální matice a matice s nulami v hlavní diagonále, tj. na součet matic
-$$D=
 \begin{pmatrix}
- 4&0&0&0\\
- 0& 4&0&0\\
-0 &0& 4&0\\
- 0&0&0& 4
+  a_{11}\\a_{22}\\a_{12}
 \end{pmatrix}
-\quad \text{a}\quad
-T=
+=
 \begin{pmatrix}
- \phantom{-}0&-1& \phantom{-}0&-1\\
- -1& \phantom{-}0&-1& \phantom{-}0\\
- \phantom{-}0 &-1& \phantom{-}0&-1\\
- -1& \phantom{-}0&-1& \phantom{-}0
+  C^2 & S^2 & -2CS\\
+  S^2 & C^2 & 2CS\\
+  CS  & -CS & C^2-S^2
 \end{pmatrix}
+\begin{pmatrix}
+  a'_{11}\\a'_{22}\\a'_{12}
+\end{pmatrix}.
 $$
-Potom můžeme psát rovnici ve tvaru
-$$(D+T)X=B$$
-a odsud
-$$\begin{aligned}DX+TX&=B\\
-DX&=B-TX
-\end{aligned}$$
-a využitím inverzní matice
-$$X=D^{-1}(B-TX).\tag{2}$$
-Definujme nyní iterační vzorec
-$$X_{k+1}=D^{-1}(B-TX_k).\tag{3}$$
-Podobně jako u Markovových řetězců můžeme najít postupnými iteracemi z
-vhodného (nebo libovolného) počátečního stavu stacionární stav, kdy se
-$X_k$ dalšími iteracemi nemění a tím dostaneme řešení rovnice (2),
-která je ekvivalentní rovnici (1). Protože inverzní matici počítáme
-pro matici diagonální, je tento výpočet velice rychlý a levný. Vlastně
-není vůbec nutné mít k dispozici maticový počet. Iterace dostaneme
-tak, že z první rovnice osamostatníme $x_1$, z druhé rovnice $x_2$
-atd. Výchozí odhad dosadíme do pravých stran a obdržíme zpřesněný
-odhad. Postup opakujeme, dokud nejsou dvě následující iterae
-dostatečně blízké.
 
-**Poznámka.** Předchozí postup je možné použít jenom v případě, že
-iterační proces (3) konverguje. Pokud by nekonvergoval, není možné o
-řešení rovnice nic říct, pouze to, že Jacobiho metoda
-nefunguje. Postačující podmínka, kdy Jacobiho metoda konverguje, je
-aby každý řádek měl v hlavní diagonále číslo, které je v absolutní
-hodnotě větší než je součet absolutních hodnot zbylých čísel v tomto
-řádku. Matice, která splňuje tuto podmínku se nazývá *řádkově ostře
-diagonálně dominantní matice* a pro takovou matici Jacobiho metoda
-konverguje. Podobně je možné uvažovat *sloupcově ostře diagonálně
-dominantní matice* porovnáním absolutních hodnot diagonálních prvků se
-součty absolutních hodnot ostatních prvků v daných sloupcích a i pro
-sloupcově ostře diagonální matice metoda konverguje. I přes
-jednoduchost tohoto kriteria se s diagonálně dominantními maticemi
-setkáváme v aplikacích poměrně často. Podíváme-li se, jak byla
-odvozena soustava popisující rozložení teploty na tepelně vodivé
-desce (poslední slajd minulé přednášky), není to až takové překvapení.
+**Poznámka.** Pokud vypočteme derivaci členů $a'_{11}$ a $a'_{22}$ podle $\theta$, dostaneme použitím
+$$\frac{\mathrm d}{\mathrm d\theta}C^2=\frac{\mathrm d}{\mathrm d\theta}\cos^2\theta=2\cos\theta(-\sin\theta)=-2CS,$$
+a analogicky
+$\frac{\mathrm d}{\mathrm d\theta}S^2=2SC$, $\frac{\mathrm d}{\mathrm d\theta}CS=-S^2+C^2$ derivace 
+$$
+\begin{aligned}
+  \frac{\mathrm d a'_{11}}{\mathrm d\theta}&=
+  -2CSa_{11}+2SCa_{22}+2(C^2-S^2)a_{12}=2a'_{12},\\
+  \frac{\mathrm d a'_{22}}{\mathrm d\theta}&=
+  2SCa_{11}-2CSa_{22}+2(S^2-C^2)a_{12}=-2a'_{12}.\\
+\end{aligned}
+$$
+To znamená, že lokální extrémy diagonálních prvků nastávají v
+okamžiku, kdy jsou prvky mimo diagonálu nulové. Toto pozorování
+perfektně ladí s výsledky, které známe v lineární algebře i bez hledání
+lokálních extrémů a bez derivací. Náznak tohoto konceptu si představíme na dalších
+stránkách. Budeme potřebovat vlastní
+vektory matice.
 
-[Online výpočet.](https://sagecell.sagemath.org/?z=eJxtjzFrwzAQhXeD_8ORLrKRXYUqDQQ02Hjq1CGDwTVBRGpyQ05GFqH995Vj11CoEOLe3Xv6pErddPD4xbpO8mLLRTx63sVqlrGeWg8192fZ91ma1Gv4RfBXwfeCS9FnZfCaxsGNlkVTmjRK5mgsBQzfpyUh46RBuqvt8__Do6qKJk3aFbET_Hf_RcATDO6sgz0TgjNXbcDb0RJO7E_nAQEJov9i2S47pAnE1SpiEz9ndXHM2ywSB48UYPPmvNHk7hpuNjijD_BBG96WxAxeMIxKPj61uN8jiuwCnK3EqjLebP30uLzmsOZ-AAxjagI=&lang=sage&interacts=eJyLjgUAARUAuQ==)
+**Pozor.** V případě tenzoru deformace se někdy se namísto
+mimodiagonální komponenty bere její dvojnásobek, protože ten má
+názorný význam jako úhel smyku. Proto se někdy v literatuře uvádí
+transformační vzorec pro deformace v upraveném tvaru, kdy u složek se
+součinem $CS$ ve třetím sloupci není koeficient $2$ a u odpovídajících
+složek ve třetím řádku tento koeficient naopak figuruje. Je proto
+potřeba dávat pozor na to, s jakými komponentami je tenzor malých
+deformací uvažován.
 
-Podobnými iteračními metodami je možné efektivně řešit soustavy o
-tisících rovnic a neznámých. Výpočty probíhají rychle a nejsou náročné
-na paměť jako u přímých metod, známých například ze střední
-školy. Tímto způsobem se řeší soustavy rovnic při modelování namáhání
-konstrukcí, vedení tepla, proudění vody apod.
+
+# Role vlastních vektorů při transformaci matic
+
+<div class='obtekat'>
+
+![Eigenvectors (red) do not change direction when a linear transformation (e.g. scaling) is applied to them. Other vectors (yellow) do. Zdroj: http://www.visiondummy.com. ](eigenvectors.png)
+
+</div>
+
+
+Budeme zkoumat, kdy platí $$P^{-1}AP=D$$ pro čtvercové matice $P$, $A$
+a diagonální čtvercovou matici $D$. Vynásobením maticí $P$ zleva
+dostaneme
+$$AP=PD.$$
+Ve cvičení jsme násobili čtvercovou matici s maticí diagonální a není
+těžké vidět obecný princip, že matice $PD$ má za sloupce násobky
+sloupců matice $P$ s odpovídajícím číslem z hlavní diagonály matice
+$D$. Například pro první sloupec matice $P$ a první číslo v hlavní
+diagonále matice $D$, které označíme $\vec p_1$ a $\lambda_1$, dostáváme
+$$A\vec p_1=\lambda_1p_1,$$
+tj. (viz předchozí přednášky) $p_1$ je vlastní vektor matice $A$
+příslušný vlastní hodnotě $\lambda_1$. Podobný princip platí pro
+všechny sloupce. Je otázkou, jestli vlastních hodnot a vlastních
+vektorů je tolik, kolik pro diagonalizaci "potřebujeme". Částečně
+pozitivní odpověď na tuto otázku udávají věty na následujícím slidu.
+
+# Transformace symetrické matice na diagonální tvar
+
+> Věta (vlastní čísla symetrické matice).
+> Symetrická čtvercová matice $A$  řádu $n$ má $n$ reálných vlastních čísel (počítáno i s případnou násobností).
+
+> Věta (diagonalizace symetrické matice).
+> Nechť má symetrická čtvercová matice $A$ řádu $n$ celkem $n$ reálných různých vlastních čísel $\lambda_i$. Označme odpovídající vlastní vektory jednotkové délky $\vec v_i$.
+>
+>* Matice $P$ sestavená tak, že sloupce této matice jsou tvořeny vektory $\vec v_i$ je ortogonální.
+>* Matice $D$ definovaná vztahem $$D=P^TAP$$ je diagonální.
+>* Diagonální prvky matice $D$ jsou právě vlastní čísla $\lambda_i$ a jsou ve stejném pořadí jako odpovídající vlastní vektory v matici $P$.
+
+\iffalse 
+
+<div class='obtekat'>
+
+![Pokud je tenzor spojený s materiálovou chrakteristikou v diagonálním tvaru, redukuje se složitost problému. Podobná redukce složitosti je i při jiných příležitostech, například při skládání Rubikovy kostky pomocí metody [Human Thistlethwaite Algorithm](https://www.speedsolving.com/wiki/index.php/Human_Thistlethwaite_Algorithm). V této metodě se úloha nejprve redukuje na jednodušší úlohu, kdy každá barva je buď ve svojí straně nebo protilehlé. Tak je možné složit kostku buď bez nepříjemného učení se umělých algoritmů (člověk), nebo do 20 tahů (stroj a nejlepší lidé).](rubik.svg)
+
+</div>
+
+\fi
+
+Matice transformace $P$ z předchozí věty je ortogonální (její
+transponovaná matice je současně její inverzní matice) a její
+determinant je roven $1$ nebo $-1$. Pokud je determinant kladný,
+reprezentuje matice pootočení soustavy souřadnic. Pokud je determinant
+záporný, jedná se o pootočení spojené se zrcadlením jedné osy. Protože
+tento případ většinou z fyzikálních důvodů nepreferujeme, sestavujeme
+matici transformace tak, aby měla determinant kladný. V případě
+záporného determinantu stačí prohodit dva vektory (sloupce matice
+transformace) mezi sebou, nebo jeden vynásobit faktorem $-1$.
+
+Pro kontrolu je zajímavé vědět, že determinant matice se pootočením
+nemění a je tedy stejný pro původní i transformovanou matici. Totéž
+platí pro součet prvků v hlavní diagonále (v lineární algebře se
+nazývá stopa matice), pro charakteristický polynom a pro vlastní
+hodnoty. Tenzor, jak jej uvažujeme v tomto textu, je matice, která má
+navíc fyzikální význam a vzhledem ke své povaze pro ni platí speciální
+transformační pravidla. Nicméně je to mimo jiné i matice a proto vše
+výše uvedené platí i pro tenzory.
+
+
+Transformace tenzorů je užitečná a důležitá činnosti. Bohužel však vzorce s touto transformací spojené nejsou natolik zapamatovatelné, aby bylo obvyklé s nimi pracovat. Možnosti jsou v zásadě tři.
+
+* Mít vzorce v psané podobě po ruce a pouze do nich dosazovat.
+* Mít k dispozici jednoduše zapamatovatelný postup, jak s transformacemi pracovat. Takový postup existuje, nazývá se [Mohrova kružnice](https://cs.wikipedia.org/wiki/Mohrova_kru%C5%BEnice) a po zapracování se jedná o efektivní grafickou metodu pro transforamci tenzorů. Zpravidla je v literatuře popsána pro tenzor napětí, funguje však obecně.
+* Pracovat pouze s elementárními prostředky lineární algebry. Narozdíl od předchozích bodů máme přehled o tom, co a proč děláme (oproti vzorcům) a nemusíme se učit další metodu (oproti Mohrově kružnici).
+
+
+
+
 
 # Determinant matice
 
@@ -388,120 +562,74 @@ Odsud
 $$\begin{aligned}A\vec q-\lambda \vec q&=0\\ A\vec q-(\lambda I )\vec q &=0\\ (A-\lambda I )\vec q &=0\end{aligned}.$$ 
 Pokud chápeme poslední rovnost jako soustavu rovnic s koeficienty
 $(A-\lambda I)$, nulovou pravou stranou a nenulovým řešením $\vec q$
-(tj. bod 6 předchozí věty neplatí), musí být determinant matice
-$A-\lambda I$ nulový (tj. bod 4 předchozí věty neplatí). Tím je
+(tj. bod 4 předchozí věty neplatí), musí být determinant matice
+$A-\lambda I$ nulový (tj. bod 2 předchozí věty neplatí). Tím je
 motivována následující definice a dokázána následující věta.
 
 > Definice (charakteristická rovnice, charakteristický polynom). Rovnice
 > $$\det (A-\lambda I)=0$$ s neznámou $\lambda$ se nazývá
 > *charakteristická rovnice* matice $A$. Výraz na levé straně této rovnice je polynom proměnné $\lambda$ a nazývá se *charakteristický polynom* matice $A$.
 
-> Důsledek (vlastní čísla). Vlastní čísla matice $A$ jsou právě řešení charakteristické rovnice.
+> Důsledek (vlastní čísla). Vlastní čísla matice $A$ jsou právě řešení charakteristické rovnice. Vlastní vektor $\vec u$ příslušný vlastnímu číslu $\lambda$ je nenulové řešení homogenní soustavy rovnic $$(A-\lambda I)\vec u=0.$$
 
 
+<!--
 
-# Změna báze a matice přechodu
+# Transformace matice na diagonální tvar
 
+Ukážeme si postup na jednoduchém příkladě. Pro srovnání je možno postup založený na dosazování do vzorců  shlédnout na [https://www.youtube.com/watch?v=xdxVpC856ms](https://www.youtube.com/watch?v=xdxVpC856ms). V průběhu počítání vyřešíme soustavu dvou rovnic o dvou neznámých. To je úloha známá ze střední školy. Jak opostupovat v komplikovanějších případech, kdy je rovnic více, si ukážeme v další přednášce. V té se budeme zabívat libovolně velkými soustavami rovnic.
 
-Předpokládejme, že obě dvojice $\mathcal E=[\vec e_1,\vec e_2]$ a $\mathcal F=[\vec f_1,\vec f_2]$ jsou báze dvourozměrného vektorového prostoru. Tedy každý vektor můžeme zapsat jako jejich lineární kombinaci a to jednoznačně.
-Pokud platí
-$$X=a_1 \vec e_1 + a_2 \vec e_2 =  b_1 \vec f_1 + b_2 \vec f_2 ,$$
-jsou 
-$[X]_{\mathcal  E}=\begin{bmatrix}   a_1\\a_2 \end{bmatrix}$
-souřadnice v bázi $\mathcal E$ a
-$[X]_{\mathcal F}=\begin{bmatrix}   b_1\\b_2 \end{bmatrix}$
-souřadnice v bázi $\mathcal F$. Pro dvojici bází existuje matice  $P$  typu $2\times 2$ taková, že
-$$\begin{bmatrix}   a_1\\a_2 \end{bmatrix}
-=
-P
-\begin{bmatrix}   b_1\\b_2 \end{bmatrix}
-$$
-Tato matice se nazývá matice přechodu a umožňuje najít souřadnice
-vektoru v jedné bázi pomocí souřadnic vektoru v jiné bázi. Matice přechodu musí být regulární a proto evidentně můžeme mezi bázemi přecházet i v opačném směru směru pomocí inverzní matice
-$$P^{-1}\begin{bmatrix}   a_1\\a_2 \end{bmatrix}
-=
-\begin{bmatrix}   b_1\\b_2 \end{bmatrix}.
-$$
-
-
-\iffalse
-
-<div class='obtekat'>
-
-![Matice přechodu je vlastně vyjádření téhož jiným jazykem. Používáme tam, kde můžeme "přeložit" do jazyka jednoduššího. Zdroj: pixabay.com.](cina.jpg)
-
-</div>
-
-\fi
-
-
-
-Ukážeme si důležité využití matice přechodu. Předpokládejme, že máme
-zobrazení $f\colon X\to Y$, které je možno charakterizovat maticemi.  Na
-vstupu i výstupu jsou tedy vektory a jejich směry si obecně nemusí
-odpovídat.
-Může se jednat třeba o zobrazení, které působícím silám přiřadí
-deformaci tělesa, což uvidíme v Hookově zákoně na dalším slidu. Může
-se jednat také o zobrazení, které vektoru charakterizujícímu změnu tlaku v
-podzemní vodě přiřadí směr proudění. (Oba směry si nemusí odpovídat,
-protože voda je poháněna rozdílem tlaků ve směru největšího poklesu
-tlaku, ale současně si v anizotropním prostředí hledá cestu nejmenšího
-odporu).
-
-Nechť je naše zobrazení vyjádřeno v nějaké bázi $\mathcal B$ maticí $A$,
-tj. $$Y=AX,$$ kde $X$ a $Y$ jsou souřadnice vzoru a obrazu v dané bázi. Budeme chtít
-zobrazení vyjádřit v jiné bázi. Například v bázi $\mathcal b$ takové, že platí
-$X=Px$ a $Y=Py$, kde malá písmena jsou souřadnice v "malé" bázi
-$b$. Dosazením získáme
-$$Py=APx$$
-a po vynásobení inverzní maticí
-$$P^{-1}(Py)=P^{-1}(APx),$$
-tj
-$$y=(P^{-1}AP)x.$$ V bázi $b$ je tedy zobrazení charakterizováno maticí
-$P^{-1}AP$. Pro vhodně zvolenou matici $P$ může být matice v nové bázi
-podstatně jednodušší než matice v bázi původní.
-
-V následujícím příkladě si ukážeme, že vhodně zvolenou maticí $P$
-můžeme dosáhnout toho, že $P^{-1}AP$ je diagonální matice. Na dalším
-slidu již rovnou zvolíme vhodnou bázi a matice, která bude sice
-impozantních rozměrů $6\times 6$, bude plná nul a proto relativně pěkná. 
 
 **Příklad.**
-Pro matice $A=
+Odvodíme diagonální tvar tenzoru napětí
+$$A=
 \begin{pmatrix}
-  1 & 0 \\ 1 &2
-\end{pmatrix}$
-a $P=
-\begin{pmatrix}
-  0& -1 \\ 1 &1
-\end{pmatrix}$
-platí (po chvilce počítání)
-$$  P^{-1}AP=
-\begin{pmatrix}
-  2& 0 \\ 0 & 1
+  20 & 30 \\ 30 & -10
 \end{pmatrix}.
 $$
-Odsud vidíme, že v souřadnicích ke kterým bychom přešli pomocí matice
-$P$ je vyjádření zobrazení matice $A$ mnohem jednodušší, protože matice
-$P^{-1}AP$ je diagonální.
+Tím najdeme maximální hodnotu normálového napětí a směr, ve kterém působí.
+Charakteristický polynom této matice je
+\dm$$\det(A-\lambda I)= \begin{vmatrix}   20-\lambda & 30 \\ 30 & -10-\lambda \end{vmatrix}= (20-\lambda)(-10-\lambda)-30^2=\lambda^2-10\lambda-1100 $$
+s kořeny $\lambda_1\approx 38.54$ a $\lambda_2\approx -28.54$. To
+budou prvky v hlavní diagonále po transformaci tenzoru.
 
-Častým úkolem je zapsat vztahy mezi veličinami tak, aby byly co
-nejjednodušší a proto jeden z častých úkolů v lineární algebře bývá
-takovou šikovnou bázi nalézt. Nastíníme neoptimističtější variantu
-postupu, případné detaily a řešení zádrhelů je možné najít v odborné
-literatuře. Zpravidla vyjadřujeme zobrazení v bázi tvořené
-ortonormálními vlastními vektory matice $A$. Sloupce matice $P$ jsou
-vlastní vektory matice $A$. Pokud je matice $A$ symetrická, je matice
-$P$ navíc ortogonální, její inverze je tedy matice
-transponovaná. Tomuto procesu se říká diagonalizace matice, protože
-$P^{-1}AP$ vychází diagonální a v diagonále vychází právě vlastní
-čísla matice.
+Pokud budeme chtít vědět, jak jsou nové osy orientovány vůči osám původním, musíme najít i vlastní vektory. Vlastní vektor příslušný hodnotě
+$\lambda_1$ je řešením soustavy s maticí soustavy
+$$
+A-\lambda_1 I\approx
+\begin{pmatrix}
+  -18.54 & 30 \\
+  30  & -48.54
+\end{pmatrix}
+$$
+a nulami vpravo.
+Přibližným řešením je vektor $\vec u_1=
+\begin{pmatrix}
+  30 \\ 18.54
+\end{pmatrix}$. (Toto plyne z první rovnice, druhá rovnice musí být splněna automaticky, protože jsme použili vlastní hodnotu a soustava musí mít nenulové řešení. Nicméně výpočet je zatížen zaokrouhlovací chybou.) Po vydělení normou vektoru dostáváme
+$\begin{pmatrix}
+  0.851 \\ 0.526
+\end{pmatrix}$.
+Druhý vlastní vektor je kolmý, tj. $\begin{pmatrix}
+  -0.526 \\ 0.851 
+\end{pmatrix}$.
+Po transformaci maticí $P=
+\begin{pmatrix}
+  0.851 & -0.526 \\ 0.526 & 0.851
+\end{pmatrix}$ [dostáváme (na dvě desetiná místa)](https://sagecell.sagemath.org/?z=eJxtkF1rgzAUhu8F_0OgN4n4kVg2ykCG7A94tV6IjEyzmlkTSeLR_vtZXUthg8DJ4bzvcz52qHVusC9JMk1TfNGjGz9FXOs-mbir21fI5mZ-H94OT8-99b0867kzcsZlmdJwT6uw3NMwYrSqCEI7tFRlLXzvmOWxkCehQNROG_th5Kl1mPgesEzhY8mq66ObazCgJIIzt-4aRbdYViWwBFistOnxIlyVAnSDFEffolHadRr0iBpx7sbFkK5o-ohuzNhe_qLTLII0gfTO_hd9Jxf3tYGFkFYkdoYrO2grNvOafi0sXi9tblewrZ5wQX4_CnMrFY6KbUISsANNBkludYSLRywJ8qBA5Ac7KIR8&lang=sage&interacts=eJyLjgUAARUAuQ==)
+$$P^{T}\begin{pmatrix}
+  20 & 30 \\ 30 & -10
+\end{pmatrix}
+P=\begin{pmatrix}
+  38.54 & 0 \\ 0 & -28.54
+\end{pmatrix}.
+$$
+To vlastně ani nemusíme počítat, věta v úvodu tohoto slidu zaručuje,
+že výsledná matice bude diagonální a bude obsahovat vlastní hodnoty.
+Z matice $P$ vidíme sinus a kosinus úhlu pootočení a odsud určíme
+snadno, o kolik se souřadná soustava otáčí a v jakém směru.
 
-\iffalse
-
-[Ukázka](https://sagecell.sagemath.org/?z=eJytkU1v2zAMhu8G_B8INEWkRM3ioOlNB5-GHQb4sJuRFYqtzmoV0ZNlr_Gw_z469ryP9lJgBkzT4ks9fMFUnlTw5pnl-V7sDiLfUTxwuAI6N4WOo-y3InnXfPWB7bm42f1Kh5b5eBbQFZvglWtqbDTjMN8HtddFhWULJUJjnrBzGo6q1xBHVxAUHWA7FSihioFGg1NtYU4aKqtLFaDGvtSPJo7iqKnwG7AqnCzzy0Uqr5uFgEU2fJfXzKqgn1nKxZhknB6apVelcqbr0Z8ly7diSy6SKSYUt5u9SDZ3Qzb-U43_y8o-f79JfqQTagSwbGNcp_1gmq_SVTbyJu8dOOwudi-jv5n_P1YRR3j0qj_LPFt1ugjomeHwgB4MGAeXmQ5x9OHje1mjcYGNcgEFWvRy6XW5FLSgXsvbLV_XaM9f0L2uUraulCQzfG2N06-J-Iiidz3iLgPMgFl7tK3-WzxyJ_mDsVZ-8q3-A_qid1gfo2bSNDVZv_e0FpQJ_wkl8e8J&lang=sage&interacts=eJyLjgUAARUAuQ==)
-
-\fi
+-->
 
 # Hookův zákon, matice tuhosti a poddajnosti
 
@@ -609,4 +737,5 @@ identitě $\frac 1\lambda A^{-1}A \vec u=\frac 1\lambda I \vec u =\frac
 $$\frac 1\lambda \vec u=A^{-1}\vec u,$$ 
 která vyjadřuje, že $\vec u$ je vlastním vektorem matice $A^{-1}$ s
 vlastním číslem $\frac 1\lambda.$
+
 
