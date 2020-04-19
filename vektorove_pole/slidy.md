@@ -557,7 +557,7 @@ teploty a tokem tepla zprostředkovává
 *Fourierův zákon*. Difuzní rovnice má v tomto případě tvar
 $${\varrho c\frac{\partial T}{\partial t}=  \nabla\cdot\bigl(D\nabla T\bigr)}$$
 
-> Poznámka (interpretace rovnice vedení tepla).
+> Poznámka (fyzikální interpretace rovnice vedení tepla).
 >
 >* Veličina $\frac{\partial T}{\partial t}$ udává rychlost růstu teploty tělesa a koeficient $\rho c$ tuto hodnotu přepočítává na údaj, jak rychle roste vnitřní energie tělesa (kinetická energie molekul.)
 >* Výraz $D\nabla T$ udává (až na znaménko), jak se nerovnoměrnost v rozložení teploty vyrovnává tokem tepla. Přesněji, tok tepla je $-D\nabla T$.
