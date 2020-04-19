@@ -486,7 +486,8 @@ $\nabla=\left(\frac{\partial}{\partial x},\frac\partial{\partial
     y}\right)$ je operátor, se kterým pracujeme jako s
 vektorem. Nazývá se *nabla* nebo *Hamiltonův operátor*. 
 
-> Poznámka (fyzikální význam gradientu). Výsledkem gradientu je vektor ve směru maximálního růstu veličiny $f$. Délka tohoto vektoru je nárůst veličiny $f$ na intervalu jednotkové délky. V praxi nás většinou zajímá směr maximálního poklesu, tj. $-\nabla f$.
+> Poznámka (fyzikální význam gradientu). Gradient skalární veličiny $f$ je vektorová veličina, která vyjadřuje směr a intenzitu maximálního růstu veličiny $f$. Přesněji, výsledkem gradientu je vektor ve směru maximálního růstu veličiny $f$. Délka tohoto vektoru je nárůst veličiny $f$ na intervalu jednotkové délky. Pro rovnoměrně rozloženou veličinu  v prostoru (konstantní) je gradient nulový. Proto je možné gradient chápat jako míru nerovnoměrného rozložení veličiny v prostoru. Řada fyzikálních dějů probíhá tak, že tato nerovnoměrnost vyvolá proudění, které se snaží tuto nerovnoměrnost vyrovnat, například vedení tepla nebo difuze. V praxi nás proto většinou zajímá směr maximálního poklesu, tj. $-\nabla f$.
+
 
 
 # Lineární aproximace rovinné transformace
