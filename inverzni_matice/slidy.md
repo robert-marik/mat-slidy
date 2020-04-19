@@ -405,6 +405,8 @@ pozitivní odpověď na tuto otázku udávají věty na následujícím slidu.
 >* Matice $D$ definovaná vztahem $$D=P^TAP$$ je diagonální.
 >* Diagonální prvky matice $D$ jsou právě vlastní čísla $\lambda_i$ a jsou ve stejném pořadí jako odpovídající vlastní vektory v matici $P$.
 
+> Poznámka (diagonální tvar materiálových vlastností dřeva). Typickým ortotropním materiálem je dřevo. Pokud transformujeme tenzor difuzní matice pro dřevo na diagonální tvar, jsou diagonální prvky v poměru přibližně $D_L:D_R:D_T=35:3:2$ (P. Horáček, Fyzikální a mechanické vlastnosti dřeva, 2008 , str. 65). Ortotropní charakter má však nejenom transport tekutin, ale i sesychání a bobtnání. V tomto případě však naopak v podélném směru dřevo bobtná nejméně a tenzor popisující bobtnání má po transformaci na diagonální tvar v diagonále prvky v poěmru přibližně $\alpha_T:\alpha_R:\alpha_L=20:10:1$ (P. Horáček, Fyzikální a mechanické vlastnosti dřeva, 2008 , str. 38).
+
 \iffalse 
 
 <div class='obtekat'>
