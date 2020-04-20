@@ -231,7 +231,7 @@ Stejným způsobem se transformují i tenzory.
 </div>
 
 V knize A. Požgaj a kol., Štruktúra a vlastnosti drevá, je následující
-úloha. Dřevo v konfiguraci podle obrázku je namáháno pouze tahovou
+úloha (str. 322, vydání 1997, ISBN 80-07-00960-4). Dřevo v konfiguraci podle obrázku je namáháno pouze tahovou
 silou svisle, tedy tenzor napětí má jenom jednu nenulovou
 složku. Naším cílem je pootočit souřadnou soustavu tak, aby byl tenzor
 napětí vyjádřen v anatomických směrech dřeva. Úloha je v knize vyřešena pomocí směrových kosinů. Ukážeme si alternativní způsob, který je výhodný v tom, že využívá pouze základní aparát lineární algebry. Původní souřadnice
