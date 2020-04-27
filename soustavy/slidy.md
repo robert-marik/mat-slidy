@@ -312,7 +312,7 @@ setkáváme v aplikacích poměrně často. Podíváme-li se, jak byla
 odvozena soustava popisující rozložení teploty na tepelně vodivé
 desce (poslední slajd minulé přednášky), není to až takové překvapení.
 
-[Online výpočet.](https://sagecell.sagemath.org/?z=eJxtjzFrwzAQhXeD_8ORLrKRXYUqDQQ02Hjq1CGDwTVBRGpyQ05GFqH995Vj11CoEOLe3Xv6pErddPD4xbpO8mLLRTx63sVqlrGeWg8192fZ91ma1Gv4RfBXwfeCS9FnZfCaxsGNlkVTmjRK5mgsBQzfpyUh46RBuqvt8__Do6qKJk3aFbET_Hf_RcATDO6sgz0TgjNXbcDb0RJO7E_nAQEJov9i2S47pAnE1SpiEz9ndXHM2ywSB48UYPPmvNHk7hpuNjijD_BBG96WxAxeMIxKPj61uN8jiuwCnK3EqjLebP30uLzmsOZ-AAxjagI=&lang=sage&interacts=eJyLjgUAARUAuQ==)
+[Online výpočet.](https://sagecell.sagemath.org/?z=eJxtjzFrwzAQhXeD_8ORLpKRXYUqLQQ02Hjq1CGDwTVBRGp6Q05GFqH995XjJKVQIcS9u_f0SbU-mRjwi_W9EuVayHQMok_VIlM9ty5q6S9yGHieNffwkxTPUrxIoeTAqxgMTaOfHEumPGu1KtA6ihi_99eESpMW6azXj_8Pd7ou2zzr7oiNFLf9FwEPMPqDie5ACN5-GgvBTY5wZn_4AAhIkPxHxzZ8m2eQVqeJzfyCNeWu6HgijgEpAlu9-mAN-bOBk4vemi2800p0FTGLR4yTVvzyrZv_LdHIXZmLmVhdpctdmN9XNAJ-kz-XJ2qk&lang=sage&interacts=eJyLjgUAARUAuQ==)
 
 Podobnými iteračními metodami je možné efektivně řešit soustavy o
 tisících rovnic a neznámých. Výpočty probíhají rychle a nejsou náročné
