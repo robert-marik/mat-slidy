@@ -370,11 +370,11 @@ V případě proudění i v ose $x$ bude přítomen ještě další analogick
 
 Výše uvedenými úvahami je motivována následující definice a věta. (Definice je maličko nepřesná, protože nemáme nástroje pro pečlivější formulaci.)
 
-> Definice (divergence). *Divergence* vektorového pole $\vec F$ v daném bodě je převis toku vektorového pole z tohoto místa nad tokem do tohoto místa. Tento tok se počítá přes hranici infinitezimálně malého referenčního tělesa a je vztažený na jednotku objemu. Divergenci vektorového pole $\vec F$ označujeme $\mathop{\mathrm{div}}\vec F$ nebo $\nabla \cdot \vec F$.
+> Definice (divergence). *Divergence* vektorového pole $\vec F$ v daném bodě je převis toku vektorového pole z tohoto místa nad tokem do tohoto místa. Tento tok se počítá přes hranici infinitezimálně malého referenčního tělesa a je vztažený na jednotku objemu. Divergenci vektorového pole $\vec F$ označujeme $\nabla\cdot\vec F$ nebo $\nabla \cdot \vec F$.
 
 
 > Věta (výpočet divergence).
-> Pro vektorovou funkci $$\vec F=(P,Q,R)=P\vec i + Q\vec j + R\vec k,$$ kde $P$, $Q$ a $R$ jsou funkce tří proměnných $x$, $y$ a $z$ vypočteme divergenci vztahem 	  $$\mathop{\mathrm{div}}\vec F=\nabla\cdot\vec F=\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}.$$
+> Pro vektorovou funkci $$\vec F=(P,Q,R)=P\vec i + Q\vec j + R\vec k,$$ kde $P$, $Q$ a $R$ jsou funkce tří proměnných $x$, $y$ a $z$ vypočteme divergenci vztahem 	  $$\nabla\cdot\vec F=\nabla\cdot\vec F=\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}.$$
 > Pro vektorovou funkci dvou proměnných vypočteme divergenci analogicky, pouze chybí třetí člen. 
 
 > Poznámka (fyzikální interpretace divergence). Vektorové pole používáme k modelování toku veličin, které nás zajímají (teplo v materiálu, tekutina nebo chemická látka v materiálu, voda nebo plyn v půdě a podobně). Divergence tohoto vektorového pole udává, jestli se v daném místě a čase tok zhušťuje a nabývá na intenzitě (kladná divergence) nebo řídne a ustává (záporná divergence). Tento efekt může být způsoben tím, že veličina přenášená tímto polem se v daném místě buď kumuluje, nebo ubývá a také tím, že daná veličina v bodě může vznikat nebo zanikat.
@@ -503,12 +503,12 @@ tvarem koryta.
 \fi
 
 V mechanice kontinua podobně jako u vedení tepla neuvažujeme zdroje. Stavovou veličinou je hustota $\rho$, která popisuje množství látky v daném místě. Tato látka je přenášena tokem, který je roven součinu rychlosti $\vec u$ a hustoty $\rho$. Rovnice kontinuity popisující proudění dané rychlostí $\vec u$ má poté tvar
-$$\frac{\partial \rho}{\partial t} + \mathop{\mathrm{div}} (\rho \vec {u}) = 0,$$
+$$\frac{\partial \rho}{\partial t} + \nabla\cdot (\rho \vec {u}) = 0,$$
 kde $\rho$ je hustota. 
 Tato rovnice napsána pro vzduch je jednou z rovnic používaných při [modelování vývoje počasí](http://www-history.mcs.st-and.ac.uk/HistTopics/Weather_forecasts.html)
 
 Pro nestlačitelnou tekutinu je hustota konstantní, což eliminuje
-nestacionární člen a redukuje rovnici na $$ \mathop{\mathrm{div}} \vec
+nestacionární člen a redukuje rovnici na $$ \nabla\cdot\vec
 u =0.$$ Důsledkem této rovnosti je zvýšení rychlosti molekul
 pohybující se nestlačitelné tekutiny při proudění místem s menším
 průřezem.
@@ -532,7 +532,17 @@ vede vlhkost nejlépe. V takovém případě je $D$ matice.
 Spojením rovnice kontinuity a vztahu  pro tok stavové veličiny dostáváme  *difuzní rovnici*
 $$
       {\frac{\partial u}{\partial t}=\sigma + \nabla\cdot \bigl(D\nabla u\bigr)}$$
-    
+
+
+>Poznámka (fyzikální interpretace difuzní rovnice).
+>
+>* Člen $\frac{\partial u}{\partial t}$ udává, jak rychle se mění
+   hustota stavové veličiny $u$. Je stejný jako v rovnici kontinuity.
+>* Člen $\sigma$ udává vydatnost zdrojů stavové veličiny. Je stejný jako v rovnici kontinuity.
+>* Člen $\nabla u$ udává nerovnoměrnost v prostorovém rozložení stavové veličiny. Pomocí difuzní matice $D$ a konstitutivního zákona tuto nerovnoměrnost přepočítáme na tok, který se snaží uvažovanou nerovnoměrnost vyrovnat. V difuzní rovnici poté figuruje člen $$\nabla\cdot \bigl(D\nabla u\bigr),$$ tj. záporně vzatá divergence toku. To je přírůstek hustoty stavové veličiny v daném místě za jednotku času, způsobený zeslábnutím toku.
+>* Rovnice jako celek vyjadřuje, že navýšení hustoty stavové veličiny (tj. množství stavové veličiny v jednotkovém objemu) je součtem navýšní díky zdrojům a navýšení díky zeslabení toku v daném místě.
+
+
 
 # Vedení tepla
 
@@ -697,12 +707,12 @@ $$ {S_S\frac{\partial h}{\partial t}=  \sigma + \nabla\cdot \bigl(kh\nabla h\big
 
 
 Uvažujme rovnici vedení tepla ve dvou rozměrech a v prostředí bez zdrojů.
-$$\rho c\frac{\partial T}{\partial t}=\mathop{\mathrm{div}} (D\nabla T)\tag{***}$$
+$$\rho c\frac{\partial T}{\partial t}=\nabla\cdot (D\nabla T)\tag{***}$$
 
 ## Stacionární stav
 
 Stacionární stav znamená, že stavové veličiny nezávisí na čase. Derivace podle času je v takovém případě nulová. Rovnice (***) se redukuje na 
-$$\mathop{\mathrm{div}} (D\nabla T)=0.$$
+$$\nabla\cdot (D\nabla T)=0.$$
 
 
 ## Homogenní izotropní materiál a lineární materiálové vztahy
@@ -711,7 +721,7 @@ Materiál má ve všech místech (homogenní) a ve všech směrech (izotropní) 
 Veličina $D$ je reálná skalární veličina (konstanta).
 
 Podle pravidla derivace konstantního násobku se rovnice (***) redukuje na  
-$$\rho c\frac{\partial T}{\partial t}=D\mathop{\mathrm{div}} (\nabla T)$$
+$$\rho c\frac{\partial T}{\partial t}=D\nabla\cdot (\nabla T)$$
 a ve složkách
 $$\rho c\frac{\partial T}{\partial t}=D\left(\frac{\partial^2 T}{\partial x^2}+\frac{\partial^2 T}{\partial y^2}\right).$$
 Pro $\tau=\frac{Dt}{\rho c}$ (změna jednotky času) dostáváme
