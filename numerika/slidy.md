@@ -46,7 +46,7 @@ T(x,t)&=f(x),
 na tvar
 $$\boxed{\begin{aligned}
 \frac{\partial \xi}{\partial
-\tau}&=\frac{\partial ^2 \xi}{\partial \tau^2},\\
+\tau}&=\frac{\partial ^2 \xi}{\partial \mu^2},\\
 \xi(0,\tau )&=0,\\
 \xi(1,\tau )&=1,\\
 \xi(\mu, 0)&=f_\xi(\mu),
