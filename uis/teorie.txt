@@ -1,0 +1,415 @@
+V troubì tepelnì modifikujete døevo ve tvaru krychle. Do støedu krychle máte zavedený teplomìr. Mìøíte teplotu $T$ jako funkci èasu $t$. Jaká je slovní interpretace derivace této funkce, tj. $\frac{\mathrm dT}{\mathrm dt}$?
++pøibli¾ná zmìna teploty ve støedu krychle za jednotku èasu
+-pøibli¾ná prùmìrná zmìna teploty v krychli za jednotku èasu
+-pøibli¾ná doba, za kterou se zmìní teplota o jednotku teploty
+-pøibli¾ná okam¾itá rychlost s jakou roste teplota v peci
+-celková zmìna teploty uprostøed krychle za celou dobu prùbìhu pokusu
+
+Oznaète implikaci, která je definièním vztahem prosté funkce
+-$a<b \implies f(a)<f(b)$
+-$a<b \implies f(a)>f(b)$
++$f(a)=f(b) \implies a=b$
+-$a=b\implies f(a)=f(b)$
+-$x\in D(f)\implies f(-x)=f(x)$
+-$x\in D(f)\implies f(-x)=-f(x)$
+
+Oznaète implikaci, která je definièním vztahem sudé funkce
+-$a<b \implies f(a)<f(b)$
+-$a<b \implies f(a)>f(b)$
+-$f(a)=f(b) \implies a=b$
+-$a=b\implies f(a)=f(b)$
++$x\in D(f)\implies f(-x)=f(x)$
+-$x\in D(f)\implies f(-x)=-f(x)$
+
+Oznaète implikaci, která je definièním vztahem rostoucí funkce
++$a<b \implies f(a)<f(b)$
+-$a<b \implies f(a)>f(b)$
+-$f(a)=f(b) \implies a=b$
+-$a=b\implies f(a)=f(b)$
+-$x\in D(f)\implies f(-x)=f(x)$
+-$x\in D(f)\implies f(-x)=-f(x)$
+
+Oznaète implikaci, která je definièním vztahem klesající funkce
+-$a<b \implies f(a)<f(b)$
++$a<b \implies f(a)>f(b)$
+-$f(a)=f(b) \implies a=b$
+-$a=b\implies f(a)=f(b)$
+-$x\in D(f)\implies f(-x)=f(x)$
+-$x\in D(f)\implies f(-x)=-f(x)$
+
+Platí-li pro v¹echna $a,b\in I\subseteq D(f)$ implikace $a<b\implies f(a)<f(b)$ øíkáme, ¾e funkce $f$ je  na intervalu $I$
++rostoucí
+-klesající
+-lichá
+-sudá
+-prostá
+
+Platí-li pro v¹echna $a,b\in I\subseteq D(f)$ implikace $a<b\implies f(a)>f(b)$ øíkáme, ¾e funkce $f$ je  na intervalu $I$
+-rostoucí
++klesající
+-lichá
+-sudá
+-prostá
+
+Platí-li pro v¹echna $a,b\in I\subseteq D(f)$ implikace $f(a)=f(b)\implies a=b$ øíkáme, ¾e funkce $f$ je  na intervalu $I$
+-rostoucí
+-klesající
+-lichá
+-sudá
++prostá
+
+Oznaète výraz který je definièním vztahem pro derivaci funkce $f$ v bodì $x$
++$\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}$
+-$\lim_{h\to 0}\frac{f(x+h)+f(x)}{h}$
+-$\lim_{h\to 0}\frac{f(x+h)\cdot f(x)}{h}$
+-$\lim_{h\to 0}{f(x+h)-f(x)}$
+-$\lim_{h\to 0}{f(x+h)+f(x)}$
+-$\lim_{h\to 0}{f(x+h)\cdot f(x)}$
+-$\lim_{h\to \infty}{f(x+h)-f(x)}$
+-$\lim_{h\to \infty}{f(x+h)+f(x)}$
+-$\lim_{h\to \infty}{f(x+h)\cdot f(x)}$
+
+Jednotková matice
++má v hlavní diagonále jednièky a v¹ude jinde nuly
+-je slo¾ena ze samých jednièek
+-má hodnost rovnu jedné
+-má v hlavní diagonále nuly a v¹ude jinde jednièky
+-obsahuje jeden øádek a jeden sloupec
+
+Buï $A$ ètvercová matice. Oznaète vztah, který je definicí matice inverzní $A^{-1}$. Matice $I$ je jednotková matice. Pøedpokládejme ¾e matice jsou takové, ¾e v¹echny maticové souèiny  mají smysl.
++$AA^{-1}=I$ a $A^{-1}A=I$
+-$AA^{-1}=A$ a $A^{-1}A=I$
+-$AA^{-1}=I$ a $A^{-1}A=A$
+-$A^{-1}I=I$ a $IA^{-1}=I$
+-$AI=A^{-1}$ a  $IA^{-1}=I$
+-$A^{-1}I=A$ a  $IA^{-1}=I$
+-$A^{-1}A^{-1}=A$ a  $AA=A^{-1}$
+
+Uva¾ujme soustavu lineárních rovnic s maticí soustavy $A$, sloupcovým vektorem pravých stran $B$ a sloupcovým vektorem neznámých $X$. Vyberte správnou mo¾nost, jak lze tuto soustavu zapsat pomocí maticového souèinu.
++$AX=B$
+-$A+X=B$
+-$XA=B$
+-$XB=A$
+-$X+B=A$
+-$X=AB$
+-$X=BA$
+-$X=A+B$
+
+Uva¾ujme tenzor napìtí nebo libovolné zobrazení reprezentované ètvercovou $2\times 2$ maticí $A\in\mathbb R^{2\times 2}$. Jak bude vypadat matice matice zobrazení po otoèení o úhel $\theta$ proti smìru hodinových ruèièek? Matice $R(\theta)$ popisuje pootoèení o úhel $\theta$ proti smìru hodinových ruèièek.
++ $R(-\theta)AR(\theta)$
+- $AR(\theta)$
+- $R(\theta)A$
+- $AR(-\theta)$
+- $R(-\theta)A$
+
+Uva¾ujme matici $R(\theta)$ popisující rotaci o úhel $\theta$ proti smìru hodinových ruèièek. Má tato matice inverzní matici?
++ Ano, inverzní matice popisuje otoèení v opaèném smìru, tj. o úhel $-\theta$.
+- Ano, matice inverzní je inverzní sama k sobì.
+- Ano, ale pouze pøi otoèení o úhel, který je celoèíselným násobkem $\pi$.
+- Ne, proto¾e matice nemá vlastní smìry.
+- Ne, proto¾e matice má právì dva rùzné vlastní smìry.
+- Ano, proto¾e obì vlastní èísla matice jsou kladná.
+
+Za jaké podmínky má úloha $$A\vec u=\lambda \vec u$$ na vlastní vektory a vlastní èísla nenulové øe¹ení?
++ Pokud je determinant matice $A-\lambda I$ roven nule.
+- Pokud má matice $A$ inverzi $A^{-1}.$
+- Pokud je determinant matice $A$ roven $\lambda$.
+- Pokud je determinant matice $A$ roven $\lambda^{-1}$.
+- Pokud má matice $A$ nulový determinant.
+- Pokud má matice $A$ nenulový determinant.
+
+Uva¾ujme soustavu lineárních rovnic s ètvercovou maticí soustavy $A$, sloupcovým vektorem pravých stran $B$ a sloupcovým vektorem neznámých $X$. Co mù¾eme øíct o øe¹itelnosti této soustavy.
++ Soustava má jediné øe¹ení vyjádøené vzorcem $X=A^{-1}B$.
+- Soustava má nekoneènì mnoho øe¹ení a v¹echna øe¹ení splòují relaci $X=\frac{B}{A}$.
+- Soustava má jediné øe¹ení vyjádøené vzorcem $X=A B^{-1}$.
+- Soustava má nekoneènì mnoho øe¹ení vyjádøených vzorcem $X=A B^{-1}$.
+- Soustava má nekoneènì mnoho øe¹ení. Není k dispozici vzorec pro jejich jednotné vyjádøení.
+
+Maticový souèin
++je asociativní, není komutativní
+-je komutativní, není asociativní
+-není ani komutativní ani asociativní
+-je komutativní i asociativní
+-je komutativní, asociativitu neurèujeme
+
+Která formulace vyjadøuje slovnì pojem derivace funkce $f(x)$?
++ Derivace je rychlost rùstu velièiny $f$, tj. zmìna funkce $f$ zpùsobená jednotkovou zmìnou velièiny $x$.
+- Derivace je rychlost rùstu velièiny $f$, tj. zmìna funkce $f$ za jednotku èasu.
+- Derivace je rychlost rùstu velièiny $f$, tj. zmìna funkce $f$ na intervalu $[x,x+h]$.
+- Derivace je zmìna velièiny za zadaný èasový interval.
+- Derivace udává smìr a intenzitu maximálního rùstu velièiny $f$.
+- Derivace udává nárùst toku velièiny $f$ v daném místì.
+
+Která formulace vyjadøuje slovnì pojem gradientu funkce $f(x,y)$, tj. $\nabla f$?
+- Gradient je rychlost rùstu velièiny $f$, tj. zmìna funkce $f$ zpùsobená jednotkovou zmìnou velièiny $x$.
+- Gradient je rychlost rùstu velièiny $f$, tj. zmìna funkce $f$ za jednotku èasu.
+- Gradient je rychlost rùstu velièiny $f$, tj. zmìna funkce $f$ na intervalech $[x,x+h]$ a $[y,y+h]$.
+- Gradient je zmìna velièiny za zadaný èasový interval.
++ Gradient udává smìr a intenzitu maximálního rùstu velièiny $f$.
+
+Která formulace vyjadøuje slovnì pojem divergence vektorové funkce $\vec q$, tj. $\nabla \cdot \vec q$?
+- Divergence je rychlost rùstu velièiny $f$, tj. zmìna funkce $f$ zpùsobená jednotkovou zmìnou velièiny $x$.
+- Divergence je rychlost rùstu velièiny $f$, tj. zmìna funkce $f$ za jednotku èasu.
+- Divergence je rychlost rùstu velièiny $f$, tj. zmìna funkce $f$ na intervalech $[x,x+h]$ a $[y,y+h]$.
+- Divergence je zmìna velièiny za zadaný èasový interval.
+- Divergence udává smìr a intenzitu maximálního rùstu velièiny $f$.
++ Divergence udává nárùst toku vektorového pole $\vec q$ v daném místì.
+
+V èem je výhoda znalosti vlastních smìrù matice popisující materiálové vlastnosti?
++ Mù¾eme zvolit souøadnou soustavu tak, ¾e matice je diagonální.
+- Materiálová charakteristika je reálné èíslo.
+- Materiálová charakteristika je diagonální maticí.
+- Matici je mo¾no transformovat s vyu¾itím inverzní matice.
+- Matice je antisymetrická.
+
+Jak byste charakterizovali difuzní rovnici ve tvaru $$\frac{\partial u}{\partial t}=\nabla\cdot(D\nabla u)?$$
+- stacionární
++ bezzdrojová
+- jednorozmìrná
+- dvourozmìrná
+- trojrozmìrná
+- izotropní
+
+Jak byste v difuzní rovnici $$\frac{\partial u}{\partial t}=\nabla\cdot(D\nabla u)+\sigma$$ slovnì intepretovali èlen na levé stranì rovnice?
++ rychlost rùstu hustoty stavové velièiny, tj. zmìna mno¾ství stavové velièiny v jednotkovém objemu látky za jednotku èasu
+- rychlost poklesu hustoty stavové velièiny, tj. mno¾ství stavové velièiny, které ubude v jednotkovém objemu látky za jednotku èasu
+- úbytek toku pøená¹ejícího stavovou velièinu, tedy èást toku, která za jednotku èasu zùstane v jednotkovém objemu 
+- pøírùstek toku pøená¹ejícího stavovou velièinu, tedy èást toku, která za jednotku èasu ubude v jednotkovém objemu 
+- výkon ze zdrojù, tj. mno¾ství stavové velièiny, které v jednotkovém objemu za jednotku èasu vygenerují zdroje (spotøebièe bereme jako zdroje se záporným výkonem)
+- výkon ze spotøebièù, tj. mno¾ství stavové velièiny, které v jednotkovém objemu za jednotku èasu spotøebují spotøebièe (zdroje bereme jako spotøebièe se záporným výkonem)
+
+Jak byste v difuzní rovnici $$\frac{\partial u}{\partial t}=\nabla\cdot(D\nabla u)+\sigma$$ slovnì intepretovali èlen $\nabla\cdot(D\nabla u)$ na pravé stranì rovnice?
+- rychlost rùstu hustoty stavové velièiny, tj. zmìna mno¾ství stavové velièiny v jednotkovém objemu látky za jednotku èasu
+- rychlost poklesu hustoty stavové velièiny, tj. mno¾ství stavové velièiny, které ubude v jednotkovém objemu látky za jednotku èasu
++ úbytek toku pøená¹ejícího stavovou velièinu, tedy mno¾ství stavové velièiny, která za jednotku èasu zùstane v jednotkovém objemu 
+- pøírùstek toku pøená¹ejícího stavovou velièinu, tedy mno¾ství stavové velièiny, která za jednotku èasu ubude v jednotkovém objemu 
+- výkon ze zdrojù, tj. mno¾ství stavové velièiny, které v jednotkovém objemu za jednotku èasu vygenerují zdroje (spotøebièe bereme jako zdroje se záporným výkonem)
+- výkon ze spotøebièù, tj. mno¾ství stavové velièiny, které v jednotkovém objemu za jednotku èasu spotøebují spotøebièe (zdroje bereme jako spotøebièe se záporným výkonem)
+
+Jak byste v difuzní rovnici $$\frac{\partial u}{\partial t}=\nabla\cdot(D\nabla u)+\sigma$$ slovnì intepretovali èlen $\sigma$ na pravé stranì rovnice?
+- rychlost rùstu hustoty stavové velièiny, tj. zmìna mno¾ství stavové velièiny v jednotkovém objemu látky za jednotku èasu
+- rychlost poklesu hustoty stavové velièiny, tj. mno¾ství stavové velièiny, které ubude v jednotkovém objemu látky za jednotku èasu
+- úbytek toku pøená¹ejícího stavovou velièinu, tedy èást toku, která za jednotku èasu zùstane v jednotkovém objemu 
+- pøírùstek toku pøená¹ejícího stavovou velièinu, tedy èást toku, která za jednotku èasu ubude v jednotkovém objemu 
++ výkon ze zdrojù, tj. mno¾ství stavové velièiny, které v jednotkovém objemu za jednotku èasu vygenerují zdroje (spotøebièe bereme jako zdroje se záporným výkonem)
+- výkon ze spotøebièù, tj. mno¾ství stavové velièiny, které v jednotkovém objemu za jednotku èasu spotøebují spotøebièe (zdroje bereme jako spotøebièe se záporným výkonem)
+
+Jak byste charakterizovali difuzní rovnici ve tvaru $$\frac{\partial u}{\partial t}=\frac{\partial}{\partial x}\left(D_x\frac{\partial u}{\partial x}\right)+\frac{\partial}{\partial y}\left(D_y\frac{\partial u}{\partial y}\right)?$$
+- stacionární
+- bezzdrojová
+- jednorozmìrná
++ dvourozmìrná
+- trojrozmìrná
+- izotropní
+
+Jak byste charakterizovali difuzní rovnici ve tvaru $$0=\nabla\cdot(D\nabla u)+\sigma?$$
++ stacionární
+- bezzdrojová
+- jednorozmìrná
+- dvourozmìrná
+- trojrozmìrná
+- izotropní
+
+Co v jednorozmìrné rovnici vedení tepla $$\rho c\frac{\partial T}{\partial t}=\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)$$ vyjadøuje èlen na levé stranì rovnice?
++ Rychlost zmìny hustoty vnitøní enerige v èase, tj. zmìna vnitøní energie v jednotkové délce za jednotku èasu.
+- Rychlost rùstu teploty v èase, tj. nárùst teploty v daném místì za jednotku èasu.
+- Jednorozmìrný gradient teploty, tj. rychlost rùstu teploty ve smìru osy $x$.
+- Tok tepla ve smìru osy $x$, tj. mno¾ství tepla, které projde za jednotku èasu daným místem ve smìru osy $x$.
+- Zápornì vzatý tok tepla ve smìru osy $x$, tj. mno¾ství tepla, které projde za jednotku èasu daným místem proti smìru osy $x$.
+- Jednorozmìrnou divergenci toku tepla, tj. velièinu mìøící míru, s jakou tok v daném místì nabývá na intenzitì.
+- Zápornì vzatou jednorozmìrnou divergenci toku tepla, tj. velièinu mìøící míru, s jakou tok v daném místì slábne.
+- Prùmìrnou teplotu podél celé délky studovaného jednorozmìrného objektu.
+
+Co v jednorozmìrné rovnici vedení tepla $$\rho c\frac{\partial T}{\partial t}=\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)$$ vyjadøuje èlen na pravé stranì rovnice?
+- Rychlost zmìny hustoty vnitøní enerige v èase, tj. zmìna vnitøní energie v jednotkové délce za jednotku èasu.
+- Rychlost rùstu teploty v èase, tj. nárùst teploty v daném místì za jednotku èasu.
+- Jednorozmìrný gradient teploty, tj. rychlost rùstu teploty ve smìru osy $x$.
+- Tok tepla ve smìru osy $x$, tj. mno¾ství tepla, které projde za jednotku èasu daným místem ve smìru osy $x$.
++ Zápornì vzatou jednorozmìrnou divergenci toku tepla, tj. velièinu mìøící míru, s jakou tok v daném místì slábne.
+- Èas, za jaký se teplota ustálí v rovnová¾né poloze.
+
+Co v jednorozmìrné rovnici vedení tepla $$\rho c\frac{\partial T}{\partial t}=\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)$$ vyjadøuje èlen $\frac{\partial T}{\partial t}$?
+- Rychlost zmìny hustoty vnitøní enerige v èase, tj. zmìna vnitøní energie v jednotkové délce za jednotku èasu.
++ Rychlost rùstu teploty v èase, tj. nárùst teploty v daném místì za jednotku èasu.
+- Jednorozmìrný gradient teploty, tj. rychlost rùstu teploty ve smìru osy $x$.
+- Tok tepla ve smìru osy $x$, tj. mno¾ství tepla, které projde za jednotku èasu daným místem ve smìru osy $x$.
+- Jednorozmìrnou divergenci toku tepla, tj. velièinu mìøící míru, s jakou tok v daném místì nabývá na intenzitì.
+- Zápornì vzatou jednorozmìrnou divergenci toku tepla, tj. velièinu mìøící míru, s jakou tok v daném místì slábne.
+
+Co v jednorozmìrné rovnici vedení tepla $$\rho c\frac{\partial T}{\partial t}=\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)$$ vyjadøuje èlen $\frac{\partial T}{\partial x}$?
+- Rychlost zmìny hustoty vnitøní enerige v èase, tj. zmìna vnitøní energie v jednotkové délce za jednotku èasu.
+- Rychlost rùstu teploty v èase, tj. nárùst teploty v daném místì za jednotku èasu.
++ Jednorozmìrný gradient teploty, tj. rychlost rùstu teploty ve smìru osy $x$.
+- Tok tepla ve smìru osy $x$, tj. mno¾ství tepla, které projde za jednotku èasu daným místem ve smìru osy $x$.
+- Jednorozmìrnou divergenci toku tepla, tj. velièinu mìøící míru, s jakou tok v daném místì nabývá na intenzitì.
+- Zápornì vzatou jednorozmìrnou divergenci toku tepla, tj. velièinu mìøící míru, s jakou tok v daném místì slábne.
+
+Co v jednorozmìrné rovnici vedení tepla $$\rho c\frac{\partial T}{\partial t}=\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)$$ vyjadøuje èlen $k\frac{\partial T}{\partial x}$?
+- Rychlost zmìny hustoty vnitøní enerige v èase, tj. zmìna vnitøní energie v jednotkové délce za jednotku èasu.
+- Rychlost rùstu teploty v èase, tj. nárùst teploty v daném místì za jednotku èasu.
+- Jednorozmìrný gradient teploty, tj. rychlost rùstu teploty ve smìru osy $x$.
++ Zápornì vzatý tok tepla ve smìru osy $x$, tj. mno¾ství tepla, které projde za jednotku èasu daným místem proti smìru osy $x$.
+- Jednorozmìrnou divergenci toku tepla, tj. velièinu mìøící míru, s jakou tok v daném místì nabývá na intenzitì.
+- Zápornì vzatou jednorozmìrnou divergenci toku tepla, tj. velièinu mìøící míru, s jakou tok v daném místì slábne.
+
+Vyberte vztah pou¾itelný pro lineární aproximaci funkce jedné promìnné v daném bodì.
++ $f(x)\approx f(a)+f'(a)(x-a)$
+- $f(x)\approx x-a+\frac{f(a)}{f'(a)}$
+- $f(x)\approx x+\frac{f(a)}{f'(a)}$
+- $f(x)\approx x+\frac{f'(a)}{f(a)}$
+- $f(x)\approx f'(a)+f(a)x$
+
+Jak najdeme konstantní øe¹ení (stacionární body) autonomní diferenciální rovnice $\frac{\mathrm dy}{\mathrm dt}=g(y)$?
++ Nulové body funkce $g$.
+- Nulové body derivace $g'(y)$.
+- Nulové body funkce $g$, ve kterých je kladná derivace.
+- Nulové body funkce $g$, ve kterých je záporná derivace.
+- Nulové body derivace $g'(y)$, ve kterých je funkce kladná.
+- Nulové body derivace $g'(y)$, ve kterých je funkce záporná.
+
+Jak najdeme stabilní konstantní øe¹ení (stabilní stacionární body) autonomní diferenciální rovnice $\frac{\mathrm dy}{\mathrm dt}=g(y)$?
+- Nulové body funkce $g$.
+- Nulové body derivace $g'(y)$.
+- Nulové body funkce $g$, ve kterých je kladná derivace.
++ Nulové body funkce $g$, ve kterých je záporná derivace.
+- Nulové body derivace $g'(y)$, ve kterých je funkce kladná.
+- Nulové body derivace $g'(y)$, ve kterých je funkce záporná.
+
+Jak najdeme nestabilní konstantní øe¹ení (nestabilní stacionární body) autonomní diferenciální rovnice $\frac{\mathrm dy}{\mathrm dt}=g(y)$?
+- Nulové body funkce $g$.
+- Nulové body derivace $g'(y)$.
++ Nulové body funkce $g$, ve kterých je kladná derivace.
+- Nulové body funkce $g$, ve kterých je záporná derivace.
+- Nulové body derivace $g'(y)$, ve kterých je funkce kladná.
+- Nulové body derivace $g'(y)$, ve kterých je funkce záporná.
+
+Jak najdeme konstantní øe¹ení (stacionární body) autonomní diferenciální rovnice $\frac{\mathrm dy}{\mathrm dt}=f(y)-g(y)$?
+- Nulové body funkce $g$.
+- Nulové body funkce $f$.
+- Spoleèné nulové body funkcí $f$ a $g$.
++ Spoleèné body funkcí $f$ a $g$, tj. prùseèíky grafù.
+- Nulové body délky vektoru $(f,g)$, tj. body kde $\sqrt{f^2(y)+g^2(y)}=0$
+
+Jak najdeme stabilní konstantní øe¹ení (stabilní stacionární body) autonomní diferenciální rovnice $\frac{\mathrm dy}{\mathrm dt}=f(y)-g(y)$?
+- Nulové body funkce $g$, ve kterých je záporná derivace funkce $g$.
+- Nulové body funkce $g$, ve kterých je záporná derivace funkce $f$.
+- Nulové body funkce $f$.
+- Spoleèné nulové body funkcí $f$ a $g$.
++ Nulové body rozdílu funkcí $f-g$, ve kterých má rozdíl $f-g$ zápornou derivaci.
+
+Oznaète výraz, který je definicí derivace funkce.
++ $\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}$
+- $\frac{f(x+h)-f(x)}{h}$
+- $\frac{f(x+h)-f(x-h)}{2h}$
+- $\frac{f(x+h)-2f(x)+f(x-h)}{h^2}$
+- jiná odpovìï
+
+Oznaète výraz, který udává numerickou aproximaci derivace funkce pomocí dopøedné diference.
+- $\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}$
++ $\frac{f(x+h)-f(x)}{h}$
+- $\frac{f(x+h)-f(x-h)}{2h}$
+- $\frac{f(x+h)-2f(x)+f(x-h)}{h^2}$
+- jiná odpovìï
+
+Oznaète výraz, který udává numerickou aproximaci derivace funkce pomocí centrální diference.
+- $\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}$
+- $\frac{f(x+h)-f(x)}{h}$
++ $\frac{f(x+h)-f(x-h)}{2h}$
+- $\frac{f(x+h)-2f(x)+f(x-h)}{h^2}$
+- jiná odpovìï
+
+Oznaète výraz, který udává numerickou aproximaci druhé derivace funkce.
+- $\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}$
+- $\frac{f(x+h)-f(x)}{h}$
+- $\frac{f(x+h)-f(x-h)}{2h}$
++ $\frac{f(x+h)-2f(x)+f(x-h)}{h^2}$
+- jiná odpovìï
+
+Co vyjadøuje výraz $\frac{f(x+h)-2f(x)+f(x-h)}{h^2}$?
++ Numerickou aproximaci druhé derivace.
+- Numerickou aproximaci derivace pomocí dopøedné diference.
+- Numerickou aproximaci derivace pomocí centrální diference.
+- Dal¹í iteraci v Newtonovì metodì hledání nulových bodù.
+- Numerickou aproximaci urèitého integrál u pomocí lichobì¾níkového pravidla.
+
+Co vyjadøuje výraz $\frac{f(x+h)-f(x)}{h}$?
+- Numerickou aproximaci druhé derivace.
++ Numerickou aproximaci derivace pomocí dopøedné diference.
+- Numerickou aproximaci derivace pomocí centrální diference.
+- Dal¹í iteraci v Newtonovì metodì hledání nulových bodù.
+- Numerickou aproximaci urèitého integrál u pomocí lichobì¾níkového pravidla.
+
+Co vyjadøuje výraz $\frac{f(x+h)-f(x-h)}{h}$?
+- Numerickou aproximaci druhé derivace.
+- Numerickou aproximaci derivace pomocí dopøedné diference.
++ Numerickou aproximaci derivace pomocí centrální diference.
+- Dal¹í iteraci v Newtonovì metodì hledání nulových bodù.
+- Numerickou aproximaci urèitého integrál u pomocí lichobì¾níkového pravidla.
+
+Co vyjadøuje výraz $x-\frac{f'(x)}{f(x)}$?
+- Numerickou aproximaci druhé derivace.
+- Numerickou aproximaci derivace pomocí dopøedné diference.
+- Numerickou aproximaci derivace pomocí centrální diference.
++ Dal¹í iteraci v Newtonovì metodì hledání nulových bodù.
+- Numerickou aproximaci urèitého integrál u pomocí lichobì¾níkového pravidla.
+
+Jak souvisí derivace se monotonií (rùstem nebo klesáním)?
++ Má-li funkce kladnou derivaci, je rostoucí.
+- Je-li funkce rostoucí, má kladnou derivaci.
+- Má-li funkce zápornou derivaci, je rostoucí.
+- Je-li funkce rostoucí, má kladnou zápornou.
+- Oba pojmy spolu nesouvisí a jsou nezávislé.
+
+Pøi studiu transportních jevù, pøi odvození difuzní rovnice, hraje významnou roli konstitutivní vztah. Jak byste jeho význam charakterizovali slovnì?
++ Konstitutivní vztah pøevádí nerovnomìrnosti v prostorovém rozlo¾ení stavové velièiny na tok, který se sna¾í tyto nerovnomìrnosti vyhladit.
+- Konstitutivní vztah vyjadøuje bilanci celkového mno¾ství stavové velièiny.
+- Konstitutivní vztah vyjadøuje, jak se pøítomnost zdrojù projeví na toku pøená¹ejícím stavovou velièinu.
+- Konstitutivní vztah vyjadøuje, ¾e akumulaci stavové velièiny je mo¾no chápat jako souèet vydatnosti zdrojù v daném místì a intenzity, s jakou v daném místì klesá tok stavové velièiny.
+- Konstitutivní vztah pøepoèítává tok stavové velièiny na její akumulaci v daném bodì.
+
+K èemu slou¾í Newtonova metoda?
+- lineární aproximace funkce
+- aproximace funkce nelineárním polynomem
++ numerické øe¹ení rovnice pomocí iterací
+- numerické øe¹ení soustavy rovnic pomocí iterací
+- numerický odhad derivace
+- numerický odhad integrálu
+
+K èemu slou¾í Jacobiho metoda?
+- lineární aproximace funkce
+- aproximace funkce nelineárním polynomem
+- numerické øe¹ení rovnice pomocí iterací
++ numerické øe¹ení soustavy rovnic pomocí iterací
+- numerický odhad derivace
+- numerický odhad integrálu
+
+K èemu slou¾í centrální diference?
+- lineární aproximace funkce
+- aproximace funkce nelineárním polynomem
+- numerické øe¹ení rovnice pomocí iterací
+- numerické øe¹ení soustavy rovnic pomocí iterací
++ numerický odhad derivace
+- numerický odhad integrálu
+
+Co slovnì vyjadøuje  Bolzanova vìta?
++ Spojitá funkce, která mìní znaménko, má mezi znaménkovými zmìnami nulový bod.
+- Spojitá funkce, která mìní znaménko, má mezi znaménkovými zmìnami maximum.
+- Ka¾dá funkce, která má nulový bod, mìní na intervalu obsahujícím tento bod znaménko.
+- Ka¾dá funkce, která má nulový bod, je v tomto bodì spojitá.
+- Nulový bod funkce mù¾eme najít pomocí Newotonovy iteraèní metody.
+- Ka¾dá spojitá funkce má derivaci.
+- Ka¾dá spojitá funkce má integrál.
+
+Uva¾ujme konstitutivní zákon se známým tenzorem (maticí) definujícím materiálové vlastnosti a známými vlastními smìry této matice. Podnìt je ve smìru vlastního vektoru s minimální vlastní hodnotou. V jakém smìru bude odezva?
++ Ve stejném smìru jako podnìt.
+- Ve smìru kolmém na podnìt.
+- Ve smìru maximální vlastní hodnoty.
+- Ve smìru minimální vlastní hodnoty.
+- Obecnì není mo¾né rozhodnout, pokud materiál není izotropní.
+
+Uva¾ujme konstitutivní zákon se známým tenzorem (maticí) definujícím materiálové vlastnosti a známými vlastními smìry této matice. Podnìt je ve smìru vlastního vektoru s maximální vlastní hodnotou. V jakém smìru bude odezva?
++ Ve stejném smìru jako podnìt.
+- Ve smìru kolmém na podnìt.
+- Ve smìru maximální vlastní hodnoty.
+- Ve smìru minimální vlastní hodnoty.
+- Obecnì není mo¾né rozhodnout, pokud materiál není izotropní.
