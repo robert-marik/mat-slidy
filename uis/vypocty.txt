@@ -140,11 +140,11 @@ Napìtí $U$ na kondenzátoru o kapacitì $C$ v RC obvodu monitorujícím vlhkost døev
 + $\frac{\mathrm dU}{\mathrm dt}=\frac 1C\frac{\mathrm dQ}{\mathrm dt}$
 
 Prùhyb $s$ nosníku vý¹ky $h$ je dán vztahem $s=\frac k{h^3}$, kde $k$ je konstanta. Jak byste tento vztah vyjáøili slovy?
-+ $s$ je nepøímo úmìrné tøetí mocninì $h$
-- tøetí mocnina $s$ je nepøímo úmìrná $h$
-- $s$ je pøímo úmìrné tøetí mocninì $h$
-- tøetí mocnina $s$ je pøímo úmìrná $h$
-- ¾ádné z uvedených tvrzení
++ Prùhyb nosníku je nepøímo úmìrný tøetí mocninì vý¹ky nosníku.
+- Tøetí mocnina prùhybu nosníku je nepøímo úmìrná vý¹ce nosníku.
+- Prùhyb nosníku je pøímo úmìrný tøetí mocninì vý¹ky nosníku.
+- Tøetí mocnina prùhybu nosníku je pøímo úmìrná vý¹ce nosníku.
+- ®ádné z uvedených tvrzení nevyjadøuje uvedenou funkèní závislost.
 
 Prùhyb $s$ nosníku vý¹ky $h$ je dán vztahem $s=\frac k{h^3}$, kde $k$ je konstanta. Jaký je vztah mezi pøibli¾nými zmìnami $\Delta s$ a $\Delta h$ obou velièin?
 + $\Delta s=-\frac {3k}{h^4}\Delta h$
@@ -153,9 +153,9 @@ Prùhyb $s$ nosníku vý¹ky $h$ je dán vztahem $s=\frac k{h^3}$, kde $k$ je konstan
 - $\Delta s=-\frac {k}{(\Delta h)^3}$
 - $\Delta s=-\frac {k}{(\Delta h)^4}$
 - $\Delta s=-\frac {3k}{(\Delta h)^4}h$
-- $\frac{\mathrm ds}{\mathrm dt}=-\frac 3k{h^4}\frac{\mathrm ds}{\mathrm dt}$
-- $\frac{\mathrm ds}{\mathrm dt}=\frac k{h^4}\frac{\mathrm ds}{\mathrm dt}$
-- $\frac{\mathrm ds}{\mathrm dt}=\frac k{h^3}\frac{\mathrm ds}{\mathrm dt}$
+- $\frac{\mathrm ds}{\mathrm dt}=-\frac 3k{h^4}\frac{\mathrm dh}{\mathrm dt}$
+- $\frac{\mathrm ds}{\mathrm dt}=\frac k{h^4}\frac{\mathrm dh}{\mathrm dt}$
+- $\frac{\mathrm ds}{\mathrm dt}=\frac k{h^3}\frac{\mathrm dh}{\mathrm dt}$
 
 Prùhyb $s$ nosníku vý¹ky $h$ je dán vztahem $s=\frac k{h^3}$, kde $k$ je konstanta. Jaký je vztah mezi rychlostmi zmìn obou velièin?
 - $\Delta s=-\frac {3k}{h^4}\Delta h$
@@ -164,9 +164,9 @@ Prùhyb $s$ nosníku vý¹ky $h$ je dán vztahem $s=\frac k{h^3}$, kde $k$ je konstan
 - $\Delta s=-\frac {k}{(\Delta h)^3}$
 - $\Delta s=-\frac {k}{(\Delta h)^4}$
 - $\Delta s=-\frac {3k}{(\Delta h)^4}h$
-+ $\frac{\mathrm ds}{\mathrm dt}=-\frac 3k{h^4}\frac{\mathrm ds}{\mathrm dt}$
-- $\frac{\mathrm ds}{\mathrm dt}=\frac k{h^4}\frac{\mathrm ds}{\mathrm dt}$
-- $\frac{\mathrm ds}{\mathrm dt}=\frac k{h^3}\frac{\mathrm ds}{\mathrm dt}$
++ $\frac{\mathrm ds}{\mathrm dt}=-\frac 3k{h^4}\frac{\mathrm dh}{\mathrm dt}$
+- $\frac{\mathrm ds}{\mathrm dt}=\frac k{h^4}\frac{\mathrm dh}{\mathrm dt}$
+- $\frac{\mathrm ds}{\mathrm dt}=\frac k{h^3}\frac{\mathrm dh}{\mathrm dt}$
 - ¾ádný, obì velièiny jsou nezávislé
 
 Oznaète výpoèet, který není správnì.
@@ -267,6 +267,8 @@ V konstitutivních zákonech dávajících do souvislosti podnìt a odezvu mezi skálár
 - na konstantní funkci
 - nijak, pùjde o obecnou lineární funkci
 - nijak, ¹lo by o nulovou funkci a proto se nepou¾ívá
+- otázka nemá smysl, lineární aproximace materiálových vztahù se nepou¾ívají pro velké chyby zpùsobené takovými aproximacemi
+- otázka nemá smysl, lineární aproximace materiálových vztahù se nepou¾ívají pro nestablitu øe¹ení pøi pou¾ití takovýchto aproximací
 
 Posuïte stabilitu konstantního øe¹ení $y=1$ u rovnice $$y'=1-y.$$
 + Stabilní, proto¾e $y=1$ je nulový bod pravé strany a pravá strana je v tomto bodì rostoucí.
@@ -279,7 +281,7 @@ Posuïte stabilitu konstantního øe¹ení $y=1$ u rovnice $$y'=1-y.$$
 - Nestabilní, proto¾e v bodì $y=1$ je pravá strana záporná a pravá strana je v tomto bodì klesající.
 - Otázka nemá smysl, $y=1$ není stacioárním bodem.
 
-Posuïte stabilitu konstantního øe¹ení $y=1$ u rovnice $$y'=1+y.$$
+Posuïte stabilitu konstantního øe¹ení $y=-1$ u rovnice $$y'=1+y.$$
 - Stabilní, proto¾e $y=-1$ je nulový bod pravé strany a pravá strana je v tomto bodì rostoucí.
 + Nestabilní, proto¾e $y=-1$ je nulový bod pravé strany a pravá strana je v tomto bodì rostoucí.
 - Stabilní, proto¾e $y=-1$ je nulový bod pravé strany a pravá strana je v tomto bodì klesající.
@@ -290,16 +292,16 @@ Posuïte stabilitu konstantního øe¹ení $y=1$ u rovnice $$y'=1+y.$$
 - Nestabilní, proto¾e v bodì $y=-1$ je pravá strana záporná a pravá strana je v tomto bodì klesající.
 - Otázka nemá smysl, $y=-1$ není stacioárním bodem.
 
-Posuïte stabilitu konstantního øe¹ení $y=1$ u rovnice $$y'=1+y.$$
-- Stabilní, proto¾e $y=1$ je nulový bod pravé strany a pravá strana je v tomto bodì rostoucí.
-+ Nestabilní, proto¾e $y=1$ je nulový bod pravé strany a pravá strana je v tomto bodì rostoucí.
-- Stabilní, proto¾e $y=1$ je nulový bod pravé strany a pravá strana je v tomto bodì klesající.
-- Nestabilní, proto¾e $y=1$ je nulový bod pravé strany a pravá strana je v tomto bodì klesající.
-- Stabilní, proto¾e v bodì $y=1$ je pravá strana kladná a pravá strana je v tomto bodì klesající.
-- Stabilní, proto¾e v bodì $y=1$ je pravá strana záporná a pravá strana je v tomto bodì klesající.
-- Nestabilní, proto¾e v bodì $y=1$ je pravá strana kladná a pravá strana je v tomto bodì klesající.
-- Nestabilní, proto¾e v bodì $y=1$ je pravá strana záporná a pravá strana je v tomto bodì klesající.
-- Otázka nemá smysl, $y=1$ není stacioárním bodem.
+Posuïte stabilitu konstantního øe¹ení $y=-1$ u rovnice $$y'=1-y.$$
+- Stabilní, proto¾e $y=-1$ je nulový bod pravé strany a pravá strana je v tomto bodì rostoucí.
+- Nestabilní, proto¾e $y=-1$ je nulový bod pravé strany a pravá strana je v tomto bodì rostoucí.
+- Stabilní, proto¾e $y=-1$ je nulový bod pravé strany a pravá strana je v tomto bodì klesající.
+- Nestabilní, proto¾e $y=-1$ je nulový bod pravé strany a pravá strana je v tomto bodì klesající.
+- Stabilní, proto¾e v bodì $y=-1$ je pravá strana kladná a pravá strana je v tomto bodì klesající.
+- Stabilní, proto¾e v bodì $y=-1$ je pravá strana záporná a pravá strana je v tomto bodì klesající.
+- Nestabilní, proto¾e v bodì $y=-1$ je pravá strana kladná a pravá strana je v tomto bodì klesající.
+- Nestabilní, proto¾e v bodì $y=-1$ je pravá strana záporná a pravá strana je v tomto bodì klesající.
++ Otázka nemá smysl, $y=-1$ není stacioárním bodem.
 
 Odvoïte iteraèní schema pro øe¹ení rovnice $$x+e^x-1=0$$
 Newtonovou metodou.
@@ -328,3 +330,77 @@ Rychlost s jakou klesá mno¾ství vody $M$ ve døevì pøi zanedbání difuze je úmìrná
 - $\frac{\mathrm dM}{\mathrm dt}(M-M_0)=0$
 - $\frac{\mathrm dM}{\mathrm dt}(M-M_0)=k$
 - $\frac{\mathrm dM}{\mathrm dt}(M-M_0)=-k$
+
+Vyberte výpoèet, který není správnì.
+- $\frac{\mathrm d}{\mathrm dt}\left(9t^2\right)=18t$
+- $\frac{\mathrm d}{\mathrm dr}\left(\frac{2}{r^5}\right)=-\frac{10}{r^6}$
+- $\frac{\mathrm d}{\mathrm dx}\left(2+\sqrt x\right)=\frac{1}{2\sqrt {x}}$
+- $\frac{\mathrm d}{\mathrm da}\left(6a\right)=6$
+- $\frac{\mathrm d}{\mathrm dx}\left(e^{-x}\right)=-e^{-x}$
++ $\frac{\mathrm d}{\mathrm dt}\left(t+\sqrt t\right)=\frac 1{\sqrt t}t$
+- $\frac{\mathrm d}{\mathrm dx}\left(\frac 13 x^4\right)=\frac 43 x^{3}$
+
+Vyberte výpoèet, který není správnì.
++ $\frac{\mathrm d}{\mathrm dt}\left(9t^2\right)=18$
+- $\frac{\mathrm d}{\mathrm dr}\left(\frac{2}{r^5}\right)=-\frac{10}{r^6}$
+- $\frac{\mathrm d}{\mathrm dx}\left(2+\sqrt x\right)=\frac{1}{2\sqrt {x}}$
+- $\frac{\mathrm d}{\mathrm da}\left(6a\right)=6$
+- $\frac{\mathrm d}{\mathrm dx}\left(e^{-x}\right)=-e^{-x}$
+- $\frac{\mathrm d}{\mathrm dt}\left(t+\sqrt t\right)=1+\frac 1{2\sqrt t}t$
+- $\frac{\mathrm d}{\mathrm dx}\left(\frac 13 x^4\right)=\frac 43 x^{3}$
+
+Vyberte výpoèet, který není správnì.
+- $\frac{\mathrm d}{\mathrm dt}\left(9t^2\right)=18t$
++ $\frac{\mathrm d}{\mathrm dr}\left(\frac{2}{r^5}\right)=\frac{8}{r^4}$
+- $\frac{\mathrm d}{\mathrm dx}\left(2+\sqrt x\right)=\frac{1}{2\sqrt {x}}$
+- $\frac{\mathrm d}{\mathrm da}\left(6a\right)=6$
+- $\frac{\mathrm d}{\mathrm dx}\left(e^{-x}\right)=-e^{-x}$
+- $\frac{\mathrm d}{\mathrm dt}\left(t+\sqrt t\right)=1+\frac 1{2\sqrt t}t$
+- $\frac{\mathrm d}{\mathrm dx}\left(\frac 13 x^4\right)=\frac 43 x^{3}$
+
+Vyberte výpoèet, který není správnì.
+- $\frac{\mathrm d}{\mathrm dt}\left(9t^2\right)=18t$
+- $\frac{\mathrm d}{\mathrm dr}\left(\frac{2}{r^5}\right)=-\frac{10}{r^6}$
++ $\frac{\mathrm d}{\mathrm dx}\left(2+\sqrt x\right)=x+\frac{1}{2\sqrt {x}}$
+- $\frac{\mathrm d}{\mathrm da}\left(6a\right)=6$
+- $\frac{\mathrm d}{\mathrm dx}\left(e^{-x}\right)=-e^{-x}$
+- $\frac{\mathrm d}{\mathrm dt}\left(t+\sqrt t\right)=1+\frac 1{2\sqrt t}t$
+- $\frac{\mathrm d}{\mathrm dx}\left(\frac 13 x^4\right)=\frac 43 x^{3}$
+
+Vyberte výpoèet, který není správnì.
+- $\frac{\mathrm d}{\mathrm dt}\left(9t^2\right)=18t$
+- $\frac{\mathrm d}{\mathrm dr}\left(\frac{2}{r^5}\right)=-\frac{10}{r^6}$
+- $\frac{\mathrm d}{\mathrm dx}\left(2+\sqrt x\right)=\frac{1}{2\sqrt {x}}$
++ $\frac{\mathrm d}{\mathrm da}\left(6a\right)=3a^2$
+- $\frac{\mathrm d}{\mathrm dx}\left(e^{-x}\right)=-e^{-x}$
+- $\frac{\mathrm d}{\mathrm dt}\left(t+\sqrt t\right)=1+\frac 1{2\sqrt t}t$
+- $\frac{\mathrm d}{\mathrm dx}\left(\frac 13 x^4\right)=\frac 43 x^{3}$
+
+Vyberte výpoèet, který není správnì.
+- $\frac{\mathrm d}{\mathrm dt}\left(9t^2\right)=18t$
+- $\frac{\mathrm d}{\mathrm dr}\left(\frac{2}{r^5}\right)=-\frac{10}{r^6}$
+- $\frac{\mathrm d}{\mathrm dx}\left(2+\sqrt x\right)=\frac{1}{2\sqrt {x}}$
+- $\frac{\mathrm d}{\mathrm da}\left(6a\right)=6$
++ $\frac{\mathrm d}{\mathrm dx}\left(e^{-x}\right)=e^{-x}$
+- $\frac{\mathrm d}{\mathrm dt}\left(t+\sqrt t\right)=1+\frac 1{2\sqrt t}t$
+- $\frac{\mathrm d}{\mathrm dx}\left(\frac 13 x^4\right)=\frac 43 x^{3}$
+
+Vyberte výpoèet, který není správnì.
+- $\frac{\mathrm d}{\mathrm dt}\left(9t^2\right)=18t$
+- $\frac{\mathrm d}{\mathrm dr}\left(\frac{2}{r^5}\right)=-\frac{10}{r^6}$
+- $\frac{\mathrm d}{\mathrm dx}\left(2+\sqrt x\right)=\frac{1}{2\sqrt {x}}$
+- $\frac{\mathrm d}{\mathrm da}\left(6a\right)=6$
+- $\frac{\mathrm d}{\mathrm dx}\left(e^{-x}\right)=-e^{-x}$
+- $\frac{\mathrm d}{\mathrm dt}\left(t+\sqrt t\right)=1+\frac 1{2\sqrt t}t$
++ $\frac{\mathrm d}{\mathrm dx}\left(\frac 13 x^4\right)=x^{5}$
+
+Urèete lineární aproximaci funkce $y=x^2-1+\sin x$ v bodì $x=0$.
++ $y=x-1$
+- $y=x^2-1$
+- $y=1-\sin x$
+- $y=2(x-1)$
+- Lineární aproximaci není mo¾né napsat, proto¾e funkce sinus je oscilatorická.
+- Lineární aproximaci není mo¾né napsat, proto¾e funkce $x^2$ má v nule lokální minimum.
+- Lineární aproximaci není mo¾né napsat, proto¾e funkce je sudá.
+
+
