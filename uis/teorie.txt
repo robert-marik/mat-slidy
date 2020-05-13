@@ -1,8 +1,8 @@
 V troubì tepelnì modifikujete døevo ve tvaru krychle. Do støedu krychle máte zavedený teplomìr. Mìøíte teplotu $T$ jako funkci èasu $t$. Jaká je slovní interpretace derivace této funkce, tj. $\frac{\mathrm dT}{\mathrm dt}$?
-+pøibli¾ná zmìna teploty ve støedu krychle za jednotku èasu
--pøibli¾ná prùmìrná zmìna teploty v krychli za jednotku èasu
--pøibli¾ná doba, za kterou se zmìní teplota o jednotku teploty
--pøibli¾ná okam¾itá rychlost s jakou roste teplota v peci
++zmìna teploty ve støedu krychle za jednotku èasu
+-prùmìrná zmìna teploty v krychli za jednotku èasu
+-doba, za kterou se zmìní teplota o jednotku teploty
+-okam¾itá rychlost s jakou roste teplota v peci
 -celková zmìna teploty uprostøed krychle za celou dobu prùbìhu pokusu
 
 Oznaète implikaci, která je definièním vztahem prosté funkce
@@ -76,7 +76,7 @@ Jednotková matice
 -má v hlavní diagonále nuly a v¹ude jinde jednièky
 -obsahuje jeden øádek a jeden sloupec
 
-Buï $A$ ètvercová matice. Oznaète vztah, který je definicí matice inverzní $A^{-1}$. Matice $I$ je jednotková matice. Pøedpokládejme ¾e matice jsou takové, ¾e v¹echny maticové souèiny  mají smysl.
+Buï $A$ ètvercová matice. Oznaète vztah, který je definicí inverzní matice $A^{-1}$. Matice $I$ je jednotková matice. Pøedpokládejme ¾e matice jsou takové, ¾e v¹echny maticové souèiny  mají smysl.
 +$AA^{-1}=I$ a $A^{-1}A=I$
 -$AA^{-1}=A$ a $A^{-1}A=I$
 -$AA^{-1}=I$ a $A^{-1}A=A$
@@ -85,7 +85,7 @@ Buï $A$ ètvercová matice. Oznaète vztah, který je definicí matice inverzní $A^{-
 -$A^{-1}I=A$ a  $IA^{-1}=I$
 -$A^{-1}A^{-1}=A$ a  $AA=A^{-1}$
 
-Uva¾ujme soustavu lineárních rovnic s maticí soustavy $A$, sloupcovým vektorem pravých stran $B$ a sloupcovým vektorem neznámých $X$. Vyberte správnou mo¾nost, jak lze tuto soustavu zapsat pomocí maticového souèinu.
+Uva¾ujme soustavu lineárních rovnic s maticí soustavy $A$, sloupcovým vektorem pravých stran $B$ a sloupcovým vektorem neznámých $X$. Vyberte správnou mo¾nost, jak lze tuto soustavu zapsat pomocí maticového souèinu. 
 +$AX=B$
 -$A+X=B$
 -$XA=B$
@@ -95,7 +95,7 @@ Uva¾ujme soustavu lineárních rovnic s maticí soustavy $A$, sloupcovým vektorem p
 -$X=BA$
 -$X=A+B$
 
-Uva¾ujme tenzor napìtí nebo libovolné zobrazení reprezentované ètvercovou $2\times 2$ maticí $A\in\mathbb R^{2\times 2}$. Jak bude vypadat matice matice zobrazení po otoèení o úhel $\theta$ proti smìru hodinových ruèièek? Matice $R(\theta)$ popisuje pootoèení o úhel $\theta$ proti smìru hodinových ruèièek.
+Uva¾ujme tenzor napìtí nebo libovolné zobrazení reprezentované ètvercovou $2\times 2$ maticí $A\in\mathbb R^{2\times 2}$. Jak bude vypadat matice zobrazení otoèení o úhel $\theta$ proti smìru hodinových ruèièek? Matice $R(\theta)$ popisuje pootoèení o úhel $\theta$ proti smìru hodinových ruèièek.
 + $R(-\theta)AR(\theta)$
 - $AR(\theta)$
 - $R(\theta)A$
@@ -104,7 +104,7 @@ Uva¾ujme tenzor napìtí nebo libovolné zobrazení reprezentované ètvercovou $2\tim
 
 Uva¾ujme matici $R(\theta)$ popisující rotaci o úhel $\theta$ proti smìru hodinových ruèièek. Má tato matice inverzní matici?
 + Ano, inverzní matice popisuje otoèení v opaèném smìru, tj. o úhel $-\theta$.
-- Ano, matice inverzní je inverzní sama k sobì.
+- Ano, matice rotace je inverzní sama k sobì.
 - Ano, ale pouze pøi otoèení o úhel, který je celoèíselným násobkem $\pi$.
 - Ne, proto¾e matice nemá vlastní smìry.
 - Ne, proto¾e matice má právì dva rùzné vlastní smìry.
@@ -118,12 +118,12 @@ Za jaké podmínky má úloha $$A\vec u=\lambda \vec u$$ na vlastní vektory a vlastn
 - Pokud má matice $A$ nulový determinant.
 - Pokud má matice $A$ nenulový determinant.
 
-Uva¾ujme soustavu lineárních rovnic s ètvercovou maticí soustavy $A$, sloupcovým vektorem pravých stran $B$ a sloupcovým vektorem neznámých $X$. Co mù¾eme øíct o øe¹itelnosti této soustavy.
+Uva¾ujme soustavu lineárních rovnic s ètvercovou maticí soustavy $A$, sloupcovým vektorem pravých stran $B$ a sloupcovým vektorem neznámých $X$. Co mù¾eme øíct o øe¹itelnosti této soustavy. Pøedpokládejme, ¾e v¹echny inverzní matice existují, pokud mají smysl.
 + Soustava má jediné øe¹ení vyjádøené vzorcem $X=A^{-1}B$.
 - Soustava má nekoneènì mnoho øe¹ení a v¹echna øe¹ení splòují relaci $X=\frac{B}{A}$.
 - Soustava má jediné øe¹ení vyjádøené vzorcem $X=A B^{-1}$.
 - Soustava má nekoneènì mnoho øe¹ení vyjádøených vzorcem $X=A B^{-1}$.
-- Soustava má nekoneènì mnoho øe¹ení. Není k dispozici vzorec pro jejich jednotné vyjádøení.
+- Soustava má nekoneènì mnoho øe¹ení vyjádøených vzorcem $X=B-A$.
 
 Maticový souèin
 +je asociativní, není komutativní
@@ -162,7 +162,7 @@ V èem je výhoda znalosti vlastních smìrù matice popisující materiálové vlastnost
 - Matici je mo¾no transformovat s vyu¾itím inverzní matice.
 - Matice je antisymetrická.
 
-Jak byste charakterizovali difuzní rovnici ve tvaru $$\frac{\partial u}{\partial t}=\nabla\cdot(D\nabla u)?$$
+Co lze s jistotou øíci o difuzní rovnici ve tvaru $$\frac{\partial u}{\partial t}=\nabla\cdot(D\nabla u)?$$
 - stacionární
 + bezzdrojová
 - jednorozmìrná
@@ -170,7 +170,7 @@ Jak byste charakterizovali difuzní rovnici ve tvaru $$\frac{\partial u}{\partial
 - trojrozmìrná
 - izotropní
 
-Jak byste v difuzní rovnici $$\frac{\partial u}{\partial t}=\nabla\cdot(D\nabla u)+\sigma$$ slovnì intepretovali èlen na levé stranì rovnice?
+Jak byste v difuzní rovnici $$\frac{\partial u}{\partial t}=\nabla\cdot(D\nabla u)+\sigma$$ slovnì interpretovali èlen na levé stranì rovnice?
 + rychlost rùstu hustoty stavové velièiny, tj. zmìna mno¾ství stavové velièiny v jednotkovém objemu látky za jednotku èasu
 - rychlost poklesu hustoty stavové velièiny, tj. mno¾ství stavové velièiny, které ubude v jednotkovém objemu látky za jednotku èasu
 - úbytek toku pøená¹ejícího stavovou velièinu, tedy èást toku, která za jednotku èasu zùstane v jednotkovém objemu 
@@ -178,7 +178,7 @@ Jak byste v difuzní rovnici $$\frac{\partial u}{\partial t}=\nabla\cdot(D\nabla 
 - výkon ze zdrojù, tj. mno¾ství stavové velièiny, které v jednotkovém objemu za jednotku èasu vygenerují zdroje (spotøebièe bereme jako zdroje se záporným výkonem)
 - výkon ze spotøebièù, tj. mno¾ství stavové velièiny, které v jednotkovém objemu za jednotku èasu spotøebují spotøebièe (zdroje bereme jako spotøebièe se záporným výkonem)
 
-Jak byste v difuzní rovnici $$\frac{\partial u}{\partial t}=\nabla\cdot(D\nabla u)+\sigma$$ slovnì intepretovali èlen $\nabla\cdot(D\nabla u)$ na pravé stranì rovnice?
+Jak byste v difuzní rovnici $$\frac{\partial u}{\partial t}=\nabla\cdot(D\nabla u)+\sigma$$ slovnì interpretovali èlen $\nabla\cdot(D\nabla u)$ na pravé stranì rovnice?
 - rychlost rùstu hustoty stavové velièiny, tj. zmìna mno¾ství stavové velièiny v jednotkovém objemu látky za jednotku èasu
 - rychlost poklesu hustoty stavové velièiny, tj. mno¾ství stavové velièiny, které ubude v jednotkovém objemu látky za jednotku èasu
 + úbytek toku pøená¹ejícího stavovou velièinu, tedy mno¾ství stavové velièiny, která za jednotku èasu zùstane v jednotkovém objemu 
@@ -186,7 +186,7 @@ Jak byste v difuzní rovnici $$\frac{\partial u}{\partial t}=\nabla\cdot(D\nabla 
 - výkon ze zdrojù, tj. mno¾ství stavové velièiny, které v jednotkovém objemu za jednotku èasu vygenerují zdroje (spotøebièe bereme jako zdroje se záporným výkonem)
 - výkon ze spotøebièù, tj. mno¾ství stavové velièiny, které v jednotkovém objemu za jednotku èasu spotøebují spotøebièe (zdroje bereme jako spotøebièe se záporným výkonem)
 
-Jak byste v difuzní rovnici $$\frac{\partial u}{\partial t}=\nabla\cdot(D\nabla u)+\sigma$$ slovnì intepretovali èlen $\sigma$ na pravé stranì rovnice?
+Jak byste v difuzní rovnici $$\frac{\partial u}{\partial t}=\nabla\cdot(D\nabla u)+\sigma$$ slovnì interpretovali èlen $\sigma$ na pravé stranì rovnice?
 - rychlost rùstu hustoty stavové velièiny, tj. zmìna mno¾ství stavové velièiny v jednotkovém objemu látky za jednotku èasu
 - rychlost poklesu hustoty stavové velièiny, tj. mno¾ství stavové velièiny, které ubude v jednotkovém objemu látky za jednotku èasu
 - úbytek toku pøená¹ejícího stavovou velièinu, tedy èást toku, která za jednotku èasu zùstane v jednotkovém objemu 
@@ -194,15 +194,16 @@ Jak byste v difuzní rovnici $$\frac{\partial u}{\partial t}=\nabla\cdot(D\nabla 
 + výkon ze zdrojù, tj. mno¾ství stavové velièiny, které v jednotkovém objemu za jednotku èasu vygenerují zdroje (spotøebièe bereme jako zdroje se záporným výkonem)
 - výkon ze spotøebièù, tj. mno¾ství stavové velièiny, které v jednotkovém objemu za jednotku èasu spotøebují spotøebièe (zdroje bereme jako spotøebièe se záporným výkonem)
 
-Jak byste charakterizovali difuzní rovnici ve tvaru $$\frac{\partial u}{\partial t}=\frac{\partial}{\partial x}\left(D_x\frac{\partial u}{\partial x}\right)+\frac{\partial}{\partial y}\left(D_y\frac{\partial u}{\partial y}\right)?$$
+Co lze s jistotou øíci o difuzní rovnici ve tvaru  $$\frac{\partial u}{\partial t}=\frac{\partial}{\partial x}\left(D_x\frac{\partial u}{\partial x}\right)+\frac{\partial}{\partial y}\left(D_y\frac{\partial u}{\partial y}\right)?$$
 - stacionární
-- bezzdrojová
+- prostá
+- rostoucí
 - jednorozmìrná
 + dvourozmìrná
 - trojrozmìrná
 - izotropní
 
-Jak byste charakterizovali difuzní rovnici ve tvaru $$0=\nabla\cdot(D\nabla u)+\sigma?$$
+Co lze s jistotou øíci o difuzní rovnici ve tvaru  $$0=\nabla\cdot(D\nabla u)+\sigma?$$
 + stacionární
 - bezzdrojová
 - jednorozmìrná
@@ -211,7 +212,7 @@ Jak byste charakterizovali difuzní rovnici ve tvaru $$0=\nabla\cdot(D\nabla u)+\
 - izotropní
 
 Co v jednorozmìrné rovnici vedení tepla $$\rho c\frac{\partial T}{\partial t}=\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)$$ vyjadøuje èlen na levé stranì rovnice?
-+ Rychlost zmìny hustoty vnitøní enerige v èase, tj. zmìna vnitøní energie v jednotkové délce za jednotku èasu.
++ Rychlost zmìny hustoty vnitøní energie v èase, tj. zmìna vnitøní energie v jednotkové délce za jednotku èasu.
 - Rychlost rùstu teploty v èase, tj. nárùst teploty v daném místì za jednotku èasu.
 - Jednorozmìrný gradient teploty, tj. rychlost rùstu teploty ve smìru osy $x$.
 - Tok tepla ve smìru osy $x$, tj. mno¾ství tepla, které projde za jednotku èasu daným místem ve smìru osy $x$.
@@ -221,7 +222,7 @@ Co v jednorozmìrné rovnici vedení tepla $$\rho c\frac{\partial T}{\partial t}=\f
 - Prùmìrnou teplotu podél celé délky studovaného jednorozmìrného objektu.
 
 Co v jednorozmìrné rovnici vedení tepla $$\rho c\frac{\partial T}{\partial t}=\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)$$ vyjadøuje èlen na pravé stranì rovnice?
-- Rychlost zmìny hustoty vnitøní enerige v èase, tj. zmìna vnitøní energie v jednotkové délce za jednotku èasu.
+- Rychlost zmìny hustoty vnitøní energie v èase, tj. zmìna vnitøní energie v jednotkové délce za jednotku èasu.
 - Rychlost rùstu teploty v èase, tj. nárùst teploty v daném místì za jednotku èasu.
 - Jednorozmìrný gradient teploty, tj. rychlost rùstu teploty ve smìru osy $x$.
 - Tok tepla ve smìru osy $x$, tj. mno¾ství tepla, které projde za jednotku èasu daným místem ve smìru osy $x$.
@@ -237,7 +238,7 @@ Co v jednorozmìrné rovnici vedení tepla $$\rho c\frac{\partial T}{\partial t}=\f
 - Zápornì vzatou jednorozmìrnou divergenci toku tepla, tj. velièinu mìøící míru, s jakou tok v daném místì slábne.
 
 Co v jednorozmìrné rovnici vedení tepla $$\rho c\frac{\partial T}{\partial t}=\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)$$ vyjadøuje èlen $\frac{\partial T}{\partial x}$?
-- Rychlost zmìny hustoty vnitøní enerige v èase, tj. zmìna vnitøní energie v jednotkové délce za jednotku èasu.
+- Rychlost zmìny hustoty vnitøní energie v èase, tj. zmìna vnitøní energie v jednotkové délce za jednotku èasu.
 - Rychlost rùstu teploty v èase, tj. nárùst teploty v daném místì za jednotku èasu.
 + Jednorozmìrný gradient teploty, tj. rychlost rùstu teploty ve smìru osy $x$.
 - Tok tepla ve smìru osy $x$, tj. mno¾ství tepla, které projde za jednotku èasu daným místem ve smìru osy $x$.
@@ -251,6 +252,102 @@ Co v jednorozmìrné rovnici vedení tepla $$\rho c\frac{\partial T}{\partial t}=\f
 + Zápornì vzatý tok tepla ve smìru osy $x$, tj. mno¾ství tepla, které projde za jednotku èasu daným místem proti smìru osy $x$.
 - Jednorozmìrnou divergenci toku tepla, tj. velièinu mìøící míru, s jakou tok v daném místì nabývá na intenzitì.
 - Zápornì vzatou jednorozmìrnou divergenci toku tepla, tj. velièinu mìøící míru, s jakou tok v daném místì slábne.
+
+Uva¾ujme jednorozmìrnou rovnici vedení tepla $$\rho c\frac{\partial T}{\partial t}=\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right).$$ Fyzikální interpretace je snaz¹í pro rovnici ve tvaru $$\rho c\frac{\partial T}{\partial t}=-\frac{\partial}{\partial x}\left(-k\frac{\partial T}{\partial x}\right).$$ Která èást tohoto vzorce vyjadøuje rychlost, s jakou se v èase mìní teplota v daném místì?
++ $\frac{\partial T}{\partial t}$
+- $\rho c\frac{\partial T}{\partial t}$
+- $\frac{\partial T}{\partial x}$
+- $-k\frac{\partial T}{\partial x}$
+- $\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)$
+
+Uva¾ujme jednorozmìrnou rovnici vedení tepla $$\rho c\frac{\partial T}{\partial t}=\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right).$$ Fyzikální interpretace je snaz¹í pro rovnici ve tvaru $$\rho c\frac{\partial T}{\partial t}=-\frac{\partial}{\partial x}\left(-k\frac{\partial T}{\partial x}\right).$$ Která èást tohoto vzorce vyjadøuje rychlost, s jakou ve smìru osy $x$ roste teplota v daném místì?
+- $\frac{\partial T}{\partial t}$
+- $\rho c\frac{\partial T}{\partial t}$
++ $\frac{\partial T}{\partial x}$
+- $-k\frac{\partial T}{\partial x}$
+- $\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)$
+
+Uva¾ujme jednorozmìrnou rovnici vedení tepla $$\rho c\frac{\partial T}{\partial t}=\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right).$$ Fyzikální interpretace je snaz¹í pro rovnici ve tvaru $$\rho c\frac{\partial T}{\partial t}=-\frac{\partial}{\partial x}\left(-k\frac{\partial T}{\partial x}\right).$$ Která èást tohoto vzorce vyjadøuje tok tepla ve smìru osy $x$ v daném místì?
+- $\frac{\partial T}{\partial t}$
+- $\rho c\frac{\partial T}{\partial t}$
+- $\frac{\partial T}{\partial x}$
++ $-k\frac{\partial T}{\partial x}$
+- $-\frac{\partial}{\partial x}\left(-k\frac{\partial T}{\partial x}\right)$
+
+Uva¾ujme jednorozmìrnou rovnici vedení tepla $$\rho c\frac{\partial T}{\partial t}=\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right).$$ Fyzikální interpretace je snaz¹í pro rovnici ve tvaru $$\rho c\frac{\partial T}{\partial t}=-\frac{\partial}{\partial x}\left(-k\frac{\partial T}{\partial x}\right).$$ Která èást tohoto vzorce vyjadøuje zeslabení toku tepla v daném místì?
+- $\frac{\partial T}{\partial t}$
+- $\rho c\frac{\partial T}{\partial t}$
+- $\frac{\partial T}{\partial x}$
+- $-k\frac{\partial T}{\partial x}$
++ $-\frac{\partial}{\partial x}\left(-k\frac{\partial T}{\partial x}\right)$
+
+Uva¾ujme stìnu v ní¾ popisujeme tok tepla pomocí jednorozmìrné rovnice vedení tepla, tj. $$\rho c\frac{\partial T}{\partial t}=\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right).$$ Hodnotì $x=0$ odpovídá vnitøní strana stìny, hodnotì $x=L$ vnìj¹í. Jak matematicky naformulujeme okrajovou podmínku, vyjadøující to, ¾e teplota vnitøní strany stìny je konstantní?
++ Zadáme hodnotu $T$ pro $x=0$.
+- Zadáme hodnotu $T$ pro $x=L$.
+- Zadáme nenulový tok $-k\frac{\partial T}{\partial x}$ pro $x=0$.
+- Zadáme nenulový tok $-k\frac{\partial T}{\partial x}$ pro $x=L$.
+- Zadáme nulový tok $-k\frac{\partial T}{\partial x}$ pro $x=0$.
+- Zadáme nulový tok $-k\frac{\partial T}{\partial x}$ pro $x=L$.
+- Zadáme nulovou zmìnu toku $\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)$ pro $x=0$.
+- Zadáme nulovou zmìnu toku $\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)$ pro $x=L$.
+
+Uva¾ujme stìnu v ní¾ popisujeme tok tepla pomocí jednorozmìrné rovnice vedení tepla, tj. $$\rho c\frac{\partial T}{\partial t}=\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right).$$ Hodnotì $x=0$ odpovídá vnitøní strana stìny, hodnotì $x=L$ vnìj¹í. Jak matematicky naformulujeme okrajovou podmínku, vyjadøující to, ¾e teplota vnìj¹í strany stìny je konstantní?
+- Zadáme hodnotu $T$ pro $x=0$.
++ Zadáme hodnotu $T$ pro $x=L$.
+- Zadáme tok $-k\frac{\partial T}{\partial x}$ pro $x=0$.
+- Zadáme tok $-k\frac{\partial T}{\partial x}$ pro $x=L$.
+- Zadáme nulovou zmìnu toku $\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)$ pro $x=0$.
+- Zadáme nulovou zmìnu toku $\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)$ pro $x=L$.
+- Zadáme nulový tok $-k\frac{\partial T}{\partial x}$ pro $x=0$.
+- Zadáme nulový tok $-k\frac{\partial T}{\partial x}$ pro $x=L$.
+
+Uva¾ujme stìnu v ní¾ popisujeme tok tepla pomocí jednorozmìrné rovnice vedení tepla, tj. $$\rho c\frac{\partial T}{\partial t}=\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right).$$ Hodnotì $x=0$ odpovídá vnitøní strana stìny, hodnotì $x=L$ vnìj¹í. Jak matematicky naformulujeme okrajovou podmínku, vyjadøující to, ¾e vnìj¹í strana je dokonale izolovaná?
+- Zadáme hodnotu $T$ pro $x=0$.
+- Zadáme hodnotu $T$ pro $x=L$.
+- Zadáme nenulový tok $-k\frac{\partial T}{\partial x}$ pro $x=0$.
+- Zadáme nenulový tok $-k\frac{\partial T}{\partial x}$ pro $x=L$.
+- Zadáme nulový tok $-k\frac{\partial T}{\partial x}$ pro $x=0$.
++ Zadáme nulový tok $-k\frac{\partial T}{\partial x}$ pro $x=L$.
+- Zadáme derivaci $\frac{\partial T}{\partial t}$ pro $x=0$.
+- Zadáme derivaci $\frac{\partial T}{\partial t}$ pro $x=L$.
+- Zadáme zmìnu toku $\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)$ pro $x=0$.
+- Zadáme zmìnu toku $\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)$ pro $x=L$.
+
+Uva¾ujme stìnu v ní¾ popisujeme tok tepla pomocí jednorozmìrné rovnice vedení tepla, tj. $$\rho c\frac{\partial T}{\partial t}=\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right).$$ Hodnotì $x=0$ odpovídá vnitøní strana stìny, hodnotì $x=L$ vnìj¹í. Jak matematicky naformulujeme okrajovou podmínku, vyjadøující to, ¾e na vnitøní stranì je známou rychlostí dodáváno teplo?
+- Zadáme hodnotu $T$ pro $x=0$.
+- Zadáme hodnotu $T$ pro $x=L$.
++ Zadáme nenulový tok $-k\frac{\partial T}{\partial x}$ pro $x=0$.
+- Zadáme nenulový tok $-k\frac{\partial T}{\partial x}$ pro $x=L$.
+- Zadáme nulový tok $-k\frac{\partial T}{\partial x}$ pro $x=0$.
+- Zadáme nulový tok $-k\frac{\partial T}{\partial x}$ pro $x=L$.
+- Zadáme derivaci $\frac{\partial T}{\partial t}$ pro $x=0$.
+- Zadáme derivaci $\frac{\partial T}{\partial t}$ pro $x=L$.
+- Zadáme zmìnu toku $\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)$ pro $x=0$.
+- Zadáme zmìnu toku $\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)$ pro $x=L$.
+
+Uva¾ujme stìnu v ní¾ popisujeme tok tepla pomocí jednorozmìrné rovnice vedení tepla, tj. $$\rho c\frac{\partial T}{\partial t}=\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right).$$ Hodnotì $x=0$ odpovídá vnitøní strana stìny, hodnotì $x=L$ vnìj¹í. Jak matematicky naformulujeme okrajovou podmínku, vyjadøující to, ¾e na vnìj¹í stranì je známou rychlostí dodáváno teplo?
+- Zadáme hodnotu $T$ pro $x=0$.
+- Zadáme hodnotu $T$ pro $x=L$.
+- Zadáme nenulový tok $-k\frac{\partial T}{\partial x}$ pro $x=0$.
++ Zadáme nenulový tok $-k\frac{\partial T}{\partial x}$ pro $x=L$.
+- Zadáme nulový tok $-k\frac{\partial T}{\partial x}$ pro $x=0$.
+- Zadáme nulový tok $-k\frac{\partial T}{\partial x}$ pro $x=L$.
+- Zadáme derivaci $\frac{\partial T}{\partial t}$ pro $x=0$.
+- Zadáme derivaci $\frac{\partial T}{\partial t}$ pro $x=L$.
+- Zadáme zmìnu toku $\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)$ pro $x=0$.
+- Zadáme zmìnu toku $\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)$ pro $x=L$.
+
+Uva¾ujme stìnu v ní¾ popisujeme tok tepla pomocí jednorozmìrné rovnice vedení tepla, tj. $$\rho c\frac{\partial T}{\partial t}=\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right).$$ Hodnotì $x=0$ odpovídá vnitøní strana stìny, hodnotì $x=L$ vnìj¹í. Jak matematicky naformulujeme okrajovou podmínku, vyjadøující to, ¾e na vnìj¹í stranì je známou rychlostí odebíráno teplo?
+- Zadáme hodnotu $T$ pro $x=0$.
+- Zadáme hodnotu $T$ pro $x=L$.
+- Zadáme nenulový tok $-k\frac{\partial T}{\partial x}$ pro $x=0$.
++ Zadáme nenulový tok $-k\frac{\partial T}{\partial x}$ pro $x=L$.
+- Zadáme nulový tok $-k\frac{\partial T}{\partial x}$ pro $x=0$.
+- Zadáme nulový tok $-k\frac{\partial T}{\partial x}$ pro $x=L$.
+- Zadáme nulovou derivaci $\frac{\partial T}{\partial t}$ pro $x=0$.
+- Zadáme nenulovou derivaci $\frac{\partial T}{\partial t}$ pro $x=L$.
+- Zadáme zmìnu toku $\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)$ pro $x=0$.
+- Zadáme zmìnu toku $\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)$ pro $x=L$.
 
 Vyberte vztah pou¾itelný pro lineární aproximaci funkce jedné promìnné v daném bodì.
 + $f(x)\approx f(a)+f'(a)(x-a)$
@@ -330,34 +427,34 @@ Co vyjadøuje výraz $\frac{f(x+h)-2f(x)+f(x-h)}{h^2}$?
 - Numerickou aproximaci derivace pomocí dopøedné diference.
 - Numerickou aproximaci derivace pomocí centrální diference.
 - Dal¹í iteraci v Newtonovì metodì hledání nulových bodù.
-- Numerickou aproximaci urèitého integrál u pomocí lichobì¾níkového pravidla.
+- Numerickou aproximaci urèitého integrálu pomocí lichobì¾níkového pravidla.
 
 Co vyjadøuje výraz $\frac{f(x+h)-f(x)}{h}$?
 - Numerickou aproximaci druhé derivace.
 + Numerickou aproximaci derivace pomocí dopøedné diference.
 - Numerickou aproximaci derivace pomocí centrální diference.
 - Dal¹í iteraci v Newtonovì metodì hledání nulových bodù.
-- Numerickou aproximaci urèitého integrál u pomocí lichobì¾níkového pravidla.
+- Numerickou aproximaci urèitého integrálu pomocí lichobì¾níkového pravidla.
 
-Co vyjadøuje výraz $\frac{f(x+h)-f(x-h)}{h}$?
+Co vyjadøuje výraz $\frac{f(x+h)-f(x-h)}{2h}$?
 - Numerickou aproximaci druhé derivace.
 - Numerickou aproximaci derivace pomocí dopøedné diference.
 + Numerickou aproximaci derivace pomocí centrální diference.
 - Dal¹í iteraci v Newtonovì metodì hledání nulových bodù.
-- Numerickou aproximaci urèitého integrál u pomocí lichobì¾níkového pravidla.
+- Numerickou aproximaci urèitého integrálu pomocí lichobì¾níkového pravidla.
 
-Co vyjadøuje výraz $x-\frac{f'(x)}{f(x)}$?
+Co vyjadøuje výraz $x-\frac{f(x)}{f'(x)}$?
 - Numerickou aproximaci druhé derivace.
 - Numerickou aproximaci derivace pomocí dopøedné diference.
 - Numerickou aproximaci derivace pomocí centrální diference.
 + Dal¹í iteraci v Newtonovì metodì hledání nulových bodù.
-- Numerickou aproximaci urèitého integrál u pomocí lichobì¾níkového pravidla.
+- Numerickou aproximaci urèitého integrálu pomocí lichobì¾níkového pravidla.
 
 Jak souvisí derivace se monotonií (rùstem nebo klesáním)?
 + Má-li funkce kladnou derivaci, je rostoucí.
 - Je-li funkce rostoucí, má kladnou derivaci.
 - Má-li funkce zápornou derivaci, je rostoucí.
-- Je-li funkce rostoucí, má kladnou zápornou.
+- Je-li funkce rostoucí, má zápornou derivaci.
 - Oba pojmy spolu nesouvisí a jsou nezávislé.
 
 Pøi studiu transportních jevù, pøi odvození difuzní rovnice, hraje významnou roli konstitutivní vztah. Jak byste jeho význam charakterizovali slovnì?
@@ -396,7 +493,7 @@ Co slovnì vyjadøuje  Bolzanova vìta?
 - Spojitá funkce, která mìní znaménko, má mezi znaménkovými zmìnami maximum.
 - Ka¾dá funkce, která má nulový bod, mìní na intervalu obsahujícím tento bod znaménko.
 - Ka¾dá funkce, která má nulový bod, je v tomto bodì spojitá.
-- Nulový bod funkce mù¾eme najít pomocí Newotonovy iteraèní metody.
+- Nulový bod funkce mù¾eme najít pomocí Newtonovy iteraèní metody.
 - Ka¾dá spojitá funkce má derivaci.
 - Ka¾dá spojitá funkce má integrál.
 
@@ -413,3 +510,94 @@ Uva¾ujme konstitutivní zákon se známým tenzorem (maticí) definujícím materiálové
 - Ve smìru maximální vlastní hodnoty.
 - Ve smìru minimální vlastní hodnoty.
 - Obecnì není mo¾né rozhodnout, pokud materiál není izotropní.
+
+Jaký nástroj pou¾ijeme, pokud ze známého èasového prùbìhu velièiny chceme zjistit její okam¾itou rychlost zmìny?
++ derivaci podle èasu
+- derivaci podle prostorové souøadnice (v 1D) nebo gradient (ve 2D a 3D)
+- maticový souèin
+- neurèitý integrál
+- urèitý integrál
+- rovnici kontinuity
+- divergenci vektorového pole
+
+Jaký nástroj pou¾ijeme, pokud ze známé okam¾ité rychlosti zmìny velièiny chceme zjistit její èasový prùbìh?
+- derivaci podle èasu
+- derivaci podle prostorové souøadnice (v 1D) nebo gradient (ve 2D a 3D)
+- maticový souèin
++ neurèitý integrál
+- urèitý integrál
+- rovnici kontinuity
+- divergenci vektorového pole
+
+Jaký nástroj pou¾ijeme, pokud ze známé okam¾ité rychlosti zmìny velièiny chceme zjistit její zmìnu na zadaném intervalu?
+- derivaci podle èasu
+- derivaci podle prostorové souøadnice (v 1D) nebo gradient (ve 2D a 3D)
+- maticový souèin
+- neurèitý integrál
++ urèitý integrál
+- rovnici kontinuity
+- divergenci vektorového pole
+
+Jaký nástroj pou¾ijeme, pokud ze známého prostorového rozlo¾ení velièiny chceme zjistit smìr a intenzitu maximálního rùstu této velièiny?
+- derivaci podle èasu
++ derivaci podle prostorové souøadnice (v 1D) nebo gradient (ve 2D a 3D)
+- maticový souèin
+- neurèitý integrál
+- urèitý integrál
+- rovnici kontinuity
+- divergenci vektorového pole
+
+Jaký nástroj pou¾ijeme, pokud chceme vyjádøit celkovou bilanci stavové velièiny zahrnující akumulaci, zdroje a pøenos stavové velièiny tokem?
+- derivaci podle èasu
++ derivaci podle prostorové souøadnice (v 1D) nebo gradient (ve 2D a 3D)
+- maticový souèin
+- neurèitý integrál
+- urèitý integrál
+- rovnici kontinuity
+- divergenci vektorového pole
+
+Jaký nástroj pou¾ijeme, pokud chceme vyjádøit celkovou bilanci stavové velièiny zahrnující akumulaci, zdroje a pøenos stavové velièiny tokem?
+- derivaci podle èasu
++ derivaci podle prostorové souøadnice (v 1D) nebo gradient (ve 2D a 3D)
+- maticový souèin
+- neurèitý integrál
+- urèitý integrál
+- rovnici kontinuity
+- divergenci vektorového pole
+
+Jaký nástroj pou¾ijeme, pokud chceme urèit celkový nárùst toku pøená¹ejícího stavovou velièinu v daném místì?
+- derivaci podle èasu
+- derivaci podle prostorové souøadnice (v 1D) nebo gradient (ve 2D a 3D)
+- maticový souèin
+- neurèitý integrál
+- urèitý integrál
+- rovnici kontinuity
++ divergenci vektorového pole
+
+Jaký nástroj pou¾ijeme, pokud chceme ze známé materiálové charakteristiky a gradientu stavové velièiny urèit tok?
+- derivaci podle èasu
+- derivaci podle prostorové souøadnice (v 1D) nebo gradient (ve 2D a 3D)
++ maticový souèin
+- neurèitý integrál
+- urèitý integrál
+- rovnici kontinuity
+- divergenci vektorového pole
+
+Materiálové charakteristiky ortotropních materiálù, jako je napøíklad døevo, jsou popsány tenzorovými velièinami, tj. maticemi. V nejjednodu¹¹ích pøípadech jsou tyto matice diagonální, s kladnými èísly v hlavní diagonále. Vyberte tvrzení, které pro takovou matici (diagonální s kladnými èísly v hlavní diagonále) neplatí.
+- determinat matice je souèinem prvkù v hlavní diagonále
+- k matici existuje inverzní matice 
+- vlastní vektory jsou ve smìru souøadných os
+- vlastní èísla jsou právì prvky v hlavní diagonále
+- matice je symetrická
+- platí asociativní zákon, tj. je-li $D$ diagonální a $A$, $B$ obecné matice, platí $(AD)B=A(DB)$.
++ platí komutativní zákon, tj. je-li $D$ diagonální a $A$ obecná matice, platí $AD=DA$.
+
+V konstitutivních zákonech dávajících do souvislosti podnìt a odezvu mezi skálárními velièinami pracujeme s funkcemi $y=f(x)$, které splòují podmínku $f(0)=0$. Na jakou funkèní závislost se v tomto pøípadì redukuje lineární aproximace funkce $f(x)$?
++ na pøímou úmìrnost, viz napøíklad Fickùv zákon
+- na nepøímou úmìrnost, viz napøíklad Fourierùv zákon
+- na konstantní funkci, viz napøíklad Darcyho zákon
+- nijak, pùjde o obecnou lineární funkci
+- nijak, ¹lo by o nulovou funkci a proto se nepou¾ívá
+- otázka nemá smysl, lineární aproximace materiálových vztahù se nepou¾ívají pro velké chyby zpùsobené takovými aproximacemi
+- otázka nemá smysl, lineární aproximace materiálových vztahù se nepou¾ívají pro nestablitu øe¹ení pøi pou¾ití takovýchto aproximací
+

@@ -1,3 +1,180 @@
+Vyberte výpoèet derivace, který není správnì.
+- $\frac{\mathrm d}{\mathrm dt}\left(9t^2\right)=18t$
+- $\frac{\mathrm d}{\mathrm dr}\left(\frac{2}{r^5}\right)=-\frac{10}{r^6}$
+- $\frac{\mathrm d}{\mathrm dx}\left(2+\sqrt x\right)=\frac{1}{2\sqrt {x}}$
+- $\frac{\mathrm d}{\mathrm da}\left(6a\right)=6$
+- $\frac{\mathrm d}{\mathrm dx}\left(e^{-x}\right)=-e^{-x}$
++ $\frac{\mathrm d}{\mathrm dt}\left(t+\sqrt t\right)=\frac 1{\sqrt t}t$
+- $\frac{\mathrm d}{\mathrm dx}\left(\frac 13 x^4\right)=\frac 43 x^{3}$
+
+Vyberte výpoèet derivace, který není správnì.
++ $\frac{\mathrm d}{\mathrm dt}\left(9t^2\right)=18$
+- $\frac{\mathrm d}{\mathrm dr}\left(\frac{2}{r^5}\right)=-\frac{10}{r^6}$
+- $\frac{\mathrm d}{\mathrm dx}\left(2+\sqrt x\right)=\frac{1}{2\sqrt {x}}$
+- $\frac{\mathrm d}{\mathrm da}\left(6a\right)=6$
+- $\frac{\mathrm d}{\mathrm dx}\left(e^{-x}\right)=-e^{-x}$
+- $\frac{\mathrm d}{\mathrm dt}\left(t+\sqrt t\right)=1+\frac 1{2\sqrt t}t$
+- $\frac{\mathrm d}{\mathrm dx}\left(\frac 13 x^4\right)=\frac 43 x^{3}$
+
+Vyberte výpoèet derivace, který není správnì.
+- $\frac{\mathrm d}{\mathrm dt}\left(9t^2\right)=18t$
++ $\frac{\mathrm d}{\mathrm dr}\left(\frac{2}{r^5}\right)=\frac{8}{r^4}$
+- $\frac{\mathrm d}{\mathrm dx}\left(2+\sqrt x\right)=\frac{1}{2\sqrt {x}}$
+- $\frac{\mathrm d}{\mathrm da}\left(6a\right)=6$
+- $\frac{\mathrm d}{\mathrm dx}\left(e^{-x}\right)=-e^{-x}$
+- $\frac{\mathrm d}{\mathrm dt}\left(t+\sqrt t\right)=1+\frac 1{2\sqrt t}t$
+- $\frac{\mathrm d}{\mathrm dx}\left(\frac 13 x^4\right)=\frac 43 x^{3}$
+
+Vyberte výpoèet derivace, který není správnì.
+- $\frac{\mathrm d}{\mathrm dt}\left(9t^2\right)=18t$
+- $\frac{\mathrm d}{\mathrm dr}\left(\frac{2}{r^5}\right)=-\frac{10}{r^6}$
++ $\frac{\mathrm d}{\mathrm dx}\left(2+\sqrt x\right)=x+\frac{1}{2\sqrt {x}}$
+- $\frac{\mathrm d}{\mathrm da}\left(6a\right)=6$
+- $\frac{\mathrm d}{\mathrm dx}\left(e^{-x}\right)=-e^{-x}$
+- $\frac{\mathrm d}{\mathrm dt}\left(t+\sqrt t\right)=1+\frac 1{2\sqrt t}t$
+- $\frac{\mathrm d}{\mathrm dx}\left(\frac 13 x^4\right)=\frac 43 x^{3}$
+
+Vyberte výpoèet derivace, který není správnì.
+- $\frac{\mathrm d}{\mathrm dt}\left(9t^2\right)=18t$
+- $\frac{\mathrm d}{\mathrm dr}\left(\frac{2}{r^5}\right)=-\frac{10}{r^6}$
+- $\frac{\mathrm d}{\mathrm dx}\left(2+\sqrt x\right)=\frac{1}{2\sqrt {x}}$
++ $\frac{\mathrm d}{\mathrm da}\left(6a\right)=3a^2$
+- $\frac{\mathrm d}{\mathrm dx}\left(e^{-x}\right)=-e^{-x}$
+- $\frac{\mathrm d}{\mathrm dt}\left(t+\sqrt t\right)=1+\frac 1{2\sqrt t}t$
+- $\frac{\mathrm d}{\mathrm dx}\left(\frac 13 x^4\right)=\frac 43 x^{3}$
+
+Vyberte výpoèet derivace, který není správnì.
+- $\frac{\mathrm d}{\mathrm dt}\left(9t^2\right)=18t$
+- $\frac{\mathrm d}{\mathrm dr}\left(\frac{2}{r^5}\right)=-\frac{10}{r^6}$
+- $\frac{\mathrm d}{\mathrm dx}\left(2+\sqrt x\right)=\frac{1}{2\sqrt {x}}$
+- $\frac{\mathrm d}{\mathrm da}\left(6a\right)=6$
++ $\frac{\mathrm d}{\mathrm dx}\left(e^{-x}\right)=e^{-x}$
+- $\frac{\mathrm d}{\mathrm dt}\left(t+\sqrt t\right)=1+\frac 1{2\sqrt t}t$
+- $\frac{\mathrm d}{\mathrm dx}\left(\frac 13 x^4\right)=\frac 43 x^{3}$
+
+Vyberte výpoèet derivace, který není správnì.
+- $\frac{\mathrm d}{\mathrm dt}\left(9t^2\right)=18t$
+- $\frac{\mathrm d}{\mathrm dr}\left(\frac{2}{r^5}\right)=-\frac{10}{r^6}$
+- $\frac{\mathrm d}{\mathrm dx}\left(2+\sqrt x\right)=\frac{1}{2\sqrt {x}}$
+- $\frac{\mathrm d}{\mathrm da}\left(6a\right)=6$
+- $\frac{\mathrm d}{\mathrm dx}\left(e^{-x}\right)=-e^{-x}$
+- $\frac{\mathrm d}{\mathrm dt}\left(t+\sqrt t\right)=1+\frac 1{2\sqrt t}t$
++ $\frac{\mathrm d}{\mathrm dx}\left(\frac 13 x^4\right)=x^{5}$
+
+Urèete lineární aproximaci funkce $y=x^2-1+\sin x$ v bodì $x=0$.
++ $y=x-1$
+- $y=x^2-1$
+- $y=1-\sin x$
+- $y=2(x-1)$
+- Lineární aproximaci není mo¾né napsat, proto¾e funkce sinus je oscilatorická.
+- Lineární aproximaci není mo¾né napsat, proto¾e funkce $x^2$ má v nule lokální minimum.
+- Lineární aproximaci není mo¾né napsat, proto¾e funkce je sudá.
+
+Urèete lineární aproximaci funkce $y=x^2-1+\sin x$ v bodì $x=0$.
++ $y=x-1$
+- $y=x^2-1$
+- $y=1-\sin x$
+- $y=2(x-1)$
+- Lineární aproximaci není mo¾né napsat, proto¾e funkce sinus je periodická.
+- Lineární aproximaci není mo¾né napsat, proto¾e funkce $x^2$ má v nule lokální minimum.
+- Lineární aproximaci není mo¾né napsat, proto¾e funkce je sudá.
+
+Odvoïte iteraèní schema pro øe¹ení rovnice $$x+e^x-1=0$$
+Newtonovou metodou.
++ $x_{n+1}=x_n-\frac{x_n+e^{x_n}-1}{1+e^x}$
+- $x_{n+1}=x-\frac{x+e^x-1}{1+e^x}$
+- $x=1-e^x$
+- $x=1-e^{x-1}$
+- $x=1+e^x$
+- $x_n=1-e^{x_n}$
+- $x_n=1+e^{x_n}$
+
+Odvoïte iteraèní schema pro øe¹ení rovnice $$x+e^{-x}-1=0$$
+Newtonovou metodou.
++ $x_{n+1}=x_n-\frac{x_n+e^{-x_n}-1}{1-e^x}$
+- $x_{n+1}=x-\frac{x+e^{-x}-1}{1-e^x}$
+- $x=1-e^{-x}$
+- $x=1-e^{x-1}$
+- $x=1+e^x$
+- $x_n=1-e^{-x_n}$
+- $x_n=1+e^{-x_n}$
+
+Vyberte výpoèet integrálu, který není správnì.
++ $\int x^3\,\mathrm dx=4x^4+C$
+- $\int e^{-3x}\,\mathrm dx=-\frac 13 e^{-3x}+C$
+- $\int \sqrt x\,\mathrm dx=\frac 23 x^{3/2}+C$
+- $\int \frac 2{x^5}\,\mathrm dx=-\frac 16 \frac{1}{x^{6}}+C$
+- $\int 2\sin x\,\mathrm dx=-2\cos x+C$
+- $\int x+e^x\,\mathrm dx=\frac 12 x^2+e^x+C$
+
+Vyberte výpoèet integrálu, který není správnì.
+- $\int x^3\,\mathrm dx=\frac 14x^4+C$
++ $\int e^{-3x}\,\mathrm dx=-3 e^{-3x}+C$
+- $\int \sqrt x\,\mathrm dx=\frac 23 x^{3/2}+C$
+- $\int \frac 2{x^5}\,\mathrm dx=-\frac 16 \frac{1}{x^{6}}+C$
+- $\int 2\sin x\,\mathrm dx=-2\cos x+C$
+- $\int x+e^x\,\mathrm dx=\frac 12 x^2+e^x+C$
+
+Vyberte výpoèet integrálu, který není správnì.
+- $\int x^3\,\mathrm dx=\frac 14x^4+C$
+- $\int e^{-3x}\,\mathrm dx=-\frac 13 e^{-3x}+C$
++ $\int \sqrt x\,\mathrm dx=\frac 32 x^{5/2}+C$
+- $\int \frac 2{x^5}\,\mathrm dx=-\frac 16 \frac{1}{x^{6}}+C$
+- $\int 2\sin x\,\mathrm dx=-2\cos x+C$
+- $\int x+e^x\,\mathrm dx=\frac 12 x^2+e^x+C$
+
+Vyberte výpoèet integrálu, který není správnì.
+- $\int x^3\,\mathrm dx=\frac 14x^4+C$
+- $\int e^{-3x}\,\mathrm dx=-\frac 13 e^{-3x}+C$
+- $\int \sqrt x\,\mathrm dx=\frac 23 x^{3/2}+C$
++ $\int \frac 2{x^5}\,\mathrm dx=-4 \frac{1}{x^{4}}+C$
+- $\int 2\sin x\,\mathrm dx=-2\cos x+C$
+- $\int x+e^x\,\mathrm dx=\frac 12 x^2+e^x+C$
+
+Vyberte výpoèet integrálu, který není správnì.
+- $\int x^3\,\mathrm dx=\frac 14x^4+C$
+- $\int e^{-3x}\,\mathrm dx=-\frac 13 e^{-3x}+C$
+- $\int \sqrt x\,\mathrm dx=\frac 23 x^{3/2}+C$
+- $\int \frac 2{x^5}\,\mathrm dx=-\frac 16 \frac{1}{x^{6}}+C$
++ $\int 2\sin x\,\mathrm dx=\sin x^2+C$
+- $\int x+e^x\,\mathrm dx=\frac 12 x^2+e^x+C$
+
+Vyberte výpoèet integrálu, který není správnì.
+- $\int x^3\,\mathrm dx=\frac 14x^4+C$
+- $\int e^{-3x}\,\mathrm dx=-\frac 13 e^{-3x}+C$
+- $\int \sqrt x\,\mathrm dx=\frac 23 x^{3/2}+C$
+- $\int \frac 2{x^5}\,\mathrm dx=-\frac 16 \frac{1}{x^{6}}+C$
+- $\int 2\sin x\,\mathrm dx=-2\cos x+C$
++ $\int x+e^x\,\mathrm dx=x^2+e^{-x}+C$
+
+Ní¾e jsou lineární aproximace bì¾ných funkcí v okolí nuly. Oznaète tu, která není pravdivá.
+- $\sin x\approx x$
++ $\cos x\approx 1-x$
+- $e^x\approx 1+x$
+- $(1+x)^n\approx 1+nx$
+- $\ln x\approx 1+x$
+
+Ní¾e jsou lineární aproximace bì¾ných funkcí v okolí nuly. Oznaète tu, která není pravdivá.
++ $\sin x\approx 1-x^2$
+- $\cos x\approx 1$
+- $e^x\approx 1+x$
+- $(1+x)^n\approx 1+nx$
+- $\ln x\approx 1+x$
+
+Ní¾e jsou lineární aproximace bì¾ných funkcí v okolí nuly. Oznaète tu, která není pravdivá.
+- $\sin x\approx x$
+- $\cos x\approx 1$
+- $e^x\approx 1+x$
++ $(1+x)^n\approx n(1+x)^{n-1}$
+- $\ln x\approx 1+x$
+
+Pøi øe¹ení rovnice $$x=\cos x$$ mù¾eme rovnici pøevést na tvar $$x-\cos x=0$$ a pou¾ít Newtonovu metodu. Urèete výsledný tvar iteraèního vzorce.
++ $x_{n+1}=x_n-\frac{x_n-\cos x_n}{1+\sin{x_n}}$
+- $x_{n+1}=x_n+\frac{x_n-\cos x_n}{1+\sin{x_n}}$
+- $x_{n+1}=x_n+\frac{1+\sin{x_n}}{x_n-\cos x_n}$
+- $x_{n+1}=\frac{1+\sin{x_n}}{x_n-\cos x_n}$
+- $x_{n+1}=\frac{x_n-\cos x_n}{1+\sin{x_n}}$
+
 Newtonùv zákon ochlazování vyjadøuje, ¾e teplota tìlesa pøi tepelné výmìnì klesá pøímo úmìrnì s rozdílem mezi teplotou tìlesa a teplotou okolí. Vyberte nejvhodnìj¹í matematický model pro tento proces.
 + $\frac{\mathrm dT}{\mathrm dt}=-k(T-T_0)$
 - $\frac{\mathrm dT}{\mathrm dt}=k(T-T_0)$
@@ -169,69 +346,6 @@ Prùhyb $s$ nosníku vý¹ky $h$ je dán vztahem $s=\frac k{h^3}$, kde $k$ je konstan
 - $\frac{\mathrm ds}{\mathrm dt}=\frac k{h^3}\frac{\mathrm dh}{\mathrm dt}$
 - ¾ádný, obì velièiny jsou nezávislé
 
-Oznaète výpoèet, který není správnì.
-+ $\int x^3\,\mathrm dx=4x^4+C$
-- $\int e^{-3x}\,\mathrm dx=-\frac 13 e^{-3x}+C$
-- $\int \sqrt x\,\mathrm dx=\frac 23 x^{3/2}+C$
-- $\int \frac 2{x^5}\,\mathrm dx=-\frac 16 \frac{1}{x^{6}}+C$
-- $\int 2\sin x\,\mathrm dx=-2\cos x+C$
-
-Oznaète výpoèet, který není správnì.
-- $\int x^3\,\mathrm dx=\frac 14x^4+C$
-+ $\int e^{-3x}\,\mathrm dx=-3 e^{-3x}+C$
-- $\int \sqrt x\,\mathrm dx=\frac 23 x^{3/2}+C$
-- $\int \frac 2{x^5}\,\mathrm dx=-\frac 16 \frac{1}{x^{6}}+C$
-- $\int 2\sin x\,\mathrm dx=-2\cos x+C$
-
-Oznaète výpoèet, který není správnì.
-- $\int x^3\,\mathrm dx=\frac 14x^4+C$
-- $\int e^{-3x}\,\mathrm dx=-\frac 13 e^{-3x}+C$
-+ $\int \sqrt x\,\mathrm dx=\frac 32 x^{5/2}+C$
-- $\int \frac 2{x^5}\,\mathrm dx=-\frac 16 \frac{1}{x^{6}}+C$
-- $\int 2\sin x\,\mathrm dx=-2\cos x+C$
-
-Oznaète výpoèet, který není správnì.
-- $\int x^3\,\mathrm dx=\frac 14x^4+C$
-- $\int e^{-3x}\,\mathrm dx=-\frac 13 e^{-3x}+C$
-- $\int \sqrt x\,\mathrm dx=\frac 23 x^{3/2}+C$
-+ $\int \frac 2{x^5}\,\mathrm dx=-4 \frac{1}{x^{4}}+C$
-- $\int 2\sin x\,\mathrm dx=-2\cos x+C$
-
-Oznaète výpoèet, který není správnì.
-- $\int x^3\,\mathrm dx=\frac 14x^4+C$
-- $\int e^{-3x}\,\mathrm dx=-\frac 13 e^{-3x}+C$
-- $\int \sqrt x\,\mathrm dx=\frac 23 x^{3/2}+C$
-- $\int \frac 2{x^5}\,\mathrm dx=-\frac 16 \frac{1}{x^{6}}+C$
-+ $\int 2\sin x\,\mathrm dx=\sin x^2+C$
-
-Ní¾e jsou lineární aproximace bì¾ných funkcí v okolí nuly. Oznaète tu, která není pravdivá.
-- $\sin x\approx x$
-+ $\cos x\approx 1-x$
-- $e^x\approx 1+x$
-- $(1+x)^n\approx 1+nx$
-- $\ln x\approx 1+x$
-
-Ní¾e jsou lineární aproximace bì¾ných funkcí v okolí nuly. Oznaète tu, která není pravdivá.
-+ $\sin x\approx 1-x^2$
-- $\cos x\approx 1$
-- $e^x\approx 1+x$
-- $(1+x)^n\approx 1+nx$
-- $\ln x\approx 1+x$
-
-Ní¾e jsou lineární aproximace bì¾ných funkcí v okolí nuly. Oznaète tu, která není pravdivá.
-- $\sin x\approx x$
-- $\cos x\approx 1$
-- $e^x\approx 1+x$
-+ $(1+x)^n\approx n(1+x)^{n-1}$
-- $\ln x\approx 1+x$
-
-Pøi øe¹ení rovnice $$x=\cos x$$ mù¾eme rovnici pøevést na tvar $$x-\cos x=0$$ a pou¾ít Newtonovu metodu. Urèete výsledný tvar iteraèního vzorce.
-+ $x_{n+1}=x_n-\frac{x_n-\cos x_n}{1+\sin{x_n}}$
-- $x_{n+1}=x_n+\frac{x_n-\cos x_n}{1+\sin{x_n}}$
-- $x_{n+1}=x_n+\frac{1+\sin{x_n}}{x_n-\cos x_n}$
-- $x_{n+1}=\frac{1+\sin{x_n}}{x_n-\cos x_n}$
-- $x_{n+1}=\frac{x_n-\cos x_n}{1+\sin{x_n}}$
-
 Funkce $T(x)$ udává teplotu ve stìnì v místì ve vzdálenosti $x$ mìøeno od vnìj¹í strany zdi. Zeï má tlou¹»ku $d$. Co udává derivace $T'(x)$, tj. derivace $\frac{\mathrm dT}{\mathrm dx}$?
 + jednorozmìrný gradient, tj. rychlost (v jednotkách teploty na jednotku délky) s jakou roste teplota ve stìnì smìrem dovnitø domu
 - rychlost zmìny teploty v èase, tj. rychlost (v jednotkách teploty na jednotku èasu) s jakou roste teplota na vnìj¹í stranì stìny
@@ -260,15 +374,6 @@ Funkce $T(t)$ udává teplotu v daném místì stìnì v místì v èase $t$. Zeï má tlou¹
 - celkový teplotní tok (ve wattech na metr ètvereèní) jednotkou plochou stìny
 - prùmìrná teplota ve stìnì vynásobená ¹íøkou stìny $d$
 + ¾ádná z uvedených mo¾ností
-
-V konstitutivních zákonech dávajících do souvislosti podnìt a odezvu mezi skálárními velièinami pracujeme s funkcemi $y=f(x)$, které splòují podmínku $f(x)=0$. Na jakou funkèní závislost se v tomto pøípadì redukuje lineární aproximace funkce $f(x)$?
-+ na pøímou úmìrnost
-- na nepøímou úmìrnost
-- na konstantní funkci
-- nijak, pùjde o obecnou lineární funkci
-- nijak, ¹lo by o nulovou funkci a proto se nepou¾ívá
-- otázka nemá smysl, lineární aproximace materiálových vztahù se nepou¾ívají pro velké chyby zpùsobené takovými aproximacemi
-- otázka nemá smysl, lineární aproximace materiálových vztahù se nepou¾ívají pro nestablitu øe¹ení pøi pou¾ití takovýchto aproximací
 
 Posuïte stabilitu konstantního øe¹ení $y=1$ u rovnice $$y'=1-y.$$
 + Stabilní, proto¾e $y=1$ je nulový bod pravé strany a pravá strana je v tomto bodì rostoucí.
@@ -303,26 +408,6 @@ Posuïte stabilitu konstantního øe¹ení $y=-1$ u rovnice $$y'=1-y.$$
 - Nestabilní, proto¾e v bodì $y=-1$ je pravá strana záporná a pravá strana je v tomto bodì klesající.
 + Otázka nemá smysl, $y=-1$ není stacioárním bodem.
 
-Odvoïte iteraèní schema pro øe¹ení rovnice $$x+e^x-1=0$$
-Newtonovou metodou.
-+ $x_{n+1}=x_n-\frac{x_n+e^{x_n}-1}{1+e^x}$
-- $x_{n+1}=x-\frac{x+e^x-1}{1+e^x}$
-- $x=1-e^x$
-- $x=1-e^{x-1}$
-- $x=1+e^x$
-- $x_n=1-e^{x_n}$
-- $x_n=1+e^{x_n}$
-
-Odvoïte iteraèní schema pro øe¹ení rovnice $$x+e^{-x}-1=0$$
-Newtonovou metodou.
-+ $x_{n+1}=x_n-\frac{x_n+e^{-x_n}-1}{1-e^x}$
-- $x_{n+1}=x-\frac{x+e^{-x}-1}{1-e^x}$
-- $x=1-e^{-x}$
-- $x=1-e^{x-1}$
-- $x=1+e^x$
-- $x_n=1-e^{-x_n}$
-- $x_n=1+e^{-x_n}$
-
 Rychlost s jakou klesá mno¾ství vody $M$ ve døevì pøi zanedbání difuze je úmìrná rozdílu mezi tímto mno¾stvím vody a rovnová¾ným obsahem vody $M_0$. Jaký model vhodnì popisuje tuto situaci?
 + $\frac{\mathrm dM}{\mathrm dt}=-k(M-M_0)$
 - $\frac{\mathrm dM}{\mathrm dt}=k(M-M_0)$
@@ -330,77 +415,3 @@ Rychlost s jakou klesá mno¾ství vody $M$ ve døevì pøi zanedbání difuze je úmìrná
 - $\frac{\mathrm dM}{\mathrm dt}(M-M_0)=0$
 - $\frac{\mathrm dM}{\mathrm dt}(M-M_0)=k$
 - $\frac{\mathrm dM}{\mathrm dt}(M-M_0)=-k$
-
-Vyberte výpoèet, který není správnì.
-- $\frac{\mathrm d}{\mathrm dt}\left(9t^2\right)=18t$
-- $\frac{\mathrm d}{\mathrm dr}\left(\frac{2}{r^5}\right)=-\frac{10}{r^6}$
-- $\frac{\mathrm d}{\mathrm dx}\left(2+\sqrt x\right)=\frac{1}{2\sqrt {x}}$
-- $\frac{\mathrm d}{\mathrm da}\left(6a\right)=6$
-- $\frac{\mathrm d}{\mathrm dx}\left(e^{-x}\right)=-e^{-x}$
-+ $\frac{\mathrm d}{\mathrm dt}\left(t+\sqrt t\right)=\frac 1{\sqrt t}t$
-- $\frac{\mathrm d}{\mathrm dx}\left(\frac 13 x^4\right)=\frac 43 x^{3}$
-
-Vyberte výpoèet, který není správnì.
-+ $\frac{\mathrm d}{\mathrm dt}\left(9t^2\right)=18$
-- $\frac{\mathrm d}{\mathrm dr}\left(\frac{2}{r^5}\right)=-\frac{10}{r^6}$
-- $\frac{\mathrm d}{\mathrm dx}\left(2+\sqrt x\right)=\frac{1}{2\sqrt {x}}$
-- $\frac{\mathrm d}{\mathrm da}\left(6a\right)=6$
-- $\frac{\mathrm d}{\mathrm dx}\left(e^{-x}\right)=-e^{-x}$
-- $\frac{\mathrm d}{\mathrm dt}\left(t+\sqrt t\right)=1+\frac 1{2\sqrt t}t$
-- $\frac{\mathrm d}{\mathrm dx}\left(\frac 13 x^4\right)=\frac 43 x^{3}$
-
-Vyberte výpoèet, který není správnì.
-- $\frac{\mathrm d}{\mathrm dt}\left(9t^2\right)=18t$
-+ $\frac{\mathrm d}{\mathrm dr}\left(\frac{2}{r^5}\right)=\frac{8}{r^4}$
-- $\frac{\mathrm d}{\mathrm dx}\left(2+\sqrt x\right)=\frac{1}{2\sqrt {x}}$
-- $\frac{\mathrm d}{\mathrm da}\left(6a\right)=6$
-- $\frac{\mathrm d}{\mathrm dx}\left(e^{-x}\right)=-e^{-x}$
-- $\frac{\mathrm d}{\mathrm dt}\left(t+\sqrt t\right)=1+\frac 1{2\sqrt t}t$
-- $\frac{\mathrm d}{\mathrm dx}\left(\frac 13 x^4\right)=\frac 43 x^{3}$
-
-Vyberte výpoèet, který není správnì.
-- $\frac{\mathrm d}{\mathrm dt}\left(9t^2\right)=18t$
-- $\frac{\mathrm d}{\mathrm dr}\left(\frac{2}{r^5}\right)=-\frac{10}{r^6}$
-+ $\frac{\mathrm d}{\mathrm dx}\left(2+\sqrt x\right)=x+\frac{1}{2\sqrt {x}}$
-- $\frac{\mathrm d}{\mathrm da}\left(6a\right)=6$
-- $\frac{\mathrm d}{\mathrm dx}\left(e^{-x}\right)=-e^{-x}$
-- $\frac{\mathrm d}{\mathrm dt}\left(t+\sqrt t\right)=1+\frac 1{2\sqrt t}t$
-- $\frac{\mathrm d}{\mathrm dx}\left(\frac 13 x^4\right)=\frac 43 x^{3}$
-
-Vyberte výpoèet, který není správnì.
-- $\frac{\mathrm d}{\mathrm dt}\left(9t^2\right)=18t$
-- $\frac{\mathrm d}{\mathrm dr}\left(\frac{2}{r^5}\right)=-\frac{10}{r^6}$
-- $\frac{\mathrm d}{\mathrm dx}\left(2+\sqrt x\right)=\frac{1}{2\sqrt {x}}$
-+ $\frac{\mathrm d}{\mathrm da}\left(6a\right)=3a^2$
-- $\frac{\mathrm d}{\mathrm dx}\left(e^{-x}\right)=-e^{-x}$
-- $\frac{\mathrm d}{\mathrm dt}\left(t+\sqrt t\right)=1+\frac 1{2\sqrt t}t$
-- $\frac{\mathrm d}{\mathrm dx}\left(\frac 13 x^4\right)=\frac 43 x^{3}$
-
-Vyberte výpoèet, který není správnì.
-- $\frac{\mathrm d}{\mathrm dt}\left(9t^2\right)=18t$
-- $\frac{\mathrm d}{\mathrm dr}\left(\frac{2}{r^5}\right)=-\frac{10}{r^6}$
-- $\frac{\mathrm d}{\mathrm dx}\left(2+\sqrt x\right)=\frac{1}{2\sqrt {x}}$
-- $\frac{\mathrm d}{\mathrm da}\left(6a\right)=6$
-+ $\frac{\mathrm d}{\mathrm dx}\left(e^{-x}\right)=e^{-x}$
-- $\frac{\mathrm d}{\mathrm dt}\left(t+\sqrt t\right)=1+\frac 1{2\sqrt t}t$
-- $\frac{\mathrm d}{\mathrm dx}\left(\frac 13 x^4\right)=\frac 43 x^{3}$
-
-Vyberte výpoèet, který není správnì.
-- $\frac{\mathrm d}{\mathrm dt}\left(9t^2\right)=18t$
-- $\frac{\mathrm d}{\mathrm dr}\left(\frac{2}{r^5}\right)=-\frac{10}{r^6}$
-- $\frac{\mathrm d}{\mathrm dx}\left(2+\sqrt x\right)=\frac{1}{2\sqrt {x}}$
-- $\frac{\mathrm d}{\mathrm da}\left(6a\right)=6$
-- $\frac{\mathrm d}{\mathrm dx}\left(e^{-x}\right)=-e^{-x}$
-- $\frac{\mathrm d}{\mathrm dt}\left(t+\sqrt t\right)=1+\frac 1{2\sqrt t}t$
-+ $\frac{\mathrm d}{\mathrm dx}\left(\frac 13 x^4\right)=x^{5}$
-
-Urèete lineární aproximaci funkce $y=x^2-1+\sin x$ v bodì $x=0$.
-+ $y=x-1$
-- $y=x^2-1$
-- $y=1-\sin x$
-- $y=2(x-1)$
-- Lineární aproximaci není mo¾né napsat, proto¾e funkce sinus je oscilatorická.
-- Lineární aproximaci není mo¾né napsat, proto¾e funkce $x^2$ má v nule lokální minimum.
-- Lineární aproximaci není mo¾né napsat, proto¾e funkce je sudá.
-
-
