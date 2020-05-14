@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage{amsmath,amsfonts}
+\usepackage{multicol}\usepackage{graphicx}\usepackage[czech]{babel}\usepackage[IL2]{fontenc}\usepackage[latin2]{inputenc}
+\usepackage[margin=1in]{geometry}
+
+\begin{document}
+\newcount\cislo\everymath{\displaystyle}
+\def\correct#1{\ffbox{$\checkmark$}#1}
+\def\incorrect#1{\ffbox{$\times$}#1} 
+\parindent 0pt
+%\parskip -5pt
+\rightskip 0 pt plus 1 fill
+\columnseprule 0.4pt
+
+
+\twocolumn[
+\begin{center}
+  \textbf{Matematika LDF MENDELU 2020, COVID-19 semestr}
+  \\
+  Robert Maøík, \today
+\end{center}
+]
+\def\ffbox#1{\par\leavevmode\hbox to 0 pt{\hss\fbox{#1} }\ignorespaces}
+\def\mezera$#1${\par\bigskip \leavevmode\hbox to 0 pt{\hss$\global\advance\cislo by 1\textbf{\fbox{\the \cislo}}$ }\ignorespaces}
+
+\leftskip 2.5em
+
+%\def\correct#1{}
+%\def\incorrect#1{} 
+
+\section{Teorie}
+\input teorie.tex
+
+\section{ODE graficky}
+\input ode.tex
+
+\section{Pøíklady}
+\input vypocty.tex
+
+\end{document}
