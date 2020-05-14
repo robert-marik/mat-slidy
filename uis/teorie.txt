@@ -76,7 +76,7 @@ Jednotková matice
 -má v hlavní diagonále nuly a v¹ude jinde jednièky
 -obsahuje jeden øádek a jeden sloupec
 
-Buï $A$ ètvercová matice. Oznaète vztah, který je definicí inverzní matice $A^{-1}$. Matice $I$ je jednotková matice. Pøedpokládejme ¾e matice jsou takové, ¾e v¹echny maticové souèiny  mají smysl.
+Buï $A$ ètvercová matice. Oznaète vztah, který je definicí inverzní matice $A^{-1}$. Matice $I$ je jednotková matice. Pøedpokládejme, ¾e matice jsou takové, ¾e v¹echny maticové souèiny  mají smysl.
 +$AA^{-1}=I$ a $A^{-1}A=I$
 -$AA^{-1}=A$ a $A^{-1}A=I$
 -$AA^{-1}=I$ a $A^{-1}A=A$
@@ -230,7 +230,7 @@ Co v jednorozmìrné rovnici vedení tepla $$\rho c\frac{\partial T}{\partial t}=\f
 - Èas, za jaký se teplota ustálí v rovnová¾né poloze.
 
 Co v jednorozmìrné rovnici vedení tepla $$\rho c\frac{\partial T}{\partial t}=\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)$$ vyjadøuje èlen $\frac{\partial T}{\partial t}$?
-- Rychlost zmìny hustoty vnitøní enerige v èase, tj. zmìna vnitøní energie v jednotkové délce za jednotku èasu.
+- Rychlost zmìny hustoty vnitøní energie v èase, tj. zmìna vnitøní energie v jednotkové délce za jednotku èasu.
 + Rychlost rùstu teploty v èase, tj. nárùst teploty v daném místì za jednotku èasu.
 - Jednorozmìrný gradient teploty, tj. rychlost rùstu teploty ve smìru osy $x$.
 - Tok tepla ve smìru osy $x$, tj. mno¾ství tepla, které projde za jednotku èasu daným místem ve smìru osy $x$.
@@ -246,7 +246,7 @@ Co v jednorozmìrné rovnici vedení tepla $$\rho c\frac{\partial T}{\partial t}=\f
 - Zápornì vzatou jednorozmìrnou divergenci toku tepla, tj. velièinu mìøící míru, s jakou tok v daném místì slábne.
 
 Co v jednorozmìrné rovnici vedení tepla $$\rho c\frac{\partial T}{\partial t}=\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)$$ vyjadøuje èlen $k\frac{\partial T}{\partial x}$?
-- Rychlost zmìny hustoty vnitøní enerige v èase, tj. zmìna vnitøní energie v jednotkové délce za jednotku èasu.
+- Rychlost zmìny hustoty vnitøní energie v èase, tj. zmìna vnitøní energie v jednotkové délce za jednotku èasu.
 - Rychlost rùstu teploty v èase, tj. nárùst teploty v daném místì za jednotku èasu.
 - Jednorozmìrný gradient teploty, tj. rychlost rùstu teploty ve smìru osy $x$.
 + Zápornì vzatý tok tepla ve smìru osy $x$, tj. mno¾ství tepla, které projde za jednotku èasu daným místem proti smìru osy $x$.
@@ -258,30 +258,30 @@ Uva¾ujme jednorozmìrnou rovnici vedení tepla $$\rho c\frac{\partial T}{\partial 
 - $\rho c\frac{\partial T}{\partial t}$
 - $\frac{\partial T}{\partial x}$
 - $-k\frac{\partial T}{\partial x}$
-- $\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)$
+- $-\frac{\partial}{\partial x}\left(-k\frac{\partial T}{\partial x}\right)$ tj. $\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)$
 
 Uva¾ujme jednorozmìrnou rovnici vedení tepla $$\rho c\frac{\partial T}{\partial t}=\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right).$$ Fyzikální interpretace je snaz¹í pro rovnici ve tvaru $$\rho c\frac{\partial T}{\partial t}=-\frac{\partial}{\partial x}\left(-k\frac{\partial T}{\partial x}\right).$$ Která èást tohoto vzorce vyjadøuje rychlost, s jakou ve smìru osy $x$ roste teplota v daném místì?
 - $\frac{\partial T}{\partial t}$
 - $\rho c\frac{\partial T}{\partial t}$
 + $\frac{\partial T}{\partial x}$
 - $-k\frac{\partial T}{\partial x}$
-- $\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)$
+- $-\frac{\partial}{\partial x}\left(-k\frac{\partial T}{\partial x}\right)$ tj. $\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)$
 
 Uva¾ujme jednorozmìrnou rovnici vedení tepla $$\rho c\frac{\partial T}{\partial t}=\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right).$$ Fyzikální interpretace je snaz¹í pro rovnici ve tvaru $$\rho c\frac{\partial T}{\partial t}=-\frac{\partial}{\partial x}\left(-k\frac{\partial T}{\partial x}\right).$$ Která èást tohoto vzorce vyjadøuje tok tepla ve smìru osy $x$ v daném místì?
 - $\frac{\partial T}{\partial t}$
 - $\rho c\frac{\partial T}{\partial t}$
 - $\frac{\partial T}{\partial x}$
 + $-k\frac{\partial T}{\partial x}$
-- $-\frac{\partial}{\partial x}\left(-k\frac{\partial T}{\partial x}\right)$
+- $-\frac{\partial}{\partial x}\left(-k\frac{\partial T}{\partial x}\right)$ tj. $\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)$
 
 Uva¾ujme jednorozmìrnou rovnici vedení tepla $$\rho c\frac{\partial T}{\partial t}=\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right).$$ Fyzikální interpretace je snaz¹í pro rovnici ve tvaru $$\rho c\frac{\partial T}{\partial t}=-\frac{\partial}{\partial x}\left(-k\frac{\partial T}{\partial x}\right).$$ Která èást tohoto vzorce vyjadøuje zeslabení toku tepla v daném místì?
 - $\frac{\partial T}{\partial t}$
 - $\rho c\frac{\partial T}{\partial t}$
 - $\frac{\partial T}{\partial x}$
 - $-k\frac{\partial T}{\partial x}$
-+ $-\frac{\partial}{\partial x}\left(-k\frac{\partial T}{\partial x}\right)$
++ $-\frac{\partial}{\partial x}\left(-k\frac{\partial T}{\partial x}\right)$ tj. $\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)$
 
-Uva¾ujme stìnu v ní¾ popisujeme tok tepla pomocí jednorozmìrné rovnice vedení tepla, tj. $$\rho c\frac{\partial T}{\partial t}=\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right).$$ Hodnotì $x=0$ odpovídá vnitøní strana stìny, hodnotì $x=L$ vnìj¹í. Jak matematicky naformulujeme okrajovou podmínku, vyjadøující to, ¾e teplota vnitøní strany stìny je konstantní?
+Uva¾ujme stìnu, v ní¾ popisujeme tok tepla pomocí jednorozmìrné rovnice vedení tepla, tj. $$\rho c\frac{\partial T}{\partial t}=\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right).$$ Hodnotì $x=0$ odpovídá vnitøní strana stìny, hodnotì $x=L$ vnìj¹í. Jak naformulujeme okrajovou podmínku, vyjadøující to, ¾e teplota vnitøní strany stìny je konstantní?
 + Zadáme hodnotu $T$ pro $x=0$.
 - Zadáme hodnotu $T$ pro $x=L$.
 - Zadáme nenulový tok $-k\frac{\partial T}{\partial x}$ pro $x=0$.
@@ -291,7 +291,7 @@ Uva¾ujme stìnu v ní¾ popisujeme tok tepla pomocí jednorozmìrné rovnice vedení te
 - Zadáme nulovou zmìnu toku $\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)$ pro $x=0$.
 - Zadáme nulovou zmìnu toku $\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)$ pro $x=L$.
 
-Uva¾ujme stìnu v ní¾ popisujeme tok tepla pomocí jednorozmìrné rovnice vedení tepla, tj. $$\rho c\frac{\partial T}{\partial t}=\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right).$$ Hodnotì $x=0$ odpovídá vnitøní strana stìny, hodnotì $x=L$ vnìj¹í. Jak matematicky naformulujeme okrajovou podmínku, vyjadøující to, ¾e teplota vnìj¹í strany stìny je konstantní?
+Uva¾ujme stìnu, v ní¾ popisujeme tok tepla pomocí jednorozmìrné rovnice vedení tepla, tj. $$\rho c\frac{\partial T}{\partial t}=\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right).$$ Hodnotì $x=0$ odpovídá vnitøní strana stìny, hodnotì $x=L$ vnìj¹í. Jak naformulujeme okrajovou podmínku, vyjadøující to, ¾e teplota vnìj¹í strany stìny je konstantní?
 - Zadáme hodnotu $T$ pro $x=0$.
 + Zadáme hodnotu $T$ pro $x=L$.
 - Zadáme tok $-k\frac{\partial T}{\partial x}$ pro $x=0$.
@@ -301,7 +301,7 @@ Uva¾ujme stìnu v ní¾ popisujeme tok tepla pomocí jednorozmìrné rovnice vedení te
 - Zadáme nulový tok $-k\frac{\partial T}{\partial x}$ pro $x=0$.
 - Zadáme nulový tok $-k\frac{\partial T}{\partial x}$ pro $x=L$.
 
-Uva¾ujme stìnu v ní¾ popisujeme tok tepla pomocí jednorozmìrné rovnice vedení tepla, tj. $$\rho c\frac{\partial T}{\partial t}=\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right).$$ Hodnotì $x=0$ odpovídá vnitøní strana stìny, hodnotì $x=L$ vnìj¹í. Jak matematicky naformulujeme okrajovou podmínku, vyjadøující to, ¾e vnìj¹í strana je dokonale izolovaná?
+Uva¾ujme stìnu, v ní¾ popisujeme tok tepla pomocí jednorozmìrné rovnice vedení tepla, tj. $$\rho c\frac{\partial T}{\partial t}=\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right).$$ Hodnotì $x=0$ odpovídá vnitøní strana stìny, hodnotì $x=L$ vnìj¹í. Jak naformulujeme okrajovou podmínku, vyjadøující to, ¾e vnìj¹í strana je dokonale izolovaná?
 - Zadáme hodnotu $T$ pro $x=0$.
 - Zadáme hodnotu $T$ pro $x=L$.
 - Zadáme nenulový tok $-k\frac{\partial T}{\partial x}$ pro $x=0$.
@@ -313,7 +313,7 @@ Uva¾ujme stìnu v ní¾ popisujeme tok tepla pomocí jednorozmìrné rovnice vedení te
 - Zadáme zmìnu toku $\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)$ pro $x=0$.
 - Zadáme zmìnu toku $\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)$ pro $x=L$.
 
-Uva¾ujme stìnu v ní¾ popisujeme tok tepla pomocí jednorozmìrné rovnice vedení tepla, tj. $$\rho c\frac{\partial T}{\partial t}=\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right).$$ Hodnotì $x=0$ odpovídá vnitøní strana stìny, hodnotì $x=L$ vnìj¹í. Jak matematicky naformulujeme okrajovou podmínku, vyjadøující to, ¾e na vnitøní stranì je známou rychlostí dodáváno teplo?
+Uva¾ujme stìnu, v ní¾ popisujeme tok tepla pomocí jednorozmìrné rovnice vedení tepla, tj. $$\rho c\frac{\partial T}{\partial t}=\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right).$$ Hodnotì $x=0$ odpovídá vnitøní strana stìny, hodnotì $x=L$ vnìj¹í. Jak naformulujeme okrajovou podmínku, vyjadøující to, ¾e na vnitøní stranì je známou rychlostí dodáváno teplo?
 - Zadáme hodnotu $T$ pro $x=0$.
 - Zadáme hodnotu $T$ pro $x=L$.
 + Zadáme nenulový tok $-k\frac{\partial T}{\partial x}$ pro $x=0$.
@@ -325,7 +325,7 @@ Uva¾ujme stìnu v ní¾ popisujeme tok tepla pomocí jednorozmìrné rovnice vedení te
 - Zadáme zmìnu toku $\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)$ pro $x=0$.
 - Zadáme zmìnu toku $\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)$ pro $x=L$.
 
-Uva¾ujme stìnu v ní¾ popisujeme tok tepla pomocí jednorozmìrné rovnice vedení tepla, tj. $$\rho c\frac{\partial T}{\partial t}=\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right).$$ Hodnotì $x=0$ odpovídá vnitøní strana stìny, hodnotì $x=L$ vnìj¹í. Jak matematicky naformulujeme okrajovou podmínku, vyjadøující to, ¾e na vnìj¹í stranì je známou rychlostí dodáváno teplo?
+Uva¾ujme stìnu, v ní¾ popisujeme tok tepla pomocí jednorozmìrné rovnice vedení tepla, tj. $$\rho c\frac{\partial T}{\partial t}=\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right).$$ Hodnotì $x=0$ odpovídá vnitøní strana stìny, hodnotì $x=L$ vnìj¹í. Jak naformulujeme okrajovou podmínku, vyjadøující to, ¾e na vnìj¹í stranì je známou rychlostí dodáváno teplo?
 - Zadáme hodnotu $T$ pro $x=0$.
 - Zadáme hodnotu $T$ pro $x=L$.
 - Zadáme nenulový tok $-k\frac{\partial T}{\partial x}$ pro $x=0$.
@@ -337,7 +337,7 @@ Uva¾ujme stìnu v ní¾ popisujeme tok tepla pomocí jednorozmìrné rovnice vedení te
 - Zadáme zmìnu toku $\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)$ pro $x=0$.
 - Zadáme zmìnu toku $\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)$ pro $x=L$.
 
-Uva¾ujme stìnu v ní¾ popisujeme tok tepla pomocí jednorozmìrné rovnice vedení tepla, tj. $$\rho c\frac{\partial T}{\partial t}=\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right).$$ Hodnotì $x=0$ odpovídá vnitøní strana stìny, hodnotì $x=L$ vnìj¹í. Jak matematicky naformulujeme okrajovou podmínku, vyjadøující to, ¾e na vnìj¹í stranì je známou rychlostí odebíráno teplo?
+Uva¾ujme stìnu, v ní¾ popisujeme tok tepla pomocí jednorozmìrné rovnice vedení tepla, tj. $$\rho c\frac{\partial T}{\partial t}=\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right).$$ Hodnotì $x=0$ odpovídá vnitøní strana stìny, hodnotì $x=L$ vnìj¹í. Jak naformulujeme okrajovou podmínku, vyjadøující to, ¾e na vnìj¹í stranì je známou rychlostí odebíráno teplo?
 - Zadáme hodnotu $T$ pro $x=0$.
 - Zadáme hodnotu $T$ pro $x=L$.
 - Zadáme nenulový tok $-k\frac{\partial T}{\partial x}$ pro $x=0$.
@@ -529,7 +529,7 @@ Jaký nástroj pou¾ijeme, pokud ze známé okam¾ité rychlosti zmìny velièiny chceme 
 - rovnici kontinuity
 - divergenci vektorového pole
 
-Jaký nástroj pou¾ijeme, pokud ze známé okam¾ité rychlosti zmìny velièiny chceme zjistit její zmìnu na zadaném intervalu?
+Jaký nástroj pou¾ijeme, pokud ze známé okam¾ité rychlosti zmìny velièiny chceme zjistit její zmìnu za zadaný èasový interval?
 - derivaci podle èasu
 - derivaci podle prostorové souøadnice (v 1D) nebo gradient (ve 2D a 3D)
 - maticový souèin
@@ -549,20 +549,11 @@ Jaký nástroj pou¾ijeme, pokud ze známého prostorového rozlo¾ení velièiny chceme 
 
 Jaký nástroj pou¾ijeme, pokud chceme vyjádøit celkovou bilanci stavové velièiny zahrnující akumulaci, zdroje a pøenos stavové velièiny tokem?
 - derivaci podle èasu
-+ derivaci podle prostorové souøadnice (v 1D) nebo gradient (ve 2D a 3D)
+- derivaci podle prostorové souøadnice (v 1D) nebo gradient (ve 2D a 3D)
 - maticový souèin
 - neurèitý integrál
 - urèitý integrál
-- rovnici kontinuity
-- divergenci vektorového pole
-
-Jaký nástroj pou¾ijeme, pokud chceme vyjádøit celkovou bilanci stavové velièiny zahrnující akumulaci, zdroje a pøenos stavové velièiny tokem?
-- derivaci podle èasu
-+ derivaci podle prostorové souøadnice (v 1D) nebo gradient (ve 2D a 3D)
-- maticový souèin
-- neurèitý integrál
-- urèitý integrál
-- rovnici kontinuity
++ rovnici kontinuity
 - divergenci vektorového pole
 
 Jaký nástroj pou¾ijeme, pokud chceme urèit celkový nárùst toku pøená¹ejícího stavovou velièinu v daném místì?

@@ -79,9 +79,8 @@ Urèete lineární aproximaci funkce $y=x^2-1+\sin x$ v bodì $x=0$.
 - Lineární aproximaci není mo¾né napsat, proto¾e funkce $x^2$ má v nule lokální minimum.
 - Lineární aproximaci není mo¾né napsat, proto¾e funkce je sudá.
 
-Odvoïte iteraèní schema pro øe¹ení rovnice $$x+e^x-1=0$$
-Newtonovou metodou.
-+ $x_{n+1}=x_n-\frac{x_n+e^{x_n}-1}{1+e^x}$
+Odvoïte iteraèní schema pro øe¹ení rovnice $$x+e^x-1=0$$ Newtonovou metodou.
++ $x_{n+1}=x_n-\frac{x_n+e^{x_n}-1}{1+e^{x_n}}$
 - $x_{n+1}=x-\frac{x+e^x-1}{1+e^x}$
 - $x=1-e^x$
 - $x=1-e^{x-1}$
@@ -89,9 +88,8 @@ Newtonovou metodou.
 - $x_n=1-e^{x_n}$
 - $x_n=1+e^{x_n}$
 
-Odvoïte iteraèní schema pro øe¹ení rovnice $$x+e^{-x}-1=0$$
-Newtonovou metodou.
-+ $x_{n+1}=x_n-\frac{x_n+e^{-x_n}-1}{1-e^x}$
+Odvoïte iteraèní schema pro øe¹ení rovnice $$x+e^{-x}-1=0$$ Newtonovou metodou.
++ $x_{n+1}=x_n-\frac{x_n+e^{-x_n}-1}{1-e^{-x_n}}$
 - $x_{n+1}=x-\frac{x+e^{-x}-1}{1-e^x}$
 - $x=1-e^{-x}$
 - $x=1-e^{x-1}$
@@ -103,7 +101,7 @@ Vyberte výpoèet integrálu, který není správnì.
 + $\int x^3\,\mathrm dx=4x^4+C$
 - $\int e^{-3x}\,\mathrm dx=-\frac 13 e^{-3x}+C$
 - $\int \sqrt x\,\mathrm dx=\frac 23 x^{3/2}+C$
-- $\int \frac 2{x^5}\,\mathrm dx=-\frac 16 \frac{1}{x^{6}}+C$
+- $\int \frac 2{x^5}\,\mathrm dx=-\frac 13 \frac{1}{x^{6}}+C$
 - $\int 2\sin x\,\mathrm dx=-2\cos x+C$
 - $\int x+e^x\,\mathrm dx=\frac 12 x^2+e^x+C$
 
@@ -111,7 +109,7 @@ Vyberte výpoèet integrálu, který není správnì.
 - $\int x^3\,\mathrm dx=\frac 14x^4+C$
 + $\int e^{-3x}\,\mathrm dx=-3 e^{-3x}+C$
 - $\int \sqrt x\,\mathrm dx=\frac 23 x^{3/2}+C$
-- $\int \frac 2{x^5}\,\mathrm dx=-\frac 16 \frac{1}{x^{6}}+C$
+- $\int \frac 2{x^5}\,\mathrm dx=-\frac 13 \frac{1}{x^{6}}+C$
 - $\int 2\sin x\,\mathrm dx=-2\cos x+C$
 - $\int x+e^x\,\mathrm dx=\frac 12 x^2+e^x+C$
 
@@ -119,7 +117,7 @@ Vyberte výpoèet integrálu, který není správnì.
 - $\int x^3\,\mathrm dx=\frac 14x^4+C$
 - $\int e^{-3x}\,\mathrm dx=-\frac 13 e^{-3x}+C$
 + $\int \sqrt x\,\mathrm dx=\frac 32 x^{5/2}+C$
-- $\int \frac 2{x^5}\,\mathrm dx=-\frac 16 \frac{1}{x^{6}}+C$
+- $\int \frac 2{x^5}\,\mathrm dx=-\frac 13 \frac{1}{x^{6}}+C$
 - $\int 2\sin x\,\mathrm dx=-2\cos x+C$
 - $\int x+e^x\,\mathrm dx=\frac 12 x^2+e^x+C$
 
@@ -135,7 +133,7 @@ Vyberte výpoèet integrálu, který není správnì.
 - $\int x^3\,\mathrm dx=\frac 14x^4+C$
 - $\int e^{-3x}\,\mathrm dx=-\frac 13 e^{-3x}+C$
 - $\int \sqrt x\,\mathrm dx=\frac 23 x^{3/2}+C$
-- $\int \frac 2{x^5}\,\mathrm dx=-\frac 16 \frac{1}{x^{6}}+C$
+- $\int \frac 2{x^5}\,\mathrm dx=-\frac 13 \frac{1}{x^{6}}+C$
 + $\int 2\sin x\,\mathrm dx=\sin x^2+C$
 - $\int x+e^x\,\mathrm dx=\frac 12 x^2+e^x+C$
 
@@ -143,7 +141,7 @@ Vyberte výpoèet integrálu, který není správnì.
 - $\int x^3\,\mathrm dx=\frac 14x^4+C$
 - $\int e^{-3x}\,\mathrm dx=-\frac 13 e^{-3x}+C$
 - $\int \sqrt x\,\mathrm dx=\frac 23 x^{3/2}+C$
-- $\int \frac 2{x^5}\,\mathrm dx=-\frac 16 \frac{1}{x^{6}}+C$
+- $\int \frac 2{x^5}\,\mathrm dx=-\frac 13 \frac{1}{x^{6}}+C$
 - $\int 2\sin x\,\mathrm dx=-2\cos x+C$
 + $\int x+e^x\,\mathrm dx=x^2+e^{-x}+C$
 
@@ -152,21 +150,21 @@ Ní¾e jsou lineární aproximace bì¾ných funkcí v okolí nuly. Oznaète tu, která nen
 + $\cos x\approx 1-x$
 - $e^x\approx 1+x$
 - $(1+x)^n\approx 1+nx$
-- $\ln x\approx 1+x$
+- $\ln (x+1)\approx x$
 
 Ní¾e jsou lineární aproximace bì¾ných funkcí v okolí nuly. Oznaète tu, která není pravdivá.
 + $\sin x\approx 1-x^2$
 - $\cos x\approx 1$
 - $e^x\approx 1+x$
 - $(1+x)^n\approx 1+nx$
-- $\ln x\approx 1+x$
+- $\ln (x+1)\approx x$
 
 Ní¾e jsou lineární aproximace bì¾ných funkcí v okolí nuly. Oznaète tu, která není pravdivá.
 - $\sin x\approx x$
 - $\cos x\approx 1$
 - $e^x\approx 1+x$
 + $(1+x)^n\approx n(1+x)^{n-1}$
-- $\ln x\approx 1+x$
+- $\ln (x+1)\approx x$
 
 Pøi øe¹ení rovnice $$x=\cos x$$ mù¾eme rovnici pøevést na tvar $$x-\cos x=0$$ a pou¾ít Newtonovu metodu. Urèete výsledný tvar iteraèního vzorce.
 + $x_{n+1}=x_n-\frac{x_n-\cos x_n}{1+\sin{x_n}}$
@@ -191,7 +189,7 @@ Malthusùv model popisuje vývoj populace, která se rozmno¾uje rychlostí úmìrnou v
 - $\frac{\mathrm dy}{\mathrm dt}=r\left(1-\frac{y}{K}\right)$
 - $\frac{\mathrm dy}{\mathrm dt}=ry\left(1-\frac{y}{K}\right)$
 
-Logistická rovnice popisuje model popisuje rùst populace v prostøedí s omezenou nosnou kapacitou $K$, kdy je rychlost rùstu populace úmìrná souèasnì velikosti populace a volnému místu v prostøedí. Najdìte nejvhodnìj¹í matematický model pro tento proces.
+Logistická rovnice popisuje rùst populace v prostøedí s omezenou nosnou kapacitou $K$, kdy je rychlost rùstu populace úmìrná souèasnì velikosti populace a volnému místu v prostøedí. Najdìte nejvhodnìj¹í matematický model pro tento proces.
 - $\frac{\mathrm dy}{\mathrm dt}=ky-h$
 - $\frac{\mathrm dy}{\mathrm dt}=\frac{k}{y}$
 - $\frac{\mathrm dy}{\mathrm dt}=-ky$
@@ -201,7 +199,7 @@ Logistická rovnice popisuje model popisuje rùst populace v prostøedí s omezenou 
 - $\frac{\mathrm dy}{\mathrm dt}=ry\left(1-\frac{y}{K}\right)-h$
 + $\frac{\mathrm dy}{\mathrm dt}=ry\left(1-\frac{y}{K}\right)$
 
-Logistická rovnice popisuje model popisuje rùst populace v prostøedí s omezenou nosnou kapacitou $K$, kdy je rychlost rùstu populace úmìrná souèasnì velikosti populace a volnému místu v prostøedí. Do této populace pøidáme lov konstantní rychlostí. Najdìte nejvhodnìj¹í matematický model pro tento proces.
+Logistická rovnice popisuje rùst populace v prostøedí s omezenou nosnou kapacitou $K$, kdy je rychlost rùstu populace úmìrná souèasnì velikosti populace a volnému místu v prostøedí. Do této populace pøidáme lov konstantní rychlostí. Najdìte nejvhodnìj¹í matematický model pro tento proces.
 - $\frac{\mathrm dy}{\mathrm dt}=ky-h$
 - $\frac{\mathrm dy}{\mathrm dt}=\frac{k}{y}-h$
 - $\frac{\mathrm dy}{\mathrm dt}=-ky$
@@ -211,7 +209,7 @@ Logistická rovnice popisuje model popisuje rùst populace v prostøedí s omezenou 
 - $\frac{\mathrm dy}{\mathrm dt}=ry\left(1-\frac{y}{K}\right)$
 + $\frac{\mathrm dy}{\mathrm dt}=ry\left(1-\frac{y}{K}\right)-h$
 
-Logistická rovnice popisuje model popisuje rùst populace v prostøedí s omezenou nosnou kapacitou $K$, kdy je rychlost rùstu populace úmìrná souèasnì velikosti populace a volnému místu v prostøedí. Do této populace pøidáme lov rychlostí úmìrnou velikosti populace. Najdìte nejvhodnìj¹í matematický model pro tento proces.
+Logistická rovnice popisuje rùst populace v prostøedí s omezenou nosnou kapacitou $K$, kdy je rychlost rùstu populace úmìrná souèasnì velikosti populace a volnému místu v prostøedí. Do této populace pøidáme lov rychlostí úmìrnou velikosti populace. Najdìte nejvhodnìj¹í matematický model pro tento proces.
 - $\frac{\mathrm dy}{\mathrm dt}=ky-h$
 - $\frac{\mathrm dy}{\mathrm dt}=\frac{k}{y}-hy$
 - $\frac{\mathrm dy}{\mathrm dt}=-ky$
@@ -303,7 +301,7 @@ Funkce $f(t)=3+4e^{-0.05 t}$ udává rychlost, s jakou roste velikost populace ¹ko
 
 Nech» $f(t)$ je velièina, která ve stupních Celsia za hodinu udává rychlost rùstu teploty v místnosti. Která formulace vyjadøuje slovnì pojem integrálu $\int_0^5 f(t)\,\mathrm dt$?
 - Okam¾itá zmìna rychlosti zmìny teploty za prvních pìt hodin.
-- Okam¾itá zmìna rychlosti zmìny teploty 
+- Okam¾itá zmìna rychlosti zmìny teploty .
 - Prùmìrná zmìna rychlosti zmìny teploty za prvních pìt hodin.
 + Zmìna teploty za prvních pìt hodin.
 - Teplota po prvních pìti hodinách.
@@ -330,7 +328,7 @@ Prùhyb $s$ nosníku vý¹ky $h$ je dán vztahem $s=\frac k{h^3}$, kde $k$ je konstan
 - $\Delta s=-\frac {k}{(\Delta h)^3}$
 - $\Delta s=-\frac {k}{(\Delta h)^4}$
 - $\Delta s=-\frac {3k}{(\Delta h)^4}h$
-- $\frac{\mathrm ds}{\mathrm dt}=-\frac 3k{h^4}\frac{\mathrm dh}{\mathrm dt}$
+- $\frac{\mathrm ds}{\mathrm dt}=-\frac {3k}{h^4}\frac{\mathrm dh}{\mathrm dt}$
 - $\frac{\mathrm ds}{\mathrm dt}=\frac k{h^4}\frac{\mathrm dh}{\mathrm dt}$
 - $\frac{\mathrm ds}{\mathrm dt}=\frac k{h^3}\frac{\mathrm dh}{\mathrm dt}$
 
@@ -341,7 +339,7 @@ Prùhyb $s$ nosníku vý¹ky $h$ je dán vztahem $s=\frac k{h^3}$, kde $k$ je konstan
 - $\Delta s=-\frac {k}{(\Delta h)^3}$
 - $\Delta s=-\frac {k}{(\Delta h)^4}$
 - $\Delta s=-\frac {3k}{(\Delta h)^4}h$
-+ $\frac{\mathrm ds}{\mathrm dt}=-\frac 3k{h^4}\frac{\mathrm dh}{\mathrm dt}$
++ $\frac{\mathrm ds}{\mathrm dt}=-\frac {3k}{h^4}\frac{\mathrm dh}{\mathrm dt}$
 - $\frac{\mathrm ds}{\mathrm dt}=\frac k{h^4}\frac{\mathrm dh}{\mathrm dt}$
 - $\frac{\mathrm ds}{\mathrm dt}=\frac k{h^3}\frac{\mathrm dh}{\mathrm dt}$
 - ¾ádný, obì velièiny jsou nezávislé
@@ -350,41 +348,41 @@ Funkce $T(x)$ udává teplotu ve stìnì v místì ve vzdálenosti $x$ mìøeno od vnìj¹í
 + jednorozmìrný gradient, tj. rychlost (v jednotkách teploty na jednotku délky) s jakou roste teplota ve stìnì smìrem dovnitø domu
 - rychlost zmìny teploty v èase, tj. rychlost (v jednotkách teploty na jednotku èasu) s jakou roste teplota na vnìj¹í stranì stìny
 - celkový teplotní rozdíl (v jednotkách teploty) mezi teplotou vnitøní a vnìj¹í stìny
-- celkový teplotní tok (ve wattech na metr ètvereèní) jednotkou plochou stìny
+- celkový teplotní tok (ve wattech na metr ètvereèní) jednotkovou plochou stìny
 - prùmìrná teplota ve stìnì vynásobená ¹íøkou stìny $d$
 
-Funkce $T(x)$ udává teplotu ve stìnì v místì ve vzdálenosti $x$ mìøeno od vnìj¹í strany zdi.  Zeï má tlou¹»ku $d$. Co udává integrál $\int_0^d T(x)\mathrm dx$?
+Funkce $T(x)$ udává teplotu ve stìnì v místì ve vzdálenosti $x$ mìøeno od vnìj¹í strany zdi. Zeï má tlou¹»ku $d$. Co udává integrál $\int_0^d T(x)\mathrm dx$?
 - jednorozmìrný gradient, tj. rychlost (v jednotkách teploty na jednotku délky) s jakou roste teplota ve stìnì smìrem dovnitø domu
 - rychlost zmìny teploty v èase, tj. rychlost (v jednotkách teploty na jednotku èasu) s jakou roste teplota na vnìj¹í stranì stìny
 - celkový teplotní rozdíl (v jednotkách teploty) mezi teplotou vnitøní a vnìj¹í stìny
-- celkový teplotní tok (ve wattech na metr ètvereèní) jednotkou plochou stìny
+- celkový teplotní tok (ve wattech na metr ètvereèní) jednotkovou plochou stìny
 + prùmìrná teplota ve stìnì vynásobená ¹íøkou stìny $d$
 
-Funkce $T(t)$ udává teplotu v daném místì stìnì v místì v èase $t$. Zeï má tlou¹»ku $d$. Co udává derivace $T'(t)$, tj. derivace $\frac{\mathrm dT}{\mathrm dt}$?
+Funkce $T(t)$ udává teplotu v daném místì ve stìnì v èase $t$. Zeï má tlou¹»ku $d$. Co udává derivace $T'(t)$, tj. derivace $\frac{\mathrm dT}{\mathrm dt}$?
 - jednorozmìrný gradient, tj. rychlost (v jednotkách teploty na jednotku délky) s jakou roste teplota ve stìnì smìrem dovnitø domu
 + rychlost zmìny teploty v èase, tj. rychlost (v jednotkách teploty na jednotku èasu) s jakou roste teplota v daném místì stìny
 - celkový teplotní rozdíl (v jednotkách teploty) mezi teplotou vnitøní a vnìj¹í stìny
-- celkový teplotní tok (ve wattech na metr ètvereèní) jednotkou plochou stìny
+- celkový teplotní tok (ve wattech na metr ètvereèní) jednotkovou plochou stìny
 - prùmìrná teplota ve stìnì vynásobená ¹íøkou stìny $d$
 
-Funkce $T(t)$ udává teplotu v daném místì stìnì v místì v èase $t$. Zeï má tlou¹»ku $d$. Co udává integrál $\int_0^1 T(t)\mathrm dt$?
+Funkce $T(t)$ udává teplotu v daném místì ve stìnì v èase $t$. Zeï má tlou¹»ku $d$. Co udává integrál $\int_0^1 T(t)\mathrm dt$?
 - jednorozmìrný gradient, tj. rychlost (v jednotkách teploty na jednotku délky) s jakou roste teplota ve stìnì smìrem dovnitø domu
 - rychlost zmìny teploty v èase, tj. rychlost (v jednotkách teploty na jednotku èasu) s jakou roste teplota na vnìj¹í stranì stìny
 - celkový teplotní rozdíl (v jednotkách teploty) mezi teplotou vnitøní a vnìj¹í stìny
-- celkový teplotní tok (ve wattech na metr ètvereèní) jednotkou plochou stìny
+- celkový teplotní tok (ve wattech na metr ètvereèní) jednotkovou plochou stìny
 - prùmìrná teplota ve stìnì vynásobená ¹íøkou stìny $d$
 + ¾ádná z uvedených mo¾ností
 
 Posuïte stabilitu konstantního øe¹ení $y=1$ u rovnice $$y'=1-y.$$
-+ Stabilní, proto¾e $y=1$ je nulový bod pravé strany a pravá strana je v tomto bodì rostoucí.
+- Stabilní, proto¾e $y=1$ je nulový bod pravé strany a pravá strana je v tomto bodì rostoucí.
 - Nestabilní, proto¾e $y=1$ je nulový bod pravé strany a pravá strana je v tomto bodì rostoucí.
-- Stabilní, proto¾e $y=1$ je nulový bod pravé strany a pravá strana je v tomto bodì klesající.
++ Stabilní, proto¾e $y=1$ je nulový bod pravé strany a pravá strana je v tomto bodì klesající.
 - Nestabilní, proto¾e $y=1$ je nulový bod pravé strany a pravá strana je v tomto bodì klesající.
 - Stabilní, proto¾e v bodì $y=1$ je pravá strana kladná a pravá strana je v tomto bodì klesající.
 - Stabilní, proto¾e v bodì $y=1$ je pravá strana záporná a pravá strana je v tomto bodì klesající.
 - Nestabilní, proto¾e v bodì $y=1$ je pravá strana kladná a pravá strana je v tomto bodì klesající.
 - Nestabilní, proto¾e v bodì $y=1$ je pravá strana záporná a pravá strana je v tomto bodì klesající.
-- Otázka nemá smysl, $y=1$ není stacioárním bodem.
+- Otázka nemá smysl, $y=1$ není stacionárním bodem.
 
 Posuïte stabilitu konstantního øe¹ení $y=-1$ u rovnice $$y'=1+y.$$
 - Stabilní, proto¾e $y=-1$ je nulový bod pravé strany a pravá strana je v tomto bodì rostoucí.
@@ -395,7 +393,7 @@ Posuïte stabilitu konstantního øe¹ení $y=-1$ u rovnice $$y'=1+y.$$
 - Stabilní, proto¾e v bodì $y=-1$ je pravá strana záporná a pravá strana je v tomto bodì klesající.
 - Nestabilní, proto¾e v bodì $y=-1$ je pravá strana kladná a pravá strana je v tomto bodì klesající.
 - Nestabilní, proto¾e v bodì $y=-1$ je pravá strana záporná a pravá strana je v tomto bodì klesající.
-- Otázka nemá smysl, $y=-1$ není stacioárním bodem.
+- Otázka nemá smysl, $y=-1$ není stacionárním bodem.
 
 Posuïte stabilitu konstantního øe¹ení $y=-1$ u rovnice $$y'=1-y.$$
 - Stabilní, proto¾e $y=-1$ je nulový bod pravé strany a pravá strana je v tomto bodì rostoucí.
@@ -406,7 +404,7 @@ Posuïte stabilitu konstantního øe¹ení $y=-1$ u rovnice $$y'=1-y.$$
 - Stabilní, proto¾e v bodì $y=-1$ je pravá strana záporná a pravá strana je v tomto bodì klesající.
 - Nestabilní, proto¾e v bodì $y=-1$ je pravá strana kladná a pravá strana je v tomto bodì klesající.
 - Nestabilní, proto¾e v bodì $y=-1$ je pravá strana záporná a pravá strana je v tomto bodì klesající.
-+ Otázka nemá smysl, $y=-1$ není stacioárním bodem.
++ Otázka nemá smysl, $y=-1$ není stacionárním bodem.
 
 Rychlost s jakou klesá mno¾ství vody $M$ ve døevì pøi zanedbání difuze je úmìrná rozdílu mezi tímto mno¾stvím vody a rovnová¾ným obsahem vody $M_0$. Jaký model vhodnì popisuje tuto situaci?
 + $\frac{\mathrm dM}{\mathrm dt}=-k(M-M_0)$
