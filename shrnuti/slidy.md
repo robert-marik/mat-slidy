@@ -1,7 +1,115 @@
-% Shrnutí
+% Shrnutí za předmět Matematika
 % Robert Mařík
-% 21.5.2019
+% květen 2020
 
+# Čísla a funkce
+
+* K měření množství čehokoliv potřebujeme *čísla*.
+* K vyjadřování vztahů mezi dvěma nebo více veličinami potřebujeme *funkce*.
+    * Rostou obě veličiny současně? *rostoucí funkce*
+    * Je růst jedné veličiny spojený s poklesem druhé?  *klesající funkce*
+    * Lze z výstupu funkce zrekonstruovat vstupní data? Jak? *prostá funkce*, *inverzní funkce*
+
+# Derivace
+
+<div class='obtekat'>
+
+![Vzájemné souvislosti derivace a dvou integrálů.](blok.png)
+
+</div>
+
+K měření rychlosti změn potřebujeme *derivace*.
+
+* Derivace veličiny podle času udává rychlost změny veličiny v čase.
+* Derivace veličiny podle prostorové souřadnice (jednorozměrný gradient) udává rychlost změny veličiny ve směru příslušné prostorové osy.
+* Vektor z derivací veličiny podle prostorových souřadnic (vícerozměrný gradient) udává směr a rychlost změny veličiny.
+
+První dvě operace jsou vlastně totéž, jenom pro jinou nezávislou proměnnou a umíme je i obrátit. Pro tyto potřeby jsme zavedli pojem integrál. Třetí operaci (kdy je zadaný gradient a máme najít původí funkci) se naučíme obrátit pomocí křivkového integrálu druhého druhu, pokud se spolu setkáme v předmětu Aplikovaná matematika v navazujícím studiu.
+
+Symbolicky zapsáno, platí
+$\int_a^b f(t)\mathrm dt=F(b)-F(a)$, kde $\int f(t)\,\mathrm dt=F(t)$ tj. $F'(t)=\frac{\mathrm dF}{\mathrm dt}=f(t)$.
+
+
+# Lineární aproximace
+
+*Vstup:* $y=f(x)$, $x=x_0$ *Výstup:* Aproximave funkce $f(x)$  v okolí bodu $x_0$ přímkou.
+
+$$f(x)\approx f(x_0)+f'(x_0)(x-x_0)$$
+
+* Výraz $f'(x_0)$ je změna funkce $f$ vyvolaná jednotkovou změnou proměnné $x$
+* Výraz $x-x_0$ je změna ve vstupních datech, pokud hodnotu $x_0$ změníme na $x$
+* Výraz $f'(x_0)(x-x_0)$ je odhad změny funkce $f$, pokud hodnotu $x_0$ změníme na $x$
+
+Využití:
+
+a) ** Konstitutivní zákony** v 1D, kdy bereme $x_0=0$ a $f(x_0)=0$.
+$$f(x)\approx 0+f'(0)(x-0)=kx$$
+b) **Newtonova metoda** používá aproximaci pro $x_0=x_n$, $x=x_{n+1}$ a $f(x_{n+1})=0$, tj. 
+$$0=f(x_n)+f'(x_n)(x_{n+1}-x_n)$$ a odsud
+$$x_{n+1}=x_n-\frac {f(x_n)}{f'(x_n)}.$$
+c) **Konstitutivní zákony ve 2D a 3D,** kdy rozšiřujeme zákon z 1D do vícerozměrného vztahu mezi vektory $$\vec j=A\vec q,$$
+kde $\vec j$ je tok, $A$ symetrická matice a $\vec q$ podnět vyvolávající tok $\vec j$. V tomto případě nás zajímají vlastní směry jako neulové vektory splňující $$A\vec u=\lambda \vec u$$ pro vhodné reálné číslo $\lambda$. Pokud jsou  vlastní směry v souřadnicových osách, je matice $A$ diagonální a v diagonále jsou její vlastní čísla.
+
+# Diferenciální rovnice
+
+Pokud neznám časový průběh veličiny ani její rychlost, ale vím, jak spolu hodnoty veličiny s rychlostí souvisí, příslušným matematickým modelem je diferenciální rovnice.
+
+* Obecná diferecnciální rovnice prvního řádu je $$\frac{\mathrm dy}{\mathrm dt}=f(y,t),$$
+my jsme se naučili řešit dvojí integrací rovnice se separovanými proměnnými ve tvaru $$\frac{\mathrm dy}{\mathrm dt}=f(y)g(t).$$
+* Diferenciální rovnice tvaru $$\frac{\mathrm dy}{\mathrm dt}=f(y)$$ má monotonii řešení dánu znaménkem pravé strany a odsud mohu posoudit i stabilitu konstantních řešení.
+* Diferenciální rovnice tvaru $$\frac{\mathrm dy}{\mathrm dt}=f(y)-g(y)$$ je stejného typu jako předchozí rovnice a monotonie řešení stabilita vyplyne ze vzájemného srovnání obou funkcí na pravé straně.
+
+# Transportní děje
+
+Tento přístup používáme v situacích, kdy rychlost změny veličiny souvisí se změnami v toku, který tuto veličinu přenáší.
+
+Celkovou bilanci je možno vyjářit vztahem dávajícím do relace rychlost akumulace stavové veličiny a součet přírůstku ze zdrojů s přírůstkem díky toku.
+$$\frac{\partial u}{\partial t}=\sigma -\nabla\cdot\vec j$$
+
+* Výraz $\vec j$ vyjařuje tok (přesněji hustotu toku).
+* Výraz $\nabla\cdot\vec j$ vyjadřuje nárůst hustoty toku, tj. jeho zesílení v daném místě.
+* Výraz $-\nabla\cdot\vec j$ vyjadřuje pokles hustoty toku, tj. jeho zeslabení toku v daném místě.
+
+Celková bilance se nazývá rovnice kontinuity.
+
+# Od gradientu k toku
+
+Gradient vyjadřuje směr a intenzitu růstu skalární veličiny. Tok je iniciován záporně vzatým gradientem (směr a intenzita poklesu).
+
+Od záporně vzatého gradientu k toku nás odvedou konstitutivní zákony. Tyto umíme formulovat v jedné i více dimenzích a zpravidla je formulujeme v lineární aproximaci.
+
+Tok je vyvolán nerovnoměrnostmi v prostorovém rozložení veličiny, tj. *gradientem*.
+
+## Jedna dimenze
+
+V 1D je nárůst vyjádřen prostorovou derivací $\frac{\partial u}{\partial x}$ (jednorozměrný gradient) a pokles výrazem $-\frac{\partial u}{\partial x}$ (záporně vzatý jednorozměrný gradient). Tok je $$\vec j=- k \frac{\partial u}{\partial x},$$ kde $k$ je reálná konstanta.
+
+## Více dimenzí
+
+* Ve 2D a 3D je nárůst vyjádřen gradientem $\nabla u=\begin{pmatrix}\frac{\partial u}{\partial x}\\\vdots\end{pmatrix}$ a pokles záporně vzatým gradientem $-\nabla u$. Tok je $$\vec j=- D \nabla u,$$ kde $D$ je $2\times 2$ nebo $3\times 3$ matice.
+
+# Difuzní rovnice
+
+Difuzní rovnice vznikne spojením rovnice kontinuity $$\frac{\partial u}{\partial t}=\sigma -\nabla\cdot\vec j$$
+a konstitutivního zákona $$\vec j=- D \nabla u,$$ do jedné rovnice
+$$\frac{\partial u}{\partial t}=\sigma -\nabla\cdot\left(- D \nabla u\right)$$
+tj. 
+$$\frac{\partial u}{\partial t}=\sigma +\nabla\cdot\left( D \nabla u\right)$$
+
+a) Transport vázané vody ve dřevě, kdy hustotou stavové veličiny je koncentrace vody a rovnice je bezzdrojová, tj. $$\frac{\partial u}{\partial t}=\nabla\cdot\left( D \nabla u\right)$$
+b) Transport energie vedením tepla, kdy hustotou stavové veličiny je hustota energie (entalpie), platí $$\frac{\partial E}{\partial t}=\rho c \frac{\partial T}{\partial t}, \quad \sigma=0$$
+$$\vec j=-k\nabla T$$
+$$\rho c\frac{\partial T}{\partial t}=\nabla\cdot\left(k\nabla T\right).$$
+
+# Numerická aproximace
+
+1. Rovnice, viz Newtonova metoda.
+2. Derivace aproximujeme pomocí dvou nebo tří po sobě jdoucích hodnot. $$\begin{aligned}\frac{\mathrm df}{\mathrm dx}&=\frac{f(x+h)-f(x)}{h}+O(h)\\\frac{\mathrm df}{\mathrm dx}&=\frac{f(x+h)-f(x-h)}{2h}+O(h^2)\\ \frac{\mathrm d^2f}{\mathrm dx^2}&=\frac{f(x+h)-2f(x)+f(x-h)}{h^2}+O(h^2)\end{aligned}$$ Při použití v rovnici vedení tepla nebo v difuzní rovnici vede na soustavu lineárních rovnic $AX=B$. Tato soustava může být velká (stovky rovnic a proměnných)  a je velmi řídká (v každé rovnici několik málo neznámých). Proto řešíme numerickými metodami odvozenými pro tyto typy soustav.
+3. Integrál můžeme aproximovat lichoběžníkovou metodou jako obsah pod lomenou čarou.
+4. Diferenciální rovnici $$\frac{\mathrm dy}{\mathrm dt}=f(y,t)$$ můžeme aproximovat podobně jako ve druhém případě, ale s výhodou, že rovnice se dají řešit postupně od počáteční podmínky dopředu nebo dozadu.
+$$\begin{aligned}y_{n+1}&=y_n+f(y_n,t_n)h \\ t_{n+1}&=t_n+h\end{aligned}$$
+
+<!--
 # Co tu najdete
 
 * Definice jsou neformální, vyjádřeny slovně a proto někdy bohužel poněkud vágně.
@@ -11,7 +119,7 @@
 
 ## Prostá funkce
 
-* Definice: Prostá funkce nabývá každou funkční hodnotu jenom jednou.
+* Definice:  Prostá funkce nabývá každou funkční hodnotu jenom jednou.
 * Lze u ní zrekonstruovat vstupní data, tj. definovat inverzní funkci.
 * Pokud v rovnici vystupují prosté funkce, dá se tato rovnice řešit
   (pomocí inverzních funkcí).
@@ -367,3 +475,4 @@ formálně jednodušší než ve směrech zcela obecných.
 
 Udává přímo návod, jaká transformace převede fyzikální zákon vyjádřený
 pomocí maticového násobení do co nejjednoduššího tvaru.
+-->

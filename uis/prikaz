@@ -1,6 +1,8 @@
 perl printacroweb.pl < vypocty.txt > vypocty.tex 
 perl printacroweb.pl < teorie.txt > teorie.tex
 perl printacroweb.pl < ode.txt > ode.tex 
+perl printacroweb.pl < aplikace.txt > aplikace.tex 
+perl printacroweb.pl < aplikacni_priklady.txt > aplikacni_priklady.tex 
 sed -i 's/\$\$IMG=\(.*\)_png\$\$/\\includegraphics\[width=\\linewidth\]{\1.png}/' ode.tex
 pdflatex testy
 
