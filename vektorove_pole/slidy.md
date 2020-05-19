@@ -525,12 +525,13 @@ vede vlhkost nejlépe. V takovém případě je $D$ matice.
 Spojením rovnice kontinuity
 $$
       {\frac{\partial u}{\partial t}=\sigma -\nabla\cdot \vec \jmath}   $$
-a vztahu  pro tok stavové veličiny dostáváme  *difuzní rovnici*
+a vztahu  pro tok stavové veličiny dostáváme rovnici
 $$
-      {\frac{\partial u}{\partial t}=\sigma - \nabla\cdot \bigl(-D\nabla u\bigr)},$$
-      kterou je možno upravit na 
+      {\frac{\partial u}{\partial t}=\sigma - \nabla\cdot \bigl(-D\nabla u\bigr)}.$$
+      Tuto rovici je možno upravit na tvar
 $$
-      {\frac{\partial u}{\partial t}=\sigma + \nabla\cdot \bigl(D\nabla u\bigr)}.$$
+      {\frac{\partial u}{\partial t}=\sigma + \nabla\cdot \bigl(D\nabla u\bigr)},$$
+který se nazývá *difuzní rovnice*.
 
 
 >Poznámka (fyzikální interpretace difuzní rovnice).
