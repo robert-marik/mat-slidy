@@ -1130,10 +1130,10 @@ Používáme vzorce $\int x^n\,\mathrm dx=\frac 1{n+1}x^{n+1}+c$, $\int e^x\,\ma
 \item $\int\frac{1}{4x^2}\,\mathrm dx=\frac 14 \int x^{-2}\,\mathrm dx=\frac 14  (-1)x^{-1}=-\frac {1}{4x}+c$
 \item \dots
 \item \dots
-\item $\int \frac 1{r^2}-\frac 1{r^6}\,\mathrm dr=\int r^{-2}-r^{-6}\,\mathrm dr=(-1)r^{-1}+\frac 15 r^{-5}=-\frac 1r+\frac 1{5x^5}+c$
+\item $\int \frac 1{r^2}-\frac 1{r^6}\,\mathrm dr=\int r^{-2}-r^{-6}\,\mathrm dr=(-1)r^{-1}+\frac 15 r^{-5}=-\frac 1r+\frac 1{5r^5}+c$
 \item \dots
 \item \dots
-\item $\int_{-1}^1 3x^2+x^5\,\mathrm dx=\left[x^3+\frac 16 x^6\right]_{-1}^1=\left(1^3+\frac 16 1^6\right)-\left((-1)^3+\frac 16 (-1)^6\right)=\frac 13$
+\item $\int_{-1}^1 3x^2+x^5\,\mathrm dx=\left[x^3+\frac 16 x^6\right]_{-1}^1=\left(1^3+\frac 16 1^6\right)-\left((-1)^3+\frac 16 (-1)^6\right)=2$
 \item $\int_0^{10} e^{-0.1 t}\,\mathrm dt=\left[-10 e^{-0.1t}\right]_0^{10}=-10 e^{-0.1\times 10}-\left(-10 e^{-0.1\times 0}\right)=-10 e^{-1}+10$
 \item  $\int_{-a}^{a} u^3\,\mathrm du=\left[\frac 14 u^4\right]_{-a}^a=\frac 14 a^4 - \frac 14 (-a)^4 = 0$
 \end{enumerate}
@@ -1222,11 +1222,11 @@ $$W(0)=0\quad \text {a} \quad W'(t)=\frac{4t}{100}-3\left (\frac  t{100}\right)^
 
 \reseni Výsledná funkce integrálem rychlosti učení, tj.
 \begin{equation*}
-W(t)=\int W'(t) \,\mathrm dt  =  \int \frac{4t}{100}-3\left (\frac  t{100}\right)^2 \,\mathrm dt  =\frac {2t}{100}+\frac{t^3}{10000} +C,
+W(t)=\int W'(t) \,\mathrm dt  =  \int \frac{4t}{100}-3\left (\frac  t{100}\right)^2 \,\mathrm dt  =\frac {2t^2}{100}+\frac{t^3}{10000} +C,
 \end{equation*}
 kde $C$ je integrační konstanta. Protože musí platit $W(0)=0$, je $C=0$ a proto
 \begin{equation*}
-  W(t)=\frac {2t}{100}+\frac{t^3}{10000}.
+  W(t)=\frac {2t^2}{100}+\frac{t^3}{10000}.
 \end{equation*}
 
 \konec
@@ -1240,6 +1240,15 @@ předem stanovenou hodnotu.  Určete hodnotu reálného parametru $a$ tak,
 aby byl integrál $$\int_0^{10} a \sqrt x\,\mathrm dx$$ roven hodnotě
 2019.
 
+\reseni
+
+$$\int _0^{10} a\sqrt x=\left[a\frac 23 x^{\frac 32}\right]_0^{10}=\frac {2a}{3}(10)^{\frac 32}$$
+
+$$\begin{aligned}
+  2019&=\frac {2a}{3}(10)^{\frac 32}\\
+  a&=\frac 32 2019 (10)^{-\frac 32}\end{aligned}$$
+
+\konec
 
 \stranka
 

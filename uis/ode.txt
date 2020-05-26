@@ -1,4 +1,4 @@
-Studujme rovnici modelující teplotu na Zemi tak, jak je ovlivnìna dopadajícím výkonem ze Slunce, vyzaøovaným výkonem do vesmíru a skleníkovým efektem. Bilance mezi pøíjmem energie ze Slunce a vyzaøováním energie do kosmu a její vliv na zmìnu teploty jsou vyjádøeny diferenciální rovnicí $$\frac{\mathrm dT}{\mathrm dt}=R_{\mathrm{in}}(T)-R_{\mathrm{out}}(T),$$ kde prùbìhy køivek $R_{\mathrm{in}}(T)$ a $R_{\mathrm{out}}(T)$ jsou pro nìjaké konkrétní hodnoty parametru zachyceny v následujícím obrázku. Nejmen¹í kladný stacionární bod oznaème $T_1$, pøíadné dal¹í postupnì podle velikosti $T_2$, $T_3$ atd. Vyberte tvrzení, které pro tuto rovnici neplatí. earth_1_png
+Studujme rovnici modelující teplotu na Zemi tak, jak je ovlivnìna dopadajícím výkonem ze Slunce, vyzaøovaným výkonem do vesmíru a skleníkovým efektem. Bilance mezi pøíjmem energie ze Slunce a vyzaøováním energie do kosmu a její vliv na zmìnu teploty jsou vyjádøeny diferenciální rovnicí $$\frac{\mathrm dT}{\mathrm dt}=R_{\mathrm{in}}(T)-R_{\mathrm{out}}(T),$$ kde prùbìhy køivek $R_{\mathrm{in}}(T)$ a $R_{\mathrm{out}}(T)$ jsou pro nìjaké konkrétní hodnoty parametru zachyceny v následujícím obrázku. Nejmen¹í kladný stacionární bod oznaème $T_1$, pøíadné dal¹í postupnì podle velikosti $T_2$, $T_3$ atd. Vyberte tvrzení, které pro tuto rovnici neplatí. $$IMG=earth_1_png$$
 - Zemì podle tohoto modelu nemù¾e vychladnout na nulovou teplotu ani se neomezenì ohøívat.
 - Podle tohoto modelu existují tøi stacionární stavy, z nich¾ dva jsou stabilní.
 + Pro teplotu mezi $T_1$ a $T_2$ teplota Zemì roste.
@@ -8,28 +8,28 @@ Studujme rovnici modelující teplotu na Zemi tak, jak je ovlivnìna dopadajícím vý
 - Stacionární bod $T_3$ je stabilní.
 - Stacionární bod $T_2$ je nestabilní.
 
-Studujme rovnici modelující teplotu na Zemi tak, jak je ovlivnìna dopadajícím výkonem ze Slunce, vyzaøovaným výkonem do vesmíru a skleníkovým efektem.Bilance mezi pøíjmem energie ze Slunce a vyzaøováním energie do kosmu a její vliv na zmìnu teploty jsou vyjádøeny diferenciální rovnicí $$\frac{\mathrm dT}{\mathrm dt}=R_{\mathrm{in}}(T)-R_{\mathrm{out}}(T),$$ kde prùbìhy køivek $R_{\mathrm{in}}(T)$ a $R_{\mathrm{out}}(T)$ jsou pro nìjaké konkrétní hodnoty parametru zachyceny v následujícím obrázku.  Nejmen¹í kladný stacionární bod oznaème $T_1$, pøíadné dal¹í postupnì podle velikosti $T_2$, $T_3$ atd. Vyberte tvrzení, které pro tuto rovnici neplatí. earth_2_png
+Studujme rovnici modelující teplotu na Zemi tak, jak je ovlivnìna dopadajícím výkonem ze Slunce, vyzaøovaným výkonem do vesmíru a skleníkovým efektem.Bilance mezi pøíjmem energie ze Slunce a vyzaøováním energie do kosmu a její vliv na zmìnu teploty jsou vyjádøeny diferenciální rovnicí $$\frac{\mathrm dT}{\mathrm dt}=R_{\mathrm{in}}(T)-R_{\mathrm{out}}(T),$$ kde prùbìhy køivek $R_{\mathrm{in}}(T)$ a $R_{\mathrm{out}}(T)$ jsou pro nìjaké konkrétní hodnoty parametru zachyceny v následujícím obrázku.  Nejmen¹í kladný stacionární bod oznaème $T_1$, pøíadné dal¹í postupnì podle velikosti $T_2$, $T_3$ atd. Vyberte tvrzení, které pro tuto rovnici neplatí. $$IMG=earth_2_png$$
 - Zemì podle tohoto modelu nemù¾e vychladnout na nulovou teplotu ani se neomezenì ohøívat.
 + Podle tohoto modelu existují tøi stacionární stavy, z nich¾ dva jsou stabilní.
 - Stacionární bod $T_1$ je stabilní.
 - Pro teplotu men¹í ne¾ $T_1$ teplota roste.
 - Pro teplotu vìt¹í ne¾ $T_1$ teplota klesá.
 
-Studujme rovnici modelující teplotu na Zemi tak, jak je ovlivnìna dopadajícím výkonem ze Slunce, vyzaøovaným výkonem do vesmíru a skleníkovým efektem.Bilance mezi pøíjmem energie ze Slunce a vyzaøováním energie do kosmu a její vliv na zmìnu teploty jsou vyjádøeny diferenciální rovnicí $$\frac{\mathrm dT}{\mathrm dt}=R_{\mathrm{in}}(T)-R_{\mathrm{out}}(T),$$ kde prùbìhy køivek $R_{\mathrm{in}}(T)$ a $R_{\mathrm{out}}(T)$ jsou pro nìjaké konkrétní hodnoty parametru zachyceny v následujícím obrázku. Nejmen¹í kladný stacionární bod oznaème $T_1$, pøíadné dal¹í postupnì podle velikosti $T_2$, $T_3$ atd. Vyberte tvrzení, které pro tuto rovnici neplatí. earth_3_png
+Studujme rovnici modelující teplotu na Zemi tak, jak je ovlivnìna dopadajícím výkonem ze Slunce, vyzaøovaným výkonem do vesmíru a skleníkovým efektem.Bilance mezi pøíjmem energie ze Slunce a vyzaøováním energie do kosmu a její vliv na zmìnu teploty jsou vyjádøeny diferenciální rovnicí $$\frac{\mathrm dT}{\mathrm dt}=R_{\mathrm{in}}(T)-R_{\mathrm{out}}(T),$$ kde prùbìhy køivek $R_{\mathrm{in}}(T)$ a $R_{\mathrm{out}}(T)$ jsou pro nìjaké konkrétní hodnoty parametru zachyceny v následujícím obrázku. Nejmen¹í kladný stacionární bod oznaème $T_1$, pøíadné dal¹í postupnì podle velikosti $T_2$, $T_3$ atd. Vyberte tvrzení, které pro tuto rovnici neplatí. $$IMG=earth_3_png$$
 - Zemì podle tohoto modelu nemù¾e vychladnout na nulovou teplotu ani se neomezenì ohøívat.
 + Podle tohoto modelu existuje jediný stacionární bod, který je nestabilní.
 - Stacionární bod $T_1$ je stabilní.
 - Pro teplotu men¹í ne¾ $T_1$ teplota roste.
 - Pro teplotu vìt¹í ne¾ $T_1$ teplota klesá.
 
-Diferenciální rovnice velikosti populace obaleèe je $$\frac{\mathrm dx}{\mathrm dt}=x\left[r\left(1-\dfrac xq\right) - \dfrac {x}{x^2+1}\right ].$$ Pro urèité nastavení parametrù jsou grafy funkcí z hranaté závorky na obrázku. Nejmen¹í kladný stacionární bod oznaème $x_1$, pøípadné dal¹í podle velikosti $x_2$, $x_3$ atd. Vyberte tvrzení, které pro tuto rovnici neplatí. spruce_1_png
+Diferenciální rovnice velikosti populace obaleèe je $$\frac{\mathrm dx}{\mathrm dt}=x\left[r\left(1-\dfrac xq\right) - \dfrac {x}{x^2+1}\right ].$$ Pro urèité nastavení parametrù jsou grafy funkcí z hranaté závorky na obrázku. Nejmen¹í kladný stacionární bod oznaème $x_1$, pøípadné dal¹í podle velikosti $x_2$, $x_3$ atd. Vyberte tvrzení, které pro tuto rovnici neplatí. $$IMG=spruce_1_png$$
 - Rovnice má jediný kladný stacionární bod.
 + Nejmen¹í kladný stacionární bod je nestabilní.
 - Pro malé hodnoty $x$ je pravá strana kladná, proto je $x$ rostoucí a populace nikdy nevymøe.
 - Pro velké hodnoty $x$ je pravá strana záporná, proto je $x$ klesající a populace se nikdy nebude rozmno¾ovat neohranièenì.
 - Jenom jeden stacionární bod je stabilní. Ostatní buï nejsou nebo jsou nestabilní.
 
-Diferenciální rovnice velikosti populace obaleèe je $$\frac{\mathrm dx}{\mathrm dt}=x\left[r\left(1-\dfrac xq\right) - \dfrac {x}{x^2+1}\right ].$$ Pro urèité nastavení parametrù jsou grafy funkcí z hranaté závorky na obrázku. Nejmen¹í kladný stacionární bod oznaème $x_1$, pøípadné dal¹í podle velikosti $x_2$, $x_3$ atd. Vyberte tvrzení, které pro tuto rovnici neplatí. spruce_2_png
+Diferenciální rovnice velikosti populace obaleèe je $$\frac{\mathrm dx}{\mathrm dt}=x\left[r\left(1-\dfrac xq\right) - \dfrac {x}{x^2+1}\right ].$$ Pro urèité nastavení parametrù jsou grafy funkcí z hranaté závorky na obrázku. Nejmen¹í kladný stacionární bod oznaème $x_1$, pøípadné dal¹í podle velikosti $x_2$, $x_3$ atd. Vyberte tvrzení, které pro tuto rovnici neplatí. $$IMG=spruce_2_png$$
 - Rovnice má tøi kladné stacionární body.
 - Rovnice má dva kladné stabilní stacionární body.
 + Nejmen¹í kladný stacionární bod je nestabilní.
@@ -37,14 +37,14 @@ Diferenciální rovnice velikosti populace obaleèe je $$\frac{\mathrm dx}{\mathrm 
 - Pro velké hodnoty $x$ je pravá strana záporná, proto je $x$ klesající a populace se nikdy nebude rozmno¾ovat neohranièenì.
 - Jenom jeden stacionární bod je nestabilní. Ostatní buï nejsou nebo jsou stabilní.
 
-Diferenciální rovnice velikosti populace obaleèe je $$\frac{\mathrm dx}{\mathrm dt}=x\left[r\left(1-\dfrac xq\right) - \dfrac {x}{x^2+1}\right ].$$ Pro urèité nastavení parametrù jsou grafy funkcí z hranaté závorky na obrázku. Nejmen¹í kladný stacionární bod oznaème $x_1$, pøípadné dal¹í podle velikosti $x_2$, $x_3$ atd. Vyberte tvrzení, které pro tuto rovnici neplatí. spruce_3_png
+Diferenciální rovnice velikosti populace obaleèe je $$\frac{\mathrm dx}{\mathrm dt}=x\left[r\left(1-\dfrac xq\right) - \dfrac {x}{x^2+1}\right ].$$ Pro urèité nastavení parametrù jsou grafy funkcí z hranaté závorky na obrázku. Nejmen¹í kladný stacionární bod oznaème $x_1$, pøípadné dal¹í podle velikosti $x_2$, $x_3$ atd. Vyberte tvrzení, které pro tuto rovnici neplatí. $$IMG=spruce_3_png$$
 - Rovnice má jediný kladný stacionární bod.
 + Nejmen¹í kladný stacionární bod je nestabilní.
 - Pro malé hodnoty $x$ je pravá strana kladná, proto je $x$ rostoucí a populace nikdy nevymøe.
 - Pro velké hodnoty $x$ je pravá strana záporná, proto je $x$ klesající a populace se nikdy nebude rozmno¾ovat neohranièenì.
 - Jenom jeden stacionární bod je stabilní. Ostatní buï nejsou nebo jsou nestabilní.
 
-Diferenciální rovnice velikosti populace vyvíjející se podle logistické rovnice a vystavené konstantnímu lovu je $$\frac{\mathrm dP}{\mathrm dt}=rP\left(1-\dfrac PK\right) - h.$$ Pro urèité nastavení parametrù jsou grafy funkcí z pravé stany rovnice na obrázku. Nejmen¹í kladný stacionární bod oznaème $P_1$, pøípadné dal¹í podle velikosti $P_2$, $P_3$ atd. Vyberte tvrzení, které pro tuto rovnici neplatí. log_1_png
+Diferenciální rovnice velikosti populace vyvíjející se podle logistické rovnice a vystavené konstantnímu lovu je $$\frac{\mathrm dP}{\mathrm dt}=rP\left(1-\dfrac PK\right) - h.$$ Pro urèité nastavení parametrù jsou grafy funkcí z pravé stany rovnice na obrázku. Nejmen¹í kladný stacionární bod oznaème $P_1$, pøípadné dal¹í podle velikosti $P_2$, $P_3$ atd. Vyberte tvrzení, které pro tuto rovnici neplatí. $$IMG=log_1_png$$
 - Rovnice má dva kladné stacionární body.
 + Nejmen¹í kladný stacionární bod je stabilní.
 - Pro malé hodnoty $P$ je pravá strana záporná, proto je $P$ klesající a populace vymøe.
@@ -55,7 +55,7 @@ Diferenciální rovnice velikosti populace vyvíjející se podle logistické rovnice 
 - Zvìt¹ení lovu na dvojnásobek zmìní poèet stacionárních bodù.
 - Je-li velikost populace pøibli¾nì $0.5$, bude se velikost populace zvy¹ovat.
 
-Diferenciální rovnice velikosti populace vyvíjející se podle logistické rovnice a vystavené konstantnímu lovu je $$\frac{\mathrm dP}{\mathrm dt}=rP\left(1-\dfrac PK\right) - h.$$ Pro urèité nastavení parametrù jsou grafy funkcí z pravé stany rovnice na obrázku. Nejmen¹í kladný stacionární bod oznaème $P_1$, pøípadné dal¹í podle velikosti $P_2$, $P_3$ atd. Vyberte tvrzení, které pro tuto rovnici neplatí. log_2_png
+Diferenciální rovnice velikosti populace vyvíjející se podle logistické rovnice a vystavené konstantnímu lovu je $$\frac{\mathrm dP}{\mathrm dt}=rP\left(1-\dfrac PK\right) - h.$$ Pro urèité nastavení parametrù jsou grafy funkcí z pravé stany rovnice na obrázku. Nejmen¹í kladný stacionární bod oznaème $P_1$, pøípadné dal¹í podle velikosti $P_2$, $P_3$ atd. Vyberte tvrzení, které pro tuto rovnici neplatí. $$IMG=log_2_png$$
 - Rovnice nemá stabilní stacionární bod.
 - Rovnice nemá nestabilní stacionární bod.
 - Populace pøi libovolné poèáteèní podmínce vymøe.
@@ -63,7 +63,7 @@ Diferenciální rovnice velikosti populace vyvíjející se podle logistické rovnice 
 - Zvìt¹ení lovu na dvojnásobek nezmìní poèet stacionárních bodù.
 - Je-li velikost populace pøibli¾nì $0.5$, bude se velikost populace sni¾ovat.
 
-Diferenciální rovnice velikosti populace vyvíjející se podle logistické rovnice a vystavené lovu úmìrnému velikosti populace je $$\frac{\mathrm dP}{\mathrm dt}=rP\left(1-\dfrac PK\right) - hP.$$ Pro urèité nastavení parametrù jsou grafy funkcí z pravé stany rovnice na obrázku. Nejmen¹í kladný stacionární bod oznaème $P_1$, pøípadné dal¹í podle velikosti $P_2$, $P_3$ atd. Vyberte tvrzení, které pro tuto rovnici neplatí. log_3_png
+Diferenciální rovnice velikosti populace vyvíjející se podle logistické rovnice a vystavené lovu úmìrnému velikosti populace je $$\frac{\mathrm dP}{\mathrm dt}=rP\left(1-\dfrac PK\right) - hP.$$ Pro urèité nastavení parametrù jsou grafy funkcí z pravé stany rovnice na obrázku. Nejmen¹í kladný stacionární bod oznaème $P_1$, pøípadné dal¹í podle velikosti $P_2$, $P_3$ atd. Vyberte tvrzení, které pro tuto rovnici neplatí. $$IMG=log_3_png$$
 - Rovnice má jeden stabilní stacionární bod.
 + Populace pøi libovolné poèáteèní podmínce vymøe.
 - Zmen¹ení parametru $h$ na polovinu nezmìní poèet stacionárních bodù.
