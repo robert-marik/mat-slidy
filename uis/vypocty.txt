@@ -101,7 +101,7 @@ Vyberte výpoèet integrálu, který není správnì.
 + $\int x^3\,\mathrm dx=4x^4+C$
 - $\int e^{-3x}\,\mathrm dx=-\frac 13 e^{-3x}+C$
 - $\int \sqrt x\,\mathrm dx=\frac 23 x^{3/2}+C$
-- $\int \frac 2{x^5}\,\mathrm dx=-\frac 13 \frac{1}{x^{6}}+C$
+- $\int \frac 2{x^5}\,\mathrm dx=-\frac 12 \frac{1}{x^{4}}+C$
 - $\int 2\sin x\,\mathrm dx=-2\cos x+C$
 - $\int x+e^x\,\mathrm dx=\frac 12 x^2+e^x+C$
 
@@ -109,7 +109,7 @@ Vyberte výpoèet integrálu, který není správnì.
 - $\int x^3\,\mathrm dx=\frac 14x^4+C$
 + $\int e^{-3x}\,\mathrm dx=-3 e^{-3x}+C$
 - $\int \sqrt x\,\mathrm dx=\frac 23 x^{3/2}+C$
-- $\int \frac 2{x^5}\,\mathrm dx=-\frac 13 \frac{1}{x^{6}}+C$
+- $\int \frac 2{x^5}\,\mathrm dx=-\frac 12 \frac{1}{x^{4}}+C$
 - $\int 2\sin x\,\mathrm dx=-2\cos x+C$
 - $\int x+e^x\,\mathrm dx=\frac 12 x^2+e^x+C$
 
@@ -117,7 +117,7 @@ Vyberte výpoèet integrálu, který není správnì.
 - $\int x^3\,\mathrm dx=\frac 14x^4+C$
 - $\int e^{-3x}\,\mathrm dx=-\frac 13 e^{-3x}+C$
 + $\int \sqrt x\,\mathrm dx=\frac 32 x^{5/2}+C$
-- $\int \frac 2{x^5}\,\mathrm dx=-\frac 13 \frac{1}{x^{6}}+C$
+- $\int \frac 2{x^5}\,\mathrm dx=-\frac 12 \frac{1}{x^{4}}+C$
 - $\int 2\sin x\,\mathrm dx=-2\cos x+C$
 - $\int x+e^x\,\mathrm dx=\frac 12 x^2+e^x+C$
 
@@ -133,7 +133,7 @@ Vyberte výpoèet integrálu, který není správnì.
 - $\int x^3\,\mathrm dx=\frac 14x^4+C$
 - $\int e^{-3x}\,\mathrm dx=-\frac 13 e^{-3x}+C$
 - $\int \sqrt x\,\mathrm dx=\frac 23 x^{3/2}+C$
-- $\int \frac 2{x^5}\,\mathrm dx=-\frac 13 \frac{1}{x^{6}}+C$
+- $\int \frac 2{x^5}\,\mathrm dx=-\frac 12 \frac{1}{x^{4}}+C$
 + $\int 2\sin x\,\mathrm dx=\sin x^2+C$
 - $\int x+e^x\,\mathrm dx=\frac 12 x^2+e^x+C$
 
@@ -141,7 +141,7 @@ Vyberte výpoèet integrálu, který není správnì.
 - $\int x^3\,\mathrm dx=\frac 14x^4+C$
 - $\int e^{-3x}\,\mathrm dx=-\frac 13 e^{-3x}+C$
 - $\int \sqrt x\,\mathrm dx=\frac 23 x^{3/2}+C$
-- $\int \frac 2{x^5}\,\mathrm dx=-\frac 13 \frac{1}{x^{6}}+C$
+- $\int \frac 2{x^5}\,\mathrm dx=-\frac 12 \frac{1}{x^{4}}+C$
 - $\int 2\sin x\,\mathrm dx=-2\cos x+C$
 + $\int x+e^x\,\mathrm dx=x^2+e^{-x}+C$
 
