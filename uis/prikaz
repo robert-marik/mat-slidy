@@ -1,4 +1,5 @@
 perl printacroweb.pl < vypocty.txt > vypocty.tex 
+perl printacroweb.pl < vypocty2.txt > vypocty2.tex 
 perl printacroweb.pl < teorie.txt > teorie.tex
 perl printacroweb.pl < ode.txt > ode.tex 
 perl printacroweb.pl < aplikace.txt > aplikace.tex 
