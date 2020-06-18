@@ -345,7 +345,7 @@ Vyjádřete následující veličiny a určete jejich znaménko.
   $\left[\frac {\partial T}{\partial t}\right]={}^\circ\mathrm{C}\,\mathrm{s}^{-1}$
 \item Rychlost, s jakou v daném místě a čase roste teplota jako funkce polohy, tj. jak rychle se roste teplota směrem doprava, je $\frac {\partial T}{\partial x}$ a tato derivace je záporná, protože vlevo je horký konec a teplota směrem doprava klesá. Měříme ve stupních celsia na metr.
     $\left[\frac {\partial T}{\partial x}\right]={}^\circ\mathrm{C}\,\mathrm{m}^{-1}$
-  \item Rychlost s jakou klesá teplota jako funkce polohy, tj. směrem doprava, je $-\frac {\partial T}{\partial x}$ a tato veličina je kladná, protože vlevo je horký konec a teplota směrem doprava opravdu klesá. Měříme ve stupních celsia na metr.
+  \item Rychlost s jakou klesá teplota jako funkce polohy, tj. směrem doprava, je $-\frac {\partial T}{\partial x}$ a tato veličina je kladná, protože vlevo je horký konec a teplota směrem doprava opravdu klesá. Měříme ve stupních Celsia na metr.
         $\left[-\frac {\partial T}{\partial x}\right]={}^\circ\mathrm{C}\,\mathrm{m}^{-1}$
 
 \item Rychlost, se kterou roste (směrem doprava) tok tepla jako funkce polohy je $\frac {\partial q}{\partial x}$. Teplo teče doprava a přitom se spotřebovává, protože se ohřívá tyč. Proto tok klesá a parciální derivace je záporná.
@@ -422,7 +422,7 @@ modelu.
 \textit{Tento příklad opět zmiňuje rychlost změny, tj. derivaci. Tentokrát se na změně podílejí dva procesy a jejich účinek se sčítá. Příklad navíc připomíná, jak se pracuje se změnou vyjádřenou procenty. Toto je používané například při úročení spojitým úrokem. Pokud pokles změníme na růst, tj. pokud změníme
   znaménka u derivace, máme okamžitě model růstu financí na účtu, na kterém se pravidelně připisuje úrok a k tomu se přidává fixní úložka.}
 
-\reseni Je-li $y$ znečišťení v galonech a $t$ čas ve dnech, má model tvar
+\reseni Je-li $y$ znečištění v galonech a $t$ čas ve dnech, má model tvar
 $$\derivace yt=-0.08y-30.$$
 
 \konec
@@ -548,7 +548,7 @@ Určete derivace následujících funkcí jedné proměnné. Ostatní veličiny 
 \end{enumerate}
 \end{multicols}
 
-\textit{V tomto příkladě se učíme mimo jiné derivovat i podle jiné proměnné než podle $x$. To je nezbytné pro aplikace. Abychom nebyli fixováni na proměnnou $x$, je vhodné se učit vzorce pro derivování vyjádřovat slovně a bez jména konkrétní proměnné.}
+\textit{V tomto příkladě se učíme mimo jiné derivovat i podle jiné proměnné než podle $x$. To je nezbytné pro aplikace. Abychom nebyli fixováni na proměnnou $x$, je vhodné se učit vzorce pro derivování vyjadřovat slovně a bez jména konkrétní proměnné.}
 
 \reseni
 \begin{multicols}2
@@ -708,15 +708,15 @@ $$f'(x)\approx 0+\frac ab (x-0)=\frac ab x.$$
 Pokud je v součinu výraz, který je blízký nule, ovlivní tento výraz výsledný součin více, než zbylé součinitele. Postavíme toto pozorování na solidnější základy.
 
 Ukažte, že pokud platí $f(x)=g(x)h(x)$ a $g(x_0)=0\neq h(x_0)$, má lineární aproximace funkce $g$ tvar
-$$g(x)\approx g'(x_0)(x-x_0)$$ a lineární approximace funkce $f$ tvar
+$$g(x)\approx g'(x_0)(x-x_0)$$ a lineární aproximace funkce $f$ tvar
 $$f(x)\approx \Bigl[g'(x_0) (x-x_0)\Bigr]h(x_0),$$
-kde v hranaté závorce je lineární aproximace funkce $g$ a tato aproxiamce je vynásobena hodnotou funkce $h$ v bodě $x_0$.
+kde v hranaté závorce je lineární aproximace funkce $g$ a tato aproximace je vynásobena hodnotou funkce $h$ v bodě $x_0$.
 
 Situace je jednoduchá zejména v případě, kdy funkce $g$ je lineární a
 je sama svojí lineární aproximací. Ukažte, že s uvedenou výbavou je možno
 napsat lineární aproximace prvních tří funkcí z příkladu
 \ref{aproximace} přímo a bez výpočtu. Ukažte, že výpočet není nutný a výsledek se dá kvalifikovaně odhadnout i v
-přechozím příkladě s kinetikou Michaelise a Mentenové. Pro tyto účely použijte trivilání identitu
+předchozím příkladě s kinetikou Michaelise a Mentenové. Pro tyto účely použijte triviální identitu
 \begin{equation*}
   \frac {ax}{b+x}=x\cdot\frac {a}{b+x}.
 \end{equation*}
@@ -766,7 +766,7 @@ $\left(1-\frac 0K\right)=1$. V okolí $x=0$ je první součinitel lineární a v
 \subsection{Numerické derivování a závislost tepelné vodivosti mědi na teplotě}
 
 
-Tabulka udává závislost koeficientu tepelné vodivosti mědi na teplotě, $\lambda=\lambda(T)$. Odhadněte pomocí centrální diference derivaci funkce $\lambda$ pro $T=400K$ (cca $127^\circ \mathrm C$). Určete i fyzikální jednotku derivace $\frac{\mathrm d\lambda}{\mathrm dT}$ a slovní intepretaci vypočtené hodnoty.
+Tabulka udává závislost koeficientu tepelné vodivosti mědi na teplotě, $\lambda=\lambda(T)$. Odhadněte pomocí centrální diference derivaci funkce $\lambda$ pro $T=400K$ (cca $127^\circ \mathrm C$). Určete i fyzikální jednotku derivace $\frac{\mathrm d\lambda}{\mathrm dT}$ a slovní interpretaci vypočtené hodnoty.
 
 {\footnotesize Poznámka: Teplota v Kelvinech (termodynamická teplota) je teplota ve stupních Celsia posunutá tak, aby teplota $-273{,}15^\circ\mathrm C$ odpovídala $0\,\mathrm K$. Dílky a tedy i~změny teploty jsou na obou stupnicích identické.
 
@@ -956,7 +956,7 @@ a kratší strana je polovinou délky delší strany. Jako v předchozím pří
 \obrazek[Harry Rogers, youtube.com]{beam.jpg}
 \subsection{Optimální trám vyřezaný z kulatiny}
 Ukažte, že pro vyřezání nebo vytesání trámu o maximálním objemu z kulatiny válcového tvaru je nutné vyřezat trám se čtvercovým
-průřezem. Návod: Uvažujte válec, ze kterého chceme vyřízout
+průřezem. Návod: Uvažujte válec, ze kterého chceme vyříznout
 hranol. Zvolte jako jednotku délky průměr kulatiny a hledejte maximum
 druhé mocniny obsahu průřezu. Zdůvodněte, že tento postup je
 korektní. Maximum paraboly najděte ze znalosti toho, že vrchol
@@ -1118,7 +1118,7 @@ Příklad typu jaký jsme řešili u migrace ryb se ale ve skutečnosti
 \reseni
 
 %1,2,3,5,7,10,11,13,14,15
-Používáme vzorce $\int x^n\,\mathrm dx=\frac 1{n+1}x^{n+1}+c$, $\int e^x\,\mathrm dx=e^x+c$, $\int e^{ax}\,\mathrm dx=\frac 1a e^x+c$ a dále linearitu (integrál zachovává součet a konstantní násobek)
+Používáme vzorce $\int x^n\,\mathrm dx=\frac 1{n+1}x^{n+1}+c$, $\int e^x\,\mathrm dx=e^x+c$, $\int e^{ax}\,\mathrm dx=\frac 1a e^{ax}+c$ a dále linearitu (integrál zachovává součet a konstantní násobek)
 \begin{enumerate}[(1)]
   \def\dx{\,\mathrm dx}
 \item   $\int x^2+2x\dx=\frac 13 x^3 + 2\frac 12 x^2 = \frac 13 x^3+x^2+c$
@@ -1371,7 +1371,7 @@ $$Q=k\frac{T_1-T_2}d$$
 \stranka
 \subsection{Vedení tepla stěnou, nelineární materiálové vztahy}
 
-Zopakujte pčředchozí výpočet pro materiál s nelineární materiálovou odezvou, kdy Fourierův zákon není lineární, tj. $k$ závisí na teplotě. Nejjednodušší zobecnění je případ, kdy $k(T)$ je lineární, tj. platí $$k(T)=a+bT.$$ Použijte substituční metodu převádějící integrál $\int k(T(x))\frac{\mathrm dT}{\mathrm dx}\,\mathrm dx$ na integrál $\int k(T)\,\mathrm dT.$ Použijte dále skutečnost, že střední hodnota lineární funkce je aritmetickým průměrem hodnot v krajních bodech intervalu.
+Zopakujte předchozí výpočet pro materiál s nelineární materiálovou odezvou, kdy Fourierův zákon není lineární, tj. $k$ závisí na teplotě. Nejjednodušší zobecnění je případ, kdy $k(T)$ je lineární, tj. platí $$k(T)=a+bT.$$ Použijte substituční metodu převádějící integrál $\int k(T(x))\frac{\mathrm dT}{\mathrm dx}\,\mathrm dx$ na integrál $\int k(T)\,\mathrm dT.$ Použijte dále skutečnost, že střední hodnota lineární funkce je aritmetickým průměrem hodnot v krajních bodech intervalu.
 
 \textit{Na tomto příkladě jsou zajímavé tři věci.
   \begin{itemize}\itemsep0pt
@@ -1382,9 +1382,9 @@ Zopakujte pčředchozí výpočet pro materiál s nelineární materiálovou ode
     předchozího příkladu, odvozeného pro konstantní
     vodivost. 
   \item Nejzajímavější je fakt, že jsme substituční metodou
-    vypočítali integrál funkce, kterou vlastně vůbe neznáme. Vskutku,
+    vypočítali integrál funkce, kterou vlastně vůbec neznáme. Vskutku,
     neznáme teplotní profil $T(x)$ ve stěně a tím pádem neznáme ani
-    závislot vodivosti $k(T(x))$ na poloze a ani gradient
+    závislost vodivosti $k(T(x))$ na poloze a ani gradient
     teploty. Přesto se podařilo integrál vypočítat. Teplotní profil se naučíme hledat jako řešení rovnice vedení tepla.
 \end{itemize}
 }
@@ -1564,7 +1564,7 @@ který můžeme vypočítat pomocí substituce $-r^2=t$.
 \end{enumerate}
 \end{multicols}
 
-\textit{Umění najít řešení difereniální rovnice je sympatické, není to však nic proti umění sestavit model (naučili jsme se již ve druhém týdnu, připomeneme si v následujícím modelu), umění posoudit jednoznačnost řešení (většina modelů se řeší numericky a musíme být přesvědčeni o smysluplnosti takové činnosti) a  stabilitu řešení (řešení, která nejsou stabilní, jsou sice v souladu s přírodními zákony, ale pravděpodobnost jejich spontánního výskytu je nulová). Jednoznačnost a zjednodušenou verzi stability řešení (stabilita konstantních řešení) jsme viděli na přednášce a připomeneme v dalších příkladech.}
+\textit{Umění najít řešení diferenciální rovnice je sympatické, není to však nic proti umění sestavit model (naučili jsme se již ve druhém týdnu, připomeneme si v následujícím modelu), umění posoudit jednoznačnost řešení (většina modelů se řeší numericky a musíme být přesvědčeni o smysluplnosti takové činnosti) a  stabilitu řešení (řešení, která nejsou stabilní, jsou sice v souladu s přírodními zákony, ale pravděpodobnost jejich spontánního výskytu je nulová). Jednoznačnost a zjednodušenou verzi stability řešení (stabilita konstantních řešení) jsme viděli na přednášce a připomeneme v dalších příkladech.}
 
 \stranka
 
@@ -1641,14 +1641,14 @@ popisující úbytek hladiny vody v nádrži tvaru kvádru, ze které vypoušt�
   \end{cases}
   $$
 Zkontrolujte dosazením (pozor: pro $t<0$ platí $\sqrt {t^2}=|t|=-t$) a rozmyslete, jestli nejednoznačnost je jenom matematický trik, nebo jestli má
- fyzikální intepretaci.
+ fyzikální interpretaci.
 \end{enumerate}
 
 \reseni
 \begin{enumerate}[A)]
 \item Nabídneme dvě  varianty, pro argumentaci je možno použít kteroukoliv z nich. 
   \begin{itemize}
-  \item \textbf{Podle obecné věty o jednoznačnosti:} Stačí ověřit, že pravá strana má ohraničnou parciální derivaci podle $h$. Protože platí
+  \item \textbf{Podle obecné věty o jednoznačnosti:} Stačí ověřit, že pravá strana má ohraničenou parciální derivaci podle $h$. Protože platí
     $$\frac{\partial }{\partial h}(k\sqrt h)=k\frac 12
     h^{-1/2}=\frac{k}{2\sqrt h}$$ a tato derivace je definovaná a
     ohraničená v nějakém okolí libovolného bodu splňujícího $h>0$.
@@ -1716,7 +1716,7 @@ kde $r$ a $k=k_0k_1$ jsou konstanty.
 
 Hromada sypkého materiálu má tvar kužele. Úhel u~vrcholu je konstantní, daný
 mechanickými vlastnostmi materiálu a je nezávislý na
-objemu. V předchozím příkladě jsme sestavili diferencicální rovnici popisující růst hromady ve tvaru
+objemu. V předchozím příkladě jsme sestavili diferenciální rovnici popisující růst hromady ve tvaru
 $$\frac{\mathrm dV}{\mathrm dt}=R-kV^{\frac 23},$$
 kde $R$ je rychlost přisypávání a $k$ konstanta.
 \vspace*{25pt}
@@ -2037,7 +2037,7 @@ Figurka na obrázku je Timmy ve třech situacích. Jednou se pozoruje svůj obra
   \end{scope}  
 \end{tikzpicture}
 
-Poznámka: Stačí si všímat, kam se zobrazují jednotkové vektory ve směru os, tj. kam se zobrazí Timiho nakročená noha a Timyho ruka, která je natažená dozadu. Případné neceločíselné složky matice jenom odhadněte. \textit{Podle LAFF Linear Algebra - Foundations to Frontiers (www.ulaff.net)}
+Poznámka: Stačí si všímat, kam se zobrazují jednotkové vektory ve směru os, tj. kam se zobrazí Timmiho nakročená noha a Timyho ruka, která je natažená dozadu. Případné neceločíselné složky matice jenom odhadněte. \textit{Podle LAFF Linear Algebra - Foundations to Frontiers (www.ulaff.net)}
 
 \reseni
 
@@ -2266,7 +2266,7 @@ je matice derivování polynomů stupně nejvýše $2$, pokud polynom $ax^2+bx+c
 $.  Vysvětlete, jak bychom
 interpretovali matici $A^2$ a $A^3$ a tyto matice vypočtěte.
 
-\textit{Návod: je možné ukázat buď pro pro obecný polynom $ax^2+bx+c$, nebo samostatně pro polynomy  $x^2$, $x$ a $1$ a poté si všimnout, že ostatní polynomy můžeme dostat lineírními kombinacemi a maticová násobení tyto lineární kombinace nepokazí díky tomu, že je distributivní a komutuje při násobení s konstantou.
+\textit{Návod: je možné ukázat buď pro obecný polynom $ax^2+bx+c$, nebo samostatně pro polynomy  $x^2$, $x$ a $1$ a poté si všimnout, že ostatní polynomy můžeme dostat lineárními kombinacemi a maticová násobení tyto lineární kombinace nepokazí díky tomu, že je distributivní a komutuje při násobení s konstantou.
  V tomto příkladě mimo jiné vidíme, že mocnina nenulové matice může být nula. To je efekt, který nemá obdobu u násobení reálných čísel.}
 
 
@@ -2477,7 +2477,7 @@ a tento výpočet potvrzuje, že neexistuje inverzní matice.
 
 \textit{Soustava s nekonečně mnoha řešeními typicky vychází při
   hledání vlastních čísel matice. Na tomto příkladě si osaháme případ
-  homogení soustavy a jednoparametrického řešení, tj. případ, který
+  homogenní soustavy a jednoparametrického řešení, tj. případ, který
   při výpočtu vlastních vektorů vychází nejčastěji.}
 
 
@@ -2799,7 +2799,7 @@ pro $T=T(x)$ a $k=a+bT$, $a,b\in \mathbb R$.
 \reseni
 Po zintegrování dostáváme
 $$(a+bT)\frac{\partial T}{\partial x}=C_1$$
-a rovnici řešíme jako difereniální rovnici se separovanými proměnnými.
+a rovnici řešíme jako diferenciální rovnici se separovanými proměnnými.
 Odseparováním získáme
 $$(a+bT)\mathrm dT=C_1\mathrm dx$$
 a po zintegrování
@@ -3013,7 +3013,7 @@ a numericky
 \begin{equation*}
   \derivace ht = -\frac{10^{-3}}{2}=-5\cdot 10^{-4}\, \mathrm{km}\,\mathrm{s^{-1}}=-0.5 \,\mathrm{m}\,\mathrm{s}^{-1}.
 \end{equation*}
-Kluzák klesá rychlostí půl metru za sekundu. To odpovídá i ``selskému rozmu'', kdy uvažujeme tak, že jeden stupeň Celsia odpovídá půl kilometru, tj. 500 metrů. Za jednu sekundu klesne teplota podle zadání o $10^{-3}{}^\circ\mathrm{C}$, což je tisícina z jednoho stupně a tomu odpovídá tisícina z 500 metrů, tedy půl metru. Příklady, které si můžeme alespoň orientačně zkontrolovat výpočtem založeným na ``selské logice'' jsou obzvlášť cenné, protože nám dávají jistotu nutnou při použití v aplikacích, kde úvaha na provedení výpočtu bez derivací není reálná. 
+Kluzák klesá rychlostí půl metru za sekundu. To odpovídá i ``selskému rozumu'', kdy uvažujeme tak, že jeden stupeň Celsia odpovídá půl kilometru, tj. 500 metrů. Za jednu sekundu klesne teplota podle zadání o $10^{-3}{}^\circ\mathrm{C}$, což je tisícina z jednoho stupně a tomu odpovídá tisícina z 500 metrů, tedy půl metru. Příklady, které si můžeme alespoň orientačně zkontrolovat výpočtem založeným na ``selské logice'' jsou obzvlášť cenné, protože nám dávají jistotu nutnou při použití v aplikacích, kde úvaha na provedení výpočtu bez derivací není reálná. 
 
 \konec
 
@@ -3418,7 +3418,7 @@ odpovězte na otázky a splňte úkoly.
   udává, jaký objem proteče jednotkovou plochou kolmo na směr proudění
   za jednotku času. Jaký bude vztah mezi $\vec v_f$ a $\vec q$? Uvažujte pouze
   speciální případ, kdy je $\vec v_f$ konstantní v celé tloušťce zvodnělé
-  vrstvy $b$. (Tloušťka zvodnělé vrstvy $b$ je u proudění s volnou hladinou rovna vzdálenosti piezometrické hladiny od dolní nepropustné vrstvy a u proudění mezi neprosputnými vrstvami rovna vzdálenosti těchto vrstev.) 
+  vrstvy $b$. (Tloušťka zvodnělé vrstvy $b$ je u proudění s volnou hladinou rovna vzdálenosti piezometrické hladiny od dolní nepropustné vrstvy a u proudění mezi nepropustnými vrstvami rovna vzdálenosti těchto vrstev.) 
   \stranka
 \item \textit{Zákon zachování pro vodu}: Množství vody v daném místě (v metrech krychlových vody na metr čtvereční povrchu zvodně) označte $v$. Rychlost s jakou se kumuluje voda v daném místě v kubických
   metrech (vody) na čtvereční metr (povrchu zvodně) za den, tj. derivace $v$ podle času, je
@@ -3450,7 +3450,7 @@ odpovězte na otázky a splňte úkoly.
 \begin{enumerate}[A)]
 \item $\vec q=-T \nabla h$ kde $T$ je koeficient průtočnosti a $-\nabla h$
   je vektor mířící ve směru nejrychlejšího poklesu piezometrické
-  hladiny $h$ a vyjařující rychlost tohoto poklesu.
+  hladiny $h$ a vyjadřující rychlost tohoto poklesu.
 \item $T$ je  $2\times 2$ matice
 \item $\vec q=b\vec v_f$
 \item $\frac{\partial v}{\partial t}=\sigma-\mathop{\mathrm{div}}\vec q$
@@ -3494,7 +3494,7 @@ příkladě \ref{pokles}.
 \begin{enumerate}[A)]
 \item Rovnici podzemní vody ve 2D rozepište do složek. Uvažujte pro jednoduchost izotropní prostředí (transmisivita je skalární veličina, tj. ne matice a voda teče ve směru spádu piezometrické hladiny).
 \item Napište rovnici z předchozího bodu pro \textit{stacionární} případ \textit{bez zdrojů} a pro případ, že funkce $h$ nezávisí na $y$. Uvažujte homogenní prostředí a zvodeň s volnou hladinou a vodorovnou dolní nepropustnou vrstvou, kde volíme nulovou hladinu $h$ (tj. transmisivita je tvaru $$T=kh,$$ kde $k$ je reálné číslo, ne funkce proměnných $x$ a $y$)
-\item Ukážeme, že rovnice se dá vyřešit i bez znalosti řešení diferenicálních rovnic. Upravte vztah z předchozího bodu použitím zřejmé identity
+\item Ukážeme, že rovnice se dá vyřešit i bez znalosti řešení diferenciálních rovnic. Upravte vztah z předchozího bodu použitím zřejmé identity
   $(h^2)'=2 h h'$
   pro $h$ jako funkci proměnné  $x$, kde čárka značí derivaci podle $x$. Výsledkem bude podmínka, kterou musí splňovat funkce $h^2$ a odsud již najdete hledanou křivku snížení piezometrické hladiny. (Pokud je $h$ závislé jenom na $x$, plocha ohraničující zvodnělou vrstvu se z bočního pohledu promítne do křivky.)
 \end{enumerate}
@@ -3532,7 +3532,7 @@ Jak tato úloha souvisí s derivacemi a jak rychle roste vzdálenost na kterou 
 
 Formaldehyd se z dřevěného výrobku v malé nevětrané místnosti uvolňuje jenom do dosažení určité rovnovážné koncentrace. Rychlost, s jakou přibývá množství formaldehydu ve vzduchu v místnosti, je úměrná množství, která do této rovnovážné koncentrace chybí. Zapište tento proces pomocí vhodného matematického modelu (diferenciální rovnice).
 
-\subsection{Kontaminovaný salát} Bakterie na kontaminovaném salátě se množí rychlostí  $$2e^{0.1t}\text{ milionů bakterií/den,}$$  kde $t$ je čas ve dnech. Pokud je to možné, určete, o~kolik se změní množství bakterií za čtyři dny. Pokud není dost informací, vysvětelete, jaké další informace potřebujeme.
+\subsection{Kontaminovaný salát} Bakterie na kontaminovaném salátu se množí rychlostí  $$2e^{0.1t}\text{ milionů bakterií/den,}$$  kde $t$ je čas ve dnech. Pokud je to možné, určete, o~kolik se změní množství bakterií za čtyři dny. Pokud není dost informací, vysvětlete, jaké další informace potřebujeme.
 
 
 \subsection{Nádrž na zavlažování}
@@ -3555,7 +3555,7 @@ Vlčí mák je oblíbený letní plevel
   semen. Předpokládejme, že rychlost
   s jakou roste populace vlčího máku je
   úměrná velikosti populace. Vyjádřete
-  tento růst pomocí vhodné diferencální
+  tento růst pomocí vhodné diferenciální
   rovnice.
 
   \subsection{Ošoupané medaile}
@@ -3583,7 +3583,7 @@ Vlčí mák je oblíbený letní plevel
   $\varphi=-\frac 1a$. Nechť $a=10\,\mathrm m$
   a nechť se $a$ zkracuje rychlostí $0.1$
   metru za rok. Napište, jak souvisí rychlost s jakou se mění $a$ s rychlostí, s jakou se mění $\varphi$ a pro daný případ určete, jak rychle se mění počet
-  dioptirí nutných pro korekci této vady?
+  dioptrií nutných pro korekci této vady?
 
 \end{enumerate}
 
@@ -3595,7 +3595,7 @@ Rychlost zvuku v pevné látce je dána vzorcem $c=\sqrt{\frac E\varrho}$ kde $c
 
 \subsection{Růst ryb}
 
-Narozdíl od jiných živočichů jsou malé ryby jsou přibližně zmenšeniny
+Na rozdíl od jiných živočichů jsou malé ryby jsou přibližně zmenšeniny
     velkých ryb a proto je u nich hmotnost přibližně úměrná třetí mocnině
     délky. Najděte souvislost mezi rychlostí s jakou roste hmotnost kapra a
     rychlostí, s jakou roste délka kapra.
