@@ -67,7 +67,7 @@ Vyberte výpoèet integrálu, který není správnì.
 - $\int \frac{1}{\sqrt x}\,\mathrm dx=2\sqrt x+C$
 - $\int \frac 1{(x+1)^5}\,\mathrm dx=-\frac 14 \frac{1}{(x+1)^{4}}+C$
 - $\int (2x+\sin x)\,\mathrm dx=x^2-\cos x+C$
-- $\int x\sqrt {x}\,\mathrm dx=\frac 23 x^{\frac 32}+C$
+- $\int x\sqrt {x}\,\mathrm dx=\frac 25 x^{\frac 52}+C$
 
 Vyberte výpoèet integrálu, který není správnì.
 - $\int x^5\,\mathrm dx=\frac 16x^6+C$
@@ -75,7 +75,7 @@ Vyberte výpoèet integrálu, který není správnì.
 - $\int \frac{1}{\sqrt x}\,\mathrm dx=2\sqrt x+C$
 - $\int \frac 1{(x+1)^5}\,\mathrm dx=-\frac 14 \frac{1}{(x+1)^{4}}+C$
 - $\int (2x+\sin x)\,\mathrm dx=x^2-\cos x+C$
-- $\int x\sqrt {x}\,\mathrm dx=\frac 23 x^{\frac 32}+C$
+- $\int x\sqrt {x}\,\mathrm dx=\frac 25 x^{\frac 52}+C$
 
 Vyberte výpoèet integrálu, který není správnì.
 - $\int x^5\,\mathrm dx=\frac 16x^6+C$
@@ -83,7 +83,7 @@ Vyberte výpoèet integrálu, který není správnì.
 + $\int \frac{1}{\sqrt x}\,\mathrm dx=2+\sqrt x+C$
 - $\int \frac 1{(x+1)^5}\,\mathrm dx=-\frac 14 \frac{1}{(x+1)^{4}}+C$
 - $\int (2x+\sin x)\,\mathrm dx=x^2-\cos x+C$
-- $\int x\sqrt {x}\,\mathrm dx=\frac 23 x^{\frac 32}+C$
+- $\int x\sqrt {x}\,\mathrm dx=\frac 25 x^{\frac 52}+C$
 
 Vyberte výpoèet integrálu, který není správnì.
 - $\int x^5\,\mathrm dx=\frac 16x^6+C$
@@ -91,7 +91,7 @@ Vyberte výpoèet integrálu, který není správnì.
 - $\int \frac{1}{\sqrt x}\,\mathrm dx=2\sqrt x+C$
 + $\int \frac 1{(x+1)^5}\,\mathrm dx=-\frac 14 \frac{1}{x^{4}}+C$
 - $\int (2x+\sin x)\,\mathrm dx=x^2-\cos x+C$
-- $\int x\sqrt {x}\,\mathrm dx=\frac 23 x^{\frac 32}+C$
+- $\int x\sqrt {x}\,\mathrm dx=\frac 25 x^{\frac 52}+C$
 
 Vyberte výpoèet integrálu, který není správnì.
 - $\int x^5\,\mathrm dx=\frac 16x^6+C$
@@ -99,7 +99,7 @@ Vyberte výpoèet integrálu, který není správnì.
 - $\int \frac{1}{\sqrt x}\,\mathrm dx=2\sqrt x+C$
 - $\int \frac 1{(x+1)^5}\,\mathrm dx=-\frac 14 \frac{1}{(x+1)^{4}}+C$
 + $\int (2x+\sin x)\,\mathrm dx=2+\cos (x^2)+C$
-- $\int x\sqrt {x}\,\mathrm dx=\frac 23 x^{\frac 32}+C$
+- $\int x\sqrt {x}\,\mathrm dx=\frac 25 x^{\frac 52}+C$
 
 Vyberte výpoèet integrálu, který není správnì.
 - $\int x^5\,\mathrm dx=\frac 16x^6+C$

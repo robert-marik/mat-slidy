@@ -261,6 +261,37 @@ $$\frac{\partial ^2 f}{\partial y^2}:=\frac{\partial }{\partial y}\left(\frac{\p
 nebo 
 $$\frac{\partial ^2 f}{\partial x\partial y}:=\frac{\partial }{\partial y}\left(\frac{\partial f}{\partial x}\right).$$
 
+# Druhá derivace a deformace nosníků
+
+\iffalse
+
+<div class='obtekat'>
+
+![Druhé derivace nám umožňují popsat tak zásadní věc, jako je chování nosníků při zátěži. Zdroj: pixabay.com](nosniky.jpg)
+
+</div>
+
+\fi
+
+
+Derivace hrají ústřední roli v teorii studující tuhost, deformaci a
+odolnost proti selhání u nosníků. Máme-li nosník podepřený na koncích
+a zatížený silou kolmo na podélnou osu nosníku (například vodorovný
+nosník se svislým zatížením) a je-li $v(x)$ výchylka od rovnovážného
+stavu v bodě $x$, potom derivace $\frac{\mathrm dv}{\mathrm dx}$
+vyjadřuje úhel pootočení svislého průřezu nosníku vlivem deformace a
+druhá derivace $\frac{\mathrm d^2v}{\mathrm dx^2}$ při malých
+deformacích vyjadřuje křivost nosníku. Z fyzikálních úvah a ze vztahu
+mezi křivostí a momentem $M(x)$ síly, která nosník deformuje, je možné
+odvodit rovnici $$M(x)=EI\frac{\mathrm d^2v}{\mathrm dx^2},$$ kde
+konstanta $E$ souvisí s materiálem (Youngův modul pružnosti) a $I$ s
+průřezem nosníku (kvadratický moment průřezu). Podobně, pro nosník
+namáhaný v ose (například svislá vzpěra) silou $F$ platí vztah
+$$EI\frac{\mathrm d^2v}{\mathrm dx^2}+Fv=0.$$ Aplikace jsou, jak bylo uvedeno, při dimenzování nosníků (angl. beam buclinkg). Odvození výše uvedených rovnic není komplikované, ale vyžaduje dodatečné fyzikální znalosti a proto zde neuvádíme.
+
+Někdy je vhodné mít moment $M(x)$ síly deformující nosník mít vyjádřený pomocí zatížení nosníku. To souvisí s druhou derivací momentu a proto je nutno rovnici ještě dvakrát derivovat. Proto se ohybová rovnice nosníku někdy uvádí jako vztah obsahující dokonce čtvrtou derivaci.
+
+
 # Taylorův polynom a polynomiální aproximace v 1D
 
 
