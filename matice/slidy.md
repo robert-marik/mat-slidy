@@ -490,11 +490,11 @@ Další informace:
 
 # Derivace diskrétní funkce
 
-V metodě konečných diferencí jsme si ukázali a v předchozím slidu připoměnli, ye derivace umíme aproximovat výrazy, které jsou lineární kombinací po sobě jdoucích funkčních hodnot hledané funkce na pravidelné mřížce délky $h$. Pro konkrétnost, pro druhou derivaci
-$$ \frac{\mathrm d^2f}{\mathrm dx^2}\approx\frac{f(x-h)-2f(x)+f(x+h)}{h^2}=\frac{1}{h^2} f(x-h) - \frac{2}{h^2} f(x) + \frac{1}{h^2} f(x+h).$$
+V metodě konečných diferencí jsme si ukázali a v předcházejícím textu připomněli, že derivace umíme aproximovat výrazy, které jsou lineární kombinací po sobě jdoucích funkčních hodnot hledané funkce na pravidelné mřížce délky $h$. Toto je možné vyjádřit pomocí maticového součinu. Pro konkrétnost, pro druhou derivaci aproximujeme pomocí tří po sobě jdoucích hodnot v ekvidistantních krocích vzorcem 
+$$ f''(x)\approx\frac{1}{h^2} f(x-h) - \frac{2}{h^2} f(x) + \frac{1}{h^2} f(x+h).$$
 Tento vztah  můžeme chápat jako lineární kombinaci hodnot 
 $$\frac 1{h^2}, \quad -\frac{2}{h^2}, \quad \frac 1{h^2}$$ s koeficienty 
-$$f(x-h), \quad f(x), \quad  f(x+h).$$ Pokud je například funkce $f(x)$ na intervalu $I$ dána funkčními hodnotami $f(x_1)$, $f(x_2)$, \dots, $f(x_5)$ v bodech rovnoměrně rozmístěných ve vzdálenosti $h$ od sebe, můžeme vypočítat druhé derivace $f''(x_2)$, $f''(x_3)$ a $f''(x_4)$ pomocí maticového násobení 
+$$f(x-h), \quad f(x), \quad  f(x+h).$$ Pokud je například funkce $f(x)$ na intervalu $I$ dána funkčními hodnotami $f(x_1)$, $f(x_2)$, ..., $f(x_5)$ v bodech rovnoměrně rozmístěných ve vzdálenosti $h$ od sebe, můžeme vypočítat druhé derivace $f''(x_2)$, $f''(x_3)$ a $f''(x_4)$ pomocí maticového násobení 
 $$\begin{pmatrix}f''(x_2)\\f''(x_3)\\f''(x_4)\end{pmatrix}
 =\frac 1{h^2}\begin{pmatrix}
 1 & -2 & 1& 0& 0\\
@@ -513,9 +513,9 @@ $$
 0& 0& 0 & 1  & -2 \\
 \end{pmatrix}
 $$
-hraje důležitou roli v numerické matematice při numerickém modelování fyzikálních dějů. Je to matice, kterou v MATLABU umíme vygenerovat příkazem `toeplitz(\[-2,1,0,0,0\])`, jak jsme si ukázali v prvním setkání s MATLABem v seznamovací sadě domácíh úloh v systému [WeBWorK](http://um.mendelu.cz/webwork2/MT-Marik/00_Uvod/). Až na první a poslední řádek se jedná o matici, která umí zprostředkovat numerické  derivování funkce. První a poslední řádek se přidávají, aby matice tískala čtvercový tvar a jistou míru symetrie. (Symetrickým maticím se budeme věnovat za chviličku.) Tyto dva přidané řádky se uplatní při formulaci okrajových podmínek definujících chování funkce na koních intervalu.
+hraje důležitou roli v numerické matematice při numerickém modelování fyzikálních dějů. Je to matice, kterou v MATLABU umíme vygenerovat příkazem `toeplitz([-2,1,0,0,0])`, jak jsme si ukázali v prvním setkání s MATLABem v seznamovací sadě domácích úloh v systému [WeBWorK](http://um.mendelu.cz/webwork2/MT-Marik/00_Uvod/). Až na první a poslední řádek se jedná o matici, která umí zprostředkovat numerické  derivování funkce. První a poslední řádek se přidávají, aby matice tískala čtvercový tvar a jistou míru symetrie. (Symetrickým maticím se budeme věnovat za chviličku.) Tyto dva přidané řádky se uplatní při formulaci okrajových podmínek definujících chování funkce na koncích intervalu.
 
-Pomocí maticového součinu dokážeme reprezentovat libovolné zobrazení, které zachovává součet a násobení konstantou, mezi než derivování patří. Jiný přístup k maticové formulaci derivace, k derivování na množině polynomů, si ukážeme ve cvičení. Na následujícím slidu se na tato obrazení podíváme očima geometra.
+Pomocí maticového součinu dokážeme reprezentovat libovolné zobrazení, které zachovává součet a násobení konstantou, mezi něž derivování patří. Jiný přístup k maticové formulaci derivace, k derivování na množině polynomů, si ukážeme ve cvičení. Na následujícím slidu se na tato obrazení podíváme očima geometra a poté očima materiálového inženýra.
 
 # Matice jako zobrazení v geometrii
 
