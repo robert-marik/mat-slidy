@@ -42,7 +42,7 @@ $$f(x)\approx f(x_0)+f'(x_0)(x-x_0)$$
 
 Využití:
 
-a) ** Konstitutivní zákony** v 1D, kdy bereme $x_0=0$ a $f(x_0)=0$.
+a) **Konstitutivní zákony** v 1D, kdy bereme $x_0=0$ a $f(x_0)=0$.
 $$f(x)\approx 0+f'(0)(x-0)=kx$$
 b) **Newtonova metoda** používá aproximaci pro $x_0=x_n$, $x=x_{n+1}$ a $f(x_{n+1})=0$, tj. 
 $$0=f(x_n)+f'(x_n)(x_{n+1}-x_n)$$ a odsud
