@@ -644,7 +644,7 @@ vlastní hodnotě.
 vlastní vektor $(0,1)$ příslušný vlastní hodnotě $0$. Protože vlastními vektory jsou i nenulové násobky, je vlastním vektorem každý nenulový vektor, který má nulovou druhou komponentu (vlastní hodnota je $3$) nebo první komponentu (vlastní hodnota je $0$).
 
 **Příklad.** Platí $\begin{pmatrix} 3 & -2\\ -1 & 4 \end{pmatrix} \begin{pmatrix}   2\\1 \end{pmatrix} = \begin{pmatrix}   4\\2 \end{pmatrix}$
-a matice $\begin{pmatrix} 3 & -2\\ -1 & 4 \end{pmatrix}$ má vlastní vektor $(2,1)$ příslušný vlastní hodnotě $2$. Vlastním vektorem je i každý nenulovvý násobek vektoru $(2,1)$.
+a matice $\begin{pmatrix} 3 & -2\\ -1 & 4 \end{pmatrix}$ má vlastní vektor $(2,1)$ příslušný vlastní hodnotě $2$, protože vektor $(4,2)$ je dvojnásobkem vektoru $(2,1)$. Vlastním vektorem je i každý nenulový násobek vektoru $(2,1)$.
 
 **Příklad.** Stacionární stav Markovova řetězce je vlastním vektorem
 matice, která tento řetězec reprezentuje. Příslušná vlastní hodnota je
