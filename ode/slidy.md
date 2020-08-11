@@ -859,7 +859,7 @@ nosníku (kvadratický moment průřezu, souvisí s\ velikostí i\ s\ tvarem). O
 Po dosazení za druhou derivaci dostáváme
 $$\frac{y(x-h)-2y(x)+y(x+h)}{h^2}-\frac {T}{EI}
 y(x)=\frac{qx(L-x)}{2EI}.$$ Pokud délku nosníku $L$ rozdělíme na $n$
-částí délky $h$ a pokud označíme $x_i=ni$, $y_i=y(x_i)$, rovnice se
+částí délky $h$ a pokud označíme $x_i=hi$, $y_i=y(x_i)$, rovnice se
 redukuje na rovnici $$\frac{y_{i-1}-2y_i+y_{i+1}}{h^2}-\frac {T}{EI}
 y_i=\frac{qx_i(L-x_i)}{2EI}.$$ To je pro $i$ od $i=1$ po $i=n-1$
 celkem $n-1$ lineárních rovnic. K tomu přidáváme rovnice na koncích

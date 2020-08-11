@@ -746,7 +746,7 @@ $$\begin{aligned}
   $$ což je možné zapsat maticově jako
   $$ \begin{pmatrix}
     u_1 (x_{1}+\Delta x_{1}, x_{2}+\Delta x_{2}) \\
-        u_1 (x_{1}+\Delta x_{1}, x_{2}+\Delta x_{2}) 
+        u_2 (x_{1}+\Delta x_{1}, x_{2}+\Delta x_{2}) 
       \end{pmatrix}
       \approx
       \begin{pmatrix}
@@ -811,15 +811,11 @@ hydrodynamických a disperzních jevů, kap. 3.3.
 
 Na závěr si ukážeme, že pomocí lineární algebry a maticového počtu je možno popsat funkci dvou proměnných popisující rozložení teploty na tepelně vodivé desce. Postup je takový, že budeme sledovat teplotu v referenčních bodech. Požadavek, že teploty v okolních bodech mají odpovídat našim představám o vedení tepla vyjádříme kvantitavivně pomocí vhodné matice.
 
-\iffalse 
-
 <div class='obtekat'>
 
 ![Rozložení teploty na tepelně vodivé desce je možné přibližně zkoumat metodami lineární algebry. A až na některé triviální případy jinou možnost vlastně nemáme, protože přesné řešení rovnice vedení tepla je v prakticky zajímavých případech nereálné. Podobně to je s mechanickým namáháním nebo transportem látek porézním prostředím.](deska.png)
 
 </div>
-
-\fi
 
 Uvažujme čtvercovou desku, kterou si rozdělíme sítí na $12$ uzlových bodů
 (rohy zanedbáme) jak je uvedeno na obrázku.  V uzlových bodech na
