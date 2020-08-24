@@ -53,7 +53,7 @@ nepřímá úměrnost, známé ze střední školy.
 > Definice (přímá a nepřímá úměrnost). Veličina $y$ je *přímo úměrná* veličině $x$ jestliže existuje konstanta $k$ taková, že platí $$y=kx.$$ 
 Veličina $y$ je *nepřímo úměrná* veličině $x$ jestliže existuje konstanta $k$ taková, že platí $$y=\frac kx.$$
 
-**Poznámka.** Je-li veličina $y$ úměrná veličině $x$, píšeme $$y\sim x\text{ nebo }y\propto x.$$ Je-li navíc konstanta úměrnosti blízká jedničce, tj. $x$ a $y$ jsou blízké, píšeme $$y\approx x.$$ Pro nepřímou úměrnost píšeme podobně $y\sim \frac 1x$, $y\propto \frac 1x$ a $y\sim \frac 1x.$
+**Poznámka.** Je-li veličina $y$ úměrná veličině $x$, píšeme $$y\sim x\text{ nebo }y\propto x.$$ Je-li navíc konstanta úměrnosti blízká jedničce, tj. $x$ a $y$ jsou blízké, píšeme $$y\approx x.$$ Pro nepřímou úměrnost píšeme podobně $y\sim \frac 1x$, $y\propto \frac 1x$ a $y\approx \frac 1x.$
 
 
 **Příklad.**
@@ -333,9 +333,11 @@ archeologických nálezů pozůstatků živých organismů
 
 # Aplikace derivací 2: Jak strmě? (změna v prostoru)
 
-Derivace v bodě, pokud ji nahlížíme z hlediska prostorové změny
-veličiny, která nás zajímá, je míra, jak nerovnoměrně je veličina
-rozložena v prostoru. Často se tato veličina nazývá gradient, zejména pokud nepracujeme v jednorozměrném případě, ale pokud popisujeme děj probíhající v rovině nebo v prostoru. 
+Derivace v bodě můžeme nahlížet z hlediska prostorové změny
+veličiny. Tím zjistíme, jak nerovnoměrně je veličina rozložena v
+prostoru. Často se derivace podle prostorové proměnné nazývá gradient,
+zejména pokud nepracujeme v jednorozměrném případě, ale pokud
+popisujeme děj probíhající v rovině nebo v prostoru.
 
 ### Vedení tepla (dřevařství, nábytek, dřevostavby)
 
@@ -402,7 +404,7 @@ $$T=\frac{2\pi}{\sqrt g} \sqrt L, $$ který ukazuje, že perioda je
 Pro derivování použijeme vzorec pro derivaci konstantního násobku a mocniné funkce. 
 \dm$$\frac {\mathrm d T}{\mathrm dL}=\frac{\mathrm d}{\mathrm dL}\left(\frac{2\pi}{\sqrt g} \sqrt L\right)=\frac{2\pi}{\sqrt g} \frac{\mathrm d}{\mathrm dL}\left (L^{\frac 12}\right)=\frac{2\pi}{\sqrt g}\frac 12 L^{-\frac 12}=\frac{\pi}{\sqrt{gL}}.
 $$
-Tento výraz udává v jednotkách sekunda na metr, jak rychle se prodlužuje perioda kyvadla při prodloužení délky kyvadla. Například pro $L=2\,\mathrm m$ je derivace číselně rovna $0.71\,\mathrm{s}\,\mathrm{m}^{-1}.$ Prodloužení dvoumetrového kyvadla o metr prodlouží periodu o $0.71$ sekundy. Protože derivace je okamžitá rychlost změny a na delším intervalu se tato rychlost může změnit, je blíže realitě spíše formulace pro jednotky tisíckrát menší: "Prodloužení kyvadla o milimetr prodlouží periodu o $0.71$ milisekundy."
+Tento výraz udává v jednotkách sekunda na metr, jak rychle se prodlužuje perioda kyvadla při prodloužení délky kyvadla. Například pro $L=2\,\mathrm m$ je derivace [číselně rovna](https://sagecell.sagemath.org/?z=eJxVjEEOwiAQRfck3IHERaExGrvSBTdg2QtgGRpSGSogsbcXa9rE2fxk_nt_lLfT9cLqHZgB69ANwKaAKWvMlBQdeaMa8aunh4669nMMHhCBkp4rIbt2duf0jJmPol1Tib89-8KpRr-LTFFiILpS16Rx1vL-qARXslvFssxhgMw2hBV2D6ZasqME-fZeWV03385_qR03kCA7xMWzwaUH-A8U2Un-&lang=sage&interacts=eJyLjgUAARUAuQ==) $0.71\,\mathrm{s}\,\mathrm{m}^{-1}.$ Prodloužení dvoumetrového kyvadla o metr prodlouží periodu o $0.71$ sekundy. Protože derivace je okamžitá rychlost změny a na delším intervalu se tato rychlost může změnit, je blíže realitě spíše formulace pro jednotky tisíckrát menší: "Prodloužení kyvadla o milimetr prodlouží periodu o $0.71$ milisekundy."
 
 Pokud se kyvadlo délky $L=2\,\mathrm m$ prodlužuje (po přenesení ze zimy do vytopené místnosti se závěs se prodlužuje teplotní roztažností), je rychlost prodlužování $\frac{\mathrm dL}{\mathrm dt}$ a rychlost, s jakou roste perioda je (s použitím pravidla pro derivaci složené funkce) 
 $$ \frac{\mathrm dT}{\mathrm dt} = \frac{\mathrm dT}{\mathrm dL} \frac{\mathrm dL}{\mathrm dt} = \frac{\pi}{\sqrt {gL}}\frac{\mathrm dL}{\mathrm dt}$$

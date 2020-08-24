@@ -1226,6 +1226,17 @@ kde $C$ je integrační konstanta. Protože musí platit $W(0)=0$, je $C=0$ a pr
   W(t)=\frac {2t^2}{100}-\frac{t^3}{10000}.
 \end{equation*}
 
+Jiné řešení je pomocí určitého integrálu najít změnu a poté přičíst k počáteční hodnotě. Aby nedošlo ke kolizi mezi označením integrační proměnné $t$ a mezi koncem časového intervalu, budeme tento konec časového intervalu označovat $T$. Tedy platí
+\begin{equation*}
+  w(T)=w(0)+\int_0^T w'(t)\,\mathrm dt=
+  0+ \int_0^T \frac{4t}{100}-3\left (\frac  t{100}\right)^2 \,\mathrm dt  =\frac {2T^2}{100}-\frac{T^3}{10000}.
+\end{equation*}
+Tedy
+\begin{equation*}
+  w(T)=\frac {2T^2}{100}-\frac{T^3}{10000}
+\end{equation*}
+a po přeznační proměnné máme stejný výsledek jako předešlým postupem.
+
 \konec
 
 

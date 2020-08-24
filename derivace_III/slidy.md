@@ -124,7 +124,7 @@ zůstane jenom jediný bod, podobně jako v následující úloze.
 
 **Příklad.** Z kulatiny o průměru $d$ chceme získat nosník
 obdélníkového průřezu, který se při zatížení co nejméně prohýbá. Z
-fyzikálních úvah víme, že musí být maximální součin $bh^3$, kde $b$
+fyzikálních úvah víme, že musí být maximální součin $wh^3$, kde $w$
 je šířka a $h$ výška nosníku.
 
 *Trik 1: Budeme měřit jednotky v násobcích průměru.* Proto je
@@ -132,15 +132,15 @@ $d=1$. Můžeme tedy bez újmy na obecnosti předpokládat, že kulatina má
 jednotkový průměr.
 
 Z Pythagorovy věty (nakreslete si průřez, tj. obdélník vepsaný do
-kružnice) plyne $b=\sqrt{1-h^2}$ a snažíme se tedy řešit úlohu
-$$bh^3=h^3 \sqrt{1-h^2}\to \mathrm{MAX},$$
+kružnice) plyne $w=\sqrt{1-h^2}$ a snažíme se tedy řešit úlohu
+$$wh^3=h^3 \sqrt{1-h^2}\to \mathrm{MAX},$$
 která má fyzikální smysl na intervalu $(0,\infty)$.
 
 *Trik 2: Protože uvažujeme jenom 
 kladné délky, je funkce kladná a bude maximální tam, kde bude
 maximální její druhé mocnina.* Je tedy možné studovat ekvivalentní
 úlohu
-$$(bh^3)^2=h^6(1-h^2)=h^6-h^8\to \mathrm{MAX}$$
+$$(wh^3)^2=h^6(1-h^2)=h^6-h^8\to \mathrm{MAX}$$
 na intervalu $(0,\infty)$. Výhoda je zřejmá: místo součinu dvou
 funkcí, z nichž jedna je navíc složená, studujeme dvoučlenný
 polynom. Pro funkci $$f(h)=h^6-h^8$$ dostáváme
@@ -149,7 +149,7 @@ Tato derivace je nulová pro
 $$h^2=\frac 34$$
 tj. $$h=\frac{\sqrt 3}2.$$ Pro tuto výšku bude mít nosník maximální
 hodnotu tuhosti. Šířka nosníku bude
-$$b=\sqrt{1-h^2}=\sqrt{1-\frac 34}=\sqrt{\frac 14}=\frac 12.$$
+$$w=\sqrt{1-h^2}=\sqrt{1-\frac 34}=\sqrt{\frac 14}=\frac 12.$$
 Poměr výšky a šířky u nosníku maximální tuhosti tedy bude $\sqrt{3}:1$
 a šířka bude rovna polovině průměru.
 
