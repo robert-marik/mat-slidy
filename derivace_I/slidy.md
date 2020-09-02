@@ -62,7 +62,7 @@ Veličina $y$ je *nepřímo úměrná* veličině $x$ jestliže existuje konstan
 * Při pohybu po předem stanovené dráze $s$ je čas nepřímo úměrný rychlosti $v$. Platí $t=\frac sv$.
 * Při periodickém pohybu je frekvence $f$ nepřímo úměrná periodě $T$. Příslušnou konstantou úměrnosti je jednička, tj. $f=\frac 1T$.
 * Objem $V$ koule o poloměru $r$ je přímo úměrný třetí mocnině poloměru. Příslušnou konstantou úměrnosti je objem koule o poloměru $1$. Platí tedy $V=\frac 43 \pi r^3$.
-
+* Síla působící na těleso ve vzdálenosti $r$ od planety je dána vztahem $F=\frac{k}{r^2}$, kde $k$ je konstanta úměrnosti (závislá na hmotnosti planety i tělesa). Toto můžeme slovně vyjádřit tak, že síla je nepřímo úměrná druhé mocnině vzdálenosti.
 
 
 
@@ -249,13 +249,18 @@ $f'$, $f'(x)$ nebo $\frac{\mathrm df}{\mathrm dx}$. Zápis $\frac{\mathrm df}{\m
 * Limita v definici derivace stahuje délku intervalu, na kterém počítáme průměrnou rychlost, k nule. Tím se z průměrné rychlosti stane okamžitá rychlost.
 
 
-Derivace funkce $f$ podle proměnné $x$ tedy vyjadřuje, o kolik se změní veličina $f$, pokud se veličina $x$ změní o jednotku při zachování stejné rychlosti změny. Je to podobné, jako údaj o rychlosti na tachometru. Ten udává, kolik kilometrů ujedeme za hodinu. Od skutečně uražené dráhy se tento údaj může lišit, protože pohyb může trvat třeba jenom deset minut. A kdyby jízda opravdu trvala hodinu, mohlo vlivem jízdy v zácpě dojít k podstatnému nesouladu se skutečně uraženou dráhou. Přesto je okamžitá rychlost ukazovaná na tachometru při jízdě automobilem užitečná veličina a nemáme problémy s jejím chápáním.
+Interpretace derivace v nematematických disciplínách je okamžitá
+rychlost s jakou veličina $f$ reaguje na změny veličiny $x$. Často
+studujeme veličiny závislé na čase s v tomto případě jde tedy o
+rychlost, s jakou se veličina mění v čase. Totéž se často popisuje
+slovními obraty *časová změna veličiny $f$* nebo *změna veličiny $f$
+za jednotku času*.
+
+Obecně, ať již je nezávislou proměnnou čas či jiná veličina, se derivace $f'(x)$ často slovně interpretuje jako veličina, která udává, jak se mění veličina $f$ při změnách veličiny $x$. Tímto slovním obratem je myšlena změna veličiny $f$, odpovídající změně veličiny $x$ o jednotku. Je to podobné, jako údaj o rychlosti na tachometru v automobilu. Ten udává, kolik kilometrů ujedeme za hodinu. Od skutečně uražené dráhy se tento údaj může lišit, protože pohyb může trvat třeba jenom deset minut. A kdyby jízda opravdu trvala hodinu, mohlo vlivem jízdy v zácpě dojít k podstatnému nesouladu se skutečně uraženou dráhou. Přesto je okamžitá rychlost ukazovaná na tachometru při jízdě automobilem užitečná veličina a nemáme problémy s jejím chápáním. Stejně tak pohlížejme na derivaci.
 
 Jednotka derivace je stejná, jako jednotka podílu $\frac {f(x)}x$.
 
-Derivace $f'(x)$ udává, jak se mění veličina $f$ při změnách veličiny
-$x$. Interpretace derivace v nematematických disciplínách je okamžitá
-rychlost s jakou veličina $f$ reaguje na změny veličiny $x$.
+
 
 > Věta (existence derivace implikuje spojitost). Má-li funkce $f$ derivaci na intervalu $I$, je na tomto intervalu spojitá.
 
