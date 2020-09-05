@@ -159,41 +159,26 @@ Průměrná rychlost pracuje jenom s informací v koncových bodech intervalu a 
 rychlosti mizí. Cílem je počítat průměr přes interval prakticky
 nerozlišitelný od nuly. To by dalo okamžitou rychlost. [Numerický experiment](https://sagecell.sagemath.org/?z=eJyNkEtOwzAQhveVeoeRZak2MS0tCyQk36ELWKVplTi2HJQ6wU7ABXEQxIoDIA5RuBeTFpDYYcm_Z8b65nWXe2CTCBZyKECBm_DxyDf3QaYpoYZFTokgS__5vv148W7_Cn6nbN2EDlwONI0iJjajArqbKdDVyvhcPSKWWH460E8WeSDLz2ddKts87N8g1E3fagWtb4BaeUZJlo1HpvFgoHLAoshPYlKIuF4M1nqRFOgr9M_xXgiYz6KYz7DGnItw6zssIyBU7vDG4we_HI8AD44iUyMYw2bkT1cycj6zfBqqbVtXZrcxfV0znh2Rzu--4UMCyf4FY6AvAsN5-BHWUem2-5OJXLtSm8rpkvx2F-QgSYqKMmyiy4tasyEqwOq81H4zTHHley0A97vVB5t_AUUzhdA=&lang=sage&interacts=eJyLjgUAARUAuQ==) ukazuje, že u některých funkcí toto funguje pěkně, u některých bohužel ne.
 
-
 Pokud průměrujeme za stále kratší čas, čitatel i jmenovatel se blíží k
 nule a jsou potíže s interpretací zlomku. Nulou totiž není možné
 dělit. Musíme vytvořit koncept, který umožní sledovat, co se děje s
 funkčními hodnotami funkce, pokud se vstupními daty jdeme "na krev" ke
-kraji definičního oboru.
-
-K vyřešení problému použijeme pojem limita. Budeme se (zatím) soustředit na
-tzv. vlastní limitu ve vlastním bodě.
+kraji definičního oboru. K tomu použijeme pojem limita. Budeme se
+(zatím) soustředit na tzv. vlastní limitu ve vlastním bodě. Tím se
+oproti obecnému postupu mnohé usnadní. Zejména pojem limity můžeme
+opřít o pojem spojitost, který je přece jenom intuitivnější.
 
 \fi
 
-# Limita
-
-Buď $f\colon \mathbb R\to\mathbb R$ funkce jedné proměnné
-
-> Definice (okolí). *Okolím* bodu $x_0$ rozumíme libovolný otevřený
-interval obsahující bod $x_0$.
-
-> Definice (limita). Řekneme, že funkce $f$ má v bodě $x_0$ *limitu*
-rovnu číslu $L$ právě tehdy, když pro libovolnou předem zadanou
-toleranci (i extrémně malou) existuje okolí bodu $x_0$ takové, že
-všechny body z okolí bodu $x_0$ různé od $x_0$ mají funkční hodnotu v
-rámci uvažované tolerance stejnou jako $L$.
-
-**Pozorování.** Většina funkcí má v bodech, kde jsou definované,
-limitu rovnu funkční hodnotě. Přesněji tuto myšlenku vystihuje koncept
-spojitosti.
-
 # Spojitost
 
-> Definice (spojitost). Řekneme, že funkce $f$ je *spojitá v bodě* $x_0$ jestliže je
-> v tomto bodě definovaná a má limitu rovnu funkční hodnotě. Řekneme,
-> že funkce $f$ je *spojitá* na otevřeném intervalu, je-li spojitá v
-> každém jeho bodě.
+Buď $f\colon \mathbb R\to\mathbb R$ funkce jedné proměnné.
+
+> Definice (okolí). *Okolím* bodu $x_0$ rozumíme libovolný otevřený interval obsahující bod $x_0$.
+
+> Definice (spojitost). Řekneme, že funkce $f$ je *spojitá v bodě* $x_0$ jestliže je v tomto bodě definovaná a pro libovolnou předem zadanou toleranci (i extrémně malou) existuje okolí bodu $x_0$ takové, že všechny body z okolí bodu $x_0$ mají funkční hodnotu v rámci uvažované tolerance rovnu $f(x_0)$. Řekneme, že funkce $f$ je *spojitá* na otevřeném intervalu, je-li spojitá v každém jeho bodě.
+
+Definice spojitoti sice není zcela názorná, ale následující definice a věta velmi pomůže. Zhruba řešeno říká, že pro funkce uchopitelné prostředky základní matematiky je pro funkci spojitost totéž existence funkční hodnoty. 
 
 > Definice (elementární funkce). Všechny mnohočleny, goniometrické, cyklometrické,
   exponenciální a logaritmické funkce a obecná mocnina se nazývají
@@ -203,15 +188,14 @@ spojitosti.
   nazývají *elementární funkce*.
 
 
-> Věta (spojitost elementárních funkcí). Všechny elementární funkce jsou spojité v každém vnitřním
-  bodě svého definičního oboru.
+> Věta (spojitost elementárních funkcí). Všechny elementární funkce jsou spojité v každém vnitřním bodě svého definičního oboru.
 
-Podobně jako spojitost funkce jedné proměnné je definována spojitost funkcí více proměnných. Zůstane dokonce v platnosti předchozí věta. V naprosté většině základních praktických aplikací vystačíme s popisem pomocí elementárních funkcí a proto jsou funkce, se kterými pracujeme, zpravidla automaticky spojité. Opatrnost je nutné pouze tam, kde se od elementárních funkcí odchýlíme, například při použití nekonečných řad.
+Podobně jako spojitost funkce jedné proměnné je definována spojitost funkcí více proměnných. Zůstane dokonce v platnosti předchozí věta. V naprosté většině základních praktických aplikací vystačíme s popisem pomocí elementárních funkcí a proto jsou funkce, se kterými pracujeme, zpravidla automaticky spojité. Opatrnost je nutné pouze tam, kde bychom se od elementárních funkcí odchýlili, například při použití nekonečných řad.
 
 > Poznámka. Body, v jejichž okolí je funkce ohraničená, ale je zde porušena spojitost, jsou například následující.
 > 
 **skok**
-: Na jeho odhalení stačí zvolit toleranci v definici limity menší, než je výška skoku. Například $f(x)=\frac{|x|+x}{2x}$ je jednotkový skok v nule.
+: Na jeho odhalení stačí zvolit toleranci v definici spojitosti menší, než je výška skoku. Například $f(x)=\frac{|x|+x}{2x}$ je jednotkový skok v nule.
 >
 **odstranitelná nespojitost**
 : Tato nespojitost nás zajímá nejvíce. Je to nespojitost, která zmizí pokud vhodně dodefinujeme funkční hodnotu v bodě nespojitosti. Například funkce $$f(x)=
@@ -224,12 +208,24 @@ je spojitá funkce. Vznikla doplněním jedné funkční hodnoty do definice fun
 >
 > [Grafy.](https://sagecell.sagemath.org/?z=eJxL06jQtNWo0NZITCoGMjU19TWMtCo0ebnSQRLFmXlASr-ClyvA0DZNryAnv0RDo0JH11THVBOoJsDINh1VUEchOT8nv8hWvSg1RR2kwlA7wAgAMsAaHQ==&lang=sage)
 
+# Limita
 
+Definici limity opřeme o pojem spojitosti. V podstatě pod limitu skryjeme buď funkční hodnotu spojité funkce (pokud existuje), nebo hodnotu, která danou funkci učiní spojitou. Můžeme tedy limitu považévat za  "nejlepší rozumnou náhradu" funkční hodnoty v tom smyslu, že po předefinování jedné funkční hodnoty se funkce stane spojitou, tj. relativně pěknou. 
+
+> Definice (limita). Nechť $f$ je funkce definovaná v okolí bodu $x_0$, s případnou výjimkou bodu $x_0$. Řekneme, že funkce $f$ má v bodě $x_0$ *limitu* rovnu číslu $L$ jestliže funkce $g(x)$, která je definována vztahem $$ g(x)=
+\begin{cases}
+  L& x=x_0\\
+  f(x)& \text{jinak,}
+\end{cases}
+$$
+je spojitá v bodě $x_0$.
+
+Velmi stručně stručně řečeno: pokud se nedá nějaké číslo do funkce dosadit přímo, mohlo by to jít pomocí limity. Například funkce $$\frac{\sin x}{x}$$ není definována v nule. V okolí nuly se však chová v jistém smyslu pěkně: má funkční hodnoty prakticky nerozlišitelné od jedničky, viz graf v odstavci věnovanému spojitosti. Proto platí $$\lim_{x\to 0}\frac{\sin x}{x}=1.$$
 
 # Derivace
 
 Teď jsme připraveni (alespoň teoreticky) počítat průměrnou rychlost na
-intervalu, jehož délka je nerozlišitelná od nuly.
+intervalu, jehož délka je nerozlišitelná od nuly. Vypočteme průměrnou rychlost na intervalu délky $h$ a poté položíme $h$ rovno nule. Ve smyslu limity, pokud je to nutné.
 
 Buď $y=f(x)$ funkce definovaná na nějakém otevřeném intervalu.
 

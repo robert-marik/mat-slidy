@@ -87,7 +87,7 @@ Nech» $f(t)$ je velièina, která ve stupních Celsia za hodinu udává rychlost rùst
 - Teplota po prvních pìti hodinách.
 - Èas nutný pro nárùst teploty o pìt stupòù.
 
-Napìtí $U$ na kondenzátoru o kapacitì $C$ v RC obvodu monitorujícím vlhkost døevìné konstrukce je dáno vzorcem $U=\frac 1C Q$, kde $C$ je konstanta. Nabíjecí proud kondenzátoru je roven $\frac{\mathrm dQ}{\mathrm dt}$. Najdìte vztah mezi nabíjecím proudem a rychlostí zmìny napìtí.
+Napìtí $U$ na kondenzátoru o kapacitì $C$ v RC obvodu monitorujícím vlhkost døevìné konstrukce je dáno vzorcem $$U=\frac 1C Q,$$ kde $C$ je konstanta. Nabíjecí proud kondenzátoru je roven $\frac{\mathrm dQ}{\mathrm dt}$. Najdìte vztah mezi nabíjecím proudem a rychlostí zmìny napìtí.
 - Na základì uvedených informací není mo¾né odpovìdìt.
 - $\frac{\mathrm dU}{\mathrm dQ}=\frac 1C$
 - $\frac{\mathrm dU}{\mathrm dQ}=-\frac 1C^2$
