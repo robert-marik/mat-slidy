@@ -58,11 +58,11 @@ Veličina $y$ je *nepřímo úměrná* veličině $x$ jestliže existuje konstan
 
 **Příklad.**
 
-* Při pohybu konstantní rychlostí je dráha $s$ úměrná času $t$. Příslušnou konstantou úměrnosti je rychlost $v$, tj. $s=vt$.
-* Při pohybu po předem stanovené dráze $s$ je čas nepřímo úměrný rychlosti $v$. Platí $t=\frac sv$.
+* Při pohybu konstantní rychlostí je dráha $s$ úměrná času $t$. Příslušnou konstantou úměrnosti je rychlost $v$, tj. $s=vt$. Pro $t=1$ je dráha $s$ přímo rovna konstantě úměrnosti $v$. Proto můžeme konstantu úměrnosti reprezentovat jako dráhu za jendotku času. Takto rychlost i chápeme a v tomto smyslu čteme i její jednotku. Nečteme "kilometrů lomeno hodin" ale "kilometrů za hodinu".
+* Při pohybu po předem stanovené dráze $s$ je čas nepřímo úměrný rychlosti $v$. Platí $t=\frac sv$. Konstatnou úměrnosti je dráha $s$. Pro $v=1$ je čas přímo roven dráze. Proto je možno konstantu úměrnosti slovně vyjádřit tak, že udává čas, který je nutný pro projetí příslušné dráhy jednotkovou rychlostí.
 * Při periodickém pohybu je frekvence $f$ nepřímo úměrná periodě $T$. Příslušnou konstantou úměrnosti je jednička, tj. $f=\frac 1T$.
-* Objem $V$ koule o poloměru $r$ je přímo úměrný třetí mocnině poloměru. Příslušnou konstantou úměrnosti je objem koule o poloměru $1$. Platí tedy $V=\frac 43 \pi r^3$.
-* Síla působící na těleso ve vzdálenosti $r$ od planety je dána vztahem $F=\frac{k}{r^2}$, kde $k$ je konstanta úměrnosti (závislá na hmotnosti planety i tělesa). Toto můžeme slovně vyjádřit tak, že síla je nepřímo úměrná druhé mocnině vzdálenosti.
+* Objem $V$ koule o poloměru $r$ je přímo úměrný třetí mocnině poloměru. Existuje tedy konstanta $k$ taková, že platí $V=k r^3$. Pro $r=1$ je objem $V$ přímo roven konstantě $k$. Konstanta proto $k$ vyjadřuje objem koule jednotkového poloměru. Protože objem koule jednotkového poloměru je $\frac 43 \pi$ učí se žáci v matematice rovnou vzorec $V=\frac 43 \pi r^3$.
+* Síla působící na těleso ve vzdálenosti $r$ od planety je dána vztahem $F=\frac{k}{r^2}$, kde $k$ je konstanta úměrnosti (závislá na hmotnosti planety i tělesa). Toto můžeme slovně vyjádřit tak, že síla je nepřímo úměrná druhé mocnině vzdálenosti. Pro $r$ rovno jedné je síla $F$ přímo rovna konstantě $k$. Konstanta úměrnosti $k$ proto udává sílu působící na těleso v jednotkové vzdálenosti od planety.
 
 
 
