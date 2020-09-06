@@ -16,7 +16,11 @@ pdflatex mat-cviceni-reseni
 #cp mat-cviceni-reseni.pdf mat-cviceni-r.pdf
 #cp mat-cviceni-screen-reseni.pdf mat-cviceni-screen-r.pdf 
 
-scp mat-cviceni.pdf kiwi:html/mtk/
-scp mat-cviceni-screen.pdf kiwi:html/mtk/
-scp mat-cviceni-reseni.pdf kiwi:html/mtk/
-scp mat-cviceni-screen-reseni.pdf kiwi:html/mtk/
+bash rozsekej
+
+scp mat-cviceni.pdf cornus.mendelu.cz:html/mtk/
+scp mat-cviceni-screen.pdf cornus.mendelu.cz:html/mtk/
+scp mat-cviceni-reseni.pdf cornus.mendelu.cz:html/mtk/
+scp mat-cviceni-screen-reseni.pdf cornus.mendelu.cz:html/mtk/
+scp Cviceni*.pdf cornus.mendelu.cz:html/mtk/
+

@@ -1,0 +1,17 @@
+
+j=0
+index=1
+
+for i in `grep -o {[0-9]*}{section mat-cviceni-screen.aux | grep -o \[0-9\]*`
+do
+    if [ $j != 0 ]
+    then
+	last=$((i))
+	from=$((j+1))
+	echo "Kapitola $index od $j-$last\n"
+	qpdf mat-cviceni-screen.pdf --pages . $from-$last -- Cviceni_$index.pdf
+	index=$(($index+1))
+    fi
+    j=$i
+       
+done
