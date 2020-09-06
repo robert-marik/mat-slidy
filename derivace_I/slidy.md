@@ -139,14 +139,20 @@ Budeme se zajímat o to, jak rychle se mění funkční hodnoty v čase nebo př
 * Jak rychle (v litrech na 100 kilometrů na kilometr za hodinu) roste spotřeba auta při vyšší průměrné cestovní rychlosti?
 * Jak rychle (v tisících Kč na automobil) rostou náklady výrobce automobilů při zvyšování produkce?
 
+\fi
+
 
 # Koncept (průměrná rychlost a okamžitá)
+
+\iffalse
 
 <div class='obtekat'>
 
 ![Určování rychlosti na stále kratším intervalu je jako bychom se dívali na funkci stále lepším mikroskopem. Matematika se umí podívat dokonce "mikroskopem s nekonečně velkým rozlišením".  Zdroj: pixabay.com](mikroskop.jpg)
 
 </div>
+
+\fi
 
 Průměrnou rychlost určujeme tak, že změnu sledované veličiny
 přepočteme na jednotku času (u závislosti na čase), délky (u
@@ -168,17 +174,18 @@ kraji definičního oboru. K tomu použijeme pojem limita. Budeme se
 oproti obecnému postupu mnohé usnadní. Zejména pojem limity můžeme
 opřít o pojem spojitost, který je přece jenom intuitivnější.
 
-\fi
 
 # Spojitost
+
+Definice spojitosti zavádí jakousi třídu funkcí, které jsou v jistém smyslu pěkné a můžeme pro ně použít postupy, které pro obecné funkce nefungují. Jsou zde funkce, jejichž funkční hodnoty se mění plynule a nemůžou se změnit skokově. Malá změna ve vstupních datech vyvolá malou změnu ve funkčních hodnotách.  
 
 Buď $f\colon \mathbb R\to\mathbb R$ funkce jedné proměnné.
 
 > Definice (okolí). *Okolím* bodu $x_0$ rozumíme libovolný otevřený interval obsahující bod $x_0$.
 
-> Definice (spojitost). Řekneme, že funkce $f$ je *spojitá v bodě* $x_0$ jestliže je v tomto bodě definovaná a pro libovolnou předem zadanou toleranci (i extrémně malou) existuje okolí bodu $x_0$ takové, že všechny body z okolí bodu $x_0$ mají funkční hodnotu v rámci uvažované tolerance rovnu $f(x_0)$. Řekneme, že funkce $f$ je *spojitá* na otevřeném intervalu, je-li spojitá v každém jeho bodě.
+> Definice (spojitost). Řekneme, že funkce $f$ je *spojitá v bodě* $x_0$ jestliže je v tomto bodě definovaná a pro libovolnou předem zadanou toleranci (i extrémně malou) existuje okolí bodu $x_0$ takové, že všechny body z okolí bodu $x_0$ mají funkční hodnotu v rámci uvažované tolerance nerozlišitelnou od $f(x_0)$. Řekneme, že funkce $f$ je *spojitá* na otevřeném intervalu, je-li spojitá v každém jeho bodě.
 
-Definice spojitoti sice není zcela názorná, ale následující definice a věta velmi pomůže. Zhruba řešeno říká, že pro funkce uchopitelné prostředky základní matematiky je pro funkci spojitost totéž existence funkční hodnoty. 
+Definice spojitosti sice není zcela názorná, ale následující definice a věta velmi pomůže. Zhruba řečeno vysvětlují, proč si v naprosté většině prakticky využitelných případů můžeme spojitost ověřit jenom tím, že zjistíme, zda je funkce definována. 
 
 > Definice (elementární funkce). Všechny mnohočleny, goniometrické, cyklometrické,
   exponenciální a logaritmické funkce a obecná mocnina se nazývají
@@ -210,9 +217,9 @@ je spojitá funkce. Vznikla doplněním jedné funkční hodnoty do definice fun
 
 # Limita
 
-Definici limity opřeme o pojem spojitosti. V podstatě pod limitu skryjeme buď funkční hodnotu spojité funkce (pokud existuje), nebo hodnotu, která danou funkci učiní spojitou. Můžeme tedy limitu považévat za  "nejlepší rozumnou náhradu" funkční hodnoty v tom smyslu, že po předefinování jedné funkční hodnoty se funkce stane spojitou, tj. relativně pěknou. 
+Definici limity opřeme o pojem spojitosti. V podstatě pod limitu skryjeme buď funkční hodnotu spojité funkce (pokud existuje), nebo hodnotu, která danou funkci učiní spojitou. Můžeme tedy limitu považovat za  "nejlepší rozumnou náhradu" funkční hodnoty v tom smyslu, že po předefinování jedné funkční hodnoty se funkce stane spojitou, tj. relativně pěknou. 
 
-> Definice (limita). Nechť $f$ je funkce definovaná v okolí bodu $x_0$, s případnou výjimkou bodu $x_0$. Řekneme, že funkce $f$ má v bodě $x_0$ *limitu* rovnu číslu $L$ jestliže funkce $g(x)$, která je definována vztahem $$ g(x)=
+> Definice (limita). Nechť $f$ je funkce definovaná v okolí bodu $x_0$, s případnou výjimkou bodu $x_0$. Řekneme, že funkce $f$ má v bodě $x_0$ *limitu* rovnu číslu $L$, jestliže funkce $g(x)$ definovaná vztahem $$ g(x)=
 \begin{cases}
   L& x=x_0\\
   f(x)& \text{jinak,}
@@ -220,7 +227,7 @@ Definici limity opřeme o pojem spojitosti. V podstatě pod limitu skryjeme buď
 $$
 je spojitá v bodě $x_0$.
 
-Velmi stručně stručně řečeno: pokud se nedá nějaké číslo do funkce dosadit přímo, mohlo by to jít pomocí limity. Například funkce $$\frac{\sin x}{x}$$ není definována v nule. V okolí nuly se však chová v jistém smyslu pěkně: má funkční hodnoty prakticky nerozlišitelné od jedničky, viz graf v odstavci věnovanému spojitosti. Proto platí $$\lim_{x\to 0}\frac{\sin x}{x}=1.$$
+Velmi stručně řečeno: pokud se nedá nějaké číslo do funkce dosadit přímo, mohlo by to jít pomocí limity. Například funkce $$\frac{\sin x}{x}$$ není definována v nule. V okolí nuly se však chová v jistém smyslu pěkně: má funkční hodnoty prakticky nerozlišitelné od jedničky, viz graf v odstavci věnovanému spojitosti. Proto platí $$\lim_{x\to 0}\frac{\sin x}{x}=1.$$
 
 # Derivace
 
