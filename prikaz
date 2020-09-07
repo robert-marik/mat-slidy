@@ -9,7 +9,7 @@ then
 
 <meta content="text/html; charset=utf-8" http-equiv="content-type">
 <link rel="stylesheet" type="text/css" href="styl.css" ></head><html>' > index.html
-   echo '<h1>Prezentace z přednášek z Matematiky v letním semestru 2020</h1><p>Tato stránka obsahuje prezentace z předmětu <a href="http://user.mendelu.cz/marik/mtk/">Matematika</a>. Každá přednáška je v několika formátech pro pohodlí a větší možnost volby uživatele. Pro tisk je nejlepší PDF (neobsahuje obrázky a motivační slidy), pro prohlížení na tabletu html, pro transformaci do široké škály výstupů (programem Pandoc) formát markdown.</p>' >> index.html
+   echo '<h1>Prezentace z přednášek z Matematiky MTK v zimním semestru 2020</h1><p>Tato stránka obsahuje prezentace z předmětu <a href="http://user.mendelu.cz/marik/mtk/">Matematika</a>. Každá přednáška je v několika formátech pro pohodlí a větší možnost volby uživatele. Pro tisk je nejlepší PDF (neobsahuje obrázky a motivační slidy), pro prohlížení na tabletu html, pro transformaci do široké škály výstupů (programem Pandoc) formát markdown. Můžete použít i formát kdy jsou <a href="http://user.mendelu.cz/marik/mtk/mat-slidy/mat_slidy_all.pdf">všechny přednášky v jednom PDF</a></p>' >> index.html
    echo '<div class="CSSTableGenerator"><table>'>>index.html
    echo '<tr><td>Název</td><td>Webová stránka html</td><td>Webová prezentace slidy.js</td><td>Tisk v PDF</td><td>markdown</td></tr>'>>index.html
 

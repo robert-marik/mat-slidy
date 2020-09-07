@@ -9,7 +9,9 @@ do
 	last=$((i))
 	from=$((j+1))
 	echo "Kapitola $index od $j-$last\n"
-	qpdf mat-cviceni-screen.pdf --pages . $from-$last -- Cviceni_$index.pdf
+	qpdf --empty -pages mat-cviceni-screen.pdf $from-$last -- Cviceni_$index.pdf
+
+	#qpdf mat-cviceni-screen.pdf --pages . $from-$last -- Cviceni_$index.pdf
 	index=$(($index+1))
     fi
     j=$i

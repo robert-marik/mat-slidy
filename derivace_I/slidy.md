@@ -225,7 +225,7 @@ Definici limity opřeme o pojem spojitosti. V podstatě pod limitu skryjeme buď
   f(x)& \text{jinak,}
 \end{cases}
 $$
-je spojitá v bodě $x_0$.
+je spojitá v bodě $x_0$. Píšeme $$\lim_{x\to x_0}f(x)=L.$$
 
 Velmi stručně řečeno: pokud se nedá nějaké číslo do funkce dosadit přímo, mohlo by to jít pomocí limity. Například funkce $$\frac{\sin x}{x}$$ není definována v nule. V okolí nuly se však chová v jistém smyslu pěkně: má funkční hodnoty prakticky nerozlišitelné od jedničky, viz graf v odstavci věnovanému spojitosti. Proto platí $$\lim_{x\to 0}\frac{\sin x}{x}=1.$$
 
