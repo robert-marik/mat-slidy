@@ -554,7 +554,7 @@ tomto bodě "zůstane". Množství, které zůstane, je rozdílem mezi množstv�
 roste rychlost toku podél tyče je $\frac{\partial q}{\partial x}$. My pro kladný ohřev
 potřebujeme pokles toku tepla, tedy násobíme záporným znaménkem a dostáváme
 $-\frac{\partial q}{\partial x}$.
-* *Víme, kolik tepla se v daném místě spotřebuje na zvýšení teploty a tuto hodnotu musíme převést na změnu teploty (třetí odrážka). Opět se jedná o jakési překalibrování, které ještě souvisí s dalšími fyzikálními vlastnostmi jako je měrná tepelná kapacita a hmotnost jednotkového množství látky objemu v daném místě.* Teplo $-\frac{\partial q}{\partial x}$ je teplo, které každou časovou jednotku "zůstává" v
+* *Víme, kolik tepla se v daném místě spotřebuje na zvýšení teploty a tuto hodnotu musíme převést na změnu teploty (třetí odrážka). Opět se jedná o jakési překalibrování, které ještě souvisí s dalšími fyzikálními vlastnostmi jako je měrná tepelná kapacita a hmotnost jednotkového množství látky objemu v daném místě.* Derivace $-\frac{\partial q}{\partial x}$ je teplo, které každou časovou jednotku "zůstává" v
 bodě $x$. Toto teplo se "použije" na zvýšení teploty. Z
 rovnice (*) pro jednotku času a jednotku objemu 
 $$-\frac {\partial q}{\partial x}=\rho c\frac{\partial T}{\partial t}.$$
