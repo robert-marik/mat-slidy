@@ -273,7 +273,7 @@ Jednotka derivace je stejná, jako jednotka podílu $\frac {f(x)}x$.
 # Aplikace derivací 1: Jak rychle? (změna v čase)
 
 
-> Poznámka (slovní interpretace definice derivace). Derivace v bodě, pokud ji nahlížíme z hlediska časové změny veličiny, je okamžitá rychlost s jakou se mění tato veličina. Protože kladná změna je růst, nahrazujeme někdy slovo "změna" slovem "růst". Protože rychlost je změna za jednotku času, nahrazujeme někdy slovo "rychlost" obratem "změna za jednotku času". Derivaci podle času můžete tedy přečíst libovolým z následujících obratů. Všechny se běžně používají a všechny chápeme stejně -- jako derivaci podle času.
+> Poznámka (slovní vyjádření derivace). Derivace v bodě, pokud ji nahlížíme z hlediska časové změny veličiny, je okamžitá rychlost s jakou se mění tato veličina. Protože kladná změna je růst, nahrazujeme někdy slovo "změna" slovem "růst". Protože rychlost je změna za jednotku času, nahrazujeme někdy slovo "rychlost" obratem "změna za jednotku času". Derivaci podle času můžete tedy přečíst libovolým z následujících obratů. Všechny se běžně používají a všechny chápeme stejně -- jako derivaci podle času.
 > 
 > * Rychlost změny
 > * Rychlost růstu
