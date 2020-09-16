@@ -55,7 +55,7 @@ matice).
 Každou funkci definovanou na $(-\infty,\infty)$ je možné takto rozložit na součet sudé a liché funkce.
 
 **Příklad.** Pro funkci $f(x)=e^x$ dostáváme
-$$e^x=\frac{e^x+e^{-x}}2-\frac{e^x-e^{-x}}2.$$ Dvě funkce na pravé
+$$e^x=\frac{e^x+e^{-x}}2+\frac{e^x-e^{-x}}2.$$ Dvě funkce na pravé
 straně mají význam v aplikacích a nazývají se hypebolický kosinus,
 $\cosh x$, a hyperbolický sinus, $\sinh x$.
 
