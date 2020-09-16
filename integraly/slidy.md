@@ -333,7 +333,7 @@ Stejný princip funguje pro libovolné ustálené proudění radiálním směrem
 
 Pokud sledujeme prostup tepla izolací, jejíž teplotní vodivost se mění s teplotou, není veličina $k$ konstantní a proto výše uvedený postup není možné realizovat a odvozený vzorec pro takový případ neplatí. Stejná situace nastává u podzemní vody a proudění s volnou hladinou (není horní nepropustná vrstva zvodně). Takové úlohy vedou na jinou problematiku, kterou se naučíme řešit v kapitole s diferenciálními rovnicemi.
 
-> Poznámka (změna veličiny vypočtená pomocí gradientu, tj. prostorové rychlosti změny). Pokud se veličina $f$ mění podél přímky v závislosti na veličině $x$ na intervalu od $x=a$ do $x=b$ rychlostí $r(x)$ (tj. $r(x)=\frac{\mathrm df(x)}{\mathrm dx}$), je změna veličiny $f$ na intervalu $[a,b]$ rovna $$\Delta f=f(b)-f(a)=\int_a^b r(x)\,\mathrm dx.$$
+> Poznámka (změna veličiny vypočtená pomocí gradientu). Pokud se veličina $f$ mění podél přímky v závislosti na veličině $x$ na intervalu od $x=a$ do $x=b$ rychlostí $r(x)$ (tj. $r(x)=\frac{\mathrm df(x)}{\mathrm dx}$), je změna veličiny $f$ na intervalu $[a,b]$ rovna $$\Delta f=f(b)-f(a)=\int_a^b r(x)\,\mathrm dx.$$
 
 
 # Další motivace

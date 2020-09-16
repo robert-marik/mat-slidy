@@ -97,11 +97,9 @@ Následující definice si všímají bodů které mají tu vlastnost, že v oko
 
 Přímo z definice lokálních extrémů a rostoucí a klesající funkce plyne, že funkce nemůže mít lokální extrém v bodě, kde je rostoucí nebo kde je klesající. Tuto skutečnost vyjadřuje pomocí derivací následující věta.
 
->Věta (Fermatova o lokálním extrému). Má-li funkce $f$ v bodě $x_0$ lokální extrém, potom je derivace funkce $f$ v bodě $x_0$ nulová, nebo neexistuje. 
+>Věta (Fermatova o lokálním extrému, nutná podmínka pro lokální extrém). Má-li funkce $f$ v bodě $x_0$ lokální extrém, potom je derivace funkce $f$ v bodě $x_0$ nulová, nebo neexistuje. 
 
-Předchozí věta eliminuje obrovské množství bodů z definičního oboru
-funkce. V prakticky využitelných případech nám po této eliminaci často
-zůstane jenom jediný bod, podobně jako v následující úloze.
+Předchozí věta představuje *nutnou podmínku* pro lokální extrém. V bodě kde není splněna (tj. pokud je derivace v tomto bodě kladná nebo záporná) exrém nemůže nastat. Tím je eliminováno obrovské množství bodů z definičního oboru funkce. V prakticky využitelných případech nám po této eliminaci často zůstane jenom jediný bod, podobně jako v následující úloze. 
 
 # Nosník maximální tuhosti
 
@@ -160,9 +158,13 @@ a šířka bude rovna polovině průměru.
 
 Pokud řešíme úlohu s praktickým zadáním, je z povahy úlohy často
 zřejmé, že lokální extrém požadovaného typu existuje a často to bývá
-jediný bod, kde je derivace nulová. Pokud takových bodů máme více,
-nebo pokud je situace méně zřejmá, můžeme existenci lokálního extrému
-posoudit pomocí následující věty.
+jediný bod, kde je derivace nulová. V takovém případě pro identifikaci
+lokálního extrému stačí nutná podmínka. Pokud bodů vyhovujících nutné
+podmínce máme více, nebo pokud je situace méně zřetelná, můžeme
+existenci lokálního extrému posoudit pomocí následující věty. Ta
+představuje *dostatečnou (postačující) podmínku* pro lokální
+extrém. Stačí aby tato podmínka byla splněna a můžeme s jistotou
+usoudit, že v bodě je extrém a jaký.
 
 > Věta (postačující podmínka pro lokální extrémy). Je-li $f$ spojitá v bodě $x_0$ a mění-li se v bodě $x_0$ funkce $f$ z rostoucí na klesající, má funkce $f$ v bodě $x_0$ lokální maximum. Analogicky, lokální minimum nastává při změně z klesající na rostoucí.
 
