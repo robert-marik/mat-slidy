@@ -92,8 +92,7 @@ integrovatelné funkce a proto zformulujeme následující věty.
   intervalu $[a,b]$, platí $$\int_a^b f(x)\,\mathrm dx\geq \int_a^b
   g(x)\,\mathrm dx.$$
 
-> Důsledek. Integrál nezáporné funkce je nezáporný.
-
+> Důsledek. Integrál nezáporné funkce je nezáporný. Přesněji, je-li $a<b$ a $f(x)\geq 0$ na $[a,b]$, platí $$\int _a^b f(x)\,\mathrm dx \geq 0.$$
 
 > Věta (aditivita vzhledem k integračnímu oboru).
 Platí $$\int_a^b f(x)\,\mathrm dx= \int_a^c f(x)\,\mathrm dx + \int_c^b f(x)\,\mathrm dx.$$
