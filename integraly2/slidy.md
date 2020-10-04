@@ -383,8 +383,7 @@ Odhadneme celkovou vykonanou práci.
     {y_0}+2y_1+2y_2+\cdots+2y_{n-1}+{y_n}\Bigr).
   $$  
 
-> Poznámka (slovní interpretace lichoběžníkového pravidla). Pokud ve vzorci pro lichoběžníkové pravidlo dosadíme za hodnotu $h$ odpovídající délku intervalu, dostaneme   $$ \int_a^bf(x)\,\mathrm dx\approx (b-a)\frac {{y_0}+2y_1+2y_2+\cdots+2y_{n-1}+{y_n}}{2n} $$  a
-$$ \frac 1{b-a}\int_a^bf(x)\,\mathrm dx\approx \frac {{y_0}+2y_1+2y_2+\cdots+2y_{n-1}+{y_n}}{2n}. $$ Toto je odhad pro veličinu, kterou jsme výše nazvali střední hodnotou. Lichoběžníkové pravidlo je tedy možné chápat tak, že vezmeme funkční hodnoty v pravidelných intervalech a vypočteme vážený průměr těchto hodnot, kdy všechny funkční hodnoty ve vnitřních bodech se berou s dvojnásobnou vahou než funkční hodnoty v krajních bodech. To je odhad střední hodnoty, který stačí vynásobit délkou intervalu a dostaneme odhad integrálu.
+> Poznámka (slovní interpretace lichoběžníkového pravidla). Pokud ve vzorci pro lichoběžníkové pravidlo dosadíme za hodnotu $h$ odpovídající délku intervalu $\frac{ b-a}n$ a přeuspořádáme členy, dostaneme   $$ \int_a^bf(x)\,\mathrm dx\approx (b-a)\frac {{y_0}+2y_1+2y_2+\cdots+2y_{n-1}+{y_n}}{2n} $$  a $$ \frac 1{b-a}\int_a^bf(x)\,\mathrm dx\approx \frac {{y_0}+2y_1+2y_2+\cdots+2y_{n-1}+{y_n}}{2n}. $$ Toto je odhad pro veličinu, kterou jsme výše nazvali střední hodnotou. Lichoběžníkové pravidlo je tedy možné chápat tak, že vezmeme funkční hodnoty v pravidelných intervalech a vypočteme vážený průměr těchto hodnot, kdy všechny funkční hodnoty ve vnitřních bodech se berou s dvojnásobnou vahou než funkční hodnoty v krajních bodech. To je odhad střední hodnoty, který stačí vynásobit délkou intervalu a dostaneme odhad integrálu.
 
 
 <!--
