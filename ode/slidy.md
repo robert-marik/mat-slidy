@@ -634,7 +634,7 @@ má tedy pravá strana derivaci různou od nuly, poznáme stabilitu z\ monotonie
 
 <div class='obtekat'>
 
-![Funkce z pravé strany rovnice pro teplotní balanci Země](img_earth_balance_2.png) 
+![Funkce z pravé strany rovnice pro teplotní bilanci Země](img_earth_balance_2.png) 
 
 </div>
 
