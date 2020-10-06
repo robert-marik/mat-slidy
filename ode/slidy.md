@@ -1,6 +1,6 @@
 % Diferenciální rovnice 
 % Robert Mařík
-% 26.3.2019
+% 2019-2020
 
 
 # Obyčejná diferenciální rovnice prvního řádu
@@ -628,6 +628,18 @@ má tedy pravá strana derivaci různou od nuly, poznáme stabilitu z\ monotonie
   pořád existuje stabilní stav, ale se zvyšující se intenzitou lovu se
   tento stacionární stav dostává stále blíže ke stavu nestacionárnímu a
   rovnováha je tedy poněkud křehká. 
+
+
+> Poznámka (autonomní rovnice s rozdílem na pravé straně). Rovnice $$\frac{\mathrm dy}{\mathrm dx}=g(y)-h(y)$$ má stacionární bod $y_0$, jestliže $$g(y_0)=h(y_0).$$ Často jsou funkce $g$ a $h$ zadány graficky a stacionární bod je v průsečíku grafů funkcí $g$ a $h$. Ze vzájemné polohy těchto grafů také vidíme, zda je stacionární bod stabilní (funkce $g$ je napravo od bodu $y_0$ pod funkcí $h$ a nalevo nad ní) nebo nestabilní (naopak).
+
+<div class='obtekat'>
+
+![Funkce z pravé strany rovnice pro teplotní balanci Země](img_earth_balance_2.png) 
+
+</div>
+
+**Příklad.** Teplotní bilanci Země je možno vyjádřit [rovnicí](http://user.mendelu.cz/marik/wiki/doku.php?id=ode)
+$$\frac{\mathrm dT}{\mathrm dt}=R_{\text{in}}(T)-R{\text{out}}(T),$$ kde $R_{\text{in}}$ a $R_{\text{out}}$ jsou funkce dané na obrázku. Vidíme tři průsečíky, tj. tři stacionární body. Uvažujme stacionární bod nejvíce napravo. Malá výchylka nahoru k větší teplotě nás posune do oblasti, kde převažuje vyzařování energie, $R_{\text{out}}$ je vetší než $R_{\text{in}}$, pravá strana je záporná a teplota klesá zpět do stacionárního stavu. Podobně, malá výchylka směrem dolů způsobí nároůst a opět návrat do stacionárního stavu. Stacionární stav zcela vpravo je tedy stabilní. Podobně ukážeme, že stacionární stav odpovídající průsečíku zcela vlevo je také stabilní. Naopak, stacionární stav uprostřed je nestabilní, libovolná výchylka z tohoto stavu způsobí přechod systému do některého ze stabilních stavů.
 
 
 <!--
