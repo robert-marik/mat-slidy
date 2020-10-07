@@ -34,9 +34,12 @@ modelovaného děje.
 
 **Příklad.**  Najděte všechny funkce splňující $y'=2xy$. (Naučíme se řešit později.)
 
-Diferenciální rovnice udává scénář vývoje systému. K\ jednoznačnému
-předpovězení budoucího stavu je ovšem nutno znát nejenom, jaký
-mechanismus ovlivňuje vývoj systému, ale také stav současný.
+Diferenciální rovnice mateamtickým modelem kvantifikujícím scénář
+vývoje systému. Řešením jsou všechny možnosti, jak se tento systém
+může vyvjíjet. K\ jednoznačnému předpovězení budoucího stavu je ovšem
+nutno znát také stav počáteční, který ze všech teoreticky možných
+průběhů vybere průběh odpovídající modelované situaci. Tento stav
+vyjadřuje počáteční podmínka, uvedená v následující definici.
 
 > Definice (počáteční podmínka, Cauchyova úloha). Nechť $x_0$, $y_0$ jsou reálná čísla. Úloha najít
 > řešení rovnice  
@@ -50,6 +53,12 @@ mechanismus ovlivňuje vývoj systému, ale také stav současný.
 > křivka*.
 
 (anglicky initial condition, IC, initial value problem, IVP)
+
+**Příklad (praktická interpretace řešení počáteční úlohy).**
+
+* Pokud diferenciální rovnice udává rychlost ochlazování horkého nápoje a počáteční podmínka teplotu na počátku, je řešením počáteční úlohy funkce, do které dosadíme čas a přímo dostáváme teplotu nápoje v daném čase.
+* Pokud diferenciální rovnice udává rychlost růstu populace živočišného druhu v čase a počáteční podmínka velikost populace na počátku sledování, je řešením počáteční úlohy funkce, do které dosadíme čas a přímo dostáváme velikost populace v daném čase.
+* Pokud diferenciální rovnice udává rychlost nárůstu hladiny podzemní vody ve směru od čerpané studny a počáteční podmínka udává výšku hladiny ve studni, je řešením počáteční úlohy funkce udávající výšku hladiny podzemní vody jako funkci vzdálenosti od studny.
 
 **Příklad.** Najděte všechny funkce splňující $y'=2xy$ a $y(0)=3$. (Naučíme se řešit později.)
 
@@ -552,10 +561,10 @@ Excel](https://support.microsoft.com/en-us/help/78113/floating-point-arithmetic-
 
 -->
 
-# ODE tvaru $\frac{\mathrm dy}{\mathrm dx}=f(y)$
+# ODE tvaru $\frac{\mathrm dy}{\mathrm dx}=f(y)$, autonomní ODE
 
 Rovnice $$\frac{\mathrm dy}{\mathrm dx}=f(y)\tag{♣}$$ se nazývá
-autonomní, nebo též nezávislá na čase. Je speciálním případem rovnice
+*autonomní*, nebo též nezávislá na čase. Je speciálním případem rovnice
 se separovanými proměnnými, která je uvedena na dalším slidu a naučíme
 se ji řešit analytickou cestou. Proto se nyní nebudeme zaměřovat na
 hledání obecného řešení, ale pokusíme se popsat chování řešení, aniž
@@ -564,11 +573,21 @@ se budou řešení chovat.
 
 * Je-li $f(y_0)=0$, je konstantní funkce $y(x)=y_0$ řešením rovnice
   (♣). Protože derivace konstantní funkce je nula, vidíme, že řešením
-  rovnice $$f(y)=0$$ obdržíme všechna konstantní řešení rovnice (♣).
-* Konstantní řešení představují rovnovážný stav. Často nás zajímá,
-  jestli při vychýlení z tohoto rovnovážného stavu má systém tendenci
-  se vrátit do původního stavu, nebo se od původního stavu dále
-  odchylovat. Na tuto otázku dává odpověď následující věta.
+  rovnice $$f(y)=0$$ obdržíme všechna konstantní řešení rovnice (♣). Tato konstantní řešení se nazývají *stacionární body*.
+* Stacionární body a jim odpovídající konstantní řešení představují
+  rovnovážný stav. Často nás zajímá, jestli při vychýlení z tohoto
+  rovnovážného stavu má systém tendenci se vrátit do původního stavu,
+  nebo se od původního stavu dále odchylovat. Pokud se při malém
+  vychýlení z rovnovážného stavu systém do tohoto stavu vrací, mluvíme
+  o stabilním stacionárním bodu. Pokud se systém po malé výchylce do
+  tohoto rovnovážného stavu nevrací, ale vyvíjí se k dalšímu
+  stacionárnímu bodu nebo neohraničeně, mluvíme o nestabilním
+  stacionárním bodu.
+
+Následující věta umožní odlišit stabilní a nestabilní stacionární
+body. Protože v přírodě dochází k drobným perturbacím nustále, udává
+vlastně, které stacioární stavy jsou realizovatelné a můžeme je v
+přírodě pozorovat a které jsou prakticky nerealizovatelné.
 
 <!--
 * Rovnici $$\frac{\mathrm dy}{\mathrm d x}=ky,$$ kde $k$ je konstanta,
