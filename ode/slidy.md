@@ -577,12 +577,14 @@ se budou řešení chovat.
 * Stacionární body a jim odpovídající konstantní řešení představují
   rovnovážný stav. Často nás zajímá, jestli při vychýlení z tohoto
   rovnovážného stavu má systém tendenci se vrátit do původního stavu,
-  nebo se od původního stavu dále odchylovat. Pokud se při malém
+  nebo se od původního stavu dále odchylovat.  
+* Pokud se při malém
   vychýlení z rovnovážného stavu systém do tohoto stavu vrací, mluvíme
-  o stabilním stacionárním bodu. Pokud se systém po malé výchylce do
+  o *stabilním stacionárním bodu*.
+* Pokud se systém po malé výchylce do
   tohoto rovnovážného stavu nevrací, ale vyvíjí se k dalšímu
-  stacionárnímu bodu nebo neohraničeně, mluvíme o nestabilním
-  stacionárním bodu.
+  stacionárnímu bodu nebo neohraničeně, mluvíme o *nestabilním
+  stacionárním bodu.*
 
 Následující věta umožní odlišit stabilní a nestabilní stacionární
 body. Protože v přírodě dochází k drobným perturbacím nustále, udává
