@@ -132,7 +132,7 @@ jednotkový průměr.
 Z Pythagorovy věty (nakreslete si průřez, tj. obdélník vepsaný do
 kružnice) plyne $w=\sqrt{1-h^2}$ a snažíme se tedy řešit úlohu
 $$wh^3=h^3 \sqrt{1-h^2}\to \mathrm{MAX},$$
-která má fyzikální smysl na intervalu $(0,\infty)$.
+která má fyzikální smysl na intervalu $(0,1)$.
 
 *Trik 2: Protože uvažujeme jenom 
 kladné délky, je funkce kladná a bude maximální tam, kde bude

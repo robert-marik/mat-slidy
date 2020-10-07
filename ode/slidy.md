@@ -1,6 +1,6 @@
 % Diferenciální rovnice 
 % Robert Mařík
-% 26.3.2019
+% 2019-2020
 
 
 # Obyčejná diferenciální rovnice prvního řádu
@@ -96,10 +96,10 @@ splňující diferenciální rovnici.
 
 \iffalse
 
-**Online řešiče ODE (symbolicky):**
+**Softwarové řešiče ODE (symbolicky):**
 
 * [Wolfram Alpha](http://www.wolframalpha.com/input/?i=solve+y%27%2Bx*y%3Dx%2Fy)
-* [Mathematical Assistant on Web](http://um.mendelu.cz/maw-html/index.php?lang=cs&form=ode&ode2=y%27%2Bx*y%3Dx%2Fy)
+* [Matlab](https://www.mathworks.com/help/symbolic/solve-a-single-differential-equation.html)
 * [Sage](http://user.mendelu.cz/marik/akademie/sagecell.php?short=1&in=y%3Dfunction%28%27y%27%2Cx%29%0A%0A%23+rovnice+y%27%3Dy%2Fx%2B1%0Arovnice+%3D+diff%28y%2Cx%29+%3D%3D+y%2Fx+%2B+1%0A%0A%23+%3Fe%3Fen%3F%0Adesolve%28rovnice%2C+y%29.show%28%29%0A%23+%3Fe%3Fen%3F+v+rozn%3Fsoben%3Fm+tvaru%0Adesolve%28rovnice%2C+y%29.expand%28%29.show%28%29)
 
 \fi
@@ -647,6 +647,18 @@ má tedy pravá strana derivaci různou od nuly, poznáme stabilitu z\ monotonie
   pořád existuje stabilní stav, ale se zvyšující se intenzitou lovu se
   tento stacionární stav dostává stále blíže ke stavu nestacionárnímu a
   rovnováha je tedy poněkud křehká. 
+
+
+> Poznámka (autonomní rovnice s rozdílem na pravé straně). Rovnice $$\frac{\mathrm dy}{\mathrm dx}=g(y)-h(y)$$ má stacionární bod $y_0$, jestliže $$g(y_0)=h(y_0).$$ Často jsou funkce $g$ a $h$ zadány graficky a stacionární bod je v průsečíku grafů funkcí $g$ a $h$. Ze vzájemné polohy těchto grafů také vidíme, zda je stacionární bod stabilní (funkce $g$ je napravo od bodu $y_0$ pod funkcí $h$ a nalevo nad ní) nebo nestabilní (naopak).
+
+<div class='obtekat'>
+
+![Funkce z pravé strany rovnice pro teplotní bilanci Země](img_earth_balance_2.png) 
+
+</div>
+
+**Příklad.** Teplotní bilanci Země je možno vyjádřit [rovnicí](http://user.mendelu.cz/marik/wiki/doku.php?id=ode)
+$$\frac{\mathrm dT}{\mathrm dt}=R_{\text{in}}(T)-R_{\text{out}}(T),$$ kde $R_{\text{in}}$ a $R_{\text{out}}$ jsou funkce dané na obrázku. Vidíme tři průsečíky, tj. tři stacionární body. Uvažujme stacionární bod nejvíce napravo. Malá výchylka nahoru k větší teplotě nás posune do oblasti, kde převažuje vyzařování energie, $R_{\text{out}}$ je vetší než $R_{\text{in}}$, pravá strana je záporná a teplota klesá zpět do stacionárního stavu. Podobně, malá výchylka směrem dolů způsobí nároůst a opět návrat do stacionárního stavu. Stacionární stav zcela vpravo je tedy stabilní. Podobně ukážeme, že stacionární stav odpovídající průsečíku zcela vlevo je také stabilní. Naopak, stacionární stav uprostřed je nestabilní, libovolná výchylka z tohoto stavu způsobí přechod systému do některého ze stabilních stavů.
 
 
 <!--
