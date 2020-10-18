@@ -846,6 +846,62 @@ Najděte lokální extrémy a intervaly monotonie následujících funkcí. Spol
   \end{enumerate}
 \end{multicols}
 
+\def\priklad #1.#2. {$y=#1$, $y'=#2$}
+
+\reseni
+
+
+\textbf{1. }\priklad \frac x{(x+1)^2}.\frac{1-x}{(x+1)^3}.
+
+Nulové body derivace jsou řešení rovnice $$1-x=0.$$ Tato rovnice má jediné řešení $$x=1.$$
+
+Body nespojitosti derivace jsou řešení rovnice $$(x+1)^3=0.$$ Tato rovnice má jediné řešení $$x=-1.$$
+
+Body nespojitosti a nulové body rozdělí reálnou osu na tři podintervaly.
+
+\begin{itemize}
+\item Interval $(-\infty,-1)$. Dosazením reprezentanta $x=-2$ z tohoto intervalu máme $$y'(-2)=\frac{1-(-2)}{(-2+1)^3}<0$$ a proto je derivace na tomto intervalu záporná a funkce klesá.
+\item Interval $(-1,1)$. Dosazením reprezentanta $x=0$ z tohoto intervalu máme $$y'(0)=\frac{1-0}{(0+1)^3}>0$$ a proto je derivace na tomto intervalu kladná a funkce roste.
+  \item Interval $(1,\infty)$. Dosazením reprezentanta $x=2$ z tohoto intervalu máme $$y'(2)=\frac{1-2}{(2+1)^3}<0$$ a proto je derivace na tomto intervalu záporná a funkce klesá.
+  \end{itemize}
+
+  V bodě $x=1$ se monotonie funkce mění spojitě z klesající na rostoucí (nakreslete si schema) a funkce má lokální minimum.
+
+  V bodě $x=-1$ se monotonie funkce mění z rostoucí na klesající, ale lokální extrém zde není, protože funkce ani její derivace v tomto bodě nejsou definovány.
+
+  
+\textbf{2. }\priklad \frac {x^2}{x+1}.\frac{x(x+2)}{(x+1)^2}.
+
+Nulové body derivace jsou řešení rovnice $$x(x+2)=0.$$ Tato rovnice má dvě řešení $$x_1=0, \ x_2=-2.$$
+
+Body nespojitosti derivace jsou řešení rovnice $$(x+1)^2=0.$$ Tato rovnice má jediné řešení $$x=-1.$$
+
+Body nespojitosti a nulové body rozdělí reálnou osu na čtyři podintervaly.
+
+\begin{itemize}
+\item Interval $(-\infty,-2)$. Dosazením reprezentanta $x=-10$ z tohoto intervalu máme $$y'(-10)=\frac{(-10)(-10+2)}{(\dots )^2}>0$$ a proto je derivace na tomto intervalu kladná a funkce roste. Všimněte si, že jmenovatel je stále kladný a znaménko podílu nijak neovlivní.
+\item Interval $(-2,-1)$. Dosazením reprezentanta $x=-1.5$ z tohoto intervalu máme $$y'(-1.5)=\frac{-1.5(-1.5+2)}{(\dots)^2}<0$$ a proto je derivace na tomto intervalu záporná a funkce klesá.
+\item Interval $(-1,0)$. Dosazením reprezentanta $x=-0.5$ z tohoto intervalu máme $$y'(-0.5)=\frac{-0.5(-0.5+2)}{(\dots)^2}<0$$ a proto je derivace na tomto intervalu záporná a funkce klesá.
+  \item Interval $(0,\infty)$. Dosazením reprezentanta $x=1$ z tohoto intervalu máme $$y'(1)=\frac{1(1+2)}{(\dots)^2}>0$$ a proto je derivace na tomto intervalu kladná a funkce roste.
+  \end{itemize}
+
+  V bodě $x=-2$ se monotonie funkce mění spojitě z rostoucí na klesající (nakreslete si schema) a funkce má v tomto bodě lokální maximum.
+
+  V bodě $x=0$ se monotonie funkce mění spojitě z klesající na rostoucí (nakreslete si schema) a funkce má v tomto bodě lokální minimum.
+
+  V bodě $x=-1$ se monotonie funkce nemění. Navíc funkce v tomto bodě ani není definována a existenci lokálního extrému tedy ani neuvažujeme
+
+    
+\textbf{3. }\priklad \frac {x^2}{x^2+1}.\frac{2x}{(x^2+1)^2}.
+
+Nulové body derivace jsou řešení rovnice $$2x=0.$$ Tato rovnice má jediné řešení $$x=0.$$
+
+Body nespojitosti derivace jsou řešení rovnice $$(x^2+1)^2=0.$$ Tato rovnice nemá v oboru reálných čísel žádné řešení.
+
+Body nespojitosti nejsou a jeden nulový bod rozdělí reálnou osu na dva podintervaly. Z derivace je zřejmé, že derivace má stejné znaménko jako $x$, tj. derivace je záporná nalevo od nuly a kladná napravo od nuly. To znamená, že v nule se funkce mění z klesající na rostoucí a funkce má v tomto bodě lokální minimum. 
+  
+
+\konec
 
 \obrazek[vlastní]{krabicka.jpg}
 \subsection{Krabička z papíru}  V každém rohu papíru A4 vystřihneme
@@ -2209,7 +2265,7 @@ Přímým výpočtem vidíme, že platí
 \subsection{Matice, zachovávající význačné směry} Dřevo má tři výrazné
 směry a pokud máme možnost zvolit souřadnou soustavu tak, aby tyto
 směry byly dány vektory $(1,0,0)^T$, $(0,1,0)^T$ a $(0,0,1)^T$, formulace
-fyzikálních zákonů se zjednoduší. Najděte
+fyzikálních zákonů se zjednoduší. Nyní si ukážeme proč. Najděte
 \begin{enumerate}
 \item  nejobecnější matici $3\times 3$, která zachovává směr vektoru $(1,0,0)^T$,
 \item  nejobecnější symetrickou matici $3\times 3$, která zachovává směr vektoru $(1,0,0)^T$,
@@ -2502,10 +2558,10 @@ a tento výpočet potvrzuje, že neexistuje inverzní matice.
   při výpočtu vlastních vektorů vychází nejčastěji.}
 
 
-\subsection{Soustava lineárních rovnic s parametrem}
-Pro jakou hodnotu parametru má soustava nekonečně mnoho řešení?
+% \subsection{Soustava lineárních rovnic s parametrem}
+% Pro jakou hodnotu parametru má soustava nekonečně mnoho řešení?
 
-\stranka
+% \stranka
 
 
 % \stranka
@@ -2516,10 +2572,178 @@ Pro jakou hodnotu parametru má soustava nekonečně mnoho řešení?
 \stranka
 \section{Vlastní čísla a směry}
 
+\subsection{Vektor, který není vlastním směrem}
+
+Ukažte, že vektor $\vec a=
+  \begin{pmatrix}
+    -1\\2
+  \end{pmatrix}
+  $
+není vlastním směrem matice $$A=\begin{pmatrix}  3& 0 \\ 2 &4\end{pmatrix}.$$
+
+\reseni
+Pomocí maticového násobení vidíme, že platí
+$$ A\vec a=
+\begin{pmatrix}
+  3& 0 \\ 2 &4
+\end{pmatrix}
+\begin{pmatrix}
+  -1\\2
+\end{pmatrix}
+=-
+\begin{pmatrix}
+  3\\2
+\end{pmatrix}
++2
+\begin{pmatrix}
+  0\\4
+\end{pmatrix}
+=
+\begin{pmatrix}
+  3\\6
+\end{pmatrix}.
+$$
+
+Výsledkem zobrazení vektoru pomocí matice je vektor který není násobkem původního vektoru (podle první komponenty by se muselo jednat o minus trojnásobek, ale to nekoresponduje s druhou kompoenntou) a proto se nejedná o vlastní vektor matice.
+
+\konec
+
+
+\subsection{Vektor, který je vlastním směrem}
+
+Ukažte, že vektor $\vec a=
+  \begin{pmatrix}
+    2\\3
+  \end{pmatrix}
+  $
+  je vlastním směrem matice $$A=\begin{pmatrix}  6& 0 \\ 3 &4\end{pmatrix}$$
+  a určete příslušné vlastní číslo
+
+\reseni
+Pomocí maticového násobení vidíme, že platí
+$$A\vec a=
+\begin{pmatrix}
+  6& 0 \\ 3 &4
+\end{pmatrix}
+\begin{pmatrix}
+  2\\3
+\end{pmatrix}
+=2
+\begin{pmatrix}
+  6\\3
+\end{pmatrix}
++3
+\begin{pmatrix}
+  0\\4
+\end{pmatrix}
+=
+\begin{pmatrix}
+  12\\18
+\end{pmatrix}.
+$$
+
+Výsledkem zobrazení vektoru $\vec a$ pomocí matice je vektor $
+\begin{pmatrix}
+  12\\18
+\end{pmatrix},
+$ který je šestinásobkem původního vektoru $
+\begin{pmatrix}
+  2\\3
+\end{pmatrix}$.
+Protože je obraz násobkem vzoru, jedná se o vlastní vektor matice. Příslušné vlastní číslo je $6$, protože se vektor zobrazuje na svůj šestinásobek.
+
+\konec
 
 
 \stranka
 \subsection{Vlastní čísla a vektory matice $2\times 2$}
+
+Najděte vlastní čísla matice $$A=
+\begin{pmatrix}
+  -2 & 2 \\ 2 &1
+\end{pmatrix}
+$$
+a jim příslušné vlastní vektory.
+
+\reseni
+
+Vlastní čísla jsou nulovými body determinantu
+$$
+\begin{vmatrix}
+  -2-\lambda &2 \\ 2 & 1-\lambda
+\end{vmatrix}
+=(-2-\lambda)(1-\lambda)-(2)(2)=\lambda^2+\lambda-6=(\lambda-2)(\lambda+3).
+$$
+
+\textbf{Vlastní číslo $\lambda_1=2$.}
+Protože platí $$A-2 I=
+\begin{pmatrix}
+  -2 & 2\\2&1
+\end{pmatrix}
+-
+\begin{pmatrix}
+  2&0\\0&2
+\end{pmatrix}=\begin{pmatrix}
+  -4 & 2\\ 2 &-1
+\end{pmatrix},
+$$
+řešíme soustavu 
+$$
+\begin{pmatrix}
+-4 & 2\\ 2 &-1
+\end{pmatrix}
+\begin{pmatrix}
+  x_1\\x_2
+\end{pmatrix}
+=
+\begin{pmatrix}
+  0\\0
+\end{pmatrix},
+$$
+která má nekonečně mnoho řešení. Musíme najít alespoň jendo nenulové řešení. Pokud zapíšeme jako soustavu rovnic, dostáváme druhou rovnici ve tvaru
+$$2x_1-x_2=0$$ a první rovnice je jejím násobkem. Volbou $x_1=1$ dostáváme $x_2=2x_1=2$ a vlastní vektor příslušný vlastnímu číslu $\lambda_1=2$ je $\vec e_1=
+\begin{pmatrix}
+  1\\2
+\end{pmatrix}.
+$ Tento vektor je dán jednoznačně až na nenulový konstantní násobek.
+
+\textbf{Vlastní číslo $\lambda_2=-3$.}
+Protože platí $$A-(-3) I=
+\begin{pmatrix}
+  -2 & 2\\2&1
+\end{pmatrix}
++
+\begin{pmatrix}
+  3&0\\0&3
+\end{pmatrix}=
+\begin{pmatrix}
+  1 & 2\\ 2 &4
+\end{pmatrix},
+$$
+řešíme soustavu 
+$$
+\begin{pmatrix}
+1 & 2\\ 2 &4
+\end{pmatrix}
+\begin{pmatrix}
+  x_1\\x_2
+\end{pmatrix}
+=
+\begin{pmatrix}
+  0\\0
+\end{pmatrix},
+$$
+která má nekonečně mnoho řešení. Musíme najít alespoň jendo nenulové řešení. Pokud zapíšeme jako soustavu rovnic, dostáváme první rovnici ve tvaru
+$$x_1+2x_2=0$$ a druhá rovnice je jejím násobkem. Volbou $x_2=1$ dostáváme $x_1=-2x_2=-2$ a vlastní vektor příslušný vlastnímu číslu $\lambda_2=-3$ je $\vec e_2=
+\begin{pmatrix}
+  -2\\1
+\end{pmatrix}.
+$ Tento vektor je dán jednoznačně až na nenulový konstantní násobek.
+
+\konec
+
+
+\subsection{Transformace matice $2\times 2$ na diagonální tvar}
 
 Uvažujme symetrickou matici
 \begin{equation*} A=
@@ -2631,6 +2855,55 @@ Pokud ještě před násobením matic vytkneme opakující se faktor z obou mat
 Podle očekávání vyšla diagonální matice s vlastními hodnotami v hlavní diagonále.
  \konec
 
+
+ \subsection{Poměr délky vzoru a obrazu vektoru}
+
+ Pro matici $$A=
+ \begin{pmatrix}
+   3&1\\1&3
+ \end{pmatrix}
+$$ z minulého příkladu a vektor $$\vec u=
+\begin{pmatrix}
+  -1\\2
+\end{pmatrix}
+$$
+určete podíl délky obrazu $A\vec u$ a vzoru $\vec u$ při zobrazení pomocí matice $A$. Ověřte, že tento podíl leží mezi menší a větší vlastní hodnotou, které jsme vypočítali v~předchozím příkladě.
+
+\reseni
+
+Platí
+$$A\vec u=
+\begin{pmatrix}
+  3&1\\1&3
+\end{pmatrix}
+\begin{pmatrix}
+  -1\\2
+\end{pmatrix}
+=
+-
+\begin{pmatrix}
+  3\\1
+\end{pmatrix}
++2
+\begin{pmatrix}
+  1\\3
+\end{pmatrix}
+=
+\begin{pmatrix}
+  -1\\5
+\end{pmatrix}
+$$
+a výpočetem délek vektorů
+dostáváme
+$$||\vec u||=\sqrt{(-1)^2+(2)^2}=\sqrt 5$$
+a 
+$$||A\vec u||=\sqrt{(-1)^2+(5)^2}=\sqrt {26}.$$
+Podíl délek je
+$$\frac{||A\vec u||}{||\vec u||}=\frac{\sqrt {26}}{\sqrt 5}\approx 2.28$$
+což je podle očekávání hodnota mezi menší a větší vlastní hodnotou, které vyšly v předchozím příkladě.
+
+\konec
+ 
 % \stranka
 
 % \section{Komentář k předchozímu} Zobrazení popsané maticí $A$
@@ -2677,14 +2950,20 @@ Podle očekávání vyšla diagonální matice s vlastními hodnotami v hlavn�
 % \end{minipage}}
 
 
-\stranka
-\subsection{Neceločíslená vlastní čísla a vektory matice $2\times 2$}
+% \stranka
+% \subsection{Neceločíslená vlastní čísla a vektory matice $2\times 2$}
+
+
+
+\subsection{Transformace tenzoru pootočením}
+
+\subsection{Extrémy diagonálních prvků transformovaného tenzoru}
 
  
 \stranka
 \subsection{Vlastní čísla a vektory matice $3\times 3$.}
 
-V minulém cvičení jsme ukázali, že nejobecnější symetrická matice zachovávající směr vektoru  $(1,0,0)^T$ má v prvním řádku a prvním sloupci jenom jeden nenulový prvek, prvek v hlavní diagonále.
+V cvičení z minulého týdne jsme ukázali, že nejobecnější symetrická matice zachovávající směr vektoru  $(1,0,0)^T$ má v prvním řádku a prvním sloupci jenom jeden nenulový prvek, prvek v hlavní diagonále.
 
 Uvažujme matici
 \begin{equation*}
@@ -2768,12 +3047,6 @@ Soustava
 má řešení $x_1=0$ (plyne z první rovnice) a například $x_2=1$ a $x_3=2$ (plyne z druhé a třetí rovnice, které jsou jedna násobkem druhé). Vlastní vektor příslušný vlastní hodnotě $\lambda_3=6$ je $e_3=(0,1,2)^T$.
 
 \konec
-
-
-
-\subsection{Transformace tenzoru pootočením}
-
-\subsection{Extrémy diagonálních prvků transformovaného tenzoru}
 
 
 
