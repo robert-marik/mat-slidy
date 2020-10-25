@@ -282,7 +282,7 @@ $$\begin{pmatrix}
   C&-S\\S&C
 \end{pmatrix},
 $$
-kde [po výpočtu](https://sagecell.sagemath.org/?z=eJyFUMtugzAQvFvyP1hcYpCNCsdKHCKOkXLAvRFaORGolsBGxkElX981aaDpQ7G8fsx4Z8c7Sks37r12ksgkgUiJTFNy9EBOxCbECKMi66Sz6oOWZc64qFgpWF5VwG1XBtKZzwcWVgYq8wuMequ0I8GLlXpojO3MKPVEXK0vxj4fNP9zBBjtM0qL2Pm03gw1DcNoGxVhPKiub1UzvTXntqXhrcB-qXTQO9P1RtfaTT8KBMvr8qmCuV6TCuYd669fAEgu9uVJKwK_Vqf6X_c8IDAwmpO-Ne81ZQIijUSU-y7C2WP8BnDYmA9AObDQwavQ1dYst1raGe2saSVReqztRZvBPXZ25w8jOmvGw_k4UJFxEUYz8KvLn3iLnc0=&lang=sage&interacts=eJyLjgUAARUAuQ==)
+kde [po výpočtu](https://sagecell.sagemath.org/?z=eJyFUMGKgzAQvQv-Q_DSKImsHhc8FI8LPZi9qbukRWlAJxJTWfv1O7Fsa2WXDZkkvMl7M_MmaejOnhsriUwSjJTINCVHB-RE7ELf870i66U16ouWZc64qFkpWF7XmNs_Mkhnjo9ZPBmqLD98bzAKLKHBu5Ewttr0epIwE9vAVZvXCvivK0DuIaO0iK3jDXpsaBhG-6gI41H1Q6fa-bO9dB0N7yUOj2dQwZvuBw0N2HlTJFgxypca9xpIatybH8nzJBXcZ5EnUAQ9UKfmz1F4QHChwsJaefmRMoGRRiLKnan4dhj_AThezAWiHLNoqFO6N7LobWYGa3QniYKpMVfQo_2_vecmfe-mG4-X40hFxkUY3Qptff8GTrag5g==&lang=sage&interacts=eJyLjgUAARUAuQ==)
 $$
 \begin{aligned}
 a'_{11}&=C^2a_{11}  + S^2a_{22} + 2CSa_{12},\\

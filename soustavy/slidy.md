@@ -552,6 +552,6 @@ x_3 & = -0.6/5 +(2.3272)/10-11/10 = -0.9873,\\
 x_4 & = -3(2.3272)/8 +(-0.9873)/8+15/8 = 0.8789.
 \end{aligned}
 $$
-Jak vidno, vypočtenou hodnotu $x_1$ ihned použijeme pro výpočet $x_2$. Obě tyto hodnoty ihned použijeme pro výpočet $x_3$ a tak dále. V dalších iteracích postup [opakujeme](https://sagecell.sagemath.org/?z=eJytUMsKwjAQvBf6D0tPPlLSTVIpQs-CV69eqlYJSJRWYfP3bkwR8aAiJpDJ7swO7Jw76y6QLZvtaWPXro4nSxNCQUqQFmTqQtxvmuxPHViwDrrGHdoRFuN5mgAfj1ADKYkF5EBaljCF8MJAq0CjROQ-04w56AmZ2FEl46DUrMxZyrPTwZHRBOQZxPAZpCZI2UXJCqJvxYClrKLgeQWPwivhtfAmkuf74la4EctgZw_20tezcajVS61favNUp0k0ytZu0Vz7Pl-1dtceH0n-Fie9j5O-jpO-j5M-xfmnxG4PxZTh&lang=sage&interacts=eJyLjgUAARUAuQ==). Mimo jiné hodnoty v paměti přímo přepisujeme a nemusíme držet v paměti starou a novou hodnotu. 
+Jak vidno, vypočtenou hodnotu $x_1$ ihned použijeme pro výpočet $x_2$. Obě tyto hodnoty ihned použijeme pro výpočet $x_3$ a tak dále. V dalších iteracích postup [opakujeme](https://sagecell.sagemath.org/?z=eJytUMGKwjAQvRf6D0NPraakk6RShJ4X9rpXL3WtEpAorcLk73eyCYt4UJFNIC8z782DeefJuguUxefwfdrajevjKao8IxSkBGlBpm_E782z_WkCC9bBNLjDWGJTrfMM-HiEHkhJbKAG0rKFJYQXEq0CjRKR-0wz1qAXZGJHtYxJqVlZs5Rnl8mR0QTkGcTwSVITpOyiZAfRt2PAVnZRcLuCR-GV8Fp4E8lzXN0KV7IOdvZgL3O_qkKt7mp9V5ubmqNKVsXGfQzXea6_Rrsbj39pvhkpPY6UXo6UXo-UnkX6b6n9AO8SliU=&lang=sage&interacts=eJyLjgUAARUAuQ==). Mimo jiné hodnoty v paměti přímo přepisujeme a nemusíme držet v paměti starou a novou hodnotu. 
 
 
