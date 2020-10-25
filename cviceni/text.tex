@@ -1622,7 +1622,7 @@ který můžeme vypočítat pomocí substituce $-r^2=t$.
 \item \priklad \frac{\mathrm dy}{\mathrm dt}=te^y.
 \item \priklad \frac{\mathrm dy}{\mathrm dx}=x\sqrt y.
 \item \priklad \frac{\mathrm dy}{\mathrm dx}=x\sqrt y,\ \ y(0)=1.
-\item \priklad \frac{\mathrm dr}{\mathrm dt}=kr^3,\ \ r(0)=r_0.
+\item \priklad \frac{\mathrm dr}{\mathrm dt}=kr^3,\ \ r(0)=r_0>0.
 \item \priklad \frac{\mathrm dm}{\mathrm dt}=m+2,\ \ m(0)=0.
 \item \priklad \frac{\mathrm dm}{\mathrm dt}=m+2,\ \ m(0)=-2.
 \end{enumerate}
@@ -1631,6 +1631,50 @@ který můžeme vypočítat pomocí substituce $-r^2=t$.
 \textit{Umění najít řešení diferenciální rovnice je sympatické, není to však nic proti umění sestavit model (naučili jsme se již ve druhém týdnu, připomeneme si v následujícím modelu), umění posoudit jednoznačnost řešení (většina modelů se řeší numericky a musíme být přesvědčeni o smysluplnosti takové činnosti) a  stabilitu řešení (řešení, která nejsou stabilní, jsou sice v souladu s přírodními zákony, ale pravděpodobnost jejich spontánního výskytu je nulová). Jednoznačnost a zjednodušenou verzi stability řešení (stabilita konstantních řešení) jsme viděli na přednášce a připomeneme v dalších příkladech.}
 
 \stranka
+
+\def\priklad #1.{$#1$}
+
+\reseni
+
+\begin{enumerate}[(1)]
+\item \priklad \frac{\mathrm dy}{\mathrm dx}=x\cdot y^2.
+  \begin{itemize}
+  \item Konstantní řešení jsou řešení rovnice $$ y^2=0,$$ tj. je jediné konstantní řešení $$ y=0.$$
+  \item Pro nekonstantní řešení dostaneme po separaci  $$ y^{-2}\mathrm dy=x\mathrm dx $$ a integrováním $$ -\frac 1y=\frac 12 x^2+C.$$
+  \end{itemize}
+\item \priklad \frac{\mathrm dy}{\mathrm dt}=t\cdot e^y.
+  \begin{itemize}
+  \item Konstantní řešení jsou řešení rovnice $$ e^y=0.$$ Protože tato rovnice nemá řešení, zadaná diferenciální rovnice nemá konstantní řešení.
+  \item Pro nekonstantní řešení dostaneme po separaci  $$ e^{-y}\mathrm dy= t\mathrm dt$$ a integrováním $$ -e^{-y}=\frac 12 t^2 +C.$$
+  \end{itemize}
+\item \priklad \frac{\mathrm dy}{\mathrm dx}=x\cdot \sqrt y.
+  \begin{itemize}
+  \item Konstantní řešení jsou řešení rovnice $$ \sqrt y=0,$$ tj. jediné řešení $$ y=0.$$
+  \item Pro nekonstantní řešení dostaneme po separaci  $$ \frac 1{\sqrt y}\mathrm dy=x\mathrm dx $$ a integrováním $$ 2\sqrt y=\frac 12 x^2+C.$$
+  \end{itemize}
+\item \priklad \frac{\mathrm dy}{\mathrm dx}=x\sqrt y,\ \ y(0)=1.
+  \begin{itemize}
+  \item Konstantní řešení $$y=0$$ (viz předcdhozí příklad) nesplňuje počáteční podmínku a proto jej nemusíme uvažovat
+  \item Obecné řešení  $$ 2\sqrt y=\frac 12x^2 +C$$ dává po dosazení $x=0$ a $y=1$ rovnici $$2\sqrt 1=0+C.$$ Odsud dostáváme $C=2$ a řešení zadané počáteční úlohy je $$2\sqrt y=\frac 12 x^2+2.$$
+  \end{itemize}
+\item \priklad \frac{\mathrm dr}{\mathrm dt}=k\cdot r^3,\ \ r(0)=r_0>0.
+  \begin{itemize}
+  \item Konstantní řešení jsou řešení rovnice $$ r^3=0,$$ tj. jediné konstantní řešení je $$ r=0$$ a toto řešení nesplňuje počáteční podmínku.
+  \item Pro nekonstantní řešení dostaneme po separaci  $$ r^{-3}\mathrm dr=k\mathrm dt $$ a integrováním $$ -\frac 12 r^{-2}=kt+C.$$ Dosazením počáteční podmínky $t=0$, $r=r_0$ dostáváme $$ -\frac 12 r_0^{-2}=C.$$ Tím je dána konstanta $C$ a po použití této konstanty v obecném řešení dostáváme řešení počáteční úlohy ve tvaru $$ -\frac 12 r^{-2}=kt-\frac 12 r_0^{-2}.$$
+  \end{itemize}
+\item \priklad \frac{\mathrm dm}{\mathrm dt}=m+2,\ \ m(0)=0.
+  \begin{itemize}
+  \item Konstantní řešení jsou řešení rovnice $$ m+2=0$$, tj. $$ m=-2$$ a toto řešeín nesplňuje počáteční podmínku.
+  \item Pro nekonstantní řešení dostaneme po separaci  $$ \frac1{m+2}\mathrm dm=dt $$ a integrováním $$ \ln|m+2|=t+C.$$ Po dosazení počáteční podmínky $t=m=0$ dostáváme $$C=\ln 2$$ a počáteční úloha má řešení $$\ln(m+2)=t+\ln (2).$$ (Vzhledem k počáteční podmínce je $y$ kladné a nemusíme psát integrační konstantu.)
+  \end{itemize}
+\item \priklad \frac{\mathrm dm}{\mathrm dt}=m+2,\ \ m(0)=-2.
+  \begin{itemize}
+  \item Konstantní řešení jsou řešení rovnice $$ m+2=0$$, tj. $$ m=-2.$$ Toto 5e3ení splňuje počáteční podmínku.
+  \item Pravá strana má ohraničenou (dokonce konstantní) derivaci podle $m$. Proto je řešení každé počáteční úlohy určeno jednozančně. Řešení z předchozího bodu je jediné a další nemusíme hledat.
+  \end{itemize}
+\end{enumerate}
+
+\konec
 
 \obrazek{ledni_medved.jpg}
 \subsection{Tloušťka ledu}

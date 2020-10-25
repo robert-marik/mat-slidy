@@ -1,6 +1,6 @@
 % Soustavy lineárních rovnic
 % Robert Mařík
-% duben 2020
+% duben 2020, říjen 2020
 
 
 # Varianty zápisu soustavy lineárních rovnic
@@ -312,7 +312,7 @@ setkáváme v aplikacích poměrně často. Podíváme-li se, jak byla
 odvozena soustava popisující rozložení teploty na tepelně vodivé
 desce (poslední slajd minulé přednášky), není to až takové překvapení.
 
-[Online výpočet.](https://sagecell.sagemath.org/?z=eJxtjzFrwzAQhXeD_8ORLpKRXYUqLQQ02Hjq1CGDwTVBRGp6Q05GFqH995XjJKVQIcS9u_f0SbU-mRjwi_W9EuVayHQMok_VIlM9ty5q6S9yGHieNffwkxTPUrxIoeTAqxgMTaOfHEumPGu1KtA6ihi_99eESpMW6azXj_8Pd7ou2zzr7oiNFLf9FwEPMPqDie5ACN5-GgvBTY5wZn_4AAhIkPxHxzZ8m2eQVqeJzfyCNeWu6HgijgEpAlu9-mAN-bOBk4vemi2800p0FTGLR4yTVvzyrZv_LdHIXZmLmVhdpctdmN9XNAJ-kz-XJ2qk&lang=sage&interacts=eJyLjgUAARUAuQ==)
+[Online výpočet.](https://sagecell.sagemath.org/?z=eJxtj8FqwzAMhu-BvIPoLk5wMnfzOij4kJDTTjv0EMjC8GK31aFycMzY3n5O03YMZozRL_3SJ1fqpIPHL9Z1khdrLuLT8y5Gi4zxnDqrJb_Ivs_SpL41Pwq-EfxZcCn6rAxe0zS6ybJoSpNGyRyNpYDh-_3SIWOlQfpU6_v_iztVFU2atDfEk-DX-xcBdzC6QQc7EIIzR23A28kSzuy984CABNF_sOxBZNs0gXhaRWxeIGd1scvbLCJHjxSArV704D7w6OBkgzN6C2-04m1JzOABw6Rkdv7W1f4aaWQvzMVMrCrjbOvn_fKaw2_nD3USakw=&lang=sage&interacts=eJyLjgUAARUAuQ==)
 
 Podobnými iteračními metodami je možné efektivně řešit soustavy o
 tisících rovnic a neznámých. Výpočty probíhají rychle a nejsou náročné
