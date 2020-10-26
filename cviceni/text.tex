@@ -1,7 +1,6 @@
 \section*{Úvod}
 
 
-
 Soubor obsahuje příklady pro cvičení k mým přednáškám na Lesnické a dřevařské fakultě pro bakalářské studium v zimním semestru 2020. Text bude expandovat, jak poběží semestr. Vychází ze cvičení v minulém semestru (kompletní zadání a většina řešení jsou k dispozici na webu předmětu). Text existuje ve verzích pro tisk na papír a pro promítání na plátně, každá z těchto verzí ještě s řešeními a bez řešení. 
 
 \stranka
@@ -2620,7 +2619,7 @@ a tento výpočet potvrzuje, že neexistuje inverzní matice.
 
 Ukažte, že vektor $\vec a=
   \begin{pmatrix}
-    -1\\2
+    1\\2
   \end{pmatrix}
   $
 není vlastním směrem matice $$A=\begin{pmatrix}  3& 0 \\ 2 &4\end{pmatrix}.$$
@@ -2632,9 +2631,9 @@ $$ A\vec a=
   3& 0 \\ 2 &4
 \end{pmatrix}
 \begin{pmatrix}
-  -1\\2
+  1\\2
 \end{pmatrix}
-=-
+=
 \begin{pmatrix}
   3\\2
 \end{pmatrix}
@@ -2644,11 +2643,11 @@ $$ A\vec a=
 \end{pmatrix}
 =
 \begin{pmatrix}
-  3\\6
+  3\\10
 \end{pmatrix}.
 $$
 
-Výsledkem zobrazení vektoru pomocí matice je vektor který není násobkem původního vektoru (podle první komponenty by se muselo jednat o minus trojnásobek, ale to nekoresponduje s druhou kompoenntou) a proto se nejedná o vlastní vektor matice.
+Výsledkem zobrazení vektoru pomocí matice je vektor který není násobkem původního vektoru (podle první komponenty by se muselo jednat o trojnásobek, ale to nekoresponduje s druhou komponentou) a proto se nejedná o vlastní vektor matice.
 
 \konec
 
@@ -3001,9 +3000,58 @@ což je podle očekávání hodnota mezi menší a větší vlastní hodnotou, k
 
 \subsection{Transformace tenzoru pootočením}
 
-\subsection{Extrémy diagonálních prvků transformovaného tenzoru}
 
- 
+Uvažujme tyč ve směru osy $x$ namáhanou v ose tahem, při kterém vzniká jednotkové tahové napětí. Tyč je slepena spojem, který svírá s kolmicí na osu úhel $\theta$. (Nakreslete si obrázek.)
+\begin{enumerate}
+\item Ukažte, že pro nenulový úhel $\theta$ je normálové napětí ve
+  spoji menší, než by odpovídalo normálovém napětí pro spoj kolmý na osu tyče.
+\item Ukažte, že normálové napětí je klesající funkcí úhlu $\theta$ na intervalu od nuly do $\frac \pi2$.
+\item Určete normálové a smykové napětí pro extrémní případ $\theta=\frac \pi 2$ a popište, jak by takový spoj vypadal.
+\item Určete smykové napětí ve spoji a určte, pro jakou hodnotu úhlu je smykové napětí největší.
+\item Určete, jestli je v tomto případě z hlediska působícího napětí výhodnější udělat šikmý spoj po směru nebo proti směru hodinových ručiček.  
+\end{enumerate}
+
+\reseni
+
+V souřadné soustavě podle zadání je tah ve směru osy $x$ roven jedné a další komponenty jsou nulové. Tedy $\sigma=
+\begin{pmatrix}
+  1 & 0 \\ 0& 0
+\end{pmatrix}.
+$ Budeme otáčet proti směru hodinových ručiček, tj. o kladný úhel $\theta$.
+
+Dostáváme (při zkráceném označení $S=\sin\theta$ a $C=\cos\theta$)
+$$
+\begin{aligned}
+  R^{-1}\sigma R &=
+  \begin{pmatrix}
+    C & S\\ -S&C
+  \end{pmatrix}
+\begin{pmatrix}
+  1 & 0 \\ 0& 0
+\end{pmatrix}.
+  \begin{pmatrix}
+    C & -S\\ S&C
+  \end{pmatrix}
+  \\&=
+  \begin{pmatrix}
+    C & S\\ -S&C
+  \end{pmatrix}
+\begin{pmatrix}
+  C & -S \\ 0& 0
+\end{pmatrix}
+=\begin{pmatrix}
+  C^2 & -CS \\ -CS& S^2
+\end{pmatrix}
+\end{aligned}
+$$
+a normálová a smyková složka napětí jsou po řadě $\cos^2\theta$ a $\sin\theta \cos\theta = \frac 12 \sin(2\theta).$
+
+Odsud již dostaneme odpovědi na všechny uvedené otázky.
+
+\konec
+% \subsection{Extrémy diagonálních prvků transformovaného tenzoru}
+
+
 \stranka
 \subsection{Vlastní čísla a vektory matice $3\times 3$.}
 
