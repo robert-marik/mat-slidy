@@ -3245,7 +3245,26 @@ $
 
 
 \stranka
+
+\obrazek{chladic.jpg}
 \subsection{Stacionární vedení tepla v žebru chladiče}
+
+Vyjímečně jsme nuceni do rovnice vedení tepla zahrnout i zdroje. 
+Modelujte vedení tepla v žebru chladiče. Úlohu uvažujte jako
+jednorozměrnou, materiál homogenní izotropní s konstantní tepelnou
+vodivostí. Kolem chladiče proudí vzduch a teplotě $T_0$ a chladič
+ztrácí teplo rychlostí úměrnou rozdílu teploty žebra v daném místě a
+teploty okolního vzduchu. (Koeficient úměrnosti je dán koeficient přestupu tepla a šířkou žebra). Uvažujte stacionární děj.
+
+\reseni
+
+$$0=-h(T-T_0)+\frac{\mathrm d}{\mathrm dx}\left(\lambda \frac{\mathrm dT}{\mathrm dx}\right)$$
+
+
+Ke stejnému závěru je možné dojít i přesnou analýzou ve 3D, viz Cengel, Heat transfer, kapitola 3–6 Heat transfer from finned surfaces.
+
+\konec
+
 
 \subsection{Difuzní rovnice ve 2D}
 
