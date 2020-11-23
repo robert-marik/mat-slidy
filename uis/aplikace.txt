@@ -16,24 +16,24 @@ Co lze s jistotou øíci o difuzní rovnici ve tvaru $$\frac{\partial u}{\partial t
 Jak byste v difuzní rovnici $$\frac{\partial u}{\partial t}=\nabla\cdot(D\nabla u)+\sigma$$ slovnì interpretovali èlen na levé stranì rovnice?
 + rychlost rùstu hustoty stavové velièiny, tj. zmìna mno¾ství stavové velièiny v jednotkovém objemu látky za jednotku èasu
 - rychlost poklesu hustoty stavové velièiny, tj. mno¾ství stavové velièiny, které ubude v jednotkovém objemu látky za jednotku èasu
-- úbytek toku pøená¹ejícího stavovou velièinu, tedy èást toku, která za jednotku èasu zùstane v jednotkovém objemu 
-- pøírùstek toku pøená¹ejícího stavovou velièinu, tedy èást toku, která za jednotku èasu ubude v jednotkovém objemu 
+- úbytek toku pøená¹ejícího stavovou velièinu; jinými slovy mno¾ství stavové velièiny, které za jednotku èasu pøibude v jednotkovém objemu díky tomu, ¾e se odpojí od toku a zùstane v daném místì 
+- pøírùstek toku pøená¹ejícího stavovou velièinu; jinými slovy mno¾ství stavové velièiny, které za jednotku èasu ubude v jednotkovém objemu díky tomu, ¾e se pøipojí k toku a odteèe
 - výkon ze zdrojù, tj. mno¾ství stavové velièiny, které v jednotkovém objemu za jednotku èasu vygenerují zdroje (spotøebièe bereme jako zdroje se záporným výkonem)
 - výkon ze spotøebièù, tj. mno¾ství stavové velièiny, které v jednotkovém objemu za jednotku èasu spotøebují spotøebièe (zdroje bereme jako spotøebièe se záporným výkonem)
 
 Jak byste v difuzní rovnici $$\frac{\partial u}{\partial t}=\nabla\cdot(D\nabla u)+\sigma$$ slovnì interpretovali èlen $\nabla\cdot(D\nabla u)$ na pravé stranì rovnice?
 - rychlost rùstu hustoty stavové velièiny, tj. zmìna mno¾ství stavové velièiny v jednotkovém objemu látky za jednotku èasu
 - rychlost poklesu hustoty stavové velièiny, tj. mno¾ství stavové velièiny, které ubude v jednotkovém objemu látky za jednotku èasu
-+ úbytek toku pøená¹ejícího stavovou velièinu, tedy mno¾ství stavové velièiny, která za jednotku èasu zùstane v jednotkovém objemu 
-- pøírùstek toku pøená¹ejícího stavovou velièinu, tedy mno¾ství stavové velièiny, která za jednotku èasu ubude v jednotkovém objemu 
++ úbytek toku pøená¹ejícího stavovou velièinu; jinými slovy mno¾ství stavové velièiny, které za jednotku èasu pøibude v jednotkovém objemu díky tomu, ¾e se odpojí od toku a zùstane v daném místì
+- pøírùstek toku pøená¹ejícího stavovou velièinu; jinými slovy mno¾ství stavové velièiny, které za jednotku èasu ubude v jednotkovém objemu díky tomu, ¾e se pøipojí k toku a odteèe
 - výkon ze zdrojù, tj. mno¾ství stavové velièiny, které v jednotkovém objemu za jednotku èasu vygenerují zdroje (spotøebièe bereme jako zdroje se záporným výkonem)
 - výkon ze spotøebièù, tj. mno¾ství stavové velièiny, které v jednotkovém objemu za jednotku èasu spotøebují spotøebièe (zdroje bereme jako spotøebièe se záporným výkonem)
 
 Jak byste v difuzní rovnici $$\frac{\partial u}{\partial t}=\nabla\cdot(D\nabla u)+\sigma$$ slovnì interpretovali èlen $\sigma$ na pravé stranì rovnice?
 - rychlost rùstu hustoty stavové velièiny, tj. zmìna mno¾ství stavové velièiny v jednotkovém objemu látky za jednotku èasu
 - rychlost poklesu hustoty stavové velièiny, tj. mno¾ství stavové velièiny, které ubude v jednotkovém objemu látky za jednotku èasu
-- úbytek toku pøená¹ejícího stavovou velièinu, tedy èást toku, která za jednotku èasu zùstane v jednotkovém objemu 
-- pøírùstek toku pøená¹ejícího stavovou velièinu, tedy èást toku, která za jednotku èasu ubude v jednotkovém objemu 
+- úbytek toku pøená¹ejícího stavovou velièinu; jinými slovy mno¾ství stavové velièiny, které za jednotku èasu pøibude v jednotkovém objemu díky tomu, ¾e se odpojí od toku a zùstane v daném místì 
+- pøírùstek toku pøená¹ejícího stavovou velièinu; jinými slovy mno¾ství stavové velièiny, které za jednotku èasu ubude v jednotkovém objemu díky tomu, ¾e se pøipojí k toku a odteèe
 + výkon ze zdrojù, tj. mno¾ství stavové velièiny, které v jednotkovém objemu za jednotku èasu vygenerují zdroje (spotøebièe bereme jako zdroje se záporným výkonem)
 - výkon ze spotøebièù, tj. mno¾ství stavové velièiny, které v jednotkovém objemu za jednotku èasu spotøebují spotøebièe (zdroje bereme jako spotøebièe se záporným výkonem)
 

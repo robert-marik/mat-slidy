@@ -50,7 +50,7 @@ $$\nabla f =\left(\frac{\partial f}{\partial x},\frac{\partial f}{\partial y},\f
   odlišná, přesto mají navenek podobné chování a tím je umožněn
   jednotný přístup při matematickém modelování.
 
-Příklady transportních dějů
+Příklady veličin podléhajících transportním dějům
 
 * povrchová voda
 * podzemní voda
@@ -139,6 +139,8 @@ tenzor rozumět matici $3\times 3$ nebo $2\times 2$, podle
 kontextu. (Obecněji je možno považovat skalární veličiny a vektory za
 tenzory nižších řádů, toto my však dělat nebudeme.)
 
+[Vizualizace toku a vrstevnic pro anizotropní materiál, kdy tok není vždy kolmý na směr maximálního spádu stavové veličiny.](https://sagecell.sagemath.org/?z=eJxlT89ugyAcvpv4DqSpEVvs1K2Xpexkeu5h2cV1hlmorCgN0E76TnuKvdhQu6zJOPwI34_vH4MdshHOZt1bNr-fWTc738txQ4ziHSyKJUq2qEhQut1GvmfkAcf5jC32iuw4bQ0sHL_fNPRCO-zU4sUSZYvlFbIYWhSnKHPvWjhOa_FD4nu6lp-wNo2Ak1WdPb0obei55RUFBDiT1Z0DwfrUHir6CKaAjTFBoMF0EgBBDO3gCLpzK6fCnLPTpf3-Aq4DH-g5DvQ0DEZW_o_wLA_uU5y_tuRdkF-vG4oL9GflextcydbIkyqPQhrI0NB9mBaB607ja12HNOSIww9qQgQYFwKvidA06oU2816iPNPKSFUyTsWud0NglBwuO5gOgTe9wF7zC8VpggDRR0cslespcRr9AMQpj4Y=&lang=sage&interacts=eJyLjgUAARUAuQ==) 
+
 ## Fickův zákon (difuze)
 
 V roce 1855 německý lékař A. Fick objevil, že difuzní tok $\vec J$
@@ -207,9 +209,9 @@ kinetickou energii nebo osmózu a kapilární jevy.
 Fourierův zákon se týká vedení tepla a vyjadřuje, 
 že vektor hustoty tepelného toku $\vec q$ je úměrný gradientu teploty $\nabla T$
 a má opačný směr, tj. 
-$$\vec q=-D\nabla T.$$ 
+$$\vec q=-k\nabla T.$$ 
 Je-li materiál anizotropní, což je nejobecnější
-případ, je veličina $D$ symetrickým
+případ, je veličina $k$ symetrickým
 tenzorem. Je-li materiál izotropní, je
 $k$ skalární veličinou, případně skalární veličina násobená
 jednotkovou maticí, pokud potřebujeme zachovat její maticový charakter.
@@ -378,7 +380,7 @@ Výše uvedenými úvahami je motivována následující definice a věta. (Defi
 > Pro vektorovou funkci dvou proměnných vypočteme divergenci analogicky, pouze chybí třetí člen. 
 
 
-> Poznámka (fyzikální interpretace divergence). Vektorové pole používáme k modelování toku veličin, které nás zajímají (teplo v materiálu, tekutina nebo chemická látka v materiálu, voda nebo plyn v půdě a podobně). Divergence vektorového pole udává tok z jednotkového objemu látky v daném místě. Udává, jestli se v daném místě a čase tok zhušťuje a nabývá na intenzitě (kladná divergence) nebo řídne a ustává (záporná divergence). Tento efekt může být způsoben tím, že veličina přenášená tímto polem se v daném místě buď kumuluje, nebo ubývá a také tím, že daná veličina v bodě může vznikat nebo zanikat.
+> Poznámka (fyzikální interpretace divergence). Vektorové pole používáme k modelování toku veličin, které nás zajímají (teplo v materiálu, tekutina nebo chemická látka v materiálu, voda nebo plyn v půdě a podobně). Divergence vektorového pole udává tok z jednotkového objemu látky v daném místě. Udává, jestli se v daném místě a čase tok nabývá na intenzitě (kladná divergence) nebo ustává (záporná divergence). Tento efekt může být způsoben tím, že veličina přenášená tímto polem se v daném místě buď kumuluje, nebo ubývá a také tím, že daná veličina v bodě může vznikat nebo zanikat.
 
 Divergence je lokální veličina. Udává informaci o daném bodě. Pro měření však je nutné mít konečný objem a pro stanovení toku konečně velkou hranici. Vzájemný vztah mezi lokální veličinou a konečným objemem je založený na předpokladu, že podmínky se nemění skokem a okolí každého bodu jsou nepříliš odlišné od podmínek v okolních bodech.
 
