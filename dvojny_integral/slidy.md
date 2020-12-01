@@ -150,16 +150,19 @@ konstantou. Přesněji, platí následující věty.
 
 # Výpočet (oblast mezi funkcemi proměnné $x$)
 
-<div class='sloupce_'>
+<div class='obtekat'>
+
+![Oblast mezi funkcemi proměnné $x$.](fub_1.png)
+
+</div>
 
 V\ závislosti na tom, jakými nerovnostmi množinu $\Omega$ definujeme,
 můžeme pro výpočet dvojného integrálu použít následující věty. Tyto
-věty udávají, jak je možno dvojný integrál přepsat jako dva iterované
-integrály funkce jedné proměnné, tzv. dvojnásobný integrál. Mají název
-**Fubiniovy věty**.
+věty udávají, jak je možno dvojný integrál přepsat jako dvojnásobný
+integrál. Mají název **Fubiniovy věty**.
 
 
-> Věta (převod dvojného integrálu na dvojnásobný). Nechť $f$ je funkce spojitá v\ uzavřené oblasti
+> Věta (Fubiniova věta). Nechť $f$ je funkce spojitá v\ uzavřené oblasti
 > $$  
 >   \Omega=\{(x,y)\in\mathbb{R}^2:{a\leq x\leq b}\text{ a }
 >   {\varphi (x)\leq y\leq \psi (x)}\}.$$ 
@@ -170,15 +173,16 @@ integrály funkce jedné proměnné, tzv. dvojnásobný integrál. Mají název
 >   f(x,y){\mathrm{d}y }\Bigr]{\mathrm{d}x }.
 > $$
 
-![Oblast mezi funkcemi proměnné $x$.](fub_1.png)
-
-</div> 
 
 # Výpočet (oblast mezi funkcemi proměnné $y$)
 
-<div class='sloupce_'>
+<div class='obtekat'>
+![Oblast mezi funkcemi proměnné $y$.](fub_2.png)
 
-> Věta (převod dvojného integrálu na dvojnásobný). Nechť $f$ je funkce spojitá v\ uzavřené oblasti
+</div>
+
+
+> Věta (Fubiniova věta pro jiné pořadí integrace). Nechť $f$ je funkce spojitá v\ uzavřené oblasti
 > $$  \Omega=\{(x,y)\in\mathbb{R}^2:{a\leq y\leq b}\text{ a }
 >   {\varphi (y)\leq x\leq
 >   \psi (y)}\}.
@@ -191,13 +195,13 @@ integrály funkce jedné proměnné, tzv. dvojnásobný integrál. Mají název
 > $$
 > 
 
-![Oblast mezi funkcemi proměnné $y$.](fub_2.png)
+
+<div class='obtekat'>
+
+![Oblast, pro kterou jsou možná obě pořadí integrace.](fub_4.png)
 
 </div>
 
-# Záměna pořadí integrace
-
-<div class='sloupce'>
 
 Často je možné oblast integrace zapsat pomocí obou možností uvedených
 na předchozích slidech. Například oblast na obrázku je možno zapsat
@@ -225,20 +229,19 @@ pracujeme se dvěma různými integrály. Výsledky jsou stejné, nemusí
 však být dosažitelné srovnatelnou námahou, jedna z cest může být
 snazší.
 
-![Oblast, pro kterou jsou možná obě pořadí integrace.](fub_4.png)
+# Výpočet (obdélníková oblast)
+
+<div class='obtekat'>
+![Integrál přes obdélník.](fub_3.png)
 
 </div>
 
-
-# Výpočet (obdélníková oblast)
-
-<div class='sloupce_'>
 
 Výše uvedené problémy se stanovením a případným přepočítáváním mezí
 při záměně pořadí integrace se nevyskytují při integrování přes
 obdélníkovou oblast.
 
-> Věta (dvojný integrál na obdélníkové množině). Nechť $R=[a,b]\times[c,d]$ je uzavřený obdélník v $\mathbb{R}^2$ a
+>   Věta (Fubiniova věta na obdélníku). Nechť $R=[a,b]\times[c,d]$ je uzavřený obdélník v $\mathbb{R}^2$ a
 >   $f$ funkce definovaná a spojitá na $R$. Pak platí
 >   $$    \begin{aligned}\iint_R f(x,y)\mathrm{d}x \mathrm{d}y 
 >     &=
@@ -253,9 +256,6 @@ obdélníkovou oblast.
 >   $$
 > 
 
-![Integrál přes obdélník.](fub_3.png)
-
-</div>
 
 # Matematické aplikace dvojného integrálu
 
