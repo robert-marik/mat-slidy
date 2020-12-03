@@ -33,7 +33,7 @@ Je však otázka, jak tento přístup použít v případě, že daný parametr 
 * Toto funguje pro desky s konstantní plošnou hustotou, kdy má deska
   ve všech místech stejné fyzikální vlastnostmi.
 * Pokud je deska slepená z konečného počtu malých homogenních desek o
-  různných plošných hustotách, určíme hmotnost každé jednotlivé desky
+  různých plošných hustotách, určíme hmotnost každé jednotlivé desky
   samostatně a výsledky potom sečteme.
   $$m=\sigma_1 S_1+\sigma_2 S_2+\cdots + \sigma_n S_n$$
 * Pokud není možné nebo vhodné použít předchozí bod, musíme

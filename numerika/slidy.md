@@ -1,8 +1,85 @@
 % Vybrané postupy numerické matematiky
 % Robert Mařík
-% listopad 2019
+% listopad 2019, prosinec 2020
 
-	
+
+# Numerické řešení diferenciálních rovnic
+
+Již v prvním týdnu jsme se při zdůraznění role derivace dostali k formulování modelů použitím derivací, k diferenciálním rovnicím. Tyto rovnice je možné pro konkrétní hodnoty parametrů a konkrétní počáteční podmínku řešit numericky. 
+
+Následující přehlídka znovu připomene některé modely a odkaz za těmito modely vede na interaktivní nástroj pro numerické řešení. Tímto nástrojem můžeme vizualizovt řešení pro různé počáteční podmínky. Pro náročnější práci, jako například vizualizace různých rovnic (například pro různé nastavení parametrů) by bylo nutné použít nějaký neinteraktivní nástroj, kde se ve speciálním jazyce naformuluje model, nastaví parametry, spustí řešič a vykreslí řešení.
+
+* [Model ochlazování kávy](https://homepages.bluffton.edu/~nesterd/apps/slopefields.html?flags=0&ODE=t,x&dydx=-0.2*(x-20)&x=0,20,20&y=0,100,15&method=rk4&h=0.1&f1=80-30cos(2pi%20x/24)&f2=exp(2x)&f3=zeta(x)&f4=gamma(x)&pts0=%5B0.29233511586452765,79.38571428571429%5D,%5B0.3493761140819964,8.51674641148324%5D,%5B0.14336917562724016,20.71770334928229%5D)
+$$\frac{\mathrm dT}{\mathrm dt}=-k (T-T_0)$$
+* [Model růstu populace v prostředí s omezenou nosnou kapacitou](https://homepages.bluffton.edu/~nesterd/apps/slopefields.html?flags=0&ODE=t,x&dydx=0.2*x*(1-x/50)&x=0,20,20&y=0,100,15&method=rk4&h=0.1&f1=80-30cos(2pi%20x/24)&f2=exp(2x)&f3=zeta(x)&f4=gamma(x)&pts0=%5B0.29233511586452765,79.38571428571429%5D,%5B0.3493761140819964,8.51674641148324%5D,%5B0.14336917562724016,20.71770334928229%5D)
+$$\frac{\mathrm dx}{\mathrm dt}=rx\left (1-\frac xK \right)$$
+* [Model růstu vodní kapky v atmosféře](https://homepages.bluffton.edu/~nesterd/apps/slopefields.html?flags=0&ODE=t,x&dydx=x%5E(2/3)&x=0,20,20&y=0,100,15&method=rk4&h=0.1&f1=80-30cos(2pi%20x/24)&f2=exp(2x)&f3=zeta(x)&f4=gamma(x)&pts0=%5B0.29233511586452765,79.38571428571429%5D,%5B0.3493761140819964,8.51674641148324%5D,%5B0.14336917562724016,20.71770334928229%5D,%5B12.473118279569894,26.45683453237409%5D,%5B18.06451612903226,23.032374100719423%5D)
+$$\frac{\mathrm dV}{\mathrm dt}=k V^{2/3}$$
+* [Model růstu ledu podle Stefanova zákona](https://homepages.bluffton.edu/~nesterd/apps/slopefields.html?flags=0&ODE=t,x&dydx=1/x&x=0,10,20&y=0,8,15&method=rk4&h=0.01&f1=80-30cos(2pi%20x/24)&f2=exp(2x)&f3=zeta(x)&f4=gamma(x)&pts0=%5B0.09285714285714286,0.11719570405727919%5D,%5B1.4788732394366197,2.1809352517985605%5D,%5B2.9401408450704225,1.2514388489208628%5D)
+$$\frac{\mathrm dh}{\mathrm dt}=\frac kh$$
+
+Všimněte si, že v numerickém modelu je prostým pohledem prakticky nerozlišitelný model růstu vodní kapky od modelu růstu úměrného velikost populace (změňte si mocninu $\frac 23$ na $1$), ale modely se chovají principiálně zcela jinak, protože v jednom je zaručena jednoznačnost řešení a ve druhém je tato jednoznačnost porušena. Dále si všimněte, že model růstu ledu má při prodlužování řešení zpět v čase evidentně problémy s nulou ve jmenovateli. Abychom různé parazitní výstupy numerických algoritmů jako je zde dokázali odchytit a eliminovat, nestačí "umět rovnici naklikat do programu", ale znalost teorie a kvalitativních vlastností řešení je téměř nezbytná pro jakoukoliv závažnější práci. 
+
+# Numerické řešení diferenciálních rovnic ve 2D a 3D
+
+Pokud máme v zásobě zkušenosti s modelováním diferenciálních rovnic, můžeme se pustit do odvážnějších aplikací, jako třeba následující modely.
+
+## Konkurence dvou populací
+
+Dynamika rozvoje jedné populace může být ovlivněna přítomností druhé populace. Například pokud se dvě populace navzájem brzdí v růstu, je vhodným modelem soustava rovnic
+$$
+\begin{aligned}
+  \frac{\mathrm dx}{\mathrm dt}=r_xx\left(1-\frac x{K_x} - ay\right),\\
+  \frac{\mathrm dy}{\mathrm dt}=r_yy\left(1-\frac y{K_y} - bx\right).
+\end{aligned}
+$$
+V chování této soustavy je možno podle nastavení parametrů pozorovat všechny možné situace pozorované v přírodě, což zahrnuje dominanci jednoho z druhů, slabou konkurenci druhů nebo silnou konkurenci druhů. Více viz učebnice z populační ekologie.
+
+[Model](https://homepages.bluffton.edu/~nesterd/apps/slopefields.html?flags=2&dxdt=3*x%20-%20x%5E2%20-%20x*y&dydt=2*y%20-%20y%5E2%20-%200.5%20*%20x%20*%20y&x=0,4,20&y=0,3,15&method=rk4&h=0.1&f1=80-30cos(2pi%20x/24)&f2=exp(2x)&f3=zeta(x)&f4=gamma(x)&pts1=%5B0.3,0.28328571428571436%5D,%5B0.20714285714285716,0.6434928229665071%5D,%5B2.664285714285714,2.158851674641148%5D,%5B3.1714285714285713,0.7533014354066987%5D,%5B1.7785714285714285,0.2115789473684213%5D)
+
+
+## Model dravce a kořisti
+
+Dynamika rozvoje ineragujících populací dravce a kořisti může být vyjádřena Lotkovým Volterrovým modelem 
+$$
+\begin{aligned}
+  \frac{\mathrm dx}{\mathrm dt}=ax-bxy,\\
+  \frac{\mathrm dy}{\mathrm dt}=cxy-dy.
+\end{aligned}
+$$
+V chování této soustavy je možno pozorovat oscilace obou populací přesně tak, jako to vídáme v přírodě. Další pozorované situace model nevysvětluje, protože je jednoduchý. Jedná se však o základní stavební kámen, který je možno dále zpřesňovat a modelovat situaci blíže konkrétní aplikaci.
+
+[Model](https://homepages.bluffton.edu/~nesterd/apps/slopefields.html?flags=2&dxdt=0.1*x%20-%200.025*x-0.01*x*y&dydt=-0.1*y+0.05*x*y&x=0,10,20&y=0,40,15&method=rk4&h=0.1&f1=80-30cos(2pi%20x/24)&f2=exp(2x)&f3=zeta(x)&f4=gamma(x)&pts1=%5B0.7894736842105263,10.577142857142857%5D,%5B1.795774647887324,12.09377990430622%5D,%5B0.7394366197183099,22.830622009569378%5D)
+
+## Model epidemie
+
+Populaci rozdělíme na tři skupiny.
+
+* Skupina S (**angl. susceptible**) obsahuje tu část populace,
+  které je náchylná k onemocnění. Tito jedinci netrpí chorobou, mohou
+  však být infikováni při styku s nemocnými.
+* Skupina I (**angl. infected**)  obsahuje část populace
+  tvořenou infikovanými jedinci. Tito jedinci vykazují známky
+  onemocnění a rozšiřují nemoc mezi členy skupiny $S$.
+* Skupina R (**angl. removed**) obsahuje tu část populace,
+  která je tvořena jedinci, kteří byli dříve infikováni, ale nyní již
+  nemohou šířit chorobu. 
+
+Velikosti skupin S, I a R budeme označovat $S$, $I$ a $R$.
+ Předpoklady, že počet osob které onemocní za jednotku času souvisí s počtem náchylných a infikovaných a že počet osobn, které jsou izolovány souvisí s počtem infikovaných vede k soustavě
+diferenciálních rovnic (Kermack-McKendrik(1927))
+$$  \begin{aligned}
+    \frac{\mathrm dS}{\mathrm dt}&=-\alpha SI,\\
+    \frac{\mathrm dI}{\mathrm dt}&=\alpha SI-\beta I,\\
+    \frac{\mathrm dR}{\mathrm dt}&=\beta I\\
+  \end{aligned}
+$$
+
+Matematicky je možno chování modelu studovat i bez explicitní formulace diferenciálních rovnic, pouze využitím takzvaného kompartmentového modelu. Tímto způsobem je možno relativně snadno přidávat do modelu skupinu bepříznakových, vakcinovaných, skupinu v inkubační době a podobně. 
+
+[Model](https://homepages.bluffton.edu/~nesterd/apps/compartmentalanalysis.html?C&S,999,T,45,189;I,1,T,303,84;R,0,T,593,192&S,I,0.003*S*I;I,R,0.5*I)
+
+
 # Nondimenzionalizace a bezrozměrné veličiny
 
 Rovnice vedení tepla v jedné dimenzi (prostup tepla stěnou, vedení
@@ -164,3 +241,7 @@ Jiná forma zápisu je přímo pomocí druhých parciálních derivací ve tvaru
 ![Teplota znázorněná pomocí izoterm.](ctvercova_deska_01_001.png)
 
 ![Teplota znázorněná pomocí barev a 3D grafu.](ctvercova_deska_02_001.png)
+
+![Model podzemní vody mezi svěma rovnoběžnými řekami.](mezi_rekama.png)
+
+Poslední model je model podzemní vody s konstantními piezometrickýmí hladinami pdél dvou rovnoběžných stran (mohou být například dvě řeky) a s rovnoměrně rozloženými zdroji (například nad oblastí jsou rovnoměrné srážky a voda rovnoměrně zasakuje). Řešením modelu vidíme odkud teče voda do které řeky. Tím je možno například usuzovat, kde po případné kontaminaci provádět sanační práce.
