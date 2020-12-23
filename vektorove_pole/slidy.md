@@ -462,6 +462,7 @@ pro rovnici popisující vedení tepla na stranách 88 a 89.
 
 V této rovnici není zahrnut případ, kdy se veličina přenáší ještě i prouděním hmotného prostředí (konvekce).
 
+`ww2:problems/difuzni_rce/interpretace_clenu.pg`
 
 # Rovnice mělké vody
 
@@ -593,6 +594,7 @@ $${\varrho c\frac{\partial T}{\partial t}=  \nabla\cdot\bigl(D\nabla T\bigr)}$$
 
 \fi
 
+`ww2:problems/difuzni_rce/vedeni_tepla_vypocet.pg`
 
 Tato rovnice je zobecnění rovnice vedení tepla v jedné dimenzi, kterou jsme
 odvodili primitivními prostředky (jenom pomocí parciálních derivací, bez gradientu a divergence) ve tvaru
@@ -756,7 +758,24 @@ Stejné jako předchozí případ, ale $D_x$ a $D_y$ jsou konstanty. Podle pravi
 $$\rho c\frac{\partial T}{\partial t}=D_x\frac{\partial^2 T}{\partial x^2}+D_y\frac{\partial^2 T}{\partial y^2}.$$
 
 
+# Umění identifikace předpokladů z tvaru difuzní rovnice
 
+Jasná kuchařka, jak identifikovat předpoklady vedoucí ke konkrétní formě difuzní rovnice může vypadat násedovně. Obecný tvar v kartézských souřadnicích je
+$$\frac{\partial u}{\partial t} =\sigma +
+\frac{\partial }{\partial x}\left(D_x\frac{\partial u}{\partial x}\right)+
+\frac{\partial }{\partial y}\left(D_y\frac{\partial u}{\partial y}\right)+
+\frac{\partial }{\partial z}\left(D_z\frac{\partial u}{\partial z}\right)
+$$
+a pokud máte před sebou podobnou rovnici, ve které některý člen chybí, znamená to, že tato rovnice v sobě již obsahuje jisté předpoklady. Ty se pokusíme identifikovat. Některý člen může být lehce modifikovaný, například a levé straně mohou figurovat dodatečné multiplikativní konstanty (například v případě rovnice vedení tepla) nebo člen popisující zdroje může být nekonstantní (například při studiu vývoje populace se zahrnutím prostorového rozložení používáme logistický růst $\sigma = ru\left(1-\frac uK\right)$), zajímavé však pro nás jsou podstatné odlišnosti shrnuté v následujících odrážkách.
+
+* Je v rovnici člen $\frac{\partial u}{\partial t}$ s derivací podle času? Pokud ano, je rovnice _nestacionární_ a dokáže popsat časový vývoj děje. Pokud ne, jedná se o _stacionánrní_ rovnici popisující děj po dosažení ustáleného stavu. Stacionární rovnice je jednodušší, ale nedokáže zachytit časový vývoj.
+* Je v rovnici člen bez časové a prostorové derivace? Tj. v našem označení $\sigma$? Pokud ano, popisuje tento člen vydatnost zdrojů nebo spotřebičů a rovnice je schopna zachytit situace, kdy stavová veličina vzniká nebo zaniká. Pokud ne, jedná se o _bezzdrojovou rovnici_. Takové rovnice popisuje stav, kdy se stavová veličina může jenom přemisťovat nebo kumulovat. Bezzdrojová rovnice je jednodušší, ale nedokáže modelovat vznik či zánik stavové veličiny.
+* Jsou přítomny všechny prostorové souřadnice, nebo jenom některé? Počet prostorových souřadnic defiuje _dimenzi problému_, tj. určuje, zda se jedná o úlohu v prostoru, v rovině nebo na přímce.
+* Jsou všechny difuzní koeficienty stejné (například $D$), nebo jsou odlišeny (například indexy $D_x$, $D_y$, $D_z$)? Pokud jsou stejné, jedná se o _izotropní_ materiál a rovnice dokáže popsat pouze materiál mající ve všech směrech stejné vlastnosti. Pokud jsou difuzní koeficienty odlišeny, jedná se o _anizotropní_ nebo _ortotropní_ materiál a dokážeme s ní popsat i materiály mající díky své struktuře jiné vlastnosti v jednotlivých směrech.
+* Jsou difuzní koeficienty uvnitř derivací ve členech typu $$\frac{\partial }{\partial x}\left(D_x\frac{\partial u}{\partial x}\right)$$ nebo jsou difuzní členy zjednodušeny do tvaru $$D_x\frac{\partial ^2 u}{\partial x^2}?$$ Pokud jsou zjednodušeny do tvaru součinu difuzního koeficientu a druhé derivace, znamená to, že rovnice je sice jendodušší, ale rovnice je schopna popsat pouze materiál, který je _homogenní_ a konstitutivní zákon v tomto materiálu je _lineární_. V opačném případě (nehomogenita materiálu, nelinearita materiálu, případně obojí) necháváme difuzní koeficienty uvnitř derivace, tak jak to je v obecném případě. Rovnice je komplikovanější, ale umožňuje práci s obecnějšími materiály.
+
+
+`ww2:problems/difuzni_rce/predpoklady.pg`
 
 
 # Shrnutí, hlavní myšlenky

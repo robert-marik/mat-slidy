@@ -1,3 +1,3 @@
 bash prikaz
 bash prikaz_latex
-scp *.pdf kiwi:html/mtk/mat-slidy/
+scp *.pdf cornus.mendelu.cz:html/mtk/mat-slidy/

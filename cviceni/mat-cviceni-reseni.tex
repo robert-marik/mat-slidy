@@ -47,6 +47,16 @@
 % }
 
 \NewDocumentCommand{\obrazek}{ O{pixabay.com}mO{-10pt}}{}
+\NewDocumentCommand{\Tobrazek}{ O{pixabay.com}mO{-10pt}}{
+\begin{wrapfigure}{R}{0.45\linewidth}
+  \begin{minipage}{1.0\linewidth}\parskip 0 pt
+      \vspace*{-20pt}
+#2
+  \vspace*{-10pt}
+  \vspace*{#3}
+  \end{minipage}
+\end{wrapfigure}
+}
 
 \let\stranka\relax
 \ifpaperversion  \else \let\stranka\newpage\fi

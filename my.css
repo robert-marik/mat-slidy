@@ -124,7 +124,7 @@ a[href*="sagecell"] {
 .tlacitko {display:none;}
 
 
-body {background: #eeeeee; max-width:1000px; margin:auto;}
+body {background: #eeeeee; max-width:1000px; margin:auto; padding:30px;}
 .obtekat {max-width:60%}
 figcaption {font-size: 60%;}
 
@@ -133,3 +133,23 @@ figcaption {font-size: 60%;}
 #TOC ul li ul {display:none;}
 #TOC a {text-decoration:none;}
 
+
+.WWotazka {
+    margin-left:auto;
+    margin-right: 0px;
+    font-weight:bold;
+    color:white;
+    background-color:#006131;
+    padding:3px;
+    padding-left:8px;
+    padding-right:8px;
+    text-decoration:none;
+    margin-top:2px;
+    margin-bottom:2px;
+    display:inline-block;
+}
+
+
+.WWotazka:visited {
+    text-decoration:none;
+}

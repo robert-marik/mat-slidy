@@ -294,6 +294,7 @@ Za druhou hodinu bude změna teploty
 
 > Poznámka (změna veličiny vypočtená pomocí rychlosti). Pokud se veličina $f(t)$ mění v časovém intervalu od $t=a$ do $t=b$ rychlostí $r(t)$, je změna veličiny $f$ za tento časový okamžik rovna $$\Delta f=f(b)-f(a)=\int_a^b r(t)\,\mathrm dt.$$
 
+`ww2:problems/integraly/strom.pg`
 
 # Změna funkce z rychlosti změny (prostorová změna teploty)
 

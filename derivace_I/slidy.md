@@ -65,7 +65,6 @@ Veličina $y$ je *nepřímo úměrná* veličině $x$ jestliže existuje konstan
 * Síla působící na těleso ve vzdálenosti $r$ od planety je dána vztahem $F=\frac{k}{r^2}$, kde $k$ je konstanta úměrnosti (závislá na hmotnosti planety i tělesa). Toto můžeme slovně vyjádřit tak, že síla je nepřímo úměrná druhé mocnině vzdálenosti. Pro $r$ rovno jedné je síla $F$ přímo rovna konstantě $k$. Konstanta úměrnosti $k$ proto udává sílu působící na těleso v jednotkové vzdálenosti od planety.
 
 
-
 # Monotonie funkce
 
 V následující definici jsou nejdůležitější pojmy
@@ -251,6 +250,7 @@ $f'$, $f'(x)$ nebo $\frac{\mathrm df}{\mathrm dx}$. Zápis $\frac{\mathrm df}{\m
 * Podíl, tj. $\frac{f(x+h)-f(x)}h$ je změna veličiny $f$ na intervalu $[x,x+h]$ přepočítaná na jednotku veličiny $x$, tj. v jistém smyslu průměrná rychlost na tomto intervalu. Často označujeme též $\frac{\Delta f}{\Delta x}$.
 * Limita v definici derivace stahuje délku intervalu, na kterém počítáme průměrnou rychlost, k nule. Tím se z průměrné rychlosti stane okamžitá rychlost.
 
+`ww2:problems/derivace_I/definice_derivace.pg`
 
 Interpretace derivace v nematematických disciplínách je okamžitá
 rychlost s jakou veličina $f$ reaguje na změny veličiny $x$. Často
@@ -261,7 +261,7 @@ Obecně, ať již je nezávislou proměnnou čas či jiná veličina, se derivac
 
 Jednotka derivace je stejná, jako jednotka podílu $\frac {f(x)}x$.
 
-
+`ww2:problems/derivace_I/hromada.pg`
 
 > Věta (existence derivace implikuje spojitost). Má-li funkce $f$ derivaci na intervalu $I$, je na tomto intervalu spojitá.
 
@@ -394,7 +394,30 @@ koryto obdélníkového tvaru.
 # Výpočet derivace
 
 * **Nikdy** (nebo alespoň skoro nikdy) nederivujeme pomocí definice, ale používáme vzorce pro derivace základních elementárních funkcí a pro derivace matematických operací s funkcemi.
-* Viz cvičení v prvním týdnu.
+* Viz cvičení v prvním týdnu nebo následující testové otázky.
+
+`ww2:problems/derivace_I/01.pg`
+
+`ww2:problems/derivace_I/02.pg`
+
+`ww2:problems/derivace_I/03.pg`
+
+`ww2:problems/derivace_I/04.pg`
+
+`ww2:problems/derivace_I/05.pg`
+
+`ww2:problems/derivace_I/06.pg`
+
+`ww2:problems/derivace_I/07.pg`
+
+`ww2:problems/derivace_I/08.pg`
+
+`ww2:problems/derivace_I/09.pg`
+
+`ww2:problems/derivace_I/10.pg`
+
+`ww2:problems/derivace_I/derivovani.pg`
+
 
 
 ## Přece jenom jeden příklad

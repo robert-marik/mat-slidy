@@ -1,0 +1,36 @@
+figure {float:right; max-width:50%;}
+.reseni {background-color: white; padding:20px; border-bottom-color:black;border-bottom-style:solid;}
+li {margin-top:20px;}
+
+.reseni:before {content: "Řešení. ";}
+
+.links a{width:20%; display:inline-block;
+  background-color: #0a5028;
+  color: white;
+  padding: 1em 1em;
+  text-decoration: none;
+  text-transform: uppercase;
+	}
+
+
+ ol {
+   list-style: none;
+   counter-reset: item;
+ }
+ol>li {
+   counter-increment: item;
+   margin-bottom: 5px;
+ }
+ ol>li:before {
+   margin-right: 10px;
+   content: counter(item);
+   background:  #0a5028;
+   border-radius: 100%;
+   color: white;
+   width: 1.2em;
+   text-align: center;
+   display: inline-block;
+ }
+
+
+ h1 {clear:none; color:#0a5028;}
