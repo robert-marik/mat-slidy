@@ -30,6 +30,7 @@ $endif$
 	return "0"+kolik;
     };
 
+    
  </script>
 
   $if(quotes)$
@@ -48,14 +49,32 @@ $if(math)$
 $endif$
 $for(header-includes)$
   $header-includes$
-$endfor$
+  $endfor$
+
+  <script>
+
+    	MathJax.Hub.Register.StartupHook("TeX Jax Ready", function () {
+		var TEX = MathJax.InputJax.TeX;
+		var PREFILTER = TEX.prefilterMath;
+		TEX.Augment({
+			prefilterMath: function (math, displaymode, script) {
+				math = "\\displaystyle{" + math;
+				math = math + '}';
+				return PREFILTER.call(TEX, math, displaymode, script);
+			}
+		});
+	});
+
+    </script>
+
+    
+  
 </head>
 <body>
-  <p class="links">
-  <a href="cviceni00.md.html">Začátek</a>
-  <a class="prev-a">Předchozí cvičení</a>
-  <a class="next-a">Další cvičení</a>
-  <a href="cviceni13.md.html">Konec</a>
+ <div class="links"><a href="cviceni00.md.html">Začátek</a><a class="prev-a">Předchozí cvičení</a><a class="next-a">Další cvičení</a><a href="cviceni13.md.html">Konec</a></div>
+
+  <p>
+<a class="PDF"> Stáhnout ve formátu PDF </a>
   </p>
 $for(include-before)$
 $include-before$
@@ -84,12 +103,7 @@ $for(include-after)$
 $include-after$
 $endfor$
 
-  <p class="links">
-  <a href="cviceni00.md.html">Začátek</a>
-  <a class="prev-a">Předchozí cvičení</a>
-  <a class="next-a">Další cvičení</a>
-  <a href="cviceni13.md.html">Konec</a>
-  </p>
+  <div class="links"><a href="cviceni00.md.html">Začátek</a><a class="prev-a">Předchozí cvičení</a><a class="next-a">Další cvičení</a><a href="cviceni13.md.html">Konec</a></div>
   
   <script type="text/javascript">
 
@@ -104,6 +118,7 @@ jQuery(document).ready(function(){
 	var nextlink="cviceni"+nextnum+".md.html";
     var prevlink="cviceni"+prevnum+".md.html";
 
+    jQuery('.PDF').prop('href', "http://user.mendelu.cz/marik/mtk/Cviceni_"+d+".pdf");
     jQuery('.prev-a').prop('href', prevlink);
     jQuery('.next-a').prop('href', nextlink);
 });

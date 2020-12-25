@@ -4,3 +4,7 @@ do
    pandoc -t html --number-sections --toc --css ../my.css --css cviceni.css --template cviceni.html -s $i -o $i.html --mathjax=http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 done
 
+
+sed -i 's/\\(/\\(\\displaystyle /g' *.html
+
+scp cviceni*html  cornus.mendelu.cz:html/mtk/mat-slidy/cviceni/

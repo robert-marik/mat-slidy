@@ -4,27 +4,21 @@ Derivaci budeme chápat jako zobrazení, které funkci přiřadí jinou
 funkci. Proč je tak nesmírně užitečná zjistíme v následujících
 týdnech.
 
-*Základní vzorce.*
+## Základní vzorce.
 
-$( c)'=\frac{\mathrm d}{\mathrm dx}( c)=0$
-
-$( x^n)'=\frac{\mathrm d}{\mathrm dx}( x^n)=n x^{n-1}$
-
-$( e^x)'=\frac{\mathrm d}{\mathrm dx}( e^x)=e^x$
-
-$( \ln x)'=\frac{\mathrm d}{\mathrm dx}( \ln x)=\frac 1x$
-
-$( \sin x)'=\frac{\mathrm d}{\mathrm dx}( \sin x)=\cos x$
-
-$( \cos x)'=\frac{\mathrm d}{\mathrm dx}( \cos x)=-\sin x$
-
-$( \mathop{\mathrm{arctg}} x)'=\frac{\mathrm d}{\mathrm dx}( \mathop{\mathrm{arctg}} x)=\frac 1{1+x^2}$
+1. $( c)'=\frac{\mathrm d}{\mathrm dx}( c)=0$
+1. $( x^n)'=\frac{\mathrm d}{\mathrm dx}( x^n)=n x^{n-1}$
+1. $( e^x)'=\frac{\mathrm d}{\mathrm dx}( e^x)=e^x$
+1. $( \ln x)'=\frac{\mathrm d}{\mathrm dx}( \ln x)=\frac 1x$
+1. $( \sin x)'=\frac{\mathrm d}{\mathrm dx}( \sin x)=\cos x$
+1. $( \cos x)'=\frac{\mathrm d}{\mathrm dx}( \cos x)=-\sin x$
+1. $( \mathop{\mathrm{arctg}} x)'=\frac{\mathrm d}{\mathrm dx}( \mathop{\mathrm{arctg}} x)=\frac 1{1+x^2}$
 
 Zde $c\in\mathbb R$ je konstanta a zbytek jsou vzorce,
 které platí vždy, když je výraz napravo definovaný.
 
 
-*Triky, které se často hodí.*
+## Triky, které se často hodí.
 
 1. $\sqrt x=x^{\frac 12}$
 1. $\sqrt[k] x=x^{\frac 1k}$
@@ -36,15 +30,15 @@ které platí vždy, když je výraz napravo definovaný.
 1. $\sqrt x(x+1)=x^{\frac 32}+x^{\frac 12}$
 1. $\frac  {x^3+4}{x^2}=x+4x^{-2}$
 
-Nechť $f$, $g$ jsou funkce a $c\in\mathbb R$ konstanta. Platí
-$$   \begin{aligned} 
-    {\left[cf\right]}'&=cf',\\
-    {\left[f\pm g\right]}'&=f'\pm g',\\
-    {\left[fg\right]}'&=f'g+fg',\\
-    {\Bigl[\frac{f}{g}\Bigr]}'&=\frac{f'g-g'f}{g^2},\\
-    \bigl[f(g(x))\bigr]'&=\frac{\mathrm df}{\mathrm dg}\frac{\mathrm dg}{\mathrm dx}=f'(g(x))g'(x)
-  \end{aligned}$$
+## Derivace matematických operací mezi funkcemi
 
+Nechť $f$, $g$ jsou funkce a $c\in\mathbb R$ konstanta. Platí
+
+1. ${\left[cf\right]}'=cf'$
+1. ${\left[f\pm g\right]}'=f'\pm g'$
+1. ${\left[fg\right]}'=f'g+fg'$
+1. ${\left[\frac{f}{g}\right]}'=\frac{f'g-g'f}{g^2}$
+1. $\left[f(g(x))\right]'=\frac{\mathrm df}{\mathrm dg}\frac{\mathrm dg}{\mathrm dx}=f'(g(x))g'(x)$
 
 # Výpočet derivace
 
@@ -118,11 +112,11 @@ a určete i fyzikální jednotku a slovní interpretaci této derivace.
 
 _Zpracováno podle Monteith, Unsworth: Principles of Environmental Physics. Tady je opět klasická interpretace derivace jako rychlosti změny. Rychlost změny ale nemusí být jenom klasické chápání rychlosti jako závislosti na čase. Derivace vyjadřuje, jak závislá veličina reaguje na změny nezávislé veličiny. Pro pochopení, co derivace vyjadřuje, hraje velkou roli i jednotka této derivace. Označení je ponecháno z původní literatury, mimo jiné $M$ není hmotnost a $W$ není watt. Vztah je v literatuře znám jako Kleiberův zákon. Vysvětluje se pomocí něj rozdílná délka života různých živočišných druhů._
 
-<div class=reseni> $\frac {\mathrm dM}{\mathrm dW}=nAW^{n-1}$ podle pravidla pro
+<div class=reseni> Derivace je $$\frac {\mathrm dM}{\mathrm dW}=nAW^{n-1}$$ podle pravidla pro
 derivaci konstantního násobku a pro derivaci mocniny. Jednotka je watt
 na kilogram, tj.
-$\left[\frac {\mathrm dM}{\mathrm dW}\right]=\frac{\mathrm W}{\mathrm
-  {kg}}$. Derivace udává rychlost, s jakou se projeví změna hmotnosti na bazálním metabolismu. Je to nárůst bazálního metabolismu způsobený nárůstem hmotnosti a přepočtený na jednotkovou změnu hmotnosti. Přibližně také změna bazálního metabolismu ve wattech při změně hmotnosti o kilogram u velkých živočichů nebo v miliwatech při změně hmotnosti o gram u drobných živočichů. Například u malých ptáčků nemá smysl uvažovat nárůst hmotnosti o kilogram a pro interpretaci raději přejdeme k jednotkám tisíckrát menším.
+$$\left[\frac {\mathrm dM}{\mathrm dW}\right]=\frac{\mathrm W}{\mathrm
+  {kg}}.$$ Derivace udává rychlost, s jakou se projeví změna hmotnosti na bazálním metabolismu. Je to nárůst bazálního metabolismu způsobený nárůstem hmotnosti a přepočtený na jednotkovou změnu hmotnosti. Přibližně také změna bazálního metabolismu ve wattech při změně hmotnosti o kilogram u velkých živočichů nebo v miliwatech při změně hmotnosti o gram u drobných živočichů. Například u malých ptáčků nemá smysl uvažovat nárůst hmotnosti o kilogram a pro interpretaci raději přejdeme k jednotkám tisíckrát menším.
 </div>
 
 
@@ -175,11 +169,12 @@ vysušené oblasti šíří ve tvaru kruhu. V určitém okamžiku je poloměr $5
 metrů a roste rychlostí $1.5$ metrů za minutu. Zapište zadání pomocí
 derivací a určete jak rychle roste plocha zasažená ohněm.
 
-_V tomto příkladě se učíme, že ze znalosti vztahů mezi veličinami můžeme odvodit vztah, mezi rychlostmi změn, tj. do statických vzorců můžeme dodat dynamiku vývoje. V praxi někdy jde příklad tohoto typu obejít úvahou: teď je poloměr 50 metrů, tomu odpovídá jakási plocha, za minutu  bude poloměr 51.5 metru, tomu odpovídá opět jakási plocha a provnáním s plochou původní snadno zjistím přírůstek. To pro nás může být kontrola, že aparát funguje. Pro nás je teď důležité naučit se tento aparát na malých věcech, abyste mohli později dělat věci velké.}
+_V tomto příkladě se učíme, že ze znalosti vztahů mezi veličinami můžeme odvodit vztah, mezi rychlostmi změn, tj. do statických vzorců můžeme dodat dynamiku vývoje. V praxi někdy jde příklad tohoto typu obejít úvahou: teď je poloměr 50 metrů, tomu odpovídá jakási plocha, za minutu  bude poloměr 51.5 metru, tomu odpovídá opět jakási plocha a provnáním s plochou původní snadno zjistím přírůstek. To pro nás může být kontrola, že aparát funguje. Pro nás je teď důležité naučit se tento aparát na malých věcech, abyste mohli později dělat věci velké._
 
-<div class=reseni> Ze zadání: $r=50\,\mathrm{m}$, $\frac {\mathrm dr}{\mathrm dt}=1.5\,\text{m}\,\text{min}^{-1}$. Zajímá nás $\frac{\mathrm dS}{\mathrm dt}$.
+<div class=reseni>
+Ze zadání známe poloměr $r=50\,\mathrm{m}$ a rychlost růstu poloměru $\frac {\mathrm dr}{\mathrm dt}=1.5\,\text{m}\,\text{min}^{-1}$. Zajímá nás rychlost růstu obsahu $\frac{\mathrm dS}{\mathrm dt}$.
 
-Výpočet: Derivováním vztahu $$S=\pi r^2$$ podle $r$ získáváme $$\frac {\mathrm dS}{\mathrm dr}=2\pi r.$$ Derivováním podle $t$ dostaneme
+Derivováním vztahu $$S=\pi r^2$$ podle $r$ získáváme $$\frac {\mathrm dS}{\mathrm dr}=2\pi r.$$ Derivováním podle $t$ dostaneme
 $$\frac{\mathrm dS}{\mathrm dt} =
 \frac{\mathrm dS}{\mathrm dr}
 \frac{\mathrm dr}{\mathrm dt}=

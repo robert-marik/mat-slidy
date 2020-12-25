@@ -199,7 +199,7 @@ _Poznámka: Teplota v Kelvinech (termodynamická teplota) je teplota ve stupníc
 |  600 | 379 |
 |  800 | 366 |
 
-_Zdroj: Cengel, Mass and heat transfer._
+Table: Zdroj: Cengel, Mass and heat transfer.
 
 
 <div class=reseni>

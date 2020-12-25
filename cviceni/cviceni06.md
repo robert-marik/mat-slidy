@@ -114,11 +114,8 @@ Pro výpočet na intervalu od 100 do 800 Kelvinů bychom museli integrovat na in
 |  400 | 393 |
 |  600 | 379 |
 |  800 | 366 |
-|
-_Zdroj: Cengel, Mass and heat transfer._
 
-
-
+Table: Zdroj: Cengel, Mass and heat transfer.
 
 
 
