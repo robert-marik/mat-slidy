@@ -43,7 +43,7 @@ Proudění řídí \textit{Darcyho zákon}, který
     \end{aligned}
     $$
     V souřadnicích, kdy osa $x$ směřuje doprava a $h$ nahoru, se jedná
-    se o parabolu ``otočenou vrcholem směrem doprava''.
+    se o parabolu "otočenou vrcholem směrem doprava".
 \end{enumerate}
 </div>
 
@@ -125,7 +125,7 @@ a numericky
 $$
   \frac{\mathrm dh}{\mathrm dt} = -\frac{10^{-3}}{2}=-5\cdot 10^{-4}\, \mathrm{km}\,\mathrm{s^{-1}}=-0.5 \,\mathrm{m}\,\mathrm{s}^{-1}.
 $$
-Kluzák klesá rychlostí půl metru za sekundu. To odpovídá i ``selskému rozumu'', kdy uvažujeme tak, že jeden stupeň Celsia odpovídá půl kilometru, tj. 500 metrů. Za jednu sekundu klesne teplota podle zadání o $10^{-3}{}^\circ\mathrm{C}$, což je tisícina z jednoho stupně a tomu odpovídá tisícina z 500 metrů, tedy půl metru. Příklady, které si můžeme alespoň orientačně zkontrolovat výpočtem založeným na ``selské logice'' jsou obzvlášť cenné, protože nám dávají jistotu nutnou při použití v aplikacích, kde úvaha na provedení výpočtu bez derivací není reálná. 
+Kluzák klesá rychlostí půl metru za sekundu. To odpovídá i "selskému rozumu", kdy uvažujeme tak, že jeden stupeň Celsia odpovídá půl kilometru, tj. 500 metrů. Za jednu sekundu klesne teplota podle zadání o $10^{-3}{}^\circ\mathrm{C}$, což je tisícina z jednoho stupně a tomu odpovídá tisícina z 500 metrů, tedy půl metru. Příklady, které si můžeme alespoň orientačně zkontrolovat výpočtem založeným na "selské logice" jsou obzvlášť cenné, protože nám dávají jistotu nutnou při použití v aplikacích, kde úvaha na provedení výpočtu bez derivací není reálná. 
 
 </div>
 
@@ -482,7 +482,7 @@ Při kapkové závlaze uvažujme trubici, která má podél své délky otvory a
 \textit{Tento příklad ukazuje na velmi jednoduchém příkladě, že změna v toku souvisí se zdroji. Pokles toku signalizuje, že voda někam mizí, což je v tomto případě žádoucí jev. Ztráta na průtoku je vlastně záporně vzatá divergence. V odvození rovnice kontinuity postupujeme stejně jako v tomto případě, jenom uvažujeme proměnné parametry (derivace místo podílu), trojrozměrný prostor (tři směry místo jednoho) a možnost, že změna toku může kromě zdrojů a spotřebičů být způsobena i akumulací.}
 
 <div class=reseni>
-Na úseku $15\,\mathrm m$ se ``ztratí'' litr vody za minutu a tento litr se spotřebuje ve spotřebiči, tj. ve zdroji se zápornou vydatností. Vydatnost zdrojů je  $$\sigma = -\frac{1\,\mathrm{l}/\mathrm{min}}{15\,\mathrm m}=-0.067\,\mathrm l \,\mathrm{m}^{-1}\,\mathrm{min}^{-1}.$$
+Na úseku $15\,\mathrm m$ se "ztratí" litr vody za minutu a tento litr se spotřebuje ve spotřebiči, tj. ve zdroji se zápornou vydatností. Vydatnost zdrojů je  $$\sigma = -\frac{1\,\mathrm{l}/\mathrm{min}}{15\,\mathrm m}=-0.067\,\mathrm l \,\mathrm{m}^{-1}\,\mathrm{min}^{-1}.$$
 </div>
 
 # Rovnice podzemní vody
@@ -755,7 +755,7 @@ Pokračujeme v úloze s vedením tepla v 1D. S využitím výsledků této úloh
 \begin{enumerate}[a)]
 \item Tok tepla (směrem doprava) je úměrný rychlosti, s jakou klesá
 teplota (směrem doprava).
-\item Rychlost, s jakou v daném bodě ubývá tok tepla jako funkce polohy je úměrná rychlosti, s jakou roste teplota v daném bodě, jako funkce času, tj. teplo které ``ztratíme'' na toku tepla se projeví odpovídajícím zvýšením teploty. 
+\item Rychlost, s jakou v daném bodě ubývá tok tepla jako funkce polohy je úměrná rychlosti, s jakou roste teplota v daném bodě, jako funkce času, tj. teplo které "ztratíme" na toku tepla se projeví odpovídajícím zvýšením teploty. 
 \end{enumerate}
 
 Poté oba zákony spojte do jednoho vztahu a odvodíte rovnici vedení tepla v 1D.
@@ -770,7 +770,7 @@ Ukažte, že pokud bude tyč homogenní, po nastolení rovnováhy bude teplota l
     q=-k_1\frac {\partial T}{\partial x}
   $$
   kde $k_1$ je konstanta úměrnosti a $-\frac {\partial T}{\partial x}$ udává, jak klesá teplota směrem doprava.
-\item To, že rychlost, s jakou v daném bodě ubývá tok tepla jako funkce polohy je úměrná rychlosti, s jakou roste teplota v daném bodě, jako funkce času, tj. teplo které ``ztratíme'' na toku tepla se projeví zvýšením teploty, vyjádříme rovnicí
+\item To, že rychlost, s jakou v daném bodě ubývá tok tepla jako funkce polohy je úměrná rychlosti, s jakou roste teplota v daném bodě, jako funkce času, tj. teplo které "ztratíme" na toku tepla se projeví zvýšením teploty, vyjádříme rovnicí
   $$
 -\frac{\partial q}{\partial x} = k_2    \frac{\partial T}{\partial t},
   $$
