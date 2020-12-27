@@ -1,6 +1,8 @@
 % Lokální extrémy
 
 
+> * Naučíme se hledat lokální extrémy funkce
+
 # Lokální extrémy bez slovního zadání
 
 V úlohách z praxe často

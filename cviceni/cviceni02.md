@@ -1,5 +1,9 @@
 % Využití derivací v matematických modelech
 
+>   * Procvičíme si interpretaci derivace jako rychlosti změny.
+>   * Naučíme se sestavovat matematické modely situací, ve kterých se veličina mění nekonstantní rychlostí
+>   * Prerekvizitou je schopnost chápat derivaci jako rychlost změny a umět matemtaicky vyjádřit úměrnost mezi veličinami.
+
 
 ![pixabay.com](room.jpg)
 
@@ -84,14 +88,17 @@ _Zpracováno podle Cengel: Mass and heat transfer._
 
 <div class=reseni>
 
-1.  $\frac{\partial T}{\partial x}(x=L)=0$
-1.  $T(x=0)=23$
-1.  $-k\frac{\partial T}{\partial x}(x=L)=-Q$, kde $Q$ je teplo za jednotku času dodané ze Slunce. Jedná se o výkon Slunce dopadající na stěnu vynásobený koeficientem absorbce, protože část tepelného výkonu se odráží. Záporné znaménko je proto, že teplo teče do stěny, tj. proti směru osy $x$.
-1.  $-k\frac{\partial T}{\partial x}(x=L)=h(T(x=L)-T_{\text{okolí}})$, kde $h$ je koeficient přestupu tepla.
-1.  $-k\frac{\partial T}{\partial x}(x=0)=h(T_{\text{místnost}}-T(x=0))$, kde $h$ je koeficient přestupu tepla.
+Je-li podmínka na teplotu, figuruje v matematické formulaci $T$ vypočtená v bodě $x=0$ nebo $x=L$ podle toho, jedná-li se o vnitřní nebo vnější část stěny. 
+$T$ je funkce polohy, tj. $T=T(x).$ Je-li podmínka na tok, figuruje v matematické formulaci tok ve tvaru $-k\frac{\partial T}{\partial x}$, opět vypočtená v jednom z krajních bodů.
+
+1.  Nulový tok pro $x=L$ znamená $-k\frac{\partial T}{\partial x}(L)=0$, což je ekvivalentní $\frac{\partial T}{\partial x}(L)=0.$
+1.  Teplota 23 stupňů pro $x=0$ znamená $T(0)=23$
+1.  $-k\frac{\partial T}{\partial x}(L)=-Q$, kde $Q$ je teplo za jednotku času dodané ze Slunce. Jedná se o výkon Slunce dopadající na stěnu vynásobený koeficientem absorbce, protože část tepelného výkonu se odráží. Záporné znaménko je proto, že teplo teče do stěny, tj. proti směru osy $x$.
+1.  $-k\frac{\partial T}{\partial x}(L)=h(T(L)-T_{\text{okolí}})$, kde $h$ je koeficient přestupu tepla.
+1.  $-k\frac{\partial T}{\partial x}(0)=h(T_{\text{místnost}}-T(0))$, kde $h$ je koeficient přestupu tepla.
 
 
-Všimněte si, že poslední dvě podmínky se liší znaménkem u $T$. To proto, že v jednom případě je kladný směr toku tepla do materiálu a jednou z materiálu. Pokud chceme mít popis jednotný, nebo nezávislý na zvolené souřadné soustavě, formulujeme podmínky pro tok tepla ven z materiálu. Tento tok získáme tak, že tok tepla vynásobíme skalárně s jednotkovým vektorem směřujícím ven z materiálu kolmo na jeho povrch. V tomto případě by pro tok ze stěny do místnosti bylo $k\frac{\partial T}{\partial x}(x=0)=h(T(x=0)-T_{\text{místnost}})$. Tento tok by byl záporný, protože ve skutečnosti teplo uniká z místnosti stěnou ven.
+Všimněte si, že poslední dvě podmínky se liší znaménkem u $T$. To proto, že v jednom případě je kladný směr toku tepla do materiálu a jednou z materiálu. Pokud chceme mít popis jednotný, nebo nezávislý na zvolené souřadné soustavě, formulujeme podmínky pro tok tepla ven z materiálu. Tento tok získáme tak, že tok tepla vynásobíme skalárně s jednotkovým vektorem směřujícím ven z materiálu kolmo na jeho povrch. V tomto případě by pro tok ze stěny do místnosti bylo $k\frac{\partial T}{\partial x}(0)=h(T(0)-T_{\text{místnost}})$. Tento tok by byl záporný, protože ve skutečnosti teplo uniká z místnosti stěnou ven.
 
   </div>
 

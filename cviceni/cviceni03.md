@@ -1,6 +1,10 @@
 % Výpočet derivací, lineární aproximace
 
 
+> * Naučíme se derivovat součin a podíl funkcí. Jedná se o použití vzorců, nejsou nutné předhozí znalosti, je nutné mít pouze k dispozici vzorce.
+> * Naučíme se používat vzorec pro lineární aproximaci funkce. Naučíme se nahrazovat komplikované funkční závislosti závislostmí jednoduššími.
+> * Naučíme se další triky získáné díky lineární a polynomiální aproximaci: numerické derivování a numerické řešení rovnic.
+
 # Výpočet derivace součinu a podílu
 
 Určete derivace následujících funkcí, kde $a,b,\mu\in\mathbb{R}$.
@@ -225,12 +229,39 @@ Napište iterační vzorec pro řešení této rovnice Newtonovou metodou a prov
 
 <div class=reseni>
 
-Newtonova metoda: $f(x)=x^4-8x+6$, $f'(x)=4x^3-8$, $$x_{n+1}=x_n-\frac{x_n^4-8x_n+6}{4x_n^3-8}$$
+Newtonova metoda: Využitím funkčního předpisu $f(x)=x^4-8x+6$ a derivace $f'(x)=4x^3-8$ dostáváme iterační vzorec $$x_{n+1}=x_n-\frac{x_n^4-8x_n+6}{4x_n^3-8},$$
+který konverguje velmi rychle.
 
-$x_0=1$, $x_1=0.75$, $x_2=0.800123762376238$, $x_3=0.801613150991155$, $x_4=0.801614587354561$.
+|Iterace|Hodnota|
+|:----|:----|
+$x_0$|$1$
+$x_1$|$0.75$
+$x_2$|$0.800123762376238$
+$x_3$|$0.801613150991155$
+$x_4$|$0.801614587354561$
+$x_5$|$0.801614587355901$
+$x_6$|$0.801614587355901$
 
-Ad hoc iterace: $$x_{n+1}=\frac{x_n^4+6}{8}$$
-$x_0=1$, $x_1=0.875000000000000$, $x_2=0.823272705078125$, $x_3=0.807422868167514$, $x_4=0.803126865733812$, $x_5=0.802005182967586$, $x_6=0.801715260030858$
+[Sage.](https://sagecell.sagemath.org/?z=eJyrsDXk5UrLL1LIVMjMUyhKzEtP1TA00LTi5VIAggrbPI0KXY2KOBNdC60KbTNNfQ0TrYo4Y10LTU2IioKizLwSBY0KTQC3JxJK&lang=sage&interacts=eJyLjgUAARUAuQ==)
+
+Ad hoc iterace: Rovnici převedeme na tvar
+$$x=\frac{x^4+6}{8}$$
+a zkusíme iterace
+$$x_{n+1}=\frac{x_n^4+6}{8}.$$
+Konergenci pozorujeme, ale je pomalá.
+
+|Iterace|Hodnota|
+|:----|:----|
+$x_0$|$1$
+$x_1$|$0.875000000000000$
+$x_2$|$0.823272705078125$
+$x_3$|$0.807422868167514$
+$x_4$|$0.803126865733812$
+$x_5$|$0.802005182967586$
+$x_6$|$0.801715260030858$
+
+[Sage.](https://sagecell.sagemath.org/?z=eJyrsDXk5UrLL1LIVMjMUyhKzEtP1TA00LTi5VIAggrbPA2NijgTbTNNfQ0LTU2IaEFRZl6JgkaFJgDh9g8K&lang=sage&interacts=eJyLjgUAARUAuQ==)
+
 
 </div>
 

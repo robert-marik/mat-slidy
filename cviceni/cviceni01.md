@@ -4,6 +4,11 @@ Derivaci budeme chápat jako zobrazení, které funkci přiřadí jinou
 funkci. Proč je tak nesmírně užitečná zjistíme v následujících
 týdnech.
 
+>  * Naučíte se derivovat jednoduché funkce (mocninné funkce, další základní elementární funkce a složené funkce). Nejsou nutné žádné přdchozí znalosti, budete potřebovat pouze vzorce pro derivování a spoustu cviku.
+>  * Naučíte se interpretovat derivaci jako rychlost růstu v různých kontextech, kdy veličina závisí na čase, příapdně na jiné veličině.
+>  * Naučíte se ze známého vzorce mezi dvěma veličinami odvodit vzorec dávající do souvislosti rychlosti změn těchto veličin.
+
+
 ## Základní vzorce.
 
 1. $( c)'=\frac{\mathrm d}{\mathrm dx}( c)=0$

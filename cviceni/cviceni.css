@@ -77,3 +77,8 @@ ol>li {
      color:white;
  }
  
+ blockquote {
+     width:100%;
+     background-color:#0a5028;
+     color:white;
+}
