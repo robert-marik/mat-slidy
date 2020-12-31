@@ -185,6 +185,9 @@ derivací a určete jak rychle roste plocha zasažená ohněm.
 _V tomto příkladě se učíme, že ze znalosti vztahů mezi veličinami můžeme odvodit vztah, mezi rychlostmi změn, tj. do statických vzorců můžeme dodat dynamiku vývoje. V praxi někdy jde příklad tohoto typu obejít úvahou: teď je poloměr 50 metrů, tomu odpovídá jakási plocha, za minutu  bude poloměr 51.5 metru, tomu odpovídá opět jakási plocha a provnáním s plochou původní snadno zjistím přírůstek. To pro nás může být kontrola, že aparát funguje. Pro nás je teď důležité naučit se tento aparát na malých věcech, abyste mohli později dělat věci velké._
 
 <div class=reseni>
+Je zadán vztah mezi dvěma veličinami a pro jednu z těchto veličin známe její hodnotu derivaci podle času. Máme za úkol určit derivaci podle času druhé z veličin.
+
+
 Ze zadání známe poloměr $r=50\,\mathrm{m}$ a rychlost růstu poloměru $\frac {\mathrm dr}{\mathrm dt}=1.5\,\text{m}\,\text{min}^{-1}$. Zajímá nás rychlost růstu obsahu $\frac{\mathrm dS}{\mathrm dt}$.
 
 Derivováním vztahu $$S=\pi r^2$$ podle $r$ získáváme $$\frac {\mathrm dS}{\mathrm dr}=2\pi r.$$ Derivováním podle $t$ dostaneme
@@ -198,13 +201,15 @@ $$\frac{\mathrm dS}{\mathrm dt} = 2\pi \times 50 \times 1.5 \approx 471 \,\mathr
 
 
 
-![pixabay.com](kopec_soli.jpg)
+![Že je u koule objem úměrný třetí mocnině poloměru vidíme přímo ze vzorce. Nejinak to je u těles, které si zachovávají proporce, tj. vzniknou zvětšením či zmenšením z jediného vzoru. Typickým příkladem je kromě koule i kužel s pevně zadaným vrcholovým úhlem. Tento tvar zachovávají volně sypané materiály. Obrázek: pixabay.com](kopec_soli.jpg)
 
 # Sůl nad zlato
 
 V pohádce _Sůl nad zlato_ sype Maruška z bezedné slánky sůl na hromadu soli ve tvaru kužele, který roste tak, že objem je v každém okamžiku svázán s výškou vzorcem $$V=\frac 14h^3.$$ Výška je $0.5$ metru a vydatnost solničky $10$ litrů (tj. $0.01$ krychlových metrů) soli za minutu. Určete, jak rychle roste hromada soli do výšky.
 
 <div class=reseni>
+
+Je zadán vztah mezi dvěma veličinami a pro jednu z těchto veličin známe její hodnotu derivaci podle času. Máme za úkol určit derivaci podle času druhé z veličin.
 
 Podle zadání je $\frac{\mathrm dV}{\mathrm dt}=0.01$ krychlových metrů za minutu, $h=0.5$ metru a chceme znát $\frac{\mathrm dh}{\mathrm dt}$. Derivováním dostáváme
 $$\frac{\mathrm dV}{\mathrm dt} = \frac{\mathrm dV}{\mathrm dh} \frac{\mathrm dh}{\mathrm dt} = \frac 34 h^2 \frac{\mathrm dh}{\mathrm dt}.$$
@@ -255,8 +260,3 @@ $$
 a výsledek je stejný jako v předchozím postupu.
 
 </div>
-
-
-
-
-

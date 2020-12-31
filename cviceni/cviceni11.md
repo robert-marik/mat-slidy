@@ -1,6 +1,6 @@
 % Parciální derivace, rovnice vedení tepla
 
-![pixabay.com](tigr.jpg)
+![Difuzní rovnice dokáže například objasnit i modelování chemických rekací s přihlédnutím k prostorovému rozložení reagujících látek a jejich koncentrací. Jednou z aplikací je vysvětlení toho, proč jednotný mechanismus tvorby vzorů na srsti savců vede jednou k pruhům a jednou ke skvrnám na srsti. Dokážeme tak například lépe pochopit proces, jakým se geny přepisují do viditelných znaků. Podrobněji Murray: Mathematical biology nebo How the leopard gets its spots. Obrázek: pixabay.com](tigr.jpg)
 
 # Difuzní rovnice ve 2D
 
@@ -10,7 +10,6 @@ ve dvourozměrném případě do kartézských souřadnic za předpokladu, že s
 
 Okomentujte, jak předpoklady o vlastnostech materiálu a o modelovaném procesu (stacionárnost, existence či neexistence zdrojů, homogenita materiálu, stejné chování v různých směrech apod.) ovlivní výslednou rovnici.
 
-_Poznámka: Difuzní rovnice dokáže například objasnit i to, proč jednotný mechanismus tvorby vzorů na srsti savců vede jednou k pruhům a jednou ke skvrnám na srsti. Dokážeme tak například lépe pochopit proces, jakým se geny přepisují do viditelných znaků. Podrobněji Murray: Mathematical biology nebo How the leopard gets its spots._
 
 <div class=reseni>
 
@@ -21,10 +20,11 @@ $$\frac{\partial u}{\partial t}
 +
 \frac{\partial }{\partial y}\left(D_y \frac{\partial u}{\partial y}\right)
 $$
+Toto je nejobecnější tvar a bohužel také nejsložitější. Kdykoliv to jde, zjednodušujeme co se dá. To se dá ovšem udělat pouze v případě některých speciálních vlastností studovaného systému.
 
-* Obecný tvar má schopnosti zachytit i nestacionární děj, děj probíjající v různé časové okamžiky jinou intezitou. Pokud nás zajímá jenom stacionární stav kdy je hodnota stavové veličiny konstantní, můžeme rovnici zjednodušit předpokladem $$\frac{\partial u}{\partial t}=0.$$
+* Obecný tvar má schopnosti zachytit i nestacionární děj, děj probíhající v různé časové okamžiky jinou intenzitou. Pokud nás zajímá jenom stacionární stav kdy je hodnota stavové veličiny konstantní, můžeme rovnici zjednodušit předpokladem $$\frac{\partial u}{\partial t}=0.$$
 * Obecný tvar má díky přitomnosti zdrojů schopnosti zachytit i proces vzniku či zániku stavové veličiny. Pokud k tomuto nedochází, je rovnice bezzdrojová a můžeme ji zjednodušit předpokladem $$\sigma=0.$$
-* Obecný tvar má díky přitomnosti dvou různých difuzních koeficientů $D_x$ a $D_y$ schopnosti zachytit chování materiálu, který ma odlišné vlastnosti v odlišných směrech, anizotropii či ortotropii. Vždy však toto není potřeba. Někdy je materiál izotropní, tj. má ve všech směrech stejné vlastnosti. V tomto případě stačí uvažovat jedinou difuzní konstantu $$D=D_x=D_y,$$ což rovnici zjednodušuje.
+* Obecný tvar má díky přitomnosti dvou různých difuzních koeficientů $D_x$ a $D_y$ schopnosti zachytit chování materiálu, který má odlišné vlastnosti v odlišných směrech, anizotropii či ortotropii. Vždy však toto není potřeba. Někdy je materiál izotropní, tj. má ve všech směrech stejné vlastnosti. V tomto případě stačí uvažovat jedinou difuzní konstantu $$D=D_x=D_y,$$ což rovnici zjednodušuje.
 * Pro konstantní difuzní koeficient je možno difuzní členy zjednodušit pomocí pravidla pro derivaci konstantního násobku, tj.
 $$
 \frac{\partial }{\partial x}\left(D_x \frac{\partial u}{\partial x}\right)
@@ -68,9 +68,9 @@ všechny funkce splňující
 $$\frac{\partial}{\partial x} \left(k \frac{\partial T}{\partial x}\right)=0$$
 pro $T=T(x)$ a $k=a+bT$, $a,b\in \mathbb R$.
 
-_Poznámka: Výpočet necháme kvalitativní abychom viděli, že {\bfseries teplotní profil ve stěně není lineární}. Pro užitečnost v inženýrských aplikacích je vhodné přidat okrajové podmínky a vyjádřit řešení pomocí parametrů v těchto okrajových podmínkách. To jsou typicky teploty na jednotlivých stranách stěny._
+_Poznámka: Výpočet necháme kvalitativní abychom viděli, že teplotní profil ve stěně není lineární. Pro užitečnost v inženýrských aplikacích je vhodné přidat okrajové podmínky a vyjádřit řešení pomocí parametrů v těchto okrajových podmínkách. To jsou typicky teploty na jednotlivých stranách stěny._
 
-\textit{Poznámka: Na stejnou úlohu se stejnou rovnicí a stejným řešením, pouze pro $a=0$, vede například proudění {\bfseries podzemní vody ve zvodni s volnou hladinou} (narozdíl od předchozího příkladu chybí horní nepropustná vrstva).}
+_Poznámka: Na stejnou úlohu se stejnou rovnicí a stejným řešením, pouze pro $a=0$, vede například proudění podzemní vody ve zvodni s volnou hladinou  na rozdíl od předchozího příkladu chybí horní nepropustná vrstva)._
 
 <div class=reseni>
 Po zintegrování dostáváme
@@ -92,7 +92,7 @@ krajích stěny.
 
 # Stacionární vedení tepla v žebru chladiče
 
-Vyjímečně jsme nuceni do rovnice vedení tepla zahrnout i zdroje. 
+Výjimečně jsme nuceni do rovnice vedení tepla zahrnout i zdroje. 
 Modelujte vedení tepla v žebru chladiče. Úlohu uvažujte jako
 jednorozměrnou, materiál homogenní izotropní s konstantní tepelnou
 vodivostí. Kolem chladiče proudí vzduch a teplotě $T_0$ a chladič

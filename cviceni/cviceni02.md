@@ -102,7 +102,7 @@ Všimněte si, že poslední dvě podmínky se liší znaménkem u $T$. To proto
 
   </div>
 
-![pixabay.com](mladata.jpg)
+![Model popsaný v této úloze se často používá například při studiu růstu ryb. Obrázek: pixabay.com, PublicDomainImages](pstruh.jpg)
 
 # Model růstu úměrného velikosti chybějícího množství
 

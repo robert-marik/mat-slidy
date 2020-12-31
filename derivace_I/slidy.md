@@ -250,7 +250,11 @@ $f'$, $f'(x)$ nebo $\frac{\mathrm df}{\mathrm dx}$. Zápis $\frac{\mathrm df}{\m
 * Podíl, tj. $\frac{f(x+h)-f(x)}h$ je změna veličiny $f$ na intervalu $[x,x+h]$ přepočítaná na jednotku veličiny $x$, tj. v jistém smyslu průměrná rychlost na tomto intervalu. Často označujeme též $\frac{\Delta f}{\Delta x}$.
 * Limita v definici derivace stahuje délku intervalu, na kterém počítáme průměrnou rychlost, k nule. Tím se z průměrné rychlosti stane okamžitá rychlost.
 
-`ww2:problems/derivace_I/definice_derivace.pg`
+\iffalse
+
+`ww2:problems/derivace_pouziti/definice_derivace.pg`
+
+\fi
 
 Interpretace derivace v nematematických disciplínách je okamžitá
 rychlost s jakou veličina $f$ reaguje na změny veličiny $x$. Často
@@ -261,7 +265,11 @@ Obecně, ať již je nezávislou proměnnou čas či jiná veličina, se derivac
 
 Jednotka derivace je stejná, jako jednotka podílu $\frac {f(x)}x$.
 
-`ww2:problems/derivace_I/hromada.pg`
+\iffalse
+
+`ww2:problems/derivace_pouziti/hromada.pg`
+
+\fi
 
 > Věta (existence derivace implikuje spojitost). Má-li funkce $f$ derivaci na intervalu $I$, je na tomto intervalu spojitá.
 
@@ -394,31 +402,37 @@ koryto obdélníkového tvaru.
 # Výpočet derivace
 
 * **Nikdy** (nebo alespoň skoro nikdy) nederivujeme pomocí definice, ale používáme vzorce pro derivace základních elementárních funkcí a pro derivace matematických operací s funkcemi.
-* Viz cvičení v prvním týdnu nebo následující testové otázky.
-
-`ww2:problems/derivace_I/01.pg`
-
-`ww2:problems/derivace_I/02.pg`
-
-`ww2:problems/derivace_I/03.pg`
-
-`ww2:problems/derivace_I/04.pg`
-
-`ww2:problems/derivace_I/05.pg`
-
-`ww2:problems/derivace_I/06.pg`
-
-`ww2:problems/derivace_I/07.pg`
-
-`ww2:problems/derivace_I/08.pg`
-
-`ww2:problems/derivace_I/09.pg`
-
-`ww2:problems/derivace_I/10.pg`
-
-`ww2:problems/derivace_I/derivovani.pg`
+* Viz cvičení v prvním týdnu.
 
 
+\iffalse
+
+Derivování si také můžete procvičit v následujících cvičeních.
+
+`ww2:problems/derivace_vypocet/01.pg`
+
+`ww2:problems/derivace_vypocet/02.pg`
+
+`ww2:problems/derivace_vypocet/03.pg`
+
+`ww2:problems/derivace_vypocet/04.pg`
+
+`ww2:problems/derivace_vypocet/05.pg`
+
+`ww2:problems/derivace_vypocet/06.pg`
+
+`ww2:problems/derivace_vypocet/07.pg`
+
+`ww2:problems/derivace_vypocet/08.pg`
+
+`ww2:problems/derivace_vypocet/09.pg`
+
+`ww2:problems/derivace_vypocet/10.pg`
+
+`ww2:problems/derivace_vypocet/derivovani_slozena_funkce.pg`
+
+
+\fi
 
 ## Přece jenom jeden příklad
 
