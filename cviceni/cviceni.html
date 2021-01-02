@@ -14,7 +14,9 @@ $if(keywords)$
   <meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$" />
 $endif$
   <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
-  <style type="text/css">code{white-space: pre;} body {  font-family: "Open Sans", Sans-Serif;}</style>
+  <style type="text/css">code{white-space: pre;} body {  font-family: "Open Sans", Sans-Serif;}
+h1,h2 {clear:both;}
+  </style>
 
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -54,7 +56,11 @@ $for(header-includes)$
   
 </head>
 <body>
- <div class="links"><a href="cviceni00.md.html">Začátek</a><a class="prev-a">Předchozí cvičení</a><a class="next-a">Další cvičení</a><a href="cviceni13.md.html">Konec</a></div>
+
+<!-- menu -->
+
+  
+<!-- <div class="links"><a href="cviceni00.md.html">Začátek</a><a class="prev-a">Předchozí cvičení</a><a class="next-a">Další cvičení</a><a href="cviceni13.md.html">Konec</a></div>  -->
 
   <p>
 <a class="PDF"> Stáhnout ve formátu PDF </a>
@@ -76,36 +82,48 @@ $if(date)$
 $endif$
 </div>
 $endif$
+
+<!-- YTB -->
+
 $if(toc)$
 <div id="$idprefix$TOC">
 $toc$
 </div>
+
+<div style="clear:both;"></div>
+
 $endif$
 $body$
 $for(include-after)$
 $include-after$
 $endfor$
 
-  <div class="links"><a href="cviceni00.md.html">Začátek</a><a class="prev-a">Předchozí cvičení</a><a class="next-a">Další cvičení</a><a href="cviceni13.md.html">Konec</a></div>
-  
+
+<!-- menu -->
+
+
+<!-- <div class="links"><a href="cviceni00.md.html">Začátek</a><a class="prev-a">Předchozí cvičení</a><a class="next-a">Další cvičení</a><a href="cviceni13.md.html">Konec</a></div>
+  -->
+
   <script type="text/javascript">
 
 jQuery(document).ready(function(){
     var current_path = window.location.pathname.split('/').pop();
 	var d=Number(current_path[7]+current_path[8]);
-	var next=d+1;
-	var prev=d-1;
+	//var next=d+1;
+	//var prev=d-1;
 
-        nextnum=cislo(next);
-        prevnum=cislo(prev);
-	var nextlink="cviceni"+nextnum+".md.html";
-    var prevlink="cviceni"+prevnum+".md.html";
+        //nextnum=cislo(next);
+        //prevnum=cislo(prev);
+	//var nextlink="cviceni"+nextnum+".md.html";
+        //var prevlink="cviceni"+prevnum+".md.html";
 
     jQuery('.PDF').prop('href', "http://user.mendelu.cz/marik/mtk/Cviceni_"+d+".pdf");
-    jQuery('.prev-a').prop('href', prevlink);
-    jQuery('.next-a').prop('href', nextlink);
+    //jQuery('.prev-a').prop('href', prevlink);
+    //jQuery('.next-a').prop('href', nextlink);
 });
   </script>
   
+
 </body>
 </html>

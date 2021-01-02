@@ -160,8 +160,8 @@ figcaption {font-size: 60%;}
     color:white;
 			 display:block;    }
 
-.menu {display:inline-block; width:7.1%;text-align:center; color:white; text-decoration:none; border-style:solid; border-color:#eeeeee;box-sizing:border-box;     background-color:#006131; border-width:1px;}
+.menu {display:inline-block; width:7.14%;text-align:center; color:white; text-decoration:none; border-style:solid; border-color:#eeeeee;box-sizing:border-box;     background-color:#006131; border-width:1px;}
 
-.ACTIVE {color:white; background-color:#e62d3f}
+.ACTIVE {color:white; background-color:#E41F1F;}
 
 blockquote {margin-left:0px; margin-right:0px;box-sizing:border-box; }

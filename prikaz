@@ -8,15 +8,18 @@ then
    kde=$all
    echo '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> 
 <html> <head> 
-<style>
-body {max-width:800px; margin:auto;}
-</style>
-
 <meta content="text/html; charset=utf-8" http-equiv="content-type">
-<link rel="stylesheet" type="text/css" href="styl.css" ></head><html>' > index.html
-   echo '<h1>Prezentace z přednášek z Matematiky MTK v zimním semestru 2020</h1><p>Tato stránka obsahuje prezentace z předmětu <a href="http://user.mendelu.cz/marik/mtk/">Matematika</a>. Každá přednáška je v několika formátech pro pohodlí a větší možnost volby uživatele. Pro tisk je nejlepší PDF (neobsahuje obrázky a motivační slidy), pro prohlížení na tabletu html, pro transformaci do široké škály výstupů (programem Pandoc) formát markdown. Můžete použít i formát kdy jsou <a href="http://user.mendelu.cz/marik/mtk/mat-slidy/mat_slidy_all.pdf">všechny přednášky v jednom PDF</a></p>' >> index.html
+<link rel="stylesheet" type="text/css" href="styl.css" >
+ <style type="text/css">code{white-space: pre;} body {  font-family: "Open Sans", Sans-Serif;}</style>
+<link rel="stylesheet" href="my.css" type="text/css" />
+<style>
+h1,h2 {text-align:center;}
+</style>
+</head><html>' > index.html
+echo ' <div class='menu-obalka'><a class="menu ACTIVE" href="http://user.mendelu.cz/marik/mtk/mat-slidy/">0</a><a class="menu  " href="derivace_I">1</a><a class="menu " href="derivace_II">2</a><a class="menu  " href="derivace_III">3</a><a class="menu  " href="integraly">4</a><a class="menu  " href="integraly2">5</a><a class="menu  " href="ode">6</a><a class="menu  " href="matice">7</a><a class="menu  " href="inverzni_matice">8</a><a class="menu  " href="soustavy">9</a><a class="menu  " href="vektorove_pole">10</a><a class="menu  " href="dvojny_integral">11</a><a class="menu  " href="numerika">12</a><a class="menu  " href="shrnuti">13</a> </div> ' >> index.html
+   echo '<h1>Prezentace z přednášek z Matematiky MTK</h1><h2>Zimní semestr 2020/2021</h1><p>Tato stránka obsahuje prezentace z předmětu <a href="http://user.mendelu.cz/marik/mtk/">Matematika</a>. Každá přednáška je v několika formátech pro pohodlí a větší možnost volby uživatele. Pro tisk je nejlepší PDF (neobsahuje obrázky a motivační slidy), pro prohlížení na tabletu html, pro transformaci do široké škály výstupů (programem Pandoc) formát markdown. Můžete použít i variantu, kdy jsou <a href="http://user.mendelu.cz/marik/mtk/mat-slidy/mat_slidy_all.pdf">všechny přednášky v jednom PDF</a></p>' >> index.html
    echo '<div class="CSSTableGenerator"><table>'>>index.html
-   echo '<tr><td>Název</td><td>Html</td><td>Tisk v PDF</td><td>markdown</td></tr>'>>index.html
+   echo '<tr><td>Název</td><td>Html</td><td>PDF</td><td>Markdown</td></tr>'>>index.html
 
    for j in $kde
    do
@@ -29,6 +32,7 @@ body {max-width:800px; margin:auto;}
    rsync -e "ssh -o StrictHostKeyChecking=no" -av index.html cornus.mendelu.cz:html/mtk/mat-slidy/
 fi  
 
+cislo=1
 for i in $kde
 do
   echo $i
@@ -53,6 +57,19 @@ do
 
   sed -i "s/<!-- menu -->/ $menu /" index.html
 
+  echo $cislo
+  if (( $cislo < 13 ));
+  then 
+    ytbid=`cat ../prednasky.txt | head -n$cislo | tail -n1`
+    echo $ytbid
+
+    substituce="<div style='background-color: #E41F1F; display:inline-div;max-width:300px; color:lightgray; text-align:center; font-weight:bold; float:left; margin-right:10px; border-color:#E41F1F; border-style:solid;' ><a href='https:\/\/youtu.be\/$ytbid' style='text-decoration:none; color:lightgray;'><img src='https:\/\/img.youtube.com\/vi\/$ytbid\/mqdefault.jpg' style='width:100%; max-width:100%;'>Youtube přednáška<\/a><\/div>"
+
+    sed -i "s/<!-- YTB -->/$substituce/" index.html
+  fi
+  
+  cislo=$(($cislo+1))
+ 
   cd ..
 
 
@@ -62,6 +79,7 @@ done
 
 
 rsync -e "ssh -o StrictHostKeyChecking=no" -av my.css cornus.mendelu.cz:html/mt/mat-slidy
+
 #rsync -e "ssh -o StrictHostKeyChecking=no"  -av facebox cornus.mendelu.cz:html/mt/mat-slidy
 #rsync -e "ssh -o StrictHostKeyChecking=no"  -av styles cornus.mendelu.cz:html/mt/mat-slidy
 #rsync -e "ssh -o StrictHostKeyChecking=no"  -av scripts cornus.mendelu.cz:html/mt/mat-slidy

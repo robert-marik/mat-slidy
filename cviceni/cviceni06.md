@@ -2,7 +2,9 @@
 
 
 
-# Výpočet integrálu substitucí Najděte následující integrály integrováním substituční metodou.
+# Výpočet integrálu substitucí
+
+Najděte následující integrály integrováním substituční metodou.
 
 <!-- 
 % \item \priklad (x+1)\cos x.
