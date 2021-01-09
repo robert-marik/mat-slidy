@@ -109,6 +109,8 @@ Další informace: [Wikipedia, Path integration](https://en.wikipedia.org/wiki/P
 
 -->
 
+<!-- YTB qbnZ4wDYYDQ -->
+
 # Lineární kombinace
 
 > Definice (lineární kombinace).
@@ -292,6 +294,7 @@ znát rozložení populace po $k$ letech, situace se komplikuje. Dostali
 bychom rekurentní vzorec, který je nutno stále opakovat. Pro
 odstranění tohoto nepohodlí se zavádí pojem matice, viz níže.
 
+<!-- YTB pIq92-akbaI -->
    
 # Matice a jejich lineární kombinace
 
@@ -808,6 +811,8 @@ hydrodynamických a disperzních jevů, kap. 3.3.
 
 
 # Rozložení teploty na tepelně vodivé desce
+
+<!-- YTB YJEydfa_mHI -->
 
 Na závěr si ukážeme, že pomocí lineární algebry a maticového počtu je možno popsat funkci dvou proměnných popisující rozložení teploty na tepelně vodivé desce. Postup je takový, že budeme sledovat teplotu v referenčních bodech. Požadavek, že teploty v okolních bodech mají odpovídat našim představám o vedení tepla vyjádříme kvantitavivně pomocí vhodné matice.
 

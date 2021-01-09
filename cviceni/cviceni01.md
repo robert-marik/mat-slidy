@@ -103,6 +103,7 @@ $$
 tj. mezi dvanáctým a třináctým rokem vyroste přibližně o $4.4$
 centimetru. (Slovo přibližně je použito proto, že derivace je okamžitá rychlost růstu a není zaručeno, že tato rychlost se udrží po celou jednotku času, tj. po celý rok.) 
 
+<a href="https://sagecell.sagemath.org/?z=eJx1jM0KgkAUhfeC73ChhX81jE0hLtz1AC1aB5MzojjNjZnRsKdPUyGCzupw-M7nip6bMHBBBGs2cDZ4l1pzcFsoufU9FbqooISynGWxu7IdJfnhOLZ9kk4zi13CCM3YeD5J1XIww23wPVvjM5zO3_ZLY1t4GIQWtTOoOt8T0jQ9L2WhiGiqKozgI5rHRbMys23RiD9Muh-hHwYsCLT8JTV2UKPQ6LB7AzQ9S-8=&lang=sage&interacts=eJyLjgUAARUAuQ==">Sage výpočet</a>
 </div>
 
 
@@ -167,6 +168,8 @@ _Někdy je rozměr veličiny derivované stejný, jako rozměr veličiny, podle 
 Pro $H=3.57\sqrt h$ platí $$\frac{\mathrm dH}{\mathrm dh}=\frac 12 \times 3.57 \times \frac {1}{\sqrt h}$$ a numericky
 $$\frac{\mathrm dH}{\mathrm dh}(5)=\frac{3.57}{2\sqrt 5}\approx 0.7983 \frac {\mathrm{km}}{\mathrm m}\approx 0.8 \frac {\mathrm{km}}{\mathrm m}.$$ Vzdálenost k horizontu pro pozorovatele ve výšce $5$ metrů roste rychlostí 0.8 kilometru na každý metr výšky navíc. Toto je interpretace pro praktické využití. Kromě toho se jednotky dají upravit a ve skutečnosti derivace žádný fyzikální rozměr nemá
 $$\frac{\mathrm dH}{\mathrm dh}(5)=0.7983 \times \frac {1000\, \mathrm{m}}{\mathrm m}=798$$ a každá změna výšky pozorovatele se na vzdálenosti k horizontu projeví svým $800$-násobkem.
+
+<a href="https://sagecell.sagemath.org/?z=eJwtzEEKwjAQheG94B0GXDSRko0UV9256DViMmGGtBNNmkA9vUFcPv6PR3OzWQ00aLjAA-Nqs3UIr5w2FMHzaVGk55uZ7tfyznsf8IOBhbsLVaLrynMIahlJm1KfRdE8aSPqbzO3_jmCT8V-UBgoeUn7ARakbj27iNAOx2Xt9Qvbki8M&lang=sage&interacts=eJyLjgUAARUAuQ==">Sage výpočet</a>
 </div>
 
 
@@ -197,6 +200,8 @@ $$\frac{\mathrm dS}{\mathrm dt} =
 2\pi r \frac{\mathrm dr}{\mathrm dt}$$
 a numericky
 $$\frac{\mathrm dS}{\mathrm dt} = 2\pi \times 50 \times 1.5 \approx 471 \,\mathrm{m}^2\,\text{min}^{-1}.$$
+
+<a href="https://sagecell.sagemath.org/?z=eJx1UjtPwzAQ3iPlP5zoQIKiCpAYvbGDhFhAIF1tl7hJfJUfgeTXc2niFhXIFPk-f6_zCp5bqhGc9gZiQ20FjRpg5ynCiArtAHtqqdMOGhfrCAwdZN2SD-CiDxEC1RQooeIa8mwFz8ykO9hpiE6acH6HNh7rmGd5FkSPrrgMlyWcfSt4dMxoLUKoQKLPMye20cpgyBYX7qKy6D68uCln8OLSwQ4bAgY2UrMBZTXsZyKdZ09FKMXewBUUjn_L99uT3MNkakn5kyMlq45NjNgbroudsS1m9TV9FhP1HyFeaONwNN3BBTRkg6P22G0_ktPyMKKT_FTMKdGvxpMh6HBnZiYNNSlLYcgzRR5HbY14nRIKcXddKbPdHvJW08HN-u5t8Zyw5ax4r53pkSPP-2Eh1eopI2f_Z4NquSIOGk-zRmJfZomdxdRUhCJIo1_uk4xIiLWPG39u9MWkUvtxTzJoy8_16BDZeJh2z-3YyE0Z2fAcuWX5ZTqUhvW9DsbaoQNpPD_VxXLiSBHs6aT8BnG_DrA=&lang=sage&interacts=eJyLjgUAARUAuQ==">Sage výpočet</a> (v tomto jednoduchém případě spíše jako ukázka zápisu, než jako nástroj pro urychlení výpočtu)
 </div>
 
 
@@ -218,6 +223,8 @@ $$\frac{\mathrm dh}{\mathrm dt} = \frac 43 \frac{\mathrm dV}{\mathrm dt} \frac 1
 a po dosazení
 $$\frac{\mathrm dh}{\mathrm dt} = \frac 43 \times 0.01 \times \frac 1{0.5^2} \,\mathrm{m}\,\mathrm{min}^{-1}=0.053 \,\mathrm{m}\,\mathrm{min}^{-1}.$$
 Hromada roste do výšky rychlostí 5.3 centimetru za minutu.
+
+<a href="https://sagecell.sagemath.org/?z=eJx9kk2P0zAQhu-R8h9Gu4dNUFRaAUff9sANxKEHqoLceLp2k9iV7RjFvx7HH0u3AnLKfD3zzowtcVQ3T_aphbvvEb5qNaGUFGwHPTV1xcl5lr0VSjYP_KGTVL8Ysmtj8n4xA4ULHRSEpKFHuCCTCNcEwbra31Tv76q_nC44_bdaKydFj2Tf2JaQ3fuP8A4aHoz2x4ci-FvKgQm9ABWRFFwQpuZb9iTWcea6Mlz9albgX4b_rk6aejFFDTAoabUaZ_CUUbmA80pjH0Nrm7qqq0f4rJhUdolepgz1KEX4gSy9roqTHHicYrv5tO2YOJ-jiC65trtjVlbS24R_Ri0cDeNlHlwVGzGPwnKQRFzOCMSCyuGM2i8azaquoJznI7KwrwFyqgD-pkEqIEaNDl9x3SG240n98R_0DrJ9mhmCQS_p1IFHGCxq5Aqm2ayLDpfCEQerHLWwgq6aunA6YzWVc7DcjWJfSHMXOUt4MbnPlIdOVhDF-E9mSTIP2-NGc9O8bmaNlQ2HhbNVSThaGTFdHIGn44ZFLD0flbEkVm7MfDL3l_rzdpy3lKf3WOomUeRlR_sb5Qknag==&lang=sage&interacts=eJyLjgUAARUAuQ==">Sage výpočet</a> (v tomto jednoduchém případě spíše jako ukázka zápisu, než jako nástroj pro urychlení výpočtu)
 
 </div>
 

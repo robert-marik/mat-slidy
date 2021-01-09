@@ -22,10 +22,13 @@ $if(highlighting-css)$
   <style type="text/css">
 $highlighting-css$
   </style>
-$endif$
+  $endif$
+<link href="../lity/dist/lity.css" rel="stylesheet">
 $for(css)$
   <link rel="stylesheet" href="$css$" type="text/css" />
-$endfor$
+  $endfor$
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="../lity/dist/lity.js"></script>
 $if(math)$
   $math$
 $endif$

@@ -1,3 +1,5 @@
+rsync="rsync"
+#rsync="fake"
 
 kde=$1
 
@@ -29,7 +31,7 @@ echo ' <div class='menu-obalka'><a class="menu ACTIVE" href="http://user.mendelu
    done
    echo '</table></div></html>' >> index.html
 
-   rsync -e "ssh -o StrictHostKeyChecking=no" -av index.html cornus.mendelu.cz:html/mtk/mat-slidy/
+   $rsync -e "ssh -o StrictHostKeyChecking=no" -av index.html cornus.mendelu.cz:html/mtk/mat-slidy/
 fi  
 
 cislo=1
@@ -63,9 +65,11 @@ do
     ytbid=`cat ../prednasky.txt | head -n$cislo | tail -n1`
     echo $ytbid
 
-    substituce="<div style='background-color: #E41F1F; display:inline-div;max-width:300px; color:lightgray; text-align:center; font-weight:bold; float:left; margin-right:10px; border-color:#E41F1F; border-style:solid;' ><a href='https:\/\/youtu.be\/$ytbid' style='text-decoration:none; color:lightgray;'><img src='https:\/\/img.youtube.com\/vi\/$ytbid\/mqdefault.jpg' style='width:100%; max-width:100%;'>Youtube přednáška<\/a><\/div>"
+    substituce="<div style='background-color: #E41F1F; display:inline-div;max-width:300px; color:lightgray; text-align:center; font-weight:bold; float:left; margin-right:10px; border-color:#E41F1F; border-style:solid;' ><a href='https:\/\/youtu.be\/$ytbid' style='text-decoration:none; color:lightgray;' data-lity><img src='https:\/\/img.youtube.com\/vi\/$ytbid\/mqdefault.jpg' style='width:100%; max-width:100%;'>Youtube přednáška<\/a><\/div>"
 
     sed -i "s/<!-- YTB -->/$substituce/" index.html
+
+    sed -i "s/<!-- YTB \(.*\) -->/<a href='https:\/\/youtu.be\/\1' data-lity><div class=motivace><img src='https:\/\/img.youtube.com\/vi\/\1\/mqdefault.jpg'><div class=popisek>YTB<\/div><\/div><\/a>/" index.html
   fi
   
   cislo=$(($cislo+1))
@@ -73,12 +77,12 @@ do
   cd ..
 
 
-  rsync -e "ssh -o StrictHostKeyChecking=no" -av $i cornus.mendelu.cz:html/mtk/mat-slidy/
+  $rsync -e "ssh -o StrictHostKeyChecking=no" -av $i cornus.mendelu.cz:html/mtk/mat-slidy/
 done
 
 
 
-rsync -e "ssh -o StrictHostKeyChecking=no" -av my.css cornus.mendelu.cz:html/mt/mat-slidy
+$rsync -e "ssh -o StrictHostKeyChecking=no" -av my.css cornus.mendelu.cz:html/mt/mat-slidy
 
 #rsync -e "ssh -o StrictHostKeyChecking=no"  -av facebox cornus.mendelu.cz:html/mt/mat-slidy
 #rsync -e "ssh -o StrictHostKeyChecking=no"  -av styles cornus.mendelu.cz:html/mt/mat-slidy

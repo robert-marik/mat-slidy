@@ -6,6 +6,8 @@
 
 # Inverzní matice
 
+<!-- YTB odf4e4fJHAU -->
+
 U reálných čísel máme doplňkové operace ke sčítání a násobení. Jsou to
 odečítání a dělení. Odečítání matic můžeme implementovat jako sčítání
 matice s maticí vynásobenou minus jedničkou: $A-B=A+(-B)$. Oproti tomu
@@ -83,7 +85,7 @@ vektory, je ortogonální.
 # Matice přechodu do pootočené soustavy souřadnic
 
 
-
+<!-- YTB AdbMMzTfR00 -->
 
 \iffalse
 

@@ -3,7 +3,6 @@
 % 2020
 
 
-
 # Funkce jedné proměnné
 
 
@@ -283,11 +282,11 @@ Jednotka derivace je stejná, jako jednotka podílu $\frac {f(x)}x$.
 
 > Poznámka (slovní vyjádření derivace). Derivace v bodě, pokud ji nahlížíme z hlediska časové změny veličiny, je okamžitá rychlost s jakou se mění tato veličina. Protože kladná změna je růst, nahrazujeme někdy slovo "změna" slovem "růst". Protože rychlost je změna za jednotku času, nahrazujeme někdy slovo "rychlost" obratem "změna za jednotku času". Derivaci podle času můžete tedy přečíst libovolým z následujících obratů. Všechny se běžně používají a všechny chápeme stejně -- jako derivaci podle času.
 > 
-> * Rychlost změny
 > * Rychlost růstu
-> * Časová změna veličiny 
-> * Změna za jednotku času
+> * Rychlost změny (implicitně předpokládáme, že kladná změna odpovídá růstu a záporná změna poklesu)
 > * Nárůst za jednotku času
+> * Změna za jednotku času
+> * Časová změna veličiny 
 >
 > Pokud potřebujeme pracovat s poklesem, násobíme derivaci faktorem $-1$. Toto čteme též jako "záporně vzatá derivace."
 
@@ -321,8 +320,10 @@ dT}{\mathrm dt}=-k(T-T_0),$$ kde $k$ je konstanta úměrnosti a záporné znamé
 této rovnici je funkce a v rovnici figuruje derivace této
 funkce. Takové rovnice se naučíme řešit později.
 
-
 > Poznámka (smysl předchozího příkladu). Předchozí příklad je často v různých obměnách používán na modelování ochlazování kávy, což je proces, který většina lidí důvěrně zná. Nemáme pochopitelně ambice se domnívat, že bychom dokázali z této rovnice odvodit nějaké zásadní výsledky aplikovatelné při pití ranní kávy nebo při konzumaci horké polévky. Učíme se na malých věcech, abychom později mohli dělat věci velké. Na známých věcech se učíme aparát, který bude naším jediným nástrojem tam, kde intuice začne selhávat. Z tohoto příkladu je nutné si odnést, že derivace, jako rychlost změny, hraje roli při kvantitativním popisu dějů a při studia procesů, kdy se mění veličiny. Ať už doopravdy (studium pohybu nebo dějů, probíhajících v čase) nebo virtuálně (problémy spojené s mechanikou, včetně statiky, stability a deformací, často pracují s virtuálními změnami, tj. se změnami, které jsou sice z hlediska úlohy přípustné, ale příroda je z nějakého důvodu nerealizuje). Tedy naprostá většina dějů a jevů, které studujeme a chceme jim rozumět. Jakmile se v popisu fyzikálního zákona objeví slovo *rychlost*, někdy nahrazené souslovím *časová změna*, znamená to, že kvantitativní popis se děje pomocí derivací.
+
+V této chvíli je pro nás cenné to, že umíme přeformulovat fyzikální popis vývoje (rychlost změny teploty je úměrná rozdílu teplot) na kvantitativní popis, kde dokážeme realizovat numerickou simulaci. Realizace takové simulace může vypadat například tak, že na krátký časový krok budeme předpokládat konstantní rychlost. Tuto rychlost použijeme pro odhad nové teploty, tato nová teplota změní teplotní rozdíl, tím se změní i rychlost a postup opakujeme. Toto děláme [na počítači](https://sagecell.sagemath.org/?z=eJxVkd1OJCEQhe9JeIeK3nTraNpNTIwJb8HdxBiEmh0GGjrNj8Gnt-ge4y53cE5OnfqQ4mUCOrewRK0y6mAh4-JjVpxlsWkkfqkuOphxRXJolQpnhvTHpy7TPdYGbo0OljVCsnPxSlvOHFmetwgX8WS1xZCBMzmJP9P2fB0G0UVPfmqB-b0HFfE0TZzVljwadOJ4nA7y7W2v6vEAJoLL1Occ4aMYnBGK88qoTHrKZQkNaqvxch3RODvFFSzYAKsKf3H4Z9b4uq3RnC-Js75zFvneZPg9fWwqAWrfFneTkeLB3Q3yQU7jXXffgrGnzkhb5QnUGmuwGuGmtkCMPjComw0TzmDyHiKFvDfy_0mr1bmD_pqR1nAIKauqLsQPztGEmK8Ffug8qmXBYIZjJkbjNWKJl55BnHabi7XD6vQ44yyd4-fgbcrvHc_wEzUe2myDmMatSW1uRRIoJxT6fat7mf178Rt_aLY4&lang=sage&interacts=eJyLjgUAARUAuQ==).
+
 
 \iffalse
 
@@ -508,7 +509,7 @@ Derivace je vhodná ke studiu fyzikálních procesů na makroskopické
 tělesa nebo množství tekutiny v daném objemu jsou vhodné (obyčejné)
 derivace.
 
-Někdy výše uvedený přístup není možný. Například při studiu tepelného
+Například při studiu tepelného
 pole v materiálech rozlišujeme (pomocí takzvaného Biotova čísla) na
 jednu stranu případy, kdy vedení tepla není podstatné a těleso lze
 uvažovat jako celek mající ve všech částech stejnou teplotu, a na
@@ -536,6 +537,19 @@ možný makroskopický pohled na těleso jako na jeden celek.
 
 # Parciální derivace
 
+Změna funkce více proměnných může být způsobena změno libovolné
+nazávislé proměnné. Pokud sledujeme například ve stěně měnící se
+teplotní profil, zajímá nás, jak se teplota v jednotlivých místech
+stěny mění v čase a jak se teplota mění v řezu stěnou. Zdá se býti
+rozumné oddělit obě změny a studovat každou samostatně. Buď v daném
+bodě fixovat polohu a sledovat časový vývoj v tomto bodě, nebo v daném
+čase udělat něco jako teplotní snímek a srovnávat teplotu ve vybraném
+bodě s okolními teplotami ve stejném čase. To vede k následujícímu
+přístupu, kdy u funkce více proměnných sledujeme reakci na změnu jedné
+jediné veličiny.
+
+Následující definice výše uvedenou myšlenku odděleného sledování změny funkce (závislé veličiny) jako reakce na změnu jedné jediné vstupní informace (jedné nezávislé veičiny) uvádí v život. Definice je stejná jako u derivace funkce jedné proměnné, změna je pouze v tom, že je přítomna i další proměnná.
+
 > Definice (parciální derivace). Buď $f\colon \mathbb R^2\to\mathbb R$ funkce dvou proměnných,  $x$ a $y$, tj. $f(x,y)$. Výraz
 $$\frac{\partial f}{\partial x}:=\lim_{h\to 0}\frac{f(x+h,y)-f(x,y)}h$$ se nazývá *parciální derivace funkce $f$ podle $x$*. Podobně,
 $$\frac{\partial f}{\partial y}:=\lim_{h\to 0}\frac{f(x,y+h)-f(x,y)}h$$ je *parciální derivace funkce $f$ podle $y$*.
@@ -550,7 +564,8 @@ parametru, nijak se nemění.
 # Rovnice vedení tepla  v 1D
 
 Studujme vedení tepla v jednorozměrné tyči. Teplota je funkcí dvou
-proměnných, polohy a času.
+proměnných, polohy a času. Tedy $T=T(t,x).$ Parciální derivace $\frac{\partial T}{\partial t}$ udává je rychle (například ve stupních Celsia za hodinu) roste v daném místě teplota. V různých částech desky může být tato veličina jiná a vždy se vztahuje k danému bodu. Přirozeně se mění i v čase, například  v prostředí s konstantní teplotou postupně systém dospěje do stavu se stacionárním rozložením teploty, kdy se teplota v žádném místě ani neroste ani neklesá a parciální derivace podle času je nulová. Derivace $\frac{\partial T}{\partial x}$ udává jak prudce (například ve stupních Celsia na centimetr) roste teplota ve směru osy $x$. 
+
 
 > Poznámka. Potřebujeme fyzikální zákony řídící vedení tepla.  Bez nich matematika
 model vedení tepla nemá jak naformulovat. Tyto zákony je potřeba matematice dodat "z venku", z aplikované vědy. Tou je v tomto případě fyzika, jindy může být biologie nebo geologie. Jakmile jsou potřebné zákony a případně materiálové vztahy k dispozici, stavé se problém čistě matematickým a fyzika přijde ke slovu při závěrečné interpretaci. Použijeme následující fyzikální fakta. 
