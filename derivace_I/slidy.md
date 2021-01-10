@@ -322,7 +322,7 @@ funkce. Takové rovnice se naučíme řešit později.
 
 > Poznámka (smysl předchozího příkladu). Předchozí příklad je často v různých obměnách používán na modelování ochlazování kávy, což je proces, který většina lidí důvěrně zná. Nemáme pochopitelně ambice se domnívat, že bychom dokázali z této rovnice odvodit nějaké zásadní výsledky aplikovatelné při pití ranní kávy nebo při konzumaci horké polévky. Učíme se na malých věcech, abychom později mohli dělat věci velké. Na známých věcech se učíme aparát, který bude naším jediným nástrojem tam, kde intuice začne selhávat. Z tohoto příkladu je nutné si odnést, že derivace, jako rychlost změny, hraje roli při kvantitativním popisu dějů a při studia procesů, kdy se mění veličiny. Ať už doopravdy (studium pohybu nebo dějů, probíhajících v čase) nebo virtuálně (problémy spojené s mechanikou, včetně statiky, stability a deformací, často pracují s virtuálními změnami, tj. se změnami, které jsou sice z hlediska úlohy přípustné, ale příroda je z nějakého důvodu nerealizuje). Tedy naprostá většina dějů a jevů, které studujeme a chceme jim rozumět. Jakmile se v popisu fyzikálního zákona objeví slovo *rychlost*, někdy nahrazené souslovím *časová změna*, znamená to, že kvantitativní popis se děje pomocí derivací.
 
-V této chvíli je pro nás cenné to, že umíme přeformulovat fyzikální popis vývoje (rychlost změny teploty je úměrná rozdílu teplot) na kvantitativní popis, kde dokážeme realizovat numerickou simulaci. Realizace takové simulace může vypadat například tak, že na krátký časový krok budeme předpokládat konstantní rychlost. Tuto rychlost použijeme pro odhad nové teploty, tato nová teplota změní teplotní rozdíl, tím se změní i rychlost a postup opakujeme. Toto děláme [na počítači](https://sagecell.sagemath.org/?z=eJxVkd1OJCEQhe9JeIeK3nTraNpNTIwJb8HdxBiEmh0GGjrNj8Gnt-ge4y53cE5OnfqQ4mUCOrewRK0y6mAh4-JjVpxlsWkkfqkuOphxRXJolQpnhvTHpy7TPdYGbo0OljVCsnPxSlvOHFmetwgX8WS1xZCBMzmJP9P2fB0G0UVPfmqB-b0HFfE0TZzVljwadOJ4nA7y7W2v6vEAJoLL1Occ4aMYnBGK88qoTHrKZQkNaqvxch3RODvFFSzYAKsKf3H4Z9b4uq3RnC-Js75zFvneZPg9fWwqAWrfFneTkeLB3Q3yQU7jXXffgrGnzkhb5QnUGmuwGuGmtkCMPjComw0TzmDyHiKFvDfy_0mr1bmD_pqR1nAIKauqLsQPztGEmK8Ffug8qmXBYIZjJkbjNWKJl55BnHabi7XD6vQ44yyd4-fgbcrvHc_wEzUe2myDmMatSW1uRRIoJxT6fat7mf178Rt_aLY4&lang=sage&interacts=eJyLjgUAARUAuQ==).
+V této chvíli je pro nás cenné to, že umíme přeformulovat fyzikální popis vývoje (rychlost změny teploty je úměrná rozdílu teplot) na kvantitativní popis, kde dokážeme realizovat numerickou simulaci. Realizace takové simulace může vypadat například tak, že na krátký časový krok budeme předpokládat konstantní rychlost. Tuto rychlost použijeme pro odhad nové teploty, tato nová teplota změní teplotní rozdíl, tím se změní i rychlost a postup opakujeme. Toto děláme [na počítači](https://sagecell.sagemath.org/?z=eJxlUl1r3DAQfDf4Pyy5Fzu5BLdQKAX_C70dISjSXk8nWWv01Sq_viv7jgS6b9KMdmZnJeafE3AdYCUlEypvIOHqKMm-S_OGMfghG2hhwYDMUDLmvtOMv3xrMJ-pVLCBLKyBIJolO6lM31mm_NhaWMKzUQZ9gr4T0_x92q5vYkCWHPPZBaa31igzY-q7UqNDjXY-naajeH3drTo8giawif1cCN6zxgUhWye1TIzHlFdfodRC15tE7bu-O1MAA8ZDkP43Dl_Uxl_bINW6HPuuTZ3m9KQTfFYTjtlDafPiTtJifraPg3gW0_jY2AcIVV0cO4BAxRuF8FCq54De0cuHLSNcQKf9vZjFkx-0GL-IBKNSS_ljQZ7BIsQki7xyeHAh7SndtP-rwxY-JxbNpwvJd3_NItnISgtxE40Rk_GeGaBMRHcHztlbpvm9_T35F7mu6PVwSpz_eHO40rVZ1HSjWSptEW0z--u2cI9qT3S_6rt4oT-DMzG9tY0Md4UjtOOVjEc9i5BxPNbF-Hkat0al2oDMZD2f-Qca1TLZvxj-A3cC3t0=&lang=sage&interacts=eJyLjgUAARUAuQ==).
 
 
 \iffalse
@@ -570,12 +570,9 @@ proměnných, polohy a času. Tedy $T=T(t,x).$ Parciální derivace $\frac{\part
 > Poznámka. Potřebujeme fyzikální zákony řídící vedení tepla.  Bez nich matematika
 model vedení tepla nemá jak naformulovat. Tyto zákony je potřeba matematice dodat "z venku", z aplikované vědy. Tou je v tomto případě fyzika, jindy může být biologie nebo geologie. Jakmile jsou potřebné zákony a případně materiálové vztahy k dispozici, stavé se problém čistě matematickým a fyzika přijde ke slovu při závěrečné interpretaci. Použijeme následující fyzikální fakta. 
 >
-* Rozdílem teplot vzniká tok tepla. Velikost toku tepla je úměrná
-teplotnímu rozdílu.
-* Teplota se zvyšuje dodáním tepla. Pro zvýšení teploty tělesa o
-hmotnosti $m$ o hodnotu $\Delta T$ je nutné dodat $$Q=mc\Delta T,\tag{*}$$ kde
-$c$ je měrná tepelná kapacita.
-* Budeme vztahy formulovat pro změny za časovou jednotku a pro jednotkový objem (tedy místo hmotnosti $m$, změny teploty $\Delta T$ a tepla $Q$ máme hustotu $\rho$, rychlost změny teploty $\frac{\partial T}{\partial t}$ a rychlost s jakou dodáváme teplo do daného místa vztažená na jednotkový objemu).
+* Rozdílem teplot je způsoben tok tepla. Velikost toku tepla je úměrná
+teplotnímu rozdílu a teplo teče z místa v větší teplotou do místa s menší teplotou.
+* Teplota se zvyšuje dodáním tepla. Změna teploty je úměrná dodanému teplu.
 
 \iffalse
 
@@ -591,36 +588,19 @@ V dalším už nastupuje matematický popis a ve vhodných chvílích vždy
 použijeme výše uvedené fyzikální zákony. Mluvíme o teple, ale jako
 mechanický model si můžeme představit proudění tekutiny (pro
 jednoduchou představu) nebo proudění vlhkosti (pro odvození rovnice
-difuze namísto rovnice vedení tepla).
+difuze namísto rovnice vedení tepla). Budeme uvažovat libovolné místo materiálu a budeme matematicky vyjadřovat děje, které přispívají ke změně teploty.
 
-* *Potřebujeme vědět, jak moc se mění teplota podél tyče.* Změny v prostorovém rozložení teploty zachycuje derivace
-$\frac{\partial T}{\partial x}$ v jednotkách (například) stupeň Celsia
-na centimetr.
-* *Potřebujeme změnu teploty podél tyče převést na veličinu popisující
-  proudění tepla.* Tok tepla je úměrný veličině popisující změnu rozložení tepla v prostoru,
-  $$q=-k\frac{\partial T}{\partial x}.\tag{**}$$
-    * Znaménko mínus vyjadřuje skutečnost, že teplo teče z míst s vyšší teplotou
-    do míst s menší teplotou a že tok uvažujeme kladný, pokud teče ve
-    směru osy $x$. Přesněji, pokud teplota roste směrem doprava, parciální
-    derivace je kladná, ale teplo teče doleva, tedy tok musí být záporný.
-    * Veličina $k$ je konstanta úměrnosti
-    umožňující překalibrování změny prostorového rozložení teploty na
-    tok tepla jendotkovým průřezem (první odrážka).
-* *Potřebujeme zjistit, kolik tepla za jednotku času přiteče do nějakého bodu a v
-tomto bodě "zůstane". Množství, které zůstane, je rozdílem mezi množstvím, které přiteče, a množstvím, které odteče.* Tedy potřebuji vědět, jak se mění tok tepla podél tyče. Rychlost s jakou
-roste rychlost toku podél tyče je $\frac{\partial q}{\partial x}$. My pro kladný ohřev
-potřebujeme pokles toku tepla, tedy násobíme záporným znaménkem a dostáváme
-$-\frac{\partial q}{\partial x}$.
-* *Víme, kolik tepla se v daném místě spotřebuje na zvýšení teploty a tuto hodnotu musíme převést na změnu teploty (třetí odrážka). Opět se jedná o jakési překalibrování, které ještě souvisí s dalšími fyzikálními vlastnostmi jako je měrná tepelná kapacita a hmotnost jednotkového množství látky objemu v daném místě.* Derivace $-\frac{\partial q}{\partial x}$ je teplo, které každou časovou jednotku "zůstává" v
-bodě $x$. Toto teplo se "použije" na zvýšení teploty. Z
-rovnice (*) pro jednotku času a jednotku objemu 
-$$-\frac {\partial q}{\partial x}=\rho c\frac{\partial T}{\partial t}.$$
-* Po dosazení za $q$ dostáváme
-$$-\frac{\partial}{\partial x}\left(-k\frac{\partial T}{\partial x}\right)=\rho c\frac{\partial T}{\partial t}.$$
-* Derivace konstantního násobku je konstantní násobek
-derivace. Veličina $k$ by konstantní být
-nemusela a proto ji z opatrnosti necháme na svém místě. Může v ní být nehomogenita nebo se může měnit s teplotou, tj. vztah (**) může být nelineární. Znaménko mínus reprezentuje násobení konstantou $-1$. Toto vede na finální tvar
-$$\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)=\rho c\frac{\partial T}{\partial t}.$$
+* Rychlost s jakou s daném místě roste teplota (v čase) je $$\frac{\partial T}{\partial t}$$ a měříme ji například ve stupních Celsia za minutu. Tato rychlost je úměrná rychlosti s jakou do daného místa dodáváme teplo. Proto v dalším budeme hledat rychlost dodávání tepla a daného místa a poté se sem vrátíme a dáme tuto rychlost do souvislosti s rychlostí růstu teploty.
+* Rychlost s jakou s daném místě roste teplota jako funkce polohy je $\frac{\partial T}{\partial x}$ a měříme ji například ve stupních Celsia na centimetr. Tato rychlost musíme vzít záporně, abychom dostali pokles teploty a vynásobit konstantou, která převede spád teploty na tok tepla. Tuto konstantu označíme $k$ (nazývá se součinitel teplné vodivosti a dodá nám ji fyzika, přesněji Fourierův zákon) a tok tepla $q$ ve směru osy $x$ je $$q=-k\frac{\partial T}{\partial x}.$$ To je veličina, která udává, kolik joulů tepla proteče průřezem za jednotku času.
+* Pokud do daného místa přitéká teplo stejnou rychlostí jako odtéká, teplota se nemění a dané místo se ani neohřívá ani neochlazuje. Intenzita ochazování je dána bilancí mezi přítokem a odtokem. Můžeme si to představit tak, že z tepla které do daného bodu přiteče, se část "oddělí" a přispěje k navýšení teploty a zbytek teče dál. Pro zjištění, kolik tepla se z toku "oddělí" a způsobí v daném místě navýšení teploty potřebujeme vědět, jak rychle v daném místě tok klesá jako funkce proměnné $x$. Nárůst určíme derivací podle $x$ a pokles z nárůstu uděláme změnou znaménka. Pokles toku tepla je tedy $$-\frac{\partial q}{\partial x}=
+-\frac{\partial }{\partial x}\left(-k\frac{\partial T}{\partial x}\right)=
+\frac{\partial }{\partial x}\left(k\frac{\partial T}{\partial x}\right).
+$$
+* Pokles toku vypočtený v předchozím bodě je úměrný rychlosti růstu teploty. Příslušné konstanty úměrnosti dodá fyzika a platí
+$$\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)=\rho c\frac{\partial T}{\partial t},$$
+kde $c$ je měrná tepelná kapacita a $\rho$ je hustota. (V tomto případě jsou hustota i měrná tepelná kapacita vztaženy ne k jednotce objemu, jak jsme zvyklí, ale k jednotce délky. Například $\rho$ je lineární hustota, tj. v gramech na centimetr).
+* Rovnice odvozená v předchozím kroku se nazývá **rovnice vedení tepla** a dokáže modelovat například prostup tepla stěnou domu.
+
 
 **Shrnutí.** V odvození vidíme, že rovnice vedení tepla je vlastně
 bilance toku tepla. Rozdíl o kolik se v daném místě snižuje tok tepla
