@@ -2,6 +2,11 @@
 % Robert Mařík
 % 2020
 
+> **Motivace.**
+>
+> * Seznámíme se s pojmem derivace funkce. Tento pojem umožňuje u měnící se veličiny určovat, jak rychle se tato veličina mění. Zatímco v případě rovnoměrné změny je problematika rychlosti triviální a řešitelná středoškolskými prostředky, v případě změny jejíž rychlost akceleruje nebo klesá je nutné zapojit zcela nový aparát, nazývaný infinitezimální počet. Derivace je jeho prvním představitelem. S dalším, integrálem, se setkáme později.
+> * Ze střední školy je student zvyklý na to, že si má osvojit dovednosti, jak se to počítá. Pro nás je však už důležité si uvědomit, že vůbec nějak dokážeme zachytit rychlost změny. Že s tím dokážeme pracovat, že například dokážeme pomocí těchto pojmů naformulovat fyzikální zákony pracující s rychlostmi změn. A věřte či ne, takové jsou skoro všechny. V podstatě celá středoškolská fyzika je postavena na studiu veličin, měnících se konstantní rychlostí. S tím se dá modelovat mnoho dějů okolo nás, ale pro hlubší poznání světa je to žalostně málo. Derivace umožní pracovat s libovolnými rychlostmi změn. Nesoustřeďte se proto na počítání, soustřeďte se na význam a využití. Soustřeďte se na rozpoznání kontextu, ve kterém problematiku studujeme. 
+> * Po přečtení přednášky byste měli mít v hlavě vybudovanou spojnici mezi derivací a rychlostí. Pokud se ve slovním popisu děje mluví o rychlosti, v matematickém modelu tato rychlostu figuruje prostřednictvím derivace. 
 
 # Funkce jedné proměnné
 
@@ -57,8 +62,8 @@ Veličina $y$ je *nepřímo úměrná* veličině $x$ jestliže existuje konstan
 
 **Příklad.**
 
-* Při pohybu konstantní rychlostí je dráha $s$ úměrná času $t$. Příslušnou konstantou úměrnosti je rychlost $v$, tj. $s=vt$. Pro $t=1$ je dráha $s$ přímo rovna konstantě úměrnosti $v$. Proto můžeme konstantu úměrnosti reprezentovat jako dráhu za jendotku času. Takto rychlost i chápeme a v tomto smyslu čteme i její jednotku. Nečteme "kilometrů lomeno hodin" ale "kilometrů za hodinu".
-* Při pohybu po předem stanovené dráze $s$ je čas nepřímo úměrný rychlosti $v$. Platí $t=\frac sv$. Konstatnou úměrnosti je dráha $s$. Pro $v=1$ je čas přímo roven dráze. Proto je možno konstantu úměrnosti slovně vyjádřit tak, že udává čas, který je nutný pro projetí příslušné dráhy jednotkovou rychlostí.
+* Při pohybu konstantní rychlostí je dráha $s$ úměrná času $t$. Příslušnou konstantou úměrnosti je rychlost $v$, tj. $s=vt$. Pro $t=1$ je dráha $s$ přímo rovna konstantě úměrnosti $v$. Proto můžeme konstantu úměrnosti reprezentovat jako dráhu za jednotku času. Takto rychlost i chápeme a v tomto smyslu čteme i její jednotku. Nečteme "kilometrů lomeno hodin" ale "kilometrů za hodinu".
+* Při pohybu po předem stanovené dráze $s$ je čas nepřímo úměrný rychlosti $v$. Platí $t=\frac sv$. Konstantou úměrnosti je dráha $s$. Pro $v=1$ je čas přímo roven dráze. Proto je možno konstantu úměrnosti slovně vyjádřit tak, že udává čas, který je nutný pro projetí příslušné dráhy jednotkovou rychlostí.
 * Při periodickém pohybu je frekvence $f$ nepřímo úměrná periodě $T$. Příslušnou konstantou úměrnosti je jednička, tj. $f=\frac 1T$.
 * Objem $V$ koule o poloměru $r$ je přímo úměrný třetí mocnině poloměru. Existuje tedy konstanta $k$ taková, že platí $V=k r^3$. Pro $r=1$ je objem $V$ přímo roven konstantě $k$. Konstanta proto $k$ vyjadřuje objem koule jednotkového poloměru. Protože objem koule jednotkového poloměru je $\frac 43 \pi$ učí se žáci v matematice rovnou vzorec $V=\frac 43 \pi r^3$.
 * Síla působící na těleso ve vzdálenosti $r$ od planety je dána vztahem $F=\frac{k}{r^2}$, kde $k$ je konstanta úměrnosti (závislá na hmotnosti planety i tělesa). Toto můžeme slovně vyjádřit tak, že síla je nepřímo úměrná druhé mocnině vzdálenosti. Pro $r$ rovno jedné je síla $F$ přímo rovna konstantě $k$. Konstanta úměrnosti $k$ proto udává sílu působící na těleso v jednotkové vzdálenosti od planety.
@@ -103,7 +108,7 @@ nerovnice jsou záporné) apod. Takových situací je mnoho a protože není
 v lidských silách si všechny pamatovat, stačí je míst spojeny s
 definicí rostoucí a klesající funkce.
 
-**Příklad.** Funkce $\ln x$ a $\sqrt x$ jsou rostoucí a proto z nerovnic $$\ln x>\ln 6$$ a $$\sqrt x>\sqrt 6$$ plyne $$x>6.$$ Zejména v druhém případě je nutné si uvědomit, že používáme definici rostoucí funkce a skutečnost, že nezápornost obou stran nerovnice uzajišťuje, že pracujeme na intervalu kladných hodnot $x$, kde je druhé mocnina rostoucí funkce. Nestačí říct, že umocňujeme obě strany nerovnice, jak by někdo mohl tento krok dezinterpretovat. Umocněním obou stran nerovnice se obecně může změnit obor pravdivosti, proto tato operace u nerovnic není povolena. Na celém svém definičním oboru totiž druhá mocnina rostoucí není. 
+**Příklad.** Funkce $\ln x$ a $\sqrt x$ jsou rostoucí a proto z nerovnic $$\ln x>\ln 6$$ a $$\sqrt x>\sqrt 6$$ plyne $$x>6.$$ Zejména v druhém případě je nutné si uvědomit, že používáme definici rostoucí funkce a skutečnost, že nezápornost obou stran nerovnice zajišťuje, že pracujeme na intervalu kladných hodnot $x$, kde je druhé mocnina rostoucí funkce. Nestačí říct, že umocňujeme obě strany nerovnice, jak by někdo mohl tento krok dezinterpretovat. Umocněním obou stran nerovnice se obecně může změnit obor pravdivosti, proto tato operace u nerovnic není povolena. Na celém svém definičním oboru totiž druhá mocnina rostoucí není. 
 
 **Příklad.** Funkce $\frac 1x$ a $y=x^2$ nejsou ani rostoucí ani klesající a proto z žádné z nerovností
 $$\frac 1x \leq \frac 15$$
@@ -131,7 +136,7 @@ plyne $$\sqrt x\geq 5=\sqrt {25}.$$ Druhá mocnina je na intervalu $(5,\infty)$ 
 Budeme se zajímat o to, jak rychle se mění funkční hodnoty v čase nebo při změnách vstupních dat. V souvislosti s obrázkem nás může napadnout mnoho významů pojmu rychlost. 
 
 * Jakou rychlost (v kilometrech za hodinu) může automobil vyvinout?
-* Ja rychle (v kilometrech za hodinu za sekundu) automobil zrychluje?
+* Jak rychle (v kilometrech za hodinu za sekundu) automobil zrychluje?
 * Jak rychle (v metrech na kilometr za hodinu) se prodlužuje brzdná dráha při zvyšující se rychlosti?
 * Jak rychle (v tisících kilometrů na kilopascal) klesá životnost pneumatik při přehuštění?
 * Jak rychle (v litrech na 100 kilometrů na kilometr za hodinu) roste spotřeba auta při vyšší průměrné cestovní rychlosti?
@@ -258,7 +263,7 @@ $f'$, $f'(x)$ nebo $\frac{\mathrm df}{\mathrm dx}$. Zápis $\frac{\mathrm df}{\m
 Interpretace derivace v nematematických disciplínách je okamžitá
 rychlost s jakou veličina $f$ reaguje na změny veličiny $x$. Často
 studujeme veličiny závislé na čase s v tomto případě jde tedy o
-rychlost, s jakou se veličina mění v čase. Další možnosti slovní obraty používané pro slovní vyjádření derivace jsou zmíněny níže v podkapitole věnované derivaci podle času. Analogickou terminologii (rychlost růstu, rychlost změny) zpravidla přenášíme i na případy, kdy nezávislou proměnnou není čas. Rychlost potom chápeme v abstraktním slova smyslu.
+rychlost, s jakou se veličina mění v čase. Další možnosti a obraty používané pro slovní vyjádření derivace jsou zmíněny níže v podkapitole věnované derivaci podle času. Analogickou terminologii (rychlost růstu, rychlost změny) zpravidla přenášíme i na případy, kdy nezávislou proměnnou není čas. Rychlost potom chápeme v abstraktním slova smyslu.
 
 Obecně, ať již je nezávislou proměnnou čas či jiná veličina, se derivace $f'(x)$ často slovně interpretuje jako veličina, která udává, jak se mění veličina $f$ při změnách veličiny $x$. Tímto slovním obratem je myšlena změna veličiny $f$, odpovídající změně veličiny $x$ o jednotku. Je to podobné, jako údaj o rychlosti na tachometru v automobilu. Ten udává, kolik kilometrů ujedeme za hodinu. Od skutečně uražené dráhy se tento údaj může lišit, protože pohyb může trvat třeba jenom deset minut. A kdyby jízda opravdu trvala hodinu, mohlo vlivem jízdy v zácpě dojít k podstatnému nesouladu se skutečně uraženou dráhou. Přesto je okamžitá rychlost ukazovaná na tachometru při jízdě automobilem užitečná veličina a nemáme problémy s jejím chápáním. Stejně tak pohlížejme na derivaci.
 
@@ -313,9 +318,9 @@ klesá teplota tělesa je úměrná teplotnímu rozdílu. Tento rozdíl je $T-T_
 * Veličina $T$ je teplota tělesa měřená například ve stupních Celsia.
 * Veličina $t$ je čas měřený například v hodinách.
 * Derivace $\frac{\mathrm dT}{\mathrm dt}$ ve stupních Celsia
-za hodinu je rychlost, s jakou roste teplota tělesa.
-* Matematickým vyjádřením toho, že rychlost s jakou roste teplota a
-teplotní rozdíl $T-T_0$ jsou úměrné je rovnice $$\frac{\mathrm
+za hodinu je rychlost, s jakou roste teplota tělesa. Pokud je například záporná a rovna hodnotě $-5$ stupňů Celsia za hodinu, znamená to, že teplota klesá rychlostí $5$ stupňů Celsia za hodinu.
+* Matematickým vyjádřením toho, že rychlost s jakou se mění teplota  je úměrná 
+teplotnímu rozdílu $T-T_0$ je rovnice $$\frac{\mathrm
 dT}{\mathrm dt}=-k(T-T_0),$$ kde $k$ je konstanta úměrnosti a záporné znaménko vyjadřuje, že teplota klesá. Neznámou v
 této rovnici je funkce a v rovnici figuruje derivace této
 funkce. Takové rovnice se naučíme řešit později.
@@ -591,21 +596,25 @@ jednoduchou představu) nebo proudění vlhkosti (pro odvození rovnice
 difuze namísto rovnice vedení tepla). Budeme uvažovat libovolné místo materiálu a budeme matematicky vyjadřovat děje, které přispívají ke změně teploty.
 
 * Rychlost s jakou s daném místě roste teplota (v čase) je $$\frac{\partial T}{\partial t}$$ a měříme ji například ve stupních Celsia za minutu. Tato rychlost je úměrná rychlosti s jakou do daného místa dodáváme teplo. Proto v dalším budeme hledat rychlost dodávání tepla a daného místa a poté se sem vrátíme a dáme tuto rychlost do souvislosti s rychlostí růstu teploty.
-* Rychlost s jakou s daném místě roste teplota jako funkce polohy je $\frac{\partial T}{\partial x}$ a měříme ji například ve stupních Celsia na centimetr. Tato rychlost musíme vzít záporně, abychom dostali pokles teploty a vynásobit konstantou, která převede spád teploty na tok tepla. Tuto konstantu označíme $k$ (nazývá se součinitel teplné vodivosti a dodá nám ji fyzika, přesněji Fourierův zákon) a tok tepla $q$ ve směru osy $x$ je $$q=-k\frac{\partial T}{\partial x}.$$ To je veličina, která udává, kolik joulů tepla proteče průřezem za jednotku času.
-* Pokud do daného místa přitéká teplo stejnou rychlostí jako odtéká, teplota se nemění a dané místo se ani neohřívá ani neochlazuje. Intenzita ochazování je dána bilancí mezi přítokem a odtokem. Můžeme si to představit tak, že z tepla které do daného bodu přiteče, se část "oddělí" a přispěje k navýšení teploty a zbytek teče dál. Pro zjištění, kolik tepla se z toku "oddělí" a způsobí v daném místě navýšení teploty potřebujeme vědět, jak rychle v daném místě tok klesá jako funkce proměnné $x$. Nárůst určíme derivací podle $x$ a pokles z nárůstu uděláme změnou znaménka. Pokles toku tepla je tedy $$-\frac{\partial q}{\partial x}=
+_Je-li například parciální derivace $\frac{\partial T}{\partial t}$ rovna $2^{\circ}\mathrm{C}/\mathrm{min}$, znamená to, že v daném místě roste teplota v čase rychlostí dva stupně Celsia za minutu. Pokud je záporná a rovna například hodnotě $-2^{\circ}\mathrm{C}/\mathrm{min}$, znamená to, že teplota v tomto místě klesá rychlostí dva stupně Celsia za minutu._
+* Rychlost s jakou s daném místě roste teplota jako funkce polohy je $\frac{\partial T}{\partial x}$ a měříme ji například ve stupních Celsia na centimetr. 
+_Je-li například parciální derivace $\frac{\partial T}{\partial x}$ rovna $2^{\circ}\mathrm{C}/\mathrm{cm}$, znamená to, že v daném místě roste teplota ve směru osy $x$ tak, že na každém centimetru naroste o dva stupně Celsia. Pokud je záporná a rovna například hodnotě $-2^{\circ}\mathrm{C}/\mathrm{cm}$, znamená to, že ve směru osy $x$ teplota klesá a na každém centimetru klesne o dva stupně Celsia._
+* Pro přepočet nerovnoměrného rozložení teploty na tok tepla nás zajímá nikoliv jak teplota v prostoru roste, ale jak klesá. Proto musíme vzít derivaci podle prostorové proměnné záporně, abychom dostali pokles teploty.Tento pokles vynásobíme konstantou, která převede spád teploty na tok tepla. Tuto konstantu označíme $k$ (nazývá se součinitel tepelné vodivosti a dodá nám ji fyzika, přesněji Fourierův zákon) a tok tepla $q$ ve směru osy $x$ je $$q=-k\frac{\partial T}{\partial x}.$$ To je veličina, která udává, kolik joulů tepla proteče průřezem za jednotku času. _Je-li $q$ rovno $7\,\mathrm{J}/\mathrm{min}$ znamená to, že průřezem proteče ve směru osy $x$ sedm joulů za minutu. Je-li $q$ záporné a rovno $-7\,\mathrm{J}/\mathrm{min}$, znamená to, že sedm joulů za minutu proteče v daném místě proti směru osy $x$._
+* Pokud do daného místa přitéká teplo stejnou rychlostí jako odtéká, teplota se nemění a dané místo se ani neohřívá ani neochlazuje. Intenzita ochlazování je dána bilancí mezi přítokem a odtokem. Můžeme si to představit tak, že z tepla které do daného bodu přiteče, se část "oddělí" a přispěje k navýšení teploty a zbytek teče dál. Pro zjištění, kolik tepla se z toku "oddělí" a způsobí v daném místě navýšení teploty potřebujeme vědět, jak rychle v daném místě tok klesá jako funkce proměnné $x$. Nárůst určíme derivací podle $x$ a pokles z nárůstu uděláme změnou znaménka. Pokles toku tepla je tedy $$-\frac{\partial q}{\partial x}=
 -\frac{\partial }{\partial x}\left(-k\frac{\partial T}{\partial x}\right)=
 \frac{\partial }{\partial x}\left(k\frac{\partial T}{\partial x}\right).
-$$
+$$ _Například pokles $-\frac{\partial q}{\partial x}=2\,\mathrm{J}/(\mathrm{min}\,\mathrm{cm})$ toku $q=10\,\mathrm{J}/\mathrm{min}$ znamená, že o centimetr dál ve směru osy $x$ proteče průřezem směrem doprava už nikoliv deset, ale pouze osm joulů za minutu. Stejný pokles u toku $q=-10\,\mathrm{J}/\mathrm{min}$ znamená, že v daném místě proteče směrem doleva deset joulů za minutu, ale o centimetr více vpravo je o $2$ méně, tj. $-10-2=12$, směrem doleva teče dvanáct joulů za minutu. V obou případech směrem doprava intenzita toku klesá, tok slábne._
 * Pokles toku vypočtený v předchozím bodě je úměrný rychlosti růstu teploty. Příslušné konstanty úměrnosti dodá fyzika a platí
 $$\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)=\rho c\frac{\partial T}{\partial t},$$
-kde $c$ je měrná tepelná kapacita a $\rho$ je hustota. (V tomto případě jsou hustota i měrná tepelná kapacita vztaženy ne k jednotce objemu, jak jsme zvyklí, ale k jednotce délky. Například $\rho$ je lineární hustota, tj. v gramech na centimetr).
-* Rovnice odvozená v předchozím kroku se nazývá **rovnice vedení tepla** a dokáže modelovat například prostup tepla stěnou domu.
-
+kde $c$ je měrná tepelná kapacita a $\rho$ je hustota. (V tomto případě jsou hustota i měrná tepelná kapacita vztaženy ne k jednotce objemu, jak jsme zvyklí, ale k jednotce délky. Například $\rho$ je lineární hustota, tj. v gramech na centimetr). _Například pokles $-\frac{\partial q}{\partial x}=2\,\mathrm{J}/(\mathrm{min}\,\mathrm{cm})$ toku $q=10\,\mathrm{J}/\mathrm{min}$ znamená, že o centimetr dál ve směru osy $x$ proteče průřezem směrem doprava už nikoliv deset, ale pouze osm Joulů za minutu. Tedy každou minutu se v jenom centimetru délky "odpojí" energie o velikosti dva Jouly a ta se "uloží" do materiálu. Navenek se to projeví ohřevem, přičemž hrají roli fyzikální vlastnosti materiálu._
+* Rovnice odvozená v předchozím kroku se nazývá **rovnice vedení tepla** a dokáže modelovat například prostup tepla stěnou domu. Tato rovnice zachycuje matematicky to, jak funguje vedení tepla. 
 
 **Shrnutí.** V odvození vidíme, že rovnice vedení tepla je vlastně
 bilance toku tepla. Rozdíl o kolik se v daném místě snižuje tok tepla
 udává, kolik tepla se v daném místě spotřebovalo. Tato spotřeba tepla
 se projeví zvýšením teploty v daném bodě.
+
+**Poznámka.** Vyřešit rovnici vedení tepla je bohužel možné jenom v poměrně speciálních případech, které jsou z praktického hlediska málo významné. Existuje však řada numerických metod jak tuto rovnici vyřešit přibližnými metodami. Tato rovnice je potom "schována" například v softwarech umožňujících vizualizovat tepelné namáhání v okolí kritických prvků staveb, jako jsou okna. Všimněte si univerzálnosti této rovnice. Stejná rovnice, jakou můžeme použít pro posouzení teplotního komfortu ve stavbě, dokáže modelovat například vliv stromu na tepelnou pohodu v městském prostředí nebo prostup tepla do dřeva při jeho tepelné modifikaci.
 
 
 
