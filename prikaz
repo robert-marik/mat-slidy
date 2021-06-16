@@ -70,6 +70,9 @@ do
     sed -i "s/<!-- YTB -->/$substituce/" index.html
 
     sed -i "s/<!-- YTB \(.*\) -->/<a href='https:\/\/youtu.be\/\1' data-lity><div class=motivace><img src='https:\/\/img.youtube.com\/vi\/\1\/mqdefault.jpg'><div class=popisek>YTB<\/div><\/div><\/a>/" index.html
+
+    sed -i "s/<p>\\\\iffalse<\/p>//" index.html
+
   fi
   
   cislo=$(($cislo+1))

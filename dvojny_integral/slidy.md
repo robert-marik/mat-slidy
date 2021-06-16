@@ -129,7 +129,9 @@ $$ \iint_\Omega f(x,y)\mathrm{d}S.$$
 \def\maxfactor{0.3}
 
 \iffalse
+
 ![](dvojny_integral.png)
+
 \fi
 
 </div>

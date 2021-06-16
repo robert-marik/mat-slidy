@@ -64,9 +64,7 @@ $\cosh x$, a hyperbolický sinus, $\sinh x$.
 
 # Motivace: Jak najít minimum potenciálu?
 
-
 \iffalse
-
 
 <div class='obtekat'>
 

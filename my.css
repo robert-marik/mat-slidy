@@ -158,7 +158,7 @@ figcaption {font-size: 60%;}
 .menu-obalka{width:100%;
     font-weight:bold;
     color:white;
-			 display:block;    }
+    display:block;    clear:both;}
 
 .menu {display:inline-block; width:7.14%;text-align:center; color:white; text-decoration:none; border-style:solid; border-color:#eeeeee;box-sizing:border-box;     background-color:#006131; border-width:1px;}
 

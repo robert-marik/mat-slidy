@@ -1,0 +1,248 @@
+\documentclass{article}
+\usepackage[landscape, margin = 0.8cm, bottom=1.5cm, top=1.3cm]{geometry}
+\usepackage[czech]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amsfonts}
+
+\usepackage{multicol, enumerate, tikz}
+\setlength{\columnseprule}{0.4pt}
+\everymath{\displaystyle}
+
+\def\dx{\,dx}
+\def\dy{\,dy}
+\def\dr{\,dr}
+\def\dphi{\,d\phi}
+\def\dA{\,dA}
+\def\tg{\mathop{\mathrm{tg}}}
+\def\arctg{\mathop{\mathrm{arctg}}}
+\def\cotg{\mathop{\mathrm{cotg}}}
+
+\pagestyle{empty}
+
+\begin{document}
+
+
+\abovedisplayskip 3 pt
+\belowdisplayskip 3 pt
+\let\phi\varphi
+\footnotesize
+\parindent 0 pt
+\parskip 10 pt
+\begin{multicols}{3}
+\rightskip 0 pt plus 1 fill
+
+{\centering \parskip 0 pt
+\textbf{Cheat sheet Matematika}
+
+(Robert Mařík, \today)
+
+}
+
+\textbf{Funkce}
+
+\begin{itemize}
+\item Funkce jsou zobrazení mající na vstupu a výstupu reálná čísla. Používají se k vyjádření vzájemných relací zkoumaných veličin.
+\item Podle  toho, zda zachovávají uspořádání vzorů i pro obrazy dělíme na rostoucí, klesající a ostatní (bez monotonie).
+\item Podle toho, zda a jakým způsobem jsou symetrické dělíme na sudé, liché a ostatní (bez parity).
+\item Nejjednoduššími funkcemi jsou přímá úměrnost (násobení konstantou, $y=kx$) a napřímá úměrnost (násobení převrácené hodnoty konstantou, $y=\frac kx=k\frac 1x$).
+\item Je-li $y=f(x)$, říkáme, že $y$ závisí na $x$. Veličina $y$ je závislá veličina, veličina $x$ je nezávislá veličina.
+\end{itemize}
+
+\textbf{Spojitost a limita (velmi zjednodušeně)}
+
+\begin{itemize}
+\item Spojité funkce mají relativně malé změny funkčních hodnot při relativně malých změnách vstupních dat. Např. nejsou skoky.
+\item Limita umožňuje doplnit funkční hodnotu funkce tak, aby se stala spojitou (odstranitelná nespojitost).
+\end{itemize}
+
+\textbf{Derivace}
+
+Dává do souvislosti změny závislé a nezávislé veličiny. Změna se někdy interpretuje jako růst.
+
+$$\frac{\mathrm df}{\mathrm dx}:=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}$$
+
+\begin{itemize}
+\item Rychlost s jakou se mění $f$ při změnách $x$.
+\item Změna $f$ vyvolaná jednotkovou změnou $x$.
+\item Pro $f(t)$ je $\frac{\mathrm df}{\mathrm dt}$ rychlost růstu veličiny $f$ (v čase).
+\end{itemize}
+
+\textbf{Aplikace derivace}
+
+\begin{itemize}
+\item Rovnice pro růst rychlostí úměrnou funční hodnotě je
+  $$\frac{\mathrm dx}{\mathrm dt}=kx.$$
+  Rovnice pro růst rychlostí úměrnou vzdálenosti od stacionárního stavu je
+  $$\frac{\mathrm dx}{\mathrm dt}=k(M-x).$$
+  Řešením těchto modelů je možné získat časový průběh hledané funkce.
+\item Lineární aproximace funkce $f$ v okolí bodu $x_0$ je
+  $$f(x)\approx f(x_0)+ \frac{\mathrm df(x_0)}{\mathrm dx}(x-x_0).$$
+\item Okamžitá rychlost. Derivace vystupuje všude tam, kde nestačí průměrná rychlost, ale požadujeme rychlost okamžitou. Je proto v matematické formulace naprosté většiny fyzikálních zákonů, pokud se nechceme specializovat pouze na děje probíhající konstantními rychlostmi (jako ve středoškolské fyzice).
+\item Rovnice vedení tepla (pro parciální derivace) -- obsahuje časové i prostorové derivace, protože teplo se šíří v prostoru a teplota v daném místě se při vedení tepla mění s časem.
+\item Řešení rovnice $f(x)=0$ je možno provést iteracemi
+  $$x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)},$$
+  kde $f'(x_n)=\frac{\mathrm df(x_n)}{\mathrm dx}$ je derivace v bodě $x_n$ a iterační proces začne v nepříliš špatném počátečním odhadu řešení $x_0$ (Newtonova metoda). Každý jeden krok metody zdvojnásobí počet desetinných míst při přibližném řešení rovnice.
+\end{itemize}
+
+\textbf{Konečné diference}
+
+Slouží k numerickému aproximování derivace. Slouží také k odhadu derivace funmkce dané tabulkou.
+
+Dopředná diference: $\frac{\mathrm df}{\mathrm dx}=f'(x)\approx\frac{f(x)-f(x-h)}{h}$
+
+Centrální diference: $\frac{\mathrm d f}{\mathrm dx}=f'(x)\approx  \frac{f(x+h)-f(x-h)}{2h}$
+
+Druhá diference: $\frac{\mathrm d^2f}{\mathrm dx^2}=f''(x)\approx  \frac{f(x-h)-2f(x)+f(x+h)}{h^2}$
+
+\newcount\formulacount
+\def\hopla{\advance\formulacount by 1 {\scriptsize ({\the\formulacount})\ }}
+\def\derivace#1;#2\par{\kern 1pt\hopla $\displaystyle{(#1)'=#2}$\par\kern 2pt}
+\def\integral#1;#2\par{\kern 1pt\hopla $\displaystyle{\int #1\dx=#2+c}$\par}
+
+\textbf{Vzorce pro derivování}
+
+{\parskip 0 pt
+
+% \vspace*{-15pt}
+
+\begin{multicols}2
+  \derivace c;0
+
+  \derivace x^n;n x^{n-1}
+
+  \derivace e^x;e^x
+
+  \derivace \ln x;\frac 1x
+
+  \derivace \sin x;\cos x
+
+  \derivace \cos x;-\sin x
+
+  \derivace \tg x;\frac 1{\cos^2 x}
+
+  \derivace \cotg x;-\frac 1{\sin^2 x}
+
+  \derivace \arcsin x;\frac{1}{\sqrt {1-x^2}}
+
+  \derivace \arccos x;-\frac{1}{\sqrt {1-x^2}}
+
+  \derivace \arctg x;\frac 1{1+x^2}
+
+\bigskip
+
+\parskip 5 pt
+
+1. $(u\pm v)'=u'\pm v'$
+
+2. $(cu)'=cu'$
+
+3. $(uv)'=u'v+uv'$
+
+4. $\displaystyle{\Bigl(\frac {u}{v}\Bigr)'=\frac{u'v-uv'}{v^2}}$
+
+5. $\displaystyle{\Bigl(u(v(x))\Bigr)'=u'(v(x))v'(x)}$
+
+\end{multicols}
+
+}
+
+
+\textbf{Integrál}
+
+\textbf{Neurčitý integrál} Opak derivace. Z rychlosti změny určíme časový průběh měnící se veličiny. Je dána až na aditivní konstantu související s výchozím stavem.
+Píšeme
+$$\int f(x)\,\mathrm dx=F(b)-F(a),$$
+kde $F(x)$ je funkce splňující $\frac{\mathrm dF}{\mathrm dx}=f(x).$
+
+\textbf{Vzorce pro integrování}
+
+\vspace*{-8pt}
+{
+\parskip 0 pt
+\hbox to \linewidth{
+\begin{minipage}[t]{0.42\linewidth}
+  \integral ;x
+
+  \integral x^n; \frac{x^{n+1}}{n+1}
+
+  \integral \frac 1x;\ln |x|
+
+  \integral e^x;e^x
+
+  \integral \sin x;-\cos x
+
+  \integral \cos x;\sin x
+
+\end{minipage}\hfil\vrule\hfil
+\begin{minipage}[t]{0.53\linewidth}
+\formulacount=6
+\parskip 3pt
+
+  \integral \frac 1{\cos^2 x};\tg x
+
+  \integral \frac 1{\sin^2 x};-\cotg x
+
+
+  \integral \frac1{\sqrt{1-x^2}};\arcsin x
+
+  \integral \frac 1{1+x^2};\arctg x
+
+  \integral \frac 1{1-x^2};\frac 1{2}\ln\left|\frac{1+x}{1-x}\right|
+
+\end{minipage}}
+}
+
+
+
+\textbf{Určitý Newtonův integrál} Opak derivace, z rychlosti změny a z časového intervalu určímě změnu veličiny na daném intervalu. Narozdíl od neurčitého interálu je určitý integrál dán jednoznačně a není nutná informace o počátečním stavu. Počítáme vztahem 
+$$\int_a^bf(x)\,\mathrm dx=F(b)-F(a),$$
+kde $F(x)$ je funkce splňující $\frac{\mathrm dF}{\mathrm dx}=f(x).$
+
+\textbf{Určitý Riemmannův integrál} Počítá se stejně jako Newtonův. Součet nekonečné mnoha malých příspěvků k aditivní veličině. V praxi náhrada za nemožnost použít násobení v případě nekonstantních parametrů. Například dráha pohybu je rychlost násobená časem v případě pohybu konstantní rychlostí. V případě pohybu nekonstantní rychlostí je dráha místo součinu integrál rychlosti jako funkce času. 
+
+\penalty -500
+
+
+
+\textbf{Determinanty}
+
+\let\oldtextbf\textbf
+\def\textbf{\smallskip\hrule\oldtextbf}
+\vspace*{-10pt}
+
+Determinant 2$\times$2 \hfill$
+\begin{vmatrix}
+  a & b \\ c &d
+\end{vmatrix}
+=ad-bc
+$
+
+Determinant 3$\times$3 \\\null\hfill$
+\begin{vmatrix}
+  a & b & c \\ d & e &f \\ g & h & i
+\end{vmatrix}
+=aei-afh+bfg-bdi+cdh-ceg
+$\hfill\null
+
+\textbf{Vektory}, $\vec a=(a_1,a_2,a_3)$, $\vec b=(b_1,b_2,b_3)$, 
+
+Skalární součin vektorů
+$\vec a\cdot\vec b=a_1 b_1 + a_2 b_2+a_3b_3$
+
+Vektorový součin vektorů
+\vspace*{-8pt}
+$$\vec a\times \vec b=
+\begin{vmatrix}
+  \vec i & \vec j & \vec k\\
+  a_1 & a_2 & a_3 \\
+  b_1 & b_2 & b_3
+\end{vmatrix}
+$$
+
+Délka vektoru  $|\vec a|=\sqrt{a_1^2+a_2^2+a_3^2}$
+
+
+
+\end{multicols}
+\end{document}
+

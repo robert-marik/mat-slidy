@@ -331,6 +331,43 @@ Po tomto výpočtu je prvních pět cifer aproximace $\ln 2$ správně. Tady vid
 
 [Online výpočet.](https://sagecell.sagemath.org/?z=eJx1jrsKwkAQRfuF_YcBmxmMidHKws4_0E4sloQ8IJkJMYm7fr2bNSAErGY4F869BVo6N4yYbi0lmO4skVblQmeolVYbuEwGbsY10svkoJPGsbROqyIeAkUb7aMTxc9KXjgb_vDZdfUONlxDJTnL4MA3HQgM5JOMYLpebN2arPY1rfjTj292WfXr9_-yYNQqmO9BETNStFqEaXL8BuU6CPhBH7pTT2k=&lang=sage)
 
+# Konečné diference a aproximace derivace
+
+\iffalse
+
+<div class='obtekat'>
+
+![Tramvajový most v Brně Pisárkách z předpjatého betonu. Vede do zatáčky a ve stoupání. Analyticky vyřešit namáhání takového mostu je nereálné, podobné úlohy se řeší převodem úlohy obsahující derivace na úlohy lineární algebry. Podobné síly mohou vznikat i v\ dřevěných konstrukcích a to i v\ případě, že  nosníky primárně nekonstruujeme jako předpjaté. Zdroj: vlastní.](pisarky.jpg)
+
+</div>
+
+\fi
+
+Pro numerické řešení rovnic obsahujících derivace je vhodné umět nahradit derivace veličinami, se kterými se lépe pracuje v numerických výpočtech. 
+
+Základním přístupem je vynechání limitního přechodu v definici derivace $$\frac{\mathrm df}{\mathrm dx}=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}.$$ Tedy $$\frac{\mathrm df}{\mathrm dx}\approx\frac{f(x+h)-f(x)}{h}.$$ Okamžitá rychlost je nahrazena průměrnou rychlostí na intervalu $(x,x+h).$ Tento podíl se nazývá *dopředná poměrná diference*. Analogicky je definována vztahem $$\frac{\mathrm df}{\mathrm dx}\approx\frac{f(x)-f(x-h)}{h}$$ *zpětná diference*.
+
+Lepší aproximace derivace vychází z Taylorova polynomu druhého řádu napsaného pro $f(x+h)$ a $f(x-h)$, tj. ze vztahů
+$$\begin{aligned}
+f(x+h)&\approx f(x)+f'(x)h+\frac 12 f''(x)h^2,\\
+f(x-h)&\approx f(x)-f'(x)h+\frac 12 f''(x)h^2.
+\end{aligned}$$
+
+*  Pokud tyto vztahy odečteme, dostaneme 
+$$
+f(x+h)-f(x-h)\approx2f'(x)h.
+$$
+a odsud dostáváme aproximaci první derivace pomocí *centrální diference* ve tvaru 
+$$ \frac{\mathrm d f}{\mathrm dx}=f'(x)\approx  \frac{f(x+h)-f(x-h)}{2h}.$$
+Protože používáme aproximaci kvadratickým polynomem, je aproximace derivace pomocí centrální diference přesnější než aproximace pomocí dopředné diference.
+*  Pokud tyto vztahy sečteme, dostaneme 
+$$
+f(x+h)+f(x-h)\approx 2f(x)+ f''(x)h^2
+$$
+a odsud dostáváme aproximaci druhé derivace
+$$ \frac{\mathrm d^2f}{\mathrm dx^2}=f''(x)\approx  \frac{f(x-h)-2f(x)+f(x+h)}{h^2}.  $$
+
+
 # Odbočka: od vazeb mezi atomy k materiálovým vlastnostem
 
 \iffalse
@@ -446,6 +483,7 @@ testem pro ukončení výpočtu je porovnání dvou po sobě jdoucích
 iterací. Pokud se v rámci požadované přesnosti shodují, výpočet končí
 a známe přibližné řešení zadané rovnice.
 
+
 **Příklad.**
 Zkusme najít číslo takové, jehož kosinus je stejný jako toto číslo. 
 Rovnici $$x=\cos x$$ nejprve přepíšeme do tvaru $$x-\cos x=0$$ a hledáme vlastně řešení nulový bod funkce $f(x)=x-\cos x$. Po dosazení $f'(x)=1+\sin x$ získáváme iterační vzorec $$x_{n+1}=x_n-\frac{x_n-\cos x_n}{1+\sin x_n}$$ a jednotlivé iterace s počátečním odhadem $x_0=1$ a s\ aproximací na 60 desetinných míst [dávají postupně](https://sagecell.sagemath.org/?z=eJyrsDXk5UrLL1LIVMjMUyhKzEtP1TDXtOLlUgCCCluNCl0gSs4v1qjQ1NTXMNQuzswDMTX18jRSMtMzS4ptLQw0IaoLijLzShSAsgDDoBas&lang=sage&interacts=eJyLjgUAARUAuQ==) následující hodnoty.
@@ -464,7 +502,7 @@ Rovnici $$x=\cos x$$ nejprve přepíšeme do tvaru $$x-\cos x=0$$ a hledáme vla
 
 \egroup
 
-Vidíme, že proces opravdu neuvěřitelně rychle konverguje k\ řešení rovnice.
+Vidíme, že proces opravdu neuvěřitelně rychle konverguje k\ řešení rovnice. Rychlost konvergence je důležitá, pokud je výpočet funkční hodnoty "drahý". Například při modelování namáhání dřevěné konstrukce s nelineární charakteristikou aproximujeme rovnici pomocí konečných diferencí soustavou rovnic, která má desítky tisíc proměnných. Každé kolo iterační metody vyžaduje mnoho výpočtů a rychlost konvergence je zásadní. 
 
 **Příklad.**
 Někdy je možné použít ad hoc iterační techniku. Například rovnici $$x^4+7x-7=0$$ můžeme přepsat do tvaru $$x=\frac 17 (7-x^4)$$ a iterační vzorec
@@ -495,37 +533,6 @@ Vidíme konvergenci a iterační vzorec jsme našli s minimálním úsilím. Ryc
 
 Ad hoc iterace použijeme například při odvození Jacobiho metody pro iterační řešení soustavy diferenciálních rovnic.
 
-# Konečné diference a aproximace derivace
-
-\iffalse
-
-<div class='obtekat'>
-
-![Tramvajový most v Brně Pisárkách z předpjatého betonu. Vede do zatáčky a ve stoupání. Analyticky vyřešit namáhání takového mostu je nereálné, podobné úlohy se řeší převodem úlohy obsahující derivace na úlohy lineární algebry. Podobné síly mohou vznikat i v\ dřevěných konstrukcích a to i v\ případě, že  nosníky primárně nekonstruujeme jako předpjaté. Zdroj: www.moravskyturista.cz.](pisarky.jpg)
-
-</div>
-
-\fi
-
-Pro numerické řešení rovnic obsahujících derivace je vhodné umět nahradit derivace veličinami, se kterými se lépe pracuje v numerických výpočtech. 
-
-Základním přístupem je vynechání limitního přechodu v definici derivace $$\frac{\mathrm df}{\mathrm dx}=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}.$$ Tedy $$\frac{\mathrm df}{\mathrm dx}\approx\frac{f(x+h)-f(x)}{h}.$$ Okamžitá rychlost je nahrazena průměrnou rychlostí na intervalu $(x,x+h).$ Tento podíl se nazývá *dopředná poměrná diference*. Analogicky je definována vztahem $$\frac{\mathrm df}{\mathrm dx}\approx\frac{f(x)-f(x-h)}{h}$$ *zpětná diference*.
-
-Jiná aproximace vychází z Taylorova polynomu druhého řádu napsaného pro $f(x+h)$ a $f(x-h)$, tj. ze vztahů
-$$\begin{aligned}
-f(x+h)&\approx f(x)+f'(x)h+\frac 12 f''(x)h^2\\
-f(x-h)&\approx f(x)-f'(x)h+\frac 12 f''(x)h^2
-\end{aligned}$$
-Pokud tyto vztahy sečteme a odečteme, dostaneme 
-$$\begin{aligned}
-f(x+h)+f(x-h)&\approx2f(x)+ f''(x)h^2\\
-f(x+h)-f(x-h)&\approx2f'(x)h.
-\end{aligned}$$
-Odsud dostáváme aproximaci první derivace pomocí *centrální diference*
-$$ \frac{\mathrm d f}{\mathrm dx}=f'(x)\approx  \frac{f(x+h)-f(x-h)}{2h}  $$
-a druhé derivace
-$$ \frac{\mathrm d^2f}{\mathrm dx^2}=f''(x)\approx  \frac{f(x-h)-2f(x)+f(x+h)}{h^2}.  $$
-Protože používáme aproximaci kvadratickým polynomem, je aproximace derivace pomocí centrální diference přesnější než aproximace pomocí dopředné diference.
 
 # Shrnutí, hlavní myšlenky
 
