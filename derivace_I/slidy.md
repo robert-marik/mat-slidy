@@ -6,7 +6,7 @@
 >
 > * Seznámíme se s pojmem derivace funkce. Tento pojem umožňuje u měnící se veličiny určovat, jak rychle se tato veličina mění. Zatímco v případě rovnoměrné změny je problematika rychlosti triviální a řešitelná středoškolskými prostředky, v případě změny jejíž rychlost akceleruje nebo klesá je nutné zapojit zcela nový aparát, nazývaný infinitezimální počet. Derivace je jeho prvním představitelem. S dalším, integrálem, se setkáme později.
 > * Ze střední školy je student zvyklý na to, že si má osvojit dovednosti, jak se to počítá. Pro nás je však už důležité si uvědomit, že vůbec nějak dokážeme zachytit rychlost změny. Že s tím dokážeme pracovat, že například dokážeme pomocí těchto pojmů naformulovat fyzikální zákony pracující s rychlostmi změn. A věřte či ne, takové jsou skoro všechny. V podstatě celá středoškolská fyzika je postavena na studiu veličin, měnících se konstantní rychlostí. S tím se dá modelovat mnoho dějů okolo nás, ale pro hlubší poznání světa je to žalostně málo. Derivace umožní pracovat s libovolnými rychlostmi změn. Nesoustřeďte se proto na počítání, soustřeďte se na význam a využití. Soustřeďte se na rozpoznání kontextu, ve kterém problematiku studujeme. 
-> * Po přečtení přednášky byste měli mít v hlavě vybudovanou spojnici mezi derivací a rychlostí. Pokud se ve slovním popisu děje mluví o rychlosti, v matematickém modelu tato rychlostu figuruje prostřednictvím derivace. 
+> * Po přečtení přednášky byste měli mít v hlavě vybudovanou spojnici mezi derivací a rychlostí. Pokud se ve slovním popisu děje mluví o rychlosti, v matematickém modelu tato rychlost figuruje prostřednictvím derivace. 
 
 # Funkce jedné proměnné
 

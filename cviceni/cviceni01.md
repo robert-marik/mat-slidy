@@ -103,7 +103,9 @@ $$
 tj. mezi dvanáctým a třináctým rokem vyroste přibližně o $4.4$
 centimetru. (Slovo přibližně je použito proto, že derivace je okamžitá rychlost růstu a není zaručeno, že tato rychlost se udrží po celou jednotku času, tj. po celý rok.) 
 
-<a href="https://sagecell.sagemath.org/?z=eJx1jM0KgkAUhfeC73ChhX81jE0hLtz1AC1aB5MzojjNjZnRsKdPUyGCzupw-M7nip6bMHBBBGs2cDZ4l1pzcFsoufU9FbqooISynGWxu7IdJfnhOLZ9kk4zi13CCM3YeD5J1XIww23wPVvjM5zO3_ZLY1t4GIQWtTOoOt8T0jQ9L2WhiGiqKozgI5rHRbMys23RiD9Muh-hHwYsCLT8JTV2UKPQ6LB7AzQ9S-8=&lang=sage&interacts=eJyLjgUAARUAuQ==">Sage výpočet</a>
+* <a href="https://sagecell.sagemath.org/?z=eJx1jM0KgkAUhfeC73ChhX81jE0hLtz1AC1aB5MzojjNjZnRsKdPUyGCzupw-M7nip6bMHBBBGs2cDZ4l1pzcFsoufU9FbqooISynGWxu7IdJfnhOLZ9kk4zi13CCM3YeD5J1XIww23wPVvjM5zO3_ZLY1t4GIQWtTOoOt8T0jQ9L2WhiGiqKozgI5rHRbMys23RiD9Muh-hHwYsCLT8JTV2UKPQ6LB7AzQ9S-8=&lang=sage&interacts=eJyLjgUAARUAuQ==">Sage výpočet</a>
+* <a href="https://sagecell.sagemath.org/?z=eJyFUs1uozAQviPxDhN6MQmhJuyqalVuvfXQS29VN3LAERY_RsZpS96pT9EXq8fghG2r3TnYZr4fz4zRNEs2vlcTHWY0pul1erXUf9I1ja9__TanzSrBdLrUqzSmVylcwB2vKwZq2A2-15fylaA4hP_EBTyKvoJOSahkq5WsD75XKVkNkMFTQqMkonESgbltXN122mfxQ2rMP_ueGvKylr0W6Gu-89JUOp1LWbQy563DCq7EC8u5-azjQuz3JCQ60zQE2-cI-t5eKsBSQbR2H25mbd0jgG0xs7yJhuUCZMWao9AczsV0spEGmSXUoeGqNfboU-BQt53cHhve2nqIpiu8LPyLoHhhKfIwcdYzDgLM5L-Yrb-LR74rxkhG6SWQzXJmeKo2Zl3H24K4xITjbPFCtuvJaZZr-IE1OAcrmQCxnxxu7bPfjFmM00M5WfBwH0wqXvf8n9TFYuG4GL6n2e6A_6yZmOg1OYoOiH3H6NxhNJYZnf3C0CprTia9wTgzbW6VfM2eAnQIokAWJSvAdR9EENie8OCsPt6D5_ATIrP-Bw==&lang=sage&interacts=eJyLjgUAARUAuQ==">Sage numerický odhad</a> s ilustrací toho, že výsledek se dá odhadnout u použitím základních aritmetických operací, ale že délka kroku nemůže být ani moc krátká ani moc dlouhá. </a>
+
 </div>
 
 

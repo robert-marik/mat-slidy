@@ -1,5 +1,6 @@
 figure {float:right; max-width:50%;}
-.reseni {background-color: white; padding:20px; border-bottom-color:black;border-bottom-style:solid;}
+
+.reseni {background-color: #ffffcc; padding:20px; border-bottom-color:black;border-bottom-style:solid; clear:both;}
 li {margin-top:20px;}
 
 .reseni:before {content: "Řešení. ";}

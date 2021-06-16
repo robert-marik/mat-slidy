@@ -17,8 +17,6 @@ případem se v praxi setkáváme.
 
 Najděte lokální extrémy a intervaly monotonie následujících funkcí. Spolu s funkcí je zadána i její derivace.
 
-\def\priklad #1.#2. {$y=#1$, $y'=#2$}
-
 1. $y=\frac x{(x+1)^2}$, $y'=\frac{1-x}{(x+1)^3}$
 1. $y=\frac{x^2}{x+1}$, $y'=\frac{x(x+2)}{(x+1)^2}$
 1. $y=\frac{x^2}{x^2+1}$, $y'=\frac{2x}{(x^2+1)^2}$

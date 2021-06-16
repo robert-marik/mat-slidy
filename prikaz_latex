@@ -20,11 +20,13 @@ do
   sed -i 's/♠/\\ensuremath{\\spadesuit}/g' slidy.tex
   sed -i 's/\\begin{longtable}/{\\centering\\begin{supertabular}/g' slidy.tex
   sed -i 's/\\end{longtable}/\\end{supertabular}\\par}/g' slidy.tex
+  sed -i 's/textbackslash iffalse/iffalse/g' slidy.tex
 
   sed -i 's/♣/\\ensuremath{\\clubsuit}/g' $jj.tex
   sed -i 's/♠/\\ensuremath{\\spadesuit}/g' $jj.tex
   sed -i 's/\\begin{longtable}/{\\centering\\begin{supertabular}/g' $jj.tex
   sed -i 's/\\end{longtable}/\\end{supertabular}\\par}/g' $jj.tex
+  sed -i 's/textbackslash iffalse/iffalse/g' $jj.tex
 
   vlna pdfslide.tex
   pdflatex slidy.tex

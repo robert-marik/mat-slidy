@@ -4,7 +4,7 @@ sed -i 's/\\fi//' slidy_kopie.md
 
 # pandoc -t slidy -V slidy-url=../ --css ../my.css --template ../my.slidy -s slidy_kopie.md -o index_h.html --mathjax=http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
-pandoc -t slidy -V slidy-url=../ --css ../my.css --template ../my.slidy -s slidy_kopie.md -o index_h.html --mathjax=https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+pandoc -t slidy -V slidy-url=../ --css ../my.css?123 --template ../my.slidy -s slidy_kopie.md -o index_h.html --mathjax=https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
 sed -i -e :a -e '/<blockquote>$/N; s/<blockquote>\n/<blockquote>/; ta' index_h.html 
 sed -i 's/<blockquote><p>Definice (\([^\.]*\))./<blockquote class="definice"><p class="definicename">Definice (\1).<\/p><p>/' index_h.html
@@ -19,7 +19,7 @@ sed -i 's/<blockquote><p>Příklad:/<blockquote class="priklad"><p><span class="
 
 
 
-pandoc -t html --toc --css ../my.css --template ../default.html -s slidy.md -o index.html --mathjax=http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+pandoc -t html --toc --css ../my.css?123 --template ../default.html -s slidy.md -o index.html --mathjax=http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
 sed -i -e :a -e '/<blockquote>$/N; s/<blockquote>\n/<blockquote>/; ta' index.html 
 sed -i 's/<blockquote><p>Definice (\([^\.]*\))./<blockquote class="definice"><p class="definicename">Definice (\1).<\/p><p>/' index.html
