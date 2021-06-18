@@ -3,6 +3,10 @@
 % 7.5.2019
 
 
+
+
+# Motivace 
+
 V praxi pracujeme s řadou veličin, které se počítají tak, že se parametr systému násobí obsahem. 
 
 * Z plošné hustoty a obsahu násobením obdržíme hmotnost. 
@@ -13,10 +17,9 @@ Je však otázka, jak tento přístup použít v případě, že daný parametr 
 
 Řešení této nesnáze je použití dvojného integrálu, který si nyní představíme.
 
-
 \iffalse
 
-# Motivace 1 (hmotnost nehomogenní desky)
+## Hmotnost nehomogenní desky
 
 
 <div class='obtekat'>
@@ -44,7 +47,7 @@ Je však otázka, jak tento přístup použít v případě, že daný parametr 
 
 
 
-# Motivace 2 (objem vody v jezeře)
+## Objem vody v jezeře
 
 
 <div class='obtekat'>
@@ -66,7 +69,7 @@ Je však otázka, jak tento přístup použít v případě, že daný parametr 
   použijeme dvojný integrál a dostáváme $$V=\iint_\Omega h\mathrm dS.$$
 
 
-# Motivace 3 (průtok)
+## Průtok v řece nebo v potrubí
 
 
 <div class='obtekat'>
@@ -150,7 +153,9 @@ konstantou. Přesněji, platí následující věty.
 > Věta (aditivita vzhledem k oboru integrace).  Nechť je množina $\Omega$ rozdělena na dvě oblasti $\Omega_1$   a $\Omega_2$, které mají společné nejvýše hraniční body. Platí $$     \iint_\Omega f(x,y)\mathrm dx\mathrm dy=     \iint_{\Omega_1} f(x,y)\mathrm dx\mathrm dy+     \iint_{\Omega_2} f(x,y)\mathrm dx\mathrm dy. $$
 
 
-# Výpočet (oblast mezi funkcemi proměnné $x$)
+# Výpočet
+
+## Výpočet pro oblast mezi funkcemi proměnné $x$
 
 <div class='obtekat'>
 
@@ -176,7 +181,7 @@ integrál. Mají název **Fubiniovy věty**.
 > $$
 
 
-# Výpočet (oblast mezi funkcemi proměnné $y$)
+## Výpočet pro oblast mezi funkcemi proměnné $y$
 
 <div class='obtekat'>
 ![Oblast mezi funkcemi proměnné $y$.](fub_2.png)
@@ -204,6 +209,7 @@ integrál. Mají název **Fubiniovy věty**.
 
 </div>
 
+## Problematika záměny pořadí integrace
 
 Často je možné oblast integrace zapsat pomocí obou možností uvedených
 na předchozích slidech. Například oblast na obrázku je možno zapsat
@@ -231,7 +237,7 @@ pracujeme se dvěma různými integrály. Výsledky jsou stejné, nemusí
 však být dosažitelné srovnatelnou námahou, jedna z cest může být
 snazší.
 
-# Výpočet (obdélníková oblast)
+## Výpočet pro obdélníkovou oblast
 
 <div class='obtekat'>
 ![Integrál přes obdélník.](fub_3.png)
@@ -259,7 +265,9 @@ obdélníkovou oblast.
 > 
 
 
-# Matematické aplikace dvojného integrálu
+# Aplikace dvojného integrálu
+
+## Matematické aplikace dvojného integrálu
 
 
 
@@ -273,7 +281,7 @@ obdélníkovou oblast.
 
   \iffalse
 
-# Objem kopce nebo jezera pomocí vrstevnic
+## Objem kopce nebo jezera pomocí vrstevnic
 
 <div class='obtekat'>
 
@@ -296,9 +304,7 @@ Fubiniovy věty. Ke slovu přijde spíše numerický výpočet integrálu.
 
   \fi
   
-# Fyzikální aplikace dvojného integrálu
-
-
+## Fyzikální aplikace dvojného integrálu
 
 * **Hmotnost** množiny $M$ je $$m=\iint_M \sigma(x,y)\mathrm{d}x
   \mathrm{d}y,$$ kde $\sigma(x,y)$ je **plošná hustota** (hmotnost
@@ -312,7 +318,7 @@ Fubiniovy věty. Ke slovu přijde spíše numerický výpočet integrálu.
   osu $x$ je $\rho(x,y)=y$ a pro osu $y$ je $\rho (x,y)=x$. Pro osu
   procházející kolmo počátkem je $\rho(x,y)=\sqrt{x^2+y^2}$.
 
-# Techniké aplikace dvojného integrálu
+## Techniké aplikace dvojného integrálu
 
 
 \iffalse
@@ -346,7 +352,7 @@ Fubiniovy věty. Ke slovu přijde spíše numerický výpočet integrálu.
   kde $S=\mu (M)$ je obsah množiny $M$.
   Poloha těžiště je tedy střední hodnotou funkcí $x$ a $y$.
 
-# Aplikace dvojného integrálu - tuhost nosníků, stabilita stromů
+## Praktické aplikace dvojného integrálu - tuhost nosníků, stabilita stromů
 
 
 \iffalse
@@ -399,7 +405,7 @@ Odsud máme okamžitě několik pozorování
   mocninou a proto odolnost vůči zlomení klesne o něco více než
   tuhost.
 
-# Aplikace dvojného integrálu - těžiště složeného obrazce
+## Aplikace dvojného integrálu - těžiště složeného obrazce
 
 Uvažujme množinu $M$ s jednotkovou plošnou hustotou, rozdělenou na dvě
 disjunktní části $M_1$ a $M_2$. Tyto množiny mají $x$-ovou polohu
@@ -433,7 +439,7 @@ Zobecnění výše uvedených myšlenek na množinu rozdělenou na více část�
 je již snadné.
 
 
-# Aplikace dvojného integrálu - Steinerova věta
+## Aplikace dvojného integrálu - Steinerova věta
 
 Nechť je dána množina $M$ s plošnou hustotou $\sigma(x,y)$. *Ukážeme,
 že vzhledem k ose procházející těžištěm je nejmenší moment
@@ -480,7 +486,7 @@ a momentu setrvačnosti hmotného bodu ležícího
 v těžišti množiny a o stejné hmotnosti jako je hmotnost množiny vzhledem k ose $o$.*
 
 
-# Aplikace dvojného integrálu - tlak na svislou plochu
+## Aplikace dvojného integrálu - tlak na svislou plochu
 
 \iffalse
 
@@ -546,7 +552,7 @@ Nikde ve výpočtu jsme nepoužili konkrétní meze pro integraci. Výsledek
 tedy platí nejenom pro hráz dosahující k hladině, ale například i pro
 poklop výpusti, který je celý pod vodou.
 
-# Aplikace dvojného integrálu - působiště tlakové síly
+## Aplikace dvojného integrálu - působiště tlakové síly
 
 Budeme pokračovat v předchozím příkladě a hledat působiště výsledné
 tlakové síly.

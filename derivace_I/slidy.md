@@ -8,24 +8,26 @@
 > * Ze střední školy je student zvyklý na to, že si má osvojit dovednosti, jak se to počítá. Pro nás je však už důležité si uvědomit, že vůbec nějak dokážeme zachytit rychlost změny. Že s tím dokážeme pracovat, že například dokážeme pomocí těchto pojmů naformulovat fyzikální zákony pracující s rychlostmi změn. A věřte či ne, takové jsou skoro všechny. V podstatě celá středoškolská fyzika je postavena na studiu veličin, měnících se konstantní rychlostí. S tím se dá modelovat mnoho dějů okolo nás, ale pro hlubší poznání světa je to žalostně málo. Derivace umožní pracovat s libovolnými rychlostmi změn. Nesoustřeďte se proto na počítání, soustřeďte se na význam a využití. Soustřeďte se na rozpoznání kontextu, ve kterém problematiku studujeme. 
 > * Po přečtení přednášky byste měli mít v hlavě vybudovanou spojnici mezi derivací a rychlostí. Pokud se ve slovním popisu děje mluví o rychlosti, v matematickém modelu tato rychlost figuruje prostřednictvím derivace. 
 
-# Funkce jedné proměnné
+# Funkce
 
 
 \iffalse
 
 <div class='obtekat'>
 
-![Strom je z mechanického hlediska také nosník.  Svislý a velmi komplikovaný. Zdroj: pixabay.com](strom_vitr.jpg)
+![Strom je z mechanického hlediska také nosník. Svislý a velmi komplikovaný. Zdroj: pixabay.com](strom_vitr.jpg)
 
 </div>
 
 \fi
 
-
-Příklad funkce jedné proměnné. Je dán vetknutý nosník na konci zatížený svislou silou $F$. Deformace nosníku $\delta$ na konci (skalární veličina) souvisí s velikostí zatěžující síly (skalární veličina). Pro studium problému je vhodné mít převodní pravidlo, které pro každé zatížení udává deformaci. Toto pravidlo bude z matematického úhlu pohledu funkce (funkce jedné proměnné). Může mít například formu
+Při hlubším než povrchním studiu libovolného systému nás zajímají veličiny spojené se studovaným problémem a vztahy mezi těmito veličinami. Tyto vztahy jsou zprostředkovávány funkcemi. Jako příklad si představme nosník vetknutý do země a na konci zatížený vodorovnou silou $F$. Deformace nosníku $\delta$ na konci (skalární veličina) souvisí s velikostí zatěžující síly (skalární veličina). Pro studium problému je vhodné mít převodní pravidlo, které pro každé zatížení udává deformaci. Toto pravidlo bude z matematického úhlu pohledu funkce (funkce jedné proměnné). Může mít například formu
 $$\delta=\frac 1k F,$$
 kde $k$ je konstanta pro daný nosník (tuhost).
 
+Na řadu použití stačí intuitivní chápání funkce i jejích vlastností. Někdy je však potřeba si myšlenky zpřesnit a plně formalizovat. V následujícícm představíme definici funkce, rozdělíme funkce na rostoucí, kelsající a ostatní a ukážeme si využití těchto vlastností. 
+
+## Funkce jedné proměnné
 
 > Definice (funkce jedné proměnné).
   Buďte $A$ a $B$ neprázdné podmnožiny množiny reálných čísel.
@@ -49,10 +51,9 @@ kde $k$ je konstanta pro daný nosník (tuhost).
   $[x,y]\in\mathbb R^2$ s vlastností $y=f(x)$.
 
 
-# Přímá a nepřímá úměrnost
+## Přímá a nepřímá úměrnost
 
-Výsadní postavení při popisu dějů a jevů v přírodě mají přímá a
-nepřímá úměrnost, známé ze střední školy.
+Je to až k nevíře, ale k popisu obrovského množství dějů stačí čtyři základní operace: sčítání, odčítání, násobení a dělení. Vzhledem k požadavku na konzistenci fyzikálních jednotek se nejčastěji setkáváme s násobením a dělením a proto funkce pracující s těmito operacemi mají výsadní postavení. Takový, že si vysloužili pojmenování běžně užívané i mezi nematematiky: přímá a nepřímá úměrnost.
 
 > Definice (přímá a nepřímá úměrnost). Veličina $y$ je *přímo úměrná* veličině $x$ jestliže existuje konstanta $k$ taková, že platí $$y=kx.$$ 
 Veličina $y$ je *nepřímo úměrná* veličině $x$ jestliže existuje konstanta $k$ taková, že platí $$y=\frac kx.$$
@@ -69,7 +70,7 @@ Veličina $y$ je *nepřímo úměrná* veličině $x$ jestliže existuje konstan
 * Síla působící na těleso ve vzdálenosti $r$ od planety je dána vztahem $F=\frac{k}{r^2}$, kde $k$ je konstanta úměrnosti (závislá na hmotnosti planety i tělesa). Toto můžeme slovně vyjádřit tak, že síla je nepřímo úměrná druhé mocnině vzdálenosti. Pro $r$ rovno jedné je síla $F$ přímo rovna konstantě $k$. Konstanta úměrnosti $k$ proto udává sílu působící na těleso v jednotkové vzdálenosti od planety.
 
 
-# Monotonie funkce
+## Monotonie funkce
 
 V následující definici jsou nejdůležitější pojmy
 rostoucí a  klesající funkce. Názorně
@@ -121,10 +122,11 @@ $$\frac 1{\sqrt x} \leq \frac 15$$
 plyne $$\sqrt x\geq 5=\sqrt {25}.$$ Druhá mocnina je na intervalu $(5,\infty)$ rostoucí a proto odsud plyne dále $$x\geq 25.$$
 
 
+# Přípravné úvahy pro zavedení derivace
 
 \iffalse
 
-# Koncept (různé pojetí rychlosti)
+## Různé pojetí rychlosti
 
 
 <div class='obtekat'>
@@ -145,7 +147,7 @@ Budeme se zajímat o to, jak rychle se mění funkční hodnoty v čase nebo př
 \fi
 
 
-# Koncept (průměrná rychlost a okamžitá)
+## Průměrná rychlost a okamžitá rychlost
 
 \iffalse
 
@@ -178,7 +180,7 @@ oproti obecnému postupu mnohé usnadní. Zejména pojem limity můžeme
 opřít o pojem spojitost, který je přece jenom intuitivnější.
 
 
-# Spojitost
+## Spojitost
 
 Definice spojitosti zavádí jakousi třídu funkcí, které jsou v jistém smyslu pěkné a můžeme pro ně použít postupy, které pro obecné funkce nefungují. Jsou zde funkce, jejichž funkční hodnoty se mění plynule a nemůžou se změnit skokově. Malá změna ve vstupních datech vyvolá malou změnu ve funkčních hodnotách.  
 
@@ -218,7 +220,7 @@ je spojitá funkce. Vznikla doplněním jedné funkční hodnoty do definice fun
 >
 > [Grafy.](https://sagecell.sagemath.org/?z=eJxL06jQtNWo0NZITCoGMjU19TWMtCo0ebnSQRLFmXlASr-ClyvA0DZNryAnv0RDo0JH11THVBOoJsDINh1VUEchOT8nv8hWvSg1RR2kwlA7wAgAMsAaHQ==&lang=sage)
 
-# Limita
+## Limita
 
 Definici limity opřeme o pojem spojitosti. V podstatě pod limitu skryjeme buď funkční hodnotu spojité funkce (pokud existuje), nebo hodnotu, která danou funkci učiní spojitou. Můžeme tedy limitu považovat za  "nejlepší rozumnou náhradu" funkční hodnoty v tom smyslu, že po předefinování jedné funkční hodnoty se funkce stane spojitou, tj. relativně pěknou. 
 
@@ -260,7 +262,7 @@ $f'$, $f'(x)$ nebo $\frac{\mathrm df}{\mathrm dx}$. Zápis $\frac{\mathrm df}{\m
 \fi
 
 Interpretace derivace v nematematických disciplínách je okamžitá
-rychlost s jakou veličina $f$ reaguje na změny veličiny $x$. Často
+7rychlost s jakou veličina $f$ reaguje na změny veličiny $x$. Často
 studujeme veličiny závislé na čase s v tomto případě jde tedy o
 rychlost, s jakou se veličina mění v čase. Další možnosti a obraty používané pro slovní vyjádření derivace jsou zmíněny níže v podkapitole věnované derivaci podle času. Analogickou terminologii (rychlost růstu, rychlost změny) zpravidla přenášíme i na případy, kdy nezávislou proměnnou není čas. Rychlost potom chápeme v abstraktním slova smyslu.
 
@@ -473,7 +475,7 @@ Derivace vychází bez jednotky (sekunda lomeno sekundou se zkrátí) a je možn
 $$\frac{\mathrm dT}{\mathrm dt} =0.35 \frac{\mathrm{ms}}{\mathrm{s}}.$$
 Perioda kyvadla se prodlužuje rychlostí $0.35$ milisekundy za sekundu.
 
-# Rychlost nabíjení kondenzátoru
+## Rychlost nabíjení kondenzátoru
 
 \iffalse
 
@@ -503,7 +505,7 @@ Funkce má na vstupu více proměnných, na výstupu reálné číslo. Některé
 
 \iffalse
 
-# Koncept (parciální derivace)
+## Myšlenka na zavedení derivace funkce více proměnných
 
 <div class='obtekat'>
 
@@ -543,9 +545,9 @@ možný makroskopický pohled na těleso jako na jeden celek.
 
 \fi
 
-# Parciální derivace
+## Parciální derivace
 
-Změna funkce více proměnných může být způsobena změno libovolné
+Změna funkce více proměnných může být způsobena změnou libovolné
 nazávislé proměnné. Pokud sledujeme například ve stěně měnící se
 teplotní profil, zajímá nás, jak se teplota v jednotlivých místech
 stěny mění v čase a jak se teplota mění v řezu stěnou. Zdá se býti
@@ -587,6 +589,10 @@ teplotnímu rozdílu a teplo teče z místa v větší teplotou do místa s men�
 <div class='obtekat'>
 
 ![Jednorozměrná je například úloha, kde tok v jednom směru je dominantní a toky jiným směrem zanedbatelné. Například okno nebo stěna domu. Zdroj: Cengel, Ghajar: Heat and Mass Transfer.](domek.png)
+
+
+![Ukázka možného výstupu z rovnice vedení tepla. Vodorovně je poloha v tyči, svisle čas, barva označuje teplotu. Dole je počáteční stav, nulová teplota podél celé tyče. Po ohřátí pravého konce na 100 stupňů a udržování levého konce na nulové teplotě se postupně nastolí rovnováha s lineárním teplotním profilem (teplota rovnoměrně roste doprava). Časový průběh toho, jak se od pravého konce postupně ohřívají jednotlivé části tyče, získáme řešením rovnice vedení tepla. Teplotní profily pro jednotlivé časy získáme na vodorovných řezech v obrázku. Vývoj teploty v pevně sledovaných bodech získáme na svislých řezech.](octave.png)
+
 
 </div>
 

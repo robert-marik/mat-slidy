@@ -33,6 +33,7 @@ color:black;
 background-color:#d2ffd2; 
 padding:5px; 
 border:solid #006131;
+border:none;
 }
 
 blockquote em {color:red;}
@@ -48,6 +49,7 @@ padding:5px;
 .titlepage h1 {border-bottom:none; color: #222; color: #006131;}
 
 h1{ clear:both;}
+h2{ clear:both;}
 
 div.toolbar {background-color: #006131;}
 .toolbar  a:link {color: white;}
@@ -185,3 +187,8 @@ blockquote {margin-left:0px; margin-right:0px;box-sizing:border-box; }
 
  .footer a {color:white;}
  .footer a:visited {color:white;}
+
+ h1 {
+     color: rgba(23,112,5,1);
+     font-size: 350%;
+ } 

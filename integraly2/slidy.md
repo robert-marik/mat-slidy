@@ -24,7 +24,7 @@ definování funkcí, které nejsou elementární.
 Nejprve si připomeneme jednu ze základních aplikací integrálu:
 nasčítání příspěvků od spojitě se měnící veličiny.
 
-# Proč trubky praskají podélně?
+# Příklad: proč trubky praskají podélně?
 
 
 <div class='obtekat'>
@@ -192,7 +192,7 @@ tomuto příkladu vrátíme.
 -->
 
 
-# Práce při vytahování řetězu
+# Příklad: práce při vytahování řetězu
 
 \iffalse
 
@@ -245,7 +245,7 @@ $$W=\frac 12 \tau g h_1^2$$ a numericky $W=8829\,\mathrm J.$ Protože vytáhnout
 
 
 
-# Práce při čerpání vody
+# Příklad: práce při čerpání vody
 
 \iffalse
 
@@ -523,7 +523,7 @@ integrálu je možné jistým způsobem pracovat, aniž bychom měli k
 dispozici analytické vyjádření této funkce.
 
 
-# Ukázka funkce definované pomocí integrálu
+# Příklad: ukázka funkce definované pomocí integrálu
 
 \iffalse
 
@@ -641,7 +641,7 @@ kdy se jedná o minimum pětiletého průměru a kdy o maximum.
 -->
 
 
-# Řetěz jinak (pomocí změny potenciální energie)
+# Příklad: řetěz jinak (pomocí změny potenciální energie)
 
 Vypočítáme příklad z prací při vytahování řetězu tak, že určíme změnu potenciální energie
 řetězu. Práci $W$ vykonanou při vyzvednutí tělesa o hmotnosti $m$ o výšku

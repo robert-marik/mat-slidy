@@ -6,7 +6,7 @@
 
 \iffalse
 
-# Připomenutí derivací z ptačí perspektivy
+## Připomenutí derivací z ptačí perspektivy
 
 <div class='obtekat'>
 
@@ -69,8 +69,11 @@ pouze pro malé $\Delta h$ nás nijak neomezuje. Většinou se tento
 aparát používá tam, kde se chyba limitním přechodem "stáhne na
 nulu". Navíc, ukazujeme koncept. *Důležité je si z příkladu odnést, že derivace umožní analyzovat, jak vypočítané veličiny reagují na změny ve vstupních datech. Výsledkem může být například maximální teoretická přesnost se kterou je možné vypočítat výslednou veličinu při vstupních datech zatížených chybou nebo nějakým způsobem nejistých (zákon šíření chyb).*
 
+# Lineární aproximace 
 
-# Lineární aproximace v 1D
+V následujících pasážích se budeme věnovat lineární aproximaci funkce. To je nahrazení funkce s jakkoli složitým funkčním předpisem funkcí s tím nejjednodušším možným předpisem: lineární funkcí. Tím se pochopitelně dopouštíme jisté nepřesnosti a je to něco za něco: k popisu úlohy máme poté k dispozici jednodušší funkce, ale výpočty jsou zatíženy chybou. Někdy tato chyba může být tak velká, že je idea lineární aproximace naprosto nepoužitelná. Ale jindy se jedná o nástroj, který prakticky neřešitelnou úlohu převede na úlohu snadno zvládnutelnou. Linearizace nelineárních úloh je jedním ze základních inženýrských postupů. V mnoha případech dává samotná dobré výsledky a řeší zadaný problém, v jiných případech slouží jako odrazový můstek ke zvládnutí nelineárního problému.
+
+## Lineární aproximace v 1D
 
 Pokud se funkce mění, můžeme odhad změny z předchozího odstavce přičíst k
 funkční hodnotě a tím máme odhad funkční hodnoty po změně. Toto je
@@ -83,7 +86,7 @@ Buď $f:\mathbb R\to\mathbb R$ funkce, která má derivaci. V okolí bodu $x_0$
 $$f(x)\approx f(x_0)+ \frac{\mathrm df(x_0)}{\mathrm dx}(x-x_0).$$
 
 
-> Poznámka (slovní intepretace vzorce pro lineární aproxiamci). Výše uvedený vzorec není těžké rozšifrovat.
+> Poznámka (slovní interpretace vzorce pro lineární aproximaci). Výše uvedený vzorec není těžké rozšifrovat.
 >
 >* Veličina $f(x)$ je funkční hodnota v bodě $x$, tu chceme odhadnout.
 >* Veličina $f(x_0)$ je známá funkční hodnota v bodě $x_0$, to je
@@ -110,7 +113,7 @@ blízké k nule.  $$\sin x\approx x, \quad \cos x\approx 1,\qquad
 rotací v rovině. Mnoho důležitých aplikací těchto vzorců ve fyzice je na webu [fyzikální olympiády](http://fyzikalniolympiada.cz/studijni-texty) v dokumentu [Aproximace ve fyzikálních úlohách](http://fyzikalniolympiada.cz/texty/aproxim.pdf).
 
 
-# Lineární aproximace v některých fyzikálních zákonech
+## Lineární aproximace v některých fyzikálních zákonech
 
 \iffalse
 
@@ -163,7 +166,7 @@ pro $v$ mnohem menší než $c$. Snadno rozšifrujeme, že s rychlostí souvisí
 
  Ač se jedná "jenom" o\ lineární aproximaci, je  vzorec $E=\frac 12 mv^2$ dokonce mnohem použitelnější, protože výpočet kinetické energie pomocí univerzálně platného relativistického vzorce při malých rychlostech v praxi obvykle zhavaruje na [zaokrouhlovacích chybách](https://sagecell.sagemath.org/?z=eJyVUb1OwzAQ3iv1HU7t4lSkSQwFOmQMCwNSH6CS45yIG_-UOLVIn55LCm0YGJA8nO8-fT93Js2zDSyhNq6zznfgygM23Wk-kznfbp-2_GHzDARoe1nrAeADdlpAALPyexZn0XwWcp4m9-vHKeybB46u7svTQUlVO_B4BSjgKTQmqV0FxxYDVmgF0LvRzmfHVtkO2OJVWeyUbASgxfZdITRaeGr0BsLZtRINkTgwQk8UFtGVIUv4yqSrsOe33i-FtxKl7UcylCOXVqULTtup5co1zkqkHLoWgZagrDvBWbimdSfCBCGVrEFS5EG8yHISlXtOJc_ZpU6Y_2g7lsVkJqF_FBFyCRcjRQaTD19bdvPLCh4XWTT0fpr_TnAHw4Y84GfXoqHJOfQehxB0A2_HkKGnm1gnKY0dd7iDHHYo9ItCXbEsTceT79jl6DeDO8b-zhhfJlR9AXtJxZs=&lang=sage&interacts=eJyLjgUAARUAuQ==).
 
-# Lineární aproximace a jednorozměrné materiálové vztahy
+## Lineární aproximace a jednorozměrné materiálové vztahy
 
 \iffalse
 
@@ -187,7 +190,7 @@ Pokusíme se modelovat funkci dávající do souvislosti velikost podnětu a rea
 * V některých velmi speciálních případech dokonce umíme určit materiálovou charakteristiku výpočtem namísto měření. Pro praktické využití tato dovednost není významná (můžeme vypočítat například koeficient filtrace pro půdu složenou z částic ve tvaru stejně velkých kuliček, v praxi se však s takovým materiálem setkáme nanejvýš při speciálních aplikacích v laboratoři), ale dává nám to důležitý prostor pro ověření fyzikálních hypotéz a matematických postupů.
 
 
-# Derivace a tečna
+## Derivace a tečna
 
 Lineární aproximace funkce je vlastně aproximace tečnou. Protože 
 pojem tečna ze střední školy chápeme jenom intuitivně, můžeme nyní pomocí
@@ -199,7 +202,11 @@ bodem $[x_0,f(x_0)]$, která má směrnici $f'(x_0)$. Proto se o derivaci
 
 Díky souvislosti derivace s tečnou je derivace jedinečným nástrojem při popisu vlastností křivek. Příslušná oblast se nazývá diferenciální geometrie a je to jakási oblast mezi geometrií a diferenciálním počtem.
 
-# Motivace: Je možné chtít více než je lineární aproximace?
+# Aproximace vyššího řádu
+
+
+
+## Motivace: Je možné chtít více než je lineární aproximace?
 
 \iffalse
 
@@ -228,7 +235,7 @@ chápat jako selhání lineární aproximace. Následující slidy a pojem
 Taylorův polynom nám umožní najít prostředek pro aproximaci i v těchto
 případech.
 
-# Derivace vyšších řádů
+## Derivace vyšších řádů
 
 > Definice (druhá a další vyšší derivace).
 >
@@ -261,7 +268,7 @@ $$\frac{\partial ^2 f}{\partial y^2}:=\frac{\partial }{\partial y}\left(\frac{\p
 nebo 
 $$\frac{\partial ^2 f}{\partial x\partial y}:=\frac{\partial }{\partial y}\left(\frac{\partial f}{\partial x}\right).$$
 
-# Druhá derivace a deformace nosníků
+## Druhá derivace a deformace nosníků
 
 \iffalse
 
@@ -292,7 +299,7 @@ $$EI\frac{\mathrm d^2v}{\mathrm dx^2}+Fv=0.$$ Aplikace jsou, jak bylo uvedeno, p
 Někdy je vhodné mít moment $M(x)$ síly deformující nosník mít vyjádřený pomocí zatížení nosníku. To souvisí s druhou derivací momentu a proto je nutno rovnici ještě dvakrát derivovat. Proto se ohybová rovnice nosníku někdy uvádí jako vztah obsahující dokonce čtvrtou derivaci.
 
 
-# Taylorův polynom a polynomiální aproximace v 1D
+## Taylorův polynom a polynomiální aproximace v 1D
 
 
 > Definice (Taylorův polynom).
@@ -331,7 +338,7 @@ Po tomto výpočtu je prvních pět cifer aproximace $\ln 2$ správně. Tady vid
 
 [Online výpočet.](https://sagecell.sagemath.org/?z=eJx1jrsKwkAQRfuF_YcBmxmMidHKws4_0E4sloQ8IJkJMYm7fr2bNSAErGY4F869BVo6N4yYbi0lmO4skVblQmeolVYbuEwGbsY10svkoJPGsbROqyIeAkUb7aMTxc9KXjgb_vDZdfUONlxDJTnL4MA3HQgM5JOMYLpebN2arPY1rfjTj292WfXr9_-yYNQqmO9BETNStFqEaXL8BuU6CPhBH7pTT2k=&lang=sage)
 
-# Konečné diference a aproximace derivace
+# Konečné diference a numerická aproximace derivace
 
 \iffalse
 
@@ -401,7 +408,7 @@ původně pro těleso na pružině. Analogicky se chovají pružné konstrukce. 
 * Dále můžeme tímto způsobem určit pevnost vazby a tím pro daný materiál určit Youngův modul pružnosti, tj. konstantu úměrnosti mezi deformací materiálu a tahovým nebo tlakovým napětí v materiálu.
 * Poloha rovnovážné polohy, resp. její závislost na teplotě (pokud bychom do matematického modelu dodali skutečné parametry i s jejich teplotní závislostí) zase definuje koeficient teplotní roztažnosti materiálu.
 
-Takovým způsobem můžeme u materiálu se známou strukturou odhadnout fyzikální vlastnosti výpočtem. To je důležité, protože teoretické předpovídání vlastností materiálu otevírá cestu k navrhování nových materiálů s výhodnějšími vlastnostmi. materiál můžeme prozkoumat ješte dříve, než jej vyrobíme a dostaneme na stůl.
+Takovým způsobem můžeme u materiálu se známou strukturou odhadnout fyzikální vlastnosti výpočtem. To je důležité, protože teoretické předpovídání vlastností materiálu otevírá cestu k navrhování nových materiálů s výhodnějšími vlastnostmi. materiál můžeme prozkoumat ještě dříve, než jej vyrobíme a dostaneme na stůl.
 
 \iffalse
 
@@ -409,8 +416,13 @@ Takovým způsobem můžeme u materiálu se známou strukturou odhadnout fyziká
 
 \fi
 
+# Řešení rovnic
 
-# Prostá funkce
+V praxi se setkáváme s případy, kdy je znám výsledek po aplikování funkce na vstupní data a je nutné rekonstruovat tato vstupní data. Řešíme tedy rovnici, kde neznámá je argumentem funkce a je známa funkční hodnota. Pojmy nutné pro korektní formulaci a jednu z velmi rychlých přibližných metod řešení rovnic si představíme v následujících pasážích.
+
+Nejprve se budeme zabývat tím, jestli se k funkční hodnotě dají vstupní data rekontsruovat jednoznačně (prostá funkce). Pokud ano, představíme si pravidlo, které toto přiřazení vstupních dat k výsledku po aplikaci funkce dokáže realizovat (inverzní funkce). A na závěr si ukážeme metodu, jak při řešení rovnic (resp. počítat funkční hodnoty inverzních funkcí) využít derivaci. To vede k velmi rychlé a velmi obecné metodě numerického řešení (Newtonova metoda).
+
+## Prostá funkce
 
 Někdy jsme v situaci, že známe výsledek po působení nějaké funkce a
 potřebujeme zrekonstruovat vstupní hodnotu. Řešíme tedy pro zadanou
@@ -433,7 +445,7 @@ plyne $x=5$.
 **Příklad.** Funkce $x^2$ není prostá a proto z rovnosti $x^2 = 7^2$ neplyne $x=7$.
 
 
-# Inverzní funkce
+## Inverzní funkce
 
 Inverzní úloha je tak trošku jako reverzní inženýrství. Máme výsledek
 a potřebujeme znát vstupní data. U funkcí to je supersnadné, u
@@ -453,7 +465,7 @@ Symbol $f^{-1}(x)$ lze tedy chápat buď jako hodnotu inverzní funkce
 **Příklad.** Funkce $y=x^2$ není prostá na $\mathbb R$ a proto zde nemá inverzní funkci. Pokud definiční obor funkce $y=x^2$ zúžíme na nezáporná čísla, tj. požadujeme $x\geq 0$, je taková funkce prostá a má inverzní funkci. Protože tato úloha má praktický význam, vyplatí se pro tuto inverzní funkcí zavést speciální označení. Jak dobře víme, inverzní funkcí je druhá odmocnina, tj. funkce $y=\sqrt x$.
 
 
-# Newtonova metoda
+## Newtonova metoda
 
 Newtonova metoda (též Newtonova Raphsonova metoda) je metoda pro
 numerické řešení rovnic. To používáme v případě, že není možné (nebo
@@ -506,7 +518,7 @@ Vidíme, že proces opravdu neuvěřitelně rychle konverguje k\ řešení rovni
 
 **Příklad.**
 Někdy je možné použít ad hoc iterační techniku. Například rovnici $$x^4+7x-7=0$$ můžeme přepsat do tvaru $$x=\frac 17 (7-x^4)$$ a iterační vzorec
-$$x_{n+1}=\frac 17 (7-x_n^4)$$ s počátečním odhadem $x=1$ dává po deseti iteracích [tři desetiná místa shodná](https://sagecell.sagemath.org/?z=eJxTVqiIM9E2r9A1tzXg5VJWqLA11DdX0DDXBQpr8nLxcgEFeLnS8osUMhUy8xSKEvPSUzVMDTSteLkUgKDCNk8DqEELqkETIlpQlJlXoqCRqVOhCQAgthZa&lang=sage&interacts=eJyLjgUAARUAuQ==).
+$$x_{n+1}=\frac 17 (7-x_n^4)$$ s počátečním odhadem $x=1$ dává po deseti iteracích [tři desetinná místa shodná](https://sagecell.sagemath.org/?z=eJxTVqiIM9E2r9A1tzXg5VJWqLA11DdX0DDXBQpr8nLxcgEFeLnS8osUMhUy8xSKEvPSUzVMDTSteLkUgKDCNk8DqEELqkETIlpQlJlXoqCRqVOhCQAgthZa&lang=sage&interacts=eJyLjgUAARUAuQ==).
 
 ~~~
 0 0.857142857142857

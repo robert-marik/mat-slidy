@@ -76,7 +76,7 @@ vyjadřuje počáteční podmínka, uvedená v následující definici.
 
 
 
-# Obecné a partikulární řešení
+## Obecné a partikulární řešení
 
 
 Řešení diferenciální rovnice je nekonečně mnoho. Zpravidla je dokážeme
@@ -106,7 +106,9 @@ splňující diferenciální rovnici.
 
 
 
-# Příklad - tepelná výměna
+# Modely využívající diferenciální rovnice
+
+## Tepelná výměna
 
 \iffalse
 
@@ -139,7 +141,7 @@ splňující diferenciální rovnici.
   \frac{\mathrm d\tau}{\mathrm dt}=-k\tau,$$
   tedy na rovnici, kdy rychlost změny je úměrná funkční hodnotě.
 
-# Příklad - datování pomocí uhlíku
+## Datování pomocí uhlíku
 
 \iffalse
 
@@ -178,7 +180,7 @@ splňující diferenciální rovnici.
   v tomto případě používají látky s\ delším poločasem rozpadu.
 
 
-# Příklad - rovnice samočištění jezer
+## Rovnice samočištění jezer
 
 \iffalse
 
@@ -228,7 +230,7 @@ splňující diferenciální rovnici.
 \iffalse
 
 
-# Příklad - akutní normovolemická hemodiluce
+## Akutní normovolemická hemodiluce
 
 
 <div class='obtekat'>
@@ -274,7 +276,7 @@ splňující diferenciální rovnici.
 \fi
 
 
-# Příklad - RC obvod
+## RC obvod
 
 \iffalse
 
@@ -305,7 +307,7 @@ Ve skutečnosti žádná elektronická součástka nemá ideální vlastnosti a 
 
 
 
-# Příklad - vývoj populace a její ekologický lov
+## Vývoj populace a její ekologický lov
 
 
 \iffalse
@@ -340,7 +342,7 @@ Ve skutečnosti žádná elektronická součástka nemá ideální vlastnosti a 
 \iffalse
 
 
-# Příklad - lovci meteoritů z ČSSR a ČR
+## Lovci meteoritů z ČSSR a ČR
 
 
 <div class='obtekat'>
@@ -729,7 +731,7 @@ R. L. Devaney, G.  R. Hall: Differential equations, Cengage Learning
   Rovnice $$y'=x^2-y^2$$ není rovnice se separovatelnými proměnnými.
 
 
-# Řešení ODE se separovanými proměnnými
+## Řešení ODE se separovanými proměnnými
 
 
 1.  Má-li algebraická rovnice $g(y)=0$ řešení $k_1$, $k_2$, …, $k_n$,
@@ -765,7 +767,7 @@ Počáteční úloha má jediné řešení, pokud má pravá strana ohraničenou
 > Věta (existence a jednoznačnost řešení Cauchyovy úlohy pro rovnici se separovanými proměnnými). Je-li $g(y_0)\neq 0$, má počáteční úloha $$\frac{\mathrm dy}{\mathrm dx}=f(x)g(y),\qquad y(x_0)=y_0$$ právě jedno řešení definované v nějakém okolí počáteční podmínky.
 
 
-# Diferenciální rovnice růstu vodní kapky
+## Diferenciální rovnice růstu vodní kapky
 
 
 \iffalse

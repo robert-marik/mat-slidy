@@ -26,7 +26,7 @@ Intervalem $I$ budeme rozumět otevřený interval.
 
 \iffalse 
 
-# Motivace:  Jak z rychlosti změny vypočítat změnu?
+## Motivace:  Jak z rychlosti změny vypočítat změnu?
 
 
 <style>
@@ -78,7 +78,7 @@ Závislá proměnná|Derivace podle času|
 
 \fi
 
-# Motivace: Jak z derivace křivky získat rovnici křivky?
+## Motivace: Jak z derivace křivky získat rovnici křivky?
 
 \iffalse
 
@@ -191,7 +191,7 @@ $$
 
 $$\int 2x^4-e^{4x}+\frac 1x\,\mathrm dx=\frac 25 x^5 -\frac 14 e^{4x}+\ln |x|+C$$
 
-# Funkční předpis z rychlosti změny a výchozího stavu
+## Funkční předpis z rychlosti změny a výchozího stavu
 
 \iffalse
 
@@ -271,7 +271,7 @@ Snadným důsledkem definice určitého integrálu je následující věta.
 \end{aligned}
 $$
 
-# Změna funkce z rychlosti změny (časová změna teploty)
+## Změna funkce z rychlosti změny (časová změna teploty)
 
 *Teplota klesá rychlostí
 $\frac{\mathrm dT}{\mathrm dt}=-0.1 e^{-0.01 t} \,{}^\circ \mathrm
@@ -296,7 +296,7 @@ Za druhou hodinu bude změna teploty
 
 `ww2:problems/integraly/strom.pg`
 
-# Změna funkce z rychlosti změny (prostorová změna teploty)
+## Změna funkce z rychlosti změny (prostorová změna teploty)
 
 \iffalse
 
@@ -337,7 +337,7 @@ Pokud sledujeme prostup tepla izolací, jejíž teplotní vodivost se mění s t
 > Poznámka (změna veličiny vypočtená pomocí gradientu). Pokud se veličina $f$ mění podél přímky v závislosti na veličině $x$ na intervalu od $x=a$ do $x=b$ rychlostí $r(x)$ (tj. $r(x)=\frac{\mathrm df(x)}{\mathrm dx}$), je změna veličiny $f$ na intervalu $[a,b]$ rovna $$\Delta f=f(b)-f(a)=\int_a^b r(x)\,\mathrm dx.$$
 
 
-# Další motivace
+## Další motivace
 
 Ze středoškolské fyziky dobře známe vzorce pro dráhu, práci a tlakovou
 sílu. Ovšem jenom v extrémně pěkných případech.
@@ -427,7 +427,7 @@ je, že v některých případech je vhodné postupovat naopak a určit
 neurčitý integrál pomocí integrálu určitého, což si ukážeme v
 následující přednášce.
 
-# Nasčítání příspěvků k celkové dráze
+## Nasčítání příspěvků k celkové dráze
 
 \iffalse
 
@@ -455,7 +455,7 @@ následující přednášce.
    okamžik pohybu, platí $$s=\int_a^b v(t)\,\mathrm dt.$$
 
 
-# Nasčítání příspěvků k celkové síle na přehradu
+## Nasčítání příspěvků k celkové síle na přehradu
 
 \iffalse
 
@@ -507,7 +507,7 @@ označíme $H$.
    tj. tlakem v poloviční hloubce.
 
 
-# Nasčítání příspěvků k celkovému toku potrubím
+## Nasčítání příspěvků k celkovému toku potrubím
 
 
 \iffalse
@@ -553,7 +553,7 @@ trubice. Proto je $\frac {v_{max}}2$ nazývána střední profilová rychlost pr
 (Volně podle Dana Říhová a Jana Marková, Poznámky k přednáškám z Hydrauliky, přednáška č. 3.)
 
 
-# Nasčítání příspěvků k celkovému momentu setrvačnosti tyče
+## Nasčítání příspěvků k celkovému momentu setrvačnosti tyče
 
 \iffalse
 
