@@ -2,12 +2,12 @@
 
 >   * Procvičíme si interpretaci derivace jako rychlosti změny.
 >   * Naučíme se sestavovat matematické modely situací, ve kterých se veličina mění nekonstantní rychlostí
->   * Prerekvizitou je schopnost chápat derivaci jako rychlost změny a umět matemtaicky vyjádřit úměrnost mezi veličinami.
+>   * Prerekvizitou je schopnost chápat derivaci jako rychlost změny a umět matematicky vyjádřit úměrnost mezi veličinami.
 
-
-![pixabay.com](room.jpg)
 
 # Tepelná výměna podle Newtonova zákona
+
+![pixabay.com](room.jpg)
 
 Newtonův zákon ochlazování je možné použít pro tělesa, u nichž teplota je ve všech místech stejná a efekty spojené s vedením tepla jsou zanedbatelné. Takové objekty charakterizujeme nízkým Biotovým číslem (naučíte se v navazujících předmětech jako Fyzikální vlastnosti dřeva). Předpokládejme, že nevytápěná místnost tyto podmínky splňuje.
 
@@ -56,7 +56,7 @@ Vyjádřete následující veličiny a určete jejich znaménko.
 
 1. Rychlost, s jakou v daném místě a čase roste teplota jako funkce času je $\frac {\partial T}{\partial t}$ a tato derivace je v každém bodě kladná, protože tyč se ohřívá. Po čase se asi ustálí rovnováha a derivace bude nulová, teplota se přestane měnit. Měříme ve stupních Celsia za sekundu.
   $\left[\frac {\partial T}{\partial t}\right]={}^\circ\mathrm{C}\,\mathrm{s}^{-1}$
-1. Rychlost, s jakou v daném místě a čase roste teplota jako funkce polohy, tj. jak rychle se roste teplota směrem doprava, je $\frac {\partial T}{\partial x}$ a tato derivace je záporná, protože vlevo je horký konec a teplota směrem doprava klesá. Měříme ve stupních celsia na metr.
+1. Rychlost, s jakou v daném místě a čase roste teplota jako funkce polohy, tj. jak rychle se roste teplota směrem doprava, je $\frac {\partial T}{\partial x}$ a tato derivace je záporná, protože vlevo je horký konec a teplota směrem doprava klesá. Měříme ve stupních Celsia na metr.
     $\left[\frac {\partial T}{\partial x}\right]={}^\circ\mathrm{C}\,\mathrm{m}^{-1}$
 1. Rychlost s jakou klesá teplota jako funkce polohy, tj. směrem doprava, je $-\frac {\partial T}{\partial x}$ a tato veličina je kladná, protože vlevo je horký konec a teplota směrem doprava opravdu klesá. Měříme ve stupních Celsia na metr.
         $\left[-\frac {\partial T}{\partial x}\right]={}^\circ\mathrm{C}\,\mathrm{m}^{-1}$
@@ -102,9 +102,9 @@ Všimněte si, že poslední dvě podmínky se liší znaménkem u $T$. To proto
 
   </div>
 
-![Model popsaný v této úloze se často používá například při studiu růstu ryb. Obrázek: pixabay.com, PublicDomainImages](pstruh.jpg)
-
 # Model růstu úměrného velikosti chybějícího množství
+
+![Model popsaný v této úloze se často používá například při studiu růstu ryb. Obrázek: pixabay.com, PublicDomainImages](pstruh.jpg)
 
 Mnoho
 živočichů roste tak, že mohou dorůstat jisté maximální délky a
@@ -124,9 +124,9 @@ Je-li $L$ délka a $L_{\max}$ maximální délka, potom do maximální délky ch
 $$\frac{\mathrm dL}{\mathrm dt}=k (L_{\max}-L).$$
 </div>
 
-![pixabay.com](kontaminace.jpg)
-
 # Kontaminace a čištění
+
+![pixabay.com](kontaminace.jpg)
 
 Znečišťující látky se v kontaminované oblasti rozkládají tak, že za den se samovolně rozloží 
 $8\%$ aktuálního znečištění. Kromě toho pracovníci odstraňují látky rychlostí $30$
@@ -143,9 +143,9 @@ $$\frac{\mathrm dy}{\mathrm dt}=-0.08y-30.$$
 
 
 
-![pixabay.com](lov.jpg)
-
 # Logistická rovnice: model využívání přírodních zdrojů
+
+![pixabay.com](lov.jpg)
 
 Při modelování růstu populace o velikosti $x(t)$ často pracujeme s populací žijící v prostředí s omezenou úživností (nosnou kapacitou). Často používáme model
 $$\frac{\mathrm d x}{\mathrm dt}=rx\left(1-\frac xK\right),$$
@@ -167,9 +167,9 @@ Funkce $f_h(x)=rx\left(1-\frac xK\right)-h$ vznikne posunutím funkce $f(x)=rx\l
 </div>
 
 
-![pixabay.com, autor Free-Photos](deer.jpg)
-
 # Populace jelenů
+
+![pixabay.com, autor Free-Photos](deer.jpg)
 
 Populace jelenů v národním parku přibývá rychlostí 10\% za
 rok. Správa parku každý rok odebere 50 jedinců. Napište
@@ -201,9 +201,9 @@ $$\frac{\mathrm dy}{\mathrm dt}=ky(M-y).$$
 
 
 
-![pixabay.com](olej.jpg)
-
 # Ropná skvrna
+
+![pixabay.com](olej.jpg)
 
 Kruhová ropná skvrna na hladině se rozšiřuje
 tak, že její poloměr jako funkce času roste rychlostí, která je

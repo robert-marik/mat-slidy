@@ -323,15 +323,15 @@ Ve skutečnosti žádná elektronická součástka nemá ideální vlastnosti a 
 
 
 * Zkoumejme velikost $y$  určité populace, v prostředí s\ nosnou kapacitou $K$.
-* Realistickým předpokladem dodaným biologickými vědami je, že v prostředí s\ omezenými úživnými
-  vlastnostmi specifická míru růstu populace (rychlost s\ jakou
-  se velikost populace zvětšuje vztažená na jednotkové množství
-  populace) klesá s\ tím, jak se velikost populace přibližuje k nosné
-  kapacitě, a rychlost růstu populace je modelována funkcí $ry\left(1-\frac yK\right)$.  Podle
+* Budeme pracovat s pojmem specifická míru růstu populace, což je rychlost růstu populace vztažená na jednotkové množství
+  populace. Realistickým předpokladem dodaným biologickými vědami je, že v prostředí s\ omezenými úživnými
+  vlastnostmi specifická míru růstu populace klesá s\ tím, jak se velikost populace přibližuje k nosné
+  kapacitě, a specifická rychlost růstu populace je modelována funkcí $r\left(1-\frac yK\right)$.  Podle
   velkosti koeficientů v této rovnici dělíme živočichy na [r-stratégy
   a K-stratégy](http://cs.wikipedia.org/wiki/%C5%BDivotn%C3%AD_strategie) a
   toto dělení odráží, jak se snaží druh vyrovnávat se změnami prostředí.
 * Za uvedených předpokladů je možno vývoj populace popsat rovnicí 
+  $$\frac 1y \frac{\mathrm dy}{\mathrm dt}=r\left(1-\frac yK\right),$$ tj.
   $$\frac{\mathrm dy}{\mathrm dt}=ry\left(1-\frac yK\right).$$ Tato rovnice se nazývá *logistická rovnice.*
 * Pokud lovem snížíme přírůstky populace, můžeme tento proces modelovat rovnicí 
   $$\frac{\mathrm dy}{\mathrm dt}=ry\left(1-\frac yK\right)-h(y),$$

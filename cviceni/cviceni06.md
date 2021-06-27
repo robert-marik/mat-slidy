@@ -100,9 +100,9 @@ $$Q=\frac{k (T_1)+k (T_2)}{2}\frac{T_1-T_2}{d}.$$
 
 </div>
 
-![pixabay.com](medene_nadobi.jpg)
-
 # Střední hodnota funkce dané tabulkou
+
+![pixabay.com](medene_nadobi.jpg)
 
 Určete střední hodnotu koeficientu tepelné vodivosti $\lambda$ mědi na teplotním intervalu od 100 do 400 Kelvinů. Porovnejte výsledek s aritmetickým průměrem.
 
@@ -147,14 +147,9 @@ použít přímo lichoběžníkové pravidlo.
 
 
 
-
-
-
+# Růst populace a jejich přežívání
 
 ![pixabay.com](znecisteni.jpg)
-
-
-# Růst populace a jejich přežívání
 
 Populace živočišného druhu
 činí 5600 jedinců a tato populace roste rychlostí
@@ -202,10 +197,10 @@ kde i tento integrál se dá vypočítat přímou integrací pomocí vzorce.
 
 
 
-![https://slp.czu.cz](strom.jpg)
-
 
 # Rodičovské stromy
+
+![https://slp.czu.cz](strom.jpg)
 
 Při obnově lesů je nutné velké množství
 sadebního materiálu. Kromě školek hrají při obnově lesa důležitou roli

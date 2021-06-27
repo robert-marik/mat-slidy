@@ -77,9 +77,9 @@ Body nespojitosti nejsou a jeden nulový bod rozdělí reálnou osu na dva podin
 
 </div>
 
-![vlastní](krabicka.jpg)
-
 # Krabička z papíru
+
+![vlastní](krabicka.jpg)
 
 V každém rohu papíru A4 vystřihneme čtverec a zbylý papír podél stran
 poohýbáme nahoru, aby vznikla (až se to slepí) krabička bez horního
@@ -114,9 +114,9 @@ $$
  </div>
 
  
-![pixabay.com](plot.jpg)
-
 # Plot ze tří stran pozemku
+
+![pixabay.com](plot.jpg)
 
 Chceme oplotit pozemek obdélníkového tvaru, jehož jedna strana je
 rovná přirozená hranice. Stavíme plot tedy jenom na zbylých třech
@@ -188,10 +188,10 @@ a kratší strana je polovinou délky delší strany. Jako v předchozím příp
 </div>
 
 
+# Optimální trám vyřezaný z kulatiny
 
 ![Harry Rogers, youtube.com](beam.jpg)
 
-# Optimální trám vyřezaný z kulatiny
 Ukažte, že pro vyřezání nebo vytesání trámu o maximálním objemu z kulatiny válcového tvaru je nutné vyřezat trám se čtvercovým
 průřezem. Návod: Uvažujte válec, ze kterého chceme vyříznout
 hranol. Zvolte jako jednotku délky průměr kulatiny a hledejte maximum
@@ -231,9 +231,9 @@ $$b=\sqrt{1-h^2}=\sqrt{1-\frac 34}=\frac{1}{2}$$ a trám má v tomto případě 
 
 </div>
 
-![pixabay.com](pstruh.jpg)
-
 # Ryba migrující proti proudu
+
+![pixabay.com](pstruh.jpg)
 
 Ryba ve vodě vydává za časovou jednotku
 energii úměrnou třetí mocnině rychlosti vzhledem k vodě. Pro překonání

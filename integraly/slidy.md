@@ -11,7 +11,7 @@ jistém smyslu ano. Spojení "v jistém smyslu" naznačuje, že souvislost
 nebude tak snadná jako je souvislost u navzájem inverzních
 funkcí. Derivováním totiž můžeme ztratit aditivní konstanty, které v
 derivaci dávají nulu a zpětně není možné rekonstruovat, derivováním
-jaké konstanty jsme tuto nulu dostaly. A protože problém uchopíme
+jaké konstanty jsme tuto nulu dostali. A protože problém uchopíme
 poněkud obecněji, uvedeme si dokonce hned tři různé "protijedy" na
 derivování.
 

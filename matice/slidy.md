@@ -143,7 +143,7 @@ funkčních hodnot na pravidelné mřížce rozdělující obor integrace. Koefi
 **Příklad.** V metodě konečných diferencí (viz druhá přednáška o derivacích)  se derivace aproximují výrazy, které jsou lineární kombinací po sobě jdoucích funkčních hodnot hledané funkce na pravidelné mřížce délky $h$. Pro konkrétnost, pro první derivaci máme
 $$\frac{\mathrm df}{\mathrm dx}\approx\frac{f(x+h)-f(x-h)}{2h} =\frac 1{2h}f(x+h)-\frac 1{2h}f(x-h), $$
 a pro druhou derivaci
-$$ \frac{\mathrm d^2f}{\mathrm dx^2}\approx\frac{f(x-h)-2f(x)+f(x+h)}{h^2}=\frac{1}{h^2} f(x-h) - \frac{2}{h^2} f(x) + \frac{1}{h^2} f(x+h).$$
+\dm$$ \frac{\mathrm d^2f}{\mathrm dx^2}\approx\frac{f(x-h)-2f(x)+f(x+h)}{h^2}=\frac{1}{h^2} f(x-h) - \frac{2}{h^2} f(x) + \frac{1}{h^2} f(x+h).$$
 
  
 # Lineární závislost a nezávislost vektorů
@@ -516,7 +516,7 @@ $$
 0& 0& 0 & 1  & -2 \\
 \end{pmatrix}
 $$
-hraje důležitou roli v numerické matematice při numerickém modelování fyzikálních dějů. Je to matice, kterou v MATLABU umíme vygenerovat příkazem `toeplitz([-2,1,0,0,0])`, jak jsme si ukázali v prvním setkání s MATLABem v seznamovací sadě domácích úloh v systému [WeBWorK](http://um.mendelu.cz/webwork2/MT-Marik/00_Uvod/). Až na první a poslední řádek se jedná o matici, která umí zprostředkovat numerické  derivování funkce. První a poslední řádek se přidávají, aby matice tískala čtvercový tvar a jistou míru symetrie. (Symetrickým maticím se budeme věnovat za chviličku.) Tyto dva přidané řádky se uplatní při formulaci okrajových podmínek definujících chování funkce na koncích intervalu.
+hraje důležitou roli v numerické matematice při numerickém modelování fyzikálních dějů. Až na první a poslední řádek se jedná o matici, která umí zprostředkovat numerické  derivování funkce. První a poslední řádek se přidávají, aby matice tískala čtvercový tvar a jistou míru symetrie. (Symetrickým maticím se budeme věnovat za chviličku.) Tyto dva přidané řádky se uplatní při formulaci okrajových podmínek definujících chování funkce na koncích intervalu.
 
 Pomocí maticového součinu dokážeme reprezentovat libovolné zobrazení, které zachovává součet a násobení konstantou, mezi něž derivování patří. Jiný přístup k maticové formulaci derivace, k derivování na množině polynomů, si ukážeme ve cvičení. Na následujícím slidu se na tato obrazení podíváme očima geometra a poté očima materiálového inženýra.
 

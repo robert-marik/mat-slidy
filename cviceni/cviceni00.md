@@ -18,10 +18,10 @@
 }
 </style>
 
-Soubor obsahuje příklady pro cvičení k mým přednáškám na Lesnické a dřevařské fakultě pro bakalářské studium v zimním semestru 2020. Vznikl z verzí v PDF, aby bylo později možné přidávat mikropřednášky s jednou úlohou raději, než dlouhé přednášky s celým cvičením.
+Zde jsou příklady pro cvičení k mým přednáškám na Lesnické a dřevařské fakultě pro bakalářské studium v zimním semestru 2020. 
 
 
-
+<div class=seznam>
 <a class="obsah"  href="cviceni00.md.html">Obsah</a>
 <a class="obsah"  href="cviceni01.md.html">Výpočet derivací</a>
 <a class="obsah"  href="cviceni02.md.html">Využití derivací v matematických modelech</a>
@@ -35,3 +35,4 @@ Soubor obsahuje příklady pro cvičení k mým přednáškám na Lesnické a d�
 <a class="obsah"  href="cviceni10.md.html">Vlastní čísla a směry</a>
 <a class="obsah"  href="cviceni11.md.html">Parciální derivace, rovnice vedení tepla</a>
 <a class="obsah"  href="cviceni12.md.html">Dvojný integrál</a>
+</a>

@@ -75,9 +75,10 @@ Určete derivace následujících funkcí, kde $a,b,\mu\in\mathbb{R}$.
 </div>
 
 
+# Růst ryby
+
 ![wikimedia.org](ryba.png)
 
-# Růst ryby
 Biologové navrhli funkci
 $$
     l=0.03937 t^3 - 0.945 t^2 + 10.033 t + 3.073
@@ -110,10 +111,10 @@ centimetru. (Slovo přibližně je použito proto, že derivace je okamžitá ry
 
 
 
+# Bazální metabolismus
 
 ![pixabay.com](kolibrik.jpg)
 
-# Bazální metabolismus
 Bazální metabolismus $M$ (ve wattech) souvisí s hmotností $W$ vztahem
 $$M=AW^n,$$ kde $n$ je pro mnoho živočišných druhů blízké číslu $0.75$ a
 $A$ je konstanta, která je specifická pro daný druh a v rámci daného
@@ -131,11 +132,9 @@ $$\left[\frac {\mathrm dM}{\mathrm dW}\right]=\frac{\mathrm W}{\mathrm
   {kg}}.$$ Derivace udává rychlost, s jakou se projeví změna hmotnosti na bazálním metabolismu. Je to nárůst bazálního metabolismu způsobený nárůstem hmotnosti a přepočtený na jednotkovou změnu hmotnosti. Přibližně také změna bazálního metabolismu ve wattech při změně hmotnosti o kilogram u velkých živočichů nebo v miliwatech při změně hmotnosti o gram u drobných živočichů. Například u malých ptáčků nemá smysl uvažovat nárůst hmotnosti o kilogram a pro interpretaci raději přejdeme k jednotkám tisíckrát menším.
 </div>
 
-
+# Mezní náklady (marginal cost)
 
 ![wikimedia.org](airbus.jpg)
-
-# Mezní náklady (marginal cost)
 
 Náklady na produkci $x$ letadel za rok jsou (v milionech
 Euro) dány funkcí
@@ -157,10 +156,9 @@ $$C´(x)=\frac{2}{\sqrt{4x+4}}.$$ Ve druhém případě máme zlomek s konstantn
 
 </div>
 
+# Vzdálenost k horizontu
 
 ![pixabay.com](horizont.jpg)
-
-# Vzdálenost k horizontu
 
 Vzdálenost k horizontu pro pozorovatele ve výšce $h$ nad Zemí je dána funkcí $H=\sqrt {2Rh},$ kde $R=6.371\times 10^6\,\mathrm m$ je poloměr Země (\url{https://aty.sdsu.edu/explain/atmos_refr/horizon.html}). Po dosazení a vydělení faktorem 1000, aby $H$ vycházelo v kilometrech, dostáváme vzorec $$H=3.57\sqrt{h},$$ kde $h$ je v metrech a $H$ v kilometrech. Určete hodnotu této derivace $\frac{\mathrm d H}{\mathrm dh}$ pro $h=5\,\mathrm{m}$ (včetně jednotky) a slovní interpretaci této derivace.
 
@@ -175,9 +173,9 @@ $$\frac{\mathrm dH}{\mathrm dh}(5)=0.7983 \times \frac {1000\, \mathrm{m}}{\math
 </div>
 
 
-![J. Kameníček, brnensky.denik.cz](vate_pisky.jpg)
-
 # Rychlost s jakou roste obsahu kruhu
+
+![J. Kameníček, brnensky.denik.cz](vate_pisky.jpg)
 
 Váté písky je bezlesý
 pruh podél železniční trati nedaleko Bzence, kde je extrémní sucho
@@ -208,9 +206,9 @@ $$\frac{\mathrm dS}{\mathrm dt} = 2\pi \times 50 \times 1.5 \approx 471 \,\mathr
 
 
 
-![Že je u koule objem úměrný třetí mocnině poloměru vidíme přímo ze vzorce. Nejinak to je u těles, které si zachovávají proporce, tj. vzniknou zvětšením či zmenšením z jediného vzoru. Typickým příkladem je kromě koule i kužel s pevně zadaným vrcholovým úhlem. Tento tvar zachovávají volně sypané materiály. Obrázek: pixabay.com](kopec_soli.jpg)
-
 # Sůl nad zlato
+
+![Že je u koule objem úměrný třetí mocnině poloměru vidíme přímo ze vzorce. Nejinak to je u těles, které si zachovávají proporce, tj. vzniknou zvětšením či zmenšením z jediného vzoru. Typickým příkladem je kromě koule i kužel s pevně zadaným vrcholovým úhlem. Tento tvar zachovávají volně sypané materiály. Obrázek: pixabay.com](kopec_soli.jpg)
 
 V pohádce _Sůl nad zlato_ sype Maruška z bezedné slánky sůl na hromadu soli ve tvaru kužele, který roste tak, že objem je v každém okamžiku svázán s výškou vzorcem $$V=\frac 14h^3.$$ Výška je $0.5$ metru a vydatnost solničky $10$ litrů (tj. $0.01$ krychlových metrů) soli za minutu. Určete, jak rychle roste hromada soli do výšky.
 
@@ -231,9 +229,9 @@ Hromada roste do výšky rychlostí 5.3 centimetru za minutu.
 </div>
 
 
-![http://mp.mestokyjov.cz/](kyjov.jpg)
-
 # Rychlost s jakou roste obsahu kruhu II
+
+![http://mp.mestokyjov.cz/](kyjov.jpg)
 
 Město má přibližně tvar kruhu o poloměru $10\,\mathrm{km}$ a žije v něm $300\,000$ obyvatel. Jak rychle musí růst poloměr kruhu (velikost
 města), pokud počet obyvatel roste rychlostí $10\,000$ obyvatel za rok

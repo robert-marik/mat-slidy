@@ -32,14 +32,14 @@
 \rightskip 0 pt plus 1 fill
 
 {\centering \parskip 0 pt
-\textbf{Cheat sheet Matematika}
+\textbf{Cheatsheet Matematika}
 
 (Robert Mařík, \today)
 
 }
 
 \textbf{Funkce}
-
+\vspace*{-\baselineskip}
 \begin{itemize}
 \item Funkce jsou zobrazení mající na vstupu a výstupu reálná čísla. Používají se k vyjádření vzájemných relací zkoumaných veličin.
 \item Podle  toho, zda zachovávají uspořádání vzorů i pro obrazy dělíme na rostoucí, klesající a ostatní (bez monotonie).
@@ -49,15 +49,16 @@
 \end{itemize}
 
 \textbf{Spojitost a limita (velmi zjednodušeně)}
-
+\vspace*{-\baselineskip}
 \begin{itemize}
 \item Spojité funkce mají relativně malé změny funkčních hodnot při relativně malých změnách vstupních dat. Např. nejsou skoky.
 \item Limita umožňuje doplnit funkční hodnotu funkce tak, aby se stala spojitou (odstranitelná nespojitost).
 \end{itemize}
 
 \textbf{Derivace}
+\vspace*{-\baselineskip}
 
-Dává do souvislosti změny závislé a nezávislé veličiny. Změna se někdy interpretuje jako růst.
+Dává do souvislosti změny závislé a nezávislé veličiny. 
 
 $$\frac{\mathrm df}{\mathrm dx}:=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}$$
 
@@ -66,6 +67,19 @@ $$\frac{\mathrm df}{\mathrm dx}:=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}$$
 \item Změna $f$ vyvolaná jednotkovou změnou $x$.
 \item Pro $f(t)$ je $\frac{\mathrm df}{\mathrm dt}$ rychlost růstu veličiny $f$ (v čase).
 \end{itemize}
+
+\textbf{Konečné diference}
+\vspace*{-\baselineskip}
+
+Slouží k numerickému aproximování derivace. Slouží také k odhadu derivace funmkce dané tabulkou.
+
+Dopředná diference: $\frac{\mathrm df}{\mathrm dx}=f'(x)\approx\frac{f(x)-f(x-h)}{h}$
+
+Centrální diference: $\frac{\mathrm d f}{\mathrm dx}=f'(x)\approx  \frac{f(x+h)-f(x-h)}{2h}$
+
+Druhá diference: $\frac{\mathrm d^2f}{\mathrm dx^2}=f''(x)\approx  \frac{f(x-h)-2f(x)+f(x+h)}{h^2}$
+
+\columnbreak
 
 \textbf{Aplikace derivace}
 
@@ -84,15 +98,6 @@ $$\frac{\mathrm df}{\mathrm dx}:=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}$$
   kde $f'(x_n)=\frac{\mathrm df(x_n)}{\mathrm dx}$ je derivace v bodě $x_n$ a iterační proces začne v nepříliš špatném počátečním odhadu řešení $x_0$ (Newtonova metoda). Každý jeden krok metody zdvojnásobí počet desetinných míst při přibližném řešení rovnice.
 \end{itemize}
 
-\textbf{Konečné diference}
-
-Slouží k numerickému aproximování derivace. Slouží také k odhadu derivace funmkce dané tabulkou.
-
-Dopředná diference: $\frac{\mathrm df}{\mathrm dx}=f'(x)\approx\frac{f(x)-f(x-h)}{h}$
-
-Centrální diference: $\frac{\mathrm d f}{\mathrm dx}=f'(x)\approx  \frac{f(x+h)-f(x-h)}{2h}$
-
-Druhá diference: $\frac{\mathrm d^2f}{\mathrm dx^2}=f''(x)\approx  \frac{f(x-h)-2f(x)+f(x+h)}{h^2}$
 
 \newcount\formulacount
 \def\hopla{\advance\formulacount by 1 {\scriptsize ({\the\formulacount})\ }}
@@ -147,9 +152,7 @@ Druhá diference: $\frac{\mathrm d^2f}{\mathrm dx^2}=f''(x)\approx  \frac{f(x-h)
 }
 
 
-\textbf{Integrál}
-
-\textbf{Neurčitý integrál} Opak derivace. Z rychlosti změny určíme časový průběh měnící se veličiny. Je dána až na aditivní konstantu související s výchozím stavem.
+\textbf{Neurčitý integrál}: opak derivace, kdy z rychlosti změny určíme časový průběh měnící se veličiny. Je dána až na aditivní konstantu související s výchozím stavem.
 Píšeme
 $$\int f(x)\,\mathrm dx=F(b)-F(a),$$
 kde $F(x)$ je funkce splňující $\frac{\mathrm dF}{\mathrm dx}=f(x).$
@@ -194,14 +197,17 @@ kde $F(x)$ je funkce splňující $\frac{\mathrm dF}{\mathrm dx}=f(x).$
 
 
 
-\textbf{Určitý Newtonův integrál} Opak derivace, z rychlosti změny a z časového intervalu určímě změnu veličiny na daném intervalu. Narozdíl od neurčitého interálu je určitý integrál dán jednoznačně a není nutná informace o počátečním stavu. Počítáme vztahem 
+\textbf{Určitý Newtonův integrál}: opak derivace, kdy z rychlosti změny a z časového intervalu určímě změnu veličiny na daném intervalu. Narozdíl od neurčitého interálu je určitý integrál dán jednoznačně a není nutná informace o počátečním stavu. Počítáme vztahem 
 $$\int_a^bf(x)\,\mathrm dx=F(b)-F(a),$$
 kde $F(x)$ je funkce splňující $\frac{\mathrm dF}{\mathrm dx}=f(x).$
 
 \textbf{Určitý Riemmannův integrál} Počítá se stejně jako Newtonův. Součet nekonečné mnoha malých příspěvků k aditivní veličině. V praxi náhrada za nemožnost použít násobení v případě nekonstantních parametrů. Například dráha pohybu je rychlost násobená časem v případě pohybu konstantní rychlostí. V případě pohybu nekonstantní rychlostí je dráha místo součinu integrál rychlosti jako funkce času. 
 
+\vfill
+\null
 \penalty -500
 
+\columnbreak
 
 
 \textbf{Determinanty}

@@ -52,9 +52,9 @@ Používáme vzorce $\int x^n\,\mathrm dx=\frac 1{n+1}x^{n+1}+c$, $\int e^x\,\ma
 
 
 
-![pixabay.com](oil.jpg)
-
 # Vytékání oleje
+
+![pixabay.com](oil.jpg)
 
 Najděte slovní interpretaci integrálu
 $$
@@ -73,9 +73,9 @@ $$
   Za 10 hodin vyteče 1800 litrů oleje.
 </div>
 
-![pixabay.com](bees.jpg)
-
 # Populace včel
+
+![pixabay.com](bees.jpg)
 
 Populace včel o počáteční velikosti 100 včel se rozmnožuje rychlostí $r(t)$. Najděte slovní interpretaci výrazů
 $$
@@ -106,9 +106,9 @@ $$
 $$
 </div>
 
-![pixabay.com](kanalizace.jpg)
-
 # Prasklá kanalizace
+
+![pixabay.com](kanalizace.jpg)
 
 Prasklá kanalizace způsobila znečištění jezera v rekreační
 oblasti. Koncentrace bakterií $C(t)$ (v bakteriích na kubický
@@ -128,9 +128,9 @@ a koncentrace poklesne o $4000$ jednotek (bakterií na kubický centimetr).
 
 
 
-![vlastní](slovnik.jpg)
-
 # Rychlost učení
+
+![vlastní](slovnik.jpg)
 
 Nechť $W(t)$ je počet francouzských slovíček,
 které se naučíme po $t$ minutách. Typicky může být (pro první dvě hodiny učení)

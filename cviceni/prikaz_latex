@@ -1,0 +1,19 @@
+export TEXINPUTS=..:$TEXINPUTS
+
+for i in cviceni*md
+do
+   pandoc $i --filter remove_figures.py -o tex/$i.tex -s
+   pandoc $i --filter remove_figures.py -o tex/$i.standalone.tex 
+done
+
+rm tex/*14*
+
+cd tex
+for i in cviceni??.md.tex
+do
+   pdflatex $i
+done
+
+pdflatex cviceni.tex
+pdflatex cviceni.tex
+cd ..
