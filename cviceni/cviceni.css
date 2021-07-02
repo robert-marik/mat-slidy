@@ -39,6 +39,8 @@ li {margin-top:20px;}
 
 .PDF {display:inline-block, margin:auto; font-weight:bold;}
 
+.PDF {display:none;}
+
  ol {
    list-style: none;
    counter-reset: item;

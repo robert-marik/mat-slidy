@@ -60,6 +60,15 @@ Veličina $y$ je *nepřímo úměrná* veličině $x$ jestliže existuje konstan
 
 **Poznámka.** Je-li veličina $y$ úměrná veličině $x$, píšeme $$y\sim x\text{ nebo }y\propto x.$$ Je-li navíc konstanta úměrnosti blízká jedničce, tj. $x$ a $y$ jsou blízké, píšeme $$y\approx x.$$ Pro nepřímou úměrnost píšeme podobně $y\sim \frac 1x$, $y\propto \frac 1x$ a $y\approx \frac 1x.$
 
+\iffalse
+
+<div class='obtekat'>
+
+![Některé stromy se při pohybu chovají jako kyvadlo, jiné jako nosník. Podle toho, jaké veličina je v korelaci s frekvencí. Porozumění dynamické odezvě stromů umožní například lépe posuzovat bezpečnost stromů v městském prostředí. Zdroj: pixabay.com, Jan-Mallander.](strom_vitr2.jpg)
+
+</div>
+
+\fi
 
 **Příklad.**
 
@@ -67,6 +76,7 @@ Veličina $y$ je *nepřímo úměrná* veličině $x$ jestliže existuje konstan
 * Při pohybu po předem stanovené dráze $s$ je čas nepřímo úměrný rychlosti $v$. Platí $t=\frac sv$. Konstantou úměrnosti je dráha $s$. Pro $v=1$ je čas přímo roven dráze. Proto je možno konstantu úměrnosti slovně vyjádřit tak, že udává čas, který je nutný pro projetí příslušné dráhy jednotkovou rychlostí.
 * Při periodickém pohybu je frekvence $f$ nepřímo úměrná periodě $T$. Příslušnou konstantou úměrnosti je jednička, tj. $f=\frac 1T$.
 * Objem $V$ koule o poloměru $r$ je přímo úměrný třetí mocnině poloměru. Existuje tedy konstanta $k$ taková, že platí $V=k r^3$. Pro $r=1$ je objem $V$ přímo roven konstantě $k$. Konstanta proto $k$ vyjadřuje objem koule jednotkového poloměru. Protože objem koule jednotkového poloměru je $\frac 43 \pi$ učí se žáci v matematice rovnou vzorec $V=\frac 43 \pi r^3$.
+* Dynamická odezva stromů ve větru je častým námětem mnoha vědeckých prací. Souhrnná studie [Jackson, T. et al (2021) The motion of trees in the wind: a data synthesis. Biogeosciences.](https://bg.copernicus.org/preprints/bg-2020-427/) ukázala, že v některých případech (zpravidla listnáče v lese) je základní frekvence vlastních kmitů stromů nepřímo úměrná odmocnině výšky, což je vztah známý pro kyvadlo. $$f=\frac 1T \sim \frac 1{\sqrt H}.$$ U jiných stromů (zpravidla jehočinaté stromy) je základní frekvence přímo úměrná průměru $d$ a nepřímo úměrná druhé mocnině výšky $H$, tj. $$f=\frac 1T\sim \frac{d}{H^2}.$$ Tento vztah je znám pro nosníky. To ukazuje, že pro některé stromy je pro dynamické vlastnosti dominantní hmota v koruně, pro jiné stromy hmota podél kmene.  
 * Síla působící na těleso ve vzdálenosti $r$ od planety je dána vztahem $F=\frac{k}{r^2}$, kde $k$ je konstanta úměrnosti (závislá na hmotnosti planety i tělesa). Toto můžeme slovně vyjádřit tak, že síla je nepřímo úměrná druhé mocnině vzdálenosti. Pro $r$ rovno jedné je síla $F$ přímo rovna konstantě $k$. Konstanta úměrnosti $k$ proto udává sílu působící na těleso v jednotkové vzdálenosti od planety.
 
 
@@ -451,7 +461,7 @@ Derivování si také můžete procvičit v následujících cvičeních.
 
 <div class='obtekat'>
 
-![Matematické kyvadlo je hmotný bod na nehmotném závěsu. Aproximací je relativně těžký objekt relativně malého objemu na lehkém závěsu. Zdroj: pixabay.com, geralt.](kyvadlo_hodinky.jpg)
+![Matematické kyvadlo je hmotný bod na nehmotném závěsu. Aproximací je relativně těžký objekt relativně malého objemu na lehkém závěsu. Přírodní méně přesnou aproximací kyvadla vzhůru nohama je strom s dlouhým kmenem a větvemi v horní části. Zdroj: pixabay.com, geralt.](kyvadlo_hodinky.jpg)
 
 </div>
 
