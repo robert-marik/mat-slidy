@@ -73,7 +73,7 @@ $$\frac{\mathrm df}{\mathrm dx}:=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}$$
 
 Slouží k numerickému aproximování derivace. Slouží také k odhadu derivace funmkce dané tabulkou.
 
-Dopředná diference: $\frac{\mathrm df}{\mathrm dx}=f'(x)\approx\frac{f(x)-f(x-h)}{h}$
+Dopředná diference: $\frac{\mathrm df}{\mathrm dx}=f'(x)\approx\frac{f(x+h)-f(x)}{h}$
 
 Centrální diference: $\frac{\mathrm d f}{\mathrm dx}=f'(x)\approx  \frac{f(x+h)-f(x-h)}{2h}$
 
@@ -201,7 +201,9 @@ kde $F(x)$ je funkce splňující $\frac{\mathrm dF}{\mathrm dx}=f(x).$
 $$\int_a^bf(x)\,\mathrm dx=F(b)-F(a),$$
 kde $F(x)$ je funkce splňující $\frac{\mathrm dF}{\mathrm dx}=f(x).$
 
-\textbf{Určitý Riemmannův integrál} Počítá se stejně jako Newtonův. Součet nekonečné mnoha malých příspěvků k aditivní veličině. V praxi náhrada za nemožnost použít násobení v případě nekonstantních parametrů. Například dráha pohybu je rychlost násobená časem v případě pohybu konstantní rychlostí. V případě pohybu nekonstantní rychlostí je dráha místo součinu integrál rychlosti jako funkce času. 
+\textbf{Určitý Riemmannův integrál} Součet nekonečné mnoha malých příspěvků k aditivní veličině. V praxi náhrada za nemožnost použít násobení v případě nekonstantních parametrů. Například dráha pohybu je rychlost násobená časem v případě pohybu konstantní rychlostí. V případě pohybu nekonstantní rychlostí je dráha místo součinu integrál rychlosti jako funkce času.
+
+Počítá se stejně jako Newtonův. 
 
 \vfill
 \null
