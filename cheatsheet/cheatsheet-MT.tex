@@ -44,7 +44,7 @@
 \item Funkce jsou zobrazení mající na vstupu a výstupu reálná čísla. Používají se k vyjádření vzájemných relací zkoumaných veličin.
 \item Podle  toho, zda zachovávají uspořádání vzorů i pro obrazy dělíme na rostoucí, klesající a ostatní (bez monotonie).
 \item Podle toho, zda a jakým způsobem jsou symetrické dělíme na sudé, liché a ostatní (bez parity).
-\item Nejjednoduššími funkcemi jsou přímá úměrnost (násobení konstantou, $y=kx$) a napřímá úměrnost (násobení převrácené hodnoty konstantou, $y=\frac kx=k\frac 1x$).
+\item Nejjednoduššími funkcemi jsou přímá úměrnost (násobení konstantou, $y=kx$) a nepřímá úměrnost (násobení převrácené hodnoty konstantou, $y=\frac kx=k\frac 1x$).
 \item Je-li $y=f(x)$, říkáme, že $y$ závisí na $x$. Veličina $y$ je závislá veličina, veličina $x$ je nezávislá veličina.
 \end{itemize}
 
@@ -66,12 +66,13 @@ $$\frac{\mathrm df}{\mathrm dx}:=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}$$
 \item Rychlost s jakou se mění $f$ při změnách $x$.
 \item Změna $f$ vyvolaná jednotkovou změnou $x$.
 \item Pro $f(t)$ je $\frac{\mathrm df}{\mathrm dt}$ rychlost růstu veličiny $f$ (v čase).
+\item Jednotka derivace veličiny $f$ podle $x$ je stejná jako jednotka podílu těchto veličin.
 \end{itemize}
 
 \textbf{Konečné diference}
 \vspace*{-\baselineskip}
 
-Slouží k numerickému aproximování derivace. Slouží také k odhadu derivace funmkce dané tabulkou.
+Konečné diference slouží k numerickému aproximování derivace. Slouží také k odhadu derivace funkce dané tabulkou.
 
 Dopředná diference: $\frac{\mathrm df}{\mathrm dx}=f'(x)\approx\frac{f(x+h)-f(x)}{h}$
 
@@ -84,7 +85,7 @@ Druhá diference: $\frac{\mathrm d^2f}{\mathrm dx^2}=f''(x)\approx  \frac{f(x-h)
 \textbf{Aplikace derivace}
 
 \begin{itemize}
-\item Rovnice pro růst rychlostí úměrnou funční hodnotě je
+\item Rovnice pro růst rychlostí úměrnou funkční hodnotě je
   $$\frac{\mathrm dx}{\mathrm dt}=kx.$$
   Rovnice pro růst rychlostí úměrnou vzdálenosti od stacionárního stavu je
   $$\frac{\mathrm dx}{\mathrm dt}=k(M-x).$$
@@ -152,7 +153,9 @@ Druhá diference: $\frac{\mathrm d^2f}{\mathrm dx^2}=f''(x)\approx  \frac{f(x-h)
 }
 
 
-\textbf{Neurčitý integrál}: opak derivace, kdy z rychlosti změny určíme časový průběh měnící se veličiny. Je dána až na aditivní konstantu související s výchozím stavem.
+\textbf{Neurčitý integrál}
+
+Neurčitý integrál je opak derivace, kdy z rychlosti změny určíme časový průběh měnící se veličiny. Je dána až na aditivní konstantu související s výchozím stavem.
 Píšeme
 $$\int f(x)\,\mathrm dx=F(b)-F(a),$$
 kde $F(x)$ je funkce splňující $\frac{\mathrm dF}{\mathrm dx}=f(x).$
@@ -197,13 +200,17 @@ kde $F(x)$ je funkce splňující $\frac{\mathrm dF}{\mathrm dx}=f(x).$
 
 
 
-\textbf{Určitý Newtonův integrál}: opak derivace, kdy z rychlosti změny a z časového intervalu určímě změnu veličiny na daném intervalu. Narozdíl od neurčitého interálu je určitý integrál dán jednoznačně a není nutná informace o počátečním stavu. Počítáme vztahem 
+\textbf{Určitý Newtonův integrál}
+
+Newtonův integrál je opak derivace, kdy z rychlosti změny a z časového intervalu určíme změnu veličiny na daném intervalu. Na rozdíl od neurčitého integrálu je určitý integrál dán jednoznačně a není nutná informace o počátečním stavu. Počítáme vztahem 
 $$\int_a^bf(x)\,\mathrm dx=F(b)-F(a),$$
 kde $F(x)$ je funkce splňující $\frac{\mathrm dF}{\mathrm dx}=f(x).$
 
-\textbf{Určitý Riemmannův integrál} Součet nekonečné mnoha malých příspěvků k aditivní veličině. V praxi náhrada za nemožnost použít násobení v případě nekonstantních parametrů. Například dráha pohybu je rychlost násobená časem v případě pohybu konstantní rychlostí. V případě pohybu nekonstantní rychlostí je dráha místo součinu integrál rychlosti jako funkce času.
+\textbf{Určitý Riemmannův integrál}
 
-Počítá se stejně jako Newtonův. 
+Riemmannův integrál umožňuje vypočítat součet nekonečné mnoha malých příspěvků k aditivní veličině. V praxi náhrada za nemožnost použít násobení v případě nekonstantních parametrů. Například dráha pohybu je rychlost násobená časem v případě pohybu konstantní rychlostí. V případě pohybu nekonstantní rychlostí je dráha místo součinu integrál rychlosti jako funkce času.
+
+Riemmannův integrál se počítá stejně jako Newtonův. 
 
 \vfill
 \null

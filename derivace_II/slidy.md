@@ -81,7 +81,7 @@ principem lineární aproximace, neuvěřitelně jednoduché a přitom velice
 mocné techniky používané inženýry k tomu, aby se popis problémů a
 řešení úloh vůbec daly efektivně zvládnout.
 
-> Věta.
+> Věta (lineární aproximace).
 Buď $f:\mathbb R\to\mathbb R$ funkce, která má derivaci. V okolí bodu $x_0$ platí přibližný vzorec $$f(x)\approx f(x_0)+ f'(x_0)(x-x_0)$$ neboli
 $$f(x)\approx f(x_0)+ \frac{\mathrm df(x_0)}{\mathrm dx}(x-x_0).$$
 
@@ -439,10 +439,11 @@ je určeno jednoznačně, zavádíme následující pojem.
 
 > Věta (rovnice s prostou funkcí). Pokud je $f$ prostá funkce a platí $$f(x)=f(a),$$ potom platí $x=a.$
 
-**Příklad.** Funkce $\frac 1x$ je prostá a proto z rovnosti $\frac 1x = \frac 15$ 
-plyne $x=5$.
+**Příklad.** Vlastnost být či nebýt prostá je zásadní pro vyslovení odpovědi na  otázku, zda rovnice má jediné řešení, či zda řešení může být více. 
 
-**Příklad.** Funkce $x^2$ není prostá a proto z rovnosti $x^2 = 7^2$ neplyne $x=7$.
+* Funkce $\frac 1x$ je prostá a proto z rovnosti $\frac 1x = \frac 15$ 
+plyne $x=5$.
+* Funkce $x^2$ není prostá a proto z rovnosti $x^2 = 7^2$ neplyne $x=7$. Ve skutečnosti pro každou rovnici ve které není prostá funkce, potřebujeme speciální metodu. Proto máme speciální vzorec pro řešení kvadratické rovnice, nebo například speciální postupy pro řešení goniometrickcýh rovnic.
 
 
 ## Inverzní funkce
@@ -451,7 +452,7 @@ Inverzní úloha je tak trošku jako reverzní inženýrství. Máme výsledek
 a potřebujeme znát vstupní data. U funkcí to je supersnadné, u
 konstrukcí supersložité. Užitečné je ale obojí.
 
-> Definice (inverzní funkce).   Nechť funkce $f: A\to B$ je prostá. Pravidlo, které každému $x$   z množiny $f(A)$ přiřadí to (jediné) $y$, pro které platí $f(y)=x$ se nazývá *inverzní funkce* k funkci $f$, označujeme   $\mathbf{f^{-1}}$.
+> Definice (inverzní funkce).   Nechť funkce $f: A\to B$ je prostá. Pravidlo, které každému $x$   z množiny $f(A)$ přiřadí to (jediné) $y$, pro které platí $f(y)=x$ se nazývá *inverzní funkce* k funkci $f$, označujeme   $f^{-1}$.
 
 
 > Poznámka (inverzní funkce pří řešení rovnic). Jinak zapsáno, je-li $$f(y)=x$$ a $f$ má inverzní funkci, platí

@@ -47,7 +47,7 @@ podobných pěkných objektů. Uvidíme to později například při popisu
 deformace. Jako ukázku přístupu si můžeme už teď ukázat následující
 snadnou větu. Věta je teď asi málo užitečná, ale naučíme se na ní
 trik, kterým později rozdělíme složitější objekt (matici) na součet
-dvou jiných a šikovějších objektů (součet symetrické a antisymetrické
+dvou jiných a šikovnějších objektů (součet symetrické a antisymetrické
 matice).
 
 
@@ -100,7 +100,7 @@ Přímo z definice lokálních extrémů a rostoucí a klesající funkce plyne,
 
 >Věta (Fermatova o lokálním extrému, nutná podmínka pro lokální extrém). Má-li funkce $f$ v bodě $x_0$ lokální extrém, potom je derivace funkce $f$ v bodě $x_0$ nulová, nebo neexistuje. 
 
-Předchozí věta představuje *nutnou podmínku* pro lokální extrém. V bodě kde není splněna (tj. pokud je derivace v tomto bodě kladná nebo záporná) exrém nemůže nastat. Tím je eliminováno obrovské množství bodů z definičního oboru funkce. V prakticky využitelných případech nám po této eliminaci často zůstane jenom jediný bod, podobně jako v následující úloze. 
+Předchozí věta představuje *nutnou podmínku* pro lokální extrém. V bodě kde není splněna (tj. pokud je derivace v tomto bodě kladná nebo záporná) extrém nemůže nastat. Tím je eliminováno obrovské množství bodů z definičního oboru funkce. V prakticky využitelných případech nám po této eliminaci často zůstane jenom jediný bod, podobně jako v následující úloze. 
 
 ## Příklad: Nosník maximální tuhosti
 
@@ -183,7 +183,7 @@ kladnou derivaci a intervalů, kde má funkce zápornou derivaci.
 </div>
 
 Pro nalezení intervalů, kde je výraz závislý na jedné proměnné kladný
-a kde záporný je vynikajícícm nástrojem Bolzanova věta představená v
+a kde záporný je vynikajícím nástrojem Bolzanova věta představená v
 následujících odstavcích. Hodí se například pro nalezení intervalů,
 kde má funkce kladnou a kde zápornou derivaci, což využijeme při
 nelezení intervalů, kde je funkce rostoucí a kde klesající.
@@ -448,7 +448,7 @@ maximalizací tuhosti nosníku obdélníkového průřezu, kdy jsme tvrdili,
 Pokud více nosníků pokládáme na sebe nebo vedle sebe, tuhost se
 sčítá. Pokud nosníky vedle sebe slepíme bočními hranami, nic se
 nezmění, protože na spoji není žádné tahové napětí. Tuhost tedy roste
-linárně s šířkou. Pokud tři nosníky položíme na sebe, vzroste tuhost
+lineárně s šířkou. Pokud tři nosníky položíme na sebe, vzroste tuhost
 na trojnásobek jednoho nosníku.  Tuhost nosníku však také roste se
 třetí mocninou výšky.  Nosníky položené na sebe a slepené se chovají
 jako jediný nosník. Pokud tři nosníky slepíme nebo spojíme hřebíky,

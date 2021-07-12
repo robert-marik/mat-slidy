@@ -38,7 +38,6 @@ Body nespojitosti a nulové body rozdělí reálnou osu na tři podintervaly.
 * Interval $(-\infty,-1)$. Dosazením reprezentanta $x=-2$ z tohoto intervalu máme $$y'(-2)=\frac{1-(-2)}{(-2+1)^3}<0$$ a proto je derivace na tomto intervalu záporná a funkce klesá.
 * Interval $(-1,1)$. Dosazením reprezentanta $x=0$ z tohoto intervalu máme $$y'(0)=\frac{1-0}{(0+1)^3}>0$$ a proto je derivace na tomto intervalu kladná a funkce roste.
 * Interval $(1,\infty)$. Dosazením reprezentanta $x=2$ z tohoto intervalu máme $$y'(2)=\frac{1-2}{(2+1)^3}<0$$ a proto je derivace na tomto intervalu záporná a funkce klesá.
-  \end{itemize}
 
   V bodě $x=1$ se monotonie funkce mění spojitě z klesající na rostoucí (nakreslete si schema) a funkce má lokální minimum.
 
@@ -57,7 +56,6 @@ Body nespojitosti a nulové body rozdělí reálnou osu na čtyři podintervaly.
 * Interval $(-2,-1)$. Dosazením reprezentanta $x=-1.5$ z tohoto intervalu máme $$y'(-1.5)=\frac{-1.5(-1.5+2)}{(\dots)^2}<0$$ a proto je derivace na tomto intervalu záporná a funkce klesá.
 * Interval $(-1,0)$. Dosazením reprezentanta $x=-0.5$ z tohoto intervalu máme $$y'(-0.5)=\frac{-0.5(-0.5+2)}{(\dots)^2}<0$$ a proto je derivace na tomto intervalu záporná a funkce klesá.
  * Interval $(0,\infty)$. Dosazením reprezentanta $x=1$ z tohoto intervalu máme $$y'(1)=\frac{1(1+2)}{(\dots)^2}>0$$ a proto je derivace na tomto intervalu kladná a funkce roste.
-  \end{itemize}
 
   V bodě $x=-2$ se monotonie funkce mění spojitě z rostoucí na klesající (nakreslete si schema) a funkce má v tomto bodě lokální maximum.
 

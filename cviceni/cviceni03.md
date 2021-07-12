@@ -195,7 +195,7 @@ Tabulka udává závislost koeficientu tepelné vodivosti mědi na teplotě, $\l
 _Poznámka: Teplota v Kelvinech (termodynamická teplota) je teplota ve stupních Celsia posunutá tak, aby teplota $-273{,}15^\circ\mathrm C$ odpovídala $0\,\mathrm K$. Dílky a tedy i změny teploty jsou na obou stupnicích identické._
 
 
-|  $T$ [K] | $\lambda$ [W/(m\,K)] |
+|  $T/\mathrm K$ | $\lambda\Bigm/ \mathrm {W}/(\mathrm{m}\,\mathrm{K})$ |
 |---------|----------|
 |  200 | 413 |
 |  400 | 393 |
@@ -207,6 +207,7 @@ Table: Zdroj: Cengel, Mass and heat transfer.
 
 <div class=reseni>
 
+Teploty jsou v ekvidistantních krocích po $200$ kelvinech. Vezmeme od výchozí hodnoty $400$ kelvinů nejbližší nižší ($200\,\mathrm K$) a nejbližší vyšší ($600\,\mathrm K$) teplotu, najdeme v tabulce odpovídající koeficienty tepelné vodivosti, rozdílem určíme změnu v tomto koeficientu a podílem přepočteme změnu na jeden Kelvin.
 $$\frac{\mathrm d\lambda}{\mathrm dT}(400) \approx \frac{(379 -413) \mathrm {W}/(\mathrm m\,\mathrm K)}{2\cdot 200\mathrm K}=-0.085\,\mathrm W \,\mathrm m^{-1}\,\mathrm K^{-2}$$
 Při teplotě $T=400 K$ hodnota koeficientu tepelné vodivosti s rostoucí teplotou klesá. S každým stupněm Celsia (s každým Kelvinem) nad danou teplotu klesne koeficient tepelné vodivosti o $0.085\,\mathrm W \,\mathrm m^{-1}\,\mathrm K^{-1}$.
 
@@ -231,8 +232,8 @@ který konverguje velmi rychle.
 
 |Iterace|Hodnota|
 |:----|:----|
-$x_0$|$1$
-$x_1$|$0.75$
+$x_0$|$1.000000000000000$
+$x_1$|$0.750000000000000$
 $x_2$|$0.800123762376238$
 $x_3$|$0.801613150991155$
 $x_4$|$0.801614587354561$
@@ -249,7 +250,7 @@ Konergenci pozorujeme, ale je pomalá.
 
 |Iterace|Hodnota|
 |:----|:----|
-$x_0$|$1$
+$x_0$|$1.000000000000000$
 $x_1$|$0.875000000000000$
 $x_2$|$0.823272705078125$
 $x_3$|$0.807422868167514$

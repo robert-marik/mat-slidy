@@ -25,7 +25,7 @@ Při hlubším než povrchním studiu libovolného systému nás zajímají veli
 $$\delta=\frac 1k F,$$
 kde $k$ je konstanta pro daný nosník (tuhost).
 
-Na řadu použití stačí intuitivní chápání funkce i jejích vlastností. Někdy je však potřeba si myšlenky zpřesnit a plně formalizovat. V následujícícm představíme definici funkce, rozdělíme funkce na rostoucí, kelsající a ostatní a ukážeme si využití těchto vlastností. 
+Na řadu použití stačí intuitivní chápání funkce i jejích vlastností. Někdy je však potřeba si myšlenky zpřesnit a plně formalizovat. V následujícím představíme definici funkce, rozdělíme funkce na rostoucí, klesající a ostatní a ukážeme si využití těchto vlastností. 
 
 ## Funkce jedné proměnné
 
@@ -64,7 +64,7 @@ Veličina $y$ je *nepřímo úměrná* veličině $x$ jestliže existuje konstan
 
 <div class='obtekat'>
 
-![Některé stromy se při pohybu chovají jako kyvadlo, jiné jako nosník. Podle toho, jaké veličina je v korelaci s frekvencí. Porozumění dynamické odezvě stromů umožní například lépe posuzovat bezpečnost stromů v městském prostředí. Zdroj: pixabay.com, Jan-Mallander.](strom_vitr2.jpg)
+![Některé stromy se při pohybu chovají spíše jako kyvadlo, jiné spíše jako nosník. Poznáme to podle toho, jaká veličina je ve vztahu úměrnosti s frekvencí vlastních kmitů (obecněji a více odborně mluvíme o korelaci veličin). Porozumění dynamické odezvě stromů umožní například lépe posuzovat bezpečnost stromů v městském prostředí. Zdroj: pixabay.com, Jan-Mallander.](strom_vitr2.jpg)
 
 </div>
 
@@ -76,9 +76,16 @@ Veličina $y$ je *nepřímo úměrná* veličině $x$ jestliže existuje konstan
 * Při pohybu po předem stanovené dráze $s$ je čas nepřímo úměrný rychlosti $v$. Platí $t=\frac sv$. Konstantou úměrnosti je dráha $s$. Pro $v=1$ je čas přímo roven dráze. Proto je možno konstantu úměrnosti slovně vyjádřit tak, že udává čas, který je nutný pro projetí příslušné dráhy jednotkovou rychlostí.
 * Při periodickém pohybu je frekvence $f$ nepřímo úměrná periodě $T$. Příslušnou konstantou úměrnosti je jednička, tj. $f=\frac 1T$.
 * Objem $V$ koule o poloměru $r$ je přímo úměrný třetí mocnině poloměru. Existuje tedy konstanta $k$ taková, že platí $V=k r^3$. Pro $r=1$ je objem $V$ přímo roven konstantě $k$. Konstanta proto $k$ vyjadřuje objem koule jednotkového poloměru. Protože objem koule jednotkového poloměru je $\frac 43 \pi$ učí se žáci v matematice rovnou vzorec $V=\frac 43 \pi r^3$.
-* Dynamická odezva stromů ve větru je častým námětem mnoha vědeckých prací. Souhrnná studie [Jackson, T. et al (2021) The motion of trees in the wind: a data synthesis. Biogeosciences.](https://bg.copernicus.org/preprints/bg-2020-427/) ukázala, že v některých případech (zpravidla listnáče v lese) je základní frekvence vlastních kmitů stromů nepřímo úměrná odmocnině výšky, což je vztah známý pro kyvadlo. $$f=\frac 1T \sim \frac 1{\sqrt H}.$$ U jiných stromů (zpravidla jehočinaté stromy) je základní frekvence přímo úměrná průměru $d$ a nepřímo úměrná druhé mocnině výšky $H$, tj. $$f=\frac 1T\sim \frac{d}{H^2}.$$ Tento vztah je znám pro nosníky. To ukazuje, že pro některé stromy je pro dynamické vlastnosti dominantní hmota v koruně, pro jiné stromy hmota podél kmene.  
+* Dynamická odezva stromů ve větru je častým námětem mnoha vědeckých prací. Souhrnná studie [Jackson, T. et al (2021) The motion of trees in the wind: a data synthesis. Biogeosciences.](https://bg.copernicus.org/preprints/bg-2020-427/) tvrdí, že v některých případech (zpravidla listnáče v lese) je základní frekvence vlastních kmitů stromů nepřímo úměrná odmocnině výšky, což je vztah známý pro kyvadlo. $$f=\frac 1T \sim \frac 1{\sqrt H}.$$ U jiných stromů (zpravidla jehličnaté stromy) je základní frekvence přímo úměrná průměru $d$ a nepřímo úměrná druhé mocnině výšky $H$, tj. $$f=\frac 1T\sim \frac{d}{H^2}.$$ Tento vztah je znám pro nosníky. To ukazuje, že pro některé stromy je pro dynamické vlastnosti dominantní hmota v koruně, pro jiné stromy hmota podél kmene.
 * Síla působící na těleso ve vzdálenosti $r$ od planety je dána vztahem $F=\frac{k}{r^2}$, kde $k$ je konstanta úměrnosti (závislá na hmotnosti planety i tělesa). Toto můžeme slovně vyjádřit tak, že síla je nepřímo úměrná druhé mocnině vzdálenosti. Pro $r$ rovno jedné je síla $F$ přímo rovna konstantě $k$. Konstanta úměrnosti $k$ proto udává sílu působící na těleso v jednotkové vzdálenosti od planety.
 
+\iffalse
+
+`ww2:problems/precalculus/umernost_slovne.pg`
+
+`ww2:problems/precalculus/umernost_vzorcem.pg`
+
+\fi
 
 ## Monotonie funkce
 
@@ -119,17 +126,17 @@ nerovnice jsou záporné) apod. Takových situací je mnoho a protože není
 v lidských silách si všechny pamatovat, stačí je míst spojeny s
 definicí rostoucí a klesající funkce.
 
-**Příklad.** Funkce $\ln x$ a $\sqrt x$ jsou rostoucí a proto z nerovnic $$\ln x>\ln 6$$ a $$\sqrt x>\sqrt 6$$ plyne $$x>6.$$ Zejména v druhém případě je nutné si uvědomit, že používáme definici rostoucí funkce a skutečnost, že nezápornost obou stran nerovnice zajišťuje, že pracujeme na intervalu kladných hodnot $x$, kde je druhé mocnina rostoucí funkce. Nestačí říct, že umocňujeme obě strany nerovnice, jak by někdo mohl tento krok dezinterpretovat. Umocněním obou stran nerovnice se obecně může změnit obor pravdivosti, proto tato operace u nerovnic není povolena. Na celém svém definičním oboru totiž druhá mocnina rostoucí není. 
+**Příklad (užitečnost monotonie při práci s nerovnicemi).** Funkce $\ln x$ a $\sqrt x$ jsou rostoucí a proto z nerovnic $$\ln x>\ln 6$$ a $$\sqrt x>\sqrt 6$$ plyne $$x>6.$$ Zejména v druhém případě je nutné si uvědomit, že používáme definici rostoucí funkce a skutečnost, že nezápornost obou stran nerovnice zajišťuje, že pracujeme na intervalu kladných hodnot $x$, kde je druhé mocnina rostoucí funkce. Nestačí říct, že umocňujeme obě strany nerovnice, jak by někdo mohl tento krok dezinterpretovat. Umocněním obou stran nerovnice se obecně může změnit obor pravdivosti, proto tato operace u nerovnic není povolena. Na celém svém definičním oboru totiž druhá mocnina rostoucí není. 
 
-**Příklad.** Funkce $\frac 1x$ a $y=x^2$ nejsou ani rostoucí ani klesající a proto z žádné z nerovností
+**Příklad (nerovnice obsahující nemonotonní funkce).** Funkce $\frac 1x$ a $y=x^2$ nejsou ani rostoucí ani klesající a proto z žádné z nerovností
 $$\frac 1x \leq \frac 15$$
 a
 $$x^2 \leq 5^2$$
-neplyne ani $x\leq 5$ ani $x\geq 5$.
-
-**Příklad.** Funkce $\sqrt x$ nabývá nezáporných hodnot a funkce $\frac 1x$ je klesající na $(0,\infty)$. Proto z nerovnosti
+neplyne ani $x\leq 5$ ani $x\geq 5$. Tento příklad ukazuje, že nerovnice obsahující nemonotonní funkce jsou v obecném případě složitější, protože nemůžeme speciálních vlastností monotonních funkcí. Někdy však není nutné pracovat na celém definičním oboru, ale je možno definiční obor zúžit na množinu, kde funkce již monotonní je. Například funkce $\sqrt x$ nabývá nezáporných hodnot a funkce $\frac 1x$ je klesající na $(0,\infty)$. Proto z nerovnosti 
 $$\frac 1{\sqrt x} \leq \frac 15$$
-plyne $$\sqrt x\geq 5=\sqrt {25}.$$ Druhá mocnina je na intervalu $(5,\infty)$ rostoucí a proto odsud plyne dále $$x\geq 25.$$
+plyne 
+$$\sqrt x\geq 5=\sqrt {25}.$$ 
+Druhá mocnina je na intervalu $(5,\infty)$ rostoucí a proto odsud plyne dále $$x\geq 25.$$
 
 
 # Přípravné úvahy pro zavedení derivace
@@ -272,19 +279,20 @@ $f'$, $f'(x)$ nebo $\frac{\mathrm df}{\mathrm dx}$. Zápis $\frac{\mathrm df}{\m
 \fi
 
 Interpretace derivace v nematematických disciplínách je okamžitá
-7rychlost s jakou veličina $f$ reaguje na změny veličiny $x$. Často
+rychlost s jakou veličina $f$ reaguje na změny veličiny $x$. Často
 studujeme veličiny závislé na čase s v tomto případě jde tedy o
 rychlost, s jakou se veličina mění v čase. Další možnosti a obraty používané pro slovní vyjádření derivace jsou zmíněny níže v podkapitole věnované derivaci podle času. Analogickou terminologii (rychlost růstu, rychlost změny) zpravidla přenášíme i na případy, kdy nezávislou proměnnou není čas. Rychlost potom chápeme v abstraktním slova smyslu.
 
 Obecně, ať již je nezávislou proměnnou čas či jiná veličina, se derivace $f'(x)$ často slovně interpretuje jako veličina, která udává, jak se mění veličina $f$ při změnách veličiny $x$. Tímto slovním obratem je myšlena změna veličiny $f$, odpovídající změně veličiny $x$ o jednotku. Je to podobné, jako údaj o rychlosti na tachometru v automobilu. Ten udává, kolik kilometrů ujedeme za hodinu. Od skutečně uražené dráhy se tento údaj může lišit, protože pohyb může trvat třeba jenom deset minut. A kdyby jízda opravdu trvala hodinu, mohlo vlivem jízdy v zácpě dojít k podstatnému nesouladu se skutečně uraženou dráhou. Přesto je okamžitá rychlost ukazovaná na tachometru při jízdě automobilem užitečná veličina a nemáme problémy s jejím chápáním. Stejně tak pohlížejme na derivaci.
-
-Jednotka derivace je stejná, jako jednotka podílu $\frac {f(x)}x$.
 
 \iffalse
 
 `ww2:problems/derivace_pouziti/hromada.pg`
 
 \fi
+
+> Poznámka (jednotka derivace). Jednotka derivace $\frac{\mathrm df}{\mathrm dx}$ funkce $f(x)$ je stejná, jako jednotka podílu $\frac {f(x)}x$.
+
 
 > Věta (existence derivace implikuje spojitost). Má-li funkce $f$ derivaci na intervalu $I$, je na tomto intervalu spojitá.
 
@@ -296,7 +304,7 @@ Jednotka derivace je stejná, jako jednotka podílu $\frac {f(x)}x$.
 # Aplikace derivací 1: Jak rychle? (změna v čase)
 
 
-> Poznámka (slovní vyjádření derivace). Derivace v bodě, pokud ji nahlížíme z hlediska časové změny veličiny, je okamžitá rychlost s jakou se mění tato veličina. Protože kladná změna je růst, nahrazujeme někdy slovo "změna" slovem "růst". Protože rychlost je změna za jednotku času, nahrazujeme někdy slovo "rychlost" obratem "změna za jednotku času". Derivaci podle času můžete tedy přečíst libovolým z následujících obratů. Všechny se běžně používají a všechny chápeme stejně -- jako derivaci podle času.
+> Poznámka (slovní vyjádření derivace). Derivace v bodě, pokud ji nahlížíme z hlediska časové změny veličiny, je okamžitá rychlost s jakou se mění tato veličina. Protože kladná změna je růst, nahrazujeme někdy slovo "změna" slovem "růst". Protože rychlost je změna za jednotku času, nahrazujeme někdy slovo "rychlost" obratem "změna za jednotku času". Derivaci podle času můžete tedy přečíst libovolným z následujících obratů. Všechny se běžně používají a všechny chápeme stejně -- jako derivaci podle času.
 > 
 > * Rychlost růstu
 > * Rychlost změny (implicitně předpokládáme, že kladná změna odpovídá růstu a záporná změna poklesu)
@@ -335,8 +343,8 @@ za hodinu je rychlost, s jakou roste teplota tělesa.
    * Pokud je derivace dána vztahem $-e^{-t}$, kde $t$ je čas v hodinách a derivace vychází ve stupních Celsia za hodinu, využijeme toho, že $e^0=1$ a $e^{-1}=0.37$. To znamená, že na počátku se teplota snižuje okamžitou rychlostí jeden stupeň Celsia za hodinu, tato rychlost ochlazování se pozvolna mění a například po hodině se teplota snižuje už jenom rychlostí $0.37$ stupně Celsia za hodinu.
 * Matematickým vyjádřením toho, že rychlost s jakou se mění teplota  je úměrná 
 teplotnímu rozdílu $T-T_0$ je rovnice $$\frac{\mathrm
-dT}{\mathrm dt}=-k(T-T_0),$$ kde $k$ je konstanta úměrnosti a záporné znaménko vyjadřuje, že teplota klesá. Neznámou v
-této rovnici je funkce a v rovnici figuruje derivace této
+dT}{\mathrm dt}=-k(T-T_0),$$ kde $k$ je konstanta úměrnosti a záporné znaménko vyjadřuje, že teplota klesá. Konstanta $k$ je číselně rovna rychlosti ochlazování v situaci, kdy je jednotkový rozdíl mezi teplotou objektu a okolí. 
+* Neznámou v sestavené rovnici je funkce a v rovnici figuruje derivace této
 funkce. Takové rovnice se naučíme řešit později.
 
 V této chvíli je pro nás cenné to, že umíme přeformulovat fyzikální popis vývoje (rychlost změny teploty je úměrná rozdílu teplot) na kvantitativní popis, kde dokážeme realizovat numerickou simulaci. Realizace takové simulace může vypadat například tak, že na krátký časový krok budeme předpokládat konstantní rychlost. Tuto rychlost použijeme pro odhad nové teploty, tato nová teplota změní teplotní rozdíl, tím se změní i rychlost a postup opakujeme. Toto děláme [na počítači](https://sagecell.sagemath.org/?z=eJxlU02L2zAQvRv8HwZySbZJmhYKpeBjT4WlFN-WZdFak0aRPGP0tWv_-o7sZDdtdbKsN-89vRmt4D716E1nFQTTJ6c6hMEz3ONLZEoZJmWZgLuTUxNnRQZ0-1FHaGAHFu5g3e7aw6auVvDTm95EkwUycJrkE-KU96B58KgJ4Xty6DmP0GNkPS41DKQ8d4Tn8F6HrybEdDYQ-Ch7W4RnwFK5lZrBG-uUhl-JfuPuR4pR1VVdtc3XA8haQcTBcVQ31vHE8tdhEGRsZpjgJtWpiFaoPYr1ToVUV1rO95_KseyLZevZzsFcUjJ1ZQXyZaawjEfTGaQI4uDQfD787cCyE_zAHcanQpQEsUCSVlmSH9ihRAABNDrLaZZLV21DEX1W7h_9PAaHGm3z8HDYto-Pha8QbSVxsFJS7vucNPYIqWSlopxLrgONkMfM54vDsQR3ZA9GpMArCXR9Y3bzbc5htC6Fuiqhle5H-AAyBu-riIdEkIttXIC6LXNi75YhuSv4FfhROiI-YJILqSy3jqI5gowGGRm_PJLc-xlJzTFgLzoLXWFrRZfWut3c6Mr8xtK7qUfhsYVRYj1LS-DEmjhe7Py3VnOkEqSM1pstGS1-Nf38ErhnIdEYMBoiQUBnArrrwTGRFRgt9NeG7NUwIOn1Q5S2bC4OBz4Xi5ovMJnp0p_SsKW6jBFhtwS9_KqrcOKXtZPH8FQatb4qbKFsz2wIddP6hJvt2BtqDpuZKI_WoyBFjy7PG9-e9x9WM0on&lang=sage&interacts=eJyLjgUAARUAuQ==).
@@ -371,6 +379,7 @@ archeologických nálezů pozůstatků živých organismů
   pravděpodobnost se s časem nemění. Kvantitativně je proces rozpadu popsán rovnicí
   $$\frac{\mathrm dy}{\mathrm dt}=-\lambda y,$$
   kde $\lambda$ je konstanta úměrnosti. 
+* Konstanta úměrnosti $\lambda$ vyjadřuje rychlost, s jakou se rozpadá jednotkové množství látky. 
 * Uhlík je na datování vhodný, protože jej během života absorbují živé organismy a protože poločas rozpadu jej činí vhodným pro datování většiny archeologicky zajímavých nálezů. (Pro datování vzorků starších než 50 tisíc let je nutné použít jiný prvek, protože v tomto případě již uhlíku $^{14}C$ ve vzorku zůstane málo.)
 
 # Aplikace derivací 2: Jak strmě? (změna v prostoru)
@@ -455,7 +464,7 @@ Derivování si také můžete procvičit v následujících cvičeních.
 
 \fi
 
-## Přece jenom jeden příklad
+## Vztah mezi rychlostmi měnících se veličin
 
 \iffalse
 
@@ -467,12 +476,14 @@ Derivování si také můžete procvičit v následujících cvičeních.
 
 \fi
 
+Pokud existuje mezi dvěma veličinami známý vztah, můžeme pomocí derivací odvodit vztah mezi rychlostmi, s jakými se tyto veličiny mění. Ukážeme si to na příkladu kyvadla. Podobně se chová strom s dlouhým kmenem a korunou nahoře, například listnaté stromy v lese.
+
 Perioda matematického kyvadla délky $L$ je dána vzorcem $T=2\pi
 \sqrt{\frac Lg}$. Tento vzorec je možno přepsat do tvaru
 $$T=\frac{2\pi}{\sqrt g} \sqrt L, $$ který ukazuje, že perioda je
 úměrná odmocnině délky kyvadla.
 
-Pro derivování použijeme vzorec pro derivaci konstantního násobku a mocniné funkce. 
+Pro derivování použijeme vzorec pro derivaci konstantního násobku a mocninné funkce. 
 \dm$$\frac {\mathrm d T}{\mathrm dL}=\frac{\mathrm d}{\mathrm dL}\left(\frac{2\pi}{\sqrt g} \sqrt L\right)=\frac{2\pi}{\sqrt g} \frac{\mathrm d}{\mathrm dL}\left (L^{\frac 12}\right)=\frac{2\pi}{\sqrt g}\frac 12 L^{-\frac 12}=\frac{\pi}{\sqrt{gL}}.
 $$
 Tento výraz udává v jednotkách sekunda na metr, jak rychle se prodlužuje perioda kyvadla při prodloužení délky kyvadla. Například pro $L=2\,\mathrm m$ je derivace [číselně rovna](https://sagecell.sagemath.org/?z=eJxVjEEOwiAQRfck3IHERaExGrvSBTdg2QtgGRpSGSogsbcXa9rE2fxk_nt_lLfT9cLqHZgB69ANwKaAKWvMlBQdeaMa8aunh4669nMMHhCBkp4rIbt2duf0jJmPol1Tib89-8KpRr-LTFFiILpS16Rx1vL-qARXslvFssxhgMw2hBV2D6ZasqME-fZeWV03385_qR03kCA7xMWzwaUH-A8U2Un-&lang=sage&interacts=eJyLjgUAARUAuQ==) $0.71\,\mathrm{s}\,\mathrm{m}^{-1}.$ Prodloužení dvoumetrového kyvadla o metr prodlouží periodu o $0.71$ sekundy. Protože derivace je okamžitá rychlost změny a na delším intervalu se tato rychlost může změnit, je blíže realitě spíše formulace pro jednotky tisíckrát menší: "Prodloužení kyvadla o milimetr prodlouží periodu o $0.71$ milisekundy."
@@ -499,7 +510,7 @@ Perioda kyvadla se prodlužuje rychlostí $0.35$ milisekundy za sekundu.
 
 Elektrický odpor dřeva a mnoha dalších stavebních materiálů souvisí s vlhkostí a tato souvislost je umožňuje sestrojení vlhkoměru. Protože elektrický odpor těchto materiálů je velký, není vhodné pro určení elektrického odporu použít Ohmův zákon a změřený proud a napětí. Jedna z možností je měření času nutného k nabití nebo vybití kondenzátoru přes odpor. Napětí $U$ na kondenzátoru o kapacitě $C$ souvisí s nábojem na kondenzátoru vztahem $$U=\frac 1C Q.$$ Derivováním tohoto vztahu podle času dostaneme vztah mezi rychlostmi změn těchto veličin ve tvaru
 $$\frac{\mathrm dU}{\mathrm dt}=\frac 1C \frac{\mathrm dQ}{\mathrm dt}.$$
-Veličina $\frac{\mathrm dQ}{\mathrm dt}$ je nabíjecí proud. Ten dokážeme určit analýzou elektrického obvodu, jak si ukážeme v přednášce o diferenciálních rovnicích. Tím budeme znát derivaci $\frac{\mathrm dU}{\mathrm dt}$ a najít napětí jako funkci času z derivace se naučíme v přednášce o integrálech. Důležitým prvním krokem při analýze uvažoivaného elektrického zapojení je však souvislost časové změny napětí a časové změny náboje, tj. derivace dvou souvisejících veličin.
+Veličina $\frac{\mathrm dQ}{\mathrm dt}$ je nabíjecí proud. Ten dokážeme určit analýzou elektrického obvodu, jak si ukážeme v přednášce o diferenciálních rovnicích. Tím budeme znát derivaci $\frac{\mathrm dU}{\mathrm dt}$ a najít napětí jako funkci času z derivace se naučíme v přednášce o integrálech. Důležitým prvním krokem při analýze uvažovaného elektrického zapojení je však souvislost časové změny napětí a časové změny náboje, tj. derivace dvou souvisejících veličin.
 
 
 
@@ -558,7 +569,7 @@ možný makroskopický pohled na těleso jako na jeden celek.
 ## Parciální derivace
 
 Změna funkce více proměnných může být způsobena změnou libovolné
-nazávislé proměnné. Pokud sledujeme například ve stěně měnící se
+nezávislé proměnné. Pokud sledujeme například ve stěně měnící se
 teplotní profil, zajímá nás, jak se teplota v jednotlivých místech
 stěny mění v čase a jak se teplota mění v řezu stěnou. Zdá se býti
 rozumné oddělit obě změny a studovat každou samostatně. Buď v daném
@@ -568,7 +579,7 @@ bodě s okolními teplotami ve stejném čase. To vede k následujícímu
 přístupu, kdy u funkce více proměnných sledujeme reakci na změnu jedné
 jediné veličiny.
 
-Následující definice výše uvedenou myšlenku odděleného sledování změny funkce (závislé veličiny) jako reakce na změnu jedné jediné vstupní informace (jedné nezávislé veičiny) uvádí v život. Definice je stejná jako u derivace funkce jedné proměnné, změna je pouze v tom, že je přítomna i další proměnná.
+Následující definice výše uvedenou myšlenku odděleného sledování změny funkce (závislé veličiny) jako reakce na změnu jedné jediné vstupní informace (jedné nezávislé veličiny) uvádí v život. Definice je stejná jako u derivace funkce jedné proměnné, změna je pouze v tom, že je přítomna i další proměnná.
 
 > Definice (parciální derivace). Buď $f\colon \mathbb R^2\to\mathbb R$ funkce dvou proměnných,  $x$ a $y$, tj. $f(x,y)$. Výraz
 $$\frac{\partial f}{\partial x}:=\lim_{h\to 0}\frac{f(x+h,y)-f(x,y)}h$$ se nazývá *parciální derivace funkce $f$ podle $x$*. Podobně,
@@ -588,7 +599,7 @@ proměnných, polohy a času. Tedy $T=T(t,x).$ Parciální derivace $\frac{\part
 
 
 > Poznámka. Potřebujeme fyzikální zákony řídící vedení tepla.  Bez nich matematika
-model vedení tepla nemá jak naformulovat. Tyto zákony je potřeba matematice dodat "z venku", z aplikované vědy. Tou je v tomto případě fyzika, jindy může být biologie nebo geologie. Jakmile jsou potřebné zákony a případně materiálové vztahy k dispozici, stavé se problém čistě matematickým a fyzika přijde ke slovu při závěrečné interpretaci. Použijeme následující fyzikální fakta. 
+model vedení tepla nemá jak naformulovat. Tyto zákony je potřeba matematice dodat "z venku", z aplikované vědy. Tou je v tomto případě fyzika, jindy může být biologie nebo geologie. Jakmile jsou potřebné zákony a případně materiálové vztahy k dispozici, stává se problém čistě matematickým a fyzika přijde ke slovu při závěrečné interpretaci. Použijeme následující fyzikální fakta. 
 >
 * Rozdílem teplot je způsoben tok tepla. Velikost toku tepla je úměrná
 teplotnímu rozdílu a teplo teče z místa v větší teplotou do místa s menší teplotou.

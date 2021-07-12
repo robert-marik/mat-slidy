@@ -22,16 +22,23 @@ $$\frac{\partial u}{\partial t}
 $$
 Toto je nejobecnější tvar a bohužel také nejsložitější. Kdykoliv to jde, zjednodušujeme co se dá. To se dá ovšem udělat pouze v případě některých speciálních vlastností studovaného systému.
 
-* Obecný tvar má schopnosti zachytit i nestacionární děj, děj probíhající v různé časové okamžiky jinou intenzitou. Pokud nás zajímá jenom stacionární stav kdy je hodnota stavové veličiny konstantní, můžeme rovnici zjednodušit předpokladem $$\frac{\partial u}{\partial t}=0.$$
-* Obecný tvar má díky přitomnosti zdrojů schopnosti zachytit i proces vzniku či zániku stavové veličiny. Pokud k tomuto nedochází, je rovnice bezzdrojová a můžeme ji zjednodušit předpokladem $$\sigma=0.$$
-* Obecný tvar má díky přitomnosti dvou různých difuzních koeficientů $D_x$ a $D_y$ schopnosti zachytit chování materiálu, který má odlišné vlastnosti v odlišných směrech, anizotropii či ortotropii. Vždy však toto není potřeba. Někdy je materiál izotropní, tj. má ve všech směrech stejné vlastnosti. V tomto případě stačí uvažovat jedinou difuzní konstantu $$D=D_x=D_y,$$ což rovnici zjednodušuje.
+* Obecný tvar má schopnosti zachytit i nestacionární děj, děj probíhající v různé časové okamžiky jinou intenzitou. Pokud nás zajímá jenom stacionární stav kdy je hodnota stavové veličiny konstantní, můžeme rovnici zjednodušit předpokladem $$\frac{\partial u}{\partial t}=0$$
+do tvaru 
+$$0=\sigma +\frac{\partial }{\partial x}\left(D_x \frac{\partial u}{\partial x}\right) + \frac{\partial }{\partial y}\left(D_y \frac{\partial u}{\partial y}\right).$$
+* Obecný tvar má díky přitomnosti zdrojů schopnosti zachytit i proces vzniku či zániku stavové veličiny. Pokud k tomuto nedochází, je rovnice bezzdrojová a můžeme ji zjednodušit předpokladem $$\sigma=0$$ do tvaru 
+$$\frac{\partial u}{\partial t} =\frac{\partial }{\partial x}\left(D_x \frac{\partial u}{\partial x}\right) + \frac{\partial }{\partial y}\left(D_y \frac{\partial u}{\partial y}\right).$$
+* Obecný tvar má díky přitomnosti dvou různých difuzních koeficientů $D_x$ a $D_y$ schopnosti zachytit chování materiálu, který má odlišné vlastnosti v odlišných směrech, anizotropii či ortotropii. Vždy však toto není potřeba. Někdy je materiál izotropní, tj. má ve všech směrech stejné vlastnosti. V tomto případě stačí uvažovat jedinou difuzní konstantu $$D=D_x=D_y,$$ což rovnici zjednodušuje do tvaru
+$$\frac{\partial u}{\partial t} =\sigma + \frac{\partial }{\partial x}\left(D \frac{\partial u}{\partial x}\right) + \frac{\partial }{\partial y}\left(D \frac{\partial u}{\partial y}\right).$$
 * Pro konstantní difuzní koeficient je možno difuzní členy zjednodušit pomocí pravidla pro derivaci konstantního násobku, tj.
-$$
-\frac{\partial }{\partial x}\left(D_x \frac{\partial u}{\partial x}\right)
-=
-D_x \frac{\partial^2 u}{\partial x^2}
-$$
-a analogicky pro další proměnné. Tento matematický předpoklad prakticky odpovídá homogennímu materiálu ve kterém je lineární konstitutivní zákon.
+$$ \frac{\partial }{\partial x}\left(D_x \frac{\partial u}{\partial x}\right) = D_x \frac{\partial^2 u}{\partial x^2} $$
+a analogicky pro další proměnné. Výraz na levé straně se nazývá kvaziderivace, výraz napravo je násobkem druhé derivace. Tento matematický předpoklad prakticky odpovídá homogennímu materiálu ve kterém je lineární konstitutivní zákon. Rovnice poté má tvar
+$$\frac{\partial u}{\partial t} =\sigma + D_x \frac{\partial^2 u}{\partial x^2} + D_y \frac{\partial^2 u}{\partial y^2}.$$
+
+Jednotlivé varianty je pochopitelně možné kombinovat. Například stacionární rovnice v homogenním izotropním prostředí má derivaci podle času nulovou, stejné difuzní koeficienty v obou směrech a díky homogenitě a linearitě je možné kvaziderivace napsat jako druhé derivace, tj. rovnice má tvar
+$$0 =\sigma + D \frac{\partial^2 u}{\partial x^2} + D \frac{\partial^2 u}{\partial y^2}.$$
+
+
+
 
 </div>
 

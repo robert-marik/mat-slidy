@@ -156,7 +156,7 @@ deformaci tělesa, což uvidíme v Hookově zákoně později. Může
 se jednat také o zobrazení, které vektoru charakterizujícímu změnu tlaku v
 podzemní vodě nebo změnu koncentrace vody ve dřevě přiřadí směr proudění. (Směr podnětu a výsledného proudění si nemusí odpovídat,
 protože voda je poháněna rozdílem tlaků ve směru největšího poklesu
-tlaku nebo rozdílem koncentrací se směru největšího poklesu koncentrace, ale současně si v anizotropním prostředí hledá cestu nejmenšího
+tlaku nebo rozdílem koncentrací ve směru největšího poklesu koncentrace, ale současně si v anizotropním prostředí hledá cestu nejmenšího
 odporu).
 
 Nechť je naše zobrazení vyjádřeno v nějaké souřadné soustavě $\mathcal
