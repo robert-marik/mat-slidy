@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+
+\input ../talks.tex
+
+\begin{document}
+
+\section*{Funkce}
+
+Dobrý den, vítejte u videa, které je úvodem do studia funkcí. Řekneme si stručně k čemu nám jsou funkce a dále si připomeneme pojmy přímá a nepřímá úměrnost a rostoucí a klesající funkce a možná je uvidíme zase trošku z jiného úhlu pohledu a v jiném kontextu. Text přednášky můžete sledovat zde ve videu nebo na webové stránce.
+
+Pokud v jakémkoliv oboru studujeme nějaký jev lépe než povrchně, zajímá nás přirozeně intenzita tohoto jevu a s tím spojené hodnoty veličin charakterizujících tento jev. Například při působení větru na strom můžeme sledovat sílu větru a s ní spojenou výchylku. Vztah mezi silou $F$ a výchylkou $\delta$ může být například tvaru $$\delta=\frac 1k F,$$ kde $k$ je konstanta pro daný strom.
+
+Obecně funkcí rozumíme zobrazení, které vstupním datům, vzorům, přiřazuje výstupní hodnoty, obrazy. Veličina na vstupu se též jinými slovy nazývá nezávislá veličina a na výstupu závislá veličina.
+
+Je to až k nevíře, že pro vyjádření funkčního vztahu mezi mnoha veličinami nám stačí prosté násobení a dělení. Takový funkční vztah si proto vysloužil v přirozené řeči vlastní pojmenování, přímá a nepřímá úměrnost. Je-li veličina $y$ přímo úměrná veličině $x$, existuje konstanta, například $k$, taková, že $$y=kx.$$ Je-li $y$ veličina nepřímo úměrná $x$, potom zase $$y=\frac kx$$ pro vhodnou konstantu $k$.
+
+Ve slovním spojení přímá úměrnost často slovo přímá vynecháváme. Konstantu můžeme označovat různými písmeny a někdy může být vhodné ji napsat do jmenovatele, jak jsme viděli na příkladu s deformací stromu. Důležité je sledovat nezávislou veličinu, zda je v čitateli nebo ve jmenovateli.
+
+Například v elektrickém obvodu Ohmův zákon říká, že elektrické napětí $U$ je úměrné proudu $I$ a proto existuje konstanta taková, že napětí je rovno proudu vynásobenému touto konstantnou. Z historických důvodů se tato konstanta označuje $R$ a proto Ohmův zákon píšeme ve tvaru $$U=RI.$$ Konstantám úměrnosti se často snažíme dát slovní interpretaci. Nejčastěji tak, že zvolíme jednotkové hodnoty nezávislých veličin. V tomto případě pro $I=1$ platí $$U=R\cdot 1=R$$ a to znamená, že odpor $R$ je roven napětí při jednotkovém proudu.
+
+Veličina může být úměrná i více veličinám. Pročtěte si příklady z přednášky a my si alespoň můžeme uvést matematickou formulaci vztahu pro deformaci nosníku délky $l$, výšky $h$, šířky $b$, namáhanému silou $F$. Deformace $d$ ve středu je úměrná síle a délce a nepřímo úměrná šířce a třetí mocnině výšky. Tedy existuje konstanta $k$ taková, že $$d=k\frac {l F}{b h^3}.$$ Číselně je konstanta $k$ rovna prohnutí nosníku průřezu metr krát metr a délky metr namáhanému silou jeden Newton, tj. přibližně závaží o hmotnosti desetina kilogramu. To je mimořádně silný a krátký nosník namáhaný maličkou silou. Taková interpretace dává jasnou představu, že konstanta $k$ bude numericky velmi malá.
+
+Další výzvou spojenou s funkcemi je pochopit, zda daná funkce zachovává či převrací uspořádání vstupních dat podle velikosti, či zda toto uspořádání rozhází. Je možné najít představitele všech tří uvedených kategorií a proto se hodí, jak je v matematice obvyklé, si třídy funkcí vykazujících jeden druh chování pojmenovat. Funkce, které zachovávají uspořádání podle velikosti nazýváme rostoucí. Funkce, které převrací uspořádání podle velikosti nazýváme klesající. Společný název pro klesající a rostoucí funkce je monotonní funkce a proto poslední třída funkcí, které nejsou ani rostoucí ani klesající je třída funkcí, které nemají monotonii. Využití je při řešení nerovnic: nemusíme si pamatovat speciální postupy pro nerovnice s logaritmy, s exponenciálními funkcemi, s odmocninami a podobně. Prohlédněte si ukázky aplikací na nerovnice v textu přednášky.
+
+\newpage
+\section*{Spojitost a limita}
+
+Stěžejním pojmem pro matematické modelování je pojem rychlost. To není nic co bychom neznali z běžného života. Například pokud je v osm hodin ráno teplota 10 stupňů a v poledne 18 stupňů, potom během čtyř dopolednícho hodin teplota narostla o osm stupňů Celsia, tj. rostla 2 stupně Celsia za hodinu. Podobně můžeme definovat různé další rychlosti růstu jedné veličiny v závislosti na druhé. Určitý repertoár je uveden v přednášce.
+
+Důležité je si uvědomit, že takto definovaná rychlost je průměrná rychlost na nějakém intervalu. Bohužel to nemusí být to co chceme v případě, že potřebujeme vědět nebo vyjádřit, co se ve studovaném systému děje právě teď. Potřebovali bychom znát okamžitou rychlost. Pro rychlost pohybu máme přímo měřící přístroj, tachometr. V obecnějších případech tomu tak být může a nemusí. Například pro sledování jak rychle se s polohou na nakloněné rovině mění vzdálenost od vodorovné podložky máme inklinoměr, na měření toho jak rychle se mění celkový náboj který prošel vodičem máme ampérmetr, na měření toho jak rychle se mění rychlost pohybu máme akcelerometr, žádný přístroj měřící rychlost růstu teploty však není a proto takovou rychlost musíme dopočítávat z rozdílu teplot a časového intervalu.
+
+Jsme tedy v situaci, že chceme měřit rychlost změny funkce $f(x)$. Průměrná rychlost změny na intervalu od $x$ do $x+h$ bude změna dělená délkou intervalu, tedy $$\frac{f(x+h)-f(x)}{h}.$$ My bychom rádi dosáhli toho, že je délka $h$ intervalu nulová. Formálně pochopitelně není možné přímo $h=0$ do tohoto vztahu dosadit, protože bychom dostali nedefinovaný výraz. Matematika několik dlouhých desetiletí řešila jak z tohoto problému uniknout, protože to byla zásadní věc pro relevantní fyzikální popis a s tím spojené realistické výpočty stavebních konstrukcí, inženýrských úloh a průmyslových aplikací. Východiskem byla precizní definice pojmu spojitost a limita. Ač spojitost zní jednoduše, pevné pochopení tohoto pojmu není úplně snadné a proto si situaci spíše naznačíme.
+
+Uvažujme funkce $\frac{x^2}{x}$, $\frac{|x|}{x}$, $\frac 1{x}$, $\frac {\sin x}{x}$. Všechny jsou nedefinované pro $x=0$, podobně jako průměrná rychlost na intervalu délky $h$ není definována pro $h=0$.
+
+První funkce je pro $x$ různé od nuly rovna funkci $y=x$ a její graf je tedy přímka s vynechaným bodem $x=0$. Intuitivně vidíme, že dodefinováním jednoho bodu dostaneme opět celou krásnou přímku.
+
+Funkce $\frac{|x|}{x}$ je jiného charakteru, obsahuje v nule jednotkový skok a toho se nezbavíme žádným dodefinováním funkční hodnoty v nule. Podobně na tom je funkce $\frac 1x$.
+
+Funkce $\frac{\sin x}{x}$ je zase ze třídy hezkých funkcí, sice není v nule definována, ale dodefinováním můžeme dostat krásnou hladkou funkci bez skoků.
+
+Funkce bez skoků, konečných či nekonečných, a bez dalších komplikovaností, které v tuto chvíli nejsou podstatné, se nazývají spojité funkce. Funkce, které se dají dodefinováním v jednom bodě učinit spojitými se nazývají funkce mající limitu a tato dodatečná funkční hodnota se nazývá limita funkce. Zjednodušeně řečeno, limita je nejlepší možná náhrada za chybějící funkční hodnotu, díky níž se funkce stane spojitou. A je to přesně to, co potřebujeme k tomu, abychom do průměrné rychlosti dosadili nulovou délku intervalu. Přímo to udělat nemůžeme, proto to uděláme ve smyslu limity. To si necháme do dalšího odstavce.
+
+
+\newpage
+\section*{Parciální derivace}
+
+Při studiu technicky zajímavých praktických úloh si málokdy vystačíme s tím, že sledovaná veličina závisí jenom na jednom druhu dat. Často je veličin ovlivňujících sledovaný systém více a proto funkce vyjadřující vztah mezi těmito veličinami je funkce více proměnných. Například průhyb nosníku závisí na síle, na průřezu a na vzdálenosti mezi podporami. Sledovat jak se sledovaná veličina mění při změnách vstupních dat je skutečně výzva, protože se může nekoordinovaně měnit více dat současně.
+
+Matematika má přesto elegantní trik, jak z tohoto vybřednout: převedení na již známý případ. A tímto známým případem je studium funkcí jedné proměnné. V praxi to vypadá tak, že sledujeme změny jenom v jedné proměnné. Ostatní proměnné zafixujeme. Hrají vlastně roli parametrů, nebo chceme-li, konstant.
+
+V praxi to může vypadat například tak, že máme dřevo pro teplotní modifikaci a vystavíme ho vysoké teplotě. V peci teplota dřeva roste a teplo postupně prostupuje dovnitř. Můžeme si zvolit jeden bod a v něm sledovat, jak se teplota mění s časem. Může třeba růst rychlostí dva stupně Celsia za minutu. Tuto rychlost růstu nazýváme parciální derivace teploty podle času a v našem bodě platí $$\frac{\partial T}{\partial t}=2^{\circ}\mathrm C/\mathrm{min}.$$ Všimněte si, že u funkce více proměnných dáváme derivaci přívlastek parciální a značíme mírně odlišně. Jinak je to naše dobrá známá derivace. Pokud by například teplota klesala, byla by derivace záporná. Také si můžeme říct, že nás nezajímá jeden bod, ale teplota v různých bodech ve stejném čase. To bude parciální derivace podle prostorové proměnné, například pokud platí $$\frac{\partial T}{\partial x}=3^{\circ}\mathrm C/\mathrm{cm},$$ znamená to, že ve směru osy $x$ teplota roste tak, že na každém centimetru naroste o tři stupně Celsia.
+
+Výhoda takto zavedené parciální derivace je v tom, že můžeme využít všechno co se naučíme pro funkce jedné proměnné, veškerá pravidla pro derivování, poučky o fyzikální jednotce derivace a slovní interpretaci. Ani na definici není nic překvapivého, je to naše známé schéma s limitním přechodem, který z průměrné rychlosti udělá rychlost okamžitou. Jediný rozdíl je přítomnost dalších proměnných, ty však do definice nijak nezasahují, mají roli parametru, konstanty.
+
+\newpage
+\section*{Rovnice vedení tepla}
+
+
+Jako využití parciálních derivací si ukážeme jednu velice mocnou aplikaci: fyzikální principy popisující mechanismus transportu energie použijeme k vytvoření modelu, umožňujícího modelovat prostup energie prostředím. Aplikací je například vedení tepla při posuzování teplotních ztrát budov, nebo při hodnocení vlivu stromu na životní prostředí ve městě.
+
+Použijeme jednorozměrný případ, tj. sestavíme model umožňující posuzovat vedení tepla v tyči, nebo vedení tepla skrz stěnu při zanedbání efektů na okrajích stěny. 
+
+První fyzikální princip, Fourierův zákon, říká, že rychlost vedení tepla, tj. rychlost s jakou se energie předávána z míst o vysoké teplotě do míst o nízké teplotě, je úměrná rychlosti, s jakou klesá teplota v prostoru. Rychlost s jakou roste teplota ve směru osy $x$ je parciální derivace teploty podle $x$, rychlost s jakou klesá je záporně vzatá derivace podle $x$, podle Fourierov zákona přidáme konstantu úměrnosti a máme tok tepla ve směru osy $x$.
+
+Pokud tok tepla slábne, znamená to, že se teplo ukládá do materiálu. Rychlost s jakou tok slábne vypočteme jako záporně vzatou rychlost zesilování a rychlost s jakou tok sílí vypočteme jako parciální derivaci toku podle prostorové souřadnice. Tím máme informaci, jak se nerovnosměrnost v teplotním profilu v materiálu projeví na rychlosti s jakou roste či klesá množství energie v daném místě. Tuto rychlost bychom opět rádi vyjádřili pomocí teploty. Není to nic těžkého, stačí se zase zeptat fyziků, jak funguje ukládání energie ve formě tepla do materiálu. Od nich získáme odpověď, že rychlost ukládání tepla je úměrná rychlosti růstu teploty. Konstanta úměrnosti souvisí s vlastnostmi materiálu a je součinem hustoty a měrné tepelné kapacity. V tomto jednorozměrném příapdě pochopitelně máme na mysli lineární hustotu. 
+
+Tím získáváme model popisující vedení tepla v jedno dimenzionálním tělese. Jeho řešením například v situaci kdy máme tyč zchlazenou na nula stupňů, levý konec na této teplotě udržujeme a pravý konec začneme udržovat na teplotě 100 stupňů získáme informaci, jak se postupně jednotlivé části tyče ohřívají a jak postupně se nastoluje rovnovážný stav s rovnoměrně rostoucím teplotním profilem.
+
+
+\end{document}
+
