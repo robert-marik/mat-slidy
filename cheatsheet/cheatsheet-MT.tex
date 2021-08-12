@@ -157,7 +157,7 @@ Druhá diference: $\frac{\mathrm d^2f}{\mathrm dx^2}=f''(x)\approx  \frac{f(x-h)
 
 Neurčitý integrál je opak derivace, kdy z rychlosti změny určíme časový průběh měnící se veličiny. Je dána až na aditivní konstantu související s výchozím stavem.
 Píšeme
-$$\int f(x)\,\mathrm dx=F(b)-F(a),$$
+$$\int f(x)\,\mathrm dx=F(x),$$
 kde $F(x)$ je funkce splňující $\frac{\mathrm dF}{\mathrm dx}=f(x).$
 
 \textbf{Vzorce pro integrování}
@@ -212,12 +212,29 @@ Riemmannův integrál umožňuje vypočítat součet nekonečné mnoha malých p
 
 Riemmannův integrál se počítá stejně jako Newtonův. 
 
+\textbf{Autonomní DR 1. řádu}
+$$\frac{\mathrm dy}{\mathrm dt}=f(y)$$ 
+
+Konstantních řešení je tolik, kolik je nulových bodů funkce $f(y)$.
+
+Stabilní konstantní řešení jsou v bodech, kde je funkce $f$ klesající. 
+
+Netabilní konstantní řešení jsou v bodech, kde je funkce $f$ rostoucí. 
+
+
+
 \vfill
 \null
 \penalty -500
 
 \columnbreak
 
+
+\textbf{Vlastní čísla a vektory}
+
+Vlastní vektory jsou vektory, které se zobrazí do stejného směru, poměr délek je vlastní číslo. Tj. vektor $\vec u$ je vlastním vektorem matice $A$ příslušným vlastnímu číslu $\lambda$, pokud platí $$A\vec u=\lambda\vec u.$$
+
+Všechna vlastní čísla najdeme jako kořeny rovnice $$|A-\lambda I|=0.$$ Symetrická pozitivně definitní matice má tolik reálných vlastních čísel, kolik je její dimenze. 
 
 \textbf{Determinanty}
 
