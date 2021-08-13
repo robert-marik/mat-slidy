@@ -1,0 +1,130 @@
+\documentclass[12pt]{article}
+
+\input ../talks.tex
+
+\begin{document}
+
+\section*{Úvod}
+
+Dobrý den, vítejte na úvodní přednášce z matematiky. V této přednášce se seznámíme s pojmem derivace. Nedávejte si tento pojem do googlu a nehledejte na wikipedii, nepůjdeme na to jako profesionální matematici, ale jako uživatelé. Tímto pojmem budeme označovat rychlost změny. A je to pojem neskutečně užitečný, protože příroda miluje rychlost při popisu mechanismu naprosté většiny procesů. Fyzika střední šoly byla slabý odvar fyziky skutečného světa právě proto, že neměla pojem derivace k dispozici a musela se omezit na děje probíající konstantní rychlostí. Nyní toto omezení sejmeme. Je fajn naučit se počítat derivace, ty nové objekty s nimiž se teď budeme seznamovat, ale prvním krokem je vždy navodit situaci, ve které k tomuto výpočtu dojde. To znamená být schopen jazyk derivací, rychlostí změn, použít k sestavení matematických modelů dějů a jevů v přírodě a inženýrské praxi. Soustřeďte se zejména na tuto dovednost, to je pro nás to nejdůležitější. Nenechte se zlákat rutinními výpočty kdy člověk podtrne výsledek, zkontroluje si správnost a oddechne si, že to má dobře. Soustřeďte se na to v jakých situacích se používají jiné nástroje a vtiskněte si tuto souvislot do paměti. Z toho budete těžit celý život. Rutinní výpočty si k tomu můžete dodělat sami, nebo je delegovat na jiné, případně svěřit výpočetní technice.
+
+V přednášce si nejprve připomeneme základní pojmy týkající se funkcí, naťukneme problematiku měření rychlosti změn funkce, což souvisí s pojmy spojitost funkce  a limita funkce, poté se již odvážíme nadefinovat derivaci, veličinu popisující rychlost s jakou se mění funkce. Využití si ukážeme na matematické formulaci zákona tepelné výměny a na rovnici radioaktivního rozpadu. Stručně zmíníme i další aplikace. Metody výpočtu si necháme do cvičení, ale ukázky které můžete napodobovat jsou prolinkovány i v textu přednášky. Na závěr se budeme věnovat problematice rychlosti růstu funkce více proměnných a jako aplikaci si ukážeme jak se fyzikální představy o mechanismu pohzbu tepla látkou dají využít k sestavení rovnice vedení tepla, rovnice která nám dokáže modelovat například teplotní ztráty v budovách nebo tepelné ostrovy ve městech a v krajině. 
+
+\section*{Funkce}
+
+Dobrý den, vítejte u videa, které je úvodem do studia funkcí. Řekneme si stručně k čemu nám jsou funkce a dále si připomeneme pojmy přímá a nepřímá úměrnost a rostoucí a klesající funkce a možná je uvidíme zase trošku z jiného úhlu pohledu a v jiném kontextu. Text přednášky můžete sledovat zde ve videu nebo na webové stránce.
+
+Pokud v jakémkoliv oboru studujeme nějaký jev lépe než povrchně, zajímá nás přirozeně intenzita tohoto jevu a s tím spojené hodnoty veličin charakterizujících tento jev. Například při působení větru na strom můžeme sledovat sílu větru a s ní spojenou výchylku. Vztah mezi silou $F$ a výchylkou $\delta$ může být například tvaru $$\delta=\frac 1k F,$$ kde $k$ je konstanta pro daný strom.
+
+Obecně funkcí rozumíme zobrazení, které vstupním datům, vzorům, přiřazuje výstupní hodnoty, obrazy. Veličina na vstupu se též jinými slovy nazývá nezávislá veličina a na výstupu závislá veličina.
+
+Je to až k nevíře, že pro vyjádření funkčního vztahu mezi mnoha veličinami nám stačí prosté násobení a dělení. Takový funkční vztah si proto vysloužil v přirozené řeči vlastní pojmenování, přímá a nepřímá úměrnost. Je-li veličina $y$ přímo úměrná veličině $x$, existuje konstanta, například $k$, taková, že $$y=kx.$$ Je-li $y$ veličina nepřímo úměrná $x$, potom zase $$y=\frac kx$$ pro vhodnou konstantu $k$.
+
+Ve slovním spojení přímá úměrnost často slovo přímá vynecháváme. Konstantu můžeme označovat různými písmeny a někdy může být vhodné ji napsat do jmenovatele, jak jsme viděli na příkladu s deformací stromu. Důležité je sledovat nezávislou veličinu, zda je v čitateli nebo ve jmenovateli.
+
+Například v elektrickém obvodu Ohmův zákon říká, že elektrické napětí $U$ je úměrné proudu $I$ a proto existuje konstanta taková, že napětí je rovno proudu vynásobenému touto konstantnou. Z historických důvodů se tato konstanta označuje $R$ a proto Ohmův zákon píšeme ve tvaru $$U=RI.$$ Konstantám úměrnosti se často snažíme dát slovní interpretaci. Nejčastěji tak, že zvolíme jednotkové hodnoty nezávislých veličin. V tomto případě pro $I=1$ platí $$U=R\cdot 1=R$$ a to znamená, že odpor $R$ je roven napětí při jednotkovém proudu.
+
+Veličina může být úměrná i více veličinám. Pročtěte si příklady z přednášky a my si alespoň můžeme uvést matematickou formulaci vztahu pro deformaci nosníku délky $l$, výšky $h$, šířky $b$, namáhanému silou $F$. Deformace $d$ ve středu je úměrná síle a délce a nepřímo úměrná šířce a třetí mocnině výšky. Tedy existuje konstanta $k$ taková, že $$d=k\frac {l F}{b h^3}.$$ Číselně je konstanta $k$ rovna prohnutí nosníku průřezu metr krát metr a délky metr namáhanému silou jeden Newton, tj. přibližně závaží o hmotnosti desetina kilogramu. To je mimořádně silný a krátký nosník namáhaný maličkou silou. Taková interpretace dává jasnou představu, že konstanta $k$ bude numericky velmi malá.
+
+Další výzvou spojenou s funkcemi je pochopit, zda daná funkce zachovává či převrací uspořádání vstupních dat podle velikosti, či zda toto uspořádání rozhází. Je možné najít představitele všech tří uvedených kategorií a proto se hodí, jak je v matematice obvyklé, si třídy funkcí vykazujících jeden druh chování pojmenovat. Funkce, které zachovávají uspořádání podle velikosti nazýváme rostoucí. Funkce, které převrací uspořádání podle velikosti nazýváme klesající. Společný název pro klesající a rostoucí funkce je monotonní funkce a proto poslední třída funkcí, které nejsou ani rostoucí ani klesající je třída funkcí, které nemají monotonii. Využití je při řešení nerovnic: nemusíme si pamatovat speciální postupy pro nerovnice s logaritmy, s exponenciálními funkcemi, s odmocninami a podobně. Prohlédněte si ukázky aplikací na nerovnice v textu přednášky.
+
+\newpage
+\section*{Spojitost a limita}
+
+Stěžejním pojmem pro matematické modelování je pojem rychlost. To není nic co bychom neznali z běžného života. Například pokud je v osm hodin ráno teplota 10 stupňů a v poledne 18 stupňů, potom během čtyř dopolednícho hodin teplota narostla o osm stupňů Celsia, tj. rostla 2 stupně Celsia za hodinu. Podobně můžeme definovat různé další rychlosti růstu jedné veličiny v závislosti na druhé. Určitý repertoár je uveden v přednášce.
+
+Důležité je si uvědomit, že takto definovaná rychlost je průměrná rychlost na nějakém intervalu. Bohužel to nemusí být to co chceme v případě, že potřebujeme vědět nebo vyjádřit, co se ve studovaném systému děje právě teď. Potřebovali bychom znát okamžitou rychlost. Pro rychlost pohybu máme přímo měřící přístroj, tachometr. V obecnějších případech tomu tak být může a nemusí. Například pro sledování jak rychle se s polohou na nakloněné rovině mění vzdálenost od vodorovné podložky máme inklinoměr, na měření toho jak rychle se mění celkový náboj který prošel vodičem máme ampérmetr, na měření toho jak rychle se mění rychlost pohybu máme akcelerometr, žádný přístroj měřící rychlost růstu teploty však není a proto takovou rychlost musíme dopočítávat z rozdílu teplot a časového intervalu.
+
+Jsme tedy v situaci, že chceme měřit rychlost změny funkce $f(x)$. Průměrná rychlost změny na intervalu od $x$ do $x+h$ bude změna dělená délkou intervalu, tedy $$\frac{f(x+h)-f(x)}{h}.$$ My bychom rádi dosáhli toho, že je délka $h$ intervalu nulová. Formálně pochopitelně není možné přímo $h=0$ do tohoto vztahu dosadit, protože bychom dostali nedefinovaný výraz. Matematika několik dlouhých desetiletí řešila jak z tohoto problému uniknout, protože to byla zásadní věc pro relevantní fyzikální popis a s tím spojené realistické výpočty stavebních konstrukcí, inženýrských úloh a průmyslových aplikací. Východiskem byla precizní definice pojmu spojitost a limita. Ač spojitost zní jednoduše, pevné pochopení tohoto pojmu není úplně snadné a proto si situaci spíše naznačíme.
+
+Uvažujme funkce $\frac{x^2}{x}$, $\frac{|x|}{x}$, $\frac 1{x}$, $\frac {\sin x}{x}$. Všechny jsou nedefinované pro $x=0$, podobně jako průměrná rychlost na intervalu délky $h$ není definována pro $h=0$.
+
+První funkce je pro $x$ různé od nuly rovna funkci $y=x$ a její graf je tedy přímka s vynechaným bodem $x=0$. Intuitivně vidíme, že dodefinováním jednoho bodu dostaneme opět celou krásnou přímku.
+
+Funkce $\frac{|x|}{x}$ je jiného charakteru, obsahuje v nule jednotkový skok a toho se nezbavíme žádným dodefinováním funkční hodnoty v nule. Podobně na tom je funkce $\frac 1x$.
+
+Funkce $\frac{\sin x}{x}$ je zase ze třídy hezkých funkcí, sice není v nule definována, ale dodefinováním můžeme dostat krásnou hladkou funkci bez skoků.
+
+Funkce bez skoků, konečných či nekonečných, a bez dalších komplikovaností, které v tuto chvíli nejsou podstatné, se nazývají spojité funkce. Funkce, které se dají dodefinováním v jednom bodě učinit spojitými se nazývají funkce mající limitu a tato dodatečná funkční hodnota se nazývá limita funkce. Zjednodušeně řečeno, limita je nejlepší možná náhrada za chybějící funkční hodnotu, díky níž se funkce stane spojitou. A je to přesně to, co potřebujeme k tomu, abychom do průměrné rychlosti dosadili nulovou délku intervalu. Přímo to udělat nemůžeme, proto to uděláme ve smyslu limity. To si necháme do dalšího odstavce.
+
+\section*{Derivace}
+
+Jakmile máme za sebou předchozí odstavec, je zřejmé, jak budeme definovat rychlost: použijeme průměrnou rychlost a délku intervalu použitého k výpočtu stáhneme k nule pomocí limity. Takto získaná veličina se nazývá derivace funkce $f$ a označuje buď $$f'$$ nebo stejně jako podíl $$\frac{\mathrm df}{\mathrm dx}.$$
+
+Rozebereme si tuto definici podrobněji. Hodnota $x$ je hodnota vstupních dat. Tato vstupní data se změní o hodnotu $h$. Nová hodnota vstupních dát bude $x+h$. Každému ze  vstupů $x$ a $x+h$ odpovídá  jistá funkční hodnota a rozdíl těchto funkčních hodnot, tj. výraz v čitateli udává změnu ve výstupních  datech.  Podíl změny na výstupu a změny na vstupu udává průměrnou rychlost s jakou se mění $f$ jako funkce proměnné $x$.  Je to vlastně změna $f$ vyvolaná jednotkovou změnou $x$.  Limitní přechod poté průměrnou rychlost předvede na rychlost okamžitou. Derivaci proto chápeme jako okamžitou rychlost změny.
+
+Jinak řečeno ji můžeme také chápat jako změnu funkční hodnoty vyvolanou jednotkovou změnou ve vstupních datech. Někdy se v tomto kontextu používá obrat "přibližná změna". Tímto obratem se snažíme vyjádřit to, že rychlost se může měnit. Například ookud teplota roste teď v tomto okamžiku rychlostí pět stupňů za hodinu, znamená to, že za hodinu by mohlo být o pět stupňů více, pokud se dynamika nezmění. Během hodiny se ale může stát spousta věcí. Jestli se po deseti minutách trend otočí a začne se ochlazovat, nemá to vliv na okamžitou rychlost růstu teď, ale má to vliv na teplotu za hodinu.
+
+Jednotka derivace je stejná jako jednotka podílu. Například uvažujeme-li hmotnost ledové kroupy ve tvaru koule jako funkci průměru, udává derivace rychlost s jakou hmotnost roste jako funkce průměru v jednotkách hmotnosti dělených jednotkou délky. Například v gramech na milimetr.
+
+V teorii funkcí je ukázáno, že funkce mající derivaci je automaticky spojitá a z definice je zřejmé, že znaméno derivace rozlišuje rostoucí a klesající funkce. Přesněji, pokud má funkce kladnou derivaci je rostoucí a pokud zápornou derivaci, je klesající.
+
+\section*{Aplikace derivací}
+
+Derivace je odvozena jako veličina měřící rychlost změny. Kladná změna nárůstu veličiny, proto repoertoár slovních vyjádření derivace vyjadřuje celou řadu obratů jako rychlost růstu. Nezávislou veličinou je často čas a protom v tomto případě derivace čteme jako časovou změnu veličiny $f$ nebo nárůst za jednotku času.
+
+Někdy chceme pracovat s poklesem a v takovém případě násobíme derivace faktorem minus jedna. Čteme záporně vzatá derivace a tato veličina vyjadřuje rychlost poklesu.
+
+Rychlost, tedy derivace, je často součástí fyzikálních zákonů. Například při tepelné výměně platí Newtonův zákon tepelné výměny, který je možno vyjádřit tak, že rychlost růstu teploty při umístění tělesa do prostředí o jiné teplotě je úměrná rozdílu teplot. To vyjadřuje skutečnost, že pokud je teplotní rozdíl vysoký, je rychlost změny teploty tepelnou výměnou intenzivní a pro malý teplotní rozdíl se intenzita tepelné výměny zpomaluje. 
+
+Pokud uvažujeme horké těleso o teplotě $T$ umístěné v chladnějším prostředí o teplotě $T_0$, je teplotní rozdíl $T-T_0$ a rychlost poklesu teploty horkého tělesa $-\frac{\mathrm dT}{\mathrm dt}.$ Podle Newtonova zákona tepelné výměny je mezi těmito veličinami vztah přímé úměrnosti a tedy platí $$-\frac {\mathrm dT}{\mathrm dt}=k(T_T_0),$$
+nebo po vynásobením faktorem $-1$ vztah
+$$\frac {\mathrm dT}{\mathrm dt}=-k(T_T_0).$$ Narazili jsme na velice úžitečnou dovednost: dokážeme fyzikální popis děje převést na matematický model, který umožňuje předpovědět, jak se děj bude vyvíjet.
+
+V současnosti ještě neumíme takový model vyřešit. To ale vůbec nevadí, tento model již může být vložen do simulačních nástrojů které si s ním poradí a po zadání parametrů a počátečního stavu nám jsou schopny předpovědět vývoj teploty v čase, za jak dlouho se teplotní rozdíl sníží na polovinu, za jak dlouho se sníží na deset stupňů a podobně. Modely obsahující derivace neznámé funkce se nazývají diferenciální rovnice a naučíme se je řešit za pár týdnů.
+
+Jiný jednoduchý příklad ilustrující převod fyzikálního popisu na matematický model je model radioaktivního rozpadu. Z fyziky je známo, že při radioaktivním rozpadu nestabilních prvků je rychlost s jakou se snižuje množství nestabilního izotopu úměrná množství tohoto izotopu. To je jednoduchý důsledek toho, že pravděpodobnost rozpadu jednoho konkrétního atomu je v čase konstantní. Pokud množství nerozpadnutého izotopu označíme $y$ a konstantu úměrnosti $\lambda$, stačí uvážit že rozpad je vlastně úbytek, tj. záporný nárůst popsaný záporně vzatou derivací. Potom již stačí přesně podle fyzikálního popisu sestavit matematický model. Rychlost únytku a množství jsou si úměrné s konstantou úměrnosti $\lambda$, proto má model tvar $$-\frac{\mathrm dy}{\mathrm dt}=\lambda y$$ a po vynásobení faktorem $-1$ dostáváme výsednou diferenciální rovnici pro radioaktivní rozpad. Tato úloha bývá v učebnicích tradičně spojována s radiouhlíkovou metodou datování archeologických nálezů, ale bohužel se s radioaktivitou setkáváme častěji, než je nám milé. Jedná se o problematiku radonu v budovách, kdy radon jako plynný prvek z rozpadové řady uranu proniká půdou do sklepení budov a při nedostatečné ochraně zahrnující například vyplnění spár, izolace, větrání, je jedním z rozhodujících faktorů spouštějících rakovinu plic.
+
+Abychom si to shrnuli: nebojte se formulovat matemtické modely přírodních dějů. Označte si použité veličiny, kde se mluví o rychlostech použijte derivace těchto veličin, kde se mluví o úměrnosti použijte konstantní násobky a s touto výbavou budete schopni modelovat obrovskou škálu dějů v přirodě i ve společnosti. Títmto principem se modelují téměř všechny fyzikální děje, protože derivace nám umožní se povznést ze středoškolské fyziky uvažující až na vyjímky konstantní rychlosti do reálného světa. Pomocí derivací se modelují v ekologii interakce mezi populacemi, například dynamika kůrovce. Derivace se mohou použít i k modelování společenských jevů, jedna z podoblastí modelů založených na derivacích je teorie epidemií.
+
+\newpage
+\section*{Jak strmě}
+
+V předchozím jsme se věnovali rychlosti změny veličiny závislé na čase, tedy časové změně. Veličina, která nás zajímá, však může být i funkcí polohy. Například při analýze chování stěny nás zajímá, jaká je teplota v různých částech stěny a jak rychle se tato teplota mění. To nám dá informaci o tom, jaké teplo stěnou uniká do okolí. Protože směr skrz stěnu je jeden, je úloha jendorozměrná a proto tato problematika v podstatě odpovídá vedení tepla v tyči. Derivace teploty jako funkce polohy by potom mohl být třeba $3 ^\circ\mathrm{C}/\mathrm{cm}$ což značí, že na každém centimetru teplota naroste o tři stupně Celsia. Takto pojaté rychlosti se také často říká gradient. V příručkách pro odhad tepelných ztrát se nesetkáme s derivací, ale výpočet gradientu se provádí dělením teplotního rodílu a tloušťky stěny, to znamená, že místo okamžité rychlosti se používá rychlost průměrná a veškeré konstanty pro výžpočet jsou tomuto přizpůosbeny. Pokud však chceme být schopni modelovat a chápat, co se děje v jddnotlivých částech materiálu nebo složené stěny, je takové zjednodušení pro nás nepřijatelné a proto se používají okamžité rychlosti, tj. derivace.
+
+S derivací podle prostorové proměnné se setkáváme například i při popisu chování vody v korytě. Pokud je sledovanou funkcí obsah příčného průřezu tekoucí vody a nezávislou proměnnou výška hladiny ode dna, udává nám derivace hodnotu o kolik naroste tento obsah při zvýšení hladiny o jednotku. Z obrázku je zřejmé, že tato derivace bude rovna šířce hladiny v korytě a příslušný vztah se používá pro vyjádření podmínek na vznik vodního skoku, což je například jedna z metod jak odebrat proudící vodě kinetickou energii.
+
+\newpage
+
+\section*{Výpočet derivace}
+
+Derivaci jsme definovali pomocí pojmu limita, pomocí pojmu, se kterým jsme se vlastně ani nenaučili pracovat. Proto je situace zdánlivě ve slepé uličce. Není to však ani zdaleka tak složité. Derivace základních elementárních funkcí jsou známy a máte je v seznamu vzorců. Derivace matematických operací mezi funkcemi, jako je derivace součtu funkcí, rozdílu, součinu, podílu a derivace složené jsou také známy. V naprosté věštšině případů se tedy výpočet derivace redukuje na použití vzorců. Pro natrénování takového výpočtu derivace je nelepší sednout si se seznamem vzorců, prohlédnout si řešené příklady a poté se snažit o aplikaci vzorců na vlastní zadání. K tomu vám pomůžou příklady ve cvičení a také domácí úlohy, které v podstatě korespondují s testovými otázkami v přednášce.
+
+Rychlá ukázka.
+
+Ukážeme si jeden komplexnější příklad. Period matematického kyvadla souvisí známým vzorcem s délkou kyvadla. Pokud tento vztah zderivujeme, zjistíme, jak rychle se mění perioda s délkou, tj. jaké prodloužení periody je vyvoláno jendotkovým prodloužením délky. Pro pohodlný výpočet derivace si přepíšeme vzorec do tvaru konstanta násobená mocninnou funkcí. Pravidla pro derivaci, která se naučíte ve cvičení, nám říkají, že multiplikativní konstanty při derivaci zůstávají na svém místě a mocninné funkce se derivují tak, že se exponent přidá dopředu jako konstantní násobek a mocnina v exponentu klesne o jedničku.
+
+Číselně například pro kyvadlo délky dva metry bychom mohli mít derivaci 0.71 sekundy na metr. S každým metrem délky kyvadla navíc se perioda prodlouží o 0.71 sekundy. Tato intepretace je však lehce pokulhávající, jedná se totiž o okamžitou rychlost růstu a nárůst délkového parametru ze dvou metrů o metr není nijak maléá změna. Je proto očekávatelné, že rychlost se bude měnit. Férovější by bylo asi přejít k tisíckrát menší jendotce a interpretovat výsledek tak, že prodloužení kyvadla o milimetr vede k prodloužení periody o 0.71 miliseknudy.
+
+Kyvadlo se nemusí také prodloužit jendorázově, ale může se plynule prodlužovat v čase zadanou rychlostí. Už víme, že tato rychlost prodlužování bude derivace délky podle času, tj. dL/dt. Vzorec svazující periodu a délkou kyvadla nám poslouží k tomu, abychom našli vztah mezi rychlostí prodlužování kyvadla a rychlostí prodlužování periody. Stačí vzorec zderivovat podle času a uvážit, že délka je také funkcí času, tedy v souladu se vzorcem pro derivaci složené funkce nejprve derivovat podle délky, což ož vlastně máme, a poté násobit derivací délky podle času. Pro nějaké reálné hodnoty to může dopadnout například tak jak vidíte na obrázku a dostáváme rychlost s jakou roste perioda.
+
+Schopnost odvodit ze vzorce mezi veličinami vztah mezi rychlostmi změny je využitelný například při měření vlhkosti dřeva. To je možné převést na měření elektrického odporu, ale stanovit tento odpor jako podíl napětí a proudu není vhodné, kvůli tomu, že dřevo je špatný vodič. Alternativou je využití RC obvodu s kondenzátorem. Existuje vztah mezi napětím na kondenzátoru a celkovým nábojem, derivací můžeme určit rychlost růstu napětí v závisloti na proudu, protože derivace náboje je proud a to nám už s troškou elektrotechnických vzorců a řešení diferenciálních rovnic dodá vztahy pro stanovení elektrického odporu dřeva.
+
+\newpage
+\section*{Parciální derivace}
+
+Při studiu technicky zajímavých praktických úloh si málokdy vystačíme s tím, že sledovaná veličina závisí jenom na jednom druhu dat. Často je veličin ovlivňujících sledovaný systém více a proto funkce vyjadřující vztah mezi těmito veličinami je funkce více proměnných. Například průhyb nosníku závisí na síle, na průřezu a na vzdálenosti mezi podporami. Sledovat jak se sledovaná veličina mění při změnách vstupních dat je skutečně výzva, protože se může nekoordinovaně měnit více dat současně.
+
+Matematika má přesto elegantní trik, jak z tohoto vybřednout: převedení na již známý případ. A tímto známým případem je studium funkcí jedné proměnné. V praxi to vypadá tak, že sledujeme změny jenom v jedné proměnné. Ostatní proměnné zafixujeme. Hrají vlastně roli parametrů, nebo chceme-li, konstant.
+
+V praxi to může vypadat například tak, že máme dřevo pro teplotní modifikaci a vystavíme ho vysoké teplotě. V peci teplota dřeva roste a teplo postupně prostupuje dovnitř. Můžeme si zvolit jeden bod a v něm sledovat, jak se teplota mění s časem. Může třeba růst rychlostí dva stupně Celsia za minutu. Tuto rychlost růstu nazýváme parciální derivace teploty podle času a v našem bodě platí $$\frac{\partial T}{\partial t}=2^{\circ}\mathrm C/\mathrm{min}.$$ Všimněte si, že u funkce více proměnných dáváme derivaci přívlastek parciální a značíme mírně odlišně. Jinak je to naše dobrá známá derivace. Pokud by například teplota klesala, byla by derivace záporná. Také si můžeme říct, že nás nezajímá jeden bod, ale teplota v různých bodech ve stejném čase. To bude parciální derivace podle prostorové proměnné, například pokud platí $$\frac{\partial T}{\partial x}=3^{\circ}\mathrm C/\mathrm{cm},$$ znamená to, že ve směru osy $x$ teplota roste tak, že na každém centimetru naroste o tři stupně Celsia.
+
+Výhoda takto zavedené parciální derivace je v tom, že můžeme využít všechno co se naučíme pro funkce jedné proměnné, veškerá pravidla pro derivování, poučky o fyzikální jednotce derivace a slovní interpretaci. Ani na definici není nic překvapivého, je to naše známé schéma s limitním přechodem, který z průměrné rychlosti udělá rychlost okamžitou. Jediný rozdíl je přítomnost dalších proměnných, ty však do definice nijak nezasahují, mají roli parametru, konstanty.
+
+\newpage
+\section*{Rovnice vedení tepla}
+
+
+Jako využití parciálních derivací si ukážeme jednu velice mocnou aplikaci: fyzikální principy popisující mechanismus transportu energie použijeme k vytvoření modelu, umožňujícího modelovat prostup energie prostředím. Aplikací je například vedení tepla při posuzování teplotních ztrát budov, nebo při hodnocení vlivu stromu na životní prostředí ve městě.
+
+Použijeme jednorozměrný případ, tj. sestavíme model umožňující posuzovat vedení tepla v tyči, nebo vedení tepla skrz stěnu při zanedbání efektů na okrajích stěny. 
+
+První fyzikální princip, Fourierův zákon, říká, že rychlost vedení tepla, tj. rychlost s jakou se energie předávána z míst o vysoké teplotě do míst o nízké teplotě, je úměrná rychlosti, s jakou klesá teplota v prostoru. Rychlost s jakou roste teplota ve směru osy $x$ je parciální derivace teploty podle $x$, rychlost s jakou klesá je záporně vzatá derivace podle $x$, podle Fourierov zákona přidáme konstantu úměrnosti a máme tok tepla ve směru osy $x$.
+
+Pokud tok tepla slábne, znamená to, že se teplo ukládá do materiálu. Rychlost s jakou tok slábne vypočteme jako záporně vzatou rychlost zesilování a rychlost s jakou tok sílí vypočteme jako parciální derivaci toku podle prostorové souřadnice. Tím máme informaci, jak se nerovnosměrnost v teplotním profilu v materiálu projeví na rychlosti s jakou roste či klesá množství energie v daném místě. Tuto rychlost bychom opět rádi vyjádřili pomocí teploty. Není to nic těžkého, stačí se zase zeptat fyziků, jak funguje ukládání energie ve formě tepla do materiálu. Od nich získáme odpověď, že rychlost ukládání tepla je úměrná rychlosti růstu teploty. Konstanta úměrnosti souvisí s vlastnostmi materiálu a je součinem hustoty a měrné tepelné kapacity. V tomto jednorozměrném příapdě pochopitelně máme na mysli lineární hustotu. 
+
+Tím získáváme model popisující vedení tepla v jedno dimenzionálním tělese. Jeho řešením například v situaci kdy máme tyč zchlazenou na nula stupňů, levý konec na této teplotě udržujeme a pravý konec začneme udržovat na teplotě 100 stupňů získáme informaci, jak se postupně jednotlivé části tyče ohřívají a jak postupně se nastoluje rovnovážný stav s rovnoměrně rostoucím teplotním profilem.
+
+
+\end{document}
+

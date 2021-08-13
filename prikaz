@@ -69,7 +69,7 @@ do
     ytbid=`cat ../prednasky.txt | head -n$cislo | tail -n1`
     echo $ytbid
 
-    substituce="<div style='background-color: #E41F1F; display:inline-div;max-width:300px; color:lightgray; text-align:center; font-weight:bold; float:left; margin-right:10px; border-color:#E41F1F; border-style:solid;' ><a href='https:\/\/youtu.be\/$ytbid' style='text-decoration:none; color:lightgray;' data-lity><img src='https:\/\/img.youtube.com\/vi\/$ytbid\/mqdefault.jpg' style='width:100%; max-width:100%;'>Youtube přednáška<\/a><\/div>"
+    substituce="<div style='background-color: #E41F1F; display:inline-div;max-width:300px; color:lightgray; text-align:center; font-weight:bold; float:left; margin-right:10px; border-color:#E41F1F; border-style:solid;' ><a href='https:\/\/youtu.be\/$ytbid' style='text-decoration:none; color:lightgray;' data-lity><img src='https:\/\/img.youtube.com\/vi\/$ytbid\/mqdefault.jpg' style='width:100%; max-width:100%;'>Youtube přednáška 2020<\/a><\/div>"
 
     sed -i "s/<!-- YTB -->/$substituce/" index.html
 
