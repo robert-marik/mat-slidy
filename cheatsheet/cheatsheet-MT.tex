@@ -212,6 +212,11 @@ Riemmannův integrál umožňuje vypočítat součet nekonečné mnoha malých p
 
 Riemmannův integrál se počítá stejně jako Newtonův. 
 
+\vfill\null
+
+\columnbreak
+
+
 \textbf{Autonomní DR 1. řádu}
 $$\frac{\mathrm dy}{\mathrm dt}=f(y)$$ 
 
@@ -223,18 +228,59 @@ Netabilní konstantní řešení jsou v bodech, kde je funkce $f$ rostoucí.
 
 
 
-\vfill
-\null
-\penalty -500
+% \vfill
+% \null
+% \penalty -500
 
-\columnbreak
+% \columnbreak
+
+\smallskip
+\hrule
 
 
-\textbf{Vlastní čísla a vektory}
+\textbf{Vektory}, $\vec a=(a_1,a_2,a_3)$, $\vec b=(b_1,b_2,b_3)$, 
 
-Vlastní vektory jsou vektory, které se zobrazí do stejného směru, poměr délek je vlastní číslo. Tj. vektor $\vec u$ je vlastním vektorem matice $A$ příslušným vlastnímu číslu $\lambda$, pokud platí $$A\vec u=\lambda\vec u.$$
+Skalární součin vektorů
+$\vec a\cdot\vec b=a_1 b_1 + a_2 b_2+a_3b_3$
 
-Všechna vlastní čísla najdeme jako kořeny rovnice $$|A-\lambda I|=0.$$ Symetrická pozitivně definitní matice má tolik reálných vlastních čísel, kolik je její dimenze. 
+Vektorový součin vektorů
+\vspace*{-8pt}
+$$\vec a\times \vec b=
+\begin{vmatrix}
+  \vec i & \vec j & \vec k\\
+  a_1 & a_2 & a_3 \\
+  b_1 & b_2 & b_3
+\end{vmatrix}
+$$
+
+Délka vektoru  $|\vec a|=\sqrt{a_1^2+a_2^2+a_3^2}$
+
+\textbf{Matice}
+
+Součin matice a sloupcového vektoru je lineární kombinace sloupců matice, kdy koeficienty jsou komponentami vektoru.
+
+$$
+\begin{pmatrix}
+  5& 2\\-3 & 1
+\end{pmatrix}
+\begin{pmatrix}
+  22\\15
+\end{pmatrix}
+=
+22
+\begin{pmatrix}
+  5\\-3
+\end{pmatrix}
++
+15
+\begin{pmatrix}
+  2\\1
+\end{pmatrix}
+=
+\begin{pmatrix}
+  140 \\-51
+\end{pmatrix}
+$$
 
 \textbf{Determinanty}
 
@@ -256,24 +302,71 @@ Determinant 3$\times$3 \\\null\hfill$
 =aei-afh+bfg-bdi+cdh-ceg
 $\hfill\null
 
-\textbf{Vektory}, $\vec a=(a_1,a_2,a_3)$, $\vec b=(b_1,b_2,b_3)$, 
+\vfill\null
 
-Skalární součin vektorů
-$\vec a\cdot\vec b=a_1 b_1 + a_2 b_2+a_3b_3$
+\columnbreak
 
-Vektorový součin vektorů
-\vspace*{-8pt}
-$$\vec a\times \vec b=
-\begin{vmatrix}
-  \vec i & \vec j & \vec k\\
-  a_1 & a_2 & a_3 \\
-  b_1 & b_2 & b_3
-\end{vmatrix}
-$$
+\textbf{Vlastní čísla a vektory}
 
-Délka vektoru  $|\vec a|=\sqrt{a_1^2+a_2^2+a_3^2}$
+Vlastní vektory jsou vektory, které se zobrazí do stejného směru, poměr délek je vlastní číslo. Tj. vektor $\vec u$ je vlastním vektorem matice $A$ příslušným vlastnímu číslu $\lambda$, pokud platí $$A\vec u=\lambda\vec u.$$
+
+Všechna vlastní čísla najdeme jako kořeny rovnice $$|A-\lambda I|=0.$$ Symetrická pozitivně definitní matice má tolik reálných vlastních čísel, kolik je její dimenze. 
+
+Je-li $\lambda$ vlastní číslo, je vlastní vektor řešení rovnice $$(A-\lambda I)\vec u=0.$$
+
+\textbf{Matice rotace} pootočí bod nebo vektor o úhel $\theta$ proti směru hodinových ručiček. Inverze je poootočení o $-\theta$.
+
+$$R(\theta)=
+\begin{pmatrix}
+  \cos\theta & -\sin \theta\\
+  \sin\theta & \cos\theta
+\end{pmatrix}$$
+
+Zobrazení dané maticcí $A$ má v souřadnicích pootočených o $\theta$ proti směru hodinových ručiček matici $R(-\theta)AR(\theta)$.
+
+\vfill\null
+
+\columnbreak
+
+\textbf{Rovnice kontiuity}
 
 
+$${\frac{\partial u}{\partial t}=\sigma -\nabla\cdot \vec \jmath}$$
+
+$u$ ... stavová veličina
+
+$\frac{\partial u}{\partial t}$ ... rychlost růstu stavové veličiny
+
+$\sigma$ ... vydatnost zdrojů stavové velčiny
+
+$\vec\jmath$ ... tok stavové veličiny
+
+$-\nabla\cdot \vec \jmath$ ... úbytek toku stavové veličiny (záporně vzatá divergence toku)
+
+\textbf{Difuzní rovnice}
+
+Rovnice kontinuty doplněná předpokladem, že tok je úměrný záporně vzatému gradientu stavové veličiny.
+
+$$\vec \jmath=-D\nabla \vec u$$
+
+$${\frac{\partial u}{\partial t}=\sigma + \nabla\cdot \bigl(D\nabla u\bigr)}$$
+
+
+Difuzní rovnice v kartézských souřadnicích ve směru vlastních vektorů:
+$$\frac{\partial u}{\partial t}=\sigma +
+  \frac{\partial}{\partial x}\left(D_x\frac{\partial u}{\partial x}\right)+
+  \frac{\partial}{\partial y}\left(D_y\frac{\partial u}{\partial y}\right)+
+  \frac{\partial}{\partial z}\left(D_z\frac{\partial u}{\partial z}\right)
+  $$
+
+
+
+Pro izotropní materiál (stejné vlastnosti ve všech směrech) platí $D_x=D_y=D_z$.
+
+Pro homogenní lineární materiál (stejné vlastnosti ve všech bodech a odezva úměrná podnětu) jsou difuzní konstanty nezávislé na souřadnicích a kvaziderivace je možno nahradit druhými derivacemi:
+
+$$\frac{\partial}{\partial x}\left(D_x\frac{\partial u}{\partial x}\right)=
+D_x\frac{\partial ^2u}{\partial x^2}\quad \text{atd.}$$
 
 \end{multicols}
 \end{document}
