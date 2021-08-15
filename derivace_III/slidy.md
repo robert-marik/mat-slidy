@@ -466,15 +466,7 @@ $$\vec F=(P,Q,R)=P\vec i+Q\vec j+R\vec k = P\vec e_1+Q\vec e_2+R\vec e_3$$
 
 ## Gradient
 
-Rovnici vedení tepla ve 2D a 3D uvedeme později. Může nastat problém s
-tím, že teplo neteče stejným směrem jaký odpovídá gradientu
-teploty. Je to podobné, jako pohyb vzduchu nebo podzemní vody
-způsobený rozdílem tlaku: voda nebo vzduch míří do míst s nižším
-tlakem, ale přitom volí cestu menšího odporu. Problém vyřešíme
-nástrojem, který umožní změnit směr vektoru: matice a maticové
-násobení. Teď uvedeme jenom veličinu, která umožní kvantifikovat,
-jakým směrem působí síla uvádějící příslušnou stavovou veličinu do
-pohybu.
+Pokud nerovnoměrnost v prostorovém rozložení skalární veličiny iniciuje nějaký děj, je nutné znát směr, ve kterém tato veličina roste nebo klesá. To jsme viděli například u rovnice vedení tepla, kde nerovnoměrnost v prostorovém rozložení teploty dává vznik toku tepla. V jednorozměrném případě byla situace jednoduchá a stačí se řídit znaménkem derivace. Ve dvourozměrném nebo trojrozměrném případě je bohužel situace složitější ale i zde máme nástroj pro detekci směrů ve kterém veličina roste nebo klesá a také intenzity tohoto růstu nebo poklesu.
 
 > Definice (gradient). Buď $f(x,y)$ funkce dvou proměnných, která má
 parciální derivace. *Gradientem* funkce $f$ rozumíme
