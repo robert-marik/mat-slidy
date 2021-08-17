@@ -395,6 +395,8 @@ archeologických nálezů pozůstatků živých organismů
 
 # Aplikace derivací 2: Jak strmě? (změna v prostoru)
 
+https://youtu.be/cy2Mqw4KN4E
+
 Derivace v bodě můžeme nahlížet z hlediska prostorové změny
 veličiny. Tím zjistíme, jak nerovnoměrně je veličina rozložena v
 prostoru. Často se derivace podle prostorové proměnné nazývá *gradient*,
