@@ -261,6 +261,8 @@ Velmi stručně řečeno: pokud se nedá nějaké číslo do funkce dosadit př�
 
 # Derivace
 
+https://youtu.be/Xh1opdJZy4k
+
 Teď jsme připraveni (alespoň teoreticky) počítat průměrnou rychlost na
 intervalu, jehož délka je nerozlišitelná od nuly. Vypočteme průměrnou rychlost na intervalu délky $h$ a poté položíme $h$ rovno nule. Ve smyslu limity, pokud je to nutné.
 
