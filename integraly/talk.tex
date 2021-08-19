@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+
+\input ../talks.tex
+
+\begin{document}
+
+\section*{Úvod}
+
+V minulých týdnech jsme se věnovali problematice najít aparát umožňující pracovat s rychlostí změny, ten jsme našli v derivaci, naučili jsme se tuto derivaci v první řadě používat k formulování matematických modelů situací kde hrála roli rychlost a také jsme se naučili tuto derivaci počítat a používat k některým dalším trikům. Byla to například lokální aproximace funkce nebo optimalizace, čímž míníme v tomto kontextu hledání lokálního extrému funkce jedné proměnné. Nyní budeme čelit před výzvou tuto úlohu obrátit a tedy z rychlosti stanovit měnící se veličinu. V nejjednodušší konkretizaci si můžeme představit, že máme časový záznam hodnot z tachometru automobilu jedoucího stále rovně a máme stanovit polohu automobilu. Je zřejmé, že úloha nemůže mít jednoznačně určitelné řešení. Vskutku, pokud k tomu nepřidáme dodatečnou informaci o výchozím bodu, můžeme určit nanejvýš tak změnu polohy automobilu, ale ne přesné souřadnice polohy. To platí přirozeně pro jakoukoliv rychlost a proto není překvapením, že integrálů bude více. Takzvaný neurčitý integrál bude udávat funkční hodnotu, ale bude dán až na konstantnu charakterizující libovolnou volbu výchozího bodu. Určitý Newtonův bude udávat změnu a díky tomu na výchozí bod nebude vázán. A dále si ukážeme třetí, ke kterému přijdeme jinou úvahou, ale z hlediska počítání bude stejný jako Newtonův a tento integrál se nazývá určitý Riemannův integrál. Tedy celkem tři druhy integrálu. V jistém zjednodušení, které si můžeme dovolit i my, jsou dva poslední integrály stejné a proto se označují jako určitý integrál bez další specifikace zda Newtonův nebo Riemannův.
+
+Protože derivace je nejenom rychlost, ale také směrnice tečny, můžeme  úlohám na integrály dospět také z popisu vlastností kkřivek. Jednoduchou inženýrskou úlohou, kde fyzikální popis dává směrnici tečny a podle něj máme najít křivku je problematiku designu mostu zavěšeného na laně tak, aby bylo lano zaíženo rovnoměrně.
+
+
+\section*{Neurčitý integrál}
+
+První druh integrálu, neurčitý integrál, se v anglické terminologii nazývá \textit{antiderivative}, což plně vystihuje o co je jedná: o opak derivace. Máme-li funkci $f$, potom její neurčitý integrál jsou všechny funkce $F$ takové, že derivace $F$ je $f$. Jak jsme řekli dříve, k rychlosti hledáme funkci měnící se danou rychlostí. Terminologie rozlišuje pojmy primitivní funce, což je jedno libovolné řešení této úlohy, a neurčitý integrál, což jsou všechna řešení. Mezi těmito pojmy je však velmi úzká souvislost, jak si ukážeme vzápětí, a proto nebývá zvykem mezi těmito pojmy důsledně rozlišovat a nemějte nikomu za zlé, když primitivní funkci nazve integrálem nebo naopak. 
+
+Označení integrálu vidíte na obraovce, integrační symbol vznikl z protaženého velkého písmene S. Na konci integrálu je takzvaný diferenciál, který nese informaci, která veličina hraje roli nezávislé proměnné.
+
+Avizovaná blízkost neurčitého integrálu a primitivní funkce je dána větou, kterou slovně můžeme shrnout tak, že primitivní funkce je dána jednoznačně až na aditivní konstantu. To znamená, že pokud máme primitivní funkci, všechny další můžeme dostat přičítáním konstanty.
+
+Zatímco problematika derivování je jenom mechanická aplikace malého počtu pravidel a s touto výbavou dokážeme zderivovat jakoukoliv elementární funkci, problematika integrování je mnohem delikátnější. Do základní výbavy patří vzorce, které vznikou jiným zápisem vzorců pro derivaci. Dále máme k dispozici poučky o integrálu součtu a konstantního násobku. Všimněte si, že nejsou k dispozici vzorečky pro intergál podílu nebo součinu. To má vážné důsledky. Například identická funkce a funkce sinus splňují podle uvedených vzorců následující vztahy
+$$\int x dx = \farc 12 x^2+C$$
+a
+$$\int\sin xdx=-\cos x+C.$$
+Tyto znalosti však nejsou k ničemu pro výpočet integrálů ze součinu nebo podílu jako jsou $$\int x\sin xdx$$ a $$\int \frac{sin x}{x}dx.$$ První z nich vyžaduje speciální metodu výpočtu, kterou se ani nebudeme učit, jenom prozradím její z latin odvozený název: per partés. Druhý integrál je ještě zákeřnější, vůbec neecistuje v množině elementárních funkcí, tedy funkcí sestavených z konečného počtu základních elementárních funkcí spojených operacemi sčítání, odčítání, násobení , dělení a skládání.
+
+Podobně jako u derivací, i dovednost výpočtu integrálu si necháme do cvičení a domácích úloh a půjdeme na to zásadní, využitelnost. Kde a jak to použít?
+
+Představme si, že máme zadánu rychlost a tato rychlost v čase exponenciálně klesá. To je případ elektrického proudu v RC obvodu, který se používá v některých měřících přístrojích, ale formálně stejnou a lépe představitelnou úlohu si zformulujeme pro teplotu. Nechť tedy teplota klesá zadanou rychlostí z jisté počáteční tepoty. Cílem je najít časovou závislost teploty. Funkci, do které dosadíme čas a vyjde nám teplota odpovídající tomuto času. Využijeme vzorec, do kterého dosadíme a dále využijeme toho, že multiplikativní konstanty se při derivování i integrování zachovávají. Přidáním aditivní konstanty máme všechny primitivní funkce. Nyní dosadíme nulový čas a odpovídající počáteční teplotu. To nám umožní určit hodnotu konstanty $C$ a pokud tuto konstantu použijeme v našem řešení, dostaneme hledaný časový vývoj teploty.
+
+V rámečku máme souvislost, kterou jsme viděli v předchozím příkladě, uvedenu obecně. Známe-li rychlost s jakou se mění nějaká veličina, potom hodnota této veličiny je dána integrálem z rychlosti změny. Všimněte si, že pro konstantní funkce se integrování redukuje na násobení. To přesně odpovídá tomu, co známe z života. Pokud by v příkladě s teplotou klesala teplota konstantní rychlostí, třeba dva stupně celsia za minutu, žádný integrál bychom nepotřeovali a vystačili bychom si s matematikou základní školy. Můžeme tento aparát tedy chápat tak, že pokud se při konstantních rychlostech měnící se veličina počítá součinem, je nutné pro nekonstantní rychlosti tento součin nahradit integrálem.
+
+\section*{Určitý integrál, Newton}
+
+Pokud máme v kapse neurčitý integrál, určitý integrál ve smyslu Newtona je jednoduchý. Je to přírůstek primitivní funkce. Kromě funkce tedy musí být součástí zadání i interval na kterém pracujeme. Jeho dolní a horní mez se píše k integračnímu znaménku dolů a nahoru. Formálně se při výpočtu nekdy dělá mezikrok ve kterém se napíše primitivní funkce a teprve potom se počíté rozdíl funkčních hodnot a v takovém případě se primitivní funkce dává do hranaté závorky a meze se připisují k pravé ranaté závorce jako dolní a horní index. Přesně vidíte zde ve videu. I takto definovaný integrál má pěkné vlastnosti interálu, že zachovává součet funkcí a násobení konstantou. Snadným důsledkem definice je také to, že intehrál na intervalu nulové délky je roven nule a pokud prohodíme dolní a horní index, mění integrál znaménko. 
+
+Pokud se vrátíme k našemu příkladu s teplotou klesající nekonstantní rychlostí, můžeme vypočítat například změnu teploty za první hodinu, nebo za druhou hodinu. Prostě jenom integrujeme na požadovaném intervalu. Dokonce ani není nutné specifikovat, kterou z primitivních funkcí používáme a proto nepotřebujeme ani znát počáteční teplotu. Pokud dopočítáme funkční hodnoty numericky vidíme, že za první hodinu se teplota snížila více než za druhou hodinu, což je dáno tím, že rychlost se postupně snižuje. Výraz $$-0.1 e^{-0.01t}$$ se s rostoucím $t$ přibližuje k nule. V prezentaci máte také ukázano jak tento výpočet realizovat v prgramovacím jazyku Pyton a jeho nadstavbě Sage.
+
+Rámeček shrnuje roli určitéoh integrálu v obecné formulaci, pro veličinu, která se mění známou rychlostí mezi dvěma časovými okamžiky. Integrál rychlosti na intervalu mezi těmito časovými okamžiky je roven změně veličiny.
+
+Další pasáže se týkají veličiny, měnící se v prostoru. Například pokud známe rychlost ve stupních celsia na centimetr s jakou se mění teplota v prostoru, inetgrováním dostaneme rozdíl teplot mezi dvěma sledovanými místy. Využití je například pro odvození rovnice udávající tepelné ztráty izolované trubky, jak jsme ji použili v kapitole o lokálních extrémech. Pokud máte zájem, projděte si tuto pasáž v prezentaci. Naprosto stejným způsobem, jenom se místo vedení tepla pracuje s prouděním podzemní vody, se odvozuje například Thiemova rovnice, se kterou se pravděpodobně setkají krajináři při výpočtech pro studny.
+
+Další aplikace integrálu jsou opět uvedeny v prazentaci a nechám na vás, abyste si vše prolétli a to co je blíže vašemu srdci prostudovali podrobněji. Schema je podobné jako to co bylo řečeno dříve. Integríál se často objevuje místo násobení ve vzorcích, ve kterých přestanou být původně konstantní veličiny konstantami. Například místo $s=vt$ pro dráhu pohybu konstantní rychlostí máme integrál pro dráhu pohybu libovolnou rychlostí. Místo součinu pro tlakovou sílu na plochu je v případě, že plocha je napříč různými hloubkami opět integrál. Práci vypočteme jako součin dráhy a síly, ale jenom pro konstantní sílu. Pokud se síla nebo dráha mění, použijeme místo součinu integrál. To je například při vytahování řetězu na střechu paneláku, protože každý článek řetezu se tahá z jiné hloubky a tedy po jiné dráze.
+
+\section*{Riemannův integrál}
+
+K podobnému závěru jako jsme měli s Newtonovým integrálem, že integrál dokáže nahradit součin v připadě nekonstantních rychlostí nebo obecně nekonstantních parametrů je možné dojít i  jiným způsobem.
+
+Uvažujme obdélník, u kterého vypočteme obsah jendoduše součinem. Tento obdélník je možné chápat jako množinu pod grafem konstantní funkce na intervalu $[a,b]$. Pokud bude funkce po částech konstantní s jedním skokem, můžeme vzít obsahy jednotlivých obdélníků, protože obsah je aditivní veličina. Toto je možné pochopitelně použít pro libovolný konečný počet skoků. A prostředky matematické analýzy je dokonce možné udělat skoky tak jemné, že výsledek konverguje k nějaké obecné funkci jako na obrázku. Potom dostaneme obsah množiny pod křivkou která je grafem funkce $f$. Toto je základní myšlenka konstrukce nového objektu, Riemannova interálu. Ukazuje se, že pokud je funkce dostatečně pěkná například ve smyslu spojitosti, dostaneme tímto přístupem stejný integrál jako Newtonův. Věta, která toto tvrdí se nazývá Newtonova-Leibnizova věta. 
+
+
+
+
+
+\end{document}

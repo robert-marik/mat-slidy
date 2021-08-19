@@ -191,6 +191,25 @@ $$
 
 $$\int 2x^4-e^{4x}+\frac 1x\,\mathrm dx=\frac 25 x^5 -\frac 14 e^{4x}+\ln |x|+C$$
 
+\iffalse
+
+Integrování si také můžete procvičit v následujících cvičeních.
+
+`ww2:problems/integraly_vypocet/01.pg`
+
+`ww2:problems/integraly_vypocet/02.pg`
+
+`ww2:problems/integraly_vypocet/03.pg`
+
+`ww2:problems/integraly_vypocet/04.pg`
+
+`ww2:problems/integraly_vypocet/05.pg`
+
+`ww2:problems/integraly_vypocet/06.pg`
+
+\fi
+
+
 ## Funkční předpis z rychlosti změny a výchozího stavu
 
 \iffalse
@@ -292,9 +311,37 @@ Za druhou hodinu bude změna teploty
 
 [Online výpočet.](https://sagecell.sagemath.org/?z=eJwrSyzSUC9R1-TlStMo0VSwVdA10DNU0FJIrSjQADINDLVKgHIFRZl5JQoaQCI1vSixJFUDpFhHo0THQMfMQFMTnwozAx1DI5AaANtfHHM=&lang=sage&interacts=eJyLjgUAARUAuQ==)
 
+
+\iffalse
+
+Integrování určitým integrálem si také můžete procvičit v následujících cvičeních.
+
+`ww2:problems/integraly_vypocet/urcity_int_01.pg`
+
+`ww2:problems/integraly_vypocet/urcity_int_02.pg`
+
+`ww2:problems/integraly_vypocet/urcity_int_04.pg`
+
+\fi
+
+
 > Poznámka (změna veličiny vypočtená pomocí rychlosti). Pokud se veličina $f(t)$ mění v časovém intervalu od $t=a$ do $t=b$ rychlostí $r(t)$, je změna veličiny $f$ za tento časový okamžik rovna $$\Delta f=f(b)-f(a)=\int_a^b r(t)\,\mathrm dt.$$
 
+
+
+\iffalse
+
+Slovní úlohy kde se hledaná veličina mění nekonstantní rychlostí jsou v následujících dvou cvičeních (první je s volbou s nabízených odpovědí).
+
 `ww2:problems/integraly/strom.pg`
+
+`ww2:problems/integraly_pouziti/cisterna.pg`
+
+`ww2:problems/integraly_pouziti/urcity_int_termohrnek.pg`
+
+
+\fi
+
 
 ## Změna funkce z rychlosti změny (prostorová změna teploty)
 
