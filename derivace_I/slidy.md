@@ -450,7 +450,7 @@ koryto obdélníkového tvaru.
 
 \iffalse
 
-Derivování si také můžete procvičit v následujících cvičeních.
+Derivování si také můžete procvičit v následujících cvičeních. Se zápisem matematických výrazů Vám může pomoci [tento cheatsheet](https://raw.githubusercontent.com/robert-marik/hw-webwork/master/cheatsheet/cheatsheet.pdf).
 
 `ww2:problems/derivace_vypocet/01.pg`
 
