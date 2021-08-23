@@ -444,13 +444,13 @@ koryto obdélníkového tvaru.
 
 # Výpočet derivace
 
-* **Nikdy** (nebo alespoň skoro nikdy) nederivujeme pomocí definice, ale používáme vzorce pro derivace základních elementárních funkcí a pro derivace matematických operací s funkcemi.
+* **Nikdy** (nebo alespoň skoro nikdy) nederivujeme pomocí definice, ale používáme [vzorce](https://raw.githubusercontent.com/robert-marik/mat-slidy/master/cheatsheet/cheatsheet-MT.pdf) pro derivace základních elementárních funkcí a pro derivace matematických operací s funkcemi.
 * Viz cvičení v prvním týdnu.
 
 
 \iffalse
 
-Derivování si také můžete procvičit v následujících cvičeních.
+Derivování si také můžete procvičit v následujících cvičeních. Se zápisem matematických výrazů Vám může pomoci [tento cheatsheet](https://raw.githubusercontent.com/robert-marik/hw-webwork/master/cheatsheet/cheatsheet.pdf).
 
 `ww2:problems/derivace_vypocet/01.pg`
 
