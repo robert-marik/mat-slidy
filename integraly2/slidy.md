@@ -191,8 +191,9 @@ tomuto příkladu vrátíme.
 
 -->
 
+# Výpočet práce pomocí integrálu
 
-# Příklad: práce při vytahování řetězu
+## Příklad: práce při vytahování řetězu
 
 \iffalse
 
@@ -245,7 +246,7 @@ $$W=\frac 12 \tau g h_1^2$$ a numericky $W=8829\,\mathrm J.$ Protože vytáhnout
 
 
 
-# Příklad: práce při čerpání vody
+## Příklad: práce při čerpání vody
 
 \iffalse
 
@@ -523,7 +524,7 @@ integrálu je možné jistým způsobem pracovat, aniž bychom měli k
 dispozici analytické vyjádření této funkce.
 
 
-# Příklad: ukázka funkce definované pomocí integrálu
+## Ukázka funkce definované pomocí integrálu
 
 \iffalse
 
