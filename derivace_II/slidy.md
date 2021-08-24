@@ -8,6 +8,8 @@
 
 ## Připomenutí derivací z ptačí perspektivy
 
+https://youtu.be/9N2Z02S2tAw
+
 <div class='obtekat'>
 
 ![Derivace je důležitým kolečkem v mechanismu, jakým popisujeme svět okolo nás. Umí zachytit a popsat změnu a rychlost. Je však nutné ji zasadit do patřičného kontextu. Zdroj: pixabay.com](stroj.jpg)
@@ -24,6 +26,8 @@ S využitím aparátu derivací jsme v minulé přednášce poznali a naučili
 \fi
 
 # Aplikace derivací 3: Jak citlivě? (reakce na změnu)
+
+https://youtu.be/uKO6IZwraOQ
 
 Derivace v bodě, pokud ji nahlížíme z hlediska citlivosti reakce
 funkce na změnu vstupních dat, udává, jaký vliv má jednotková změna ve
@@ -71,6 +75,8 @@ nulu". Navíc, ukazujeme koncept. *Důležité je si z příkladu odnést, že d
 
 # Lineární aproximace 
 
+https://youtu.be/-3h53Ivl_Pc
+
 V následujících pasážích se budeme věnovat lineární aproximaci funkce. To je nahrazení funkce s jakkoli složitým funkčním předpisem funkcí s tím nejjednodušším možným předpisem: lineární funkcí. Tím se pochopitelně dopouštíme jisté nepřesnosti a je to něco za něco: k popisu úlohy máme poté k dispozici jednodušší funkce, ale výpočty jsou zatíženy chybou. Někdy tato chyba může být tak velká, že je idea lineární aproximace naprosto nepoužitelná. Ale jindy se jedná o nástroj, který prakticky neřešitelnou úlohu převede na úlohu snadno zvládnutelnou. Linearizace nelineárních úloh je jedním ze základních inženýrských postupů. V mnoha případech dává samotná dobré výsledky a řeší zadaný problém, v jiných případech slouží jako odrazový můstek ke zvládnutí nelineárního problému.
 
 ## Lineární aproximace v 1D
@@ -109,7 +115,7 @@ což získáme dosazením $x+h$ za $x$ a $x$ za $x_0$.
 **Příklad (aproximace důležitých funkcí v okolí nuly).** Ve cvičení
 ukážeme platnost následujících přibližných vzorců, které platí pro $x$
 blízké k nule.  $$\sin x\approx x, \quad \cos x\approx 1,\qquad
-(1+x)^n=1+nx.$$ První dva vzorce využijeme později při popisu malých
+(1+x)^n\approx 1+nx.$$ První dva vzorce využijeme později při popisu malých
 rotací v rovině. Mnoho důležitých aplikací těchto vzorců ve fyzice je na webu [fyzikální olympiády](http://fyzikalniolympiada.cz/studijni-texty) v dokumentu [Aproximace ve fyzikálních úlohách](http://fyzikalniolympiada.cz/texty/aproxim.pdf).
 
 
@@ -166,7 +172,9 @@ pro $v$ mnohem menší než $c$. Snadno rozšifrujeme, že s rychlostí souvisí
 
  Ač se jedná "jenom" o\ lineární aproximaci, je  vzorec $E=\frac 12 mv^2$ dokonce mnohem použitelnější, protože výpočet kinetické energie pomocí univerzálně platného relativistického vzorce při malých rychlostech v praxi obvykle zhavaruje na [zaokrouhlovacích chybách](https://sagecell.sagemath.org/?z=eJyVUb1OwzAQ3iv1HU7t4lSkSQwFOmQMCwNSH6CS45yIG_-UOLVIn55LCm0YGJA8nO8-fT93Js2zDSyhNq6zznfgygM23Wk-kznfbp-2_GHzDARoe1nrAeADdlpAALPyexZn0XwWcp4m9-vHKeybB46u7svTQUlVO_B4BSjgKTQmqV0FxxYDVmgF0LvRzmfHVtkO2OJVWeyUbASgxfZdITRaeGr0BsLZtRINkTgwQk8UFtGVIUv4yqSrsOe33i-FtxKl7UcylCOXVqULTtup5co1zkqkHLoWgZagrDvBWbimdSfCBCGVrEFS5EG8yHISlXtOJc_ZpU6Y_2g7lsVkJqF_FBFyCRcjRQaTD19bdvPLCh4XWTT0fpr_TnAHw4Y84GfXoqHJOfQehxB0A2_HkKGnm1gnKY0dd7iDHHYo9ItCXbEsTceT79jl6DeDO8b-zhhfJlR9AXtJxZs=&lang=sage&interacts=eJyLjgUAARUAuQ==).
 
-## Lineární aproximace a jednorozměrné materiálové vztahy
+# Lineární aproximace a jednorozměrné materiálové vztahy
+
+https://youtu.be/yX6azlYcEs0
 
 \iffalse
 
@@ -204,6 +212,7 @@ Díky souvislosti derivace s tečnou je derivace jedinečným nástrojem při po
 
 # Aproximace vyššího řádu
 
+https://youtu.be/PyZcNSio8J0
 
 
 ## Motivace: Je možné chtít více než je lineární aproximace?
@@ -340,6 +349,8 @@ Po tomto výpočtu je prvních pět cifer aproximace $\ln 2$ správně. Tady vid
 
 # Konečné diference a numerická aproximace derivace
 
+https://youtu.be/U93Q3XaDnDA
+
 \iffalse
 
 <div class='obtekat'>
@@ -417,6 +428,9 @@ Takovým způsobem můžeme u materiálu se známou strukturou odhadnout fyziká
 \fi
 
 # Řešení rovnic
+
+https://youtu.be/1DxpXD8YEYY
+
 
 V praxi se setkáváme s případy, kdy je znám výsledek po aplikování funkce na vstupní data a je nutné rekonstruovat tato vstupní data. Řešíme tedy rovnici, kde neznámá je argumentem funkce a je známa funkční hodnota. Pojmy nutné pro korektní formulaci a jednu z velmi rychlých přibližných metod řešení rovnic si představíme v následujících pasážích.
 

@@ -444,6 +444,8 @@ koryto obdélníkového tvaru.
 
 # Výpočet derivace
 
+https://youtu.be/-k_roagRII0
+
 * **Nikdy** (nebo alespoň skoro nikdy) nederivujeme pomocí definice, ale používáme [vzorce](https://raw.githubusercontent.com/robert-marik/mat-slidy/master/cheatsheet/cheatsheet-MT.pdf) pro derivace základních elementárních funkcí a pro derivace matematických operací s funkcemi.
 * Viz cvičení v prvním týdnu.
 
