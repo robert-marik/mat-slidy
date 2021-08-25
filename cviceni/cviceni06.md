@@ -108,7 +108,7 @@ Určete střední hodnotu koeficientu tepelné vodivosti $\lambda$ mědi na tepl
 
 Pro výpočet na intervalu od 100 do 800 Kelvinů bychom museli integrovat na intervalu, na kterém nemáme rovnoměrně rozložené uzlové body. Navrhněte, jak v takovém případě postupovat a jak vypočítat $\int_{100}^{800}\lambda(T)\,\mathrm dT$
 
-|  $T$ [K] | $\lambda$ [W/(m\,K)] |
+|  $T/\mathrm{K}$ | $\lambda/ (\mathrm{W}/(\mathrm{m}\,\mathrm{K}))$ |
 |-|-|
 |  100 | 482 |
 |  200 | 413 |

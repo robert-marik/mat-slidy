@@ -1,0 +1,98 @@
+\documentclass[12pt]{article}
+
+\input ../talks.tex
+
+\begin{document}
+
+\section*{Úvod}
+
+V minulé sérii videí, v minulé přednášce, jsme se seznámili s pojmem integrál. Ten dokáže vypočítat veličinu, na kterou je možno nahlížet dvěma způsoby. Buďto se jedná o výpočet veličiny ze známé rychlosti, tedy opak derivování. V takovém případě používáme neurčitý integrál nebo Newtonův integrál, podle toho, jestli nás zajímá časový průběh veličiny nebo změna za časový interval. V prvním z těchto případů, kdy nás zajímá časový průběh veličiny, je výsledek dán jednoznačně až na aditivní konstantu. Tuto konstantu je možno určit z počáteční podmínky.
+
+Další možností je nahlížet na na integrál jako na nástroj umožňující sečíst nekonečné množství nekonečně malých veličin. Jako takové praktické využití tohoto přístupu jsme se seznámili například s výpočtem tlakové síly na přehradu. Níže v přednášce si můžete prohlédnout výpočet ukazující, proč trubky pod tlakem praskají podélně. Je možné vypočítat, že napětí, které se snaží trubku nebo tlakovou nádrž nebo kapsli roztrhnout podélně dvojnásobné ve srovnání v napětím v kolmém směru. Pokud si představíme válec, je snadné určit napětí ve směru kolmém na osu. Stačí k tomu výpočet síly v odpovídajícím směru a sílu zjistíme jako součin tlaku a obsahu. Po vydělení množstvím materiálu v řezu, v tomto případě obsahem řezu A, dostáváme napětí, kterému je materiál vystaven.
+
+Pokud chceme vypočítat namáhání v řezu B podle obrázku, je situace složitější, protože síla působí kolmo k plechovce a má v každém bodě jiný směr. Ze symetrie je jasné že na polovině plechovky se svislé komponenty sil vyruší a proto stačí určit vodorovné komponenty a ty sečíst. Problém však je v tom, že vodorovná komponenta síly se podél okraje plechovky mění spojitě. Je to přesně situace jako dělaná pro Riemannův integrál. Přestavíme si malý kousíček odpovídající úhlu $\Delta \alpha$, určíme sílu a její vodorovnou komponentu působící na tento kousíček, počítáme přes všechny kousíčky a poté zaměníme sumu za integrál a hodnotu $\Delta \alpha$ za diferenciál $d\alpha$. Dostaneme integrál umožňující vypočítat působící sílu a vydělením obsahem řezu máme opět napětí, tentokrát napětí snažící se roztrhnout stěny podélně v řezu B.
+
+Pokud vás to zaujalo, projděte si výpočet ještě jednou podrobně sami a případně zkuste google a heslo ``hoop stress''.
+
+\section*{Vlastnosti integrálu}
+
+Integrál má vlastnosti přirozeně očekávatelné od veličiny, která určuje měnící se veličinu na základě rychlosti. Následující tři věty nejsou nijak překvapivé, pokud si je konkretizujeme na nějakých příkladech. První věta v podstatě říká, že pokud se veličina mění rychleji, je výsledná změna vyšší. To není žádné překvapení. Druhá věta je vlastně důsledek předchozího pro funkci $g$ rovnu nule. Slovně vyjadřuje, že pokud funkce roste, potom je její funkční hodnota v časovém okamžiku který následuje vyšší. Možná bychom přesněji měli mluvit a neklesání vzhledem  neostrým nerovnostem, ale snažme se věci nekomplikovat více než je nezbytně nutné.
+
+Konečně třetí věta vyjadřuje, že změna od pondělí do neděle se dá vyjádřit jako součet změny od pondělí do středy a od středy do neděle.
+
+Všechny věty platí v plné obecnosti pro libovolné meze, nejenom pondělí, středu a neděli, ale je vždy dobré kromě obecné formulace mít v hlavě i nějako konkretizaci ve stylu, který jsme si právě uvedli.
+
+Důsledek věty o monotonii vzhledem k funkci se používá k rychlému a jednoduchému testu správnosti výsledku. Pokud je dolní mez menší než horní mez a pokud integrujeme nezápornou nebo dokonce kladnou funkci, je výsledek také nezáporný nebo dokonce kladný. Uspořádání mezí bývá zpravidla zaručeno a proto zkráceně často říkáme, že určitý integrál kladné funkce je kladný. 
+
+\section*{Střední hodnota}
+
+Neocenitelnou aplikací integrálu je střední hodnota. Tu je nejjednodušší si představit jako jistou modifikaci aritmetického průměru. Představme si, že máme veličinu, která nás zajímá, a pět hodnot, například výsledek pěti měření. Potom je obvyklé určit nejpravděpodobnější hodnotu této veličiny aritmetickým průměrem pěti hodnot. Někdy se však stane, že hodnot není pět, ale je jich nekonečně mnoho a jsou rozloženy podél intervalu. Příkladem může být například koeficient tepelné vodivosti, konstanta, která charakterizuje materiál. Ale je to materiálová konstanta, která se mění s teplotou. Grafy jak tato závislost vypadá jsou na obrázku. Co když potřebujeme průměr na intervalu od 400 do 600 Kelvinů? Řešením je výpočet integrální střední hodnoty. Zatímco u aritmetického průměru hodnoty sčítáme a dělíme počtem hodnot, u integrální střední hodnoty součet nahradíme integrálem a počet hodnot délkou intervalu. Takto definovaná střední hodnota má názornou geometrickou interpretaci a logickou interpretaci.
+
+Jako speciální případ velice jednoduše vychází střední hodnota lineární funkce. V tomto případě dokonce ani není nutné používat integrování, ale stačí si uvědomit dvě fakta. Jednak, že integrál nezáporné funkce udává obsah obrazce pod křivkou a jednak, že integrál lichoběžníka, který vznikne pod grafem lineární funkce, dokážeme vypočítat bez integrálů, jenom použitím základních geometrických vzorců. V důsledku tohoto střední hodnota lineární funkce vychází stejně jako aritmetický průměr hodnoty na začátku a na konci intervalu.
+
+V rámečku je praktická aplikace toho, že integrál je náhrada průměru pro případy, kdy je nutno průměrovat funkci na intervalu namísto konečné sady bodů.
+
+
+V nejběžnějších aplikacích si výpočet střední hodnoty můžete vyzkoušet jako cvičení na integrál.
+
+Pod tímto odkazem najdete online nástroj na výpočet pomocí jazyka Python a jeho knihovny pro symbolické výpočty. Pod dalšími příkazy si výpočet vyzkoušejte na jednoduchých úlohách, které potom budou součástí domácích úkolů.
+
+
+\section*{Výpočet práce pomocí integrálu}
+
+Dva příklady v následujících pasážích ukazují častou aplikaci integrálu, výpočet práce. Tu počítáme jako součin posunutí a síly působící ve směru tohoto posunutí. To je obrovské omezení. V aplikacích se sousta podmínek může porušit. Například při vytahování řetězu nebo lana na střechu se práce uvedeným vzorcem vypočítat nedá, protože při vytahování visí stále menší kus dolů a proto se působící síla postupně zmenšuje.
+
+Nejenom u síly je riziko selhání vzorce $W=Fs$. Může být porušena konstantnost veličiny $s$. Například pokud určujeme práci potřebnou k vyčerpání nádrže vody, můžeme si vodu myšlenkově rozkouskovat na malé části a je zřejmé, že i při stejně velkých částech se různé části tekutiny posouvají po různě dlouhých drahách a čerpají do různě velké výšky.
+
+Řešením je nahradit součin integrálem. Pro praktické provedení je vhodnější rozdělit proces na konečně velké změny, vypočítat příspěvky k celkové práci, tyto příspěvky sečíst a nakonec nahradit součet integrálem a změnu veličiny diferenciálem.
+
+Pro získání dovedností aplikovat myšlenky v praxi je asi nejpřínosnější si tento postup samostatně a podrobně projít podle textu a případně prokonzultovat nejasnosti. To nechám na vás, hlavní myšlenku jsem okomentoval a pro podrobné výpočty není možné zvolit tempo a detail vysvětlování, který by vyhovoval všem studentům. Co by někomu připadalo jako zdlouhavé vysvětlování, to by jiný vnímal jako velké logické skoky. Proto prosím se na toto podívejte svým tempem, odkaz na text přednášky bude v popisku videa.
+
+Za zdůraznění však stojí, že v příkladě jdeme o něco dál než jenom, že bychom vypočítali vykonanou práci. Kromě toho převádíme výsledek na tvar, který by odpovídal jednoduchému vzorci pro práci $W=Fs$, pokud bychom myšlenkově celý řetěz nebo všechnu vodu soustředili do jediného bodu, do těžiště. To je další užitečná věc. Mnoho úloh se zjednoduší, pokud využijeme těžiště a jeho vlastnosti. 
+
+A na konci přednášky je příklad s řetězem vypočítaný ještě jinak. Využijeme potenciální energii a to, že práce vykonaná buď při povytažení řetězu, nebo při jeho úplném vytažení na střechu, je rovna změně jeho potenciální energie. Při úplném vytažení každý kousek řetězu vytáhneme na střechu, ale každý z jiné hloubky. To je podobné čerpání vody a i postup a výsledek jsou analogické. Zejména  výsledek opět odpovídá situaci, jaká by nastala, kdybychom celou hmotnost soustředili do jediného bodu v těžišti. Tedy do bodu uprostřed.
+
+\section*{Numerická aplikace určitého integrálu}
+
+Numerická aproximace určitého integrálu je založena na jednoduché myšlence. Pokud chceme určit změnu polohy pomocí rychlosti, můžeme postupovat v následujících krocích.
+
+Nejprve rozdělíme časový interval na několik úseků. Ty nemusí mít stejnou délku, ale pro pohodlné používání tuto stejnou délku budeme používat. Určíme rychlost na začátku a na konci každého intervalu a tyto hodnoty zprůměrujeme. To proto, že během intervalu se může rychlost změnit. Průměrnou rychlost vynásobíme délkou intervalu a máme odhad pro změnu na daném časovém intervalu. Poté stačí všechny takto získané odhady na všech úsecích sečíst a máme odhad pro celkovou změnu. Odhad pro integrál.
+
+Totéž je možné dělat nejenom pro integrál podle času, ale i na integrál podle libovolné proměnné. Na příkladě máme totéž pro integrál síly jako funkce dráhy, což dává fyzikálně práci vykonanou silou. Konkrétní příklad máte na obrazovce a je zřejmé, že takto zintegrovat umíme i funkci, které je dána jenom v několika bodech. Pokud formalizujeme tento postup pro libovolnou funkci a její definiční obor rozdělený na stejně dlouhé dílky, dostaneme vzorec pro numerickou aplikaci integrálu, který se nazývá lichoběžníkové pravidlo.
+
+Po pravdě, lichoběžníkové pravidlo není to nejlepší co je pro numerickou integraci k dispozici. Pochopitelně existují i vyspělejší metody. Pro nás je důležité vědět, že existují metody, jak bez znalosti primitivní funkce určitý integrál odhadnout. Tyto metody bývají dostatečně robustní a bývají vestavěny do všech běžných inženýrských nástrojů. Dokážou aproximovat integrál numericky i s odhadem chyby při této aproximaci a v naprosté většině případů jim můžete ve své praxi důvěřovat. 
+
+Lichoběžníkové pravidlo je však jednoduché na použití a pokud studujeme biologické systémy jako jsou stromy nebo dřevo, kde příroda sama zajistí variabilitu a tím pádem široké meze pro studované veličiny, nemusíme se případné chyby vzniklé použitím lichoběžníkového pravidla, přesto že je k dispozici něco lepšího, nijak obávat.
+
+Výpočet lichoběžníkovým pravidlem si můžete vyzkoušet v domácí úloze a zde také nanečisto. 
+
+\section*{Integrace substituční metodou}
+
+K výpočtu integrálu někdy nejsou dostatečné vzorce a někdy ani není vhodné použít numerickou integraci, kterou jsme si představili před chvílí. Zejména je velkým handicapem, že nemáme vzorce pro integrál podílu, integrál součinu a integrál složené funkce. V takových případech potřebujeme nějaké další metody, jak si s potřebnými integrály poradit. Jeden z přístupů, jak se alespoň částečně vypořádat v tomto ohledu se složenými funkcemi, je integrace substituční metodou. Vzorec získáme integrací vzorce pro derivaci složené funkce a přeznačením, vidíme jej na obrazovce a spočívá v tom, že integrál zapíšeme jako integrál jiné funkce v jiné proměnné. Pokud je nalevo nebo napravo jednodušší integrál než je integrál na opačné straně, potom můžeme složitější integrál nahradit integrálem jednodušším a takto dovést výpočet ke konci. Vzorec se často používá v situaci, kdy v integrované funkci odhalíme složenou funkci v součinu s derivací svojí vnitřní složky. Potom se použije vzorec zleva doprava a zůstane jenom integrál vnější složky.
+
+Asi bude nejlepší si to ukázat na příklad. Uvažujme integrál $\int 3x^2 e^{x^3}\,dx$. Složenou funkcí je $e^{x^3}$, vnitřní složka je $x^3$, derivace vnitřní složky je $3x^2$ a tato derivace je v součinu se složenou funkcí. Proto je možné použít vzorec daný substituční metodou. Formálně to je možno provést tak, že zavedeme novou proměnnou $t=x^3$. Potom $$dt/dx=3x^2dx.$$ Formálně budeme brát derivaci $dt/dx$ jako podíl výrazů $dt$ a $dx$ a zapsat takzvaný vztah mezi diferenciály
+$$dt=3x^2 dx.$$ Potom dostáváme po dosazení $t$ za $x^3$ a po dosazení $dt$ za $3x^2dx$ vztah
+$$\int 3x^2 e^{x^3}\,dx=\int e^t dt$$
+a k výpočtu tohoto integrálu nám stačí vzorec
+$$\int e^t dt=e^t.$$
+Po návratu k proměnné $x$ dostáváme primitivní funkci $e^{x^3}$.
+
+Otázkou zůstává, co by se stalo, kdyby v integrované funkci nebyl součin derivace vnitřní složky se složenou funkcí. Kdyby nesoulad byl jenom v konstantním násobku, je problém řešitelný. V tomto případě, například při výpočtu integrálu 
+$$\int x^2 e^{x^3}\,dx$$ bychom použili stejnou substituci, ale vztah pro diferenciály bychom ještě vydělili třema do tvaru $$x^2 dx=\frac 13 dt,$$
+integrál by přešel na
+$$\int x^2 e^{x^3}\,dx=\frac 13\int e^t dt=\frac 13 e^t$$
+a výsledkem je primitivní funkce $\frac 13 e^{x^3}.$
+
+Pokud by nesoulad byl hlubší než jenom v konstantním násobku, je situace horší. Dokonce může být zcela ztracená. Například integrál funkce $\int 3e^{x^3}dx$ se integrování poměrně vzpírá. Nástrojem, který je na dosah ruky a může pomoci je výpočetní nástroj wolfram alpha. Pokud do něj zadáme požadavek na integrál, vidíme, že výsledek sice nějaký dostaneme, ale ten používá jednu ze speciálních funkcí, takzvanou gamma funkci. Pokud se podíváme na definici této gamma funkce, vidíme, že to není funkce takového typu, který známe. Není to funkce, která by byla vyjádřena pomocí konečného počtu funkcí známých ze střední školy, pomocí konečného počtu základních elementárních funkcí. Je možné ji napsat jako speciální integrál, kde v jedné mezi je proměnná, nebo jako nekonečný součet mocninných funkcí.
+
+Toto nás varuje před jednou záludností: při integrování se velice snadno můžeme dostat mimo množinu elementárních funkcí, mimo množinu funkcí, se kterými umíme efektivně pracovat, protože je možné najít jejich analytické vyjádření pomocí konečného počtu základních elementárních funkcí. Přes slovo ``elementární'' v názvu se jedná o velmi bohatou množinu, vždyť obrat konečný počet funkcí zahrnuje i vzorec, kterým je nahusto popsána celá tabule. I tak nám však někdy množina elementárních funkcí nemusí stačit. A tady je ta zmíněná záludnost vyvážena jedním skvělým faktem: integrál nám otevírá dveře mimo svět elementárních funkcí. Nejčastějším způsobem jak pracovat s funkcemi které nejsou elementární je právě využití integrálu, kde proměnná figuruje jako integrační mez a tomu se budeme věnovat v následujícím.
+
+\section*{Integrál jako funkce meze}
+
+Pro určitý integrál je vstupem funkce a interval. Zadání intervalu obsahuje dva krajní body, které většinou chápeme jako parametry. V naprosté většině případů bývají dokonce zadána přímo čísla. V následujících minutách uděláme to, že meze povolíme obecné a na horní mez se budeme dívat jako na proměnnou. Pro danou dolní mez $a$ a danou funkci $f$ můžeme každému $x$ přiřadit hodnotu integrálu funkce $f$ od $a$ do $x$. Tím je definováno zobrazení reálných čísel do množiny reálných čísel a tedy funkce. Taková funkce se nazývá integrál jako funkce horní meze. Důležitým poznatkem je, že tato funkce má derivaci a derivace je rovna funkci, která je uvnitř integrálu.
+
+Tvrzení věty je jednoduché ověřit na funkci, kterou umíme integrovat pomocí vzorců, třeba na kvadratické funkci. Věta má však dalekosáhlý důsledek. Z tvrzení věty vyplývá, že ke každé spojité funkci existuje primitivní funkce, neurčitý integrál. To proto, že určitý integrál existuje pro každou spojitou funkci a věta nám dává šanci zapsat neurčitý integrál pomocí určitého, tj. funguje do jisté míry opačným směrem než Newtonova Leibnizova věta. Navíc nám dává fantastickou možnost definovat funkce novým, doposud nepoznaným způsobem. Ukazuje se, že takové rozšíření množiny funkcí je poměrně důležité. Zatímco doteď jsme se setkávali s elementárními funkcemi, integrál jako funkce meze otevírá cestu do světa neelementárních funkcí. S těmito funkcemi se pracuje obtížněji než s funkcemi, ke kterým je analytický předpis konečné délky, ale dostaneme tak funkce nezbytné k popisu některých procesů. Dostaneme například nástroj, jak pracovat s normálním gaussovským rozložením pravděpodobnosti, protože při práci s tímto rozložením je nutné umět integrovat funkci $e^{-x^2}$ a tato funkce není integrovatelná v množině elementárních funkcí. Integrál jako funkce horní meze nesnáze řeší.
+
+Malá ukázka toho, že definice pomocí integrálu je plnohodnotná definice je v textu přednášky. Zde je ukázáno, že použitím metod pro práci s integrály je možno například pro takto definovanou funkci ukázat, že tato funkce mění součin na součet a umocňování na násobení. A jestli vám to něco připomíná, tak právem. Stejné vlastnosti má totiž logaritmus a v této ukázce je demonstrována jedna z možností zavedení logaritmů. Na střední škole jste pravděpodobně logaritmy zavedli jiným způsobem, protože jste integrály měli k dispozici později nebo vůbec. Cesta přes integrály má však mnohé výhody oproti středoškolskému postupu. Nám poslouží jako demonstrace zavedení nových funkcí. 
+
+\end{document}

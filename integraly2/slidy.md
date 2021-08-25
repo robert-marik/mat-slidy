@@ -159,6 +159,20 @@ $$\frac 12 \int_0^2 2x^2-1 \,\mathrm dx=\frac 12 \left[\frac 23 x^3-x\right]_0^2
 [Online výpočet.](https://sagecell.sagemath.org/?z=eJwz1DfSyswrSU0vSixJ1TDSqogz0jXU0ajQMdAx0tQEAIuACEI=&lang=sage)
 
 
+\iffalse
+
+Výpočet střední hodnoty si také můžete procvičit v následujících cvičeních.
+
+`ww2:problems/integraly_pouziti/stredni_hodnota.pg`
+
+`ww2:problems/integraly_pouziti/stredni_hodnota_2.pg`
+
+`ww2:problems/integraly_pouziti/stredni_hodnota_3.pg`
+
+
+\fi
+
+
 <!--
 
 <div class='obtekat'>
@@ -385,6 +399,16 @@ Odhadneme celkovou vykonanou práci.
   $$  
 
 > Poznámka (slovní interpretace lichoběžníkového pravidla). Pokud ve vzorci pro lichoběžníkové pravidlo dosadíme za hodnotu $h$ odpovídající délku intervalu $\frac{ b-a}n$ a přeuspořádáme členy, dostaneme   $$ \int_a^bf(x)\,\mathrm dx\approx (b-a)\frac {{y_0}+2y_1+2y_2+\cdots+2y_{n-1}+{y_n}}{2n} $$  a $$ \frac 1{b-a}\int_a^bf(x)\,\mathrm dx\approx \frac {{y_0}+2y_1+2y_2+\cdots+2y_{n-1}+{y_n}}{2n}. $$ Toto je odhad pro veličinu, kterou jsme výše nazvali střední hodnotou. Lichoběžníkové pravidlo je tedy možné chápat tak, že vezmeme funkční hodnoty v pravidelných intervalech a vypočteme vážený průměr těchto hodnot, kdy všechny funkční hodnoty ve vnitřních bodech se berou s dvojnásobnou vahou než funkční hodnoty v krajních bodech. To je odhad střední hodnoty, který stačí vynásobit délkou intervalu a dostaneme odhad integrálu.
+
+\iffalse
+
+Výpočet pomocí lichoběžníkového pravidla  si také můžete procvičit v následujícícm cvičení.
+
+`ww2:problems/integraly_vypocet/lichobeznikove_pravidlo.pg`
+
+
+\fi
+
 
 
 <!--
