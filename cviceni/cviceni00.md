@@ -5,8 +5,8 @@
 
 <style>
 .obsah {display:block; width:100%; 
-  background-color: #0a5028;
-  color: white;
+ /*  background-color: #0a5028;
+  color: white; */
   padding-top: 1em ;
   padding-bottom: 1em;
   text-decoration: none;
