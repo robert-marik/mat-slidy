@@ -32,6 +32,7 @@ do
   pdflatex slidy.tex
   pdflatex slidy.tex
   cp slidy.pdf ../$i.pdf
+  cp slidy.log $i.log
   #cp slidy.pdf ../$jj.pdf
   cd ..
   #rsync -e "ssh -o StrictHostKeyChecking=no" -av $i cornus.mendelu.cz:html/mtk/mat-slidy/
