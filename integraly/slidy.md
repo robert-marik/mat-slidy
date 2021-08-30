@@ -1,7 +1,9 @@
 % Integrál, integrál a integrál
 % Robert Mařík
-% 2019-2020
+% 2019-2021
 
+
+https://youtu.be/w2qTl73CsnI
 
 Naučili jsme se pracovat s derivacemi, tedy s rychlostí změny.
 Známe-li funkci a zderivujeme ji, dostaneme rychlost změny. Pokud potom
@@ -136,6 +138,8 @@ neurčitý integrál.
 
 # Neurčitý integrál
 
+https://youtu.be/lfg_ylc87NQ
+
 Představíme nástroj, který nám umožní odpovědět na následující otázky.
 
 * Je znám směr křivky v každém bodě (tj. směr tečny, derivace). Jaká
@@ -257,6 +261,8 @@ hmotností mostu a tahem napínajícím lano.
 
 # Určitý integrál (Newtonův)
 
+https://youtu.be/t3oJxxPZxkY
+
 Představíme si mírnou modifikaci neurčitého integrálu. Rychlost změny
 nebudeme používat k hledání předpisu funkce, ale budeme hledat změnu
 funkce na zadaném intervalu.
@@ -333,7 +339,7 @@ Integrování určitým integrálem si také můžete procvičit v následujíc�
 
 Slovní úlohy kde se hledaná veličina mění nekonstantní rychlostí jsou v následujících dvou cvičeních (první je s volbou s nabízených odpovědí).
 
-`ww2:problems/integraly/strom.pg`
+`ww2:problems/integraly_pouziti/strom.pg`
 
 `ww2:problems/integraly_pouziti/cisterna.pg`
 
@@ -430,6 +436,7 @@ sílu. Ovšem jenom v extrémně pěkných případech.
 
 # Určitý integrál (Riemannův)
 
+https://youtu.be/iKG-4g864Q4
 
 <div class='obtekat'>
 
