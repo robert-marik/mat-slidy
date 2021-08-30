@@ -52,6 +52,8 @@ Vyjádřete následující veličiny a určete jejich znaménko.
 1.  Rychlost se kterou roste (směrem doprava) tok tepla jako funkce polohy.
 1.  Rychlost se kterou klesá (směrem doprava) tok tepla jako funkce polohy.
 
+_Tato úloha je jednoduchá a vlastně není na počítání, ale jenom na ujasnění si toho, co derivace vyjadřují a kdy jsou kladné a kdy záporné. To je nutné znát při zadávání modelů do numerických simulací. Výpočet za člověka udělají počítače, ale slovní interpretaci ani kontrolu, že je model relevantní a nemá popletená znaménka, za člověka nikdo neudělá._
+
 <div class=reseni>
 
 1. Rychlost, s jakou v daném místě a čase roste teplota jako funkce času je $\frac {\partial T}{\partial t}$ a tato derivace je v každém bodě kladná, protože tyč se ohřívá. Po čase se asi ustálí rovnováha a derivace bude nulová, teplota se přestane měnit. Měříme ve stupních Celsia za sekundu.

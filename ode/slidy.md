@@ -2,6 +2,8 @@
 % Robert Mařík
 % 2019-2020
 
+> V této přednášce se seznámíme s diferenciálními rovnicemi. To není nic jiného, než správný název pro to, čemu jsme dříve říkali matematické modely formulované pomocí derivace. Viděli jsme že tyto modely jsou v některých případech přirozeným matematickým aparátem pro popis reálně probíhajících dějů v přírodě. V přednášce se seznámíme se základním názvoslovím spojeným s touto problematikou a naučíme se numerické i analytické řešení. Protože se často setkáváme s modely nezávislými na čase, budeme se problematice těchto modelů věnovat podrobněji. Tyto modely mají tu vlastnost, že se ohraničená řešení po čase ustálí okolo stabilní hodnoty. Naučíme se hledat hodnoty odpovídající ustáleným řešením a z nich vybrat ty stabilní, k nimž systém může konvergovat, nebo nestabilní, které oddělují oblasti, ze kterých systém dospívá k jednotlivým stabilním stavům.
+
 
 # Obyčejná diferenciální rovnice prvního řádu
 
@@ -367,7 +369,9 @@ Jedná se o diferenciální rovnice, kde zrychlení (derivace rychlosti) a časo
 \fi
 
 
-# Geometrická interpretace ODE
+# Geometrická interpretace a transformace jednotek
+
+## Geometrická interpretace ODE
 
 <div class='obtekat'>
 
@@ -455,7 +459,7 @@ výstupem metody bude aproximace integrální křivky pomocí lomené čáry.
 
 -->
 
-# Transformace diferenciální rovnice
+## Transformace diferenciální rovnice
 
 \iffalse
 
