@@ -3,7 +3,11 @@
 % 2020
 
 
+https://youtu.be/va5-0hR4tdQ
+
 # Parita funkce
+
+https://youtu.be/5vRoVfXUbvE
 
 V následující definici se budeme zajímat o to, jestli existuje nějaký
 vztah mezi funkční hodnotou v bodě $x$ z definičního oboru a v bodě
@@ -63,6 +67,8 @@ $\cosh x$, a hyperbolický sinus, $\sinh x$.
 
 
 # Lokální extrémy
+
+https://youtu.be/E1XxOQDtto0
 
 ## Motivace: Jak najít minimum potenciálu?
 
@@ -157,6 +163,8 @@ a šířka bude rovna polovině průměru.
 
 # Postačující podmínka pro lokální extrém
 
+https://youtu.be/W7Kf-waoHQE
+
 Pokud řešíme úlohu s praktickým zadáním, je z povahy úlohy často
 zřejmé, že lokální extrém požadovaného typu existuje a často to bývá
 jediný bod, kde je derivace nulová. V takovém případě pro identifikaci
@@ -186,7 +194,7 @@ Pro nalezení intervalů, kde je výraz závislý na jedné proměnné kladný
 a kde záporný je vynikajícím nástrojem Bolzanova věta představená v
 následujících odstavcích. Hodí se například pro nalezení intervalů,
 kde má funkce kladnou a kde zápornou derivaci, což využijeme při
-nelezení intervalů, kde je funkce rostoucí a kde klesající.
+nalezení intervalů, kde je funkce rostoucí a kde klesající.
 
 Bolzanova věta je poměrně názorné tvrzení. Hlavním přínosem pražského
 matematika Bernarda Bolzana bylo, že si uvědomil, že toto tvrzení není
@@ -340,6 +348,8 @@ Díky tomuto je dokonce možné snadno najít vztahy mezi objemem a povrchem $$V
 
 # Buckinghamův $\Pi$-teorém
 
+https://youtu.be/C4_3IbbLpiI
+
 \iffalse
 
 <div class='obtekat'>
@@ -458,6 +468,8 @@ porovnání se třemi na sobě volně položenými.
 
 
 # Vektorové funkce, gradient
+
+https://youtu.be/trdMQ6WOGlk
 
 Výstupem vektorové funkce je vektor. Vstupem je buď reálné číslo (funkce jedné proměnné), nebo vektor. V prvním případě se jedná o parametrickou křivku v [rovině](https://sagecell.sagemath.org/?z=eJxTVghILErMTS0pykzOrlSoSkxJzEtUyC7KLMtO5OXi5SqxLUss0lAvUdfk5SqAq4wvyMkv0YhOzi_WKNHUUSjOzAPSsToKGgY6BZmamgDCkhs_&lang=sage&interacts=eJyLjgUAARUAuQ==) nebo v [prostoru](https://sagecell.sagemath.org/?z=eJxTVghILErMTS0pykzOrlSoSkxJzEtUyC7KLMtO5OXi5SqxLUss0lAvUdfk5SqAq4wvyMkvMU7RiC7RSs4v1ijR1FEo0SrOzAOxSmJ1FDQMdMy0CjI1NQHngx4S&lang=sage&interacts=eJyLjgUAARUAuQ==), ve druhém případě bývá zpravidla na vstupu stejný počet veličin jako na výstupu a jedná se o vektorové pole (každému bodu v rovině je přiřazen [rovinný vektor](https://sagecell.sagemath.org/?z=eJyr0KnUqbItSyzSUK9QqFSoUtfk5SrIyS-JL0tNLskvik_LTM1J0dDQrdSp0NRR0KjQ0TXUMQSxKqGsxOICoMr4osSSzHxbQ00A7BcYPA==&lang=sage&interacts=eJyLjgUAARUAuQ==) nebo každému bodu v prostoru je přiřazen prostorový vektor). Vektory zapisujeme pomocí jejich komponent následovně.
 $$\vec F=(P,Q,R)=P\vec i+Q\vec j+R\vec k = P\vec e_1+Q\vec e_2+R\vec e_3$$
