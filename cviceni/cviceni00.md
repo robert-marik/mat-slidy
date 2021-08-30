@@ -5,8 +5,8 @@
 
 <style>
 .obsah {display:block; width:100%; 
-  background-color: #0a5028;
-  color: white;
+ /*  background-color: #0a5028;
+  color: white; */
   padding-top: 1em ;
   padding-bottom: 1em;
   text-decoration: none;
@@ -36,3 +36,5 @@ Zde jsou příklady pro cvičení k mým přednáškám na Lesnické a dřevařs
 <a class="obsah"  href="cviceni11.md.html">Parciální derivace, rovnice vedení tepla</a>
 <a class="obsah"  href="cviceni12.md.html">Dvojný integrál</a>
 </a>
+
+</div>
