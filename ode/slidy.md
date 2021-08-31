@@ -368,6 +368,7 @@ Jedná se o diferenciální rovnice, kde zrychlení (derivace rychlosti) a časo
 
 \fi
 
+`ww2:problems/diferencialni_rovnice/chata.pg`
 
 # Geometrická interpretace a transformace jednotek
 
@@ -667,6 +668,15 @@ má tedy pravá strana derivaci různou od nuly, poznáme stabilitu z\ monotonie
 
 **Příklad.** Teplotní bilanci Země je možno vyjádřit [rovnicí](http://user.mendelu.cz/marik/wiki/doku.php?id=ode)
 $$\frac{\mathrm dT}{\mathrm dt}=R_{\text{in}}(T)-R_{\text{out}}(T),$$ kde $R_{\text{in}}$ a $R_{\text{out}}$ jsou funkce dané na obrázku. Vidíme tři průsečíky, tj. tři stacionární body. Uvažujme stacionární bod nejvíce napravo. Malá výchylka nahoru k větší teplotě nás posune do oblasti, kde převažuje vyzařování energie, $R_{\text{out}}$ je vetší než $R_{\text{in}}$, pravá strana je záporná a teplota klesá zpět do stacionárního stavu. Podobně, malá výchylka směrem dolů způsobí nároůst a opět návrat do stacionárního stavu. Stacionární stav zcela vpravo je tedy stabilní. Podobně ukážeme, že stacionární stav odpovídající průsečíku zcela vlevo je také stabilní. Naopak, stacionární stav uprostřed je nestabilní, libovolná výchylka z tohoto stavu způsobí přechod systému do některého ze stabilních stavů.
+
+
+`ww2:problems/diferencialni_rovnice/stabilita_autonomni.pg`
+
+`ww2:problems/diferencialni_rovnice/model.pg`
+
+`ww2:problems/diferencialni_rovnice/05.pg`
+
+`ww2:problems/diferencialni_rovnice/06.pg`
 
 
 <!--
