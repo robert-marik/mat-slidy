@@ -834,10 +834,10 @@ bude přibližně rovna aritmetickému průměru teplot v sousedních
 bodech. Kvantitativně zformulováno, platí 
 $$
 \begin{aligned}
-  x_1&=\frac 14(30+x_2+x_4)\\
-  x_2&=\frac 14(60+x_1+x_3)\\
-  x_3&=\frac 14(70+x_2+x_4)\\
-  x_4&=\frac 14(40+x_1+x_3)
+  x_1&=\frac 14(10+20+x_2+x_4)\\
+  x_2&=\frac 14(20+40+x_1+x_3)\\
+  x_3&=\frac 14(30+40+x_2+x_4)\\
+  x_4&=\frac 14(10+30+x_1+x_3)
 \end{aligned}\tag{1}
 $$
 anebo po úpravě
