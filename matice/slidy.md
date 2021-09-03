@@ -2,7 +2,9 @@
 % Robert Mařík
 % 2.4.2019
 
-# Vektory a operace s nimi
+# Vektory 
+
+## Operace s vektory
 
 Vektorem rozumíme uspořádanou $n$-tici objektů, pro které má smysl
 operace sčítání a násobení číslem. Počet komponent v této $n$-tici se
@@ -57,7 +59,7 @@ vektor, se nezmění.
 $$\vec u +\vec o=\vec u$$
 
 
-# 2D a 3D a vektory v geometrii
+## 2D a 3D a vektory v geometrii
 
 <div class='obtekat'>
 
@@ -82,7 +84,7 @@ otočení směru.
 
 <!--
 
-# Sčítání vektorů a integrace cesty u migrujících živočichů
+## Sčítání vektorů a integrace cesty u migrujících živočichů
 
 \iffalse
 
@@ -111,7 +113,7 @@ Další informace: [Wikipedia, Path integration](https://en.wikipedia.org/wiki/P
 
 <!-- YTB qbnZ4wDYYDQ -->
 
-# Lineární kombinace
+## Lineární kombinace
 
 > Definice (lineární kombinace).
 > Nechť $\vec u_1$, $\vec u_2$, $\dots$ $\vec u_k$ je
@@ -123,6 +125,15 @@ $$
 kde $t_1$, $t_2$, $\dots$, $t_k$ jsou nějaká reálná čísla, se nazývá
 *lineární kombinace* vektorů $\vec u_1$, $\vec u_2$, $\dots$, $\vec u_k$.
 Čísla $t_1$, $t_2$, $\dots$, $t_k$ nazýváme *koeficienty lineární kombinace*.
+
+\iffalse
+
+Výpočet lineární kombinace si můžete vyzkoušet online.
+
+`ww2:problems/vektory/linearni_kombinace.pg`
+
+
+\fi
 
 
 <div class='obtekat'>
@@ -145,8 +156,73 @@ $$\frac{\mathrm df}{\mathrm dx}\approx\frac{f(x+h)-f(x-h)}{2h} =\frac 1{2h}f(x+h
 a pro druhou derivaci
 \dm$$ \frac{\mathrm d^2f}{\mathrm dx^2}\approx\frac{f(x-h)-2f(x)+f(x+h)}{h^2}=\frac{1}{h^2} f(x-h) - \frac{2}{h^2} f(x) + \frac{1}{h^2} f(x+h).$$
 
- 
-# Lineární závislost a nezávislost vektorů
+
+## Model migrace jako přepínání stavů
+
+
+\iffalse 
+
+<div class='obtekat'>
+
+![Markovovy řetězce umožňují modelování situací, ve kterých dochází k přepínání stavů. Například migrace mezi městem a venkovem. Zdroj: pixabay.com](city.jpg)
+
+</div>
+
+\fi
+
+Na příkladě si ukážeme, kdy je přirozené pracovat s lineárními
+kombinacemi vektorů. Pokusíme se na jednoduchém modelu migrace mezi
+městem a venkovem demonstrovat přístup, který se používá v případech,
+kdy je možné rozdělit jednotlivé části systému do konečného počtu
+navzájem disjunktních stavů a jednotlivé části mohou měnit svůj stav,
+přičemž pravděpodobnost změny je dána pouze současným stavem a ne
+například historií předchozích stavů. Aplikace zahrnují například
+modelování vegetace na stanovištích (zájmová oblast je rozdělena na
+stanoviště a ke každému stanovišti je přiřazen převažující typ
+vegetace), pro modelování změn druhového složení v lese nebo v
+krajině, ale i v hydrologických modelech, předpovědi počasí a
+jinde. Základní model má řadu rozšíření a ukážeme si jej jen v
+nejjednodušší formě a na případě dvou stavů.
+
+**Slovní formulace:** Každý rok měříme velikosti populací ve městě a na
+venkově. Na počátku $60\%$ populace žije ve městě a $40\%$ na venkově. Každý
+rok zůstane $95\%$ městské populace ve městě a $5\%$ se stěhuje na
+venkov. Podobně $97\%$ obyvatelstva venkova zůstává a $3\%$ se stěhuje
+do města.
+
+**Matematický model:**
+Procentuální složení zaznamenáváme ve formě
+vektoru. Na počátku bude $$ \vec q_0=
+\begin{pmatrix}
+  0.6 \\ 0.4
+\end{pmatrix}.
+$$
+Po jednom roce je rozložení populace dáno vektorem
+$$ \vec q_1=
+\begin{pmatrix}
+  0.95 \\ 0.05 
+\end{pmatrix}
+0.6
++
+\begin{pmatrix}
+  0.03 \\ 0.97
+\end{pmatrix}
+0.4
+.
+$$
+Intenzita migrace jednotlivými směry je ve sloupcových vektorech na
+pravých stranách. Koeficienty v této lineární kombinaci jsou
+koeficienty vektoru $\vec q_0$.
+
+Podobně, rozložení po dvou letech bude dáno lineární kombinací s
+koeficienty, danými vektorem $\vec q_1$.  Pokud bychom potřebovali
+znát rozložení populace po $k$ letech, situace se komplikuje. Dostali
+bychom rekurentní vzorec, který je nutno stále opakovat. Pro
+odstranění tohoto nepohodlí se zavádí pojem matice, viz níže.
+
+
+
+## Lineární závislost a nezávislost vektorů
 
 V $n$-rozměrném prostoru existuje $n$-tice vektorů, pomocí
 nichž můžeme dostat libovolný vektor jako lineární kombinaci. Taková
@@ -231,72 +307,12 @@ $$
 $$
 
 
-# Model migrace jako přepínání stavů
-
-
-\iffalse 
-
-<div class='obtekat'>
-
-![Markovovy řetězce umožňují modelování situací, ve kterých dochází k přepínání stavů. Například migrace mezi městem a venkovem. Zdroj: pixabay.com](city.jpg)
-
-</div>
-
-\fi
-
-Na příkladě si ukážeme, kdy je přirozené pracovat s lineárními
-kombinacemi vektorů. Pokusíme se na jednoduchém modelu migrace mezi
-městem a venkovem demonstrovat přístup, který se používá v případech,
-kdy je možné rozdělit jednotlivé části systému do konečného počtu
-navzájem disjunktních stavů a jednotlivé části mohou měnit svůj stav,
-přičemž pravděpodobnost změny je dána pouze současným stavem a ne
-například historií předchozích stavů. Aplikace zahrnují například
-modelování vegetace na stanovištích (zájmová oblast je rozdělena na
-stanoviště a ke každému stanovišti je přiřazen převažující typ
-vegetace), pro modelování změn druhového složení v lese nebo v
-krajině, ale i v hydrologických modelech, předpovědi počasí a
-jinde. Základní model má řadu rozšíření a ukážeme si jej jen v
-nejjednodušší formě a na případě dvou stavů.
-
-**Slovní formulace:** Každý rok měříme velikosti populací ve městě a na
-venkově. Na počátku $60\%$ populace žije ve městě a $40\%$ na venkově. Každý
-rok zůstane $95\%$ městské populace ve městě a $5\%$ se stěhuje na
-venkov. Podobně $97\%$ obyvatelstva venkova zůstává a $3\%$ se stěhuje
-do města.
-
-**Matematický model:**
-Procentuální složení zaznamenáváme ve formě
-vektoru. Na počátku bude $$ \vec q_0=
-\begin{pmatrix}
-  0.6 \\ 0.4
-\end{pmatrix}.
-$$
-Po jednom roce je rozložení populace dáno vektorem
-$$ \vec q_1=
-\begin{pmatrix}
-  0.95 \\ 0.05 
-\end{pmatrix}
-0.6
-+
-\begin{pmatrix}
-  0.03 \\ 0.97
-\end{pmatrix}
-0.4
-.
-$$
-Intenzita migrace jednotlivými směry je ve sloupcových vektorech na
-pravých stranách. Koeficienty v této lineární kombinaci jsou
-koeficienty vektoru $\vec q_0$.
-
-Podobně, rozložení po dvou letech bude dáno lineární kombinací s
-koeficienty, danými vektorem $\vec q_1$.  Pokud bychom potřebovali
-znát rozložení populace po $k$ letech, situace se komplikuje. Dostali
-bychom rekurentní vzorec, který je nutno stále opakovat. Pro
-odstranění tohoto nepohodlí se zavádí pojem matice, viz níže.
 
 <!-- YTB pIq92-akbaI -->
    
-# Matice a jejich lineární kombinace
+# Matice 
+
+## Matice a jejich lineární kombinace
 
 > Definice (matice). *Maticí řádu $m\times n$*  rozumíme schema
 $$
@@ -318,6 +334,13 @@ ${A=(a_{ij})}$.
 matice, nazýváme prvky tvaru $a_{ii}$, tj. prvky, jejichž řádkový
 a sloupcový index jsou stejné, *prvky hlavní diagonály*.
 
+\iffalse
+
+`ww2:problems/matice/prvky_matice.pg`
+
+\fi
+
+
 Pro matice definujeme *sčítání* a *násobení číslem* stejně jako u vektorů,
 tj. po složkách. Má potom smysl mluvit o lineární kombinaci matic a o
 jejich lineární závislosti či nezávislosti. Tyto operace přirozeně
@@ -330,7 +353,7 @@ V této fázi je vlastně jedno, jestli prvky jsou uspořádány jako
 řádkový nebo sloupcový vektor nebo jako matice. Odlišení matic a
 vektorů provedeme zavedením maticového součinu.
 
-# Maticový součin
+## Maticový součin
 
 > Definice (součin matic).
   Buďte $A=(a_{ij})$ matice řádu $m\times n$ a $B=(b_{ij})$ matice
@@ -361,7 +384,7 @@ Můžeme tedy měnit uzávorkování, můžeme
 roznásobovat závorky, nesmíme však měnit pořadí matic při násobení.
 
 
-# Neutrální prvek maticového součinu
+## Neutrální prvek maticového součinu
 
 U každé operace nás zajímá neutrální prvek, což je prvek, který se v dané operaci nijak neprojeví. Třeba u sčítání čísel je neutrálním prvkem nula, při násobení čísel je neutrálním prvkem jednička. Pokud nějaký prvek potřebujeme zapsat ve tvaru součinu, zapíšeme ho jako součin sebe sama s jedničkou. To využijeme například při vytýkání ve kterém u vytýkaného prvku nefiguruje v některém členu druhý součinitel, jako třeba ve výpočtu $$3x^2+x=3x \cdot x + 1\cdot x = (3x+1)\cdot x.$$ Ukážeme si, že podobný neutrální prvek existuje i u násobení matic a trik podobný výše uvedenému využijeme později, až budeme mluvit o vlastních vektorech matice.
 
@@ -383,7 +406,60 @@ je možné pro nějaký konkrétní případ ověřit přímo a že toto funguje
 obecně se nejsnáze ukáže, až si představíme operaci transponování
 matice a její vztah k maticovému součinu.
 
-# Markovovy řetězce
+\iffalse
+
+Výpočet operací s maticemi je nejlepší se naučit při výpočtu konkrétních příkladů. Ty si můžete vyzkoušet online na následujících odkazech.
+
+`ww2:problems/matice/soucet_matic.pg`
+
+`ww2:problems/matice/soucin_matic.pg`
+
+`ww2:problems/matice/soucin_matice_a_vektoru.pg`
+
+
+\fi
+
+
+
+
+# Aplikace maticového součinu
+
+## Derivace diskrétní funkce
+
+V metodě konečných diferencí jsme si ukázali a v předcházejícím textu připomněli, že derivace umíme aproximovat výrazy, které jsou lineární kombinací po sobě jdoucích funkčních hodnot hledané funkce na pravidelné mřížce délky $h$. Toto je možné vyjádřit pomocí maticového součinu. Pro konkrétnost, pro druhou derivaci aproximujeme pomocí tří po sobě jdoucích hodnot v ekvidistantních krocích vzorcem 
+$$ f''(x)\approx\frac{1}{h^2} f(x-h) - \frac{2}{h^2} f(x) + \frac{1}{h^2} f(x+h).$$
+Tento vztah  můžeme chápat jako lineární kombinaci hodnot 
+$$\frac 1{h^2}, \quad -\frac{2}{h^2}, \quad \frac 1{h^2}$$ s koeficienty 
+$$f(x-h), \quad f(x), \quad  f(x+h).$$ Pokud je například funkce $f(x)$ na intervalu $I$ dána funkčními hodnotami $f(x_1)$, $f(x_2)$, $f(x_3)$, $f(x_4)$, $f(x_5)$ v bodech rovnoměrně rozmístěných ve vzdálenosti $h$ od sebe, můžeme vypočítat druhé derivace $f''(x_2)$, $f''(x_3)$ a $f''(x_4)$ pomocí vztahů 
+$$ f''(x_2)\approx\frac{1}{h^2} (f(x_1) - 2 f(x_2) +  f(x_3))$$
+$$ f''(x_3)\approx\frac{1}{h^2} (f(x_2) - 2 f(x_3) + f(x_4))$$
+a
+$$ f''(x_4)\approx\frac{1}{h^2} (f(x_3) - 2 f(x_4) +  f(x_5)).$$
+Tyto tři rovnice je možnou zapsat jediným vztahem pomocí 
+maticového násobení 
+$$\begin{pmatrix}f''(x_2)\\f''(x_3)\\f''(x_4)\end{pmatrix}
+=\frac 1{h^2}\begin{pmatrix}
+1 & -2 & 1& 0& 0\\
+0& 1 & -2 & 1& 0\\
+0& 0 & 1  & -2 & 1\\
+\end{pmatrix}
+\begin{pmatrix}f(x_1)\\f(x_2)\\f(x_3)\\f(x_4)\\f(x_5)\end{pmatrix}.
+$$
+Proto matice 
+$$
+\begin{pmatrix}
+-2 & 1& 0& 0 & 0\\
+1 & -2 & 1& 0& 0\\
+0& 1 & -2 & 1& 0\\
+0& 0 & 1  & -2 & 1\\
+0& 0& 0 & 1  & -2 \\
+\end{pmatrix}
+$$
+hraje důležitou roli v numerické matematice při numerickém modelování fyzikálních dějů. Až na první a poslední řádek se jedná o matici, která umí zprostředkovat numerické  derivování funkce. První a poslední řádek se přidávají, aby matice získala čtvercový tvar a jistou míru symetrie. (Symetrickým maticím se budeme věnovat za chviličku.) Tyto dva přidané řádky se uplatní při formulaci okrajových podmínek definujících chování funkce na koncích intervalu.
+
+Pomocí maticového součinu dokážeme reprezentovat libovolné zobrazení, které zachovává součet a násobení konstantou, mezi něž derivování patří. Jiný přístup k maticové formulaci derivace, k derivování na množině polynomů, si ukážeme ve cvičení.
+
+## Markovovy řetězce
 
 
 \iffalse 
@@ -443,7 +519,7 @@ Leslieho model růstu populace níže, tato podmínka platit nemusí.
 ale pozor: někdy se místo zde představeného zápisu používá zápis s
 řádkovým vektorem nalevo od matice popisující změnu stavů.)
 
-# Růst populace pomocí Leslieho matice
+## Růst populace pomocí Leslieho matice
 
 \iffalse 
 
@@ -491,36 +567,12 @@ Další informace:
 
 * [Z. Pospíšil, Maticové populační modely](http://portal.matematickabiologie.cz/index.php?pg=analyza-a-modelovani-dynamickych-biologickych-dat--maticove-populacni-modely--prolog--leslieho-model-rustu-populace#pro14)
 
-# Derivace diskrétní funkce
+# Matice jako zobrazení
 
-V metodě konečných diferencí jsme si ukázali a v předcházejícím textu připomněli, že derivace umíme aproximovat výrazy, které jsou lineární kombinací po sobě jdoucích funkčních hodnot hledané funkce na pravidelné mřížce délky $h$. Toto je možné vyjádřit pomocí maticového součinu. Pro konkrétnost, pro druhou derivaci aproximujeme pomocí tří po sobě jdoucích hodnot v ekvidistantních krocích vzorcem 
-$$ f''(x)\approx\frac{1}{h^2} f(x-h) - \frac{2}{h^2} f(x) + \frac{1}{h^2} f(x+h).$$
-Tento vztah  můžeme chápat jako lineární kombinaci hodnot 
-$$\frac 1{h^2}, \quad -\frac{2}{h^2}, \quad \frac 1{h^2}$$ s koeficienty 
-$$f(x-h), \quad f(x), \quad  f(x+h).$$ Pokud je například funkce $f(x)$ na intervalu $I$ dána funkčními hodnotami $f(x_1)$, $f(x_2)$, ..., $f(x_5)$ v bodech rovnoměrně rozmístěných ve vzdálenosti $h$ od sebe, můžeme vypočítat druhé derivace $f''(x_2)$, $f''(x_3)$ a $f''(x_4)$ pomocí maticového násobení 
-$$\begin{pmatrix}f''(x_2)\\f''(x_3)\\f''(x_4)\end{pmatrix}
-=\frac 1{h^2}\begin{pmatrix}
-1 & -2 & 1& 0& 0\\
-0& 1 & -2 & 1& 0\\
-0& 0 & 1  & -2 & 1\\
-\end{pmatrix}
-\begin{pmatrix}f(x_1)\\f(x_2)\\f(x_3)\\f(x_4)\\f(x_5)\end{pmatrix}.
-$$
-Proto matice 
-$$
-\begin{pmatrix}
--2 & 1& 0& 0 & 0\\
-1 & -2 & 1& 0& 0\\
-0& 1 & -2 & 1& 0\\
-0& 0 & 1  & -2 & 1\\
-0& 0& 0 & 1  & -2 \\
-\end{pmatrix}
-$$
-hraje důležitou roli v numerické matematice při numerickém modelování fyzikálních dějů. Až na první a poslední řádek se jedná o matici, která umí zprostředkovat numerické  derivování funkce. První a poslední řádek se přidávají, aby matice tískala čtvercový tvar a jistou míru symetrie. (Symetrickým maticím se budeme věnovat za chviličku.) Tyto dva přidané řádky se uplatní při formulaci okrajových podmínek definujících chování funkce na koncích intervalu.
+Nyní se na zobrazení pomocí matice podíváme očima geometra a poté očima materiálového inženýra.
 
-Pomocí maticového součinu dokážeme reprezentovat libovolné zobrazení, které zachovává součet a násobení konstantou, mezi něž derivování patří. Jiný přístup k maticové formulaci derivace, k derivování na množině polynomů, si ukážeme ve cvičení. Na následujícím slidu se na tato obrazení podíváme očima geometra a poté očima materiálového inženýra.
 
-# Matice jako zobrazení v geometrii
+## Matice jako zobrazení v geometrii
 
 <div class='obtekat'>
 
@@ -589,7 +641,7 @@ $$R_{\theta,0}=
 $$
 Tuto matici budeme potřebovat při studiu deformace při odvození matematického popisu malých deformací.
 
-# Matice jako zobrazení v materiálovém inženýrství
+## Matice jako zobrazení v materiálovém inženýrství
 
 \iffalse 
 
@@ -648,6 +700,18 @@ vlastní vektor $(0,1)$ příslušný vlastní hodnotě $0$. Protože vlastními
 
 **Příklad.** Platí $\begin{pmatrix} 3 & -2\\ -1 & 4 \end{pmatrix} \begin{pmatrix}   2\\1 \end{pmatrix} = \begin{pmatrix}   4\\2 \end{pmatrix}$
 a matice $\begin{pmatrix} 3 & -2\\ -1 & 4 \end{pmatrix}$ má vlastní vektor $(2,1)$ příslušný vlastní hodnotě $2$, protože vektor $(4,2)$ je dvojnásobkem vektoru $(2,1)$. Vlastním vektorem je i každý nenulový násobek vektoru $(2,1)$.
+
+
+\iffalse
+
+Zda umíte použít součin matice a vektoru k ověření toho, zda je vektor vlastním vektorem a k nalezení vlastního čísla si můžete vyzkoušet online.
+
+`ww2:problems/vlastni_cisla/01.pg`
+
+`ww2:problems/vlastni_cisla/02.pg`
+
+\fi
+
 
 **Příklad.** Stacionární stav Markovova řetězce je vlastním vektorem
 matice, která tento řetězec reprezentuje. Příslušná vlastní hodnota je
