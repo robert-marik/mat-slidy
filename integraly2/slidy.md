@@ -24,7 +24,7 @@ definování funkcí, které nejsou elementární.
 Nejprve si připomeneme jednu ze základních aplikací integrálu:
 nasčítání příspěvků od spojitě se měnící veličiny.
 
-# Příklad: proč trubky praskají podélně?
+## Příklad: proč trubky praskají podélně?
 
 
 <div class='obtekat'>
@@ -372,9 +372,9 @@ th {
 th {text-align: center;}
 </style>
 
-|$s$[m]|0|5|10|15|20|
+|$s$/m|0|5|10|15|20|
 |-|-|-|-|-|-|
-|$F$[kN]|2.3|1.5|2.1|3.1|2.0|
+|$F$/kN|2.3|1.5|2.1|3.1|2.0|
 
 
 Odhadneme celkovou vykonanou práci.
