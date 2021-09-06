@@ -1,6 +1,6 @@
 % Cvičení matematika
 % Robert Mařík
-% 2019—2020
+% 2019—2021
 
 
 <style>
@@ -18,7 +18,7 @@
 }
 </style>
 
-Zde jsou příklady pro cvičení k mým přednáškám na Lesnické a dřevařské fakultě pro bakalářské studium v zimním semestru 2020. 
+Zde jsou příklady pro cvičení k mým přednáškám na Lesnické a dřevařské fakultě pro bakalářské studium v zimním semestru 2021/2022. 
 
 
 <div class=seznam>

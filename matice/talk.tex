@@ -1,0 +1,125 @@
+\documentclass[12pt]{article}
+
+\input ../talks.tex
+
+\begin{document}
+
+
+Při studiu materiálových vlastností narážíme na to, že potřebujeme studovat veličiny mající směr. Například při studiu vedení tepla je nutno vědět, který směrem klesá teplota a jak intenzivně, protože tento fakt vedení tepla spouští. V materiálech mající jakousi strukturu se stává to, že teplo se nedá do pohybu směrem, ve kterém klesá teplo, ale částečně se od tohoto směru odkloní. Proto potřebujeme pracovat i se zobrazeními, které veličinu mající velikost a směr transformují opět na veličinu mající velikost a směr. Například pokles teploty na tok tepla. Bude nám stačit přímá úměrnost, ale mezi komponentami trojrozměrných vektorů, což věci komplikuje tak, že místo jedné konstanty úměrnosti jich máme devět.
+
+V této přednášce se tedy podíváme na vícerozměrné objekty, vektory, počítání s vektory. Dále na matice, což jsou vlastně vícerozměrné konstanty 
+
+\section*{Vektory}
+
+Pojem vektor pravděpodobně znáte z fyziky nebo geometrie jako orientovanou úsečku. Tedy objekt, který má směr a délku. My budeme pod pojmem vektor rozumět něco jiného, a to uspořádanou $n$-tici. Na množině vektorů definujeme operace sčítání a násobení konstantou po složkách. Pro ruční počítání a i pro některé aplikace je  výhodnější psát komponenty vektoru ne do řádku, ale do sloupce. Potom mluvíme o sloupcových vektorech. S nimi je sčítání pohodlné, protože sčítáme čísla ve stejné výšce.
+
+Vztah mezi takto definovaným vektorem a geometrickým vektorem má smysl, pokus jsou komponenty dvě nebo tři, potom mluvíme o dvourozměrném nebo trojrozměrném vektoru. Komponenty udávají polohu koncového bodu vzhledem k počátečnímu bodu. Například vektor $(3,-2)$ je vektor v rovině, protože máme dvě komponenty a při obvyklé volbě souřadného systému s první osou doprava a druhou osou nahoru směřuje vektor $(3,-2)$ tři jednotky doprava a dvě jednotky směrem dolů. Délku určujeme z Pythagorovy věty. 
+
+Pokud si myslíte, že díky tomu, že žijeme v trojrozměrném světě nám stačí trojrozměrné vektory, je dobré si uvědomit, že komponenty vektoru mohou být i jiné veličiny, než prostorové souřadnice. Například můžeme studovat tyč sloužící jako nosník v nějaké konstrukci. Sledovat tyč jako spojitý objekt je složité, proto stačí studovat několik vybraných bodů podél této tyče. U každého nás zajímá například vychýlení v jednotlivých směrech při namáhání. Pro každý bod tedy máme tři veličiny, vychýlení zleva doprava, zepředu dozadu a shora dolů. Bodů máme deset, takže celkem třicet čísel, třicet hodnot. Je účelné je poskládat jako komponenty vektoru a hned pracujeme s vektory majícími třicet komponent, s vektory ve třicetirozměrném prostoru. Názorně jsem se tuto problematiku snažil vysvětlit na reálné konstrukci a jednoho z prvních videí natáčených kvůli lockdownům spojeným s COVIDem a můžete si ho prohlédnout na odkazu z přednášky. 
+
+Spojením násobení konstantou a sčítáním dostaneme na množině vektorů operaci zvanou lineární kombinace. Není to nic těžkého, můžete si na vlastní oči vyzkoušet ve cvičeních, v domácích úkolech anebo přímo na odkazu z přednáška.
+
+Pokud uvažujeme čísla jako jednorozměrné vektory, potom jsme se vlastně s lineární kombinací vektorů setkali u lichoběžníkového pravidla i u numerického derivování pomocí konečných diferencí. V obou případech byl výsledek, integrál nebo derivace, vypočítaný z funkčních hodnot tak, že se tyto hodnoty vynásobily vhodným koeficientem a sečetly. Další častá aplikace vektorů je studium stavů systému, kdy například dvourozměrný vektor znázorňuje, kolik procent objektů je v prvním a kolik kolik ve druhém stavu. Například obyvatel města a obyvatel venkova je jeden z nejvděčnějších příkladů napříč skoro všemi učebnicemi lineární algebry. Protože dochází k migraci, někteří obyvatelé venkova se stěhují do měst a naopak. Máme k dispozici scénář, jak se migrace projeví na rozložení v následujícím roce. Často tento scénář vypadá podobně jak je napsáno v prezentaci, tj. je dáno kolik procent které skupiny změní stav. Potom je možné vztah mezi následujícími lety vyjádřit pomocí lineární kombinace. Většinou potřebujeme ne následující rok, ale vzdálenější předpověď a proto se pro studium takové úlohy zavádí aparát usnadňující práci s lineárními kombinacemi. Budou to matice, ke kterým se dostaneme za chvíli.
+
+Nejdříve ale několik důležitých pojmů spojených s lineárními kombinacemi. 
+
+Pokud všechny vektory v lineární kombinaci vynásobíme nulou a sečteme, je výsledek jistě nulový vektor, vektor složený ze samých nul. Ukazuje se, že je důležité umět rozhodnout, jestli pro zadané vektory je možné lineárními kombinacemi dostat  nulový vektor i jiným způsobem. Pokud ano, nazývají se vektory lineárně závislé a pokud ne, nazývají se vektory lineárně nezávislé. Lineárně nezávislé vektory jsou důležité, protože pomocí nich je možno vyjádřit libovolný vektor jako lineární kombinaci a toto vyjádření je jednoznačné. Tedy směry dané těmito vektory mohou definovat osy, které jsou v mnoha ohledech stejně dobře použitelné jako osy v kartézských souřadnicích a v některých aspektech dokonce lepší. To uvidíme později například v souvislosti s anatomickými směry dřeva.  
+
+\section{Pootočení vektoru}
+
+Z hlediska materiálového inženýrství je důležité rozumět operaci pootočení vektoru. Důvodem je například to, abychom mohli transformovat materiálové charakteristiky do různých směrů. Například pro dřevo se udávají materiálové charakteristiky  v podélném, radiálním a tangenciálním směru. Pokud budeme studovat objekt ve tvaru kvádru, je vhodné mít osy ve směru hran. Pokud tyto směry odpovídají anatomickým směrům dřeva, je vše v pořádku. Z nejrůznějších důvodů však dřevo může být nařezáno ne podél vláken, ale nějak našikmo. Potom je nutné převést materiálové vlastnosti do otočené soustavy souřadnic. První krok uděláme teď, kdy si ukážeme, jak se dá pootočený vektor zapsat jako lineární kombinace jednotkových vektorů ve směrech os. Další kroky uděláme později, naučíme se tuto lineární kombinaci zapisovat úspornějším způsobem pomocí maticového násobení a nakonec se naučíme transformovat tenzory, což jsou právě materiálové charakteristiky pro materiály mající v různých směrech různé vlastnosti.
+
+Na obrázku je černá soustava s osami $x$, $y$ a jednotkové vektory ve směru os jsou červeně. Pokud otočíme souřadnou soustavu, červené vektory se změní na modré. Pro modré vektory je snadné určit jejich souřadnice. Stačí použít definice funkcí kosinus a sinus. A protože červené vektory mají pěkné souřadnice, je dále snadné modré vektory $f$ zapsat jako lineární kombinaci červených $e$. Často bývá úhel malý, například při deformaci. Potom je možné použít lineární aproximaci funkcí kosinus a sinus a tím se vyjádření ještě více zjednoduší. Funkce kosinus je přibližně jedna a funkce sinus je v lineárním přiblížení rovna svému argumentu.
+
+Pro teď tento příklad opustíme a jeho výsledek použijeme později. 
+
+\section{Matice}
+
+V následujícím se podíváme na objekty, které nám pomůžou efektivně pracovat s vektory. Nazývají se matice a pro začátek je můžeme chápat jako skupinu čísel zapsanou do obdélníkového obrazce.  
+
+Podobně jako u vektorů, definujeme operaci násobení číslem a sčítání matic. Tyto operace se provádí po složkách, tedy při násobení číslem se násobí každé číslo v matici a při sčítání matic se sčítají čísla na odpovídajících pozicích.
+
+Novou operací na množině matic je násobení matic. To je definováno vztahem v rámečku, přičemž je asi nejpřínosnější si zapamatovat slovní vyjádření: Pokud násobíme matice $A$ a $B$, potom sloupce matice $A$ chápeme jako vektory, sloupce matice $B$ jako koeficienty lineární kombinace a počítáme lineární kombinace sloupců matice $A$. Kolik sloupců má matice $B$, tolik máme sad koeficientů, tolik máme lineárních kombinací a tolik sloupců bude mít výsledná matice. Nejlepší asi bude si procvičit ve cvičení, v online příkladě nebo v domácí úloze.
+
+Maticový součin je poměrně komplikovaně definovaná operace, proto bude zajímavé se podívat na její vlastnosti. Maticový součin je asociativní a distributivní vzhledem k násobení. To je důležitá vlastnost, protože například ztráta asociativity by byla fatální a operace, které nejsou asociativní, v matematice příliš užitku nenajdou. Co však ztrácíme je komutativita, součin $AB$ je obecně jiný než součin $BA$. Není to tak velké překvapení, protože první matice dodá sloupce jako vektory a druhá matice koeficienty do lineární kombinace. Bylo by asi překvapením, kdyby komutativní zákon platil. Naštěstí ztráta komutativity není příliš omezující. Jenom by to mohl být nezvyk, protože je to asi poprvé, kdy při násobení záleží na pořadí.
+
+U násobení čísel někdy potřebujeme číslo formálně zapsat ve tvaru součinu. To se dá udělat snadno, když toto číslo vynásobíme neutrálním prvkem, jedničkou. Například je to potřeba při vytýkání $x$ ve výrazu $3x^2+x$. Podobně jako asociativita, i existence neutrálního prvku je pro každou operaci důležitá. Je dobrou zprávou, že maticové násobení má neutrální prvek. Tímto neutrálním prvkem je jednotková matice, čtvercová matice, která má v hlavní diagonále jedničky a všude jinde nuly. 
+
+
+\section{Aplikace maticového součinu}
+
+Jistě vás napadlo, která hlava přišla na maticové násobení, takovou podivně definovanou operaci. Není bez zajímavosti, že to bylo až v devatenáctém století, tedy o mnoho později než se v sedmnáctém století objevily derivace a integrály. Důvod, proč se tato operace objevila je pochopitelný: bylo to potřeba kvůli aplikacím. Teď se na tyto aplikace podíváme.
+
+Ukázali jsme si ve druhé přednášce o derivacích, jak je možno zapsat druhou derivaci jako lineární kombinaci sousedních funkčních hodnot. Představme si funkci definovanou v pěti bodech. Sousedy zleva i zprava mají prostřední tři body a v nich můžeme použít vzorec pro aproximaci druhé derivace pomocí druhých diferencí. Máme tedy tři vztahy. Ty je možné zapsat vztahem jedním pomocí maticového součinu jako vidíte v prezentaci.
+
+Pro další využití matic se vraťme k příkladu s přepínáním stavů. Rozložení populace mezi město a venkov v dalším roce jsme zapsali pomocí lineárních kombinací a nyní můžeme tuto lineární kombinaci zapsat jako maticový součin. Výhodou je, že můžeme snadno opakovat násobení abychom dostali stav v dalších letech a dokonce můžeme naformulovat podmínku udávající, kdy se stav nebude měnit, tedy kdy se kolísání poměru mezi městem a venkovem ustálí. Tento matematický aparát se nazývá Markovovy řetězce a používá se například k modelování druhové pestrosti nebo ke sledování typu vegetace v neobhospodařovaných lokalitách, jestli tam jsou dominantní nízké rostliny, keře či stromy.
+
+Aplikace podobná Markovovým řetězcům je Leslieho model populace, modelující vývoj populace s danou věkovou strukturou. Opět se jedná o jakési přepínání stavů, kdy se postupně jedinci dostávají do vyšší a vyšší věkové kategorie, ale do vyšší kategorie se dostane vždy pouze jisté procento kategorie nižší. I tady je možno využít maticové násobení a pomocí něho odhadovat, jaká bude velikost a věková struktura populace v následujících letech.
+
+\section{Další aplikace maticového součinu}
+
+Pokud uvažujeme body v prostoru jako sloupcové vektory a násobíme matici se sloupcovým vektorem, dostaneme opět sloupcový vektor. Je tedy možné matici chápat jako zobrazení množiny bodů do sebe nebo do jiné množiny bodů. Ukažme si pár ukázek.
+
+Na následujících obrázcích je postupně vždy matice, modrý domeček jako vzor a červeně je obraz. Matice jsou $A$, $B$, $P$, $R$, $RP$ a $PR$. Matice $A$ je dvojnásobné zvětšení, matice $B$ je zkosení, matice $P$ je kolmá projekce na přímku počátkem pod úhlem $60$ stupňů a $R$ je matice rotace proti směru hodinových ručiček. Matice $RP$ představuje složené zobrazení z projekce a otočení, u matice $PR$ je to podobné, ale naopak: nejprve otočení a potom projekce. Vidíme, že ob obrázky dopadly jinak, což může sloužit i jako ukázka toho, že opravdu součin matic není komutativní, na což jsme upozorňovali již dříve.  
+
+Další sada ukázek je s trojrozměrnými body a maticí dva krát tři, tedy s body v rovině na výstupu. Vstupem je zase domeček, tentokrát trojrozměrný. Na výstupu podle konkrétního tvaru matice vidíme pohled shora na střechu, zepředu, z boku a potom různé projekce.
+
+Je možné ukázat, že takto pomocí matic můžeme reprezentovat jakékoliv zobrazení, které zachovává střed úsečky, rovnoběžnost a polohu počátku. Trikem, který se ukáže ve cvičením dokonce nemusíme trvat na poloze počátku a dokonce můžeme oslabit i podmínku na rovnoběžnost tak, abychom při zobrazení dosáhli perspektivy. V podstatě všechny geometrické transformace můžeme takto redukovat na maticové násobení. To nachází uplatnění v grafice, ale například i ve strojovém učení. Možná používáte na psaní mailů nebo seminárek nástroj, kterému stačí diktovat a on vytváří psaný text. Možná jste objevili aplikace na mobily, kterými stačí vyfotit integrál a aplikace integrál sama rozpozná a vypočítá. Za stojí rozsáhlé transformace vstupních dat spojené s rozpoznáváním řeči nebo obrazu a tyto transformace jsou reprezentovány právě maticovým součinem. Z hlediska studenta je asi paradox, že zatímco člověk bez problémů přečte integrál nebo derivaci a největší intelektuální úsilí musí vyvinout při výpočtu, u strojů to je přesně naopak. Pro stroj je nejsložitější alespoň s jakousi mírou jistoty rozpoznat, jaký integrál nebo derivace jsou na papíře napsány. Výpočet už je trivialita založená na několika málo algoritmech. 
+
+Je šikovné si uvědomit, že násobením matice s vektorem, který má pouze jednu jedničku a jinak nuly dostaneme příslušný sloupec matice. Tím pádem první sloupec matice představuje obraz jednotkového vektoru ve směru první osy a tak dále. Je proto snadné ze znalosti obrazů jednotkových vektorů ve směru os sestavit matici zobrazení, například v prezentaci vidíme zobrazení představující rotaci o úhel $\theta$ proti směru hodinových ručiček a obrazy jednotkových vektorů ve směru os přesně odpovídají otočení těchto vektorů, jak jsme si ukázali v pasáži věnované lineárním kombinacím.
+
+S efektem otočení vektoru se setkáváme i v materiálovém inženýrství. Funkci materiálu a jeh odezvu na podnět si můžeme představit na mechanickém modelu s prouděním tekutiny přes poorané pole. Hnací faktor je směr z kopce. Pokud je pole hladké nebo poorané shora dolů, teče voda z kopce. Pokud by však brázdy byly našikmo, to vody by se stáčel. Netekla by ani přesně dolů, ani přesně v brázdách, ale něco mezi. Podobně to funguje u materiálu s různými vlastnostmi v různých směrech. Třeba u dřeva. Pokud vlhkost klesá v podélném směru, voda ve dřevě se dá do pohybu tímto směrem. Pokud vlhkost klesá ve směru našikmo k podélnému směru, dá se voda do pohybu, který je jakýmsi kompromisem mezi směrem poklesu vlhkosti a podélným směrem dřeva.
+
+\section{Vlastní směry a vlastní čísla}
+
+Na konci předchozí části jsme se dozvěděli, že materiálové odezva na podnět nemusí být ve stejném směru jako podnět. Například u vedení vody nebo tepla ve dřevě je vodivost v podélném směru řádově mnohem větší než v ostatních směrech. Proto je směr podnětu stejný jako směr pohybu vody nebo tepla pouze v případě, že podnět je buď přesně v podélném směru, nebo přesně kolmo. V ostatních případech se tok stáčí ze směru podnětu do směru s vysokou vodivostí, tj. do podélného směru.
+
+Ve dřevě strukturu vidíme, ale potřebujeme aparát, který nám umožní identifikovat tyto význačné směry čistě matematickými postupy.
+
+První definice, definice pojmu vlastní hodnota a vlastní vektor, matematicky formuluje to co jsme si řekli pro materiálovou odezvu. Můžeme si to představit tak, že vlevo je materiálová vlastnost ve tvaru matice $A$ aplikovaná na podnět ve tvaru vektoru $\vec u$. Vpravo je vektor, který je skalárním násobkem vektoru $\vec u$ a má tedy jistě stejný směr jako vektor $\vec u$.
+
+Matice může a nemusí mít vlastní vektor. Například matice rotace nezachovává žádný směr, s výjimkou rotace o nula a o 180 stupňů. Naopak pro jednotkovou matici nebo její libovolný násobek jsou všechny vektory vlastními vektory. 
+
+Vlastní hodnoty jsou zajímavé i v teorii Markovových řetězců což pokrývá například modelování vývoje ekosystémů, nebo v modelování populace Leslieho modelem s věkovým rozložením. Dokonce i vyhledávání Googlu je na pozadí velmi rafinovaná práce s vlastními vektory, ostatně příslušný algoritmus byl publikován mnohokrát a v různých stupních zjednodušení dle znalostí cílové skupiny. 
+
+Vlastní vektory ani vlastní hodnoty se zatím nebudeme učit hledat, k tomu máme zatím málo dovedností. Použitím maticového součinu však již teď dokážeme ověřovat, zda pro zadanou matici a vektor je tento vektor vlastním vektorem či nikoliv
+
+Místo vlastní hodnota se též říká vlastní číslo, místo vlastní vektor se též říká vlastní směr a málokdo je tak důsledný, aby používal jenom jeden z těchto pojmů, proto i vás poprosím o shovívavost a kdybych někdy řekl vlastní číslo, myslím tím vlastní hodnotu. Podobně s vlastním směrem. 
+
+\section*{Transponovaná matice}
+
+Následující odstavce představí velice užitečnou třídu matic, a to symetrické matice. V mnoha ohledech jsou jednodušší, než obecné matice, například se lépe chovají vlastní čísla.
+
+Nejprve budeme potřebovat pojem transponovaná matice, ale to není nic jiného než matice, ve které vyměníme řádky za sloupce, tedy první řádek se stane prvním sloupcem, druhý řádek se stane druhým sloupcem atd. V prezentaci to vidíte na čtvercové $3\times 3$ matici. Transponování často využíváme i v souvislosti se skalárním součinem vektorů, protože zapojením transponované matice je skalární součin vektorů, tak jak jej známe ze středoškolské geometrie, speciálním případem maticového součinu řádkového a sloupcového vektoru.
+
+A nyní to důležité.  Matice, která totožná se svou transponovanou maticí se nazývá symetrická matice. Tyto matice jsou důležité, protože v teorii materiálu který má v různých směrech různé vlastnosti se materiálové charakteristiky reprezentují právě symetrickými maticemi.
+
+Další třída matic jsou matice, pro které transponování je totéž co změna znaménka. Tyto matice se nazývají antisymetrické.
+
+Možná si vzpomínáte, že v přednášce o sudých a lichých funkcích jsme si řekli, že každou funkci dokážeme napsat jako součet sudé a liché funkce. Abychom toho dosáhli, napsali jsme $f(x)$ v poněkud obskurním tvaru jako
+$$\frac {f(x)+f(-x)}2 + \frac{f(x)-f(-x)}2,$$
+protože první sčítanec je jistě sudá funkce a druhý lichá. A říkali jsme si, že tato dovednost není pro funkce nijak úžasná, ale budeme ji potřebovat později. Přesně teď jsme se do tohoto bodu dostali. Podobným trikem lze libovolnou čtvercovou matici zapsat jako součet symetrické a antisymetrické matice. Proč, to uvidíme v následujícím, kdy se budeme věnovat popisu deformace materiálu.
+
+
+\section*{Tenzor malých deformací}
+
+Budeme se věnovat popisu deformace materiálu. Představme si materiál před a po deformaci. Třeba půllitry na obrázku. Dalo jistě ukrutnou práci změnit tvar půllitru, ale posunutí a pootočení bylo již vlastně zadarmo. Deformace v každém bodě o souřadnicích $x_1$ a $x_2$ v rovině označme $u_1$ deformaci ve směru první osy a $u_2$ deformaci ve směru druhé osy. Pro obě funkce $u_1$ a $u_2$ můžeme napsat lineární aproximace a pomocí maticového součinu můžeme tuto dvojici rovnic napsat jako jednu maticovou rovnici. V ní je snadné identifikovat posunutí, které nás v souvislosti s deformací materiálu nezajímá a zaměříme pozornost na matici. Stejným trikem jako před chvílí můžeme tuto matici rozdělit na součet symetrické a antisymetrické části.
+
+Studujeme deformaci, tedy pro získání celého zobrazení musíme matici sečíst s maticí jednotkovou. U antisymetrické části dostaneme matici, která odpovídá lineární aproximaci matice rotace, jak jsme ji poznali dříve v této přednášce. Proto antisymetrická část odpovídá rotaci a podobně jako posunutí nás při deformaci nezajímá. Zůstává symetrická část, která se nazývá tenzor malých deformací a je to základní veličina pro popis deformace materiálu při mechanickém namáhání. 
+
+
+\section*{Rozložení teploty}
+
+Jedna jednoduchá aplikace lineární algebry, která později poslouží jako odrazový můstek k hlubším myšlenkám.
+
+Uvažujme tepelně vodivou desku ve tvaru čtverce, každý kraj ohřejeme na jinou teplotu dle obrázku, udržujeme na této teplotě a zajímá nás, jaké bude rozložení teploty uvnitř desky poté, co se nastolí rovnováha.
+
+Pro jednoduchost si zvolíme na desce uzlové body a budeme se zajímat jenom o teplotu v těchto bodech. Pokud bychom chtěli detailnější informaci, zvolíme hustší síť bodů, zatím nám ale bude stačit to co je na obrázku.
+
+Jak to bude vypadat po nastolení rovnováhy? Teplota v každém bodě bude ovlivněna okolními body a to každým stejně. Proto bude teplota v bodech $x_1$ až $x_4$ aritmetickým průměrem teplot čtyř sousedů. V prezentaci tyto čtyři podmínky máme zapsány pomocí čtyř rovnic. Tyto čtyři rovnice jsou lineární a jedná se tedy o soustavu čtyř lineárních rovnic o čtyřech neznámých. Tuto úlohu je možné naformulovat také vektorově tak, že každá rovnice odpovídá výpočtu jedné komponenty, případně pomocí maticového součinu.
+
+Pro jemnější rozestup mezi uzlovými body by rovnic i neznámých bylo více, klidně tisíce. Ale vždy bude platit, že každý bod má čtyři sousedy a proto bude v každé rovnici nejvýše pět neznámých. Pro takové soustavy máme neuvěřitelně rychlé numerické metody, které přes velikost soustavy dokáží velice rychle aproximovat řešení. Stačí do uzlových bodů nastavit libovolné realistické teploty a poté teplotu v každém bodě opravit na průměr teplot svých sousedů. Protože se mění i teploty sousedů, ve druhém kole znovu teplotu ve všech bodech opravíme na průměr teplot sousedů a opakováním tohoto výpočtu, který je velice rychlý, docílíme toho, že se teploty postupně ustálí na hodnotě, která je řešením soustavy. Oproti klasické metody řešení soustav, jako dosazovací metoda nebo eliminační metoda, které pravděpodobně alespoň v základní podobě znáte ze střední školy, by při takovém počtu neznámých vůbec nebyly použitelné.
+
+Je otázka, jestli naše tvrzení, že teplota v každém bodě bude aritmetickým průměrem sousedů, je pravdivé. Později se naučíme naformulovat rovnici vedení tepla v libovolném materiálu a uvidíme, že pokud uvažujeme její stacionární řešení a pokud derivace vystupující v této rovnici nahradíme konečnými diferencemi, opravdu skončíme u toho, že teplota v každém uzlovém bodě bude aritmetickým průměrem teplot v okolních bodech. 
+
+\end{document}
