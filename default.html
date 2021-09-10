@@ -37,6 +37,24 @@ $for(css)$
 $for(header-includes)$
   $header-includes$
 $endfor$
+
+ <script type="text/javascript">
+
+function otevrit(co)
+   {
+       seed=Math.round(Math.random()*1000);
+       window.open('http://um.mendelu.cz/webwork2/html2xml?&answersSubmitted=0&sourceFilePath='+co+'&problemSeed='+seed+'&displayMode=MathJax&courseID=daemon&userID=demon&course_password=demonek&outputformat=simpleM&language=cs_CZ', '_blank');
+   };
+
+function    myFunctionYTB()
+    {
+        //jQuery(".reseni").slideToggle();
+	jQuery(".Ycontainer").slideToggle();
+    }
+        
+
+  </script>
+
 </head>
 <body>
 
@@ -67,11 +85,18 @@ $endif$
 
 <!-- YTB -->
 
+
+<div>
+<button onclick="myFunctionYTB()">Videa on/off</button>
+</div>
+
+
 $if(toc)$
 <div id="$idprefix$TOC">
 $toc$
 </div>
 $endif$
+
 $body$
 $for(include-after)$
 $include-after$
