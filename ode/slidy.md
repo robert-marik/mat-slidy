@@ -2,10 +2,14 @@
 % Robert Mařík
 % 2019-2020
 
-> V této přednášce se seznámíme s diferenciálními rovnicemi. To není nic jiného, než správný název pro to, čemu jsme dříve říkali matematické modely formulované pomocí derivace. Viděli jsme že tyto modely jsou v některých případech přirozeným matematickým aparátem pro popis reálně probíhajících dějů v přírodě. V přednášce se seznámíme se základním názvoslovím spojeným s touto problematikou a naučíme se numerické i analytické řešení. Protože se často setkáváme s modely nezávislými na čase, budeme se problematice těchto modelů věnovat podrobněji. Tyto modely mají tu vlastnost, že se ohraničená řešení po čase ustálí okolo stabilní hodnoty. Naučíme se hledat hodnoty odpovídající ustáleným řešením a z nich vybrat ty stabilní, k nimž systém může konvergovat, nebo nestabilní, které oddělují oblasti, ze kterých systém dospívá k jednotlivým stabilním stavům.
+https://youtu.be/gU6ClJwLFs0
+
+> V této přednášce se seznámíme s diferenciálními rovnicemi. To není nic jiného, než správný název pro to, čemu jsme dříve říkali matematické modely formulované pomocí derivace. Viděli jsme že tyto modely jsou v některých případech přirozeným matematickým aparátem pro popis reálně probíhajících dějů v přírodě. V přednášce se seznámíme se základním názvoslovím spojeným s touto problematikou, seznámíme se s metodami identifikace některých kvalitativních vlastností a u rovnic se separovanými proměnnými se naučíme hledat i analytické řešení. Protože se často setkáváme s modely nezávislými na čase, budeme se problematice těchto modelů věnovat podrobněji. Tyto modely mají tu vlastnost, že se ohraničená řešení po čase ustálí okolo stabilní hodnoty. Naučíme se hledat hodnoty odpovídající ustáleným řešením a z nich vybrat ty stabilní, k nimž systém může konvergovat, nebo nestabilní, které oddělují oblasti, ze kterých systém dospívá k jednotlivým stabilním stavům.
 
 
 # Obyčejná diferenciální rovnice prvního řádu
+
+https://youtu.be/GSjgp7FGvVw
 
 Obyčejná diferenciální rovnice je rovnice, kde vystupuje neznámá
 funkce a její derivace. Setkáváme se s\ ní například všude tam, kde
@@ -109,6 +113,8 @@ splňující diferenciální rovnici.
 
 
 # Modely využívající diferenciální rovnice
+
+https://youtu.be/UaSCLmV_g4o
 
 ## Tepelná výměna
 
@@ -372,6 +378,8 @@ Jedná se o diferenciální rovnice, kde zrychlení (derivace rychlosti) a časo
 
 # Geometrická interpretace a transformace jednotek
 
+https://youtu.be/OgzYhnGj34I
+
 ## Geometrická interpretace ODE
 
 <div class='obtekat'>
@@ -570,6 +578,8 @@ Excel](https://support.microsoft.com/en-us/help/78113/floating-point-arithmetic-
 
 # ODE tvaru $\frac{\mathrm dy}{\mathrm dx}=f(y)$, autonomní ODE
 
+https://youtu.be/SVDLZMIfW8Y
+
 Rovnice $$\frac{\mathrm dy}{\mathrm dx}=f(y)\tag{♣}$$ se nazývá
 *autonomní*, nebo též nezávislá na čase. Je speciálním případem rovnice
 se separovanými proměnnými, která je uvedena na dalším slidu a naučíme
@@ -733,6 +743,8 @@ R. L. Devaney, G.  R. Hall: Differential equations, Cengage Learning
 
 # ODE tvaru $\frac{\mathrm dy}{\mathrm dx}=f(x)g(y)$ (rovnice se separovanými proměnnými)
 
+https://youtu.be/NNQADiRyTEA
+
 
 > Definice (ODE se separovanými proměnnými). Diferenciální rovnice tvaru
 > $$    \frac{\mathrm dy}{\mathrm dx}=f(x)g(y) \tag{S}$$
@@ -832,6 +844,8 @@ plíškem spustí přeměna skupenství na pevné spojená s\ intenzivním
 uvolněním tepla.
 
 # Diferenciální rovnice vyšších řádů
+
+https://youtu.be/ahkeA6fopaQ
 
 \iffalse
 
