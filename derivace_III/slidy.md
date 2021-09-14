@@ -66,6 +66,30 @@ $\cosh x$, a hyperbolický sinus, $\sinh x$.
 **Příklad.** Je-li funkce $f(x)$ polynom, potom rozkladem na sudou a lichou část dostaneme polynomy, které jsou tvořeny členy původního polynomu tak, že sudá část obsahuje právě členy se sudým exponentem a lichá část právě členy s lichým exponentem.
 
 
+## Využití parity při technických výpočtech
+
+
+<div class='obtekat'>
+
+![Tříbodový ohyb nosníku. Sleduje se veličina symetricky rozložená vzhledem ke středu (napětí ve směru nosníku).](nosnik_3bodovy.png)
+
+![Tříbodový ohyb nosníku s využitím symetrie. Počítá se jenom čtvrtina tělesa.](nosnik_ctvrtina.png)
+
+![Tříbodový ohyb nosníku. Sledovaná veličina (smykové napětí v rovnině boční stěny) je symetrická, ale vlevo i vpravo se liší znaménkem.](beam_smyk.png)
+
+
+</div>
+
+
+Model tříbodového namáhání nosníku vykazuje dvě roviny symetrie: uprostřed (levá půlka je zrcadlem pravé) a uprostřed podélně podle svislé osy. Stačí tedy modelovat jenom čtvrtinu nosníku. To je výhoda. Protože dřevo je anizotropní materiál s nelineárními materiálovými vlastnostmi, trvá řešení modelu i na nejrychlejších počítačích dlouho a využití symetrie dokáže značně zkrátit čas výpočtu. Na obrázku nahoře je tříbodové namáhání nosníku modelované i s podporami použitými pro deformaci. Dole je zjednodušená situace, kdy nás zajímá jenom část mezi levou dolní a prostřední horní čelistí zkušebního stroje. Protože se jedná jenom o výřez, končí pravá strana poněkud nepřirozeně. Po zrcadlovém doplnění chybějící části nosníku se však obě poloviny spojí a výsledek bude odpovídat modelování celého nosníku. 
+
+Na dvou obrázcích je barevně napětí ve vodorovném směru. Pokud bychom na přední stranu nakreslili vodorovné čárečky, souvisí toto napětí se silou, která se snaží tyto čárečky natáhnout (kladná hodnota, červená barva) nebo stlačit (záporná hodnota, modrá barva). Z popisu je jasné, že situace je symetrická. Z obrázku například vyčteme, která část je podél nosníku namáhána tahem a která tlakem a jak velká jsou tato tahová a tlaková napětí. Co je však důležité, pravá polovina je zrcadlovou kopií levé poloviny a proto není nutné zde výpočty opakovat. Výsledná funkce bude sudou funkcí proměnné $x$, pokud počátek soustavy umístíme do středu nosníku a osu $x$ orientujeme ve směru nosníku. 
+
+Třetí obrázek znázorňuje smykové napětí v rovině $xz$, tj. v rovině boční stěny. Pokud bychom si na boční stěně nakreslili čtverečky, sledujeme tímto sílu, snažící se tyto čtverečky deformovat. Situace je opět symetrická, jako v zrcadle. Ale v tomto případě platí, že co se zkosí doprava se v zrcadle zkosí doleva a naopak. Proto se sledovaná veličina liší v levé a pravé půlce znaménkem. Bude popsána funkcí, která je lichou funkcí proměnné $x$. Stačí vypočítat levou půlku a podle ní doplnit půlku pravou.
+
+Pro zajímavost: u dřeva jako nelineárního anizotropního materiálu je nutné před výpočtem rozhodnout, na kolik elementů se během výpočtu těleso rozdělí a při výpočtu postupně zvyšovat zatížení, sledovat poměry v každém kousku tělesa a rozhodovat, kdy se dostaneme mimo platnost Hookova zákona pro deformaci a přepneme v daném místě na nelineární chování. Proto výpočet trvá cca 20 minut nebo 40 minut (podle velikosti elementů, na které se těleso rozdělí). Oproti tomu výpočet například s ocelí trvá řádově vteřiny, protože úloha je lineární, izotropní, dá se vypočítat hned konečný stav a je možné během výpočtu zmenšovat velikost elementů jenom v místech, kde to je nutné. U dřeva by výpočet jedné čtvrtiny modelu výrazně pomohl.
+
+
 # Lokální extrémy
 
 https://youtu.be/E1XxOQDtto0
