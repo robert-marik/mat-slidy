@@ -134,21 +134,21 @@ Zkontrolujte dosazením (pozor: pro $t<0$ platí $\sqrt {t^2}=|t|=-t$) a rozmysl
  fyzikální interpretaci.
 
 <div class=reseni>
-1. Nabídneme dvě  varianty, pro argumentaci je možno použít kteroukoliv z nich. 
-    * *Podle obecné věty o jednoznačnosti:* Stačí ověřit, že pravá strana má ohraničenou parciální derivaci podle $h$. Protože platí
-    $$\frac{\partial }{\partial h}(k\sqrt h)=k\frac 12
-    h^{-1/2}=\frac{k}{2\sqrt h}$$ a tato derivace je definovaná a
-    ohraničená v nějakém okolí libovolného bodu splňujícího $h>0$.
-    Podle věty o existenci a jednoznačnosti řešení obecné
-    diferenciální rovnice má počáteční úloha právě jedno řešení.
-    *Podle věty o jednoznačnosti pro rovnici se separovanými proměnnými:* Stačí ověřit,
-    že část závislá na $h$ je nenulová. Toto jistě platí, protože pro
-    $h>0$ je $\sqrt{h}\neq 0$.
+Ad 1: Nabídneme dvě  varianty, pro argumentaci je možno použít kteroukoliv z nich. 
 
-    Pokud je tedy v nádrži nějaká voda, je jednoznačně dáno,
-    jak bude vytékat a je možné vypočítat, jaká bude v libovolném
-    okamžiku hladina.
-1. Pro $h=\frac 14 k^2 t^2$ a $t<0$ dostáváme
+* *Podle obecné věty o jednoznačnosti:* Stačí ověřit, že pravá strana má ohraničenou parciální derivaci podle $h$. Protože platí
+  $$\frac{\partial }{\partial h}(k\sqrt h)=k\frac 12
+  h^{-1/2}=\frac{k}{2\sqrt h}$$ a tato derivace je definovaná a
+  ohraničená v nějakém okolí libovolného bodu splňujícího $h>0$.
+  Podle věty o existenci a jednoznačnosti řešení obecné
+  diferenciální rovnice má počáteční úloha právě jedno řešení.
+* *Podle věty o jednoznačnosti pro rovnici se separovanými proměnnými:* Stačí ověřit,
+  že část závislá na $h$ je nenulová. Toto jistě platí, protože pro
+  $h>0$ je $\sqrt{h}\neq 0$. 
+  
+Pokud je tedy v nádrži nějaká voda, je jednoznačně dáno, jak bude vytékat a je možné vypočítat, jaká bude v libovolném okamžiku hladina.
+
+Ad 2: Pro $h=\frac 14 k^2 t^2$ a $t<0$ dostáváme
     $$\begin{aligned}
       \frac{\mathrm dh}{\mathrm dt}&=\frac 14 k^2 \cdot 2t = \frac 12 k^2 t\\
       -k\sqrt h&=-k\sqrt{\frac 14 k^2 t^2} = - k \frac 12 |k| \cdot |t| =
@@ -156,7 +156,7 @@ Zkontrolujte dosazením (pozor: pro $t<0$ platí $\sqrt {t^2}=|t|=-t$) a rozmysl
     \end{aligned}  $$
     a obě strany rovnice jsou stejné. Pro $h=0$ je dosazení triviální.
   
-    Je-li $h(t_0)=0$, může to být proto, že voda v čase $t_0$ právě vytekla, nebo proto, že vytekla před hodinou nebo proto, že v nádrži nikdy voda nebyla. Proto je nejednoznačnost přirozená. Například $h(t)=0$ je řešení odpovídající tomu, že voda v nádrži nikdy nebyla. Funkce $h(t)=\frac 14 k^2t^2$ pro $t<0$ odpovídá tomu, že pro $t<0$ v nádrži voda byla a vytekla v čase $t=0$.
+Je-li $h(t_0)=0$, může to být proto, že voda v čase $t_0$ právě vytekla, nebo proto, že vytekla před hodinou nebo proto, že v nádrži nikdy voda nebyla. Proto je nejednoznačnost přirozená. Například $h(t)=0$ je řešení odpovídající tomu, že voda v nádrži nikdy nebyla. Funkce $h(t)=\frac 14 k^2t^2$ pro $t<0$ odpovídá tomu, že pro $t<0$ v nádrži voda byla a vytekla v čase $t=0$.
 
 
 </div>
@@ -216,11 +216,5 @@ Protože $f(0)>0$, malá hromada vždy roste a proto nemůže skončit celá roz
 Protože $f$ je pro velké $V$ záporná, pro velkou hromadu objem ubývá (více se rozfouká než přisype) a hromadu není možné navršit libovolně velkou. 
 
 </div>
-
-
-
-# Vybrané úlohy diferenciálního a integrálního počtu.
-
-Dle instrukcí cvičícího a dle toho, kolik cvičení odpadlo (státní svátek, děkanské volno, hlavní cvičení, ...). Opakování nebo rozšíření nebo shrnutí, v případě nutnosti (pokud odpadlo hodně cvičení) se přeskakuje a pokračuje s následujícím cvičením.
 
 

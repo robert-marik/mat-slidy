@@ -2,8 +2,10 @@ export TEXINPUTS=..:$TEXINPUTS
 
 for i in cviceni*md
 do
-   pandoc $i --filter remove_figures.py -o tex/$i.tex -s
-   pandoc $i --filter remove_figures.py -o tex/$i.standalone.tex 
+   cp $i temp.md
+   sed -i 's/<div class=reseni>/\\reseni/' temp.md
+   pandoc temp.md --template cviceni.latex --filter remove_figures.py -o tex/$i.tex -s
+   pandoc temp.md --filter remove_figures.py -o tex/$i.standalone.tex 
 done
 
 rm tex/*14*
@@ -16,4 +18,9 @@ done
 
 pdflatex cviceni.tex
 pdflatex cviceni.tex
+
+scp cviceni.pdf cornus.mendelu.cz:html/mtk/mat-slidy/cviceni/
+scp *md.pdf cornus.mendelu.cz:html/mtk/mat-slidy/cviceni/pdf/
+
 cd ..
+

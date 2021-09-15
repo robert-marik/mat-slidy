@@ -2,8 +2,9 @@
 \PassOptionsToPackage{unicode}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
 %
-\documentclass[
-]{article}
+\documentclass[]{report}
+
+\usepackage[margin=1in]{geometry}
 \title{Matematika - cvičení}
 \author{}
 \date{}
@@ -65,6 +66,9 @@
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
 
+\def\reseni {\bigskip\hrule\bigskip \textit{Řešení.} }
+
+
 
 \begin{document}
 \maketitle
@@ -72,19 +76,32 @@
 \let\figure\comment
 \let\endfigure\endcomment
 
+\setcounter{tocdepth}{0}
+\tableofcontents
 
-\input cviceni00.md.standalone.tex
+\chapter{Výpočet derivací}
 \input cviceni01.md.standalone.tex
+\chapter{Využití derivací v mateamtických modelech}
 \input cviceni02.md.standalone.tex
+\chapter{Výpočet derivací, lineární aproximace}
 \input cviceni03.md.standalone.tex
+\chapter{Lokální extrémy}
 \input cviceni04.md.standalone.tex
+\chapter{Integrály I}
 \input cviceni05.md.standalone.tex
+\chapter{Integrály II}
 \input cviceni06.md.standalone.tex
+\chapter{Diferenciální rovnice}
 \input cviceni07.md.standalone.tex
+\chapter{Matice}
 \input cviceni08.md.standalone.tex
+\chapter{Determinanty, soustavy rovnic}
 \input cviceni09.md.standalone.tex
+\chapter{Vlastní čísla a směry}
 \input cviceni10.md.standalone.tex
+\chapter{Parciální derivace a rovnice vedeí tepla}
 \input cviceni11.md.standalone.tex
+\chapter{Dvojný integrál}
 \input cviceni12.md.standalone.tex
 
 

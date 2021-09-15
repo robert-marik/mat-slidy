@@ -19,22 +19,21 @@
 </style>
 
 Zde jsou příklady pro cvičení k mým přednáškám na Lesnické a dřevařské fakultě pro bakalářské studium v zimním semestru 2021/2022. 
+Verze k tisku je <a href="cviceni.pdf">zde.</a> V seznamu níže si můžete tisknout materiály po jednotlivých kapitolách.
 
 
-<div class=seznam>
-<a class="obsah"  href="cviceni00.md.html">Obsah</a>
-<a class="obsah"  href="cviceni01.md.html">Výpočet derivací</a>
-<a class="obsah"  href="cviceni02.md.html">Využití derivací v matematických modelech</a>
-<a class="obsah"  href="cviceni03.md.html">Výpočet derivací, lineární aproximace</a>
-<a class="obsah"  href="cviceni04.md.html">Lokální extrémy</a>
-<a class="obsah"  href="cviceni05.md.html">Integrály I</a>
-<a class="obsah"  href="cviceni06.md.html">Integrály II</a>
-<a class="obsah"  href="cviceni07.md.html">Diferenciální rovnice</a>
-<a class="obsah"  href="cviceni08.md.html">Matice</a>
-<a class="obsah"  href="cviceni09.md.html">Determinanty, soustavy rovnic</a>
-<a class="obsah"  href="cviceni10.md.html">Vlastní čísla a směry</a>
-<a class="obsah"  href="cviceni11.md.html">Parciální derivace, rovnice vedení tepla</a>
-<a class="obsah"  href="cviceni12.md.html">Dvojný integrál</a>
-</a>
+* Výpočet derivací [html](cviceni01.md.html), [pdf](pdf/cviceni01.md.pdf) 
+* Využití derivací v matematických modelech [html](cviceni02.md.html), [pdf](pdf/cviceni02.md.pdf) 
+* Výpočet derivací, lineární aproximace [html](cviceni03.md.html), [pdf](pdf/cviceni03.md.pdf) 
+* Lokální extrémy [html](cviceni04.md.html), [pdf](pdf/cviceni04.md.pdf) 
+* Integrály I [html](cviceni05.md.html), [pdf](pdf/cviceni05.md.pdf) 
+* Integrály II [html](cviceni06.md.html), [pdf](pdf/cviceni06.md.pdf) 
+* Diferenciální rovnice [html](cviceni07.md.html), [pdf](pdf/cviceni07.md.pdf) 
+* Matice [html](cviceni08.md.html), [pdf](pdf/cviceni08.md.pdf) 
+* Determinanty, soustavy rovnic [html](cviceni09.md.html), [pdf](pdf/cviceni09.md.pdf) 
+* Vlastní čísla a směry [html](cviceni10.md.html), [pdf](pdf/cviceni10.md.pdf) 
+* Parciální derivace, rovnice vedení tepla [html](cviceni11.md.html), [pdf](pdf/cviceni11.md.pdf) 
+* Dvojný integrál [html](cviceni12.md.html), [pdf](pdf/cviceni12.md.pdf) 
+
 
 </div>

@@ -157,7 +157,7 @@ $$C´(x)=\frac{2}{\sqrt{4x+4}}.$$ Ve druhém případě máme zlomek s konstantn
 
 ![pixabay.com](horizont.jpg)
 
-Vzdálenost k horizontu pro pozorovatele ve výšce $h$ nad Zemí je dána funkcí $H=\sqrt {2Rh},$ kde $R=6.371\times 10^6\,\mathrm m$ je poloměr Země (\url{https://aty.sdsu.edu/explain/atmos_refr/horizon.html}). Po dosazení a vydělení faktorem 1000, aby $H$ vycházelo v kilometrech, dostáváme vzorec $$H=3.57\sqrt{h},$$ kde $h$ je v metrech a $H$ v kilometrech. Určete hodnotu této derivace $\frac{\mathrm d H}{\mathrm dh}$ pro $h=5\,\mathrm{m}$ (včetně jednotky) a slovní interpretaci této derivace.
+Vzdálenost k horizontu pro pozorovatele ve výšce $h$ nad Zemí je dána funkcí $H=\sqrt {2Rh},$ kde $R=6.371\times 10^6\,\mathrm m$ je poloměr Země ([viz zde](https://aty.sdsu.edu/explain/atmos_refr/horizon.html)). Po dosazení a vydělení faktorem 1000, aby $H$ vycházelo v kilometrech, dostáváme vzorec $$H=3.57\sqrt{h},$$ kde $h$ je v metrech a $H$ v kilometrech. Určete hodnotu této derivace $\frac{\mathrm d H}{\mathrm dh}$ pro $h=5\,\mathrm{m}$ (včetně jednotky) a slovní interpretaci této derivace.
 
 _Tento příklad opět udává derivaci jako rychlost změny, ale nezávislá proměnná není čas. Sledujeme vzájmenou relaci dvou délek - vzdálenosti k horizontu a výšky pozorovatele. V případech jako je tento je rozměr veličiny derivované stejný, jako rozměr veličiny, podle které se derivuje. Potom je derivace vlastně bez rozměru. Někdy je však vhodné pro srozumitelnější interpretaci jednotky nevykrátit, obzvlášť v případě jako zde, kdy se obě délky udávají v řádově jiných jednotkách (metry versus kilometry)._
 
@@ -170,7 +170,7 @@ $$\frac{\mathrm dH}{\mathrm dh}(5)=0.7983 \times \frac {1000\, \mathrm{m}}{\math
 </div>
 
 
-# Rychlost s jakou roste obsahu kruhu
+# Rychlost s jakou roste obsah kruhu
 
 ![J. Kameníček, brnensky.denik.cz](vate_pisky.jpg)
 
@@ -226,7 +226,7 @@ Hromada roste do výšky rychlostí 5.3 centimetru za minutu.
 </div>
 
 
-# Rychlost s jakou roste obsahu kruhu II
+# Rychlost s jakou roste obsah kruhu II
 
 ![http://mp.mestokyjov.cz/](kyjov.jpg)
 
