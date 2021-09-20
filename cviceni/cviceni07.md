@@ -1,6 +1,8 @@
 % Diferenciální rovnice
 
 
+_Umění najít řešení diferenciální rovnice je sympatické a naučíme se v úvodním příkladě. Není to však nic proti umění sestavit model (naučili jsme se již ve druhém týdnu a připomeneme si v následujícím příkladě s tloušťkou ledu), umění posoudit jednoznačnost řešení (většina modelů se řeší numericky a musíme být přesvědčeni o smysluplnosti takové činnosti) a  stabilitu řešení (řešení, která nejsou stabilní, jsou sice v souladu s přírodními zákony, ale pravděpodobnost jejich spontánního výskytu je nulová). Jednoznačnost a zjednodušenou verzi stability řešení (stabilita konstantních řešení) jsme viděli na přednášce a připomeneme v dalších příkladech._
+
 
 # Řešení ODE a IVP 
 
@@ -11,8 +13,6 @@
 1. $\frac{\mathrm dr}{\mathrm dt}=kr^3,\ \ r(0)=r_0>0$
 1. $\frac{\mathrm dm}{\mathrm dt}=m+2,\ \ m(0)=0$
 1. $\frac{\mathrm dm}{\mathrm dt}=m+2,\ \ m(0)=-2$
-
-_Umění najít řešení diferenciální rovnice je sympatické, není to však nic proti umění sestavit model (naučili jsme se již ve druhém týdnu, připomeneme si v následujícím modelu), umění posoudit jednoznačnost řešení (většina modelů se řeší numericky a musíme být přesvědčeni o smysluplnosti takové činnosti) a  stabilitu řešení (řešení, která nejsou stabilní, jsou sice v souladu s přírodními zákony, ale pravděpodobnost jejich spontánního výskytu je nulová). Jednoznačnost a zjednodušenou verzi stability řešení (stabilita konstantních řešení) jsme viděli na přednášce a připomeneme v dalších příkladech._
 
 
 <div class=reseni>

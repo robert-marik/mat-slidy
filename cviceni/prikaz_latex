@@ -19,8 +19,8 @@ done
 pdflatex cviceni.tex
 pdflatex cviceni.tex
 
-scp cviceni.pdf cornus.mendelu.cz:html/mtk/mat-slidy/cviceni/
-scp *md.pdf cornus.mendelu.cz:html/mtk/mat-slidy/cviceni/pdf/
+#scp cviceni.pdf cornus.mendelu.cz:html/mtk/mat-slidy/cviceni/
+#scp *md.pdf cornus.mendelu.cz:html/mtk/mat-slidy/cviceni/pdf/
 
 cd ..
 
