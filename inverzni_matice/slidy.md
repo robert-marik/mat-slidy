@@ -55,7 +55,7 @@ Inverzní matice k součinu dvou matic je součinem jednotlivých inverzních ma
 **Příklad.** Pomocí matic a jejich součinu je možné zapsat libovolnou permutaci konečněprvkové množiny. Známým permutačním hlavolamem je Rubikova kostka. Na ní snadno vidíme, že pokud kostku zamícháme ze složeného stavu tahem v horní stěně a poté v pravé stěně, pro opětovné složení musíme vracet tahy v opačném pořadí, tj. nejdřív vrátit tah v pravé stěně a poté ve stěně horní. Pěkně to jde vidět na [následující animaci](https://alg.cubing.net/?alg=R_U_%0A%2F%2F_dva_tahy,_ka%C5%BEd%C3%BD_je_mo%C5%BEn%C3%A9_reprezentovat_matic%C3%AD_permutace_%0AU-_R-_%0A%2F%2F_vr%C3%A1cen%C3%AD_tah%C5%AF_v_opa%C4%8Dn%C3%A9m_po%C5%99ad%C3%AD_slo%C5%BE%C3%AD_kostku_zp%C4%9Bt), kterou můžete spustit nebo přehrávat po jednotlivých krocích.
 
 
-# Inverzní matice k matici popisující rotaci v rovině
+## Inverzní matice k matici popisující rotaci v rovině
 
 Pro matici rotace $$R_\theta=\begin{pmatrix}
   \cos\theta & -\sin \theta\\
@@ -70,7 +70,7 @@ Odsud mimo jiné vidíme, že platí
 \dm$$(R_\theta)^{-1}=\begin{pmatrix}   \cos\theta & -\sin \theta\\   \sin\theta & \cos\theta \end{pmatrix}^{-1}=\begin{pmatrix}   \cos\theta & \sin \theta\\   -\sin\theta & \cos\theta \end{pmatrix} =\begin{pmatrix}   \cos\theta & -\sin \theta\\   \sin\theta & \cos\theta \end{pmatrix}^T=(R_\theta)^T,$$
 tj. že inverzní a transponovaná matice jsou v případě matice rotace stejné. To je velká náhoda, ale přesto matice s touto vlastností hrají tak důležitou roli, že si vysloužily vlastní název představený na dalším slidu.
 
-# Ortogonální matice
+## Ortogonální matice
 
 > Definice (ortogonální matice). *Ortogonální matice* je matice, jejíž transponovaná matice je současně maticí inverzní.
 
@@ -82,7 +82,7 @@ vektory, je ortogonální.
 
 
 
-# Matice přechodu do pootočené soustavy souřadnic
+# Matice přechodu 
 
 
 <!-- YTB AdbMMzTfR00 -->
@@ -96,6 +96,8 @@ vektory, je ortogonální.
 </div>
 
 \fi
+
+Ukážeme si, že pomocí matic je možné přepočítávat souřadnice mezi jednotlivými souřadnými soustavami. Praktické využití je studium ortotropních materiálů v situace, kdy pro matematický popis jsou výhodné směry os, ale roviny symetrie neodpovídají souřadným rovinám. Například dřevěný kvádr je vhodné studovat tak, že hrany kvádru jsou rovnoběžné se souřadnými osami. Materiálové vlastnosti jsou známy v anatomických směrech dřeva. Pokud tyto směry nejsou nejsou rovnoběžné s osami (kvádr je nařezaný našikmo), je potřeba mezi souřadnými soustavami přecházet. To se dá elegantně udělat pomocí maticového násobení a inverzní matice. 
 
 
 Předpokládejme, že v rovině jsou dány dvě kartézské soustavy souřadnic $\mathcal B$ a $\mathcal B'$, které jsou vzájemně pootočené o úhel $\theta$. V těchto soustavách budou souřadnice $(x,y)^T$ a $(x',y')^T$. Je-li soustava $\mathcal B'$ otočená oproti soustavě $\mathcal B$ o úhel $\theta$ proti směru hodinových ručiček, má (viz obrázek) jednotkový vektor ve směru osy $x'$ v bázi $\mathcal B$ souřadnice $(\cos(\theta),\sin(\theta))^T$ a jednotkový vektor ve směru osy $y'$ má v bázi $\mathcal B$ souřadnice $(-\sin(\theta),\cos(\theta))^T$. Proto je vztah mezi souřadnicemi dán maticovým součinem $$\begin{pmatrix}x\\y\end{pmatrix}_{\mathcal B}=

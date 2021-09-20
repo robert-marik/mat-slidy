@@ -148,7 +148,7 @@ $\mathrm{milion\ Euro}/\mathrm{letadlo}$, resp. milion Euro, podle toho, jak naz
 Derivace $C'(15)$ vyjadřuje rychlost, s jakou rostou náklady při produkci $15$ letadel. Je to cena vztažená na jednotkový přírůstek, tj. jedná se vlastně o cenu výroby šestnáctého letadla. Šestnácté letadlo má výrobní náklady 0.25 milionů euro.
 
 *Poznámka:* Jinou cestou jak určit cenu šestáctého letadla je použít rozdíl $$C(16)-C(15)\approx 0.246.$$ Toto je cesta, která se zdá výhodnější, protože není nutné derivovat. Ale tato cesta zpravidla vede ke složitějším postupuům, jakmile tento výpočet vstupuje jako jedna z komponent do složitějšího modelu. Odhad ceny dalšího letadla při produkci $x$ letadel je bez derivace roven
-$$C(x+1)-C(x)=\sqrt{4(x+1)+4}-\sqrt{4x+1}$$ a s derivací
+$$C(x+1)-C(x)=\sqrt{4(x+1)+4}-\sqrt{4x+4}$$ a s derivací
 $$C´(x)=\frac{2}{\sqrt{4x+4}}.$$ Ve druhém případě máme zlomek s konstantním čitatelem (vlastně se jedná o mocninnou funkci s exponentem $-\frac 12$), v prvním případě máme rozdíl dvou odmocnin. Druhá metoda tedy vede k jednodušší funkci a tato jednoduchost může být kriticky důležitá, pokud námi odvozená cena dalšího letadla vstupuje do dalšího výpočtu. 
 
 </div>
