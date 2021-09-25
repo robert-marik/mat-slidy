@@ -68,7 +68,7 @@ roviny o úhel $\theta$ je pootočení roviny o úhel opačný.
 
 Odsud mimo jiné vidíme, že platí
 \dm$$(R_\theta)^{-1}=\begin{pmatrix}   \cos\theta & -\sin \theta\\   \sin\theta & \cos\theta \end{pmatrix}^{-1}=\begin{pmatrix}   \cos\theta & \sin \theta\\   -\sin\theta & \cos\theta \end{pmatrix} =\begin{pmatrix}   \cos\theta & -\sin \theta\\   \sin\theta & \cos\theta \end{pmatrix}^T=(R_\theta)^T,$$
-tj. že inverzní a transponovaná matice jsou v případě matice rotace stejné. To je velká náhoda, ale přesto matice s touto vlastností hrají tak důležitou roli, že si vysloužily vlastní název představený na dalším slidu.
+tj. že inverzní a transponovaná matice jsou v případě matice rotace stejné. To je velká náhoda, ale přesto matice s touto vlastností hrají tak důležitou roli, že si vysloužily vlastní název představený v následujícím odstavci. 
 
 ## Ortogonální matice
 
@@ -214,7 +214,7 @@ transponovaná. Tomuto procesu se říká diagonalizace matice, protože
 $P^{-1}AP$ vychází diagonální a v diagonále vychází právě vlastní
 čísla matice.
 
-Stejným způsobem se transformují i tenzory.
+Stejným způsobem se transformují i fyzikální veličiny veličiny popisované maticemi, nazývané tenzory.
 
 \iffalse
 
@@ -265,7 +265,7 @@ Stejný výpočet používáme, pokud se snažíme transformovat působící nap
 
 \fi
 
-Úloha na transformaci tenzoru, kterou jsme řešili na minulém slidu je
+Úloha na transformaci tenzoru, kterou jsme řešili na v minulém odstavci je
 v aplikacích velmi důležitá. Proto existuje řada grafických nebo
 inženýrských metod na řešení tohoto úkolu. Tyto metody jsou důvtipné a názorné, například metoda Mohrovy kružnice, oproti lineární algebře však mají zásadní nevýhodu: uživatel se musí stále učit něco nového a dostává návod "jak", nikoliv "proč". Použitím aparátu lineární algebry, stejně jako dokážeme v pootočených souřadnicích vyjádřit libovolné zobrazení, dokážeme vyjádřit v pootočených souřadnicích i libovolný tenzor. Vzorce jsou stejné a navíc při otočení v rovině je matice rotace ortogonální, tj. inverzní matice je maticí transponovanou. Pro symetrický tenzor $A=
 \begin{pmatrix}
@@ -409,7 +409,7 @@ pozitivní odpověď na tuto otázku udávají věty na následujícím slidu.
 >* Matice $D$ definovaná vztahem $$D=P^TAP$$ je diagonální.
 >* Diagonální prvky matice $D$ jsou právě vlastní čísla $\lambda_i$ a jsou ve stejném pořadí jako odpovídající vlastní vektory v matici $P$.
 
-> Poznámka (diagonální tvar materiálových vlastností dřeva). Typickým ortotropním materiálem je dřevo. Pokud transformujeme tenzor difuzní matice pro dřevo na diagonální tvar, jsou diagonální prvky v poměru přibližně $D_L:D_R:D_T=35:3:2$ (P. Horáček, Fyzikální a mechanické vlastnosti dřeva, 2008 , str. 65). Ortotropní charakter má však nejenom transport tekutin, ale i sesychání a bobtnání. V tomto případě však naopak v podélném směru dřevo bobtná nejméně a tenzor popisující bobtnání má po transformaci na diagonální tvar v diagonále prvky v poěmru přibližně $\alpha_T:\alpha_R:\alpha_L=20:10:1$ (P. Horáček, Fyzikální a mechanické vlastnosti dřeva, 2008 , str. 38).
+> Poznámka (diagonální tvar materiálových vlastností dřeva). Typickým ortotropním materiálem je dřevo. Pokud transformujeme tenzor difuzní matice pro dřevo na diagonální tvar, jsou diagonální prvky v poměru přibližně $D_L:D_R:D_T=35:3:2$ (P. Horáček, Fyzikální a mechanické vlastnosti dřeva, 2008 , str. 65). Ortotropní charakter má však nejenom transport tekutin, ale i sesychání a bobtnání. V tomto případě však naopak v podélném směru dřevo bobtná nejméně a tenzor popisující bobtnání má po transformaci na diagonální tvar v diagonále prvky v poměru přibližně $\alpha_T:\alpha_R:\alpha_L=20:10:1$ (P. Horáček, Fyzikální a mechanické vlastnosti dřeva, 2008 , str. 38).
 
 \iffalse 
 
