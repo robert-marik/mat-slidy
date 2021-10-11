@@ -56,6 +56,8 @@ _Tato úloha je jednoduchá a vlastně není na počítání, ale jenom na ujasn
 
 <div class=reseni>
 
+Shrneme si, co je možné očekávát během průběhu děje. U studené tyče ohřejeme levý konec a teplotu udržujeme, pravý konec udržujmeme na nízké teplotě. Tyč se postupně ohřeje a pořád, během dosahování rovnováhy i po nastolení rovnováhy, bude blíž k teplému konci teplota vyšší. Směrem doprava tedy teplota bude klesat a tím směrem také poteče teplo. Po dodsažení rovnováhy bude toto teplo stejné, jako energie, kterou musíme na ohřívaném konci dodávat a na ochlazovaném konci odebírat. Než však nastane rovnováha, musí se všechny části tyče prohřát na cílovou teplotu. To znamená, že při předávání tepla směrem k chladnějšímu konci musí část tepla zůstat v daném místě jako vnitřní energie a projeví se zvýšením teploty. Do dosažení rovnovážného stavu tyč vede teplo, ale každá část tyče předává dál jenom část tepla, protože další část použije na zvýšení své teploty. Proto platí, že čím více jsme napravo, tím méně tam teče tepla. 
+
 1. Rychlost, s jakou v daném místě a čase roste teplota jako funkce času je $\frac {\partial T}{\partial t}$ a tato derivace je v každém bodě kladná, protože tyč se ohřívá. Po čase se asi ustálí rovnováha a derivace bude nulová, teplota se přestane měnit. Měříme ve stupních Celsia za sekundu.
   $\left[\frac {\partial T}{\partial t}\right]={}^\circ\mathrm{C}\,\mathrm{s}^{-1}$
 1. Rychlost, s jakou v daném místě a čase roste teplota jako funkce polohy, tj. jak rychle se roste teplota směrem doprava, je $\frac {\partial T}{\partial x}$ a tato derivace je záporná, protože vlevo je horký konec a teplota směrem doprava klesá. Měříme ve stupních Celsia na metr.

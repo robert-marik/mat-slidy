@@ -315,7 +315,7 @@ Obecně, ať již je nezávislou proměnnou čas či jiná veličina, se derivac
 
 https://youtu.be/ysSFnm8Yrdo
 
-> Poznámka (slovní vyjádření derivace). Derivace v bodě, pokud ji nahlížíme z hlediska časové změny veličiny, je okamžitá rychlost s jakou se mění tato veličina. Protože kladná změna je růst, nahrazujeme někdy slovo "změna" slovem "růst". Protože rychlost je změna za jednotku času, nahrazujeme někdy slovo "rychlost" obratem "změna za jednotku času". Derivaci podle času můžete tedy přečíst libovolným z následujících obratů. Všechny se běžně používají a všechny chápeme stejně -- jako derivaci podle času.
+> Poznámka (slovní vyjádření derivace podle času). Derivace v bodě, pokud ji nahlížíme z hlediska časové změny veličiny, je okamžitá rychlost s jakou se mění tato veličina. Protože kladná změna je růst, nahrazujeme někdy slovo "změna" slovem "růst". Protože rychlost je změna za jednotku času, nahrazujeme někdy slovo "rychlost" obratem "změna za jednotku času". Derivaci podle času můžete tedy přečíst libovolným z následujících obratů. Všechny se běžně používají a všechny chápeme stejně -- jako derivaci podle času.
 > 
 > * Rychlost růstu
 > * Rychlost změny (implicitně předpokládáme, že kladná změna odpovídá růstu a záporná změna poklesu)
