@@ -2,7 +2,11 @@
 % Robert Mařík
 % 2.4.2019
 
+https://youtu.be/cPrmTKdk3yk
+
 # Vektory 
+
+https://youtu.be/iK6KMeYeTcM
 
 ## Operace s vektory
 
@@ -280,6 +284,8 @@ výpočtu hodnosti.
 
 # Pootočení vektoru
 
+https://youtu.be/7vyBwmZZ3Pg
+
 <div class='obtekat'>
 
 ![Jednotkové vektory ve směru os pootočíme o úhel $\theta$ a výsledek vyjádříme jako lineární kombinaci původních vektorů.](otoceni.png)
@@ -311,6 +317,8 @@ $$
 <!-- YTB pIq92-akbaI -->
    
 # Matice 
+
+https://youtu.be/DY044M_RbVs
 
 ## Matice a jejich lineární kombinace
 
@@ -423,6 +431,8 @@ Výpočet operací s maticemi je nejlepší se naučit při výpočtu konkrétn�
 
 
 # Aplikace maticového součinu
+
+https://youtu.be/4jqBoskZ9Ak
 
 ## Derivace diskrétní funkce
 
@@ -569,6 +579,8 @@ Další informace:
 
 # Matice jako zobrazení
 
+https://youtu.be/7NH8p323zxo
+
 Nyní se na zobrazení pomocí matice podíváme očima geometra a poté očima materiálového inženýra.
 
 
@@ -666,6 +678,8 @@ Na následujícím slidu se naučíme hledat v materiálu "směry brázd".
 
 # Vlastní čísla a vlastní vektory
 
+https://youtu.be/-vYq_TzC6jo
+
 U zobrazování vektorů pomocí maticového násobení nás velice zajímá, které směry se zachovávají, tj. kdy bude obrazem vektoru jeho násobek.
 
 > Definice (vlastní vektor a vlastní hodnota matice). Řekneme, že nenulový vektor $\vec u$ je *vlastním vektorem* matice $A$ příslušným *vlastní hodnotě* $\lambda$, jestliže platí $$A \vec u=\lambda \vec u.$$
@@ -739,6 +753,8 @@ matice vlastní vektory vždy existují. Co se přesně myslí pod pojmem
 
 # Transponovaná matice
 
+https://youtu.be/Toqwz-Oxg-4
+
 > Definice (transponovaná matice).  Buď $A=(a_{ij})\in\mathbb R^{m\times n}$ matice. Matice, která vznikne
   záměnou řádků matice $A$ za sloupce se nazývá *matice     transponovaná k\ matici $A$*. Matici
   transponovanou označujeme symbolem $A^T$. Platí tedy
@@ -793,6 +809,7 @@ s řádkovými vektory a maticí, která má součet čísel v každém řádku 
 
 # Tenzor malých deformací
 
+https://youtu.be/5AMXMQyx3jw
 
 \iffalse 
 
@@ -875,6 +892,8 @@ hydrodynamických a disperzních jevů, kap. 3.3.
 
 
 # Rozložení teploty na tepelně vodivé desce
+
+https://youtu.be/xV46lYgdHSQ
 
 <!-- YTB YJEydfa_mHI -->
 

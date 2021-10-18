@@ -3,8 +3,9 @@
 % duben 2020
 
 
-
 # Inverzní matice
+
+https://youtu.be/udDtFU4pxkY
 
 <!-- YTB odf4e4fJHAU -->
 
@@ -84,6 +85,8 @@ vektory, je ortogonální.
 
 # Matice přechodu 
 
+
+https://youtu.be/uOmV6DGMPbw
 
 <!-- YTB AdbMMzTfR00 -->
 
@@ -223,6 +226,8 @@ Stejným způsobem se transformují i fyzikální veličiny veličiny popisovan�
 \fi
 
 # Praktická aplikace: transformace tenzoru
+
+https://youtu.be/7Oi3ruVNUzI
 
 <div class='obtekat'>
 
@@ -374,6 +379,8 @@ deformací uvažován.
 
 # Role vlastních vektorů při transformaci matic
 
+https://youtu.be/yqjaeqQu0bE
+
 <div class='obtekat'>
 
 ![Eigenvectors (red) do not change direction when a linear transformation (e.g. scaling) is applied to them. Other vectors (yellow) do. Zdroj: http://www.visiondummy.com. ](eigenvectors.png)
@@ -390,7 +397,7 @@ těžké vidět obecný princip, že matice $PD$ má za sloupce násobky
 sloupců matice $P$ s odpovídajícím číslem z hlavní diagonály matice
 $D$. Například pro první sloupec matice $P$ a první číslo v hlavní
 diagonále matice $D$, které označíme $\vec p_1$ a $\lambda_1$, dostáváme
-$$A\vec p_1=\lambda_1p_1,$$
+$$A\vec p_1=\lambda_1 \vec p_1,$$
 tj. (viz předchozí přednášky) $p_1$ je vlastní vektor matice $A$
 příslušný vlastní hodnotě $\lambda_1$. Podobný princip platí pro
 všechny sloupce. Je otázkou, jestli vlastních hodnot a vlastních
@@ -423,7 +430,8 @@ pozitivní odpověď na tuto otázku udávají věty na následujícím slidu.
 
 Matice transformace $P$ z předchozí věty je ortogonální (její
 transponovaná matice je současně její inverzní matice) a její
-determinant je roven $1$ nebo $-1$. Pokud je determinant kladný,
+determinant (veličina, se kterou se seznámíme vzápětí) je roven $1$
+nebo $-1$. Pokud je determinant kladný,
 reprezentuje matice pootočení soustavy souřadnic. Pokud je determinant
 záporný, jedná se o pootočení spojené se zrcadlením jedné osy. Protože
 tento případ většinou z fyzikálních důvodů nepreferujeme, sestavujeme
@@ -449,9 +457,9 @@ Transformace tenzorů je užitečná a důležitá činnosti. Bohužel však vzo
 
 
 
-
-
 # Determinant matice
+
+https://youtu.be/XMyzmN3cq-Q
 
 > Definice (determinant).   Buď $A\in\mathbb R^{n\times n}$ čtvercová matice řádu $n$.   *Determinant matice $A$* je reálné číslo ${\det A}$   přiřazené matici $A$ následujícím způsobem:
 >  
