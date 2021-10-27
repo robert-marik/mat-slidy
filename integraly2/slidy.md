@@ -3,6 +3,8 @@
 % 2019-2020
 
 
+https://youtu.be/nvagZcCVm4k
+
 Naučili jsme se integrovat pomocí neurčitého a určitého
 integrálu. Neurčitý integrál vyjadřuje funkční hodnotu vypočítanou z
 akumulace okamžitých změn. Z principiálních důvodů není možné, pokud
@@ -67,6 +69,8 @@ Pokud se chcete dozvědět více, zkuste Google a heslo "hoop stress".
 # Vlastnosti integrálu
 
 
+https://youtu.be/uyiQAbYZVRU
+
 <div class='obtekat'>
 
 ![Monotonie a aditivia vzhledem k mezi pro určitý integrál.](int_vlastnosti.png)
@@ -105,6 +109,8 @@ $[a,b]$. Vzorec však platí pro libovolné uspořádání mezí podle
 velikosti.
 
 # Střední hodnota
+
+https://youtu.be/8Qc0RI4T5LI
 
 \iffalse
 
@@ -207,6 +213,8 @@ tomuto příkladu vrátíme.
 
 # Výpočet práce pomocí integrálu
 
+https://youtu.be/Z8wDZxap794
+
 ## Příklad: práce při vytahování řetězu
 
 \iffalse
@@ -305,6 +313,9 @@ konstantní a rovno obsahu dna.)
 
 
 # Numerická aproximace určitého integrálu
+
+
+https://youtu.be/7jo_pZJjgRA
 
 Následující myšlenka se si týká výlučně určitého integrálu, ale dále v
 dnešní přednášce si představíme nástroj, který umožní ji použít i pro
@@ -453,6 +464,8 @@ $$\int \ln x\,\mathrm dx=x\ln x-\int \frac 1x x\,\mathrm dx=x\ln x-\int 1\,\math
 
 # Integrace substituční metodou
 
+https://youtu.be/tdK-zog1cv0
+
 Substituční metoda je metoda odvozená z derivace složené funkce
 $$[u(v(x))]'=u'(v(x))v'(x),$$
 což dává
@@ -505,6 +518,8 @@ horní.
 
 
 # Integrál jako funkce meze
+
+https://youtu.be/qUwPJkVBFOQ
 
 Integrál může být součástí definice funkce. Tím se můžeme dostat mimo
 množinu elementárních funkcí a značně tak rozšířit třídu funkcí, se
