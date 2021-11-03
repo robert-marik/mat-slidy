@@ -800,7 +800,7 @@ $$A=
   0 & 4 \\ -4 & 0
 \end{pmatrix}.
 $$
-Tento trik použijeme pro odvození tvaru tenzoru malých deformací, ze zobrazení takto totiž dokážeme odfiltrovat část související s pootočením a část, která s pootočením nesouvisí. Ta druhá nás zajímá, protože popisuje deformaci. O tom, že postup funguje a že dostaneme dvě samostatné transformace, které po skložení v libovolném pořadí dají transformaci původní, nás přesvědčí [přímý výpočet](https://sagecell.sagemath.org/?z=eJylkctugzAQRfeR8g-WsggE0ipkzYJ_YIcQmtquOgE8Fja06dfXvOJKRZWq7kbyPed67AG64Ci1wYZUdYnXKXlM12O432VpC7bDj6AoLtFGuowLT_rEtSwdbN7oPchCxg7sEwQoYE6GXMaMy6amAZjtQJlX6lrgcr_L0-yMQiqL9l4tvcmEC7mEWOBH4tKMUmIL1LvOvDL3Nr08J6cgj_KnqUCTkUEYOo87k07La2AcjPXeEQRPnn-Q4Ap-obOpdiqPNlY4bG7MSGgaUMANOT5sONpg1sE_fJrIuidSuH7EeLnTrB4NLmBsr90Dgm6wnvgX6r8bkQ3sJoWi1oU7EF4Fs-tvKtLAlVxdXyY14W0=&lang=sage&interacts=eJyLjgUAARUAuQ==).
+Tento trik použijeme pro odvození tvaru tenzoru malých deformací, ze zobrazení takto totiž dokážeme odfiltrovat část související s pootočením a část, která s pootočením nesouvisí. Ta druhá nás zajímá, protože popisuje deformaci.
 
 
 > Věta (souvislost transponování matice a maticového součinu). Pro čtvercové matice platí $$(AB)^T=B^T A^T.$$
@@ -894,7 +894,7 @@ matice vytvořené gradienty jednotlivých komponent rychlosti
 proudění. Pro proudění vody viz J. Říha, Matematické modelování
 hydrodynamických a disperzních jevů, kap. 3.3.
 
-[Obrázky a online výpočty.](https://sagecell.sagemath.org/?z=eJydU8tq20AU3Rv8DxdlESmaKLbadBEyBbeFkoU3behGmDCWbuKpRzNiNHIr_UO-oKt8QL7C-bBePeq42FCoQGIe555z7kMnMI3gi2nWSmRglphqBGeFLu-NzUWKoAUYZ1LUEgSUdY7OynRtqn2UHI9OIH7l2cEOuWRjnDUFsaWidESZ4UYKZywtdmTj0aYxtuZ-MmGTBUumw3dK30l0yabRu3bV7-kuGI9mPBck-dNPkojgUXzZYSeX7DyKFx3ils-izk5hSvTp5MMdGeX-LJzdBhdxuxf9wflwcALf6nKDTrXZ97dXsIbCyrLAzbpisHZoa7BYWGxQu-o7QpOjrv7ULGctOhM5gswIIB0FiWWdrkwOOSoqA6qDYrZWqFC8M9h6TsnvRXw2UNR3Q65xlwRVsEeed1EHtun-3667NqQSTDa0SMuVaWMKkVX_mQQtYQ5SQ5LMmPcR1fZp12X0qD99SZk3I87dzBDo5XH7VDpSNVTGl0fU22eCQ9JlybyvR6BN_vKLxstthK0GLOXBvJth3rbPA7RH1n8hKXnmfaIKbJ_2J7FVXVyNR0CPWVrR1Dzx58lkER42IjjbYErBvgygzVu2eXdTvOgJbuafeWGkdn5PxSA1ylh-ajE7ZVDKBvnbSRAWRtUPRh9HCVWsBKdfIAiV1HgMFLzK0Rv2kp2RncgOv1QVHgb0-kPIvVSK39oK98SPxpcr88NfuVz53vUqfu-F82S6CL3ri3YT7IHA110RGWTyQbqSv9m_9ckDSdGkpu7OCicNnx5TsC3pb7sKl7c=&lang=sage&interacts=eJyLjgUAARUAuQ==)
+[Obrázky a online výpočty.](https://sagecell.sagemath.org/?z=eJxtks-OmzAQxu-R8g4We1izOATYpodqXYm2UrWHXNrcEIoc8G6sBRsZJy28wz5BT3mAfQryYB3-iGWVIIHs8W--b2bMDfJd9EvVLxlLkdrxRHJkNJPlk9I5SziSDCmjEi4FYqiscm60SF7UYUqJ-ewGBe86I3apJWpltCpALWGlAcmUHwUzSsNiFJvPjrXSFcWRR7yYRP7w9eHruSviu5_bVb-HM3s-C2nOwPIvjiIXcDdYday3Igs3iDtiQ0O3K6dQJccQ-baFQikOnXBjL4N2z_rAYgi0ISiYdmCbm0DeMrgTKZdGmGo7eAadGHTSk4suq02HjtAaCYmiKCTWd541p7FPbkGFvSWxQtAbpwbQ-bU5lYagQsHwz69cNm-Ao6jTJ9bvK2idn__BgM2R6cPAQhXEehwm3rwNaE9WH0ionVg_4Cqa0_QuWtf4y3yG4FE7zeqKRngdebFzOQL77sgTSMbCRm3fou27u8e4F3hc_6SFEtLgXoqgRGVK01vN01uCSlFz-smznUJl1bOS1ymWFXtG4SewnUxIfg2y3-3gdXrLrpDRZOR32YFfJvT-Q8qTyDK60Qc-Mb-aX-7VH7w3eYath33w1XLWkR871sOy3dgTCGHZDZGgVDwLU9L76SmGGsCqLGCaW82MUNS_5qBb0f--3Dmp&lang=sage&interacts=eJyLjgUAARUAuQ==)
 
 
 # Rozložení teploty na tepelně vodivé desce
@@ -903,7 +903,7 @@ https://youtu.be/xV46lYgdHSQ
 
 <!-- YTB YJEydfa_mHI -->
 
-Na závěr si ukážeme, že pomocí lineární algebry a maticového počtu je možno popsat funkci dvou proměnných popisující rozložení teploty na tepelně vodivé desce. Postup je takový, že budeme sledovat teplotu v referenčních bodech. Požadavek, že teploty v okolních bodech mají odpovídat našim představám o vedení tepla vyjádříme kvantitavivně pomocí vhodné matice.
+Na závěr si ukážeme, že pomocí lineární algebry a maticového počtu je možno popsat funkci dvou proměnných popisující rozložení teploty na tepelně vodivé desce. Postup je takový, že budeme sledovat teplotu v referenčních bodech. Požadavek, že teploty v okolních bodech mají odpovídat našim představám o vedení tepla vyjádříme kvantitativně pomocí vhodné matice.
 
 <div class='obtekat'>
 
@@ -1002,8 +1002,9 @@ hlavní diagonále větší číslo, než je součet zbylých čísel v tomto
 
 > Poznámka (iterační metoda). Soustavu (1) je možno vyřešit iterační metodou. Je možno postupovat intuitivně. Vyjdeme z libovolného odhadu řešení a teplotu v každém bodě budeme opakovaně nahrazovat průměrem teplot v okolních bodech, dokud se hodnoty neustálí. Kdy tento postup funguje a jak se dá zformalizovat si ukážeme později (Jacobiho metoda).
 
-[Online výpočet.](https://sagecell.sagemath.org/?z=eJxljcEKgzAMhu-C75Cb6Ra2WMsGAw_6FAXx0IPbPGhHlS2PvzoYIoaEhD__l1Tl4ObQCzYNU06xWmp-nThOe61VaVKvUMF0YboymWV1moMbp5efOoy2twuYSQ6iQQoQk0XNrqjkJJqkIDE7dHr6DyBWB3us1dlsQc30zx149wF66EeI4qMD1KxuaQIxbDluDi4v0KovMJNFkw==&lang=sage&interacts=eJyLjgUAARUAuQ==)
+[Online výpočet maticově.](https://sagecell.sagemath.org/?z=eJxljcEKgzAMhu-C75Cb6Ra2WMsGAw_6FAXx0IPbPGhHlS2PvzoYIoaEhD__l1Tl4ObQCzYNU06xWmp-nThOe61VaVKvUMF0YboymWV1moMbp5efOoy2twuYSQ6iQQoQk0XNrqjkJJqkIDE7dHr6DyBWB3us1dlsQc30zx149wF66EeI4qMD1KxuaQIxbDluDi4v0KovMJNFkw==&lang=sage&interacts=eJyLjgUAARUAuQ==)
 
+[Online výpočet rovnicemi.](https://sagecell.sagemath.org/?z=eJxdj81qwzAQhO8Gv8NALlJtqPVzKvhhVEdJRM3KyKqr-Om7JiYxWZjDMszsfkW1RbfFtMWih-7ag4ATpji47AcKIDdnt3gKdXWJCQGBkBxdPYTu5Fddgaco6kmoT_shVNforim6KVZKbF3Lndt8BsXlPtyQ_TTGvOf0M8chyznVFCPl7pqnax7uo3V37fGmec--AHv-jheWYVnafvod48pMmFLE2Y0zY2Wf3MCUdTXf4p8Qh4YN5IQ1fie3hsxA8-jP_ucflI1XEg==&lang=sage&interacts=eJyLjgUAARUAuQ==)
 
 
 # Shrnutí, hlavní myšlenky

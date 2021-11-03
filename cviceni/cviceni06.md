@@ -18,7 +18,7 @@ Najděte následující integrály integrováním substituční metodou.
 1. $\int  e^{-ax}\mathrm dx$
 1. $\int \frac x{x^2+1}\mathrm dx$
 1. $\int \sin x\cos^5x\mathrm dx$
-1. $\int \cos x\sqrt{\sin (x)}\mathrm dx$
+1. $\int \cos x\sqrt{\sin x}\mathrm dx$
 
 <!--
 %\item \priklad \frac {\mathop{\mathrm{arctg}} x}{x^2+1}.
@@ -28,6 +28,44 @@ Najděte následující integrály integrováním substituční metodou.
 %\item \priklad \frac{x+1}{x^2+1}.
 %\item \priklad x^2 e^x.
 -->
+
+
+<div class=reseni>
+
+V integrované funkci se snažíme "rozšifrovat" součin složené funkce a
+derivace vnitřní složky. Pokud se to podaří, dáváme substituci
+takovou, že vnitřní složka složené funkce bude novou proměnnou. V
+prvním případě je složenou funkcí exponenciální funkce, která má
+vnitřní složku $x^2$. Derivace funkce $x^2$ je $2x$ a toto hledáme v
+součinu se složenou funkcí. Část s proměnnou $x$ vidíme na začátku
+integrované funkce. Dvojku ve funkci nemáme, ale to je naštěstí jenom
+multiplikativní konstanta s takovou konstantou si dokážeme
+poradit. Viz níže.
+
+1. Integrál vypočteme substitucí $$x^2=t,$$ odkud plyne $$2x\,\mathrm dx=\mathrm dt$$ a $$x\,\mathrm dx=\frac 12 \mathrm dt.$$ S touto substitucí dostáváme 
+$$\int x e^{x^2}\mathrm dx = \frac 12 \int e^t\mathrm dt.$$
+Nyní vypočítáme integrál v proměnné $t$ a odsud
+$$\int x e^{x^2}\mathrm dx = \frac 12 e^t =\frac 12 e^{x^2}+C.$$
+1. Integrál vypočteme substitucí $$-ax=t,$$ odkud plyne $$-a\,\mathrm dx=\mathrm dt$$ a $$\mathrm dx=-\frac 1a \mathrm dt.$$ S touto substitucí dostáváme 
+$$\int  e^{-ax}\mathrm dx = -\frac 1a \int e^t\mathrm dt.$$
+Nyní vypočítáme integrál v proměnné $t$ a odsud
+$$\int e^{-ax}\mathrm dx = -\frac 1a e^t =-\frac 1a e^{-ax}+C.$$
+1. Integrál vypočteme substitucí $$x^2+1=t,$$ odkud plyne $$2x\,\mathrm dx=\mathrm dt$$ a $$x\,\mathrm dx=\frac 12 \mathrm dt.$$ S touto substitucí dostáváme 
+$$\int  \frac{x}{x^2+1}\mathrm dx = \frac 12 \int \frac 1t \mathrm dt.$$
+Nyní vypočítáme integrál v proměnné $t$ a odsud
+$$\int  \frac{x}{x^2+1}\mathrm dx = \frac 12 \ln|t| =\frac 12 \ln(x^2+1)+C.$$
+1. Integrál vypočteme substitucí $$\cos x=t,$$ odkud plyne $$-\sin x\,\mathrm dx=\mathrm dt$$ a $$\sin x\,\mathrm dx=- \mathrm dt.$$ S touto substitucí dostáváme 
+$$\int  \sin x\cos^5 x\,\mathrm dx = - \int t^5 \mathrm dt.$$
+Nyní vypočítáme integrál v proměnné $t$ a odsud
+$$\int  \sin x\cos^5 x\,\mathrm dx  =- \frac 16 t^6 =-\frac 16 \cos^6 x+C.$$
+1. Integrál vypočteme substitucí $$\sin x=t,$$ odkud plyne $$\cos x\,\mathrm dx=\mathrm dt.$$ S touto substitucí dostáváme 
+$$\int  \cos x\sqrt{\sin x}\,\mathrm dx = \int \sqrt t \,\mathrm dt.$$
+Nyní vypočítáme integrál v proměnné $t$ a odsud
+$$\int  \cos x\sqrt{\sin x}\,\mathrm dx  = \frac 23 t^{3/2} = \frac 23 \sin^{3/2} x+C.$$
+
+Kontrola [zde](https://sagecell.sagemath.org/?z=eJwljMEKwjAQRO-F_sPcuolVUfAi9EvESiiJBiGpSdT9fDfmMvvYN8zHJBrMoPrOvcNzsdOFteWVeD6qEZW2RrMg7-tvcxDMPhArvcQsZz6NaKTzKxVqUl1lMCY4-IC2fO47wN18KJPbSdp7MsVKF6gmP-IX9PfqBxQILQY=&lang=sage&interacts=eJyLjgUAARUAuQ==).
+
+</div>
 
 
 
