@@ -2,6 +2,12 @@
 % Robert Mařík
 % 2.4.2019
 
+> **Motivace.**
+>
+> * V předchozích přednáškách jsme se seznámili s derivacemi, s nástroji umožňující převést fyzikální představu o procesech v materiálu do kvantitativní podoby, kdy dokážeme studované jevy kvantifikovat. V praxi však je analytické řešení těchto fyzikálních modelů realizovatelné pouze v nejjednodušších případech. Pro netriviální příklady používáme numerický přístup, který je v mnoha případech nakonec redukován na řešení soustavy rovnic. Tyto soustavy mají typicky obrovské množství rovnic a neznámých (řádově i v jednoduchých aplikacích řádově desetitisíce nebo statisíce rovnic) a proto je nutné mít k dispozici nástroje, umožňující práci s takto obrovskými soustavami rovnic. V této přednášce si představíme nové objekty, matice, se kterými je libovolně velkou soustavu rovnic možno zapsat jako jeden součin tvaru $$AX=B.$$
+> * V úvodní přednášce jsme naformulovali [rovnici vedení tepla](https://user.mendelu.cz/marik/mtk/mat-slidy/derivace_I/#rovnice-veden%C3%AD-tepla-v-1d) jako rovnici, popisující fyzikální podstatu přenosu tepla v materiálu. Tento popis je ve vícerozměrných úlohách nutno zobecnit na dvourozměrný nebo trojrozměrný případ. Potom však u materiálu, který má v různých směrech různé vlastnosti, dochází k tomu, že odezva nemá stejný směr jako podnět. Například u vedení tepla je tok tepla dán směrem poklesu teploty jenom částečně. Vlivem vysoké vodivosti v podélném směru ve srovnání s příčným směrem však je tok tepla odkloněný částečně do podélného směru. Pro popis takového procesu tedy potřebujeme zobrazení, které dokáže změnit nejenom délku, ale i směr vektoru. Toto zobrazení je možné realizovat pomocí matic.
+
+
 https://youtu.be/cPrmTKdk3yk
 
 # Vektory 
@@ -997,4 +1003,24 @@ hlavní diagonále větší číslo, než je součet zbylých čísel v tomto
 > Poznámka (iterační metoda). Soustavu (1) je možno vyřešit iterační metodou. Je možno postupovat intuitivně. Vyjdeme z libovolného odhadu řešení a teplotu v každém bodě budeme opakovaně nahrazovat průměrem teplot v okolních bodech, dokud se hodnoty neustálí. Kdy tento postup funguje a jak se dá zformalizovat si ukážeme později (Jacobiho metoda).
 
 [Online výpočet.](https://sagecell.sagemath.org/?z=eJxljcEKgzAMhu-C75Cb6Ra2WMsGAw_6FAXx0IPbPGhHlS2PvzoYIoaEhD__l1Tl4ObQCzYNU06xWmp-nThOe61VaVKvUMF0YboymWV1moMbp5efOoy2twuYSQ6iQQoQk0XNrqjkJJqkIDE7dHr6DyBWB3us1dlsQc30zx149wF66EeI4qMD1KxuaQIxbDluDi4v0KovMJNFkw==&lang=sage&interacts=eJyLjgUAARUAuQ==)
+
+
+
+# Shrnutí, hlavní myšlenky
+
+\iffalse
+
+<div class='obtekat'>
+
+![A jaká je hlavní message? Zdroj: pixabay.com](../message.jpg)
+
+</div>
+
+
+\fi
+
+* Seznámili jsme se s vektory. S objekty, které umožňují pracovat s veličinami mající kromě numerické hodnoty i směr. 
+* Seznámili jsme se s maticemi, s objekty, které umožní pracovat se zobrazením vektorů na vektory, kdy směr vzoru a obrazu nemusí být (na rozdíl od násobení reálným číslem) stejný. Díky tomu dokážeme popsat reakci materiálu na podněty v případě, kdy má materiál v různých směrech různé vlastnosti. 
+* Matice umožňují kompaktní zápis soustavy libovolného počtu lineárních rovnic jedinou rovnicí $$AX=B.$$
+* V materiálovém inženýrství pomocí matic umíme popsat materiály, mající v různých směrech různé vlastnosti. 
 
