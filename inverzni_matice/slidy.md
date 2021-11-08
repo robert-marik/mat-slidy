@@ -1,6 +1,11 @@
 % Inverzní matice, determinanty
 % Robert Mařík
-% duben 2020
+% 2020-2021
+
+> **Motivace**.
+>
+> * Chování libovolného systému nezávisí na souřadné soustavě, ve které tento systém popisujeme. Opravdu, dřevo neví, jak jsme si zvolili osy  soustavy souřadnic a ani, za používáme pravoúhlou soustavu či jinou, pravotočivou či levotočivou. Vhodná volba souřadné soustavy neovlivní chování systému, ale může značně usnadnit výpočty. Proto například při studiu obdélníkového objektu volíme osy ve směru hran. Proto například při studiu dřeva volíme souřadné osy v anatomických směrech dřeva. Tyto dv požadavky jsou částečnně proti sobě v případě, že studujeme obdélníkový materiál s hranami jdoucími jiným směrem, než jsou anatomické směry dřeva. Naučíme se s tímto probléme vypořádat. Naučíme se používat matice k přechodu mezi souřadnými soustavami. Naučíme se transformovat fyzikální vlastnosti popsané maticemi z jedné soustavy do druhé. 
+> * Ukázali jsme si, že soustavu lineárních rovnic je možné zapsat pomocí maticového násobení ve tvaru $AX=B$. Pokud by veličiny v této rovnici byla reálná čísla, řešitelnost je značně ovlivněna nulovostí či nenulovostí veličiny $A$. Ukážeme si zobecnění této vlastnosti i pro matice a soustavy rovnic. K tomu si představíme nový pojem - determinant matice.
 
 
 # Inverzní matice
@@ -51,9 +56,10 @@ Inverzní matice k součinu dvou matic je součinem jednotlivých inverzních ma
 
 </div>
 
-\fi
 
-**Příklad.** Pomocí matic a jejich součinu je možné zapsat libovolnou permutaci konečněprvkové množiny. Známým permutačním hlavolamem je Rubikova kostka. Na ní snadno vidíme, že pokud kostku zamícháme ze složeného stavu tahem v horní stěně a poté v pravé stěně, pro opětovné složení musíme vracet tahy v opačném pořadí, tj. nejdřív vrátit tah v pravé stěně a poté ve stěně horní. Pěkně to jde vidět na [následující animaci](https://alg.cubing.net/?alg=R_U_%0A%2F%2F_dva_tahy,_ka%C5%BEd%C3%BD_je_mo%C5%BEn%C3%A9_reprezentovat_matic%C3%AD_permutace_%0AU-_R-_%0A%2F%2F_vr%C3%A1cen%C3%AD_tah%C5%AF_v_opa%C4%8Dn%C3%A9m_po%C5%99ad%C3%AD_slo%C5%BE%C3%AD_kostku_zp%C4%9Bt), kterou můžete spustit nebo přehrávat po jednotlivých krocích.
+**Příklad.** Pomocí matic a jejich součinu je možné zapsat libovolnou permutaci konečněprvkové množiny. Známým permutačním hlavolamem je Rubikova kostka. Na ní snadno vidíme, že pokud kostku zamícháme ze složeného stavu tahem v horní stěně a poté v pravé stěně, pro opětovné složení musíme vracet tahy v opačném pořadí, tj. nejdřív vrátit tah v pravé stěně a poté ve stěně horní. Pěkně to jde vidět na [následující animaci](https://alg.cubing.net/?alg=R_U_%0A%2F%2F_dva_tahy,_ka%C5%BEd%C3%BD_je_mo%C5%BEn%C3%A9_reprezentovat_matic%C3%AD_permutace_%0AU-_R-_%0A%2F%2F_vr%C3%A1cen%C3%AD_tah%C5%AF_v_opa%C4%8Dn%C3%A9m_po%C5%99ad%C3%AD_slo%C5%BE%C3%AD_kostku_zp%C4%9Bt), kterou můžete spustit nebo přehrávat po jednotlivých krocích. Na druhou stranu, tato vlastnost se dá využít k vyřešení Rubikovy kostky naprosto bez algoritmů, protože při vhodně zvolených tazích ovlivníme jenom málo kostiček, například [jenom tři](https://alg.cubing.net/?alg=R-_D-_R___%2F%2F_TAH1:_roh_z_horn%C3%AD_steny_presuneme_dolu%0AU___%2F%2F_TAH_2:_pootoceni_horni_steny%0AR-_D_R__%2F%2F_vratime_TAH1%0AU-_%2F%2F_vratime_TAH2). 
+
+\fi
 
 
 ## Inverzní matice k matici popisující rotaci v rovině

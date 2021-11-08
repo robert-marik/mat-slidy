@@ -61,8 +61,6 @@ h\,\mathrm dh&=k\, \mathrm dt\\
 \end{aligned}
 $$
 
-
-
 </div> 
 
 
@@ -101,7 +99,7 @@ $$\frac {\mathrm dh}{\mathrm dt}=-\frac{k_1}{k_2}\sqrt h$$
 a pro $k=\frac{k_1}{k_2}$ má model tvar
 $$\frac {\mathrm dh}{\mathrm dt}=-k\sqrt h.$$
 
-Pro kužel platí $V=k_3h^3$ (díky podobnosti je objem přímo úměrný třetí mocnině libovolného délkového parametru) a proto
+Pro kužel platí díky konstantnímu úhlu u vrcholu vztah $V=k_3h^3$ (díky podobnosti je objem přímo úměrný třetí mocnině libovolného délkového parametru) a proto
 $\frac {\mathrm dV}{\mathrm dt}=k_3 \times 3h^2 \frac {\mathrm dh}{\mathrm dt}$.
 Odsud
 $$3k_3 h^2 \frac {\mathrm dh}{\mathrm dt}=\frac {\mathrm dV}{\mathrm dt}=-k_1\sqrt h,$$

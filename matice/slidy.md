@@ -2,7 +2,7 @@
 % Robert Mařík
 % 2.4.2019
 
-> **Motivace.**
+> **Motivace**.
 >
 > * V předchozích přednáškách jsme se seznámili s derivacemi, s nástroji umožňující převést fyzikální představu o procesech v materiálu do kvantitativní podoby, kdy dokážeme studované jevy kvantifikovat. V praxi však je analytické řešení těchto fyzikálních modelů realizovatelné pouze v nejjednodušších případech. Pro netriviální příklady používáme numerický přístup, který je v mnoha případech nakonec redukován na řešení soustavy rovnic. Tyto soustavy mají typicky obrovské množství rovnic a neznámých (řádově i v jednoduchých aplikacích řádově desetitisíce nebo statisíce rovnic) a proto je nutné mít k dispozici nástroje, umožňující práci s takto obrovskými soustavami rovnic. V této přednášce si představíme nové objekty, matice, se kterými je libovolně velkou soustavu rovnic možno zapsat jako jeden součin tvaru $$AX=B.$$
 > * V úvodní přednášce jsme naformulovali [rovnici vedení tepla](https://user.mendelu.cz/marik/mtk/mat-slidy/derivace_I/#rovnice-veden%C3%AD-tepla-v-1d) jako rovnici, popisující fyzikální podstatu přenosu tepla v materiálu. Tento popis je ve vícerozměrných úlohách nutno zobecnit na dvourozměrný nebo trojrozměrný případ. Potom však u materiálu, který má v různých směrech různé vlastnosti, dochází k tomu, že odezva nemá stejný směr jako podnět. Například u vedení tepla je tok tepla dán směrem poklesu teploty jenom částečně. Vlivem vysoké vodivosti v podélném směru ve srovnání s příčným směrem však je tok tepla odkloněný částečně do podélného směru. Pro popis takového procesu tedy potřebujeme zobrazení, které dokáže změnit nejenom délku, ale i směr vektoru. Toto zobrazení je možné realizovat pomocí matic.
