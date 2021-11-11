@@ -1,0 +1,44 @@
+\documentclass[12pt]{article}
+
+\input ../talks.tex
+
+\begin{document}
+
+
+\section*{Uvod}
+
+Dobrý den, v této pøedníá¹ce si spojíme dovednosti získané v kapitolách vìnovaných derivacícm a v kapitolách vìnovaným lineární algebøe. Derivaci jsme poznali jako velièinu, která umo¾ní kvantifikovat, co se dìje ve studovaném systému nebo materiálu z hlediska prostorových nebo èasových zmìn velièin. To je
+dùle¾ité, proto¾e pøímo toto je vyjadøovací jazyk pøirozený pro popis pøírodních dìjù a technickcýh úloh. Lineární algebra nám zase dává do rukou nástroj, jak pracovat s velièinami, které mají smìr v rovinì èi prostoru. To je také dùle¾ité, proto¾e pøírodní materiály a útvary mají vnitøní strukuturu, která jim dodává jiné vlastnosti v rùzných smìrech. To je skvìlé pro pøípadné technické vyu¾ití, ale pro matematický popis to je noèní mùra. Mù¾eme ji odstranit spojením modelù zalo¾ených na derivacích s maticovým aparátem. Tím vznikne velmi silný nástroj, umo¾òující popsat jednotným zpùsobem libovolné transportní dìje, a» ji¾ transport energie nebo hmoty. O toto se budeme sna¾it v dne¹ní pøedná¹ce a naformulujeme si framework umo¾òující jednotným zpùsobem popsat vedení tepla, vedení vody v porézním materiálu jako je døevo nebo pùda, transport energie èi vzduchu z atmosféøe, transport vody v øeèi¹ti a øadu dal¹ích transportních jevù.
+
+
+
+\subsection{Transporní jevy}
+
+Budeme se zabývat pøípadem, kdy se stav studovaného materiálu èi objektu dá vyjádøit nìjakou vhodnoou velièinou. Tuto velièinu budeme nazývat stavová velièina. Napøíklad pøi studiu transportu vlhkostního pole v materiálu je vhodnou stavovou velièinou hustota mno¾ství vody v daném místì materiálu, tj. podíl mno¾ství vody v daném místì a objemu, ve kterém je toto mno¾ství vody soustøedìno. Pøi transportu energie je mo¾nou stavovou velièinou hustota vnitøní energie, ale proto¾e je tato velièina obtí¾nì mìøitelná, pou¾íváme jinou velièinu, teplotu. Obì velièiny jsou ekvivelentní ve smyslu, ¾e pro daný materiál jsou jedna druhé pøímo úmìrné. 
+
+Stavová velièina se mù¾e v daném místì kumulovat a mù¾e se pøená¹et prostøedím. Napøíkald se mù¾e zvy¹ovat vlhkost v daném místì a difuzí se mohou molekuly vody v materiálu pøemis»ovat. Podobnì, dané místo se mù¾e pøi sledování transferu energie ohøívat a energie se mù¾e ve formì tepla pøedávat z jendoho místa v materiálu do jiného. Nìkdy stavová velièina mù¾e vznikat nebo zanikat. Tady si situaci zjednodu¹íme: abychom nemuseli samostatnì uva¾ovat zdroje a spotøebièe, budeme spotøebièe uva¾ovat jako zdroje se zápornou vydatností. Podobnì, abychom nemuseli samostatnì uva¾ovat pøítok a odtok, budeme pøítok uva¾ovat jako zápornì vzatý odtok. Potom má smysl bilance, vyjadøující, ¾e pøírùstek mno¾ství velièiny je souètem pøírùstku ze zdrojù a pøírùstku zpùsobeného tokem. Pøírùstek mno¾ství je derivace podle èasu, zdroje jsou v definici materiálu a jediné co musíme do této bilance dodat, abychom mìli pou¾itelný vztah ve formì kvantitativního modelu, je velièina mìøící pøírùstek zpùsobený tokem. Tedy bilanci mezi pøítokem a odtokem do daného místa. Musíme neprve tedy kvantifikovat tok stavové velièiny daným místem a poté posoudit bilanci mezi pøítokem a odtokem. 
+
+\subsection{Konstitutivní zákony}
+
+Nejprve se budeme vìnovat tomu, jak vùbec vzniká tok, pøená¹ející stavovou velièinu. Tento tok je iniciován hnacím podnìtem, kterým je v naprosté vìt¹inì pøípadù právì nerovnomìrnost v prostorovém rozlo¾ení stavové velièiny. Napøíklad pokud je v jednom místì materiálu vy¹¹í teplota, teèe teplo z tohoto místa do místa chladnìj¹ího. Pokud je v jednom místì vy¹¹í vlhkost, dostávají se difuzí molekuly vody z míst s vysokou vlhkostí do míst s ni¾¹í vlhkostí.
+
+Nerovnomìrnost v prostorovém rozlo¾ení charakterizuje gradient. V ustáleném stavu je pro ¹iroké rozmezí fyzikálních problémù závislost intenzity toku na gradientu lineární. A proto¾e nulovému gradientu (nulovému stimulu) odpovídá nulový tok (nulová odezva), bude tato lineární funkce pøímou úmìrností. A proto¾e musíme zohledòovat vektorový charakter podnìtu i odezvy, bude konstanta úmìrnosti mít maticový charakter. Jedinì tak je toti¾ mo¾né modelovat pøípady, kdy smìr podnìtu a odezvy není stejný.
+
+Známými pøípady jsou Fickùv zákon pro difuzi, kdy je difuzní tok úmìrný poklesu koncentrace, tj. zápornì vzatému gradientu koncentrace. Tento zákon vyu¾ijeme napøíklad pèi modelování su¹ení døeva.
+
+Dal¹ím podobným pøíkladem je Darcyho zákon po tok podzemní vody, kdy je tok úmìrný poklesu tlaku, tj. zápornì vzatému gradientu tlaku. Proto¾e tlak je obtí¾nì mìøitelná velièina, pro praktické pou¾ití pou¾íváme nìkdy jinou velièiny, napøíklad piezometrickou hladinu, tj. vý¹ku, do které by vystoupala voda, kdyby se v daném místì vyvrtala studna.
+
+Tøetím zákonem, stejným ale pro jiný dìj, je Fourierùv zákon. Týká se vedení tepla a udává, ¾e tok tepla je úmìrný poklesu teploty, tj. zápornì vzatému gradientu teploty.
+
+Vý¹e uvedené zákony byly odvozeny poprvé pro jednorozmìrné pøípady, kdy konstanty úmìrnosti byla èísla. Pøi studiu meteriálù s jinými vlastnostmi v jiných smìrech v¹ak je nutné pou¾ít moderní formulaci, kdy konstanty úmìrnosti jsou matice. Tyto matice navíc splòují nìkteré dal¹í po¾adavky, vyjadøující fyzikální relevantnost úlohy, a proto se jim v aplikacích øíká tenzory a uvedené konstituèní zákony se nazývají tenzorové.
+
+Jak tedy vypadá takový tenzorový konstituèní zákon po rozpesání do slo¾ek? Gradient je parciální derivace podle prostorových souøadnic. Ve trojrozmìrném pøípadì mají gradient i tok tøi komponenty a pmìrnost je v tenzorovém pøípadì zprostøedkována 3$\times$3 maticí. V nejobecnìj¹ím pøípadì to dopadne tak jak vidíme ve videu a není dal¹í prostor pro zjednodu¹ení. Snad kromì toho, ¾e matice bývá v naprosté vìt¹inì pøípadù symetrická a neáme tedy devìt ale jenom ¹est nezávislých prvkù tenzoru, ¹est materiálových konstant. Pokud v¹ak zvolíme osy ve vlastních smìrech materiálu, tj. ve smìrech kdy podnìt a odezva mají stejný tvar, je matice diagonální a i ve slo¾kách se rovnice znaènì redukují. Na ka¾dé pravé stranì zùstane jenom jeden èlen. Matice má jenom tøi materiálové konstanty. Pokud by navíc byl materiál iztropní, situace by se dále zjednodu¹ila. V tomto pøípadì by v¹echny tøi konstanty byly stejné a mìli bychom tedy jenom jednu materiálovou konstantu.
+
+\subsection{Divergence}
+
+
+
+
+
+
+\end{document}
