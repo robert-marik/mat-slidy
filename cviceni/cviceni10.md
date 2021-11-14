@@ -380,7 +380,7 @@ což je podle očekávání hodnota mezi menší a větší vlastní hodnotou, k
 # Transformace tenzoru pootočením
 
 
-Uvažujme tyč ve směru osy $x$ namáhanou v ose tahem, při kterém vzniká jednotkové tahové napětí. Tyč je slepena spojem, který svírá s kolmicí na osu úhel $\theta$. (Nakreslete si obrázek.)
+Uvažujme tyč ve směru osy $x$ namáhanou v ose tahem, při kterém vzniká jednotkové tahové napětí. Tyč je slepena spojem, který svírá s kolmicí na osu úhel $\theta$. (Nakreslete si obrázek.) Normálovým napětím rozumíme napětí ve směru kolmém na spoj.
 
 1. Ukažte, že pro nenulový úhel $\theta$ je normálové napětí ve
   spoji menší, než by odpovídalo normálovém napětí pro spoj kolmý na osu tyče.
@@ -421,9 +421,15 @@ $$
 \end{pmatrix}
 \end{aligned}
 $$
-a normálová a smyková složka napětí jsou po řadě $\cos^2\theta$ a $\sin\theta \cos\theta = \frac 12 \sin(2\theta).$
+a normálová a smyková složka napětí jsou po řadě $\cos^2\theta$ a $-\sin\theta \cos\theta = -\frac 12 \sin(2\theta).$
 
 Odsud již dostaneme odpovědi na všechny uvedené otázky.
+
+1. Normálové napětí udává funkce $$\cos^2\theta.$$ Ta je rovna jedné pro $\theta=0$, tj. pro nulový sklon spoje. Pro nenulový sklon je menší než jedna (uvažujeme sklon maximálně do 90 stupňů).
+1. Derivace normálového napětí pro $\theta$ z intervalu od $0$ do $\frac \pi2$ je $$\frac{\mathrm d}{\mathrm d\theta}\cos^2{\theta}=2\cos\theta (-\sin\theta)=-\sin(2\theta)<0.$$ Záporná derivace značí klesající funkci. 
+1. Pro $\theta=\frac \pi 2$ by normálové napětí bylo nulové a smykové také nulové. Jednalo by se vlastně o podélně spojené kusy materiálu a při uvedeném namáhání by bylo jedno, jestli jsou slepené nebo ne. 
+1. Smykové namáhání je prvek v matici mimo hlavní diagonálu. V našem případě $-\frac 12 \sin(2\theta)$. Smykové namáhání je maximální, pokud má tato funkce maximum nebo minimum. Takový extrém je pro $2\theta=\frac \pi 2$ tj. pro $\theta = \frac\pi4.$ Maximální smykové namáhání je pro spoj skloněný pod úhlem 45 stupňů.
+1. Nezáleží. Změnou znaménka u úhlu $\theta$ se napětí ve směru kolmo na spoj ani podél spoje nemění, funkce $\cos^2\theta$ i $\sin^2\theta$ jsou obě sudé. U smykového napětí se mění znaménko, ale to jenom znamená namáhání v opačném smyslu (Pokud si na stěnu materiálu nakreslíme čtvereček s jednou stranou podél spoje a s druhou stranou kolmo na spoj, podle směru sklonu spoje máme dva zrcadlové případy, jak se tento čtvereček deformuje. Tomu odpovídá opačné znaménko smykové derivace.)
 
 </div>
 

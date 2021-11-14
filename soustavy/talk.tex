@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+
+\input ../talks.tex
+
+\begin{document}
+
+\section{Motivace}
+
+Dobrý den, vítejte u přednášky věnované soustavám lineárních rovnic. Nejprve trochu motivace, aby nám bylo jasné, proč tyto partie potřebujeme. 
+
+Pro popis přírodních dějů je ideální jazyk derivací, protože umožňuje pracovat s okamžitými rychlostmi změn fyzikálních veličin. Pokud mechanismus děje známe, je snadné naformulovat pomocí derivací příslušný matematický model, poté ovšem přijde fáze hledání řešení. Tady málokdy vystačíme s analytickými metodami, které jsme si ukázali v přednášce věnované diferenciálním rovnicím. Často se uchylujeme k numerickému řešení. V naprosté většině případů se toto řešení redukuje na řešení soustav lineárních rovnic. Tyto soustavy ovšem bývají obrovské, řádově obsahující tisíce rovnic a neznámých a proto středoškolské metody nejsou použitelné (například nejsou dostatečně rychlé, nebo mohou být numericky nestabilní). Z tohoto důvodu je nutné se problematice soustav rovnic věnovat podrobněji. 
+
+Další uplatnění soustavy lineárních rovnic je nalezení vlastních směrů matice. To je zásadní pro zjednodušení popisu anizotropního materiálu, protože díky tomu, že matice má v soustavě respektující vlastní směry diagonální tvar, se redukuje počet materiálových konstant. Hledání těchto směrů je vlastně řešení soustavy lineárních rovnic. 
+
+Soustavy lineárních rovnic, minimálně v podobě dvou rovnic o dvou neznámých, zná většina studentů ze střední školy. Víme, že soustava může mít právě jedno řešení, ale také nekonečně mnoho řešení. Obecně nedokážeme říci dopředu, jak to s řešitelností vypadá. V našich dvou konkrétních situacích je však situace jednodušší. Při hledání vlastních vektorů je jasné, že řešení je nekonečně mnoho, protože každý násobek vlastního vektoru je také vlastním vektorem. Důležitý je jenom směr a vlastně i proto můžeme místo vlastní vektory říkat vlastní směry. To znamená, že jedna rovnice je v soustavě vlastně navíc a nemusíme ji uvažovat. Například soustava dvou rovnic vypadá v tomto případě tak, že jedna rovnice je násobkem druhé a druhá rovnice je tedy zbytečná. 
+
+Při aproximaci řešení diferenciální rovnice je zase zpravidla jisté, že soustava má právě jedno řešení. Proto je možné použít nějakou numerickou metodu, která dokáže aproximovat řešení. V některých případech, jako například při numerickém řešení Eulerovou metodou, je dokonce soustava tak jednoduchá, že umožňuje postupný výpočet funkčních hodnot v bodech, co nás zajímají. Pokud řešíme složitější úlohu, například okrajovou úlohu modelující deformaci nosníku nebo úlohu na rozložení tepla v tepelně namáhaném materiálu, už se bez řešení plnohodnotných soustav lineárních rovnice neobejdeme. 
+ 
+
+\section{Soustavy lineárních rovnic}
+
+Soustavy lienárních rovnic můžeme nahlížet z několika úhlů pohledu. Buď pracujeme opravdu s příslušným počtem rovnic a příslušným počtem neznámých. Už od čtyř rovnic a neznámých je všaksituace nepřehledná a proto pracujeme buď s vektorovým vyjádřením, kdy každá rovnice vlastně značí výpočet v jedné komponentě vektoru a hledání řešení soustavy je vlastně hledání koeficientů do lineární kombinace, kdy vektoru z pravých stran soustavy vyjadřujeme jako lineární kombinaci vektorů z levých stran. Na příkladu soustavy dvou rovnic a dvou neznámých toto máte na obrazovce. Dalším formálním zkrácením je zápis vektorového tvaru pomocí maticového součinu. Pokud tento maticový součin chápeme jako zobrazení vektorů, poté při řešení soustavy vlastně pro známé zobrazení a pro známý obraz hledáme vzor. 
+
+Kromě klasického zápisu tedy máme i vektorovou a maticovou formulaci. Na obrazovce vidíme konkrétní příklad a níže vidíme obecnou formulaci soustavy $m$ lineárních rovnic o $n$ neznámých. Za zmínku ještě stojí, že někdy kromě matice soustavy pracujeme s rozšířenou maticí soustavy, kdy za oddělovačem jsou i pravé strany soustavy. Za další zmínu stojí i to, že soustava vypadá v maticové formě obzvlášť jednoduše, $$AX=B.$$ 
+
+\section{Využití inverzní matice \dots}
+
+Pokud jsou $a$ a $b$ reálná čísla a $x$ neznámá v rovnici $$ax=b,$$ je možné za předpokladu, že $a$ není nula, rovnici vydělit a najít neznámou ve tvaru $$x=\frac ba.$$ Ukážeme si, že inverzní matice umožné podobnou manipulaci se soustavou rovnic zapsanou v maticovém tvaru $$AX=B.$$
+Stačí soustavu z levé strany vynásobit inverzní maticí $A^{-1}$, pokud tato matice existuje. Potom máme $$A^{-1}AX=A^{-1}B$$ a odsud 
+$$X=A^{-1}B, $$ protože na lecé straně je součin matice a matice k ní inverzní roven jednotkové matici, která je neutrálním prvkem vzhledem k násobení a její součin s maticí $X$ je zase matice $X$.
+
+Úloha najít inverzní matici, abychom měli čím násobit, je bohužel obecně obtížná a numericky špatně podmíněná. Existuje jenom několik snadných případů. S jedním z nich jsme se setkali na minulé přednášce v souvislosti s rotací, kdy inverzní matice popisuje rotaci o stejný úhel na opačnou stranu. Jiným případem, kdy je situace snadná, je diagonální matice. To není žádné překvapení, diagonální matice vede na soustavu, kde jsou vlastně každá rovnice nezávislá a řešení takové soustavy je opravdu snadné. Obecně najdeme inverzní matici k diagonální matici tak, že uvažujeme převrácenou hodnotu čísel v diagonále. 
+
+Pokusme se využít schopnosti najít inverzi k diagonální matici pro řešení soustavy. Rozdělíme matici soustavy na součet diagonální matice a toho, co zbude. Poté roznásobíme závorku a necháme na levé straně jenom součin diagonální matice a neznámé. Protože k diagonální matici je možné určit inverzní matici, můžeme vynásobením inverzní maticí z levé strany osamostatnit nalevo neznámou $X$. Vadou na kráse tohoto postupu je, že neznámé $X$ je nejenom nalevo, ale i napravo. Nicméně z diferenciálního počtu funkce jedné proměnné víme, že v takových případech může být schůdné najít řešení postupnými iteracemi. Nabízí se iterační vzorec $$X_{k+1}=D^{-1}(B-TX_k).$$ Je otázka, zda tento postup konverguje. Odpověď je, že za určitých podmínek ano. Například jednou z takových podmínek je že matice je řádkově ostře diagonálně dominantní, tedy že pokud uvažujeme koeficienty všechny v absolutní hodnotě, je koeficient v hlavní diagonále větší než součet ostatních koeficientů v tomto řádku. V takovém případě se opravdu opakováním uvedeného výpočtu dostáváme stále blíže a blíže k numerickému řešení soustavy rovnic a můžeme tak soustavu vyřešit numericky s dostatečnou přesností. 
+
+Připomeňme si, že s touto metodou řešení jsme se vlastně již setkali v jedné z předchozích přednášek. Soustava definující rozložení teploty v tepelně vodivé desce je řešitelná postupnými iteracemi, pokud se v každé iteraci nahradí teplota v bodě průměrem okolních teplot.
+
+\section{Hodnost}
+
+V předchozím jsme si ukázali metodu řešení použitelnou v případě, že soustava má právě jedno řešení a stačí nám numerická aproximace. V dalším se budeme věnovat univerzální metodě. Ta spočívá v tom, že postupně eliminujeme neznámé tak, aby další rovnice obsahovaly stále méně neznámých. To znamená, že další rovnice mají stále více nulových koeficientů. Pro přehlednost budeme výpočet řídit tak, že tyto nulové koeficienty budou na začátku. Tím také pěkně uvidíme, které rovnice jsou v soustavě podstatné a které jsou navíc v tom smyslu, že neobsahují nic více než informace obsažené v ostatních rovnicích. To vede na pojmy hodnost matice a schodovitý tvar, které si představíme nyní. 
+
+Hodnost matice je maximální počet lineárně nezávislých řádků matice. Pokud má matice na každém nenulovém řádku na začátku více nul než na řádku předchozím a případné řádky ze samých nul jsou na konci, říkáme, že tato matice je ve schodovitém tvaru. Schodovitý tvar matice je velmi výhodný, protože z něj vidíme hodnost. Hodnost matice ve schodovitém tvaru je počet nenulových řádků matice a pokud soustava má matici soustavy ve schodovitém tvaru, dokážeme postupně dopočítávat jednotlivé neznámé. 
+
+Vzhledem k výše uvedenému by se vyplatilo mít možnost převést soustavu rovnic na soustavu, která má stejné řešení a matici má ve schodovitém tvaru. To je opravdu možné a máme k dispozici sadu řádkových operací, které umožní převést matici do schodovitého tvaru a přitom nemění hodnost matice, nebo v případě soustavy nemění množinu řešení soustavy. 
+
+Pokud pracujeme s rozšířenou maticí soustavy a převedeme ji operacemi neměnícími množinu řešení na schodovitý tvar, 
+
+\end{document}
