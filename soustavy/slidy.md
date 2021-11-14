@@ -1,6 +1,11 @@
 % Soustavy lineárních rovnic
 % Robert Mařík
-% duben 2020, říjen 2020
+% 2020-2021
+
+> **Motivace**.
+>
+> * Pro popis přírodních dějů je ideální jazyk derivací, protože umožňuje pracovat s okamžitými rychlostmi změn fyzikálních veličin. Pokud mechanismus děje známe, je snadné naformulovat pomocí derivací příslušný matematický model, poté ovšem přijde fáze řešení. Tady málokdy vystačíme s analytickými metodami, které jsme si ukázali v přednášce věnované diferenciálním rovnicím. Často se uchylujeme k numerickému řešení. V naprosté většině případů se toto řešení redukuje na řešení soustav lineárních rovnic. Tyto soustavy ovšem bývají obrovské, řádově obsahující tisíce rovnic a neznámých a proto středoškolské metody nejsou použitelné (například nejsou dostatečně rychlé, nebo mohou být numericky nestabilní). Z tohoto důvodu je nutné se problematice soustav rovnic věnovat podrobněji. 
+> * Nalezení vlastních směrů matice je zásadní pro zjednodušení popisu anizotropního materiálu, protože díky tomu, že matice má v soustavě respektující vlastní směry diagonální tvar, se redukuje počet materiálových konstant. Hledání těchto směrů je vlastně řešení soustavy lineárních rovnic. Situace je relativně jednoduchá, protože soustava má dimenzi dva nebo tři a k tomu nekonečně mnoho řešení, což výpočty urychluje. (Například ve dvourozměrném případě to znamená, že jedna rovnice je násobkem druhé a nemusíme ji uvažovat.)
 
 
 # Varianty zápisu soustavy lineárních rovnic

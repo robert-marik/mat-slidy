@@ -1,6 +1,8 @@
 % Vektorová pole, tok, zákony zachování
 % Robert Mařík
-% 2019-2020
+% 2019-2021
+
+https://youtu.be/DonzhFhcyQ4
 
 # Připomenutí derivací
 
@@ -34,6 +36,8 @@ Pro úsporu místa jej někdy píšeme v transponovaném tvaru
 $$\nabla f =\left(\frac{\partial f}{\partial x},\frac{\partial f}{\partial y},\frac{\partial f}{\partial z}\right)^T.$$ Gradient je vektor, který má směr odpovídající směru nejrychlejšího růstu skalární veličiny a velikost odpovídá změně veličiny na jednotku délky.
 
 # Transportní jevy
+
+https://youtu.be/ULoUeHincbM
 
 \iffalse 
 
@@ -89,6 +93,8 @@ fyzikální materiálovou konstantou. Ještě se musíme naučit měřit intenzi
 
 
 # Tok a gradient v konstitutivních zákonech
+
+https://youtu.be/xUhAudBfGLo 
 
 > Poznámka (konstitutivní zákony). V aplikacích často formulujeme
 zákony nebo vztahy mezi fyzikálními veličinami specifickými pro danou látku nebo materiál a udávají odezvu tohoto materiálu na externí stimul. Tyto zákony se nazývají *konstitutivní zákony* a formulujeme je pomocí gradientu a toku vektorového pole. Viz též [Wikipedie](https://en.wikipedia.org/wiki/Constitutive_equation).
