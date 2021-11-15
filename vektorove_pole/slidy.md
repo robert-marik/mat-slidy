@@ -337,6 +337,7 @@ $\vec j=-k\nabla u$, kde $k$ je konstanta a vektory toku a gradientu mají opač
 
 # Divergence
 
+https://youtu.be/wrYpaPerg3M
 
 \iffalse
 
@@ -406,9 +407,13 @@ nezřídlové. Absence zdrojů magnetického pole se projevuje tak, že rozříz
 
 # Výpočet gradientu a divergence
 
+https://youtu.be/UzT_PDj5ukY
+
 Viz přednáška. 
 
 # Rovnice kontinuity
+
+https://youtu.be/_iHeE-9DJrA
 
 \iffalse 
 
@@ -526,6 +531,8 @@ průřezem.
 
 
 # Difuzní rovnice
+
+https://youtu.be/MH8IzenZZCo
 
 Difuzní rovnice je rovnice kontiuity s dosazeným konstitučním vztahem
 pro tok.  Použijeme-li pro kvantifikaci souvislosti toku a gradientu
@@ -704,6 +711,7 @@ $$ {S_S\frac{\partial h}{\partial t}=  \sigma + \nabla\cdot \bigl(kh\nabla h\big
 
 # Rovnice vedení tepla ve 2D v různých podmínkách
 
+https://youtu.be/5hy6lB1O4KQ
 
 
 \iffalse
@@ -785,6 +793,8 @@ a pokud máte před sebou podobnou rovnici, ve které některý člen chybí, zn
 
 
 # Shrnutí, hlavní myšlenky
+
+https://youtu.be/TjyB3kP2uXE
 
 \iffalse
 
