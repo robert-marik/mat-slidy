@@ -37,12 +37,16 @@ Připomeňme si, že s touto metodou řešení jsme se vlastně již setkali v j
 
 \section{Hodnost}
 
-V předchozím jsme si ukázali metodu řešení použitelnou v případě, že soustava má právě jedno řešení a stačí nám numerická aproximace. V dalším se budeme věnovat univerzální metodě. Ta spočívá v tom, že postupně eliminujeme neznámé tak, aby další rovnice obsahovaly stále méně neznámých. To znamená, že další rovnice mají stále více nulových koeficientů. Pro přehlednost budeme výpočet řídit tak, že tyto nulové koeficienty budou na začátku. Tím také pěkně uvidíme, které rovnice jsou v soustavě podstatné a které jsou navíc v tom smyslu, že neobsahují nic více než informace obsažené v ostatních rovnicích. To vede na pojmy hodnost matice a schodovitý tvar, které si představíme nyní. 
+V předchozím jsme si ukázali metodu řešení použitelnou v případě, že soustava má právě jedno řešení a stačí nám numerická aproximace. V dalším se budeme věnovat univerzálnější metodě, která umožní odhalit soustavy nemající žádné řešení nebo umožní popsat množinu všech řešení v případě nekonečně mnoha řešení. Tato metoda spočívá v tom, že postupně eliminujeme neznámé tak, aby další rovnice obsahovaly stále méně neznámých. To znamená, že další rovnice mají stále více nulových koeficientů. Pro přehlednost budeme výpočet řídit tak, že tyto nulové koeficienty budou na začátku. Tím také pěkně uvidíme, které rovnice jsou v soustavě podstatné a které jsou navíc v tom smyslu, že neobsahují nic více než informace obsažené v ostatních rovnicích. To vede na pojmy hodnost matice a schodovitý tvar, které si představíme nyní. 
 
 Hodnost matice je maximální počet lineárně nezávislých řádků matice. Pokud má matice na každém nenulovém řádku na začátku více nul než na řádku předchozím a případné řádky ze samých nul jsou na konci, říkáme, že tato matice je ve schodovitém tvaru. Schodovitý tvar matice je velmi výhodný, protože z něj vidíme hodnost. Hodnost matice ve schodovitém tvaru je počet nenulových řádků matice a pokud soustava má matici soustavy ve schodovitém tvaru, dokážeme postupně dopočítávat jednotlivé neznámé. 
 
-Vzhledem k výše uvedenému by se vyplatilo mít možnost převést soustavu rovnic na soustavu, která má stejné řešení a matici má ve schodovitém tvaru. To je opravdu možné a máme k dispozici sadu řádkových operací, které umožní převést matici do schodovitého tvaru a přitom nemění hodnost matice, nebo v případě soustavy nemění množinu řešení soustavy. 
+Vzhledem k výše uvedenému by se vyplatilo mít možnost převést soustavu rovnic na soustavu, která má stejné řešení a matici má ve schodovitém tvaru. To je opravdu možné a máme k dispozici sadu řádkových operací, které umožní převést matici do schodovitého tvaru a přitom nemění hodnost matice, nebo v případě soustavy nemění množinu řešení soustavy. To bude nejlepší si ukázat na příkladě.
 
-Pokud pracujeme s rozšířenou maticí soustavy a převedeme ji operacemi neměnícími množinu řešení na schodovitý tvar, 
+Pokud pracujeme s rozšířenou maticí soustavy a převedeme ji operacemi neměnícími množinu řešení na schodovitý tvar je možné vyjít od rovnice s nejmenším počtem neznámých. Pokud je tam neznámá jenom jedna, určíme ji. Pokud je tam neznámých více, všechny neznámé až na jednu mohou mít libovolnou hodnotu a hodnota té poslední neznámé se určí z uvažované rovnice. Příklady na obojí, tedy i když je jediné řešení a i když je nekonečně mnoho řešení jsou ve cvičení. 
+
+Ukažme si jeden příklad i zde a potom se vrátíme k obecným větám udávajícím, jak pomocí hodnosti matice posoudit existenci a jednoznačnost řešení soustavy.
+
+
 
 \end{document}

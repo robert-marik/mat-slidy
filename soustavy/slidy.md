@@ -472,17 +472,27 @@ $$
 \end{aligned}
 $$
 
-Z poslední rovnice máme snadno $x_3=-1$. Tutho hodnotu použijeme ve
-druhé rovnici. Protože však máme pořád dvě neznámé, jednu z nich
-zvolíme za parametr.
+Z poslední rovnice máme snadno $x_3=-1$. Tuto hodnotu použijeme ve
+druhé rovnici. 
 $$
 \begin{aligned}
   x_2-2x_3+x_4&=2\\
   x_2+2+x_4&=2\\
   x_2+x_4&=0\\
-  x_4&=t\\
-  x_2&=-t  
 \end{aligned}
+$$
+Protože však máme pořád dvě neznámé, jednu z nich
+zvolíme za parametr. Nechť je například $x_4$ a nechť je parametr označen jako $t$.
+$$
+  x_4=t
+$$
+Rovnice má poté tvar
+$$
+  x_2+t=0.
+$$
+Odsud již snadno dostáváme
+$$
+  x_2=-t.
 $$
 Vypočtené hodnoty dosadíme do první rovnice a určíme zbývající
 neznámou $x_1$.
