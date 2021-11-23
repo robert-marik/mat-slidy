@@ -526,6 +526,8 @@ $$
 
 # Gaussova-Seidelova iterační metoda
 
+https://youtu.be/KBg1tllDhxM
+
 Gaussova-Seidelova iterační metoda je jakýsi mezikrok mezi Jacobiho
 iterační metodou a Gausovou eliminací. Postupujeme jako v Jacobiho
 metodě, ale všechny zpřesněné hodnoty použijeme okamžitě, když jsou k
@@ -573,4 +575,23 @@ x_4 & = -3(2.3272)/8 +(-0.9873)/8+15/8 = 0.8789.
 $$
 Jak vidno, vypočtenou hodnotu $x_1$ ihned použijeme pro výpočet $x_2$. Obě tyto hodnoty ihned použijeme pro výpočet $x_3$ a tak dále. V dalších iteracích postup [opakujeme](https://sagecell.sagemath.org/?z=eJytUMGKwjAQvRf6D0NPraakk6RShJ4X9rpXL3WtEpAorcLk73eyCYt4UJFNIC8z782DeefJuguUxefwfdrajevjKao8IxSkBGlBpm_E782z_WkCC9bBNLjDWGJTrfMM-HiEHkhJbKAG0rKFJYQXEq0CjRKR-0wz1qAXZGJHtYxJqVlZs5Rnl8mR0QTkGcTwSVITpOyiZAfRt2PAVnZRcLuCR-GV8Fp4E8lzXN0KV7IOdvZgL3O_qkKt7mp9V5ubmqNKVsXGfQzXea6_Rrsbj39pvhkpPY6UXo6UXo-UnkX6b6n9AO8SliU=&lang=sage&interacts=eJyLjgUAARUAuQ==). Mimo jiné hodnoty v paměti přímo přepisujeme a nemusíme držet v paměti starou a novou hodnotu. 
 
+# Shrnutí, hlavní myšlenky
+
+https://youtu.be/aeUs2y2QrRw
+
+\iffalse
+
+<div class='obtekat'>
+
+![A jaká je hlavní message? Zdroj: pixabay.com](../message.jpg)
+
+</div>
+
+
+\fi
+
+* Řada numerických metod pro řešení modelů založených na matematickém modelování fyzikálních zákonů se v nějaké fázi redukuje na řešení soustav lineárních rovnic. Kromě toho se se soustavami lineárních rovnic setkáváme při hledání vlastních směrů matic, což je důlležité pro matice reprezentující materiálové charakteristiky. 
+* Ukázali jsme si tři různé formulace soustav lineárních rovnic, klasickou pomocí rovnic, vektorovou pomocí jedné vektorové rovnice a maticovou pomocí jediné maticové rovnice a jediné maticové operace, maticového součinu. 
+* Ukázali jsme si, že v případě známé inverze k matici soustavy se řešení redukuje na součin inverzní matice s maticí pravých stran.
+* Kromě možnosti využít inverzní matici jsme si ukázali další tři metody řešení. Dvě čistě numerické metody (Jacobiho a Gaussova-Seidelova metoda) a jednou univerzální (Gaussova eliminační metoda).
 

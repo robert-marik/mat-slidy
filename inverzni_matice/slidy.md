@@ -759,3 +759,21 @@ která vyjadřuje, že $\vec u$ je vlastním vektorem matice $A^{-1}$ s
 vlastním číslem $\frac 1\lambda.$
 
 
+# Shrnutí, hlavní myšlenky
+
+\iffalse
+
+<div class='obtekat'>
+
+![A jaká je hlavní message? Zdroj: pixabay.com](../message.jpg)
+
+</div>
+
+
+\fi
+
+* Přestože maticový součin nemá všechny vlastnosti na které jsme zvyklí u součinu čísel, jedna vlastnost zůstává: existence "převrácené hodnoty". V případě matic je zobecnění převrácené hodnoty reprezentováno inverzní maticí.
+* Pomocí matic je možné transformovat souřadnice bodů, vektorů a tenzorů z jedné soustavy souřadnic do jiné. Inverzní matice poté představuje zpětnou transformaci. 
+* Při transormaci tenzorů se snažíme o to, aby po transformaci byl tenzor co nejjednodušší. Pokud použijeme souřadnou soustavu s osami ve vlastních směrech (jsou kolmé a tedy je tato volba smysluplná), je tento tenzor je diagonální s vlastními čísly v diagonále.
+* Pro identifikaci vlastních vektorů matice $A$ je nutné řešit soustavu rovnic $$(A-\lambda I)v=0,$$ ve které figuruje jistým i vlastní číslo $\lambda$. Toto umožňuje definovat podmínku na vlastní čísla: uvažovaná soustava musí mít nenulové řešení. 
+* Existence nenulového řešení rovnice z předchozího bodu úzce souvisí s pojmem determinantu matice. Přesněji, aby soustava z předchozího bodu měla nenulové řešení, musí mít matice $A-\lambda I$ nulový determinant. 
