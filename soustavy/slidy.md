@@ -333,6 +333,8 @@ konstrukcí, vedení tepla, proudění vody apod.
 
 # Hodnost matice
 
+https://youtu.be/HF-RDBZUenY
+
 Iterační metoda funguje pro soustavy s jediným řešením. Pokud však hledáme vlastní vektory, musíme být schopni umět řešit i soustavy s nekonečně mnoha řešeními.
 
 Matice řádu $m\times n$ obsahuje celkem $m\cdot n$ čísel. Jedná se tedy
