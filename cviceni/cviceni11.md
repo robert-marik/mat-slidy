@@ -94,7 +94,6 @@ krajích stěny.
 </div>
 
 
-
 # Stacionární vedení tepla v žebru chladiče
 
 ![pixabay.com](chladic.jpg)
@@ -108,8 +107,13 @@ teploty okolního vzduchu. (Koeficient úměrnosti je dán koeficient přestupu 
 
 <div class=reseni>
 
+Pokud použijeme předpoklad stacionárnosti a to, že zdroje jsou záporné a jejich výkon je úměrný rozdílu teplot, má rovnice následující tvar.
+
 $$0=-h(T-T_0)+\frac{\mathrm d}{\mathrm dx}\left(\lambda \frac{\mathrm dT}{\mathrm dx}\right)$$
 
+Homogenita a nezávislost $\lambda$ na teplotě umožňují použít druhou derivaci namísto kvaziderivace.
+
+$$0=-h(T-T_0)+\lambda \frac{\mathrm d^2 T}{\mathrm dx}$$
 
 Ke stejnému závěru je možné dojít i přesnou analýzou ve 3D, viz Cengel, Heat transfer, kapitola 3–6 Heat transfer from finned surfaces.
 
@@ -146,8 +150,8 @@ Ke stejnému závěru je možné dojít i přesnou analýzou ve 3D, viz Cengel, 
 -->
 
 Teplota ve dvourozměrné desce pro $0\leq x\leq 10$ a $0\leq y\leq 10$ zachycené v určitém okamžiku termokamerou je popsána rovnicí
-  $$T(x,y)=2y^2+x^3.$$
-  Rozměry jsou v centimetrech, teplota ve stupních Celsia. (Formálně to nevychází, ale ke každému členu můžeme dodat konstantu, která rozměr opraví tak, aby výsledek opravdu vycházel ve stupních Celsia. Pro jednoduchost tuto komplikaci vynecháme.)
+$$T(x,y)=2y^2+x^3.$$
+Rozměry jsou v centimetrech, teplota ve stupních Celsia. (Formálně to nevychází, ale ke každému členu můžeme dodat konstantu, která rozměr opraví tak, aby výsledek opravdu vycházel ve stupních Celsia. Pro jednoduchost tuto komplikaci vynecháme.)
 
 1. Vypočtěte gradient $\nabla T$  a tok tepla $-\lambda \cdot \nabla T.$
 Součinitel tepelné vodivosti (pro jednoduchost s celými čísly a bez jednotky) je $\lambda=

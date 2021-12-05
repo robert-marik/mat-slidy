@@ -1,6 +1,6 @@
 % Dvojný integrál
 % Robert Mařík
-% 7.5.2019
+% 2019-2021
 
 
 
@@ -592,4 +592,19 @@ Působiště tlakové síly $y_c$ je tedy posunuto směrem dolů od těžiště
 $y_0$ o hodnotu odpovídající kvadratickému momentu vzhledem k
 vodorovné ose těžištěm $I_{x0}$ vyděleném součinem obsahu hráze $S$ a
 $y$-ové polohy těžiště $y_0$.
+
+# Shrnutí, hlavní myšlenky
+
+\iffalse
+
+<div class='obtekat'>
+
+![A jaká je hlavní message? Zdroj: pixabay.com](../message.jpg)
+
+</div>
+
+* Mnoho veličin, které nás zajímají, počítáme jako součin obsahu plochy s nějakou jinou veličinou. Zpravidla veličina kterou takto počítáme souvisí v objektem jako s celkem a veličina, kterou násobíme s plochou, souvisí se situací v jednom konkrétním místě. Například hmotnost desky z plošného materiálu (vlastnost objektu) je součinem plošné hustoty (charakteristika materiálu) a obsahu. Celková tlaková síla na hráz (vlastnost objektu) je součinem tlaku (vlastnost v daném bodě) a obsahu. Problém však nastane, pokud vlastnosti nejsou všude stejné. Například plošný materiál může mít v různých místech různé vlastnosti, nebo tlak může být v každém místě hráze jiný, protože hráz je napříč více hloubkami. V takových případech je potřeba součin něčím nahradit. Příslušná náhrada je dvojný integrál.
+* Vidíte dvojný integrál a potřebujete promyslet, co vyjadřuje? Představte si, že integrovaná veličina je konstantní. Potom se integrál redukuje na součin a ten už zpravidla je snadné vyjádřit slovně. Například dvojný integrál hloubky jezera vypočítaný přes celé jezero. Pro konstantní hloubku se tato veličina redukuje na součin hloubky a obsahu hladiny. To je ale objem jezera. Proto dvojný integrál hloubky jezera vyjadřuje objem vody v jezeře.
+* Dvojný integrál počítáme převodem na dvojnásobný integrál, tj. dva integrály, z nichž jeden je uvnitř druhého. V některých situacích (integrál funkce sestavené jako součin funkcí jedné proměnné a počítaný přes obdélník) se dokonce může situace redukovat na součin dvou integrálů funkce jedné proměnné.
+* Dvojný integrál je také odpověď na problém, jak sesčítat veličinu rozloženou v ploše (kvadratický moment obrazce, veličina důležitá pro posuzování tuhosti a pevnosti nosníků) nebo jak ji zprůměrovat (integrální střední hodnota funkce dvou proměnných).
 

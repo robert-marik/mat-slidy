@@ -780,13 +780,13 @@ $$\frac{\partial u}{\partial t} =\sigma +
 \frac{\partial }{\partial y}\left(D_y\frac{\partial u}{\partial y}\right)+
 \frac{\partial }{\partial z}\left(D_z\frac{\partial u}{\partial z}\right)
 $$
-a pokud máte před sebou podobnou rovnici, ve které některý člen chybí, znamená to, že tato rovnice v sobě již obsahuje jisté předpoklady. Ty se pokusíme identifikovat. Některý člen může být lehce modifikovaný, například a levé straně mohou figurovat dodatečné multiplikativní konstanty (například v případě rovnice vedení tepla) nebo člen popisující zdroje může být nekonstantní (například při studiu vývoje populace se zahrnutím prostorového rozložení používáme logistický růst $\sigma = ru\left(1-\frac uK\right)$), zajímavé však pro nás jsou podstatné odlišnosti shrnuté v následujících odrážkách.
+a pokud máte před sebou podobnou rovnici, ve které některý člen chybí, znamená to, že tato rovnice v sobě již obsahuje jisté předpoklady. Ty se pokusíme identifikovat. Některý člen může být lehce modifikovaný, například a levé straně mohou figurovat dodatečné multiplikativní konstanty (například v případě rovnice vedení tepla) nebo člen popisující zdroje může být nekonstantní (například při studiu vývoje populace se zahrnutím prostorového rozložení používáme logistický růst $\sigma = ru\left(1-\frac uK\right)$), zajímavé však pro nás jsou podstatné odlišnosti shrnuté v následujících odrážkách. Vždy je to "něco za něco". Jednodušší rovnice se lépe dále zpracovává, ale neumí zachytit plnou škálu efektů, které jsou v obecné rovnici.
 
 * Je v rovnici člen $\frac{\partial u}{\partial t}$ s derivací podle času? Pokud ano, je rovnice _nestacionární_ a dokáže popsat časový vývoj děje. Pokud ne, jedná se o _stacionánrní_ rovnici popisující děj po dosažení ustáleného stavu. Stacionární rovnice je jednodušší, ale nedokáže zachytit časový vývoj.
 * Je v rovnici člen bez časové a prostorové derivace? Tj. v našem označení $\sigma$? Pokud ano, popisuje tento člen vydatnost zdrojů nebo spotřebičů a rovnice je schopna zachytit situace, kdy stavová veličina vzniká nebo zaniká. Pokud ne, jedná se o _bezzdrojovou rovnici_. Takové rovnice popisuje stav, kdy se stavová veličina může jenom přemisťovat nebo kumulovat. Bezzdrojová rovnice je jednodušší, ale nedokáže modelovat vznik či zánik stavové veličiny.
 * Jsou přítomny všechny prostorové souřadnice, nebo jenom některé? Počet prostorových souřadnic defiuje _dimenzi problému_, tj. určuje, zda se jedná o úlohu v prostoru, v rovině nebo na přímce.
 * Jsou všechny difuzní koeficienty stejné (například $D$), nebo jsou odlišeny (například indexy $D_x$, $D_y$, $D_z$)? Pokud jsou stejné, jedná se o _izotropní_ materiál a rovnice dokáže popsat pouze materiál mající ve všech směrech stejné vlastnosti. Pokud jsou difuzní koeficienty odlišeny, jedná se o _anizotropní_ nebo _ortotropní_ materiál a dokážeme s ní popsat i materiály mající díky své struktuře jiné vlastnosti v jednotlivých směrech.
-* Jsou difuzní koeficienty uvnitř derivací ve členech typu $$\frac{\partial }{\partial x}\left(D_x\frac{\partial u}{\partial x}\right)$$ nebo jsou difuzní členy zjednodušeny do tvaru $$D_x\frac{\partial ^2 u}{\partial x^2}?$$ Pokud jsou zjednodušeny do tvaru součinu difuzního koeficientu a druhé derivace, znamená to, že rovnice je sice jendodušší, ale rovnice je schopna popsat pouze materiál, který je _homogenní_ a konstitutivní zákon v tomto materiálu je _lineární_. V opačném případě (nehomogenita materiálu, nelinearita materiálu, případně obojí) necháváme difuzní koeficienty uvnitř derivace, tak jak to je v obecném případě. Rovnice je komplikovanější, ale umožňuje práci s obecnějšími materiály.
+* Jsou difuzní koeficienty uvnitř derivací ve členech typu $$\frac{\partial }{\partial x}\left(D_x\frac{\partial u}{\partial x}\right)$$ nebo jsou difuzní členy zjednodušeny do tvaru $$D_x\frac{\partial ^2 u}{\partial x^2}$$ s druhými derivacemi? Pokud jsou zjednodušeny do druhého tvaru se součinem difuzního koeficientu a druhé derivace, znamená to, že rovnice je sice jednodušší, ale rovnice je schopna popsat pouze materiál, který je _homogenní_ a konstitutivní zákon v tomto materiálu je _lineární_. V opačném případě (nehomogenita materiálu, nelinearita materiálu, případně obojí) necháváme difuzní koeficienty uvnitř derivace, tak jak to je v obecném případě. Rovnice je komplikovanější, ale umožňuje práci s obecnějšími materiály.
 
 
 `ww2:problems/difuzni_rce/predpoklady.pg`
@@ -813,3 +813,50 @@ https://youtu.be/TjyB3kP2uXE
 * Obecná rovnice odvozená podle předchozích bodů je obecná a pro práci na konkrétní úloze se ji snažíme nějak blíže specifikovat. Například zjednodušit, pokud máme informaci o charakteru materiálových vztahů (lineární/nelineární) a materiálu (homogenní/nehomogenní). Jiným zjednodušením je, pokud se zajímáme o stacionární stav, který se nastolí po dosažení rovnováhy.
 * Posláním široké škály příkladů různých specifikací rovnice kontinuity (vedení tepla, proudění povrchové a podzemní vody a další) je, aby si student uvědomil široký záběr obecné formulace rovnice kontinuity. Na zkoušku se naučte obecnou rovnici a jenom informativně si přečtěte její speciální případy. Obory pracující se dřevem (dřevařství, nábytek, dřevostavby) si uložte do paměti rovnice popisující modelování tepla a vlhkosti ve dřevě. Budou se vám hodit  ve studiu. Na krajinářství se zase zaměřte na modelování vody, mělké i podzemní.
 
+# Shrnutí více matematickou formou
+
+* Ukázali jsme si, že má smysl založit model na bilanci, která vyjadřuje, že rychlost růstu stavové veličiny je součtem příspěvku vygenerovaného zdroji a příspěvku přineseného tokem.
+* Rychlost růstu je derivace podle času, $$\frac {\partial u}{\partial t}.$$
+* Příspěvek přinesený tokem je roven zeslabení toku v daném místě. Zeslabení toku vypočteme jako záporně vzaté zesílení toku, tj. záporně vzatou divergenci toku, $$-\nabla\cdot \vec j.$$
+* Celková bilance se poté nazývá rovnice kontinuity a má tvar $$
+\frac {\partial u}{\partial t}=\sigma - \nabla\cdot \vec j. $$
+* Tok $\vec j$ zpravidla vypočteme jako záporně vzatý gradient stavové veličiny vynásobený difuzní maticí, tj. $$\vec j=-D\nabla u.$$ 
+* Spojením předchozích vztahů dostáváme difuzní rovnici 
+$$
+\frac {\partial u}{\partial t}=\sigma + \nabla\cdot \left(D\nabla u\right). $$ To je rovnice popisující obecně transport energie nebo hmoty prostředím. Například vedení tepla nebo difuzi vody při sušení dřeva.
+* Pro konkrétní výpočet je často nutné rovnici zapsat v souřadnicích. Například pokud máme dvojrozměrný model a směr souřadných os zvolíme ve vlastních směrech matice $D$ (potom matice $D$ bude diagonální s diagonálními prvky například $D_x$ a $D_y$), má difuzní rovnice tvar 
+$$ \frac {\partial u}{\partial t}=\sigma + \frac{\partial }{\partial x}\left(D_x \frac{\partial u}{\partial x}\right ) + \frac{\partial }{\partial y}\left(D_y \frac{\partial u}{\partial y}\right ). $$
+* Pokud je materiál homogení a má lineární materiálovou odezvu, je dokonce možné rovnici dále zjednodušit na 
+$$ \frac {\partial u}{\partial t}=\sigma + D_x\frac{\partial^2 u }{\partial x^2 } + D_y\frac{\partial^2 u }{\partial y^2 } . \tag{N}
+$$
+Tato formulace je jednodušší než předešlá, protože obsahuje druhé derivace místo kvaziderivací.
+* Pokud je rovnice například stacionární (stavová veličina nezávisí na čase, derivace podle času je nulová), bezzdrojová (neobsahuje zdroje ani spotřebiče, veličina $\sigma$ je nulová), z homogenního a lineárního materiálu (viz předchozí bod) redukuje se rovnice (N) na  
+$$ 0= D_x\frac{\partial^2 u }{\partial x^2 } + D_y\frac{\partial^2 u }{\partial y^2 } . \tag{S}
+$$ Tato rovnice je jednodušší než "plná rovnice" (N) a proto ji dokážeme řešit i ve složitějších podmínkách. Někdy například umíme vyřešit nestacionární rovnici (N) a máme dynamiku jak rychle roste stavová veličina, například jak rychle roste teplota v materiálu. To je nejlepší scénář, někdy však může být nerealizovatelný. Někdy ale umíme vyřešit jenom stacionární rovnici (S) a najdeme jenom rozložení stavové veličiny po dosažení rovnovážného stavu. To je také dobrá a užitečná informace sama o sobě. Navíc může sloužit jako odrazový můstek k řešení nestacionární rovnice (N) tak, že od stacionárního řešení postupujeme zpětně v čase.
+* Pokud je materiál z předchozího bodu ještě navíc izotropní, tj.  pokud má stejné vlastnosti ve všech směrech, je $D_x=D_y$ a rovnici je možno vydělit do tvaru $$ 0= \frac{\partial^2 u }{\partial x^2 } + \frac{\partial^2 u }{\partial y^2 } .$$ O této rovnici si ukážeme (v roce 2021 jsme si ukázali už na minulé přednášce) že zapojením druhých diferencí pro numerickou aproximaci druhé derivace (viz [přednáška číslo 2](https://user.mendelu.cz/marik/mtk/mat-slidy/derivace_II/#kone%C4%8Dn%C3%A9-diference-a-numerick%C3%A1-aproximace-derivace)) se model redukuje na soustavu lineárních rovnic, jak jsme ji poněkud naivní metodou odvodili v [přednášce číslo 7](https://user.mendelu.cz/marik/mtk/mat-slidy/matice/#rozlo%C5%BEen%C3%AD-teploty-na-tepeln%C4%9B-vodiv%C3%A9-desce).
+
+# Praktická aplikace (zajímavost z jiné oblasti než nauky o materiálu)
+
+Jste frustrovaní, že k rovnici nemáme řešení? Bohužel ho není obecně možné najít. Rovnici dokážeme přesně vyřešit jenom ve velmi speciálních případech. I bez vyřešení však z rovnice získáváme užitečné informace. Navíc rovnice může být stavebním kamenem složitějšího modelu. Místo slibů konkrétní příklad zase na jiné (ale aktuální) téma. 
+
+V článku  [A Local and Time Resolution of the COVID-19 Propagation—A
+Two-Dimensional Approach for Germany Including Diffusion
+Phenomena to Describe the Spatial Spread of the
+COVID-19 Pandemic](https://arxiv.org/pdf/2101.12011)
+je prostorové šíření epidemi COVID modelováno difuzní rovnicí (1) ve tvaru 
+$$\frac{\partial c}{\partial t}=q+\nabla\cdot \left(D\nabla c\right),$$
+což je přesně rovnice, se kterou jsme pracovali zde. Je to rovnice ve své  neobecnější formě, aby bylo možno zachytit 
+
+* časový vývoj (o ten nám jde), 
+* nehomogenitu v šíření (například ve městech je jiná rychlost šíření než na venkově) a
+* existenci zdrojů (vir se umí množit). 
+
+Tato rovnice se řeší pro Německo, což znemožňuje kvůli složité geometrii nalezení analytického přesného řešení. To totiž umíme v prakticky použitelné formě najít jenom pro obdélník a několik málo dalších množin. Proto se tento model řeší numericky. V prvním odstavci podkapitoly 4 článku je numerický model pro jednotlivé spolkové země označen číslem (7) a redukce na soustavu lineárních rovnic (8). V následujícím odstavci je zmíněna Jacobiho metoda pro numerické řešení soustav lineárních rovnic. S touto metodou jsme se setkali v předchozí přednášce o soustavách rovnic. 
+
+Model je dokonce možné doplnit dynamikou růstu zahrnující nárůst nejenom vlivem difuze, ale i vlivem množení viru v daném místě. Přesněji, v odstavci 6 odkazovaného článku se model doplňuje rovnicemi (9) až (11)  ve tvaru
+$$\begin{aligned}
+\frac{\mathrm dS_j}{\mathrm dt}&=-\kappa_j\frac {I_j}{N_j}{S_j},\\
+\frac{\mathrm dI_j}{\mathrm dt}&=\kappa_j\frac {I_j}{N_j}{S_j}-\eta_j I_j,\\
+\frac{\mathrm dR_j}{\mathrm dt}&=\eta_j I_j.
+\end{aligned} $$
+Toto jsou již naši staří známí ze světa derivací funkce jedné proměnné. Například první rovnice vyjadřuje, že počet $S_j$ lidí zdravých a náchylných k onemocnění COVID19 ve spolkové zemi s indexem $j$ se snižuje rychlostí přímo úměrnou současně množství náchylných lidí a množství $I_j$ infikovaných lidí a nepřímo úměrnou celkové velikosti populace v této zemi $N_j$. Konstanta úměrnosti je $\kappa_j$ a abychom se mohli spolehnout na to, že tato konstanta je kladná, je úbytek skupiny dosud zdravých lidí zachycen záporným znaménkem na pravé straně rovnice. Podobně je možné interpretovat další rovnice, je to vlastně klasický [SIR model epidemie](https://www.matfyz.cz/clanky/matematika-koronaviru-matematicke-modely-sireni-epidemie). Prolistujete si výše odkazovaný anglický článek o modelování epidemie v Německu a všimněte si, že se nic ručně nemusí počítat. Rovnice se nasimulují v počítači a člověk jenom plní ty úlohy, které počítače neumí a nikdy umět nemůžou: sestaví model na základě své představy o fungování procesu a poté interpretuje výstup ze simulace.
