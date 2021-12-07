@@ -2,7 +2,13 @@
 % Robert Mařík
 % 2019-2021
 
+# Instrukce k online výuce
 
+* V aplikacích často pracujeme s veličinami získanými jako součin obsahu plochy a veličiny charakterizující místo v ploše. Například tlakovou sílu na hráz nebo opěrnou zeď vypočteme součinem tlaku a obsahu plochy. Hmotnost plošného materiálu vypočteme součinem plošné hustoty a obsahu. Co však když je stěna nebo hráz napříč různými hloubkami a tlak se podél stěny mění? Nebo co když je deska z plošného materiálu v některých místech "lehčí" (má menší plošnou hustotu)? Potom součin s obsahem nestačí a je nutné jej nahradit dvojným integrálem. Je to obdobná situace, kterou jsme viděli u integrálu funkce jedné proměnné v přednáškách 4 a 5. Tam se změna obvykle počítaná jsou součin rychlosti a času musela pro nekonstantní rychlosti počítat místo součinu integrálem. Zde je situace stejná, ale pracujeme s veličinou rozloženou v ploše.
+* Aplikace zahrnují odolnost vůči deformaci (nosné trámy pro dřevostavby a krajinářství, police a šatní tyče pro nábytkářství, kmeny a větve stromů pro arboristiku), sílu a působiště tlakové síly na opěrnou zeď, celkový tok průřezem koryta nebo potrubí. Pomocí dvojného integrálu a vrstevnic dokážeme určovat celkový objem vody v jezeře nebo odhadnout celkový objem a hmotnost kopce v krajině. Další aplikací je možnost vypočítat průměrnou hodnotu veličiny rozložené v ploše.
+* Dvojný integrál počítáme převodem na dva jednorozměrné integrály. V některých případech se redukuje na součin dvou jednoduchých integrálů. Tím je situace zjednodušena, protože vypočítat dva integrály samostatně a vynásobit je je jednodušší, než počítat integrál z integrálu.
+* Projděte si text přednášky, můžete si pustit video s přednáškou z minulého roku. 
+* Pro krajináře bude stanovení síly na opěrnou zeď nebo hráz v některých navazujících předmětech denní chleba. Naštěstí se pro zdi obdélníkového tvaru dají použít přímo vzorce nebo speciální grafické metody (například metoda zatěžovacího obrazce). V méně triviálních aplikacích je již nutné použít dvojný integrál.
 
 
 # Motivace 
