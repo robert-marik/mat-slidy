@@ -213,8 +213,8 @@ kinetickou energii nebo osmózu a kapilární jevy.
 
 
 Fourierův zákon se týká vedení tepla a vyjadřuje, 
-že vektor hustoty tepelného toku $\vec q$ je úměrný gradientu teploty $\nabla T$
-a má opačný směr, tj. 
+že vektor hustoty tepelného toku $\vec q$ vyvolaného gradientem teploty $\nabla T$
+je dán vztahem 
 $$\vec q=-k\nabla T.$$ 
 Je-li materiál anizotropní, což je nejobecnější
 případ, je veličina $k$ symetrickým
