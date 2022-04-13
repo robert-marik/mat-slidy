@@ -184,6 +184,8 @@ Budeme se zajímat o to, jak rychle se mění funkční hodnoty v čase nebo př
 
 \fi
 
+manimp:derivace|Okamžitou rychlost můžeme určit jako průměrnou rychlost na velmi malém intervalu. V matematice dokážeme jít až na nekonečně malý interval.
+
 Průměrnou rychlost určujeme tak, že změnu sledované veličiny
 přepočteme na jednotku času (u závislosti na čase), délky (u
 závislosti na poloze) nebo obecně na jednotku veličiny, na které

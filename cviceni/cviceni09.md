@@ -44,7 +44,7 @@ $$
 2 &3 &1 \\
 \end{pmatrix}
 \begin{pmatrix}
-  x_2\\x_2\\x_3
+  x_1\\x_2\\x_3
 \end{pmatrix}
 =
 \begin{pmatrix}

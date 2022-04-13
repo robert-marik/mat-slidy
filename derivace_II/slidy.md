@@ -355,6 +355,10 @@ https://youtu.be/U93Q3XaDnDA
 
 <div class='obtekat'>
 
+
+![V praxi často pracujeme s daty získanými po skocích. Místo spojité funkce (křivky) tedy máme funkci definovanou v bodech (diskrétní funkce). I zde je nutné mít možnost měření rychlosti změny, která je co nejvíce kompatibilní s derivací.](diference.png)
+
+
 ![Tramvajový most v Brně Pisárkách z předpjatého betonu. Vede do zatáčky a ve stoupání. Analyticky vyřešit namáhání takového mostu je nereálné, podobné úlohy se řeší převodem úlohy obsahující derivace na úlohy lineární algebry. Podobné síly mohou vznikat i v\ dřevěných konstrukcích a to i v\ případě, že  nosníky primárně nekonstruujeme jako předpjaté. Zdroj: vlastní.](pisarky.jpg)
 
 </div>
@@ -423,7 +427,9 @@ Takovým způsobem můžeme u materiálu se známou strukturou odhadnout fyziká
 
 \iffalse
 
-[Online výpočet a obrázek.](https://sagecell.sagemath.org/?z=eJxljkEKwjAQRfeF3GF2SXCMzVi6yy1KlkJQQaE1YSya3t7JQjfuHv-_-cwrsdGsreoiBPAHPnmCPZDAqLpJsujWtM2ZDaNHErEu9wfWJVUpe3dEUl3xwmXOq4mGLYK4P8vKSaFvP_33COcs-0Hz9dIeed7y28jiDgohbKIEj9D80LuxUUvcYD-S5jQL&lang=sage)
+[Online výpočet a obrázek.](https://gist.github.com/robert-marik/e53bfb4b0bf91809c489780ddcff447c)
+
+
 
 \fi
 
@@ -434,7 +440,7 @@ https://youtu.be/1DxpXD8YEYY
 
 V praxi se setkáváme s případy, kdy je znám výsledek po aplikování funkce na vstupní data a je nutné rekonstruovat tato vstupní data. Řešíme tedy rovnici, kde neznámá je argumentem funkce a je známa funkční hodnota. Pojmy nutné pro korektní formulaci a jednu z velmi rychlých přibližných metod řešení rovnic si představíme v následujících pasážích.
 
-Nejprve se budeme zabývat tím, jestli se k funkční hodnotě dají vstupní data rekontsruovat jednoznačně (prostá funkce). Pokud ano, představíme si pravidlo, které toto přiřazení vstupních dat k výsledku po aplikaci funkce dokáže realizovat (inverzní funkce). A na závěr si ukážeme metodu, jak při řešení rovnic (resp. počítat funkční hodnoty inverzních funkcí) využít derivaci. To vede k velmi rychlé a velmi obecné metodě numerického řešení (Newtonova metoda).
+Nejprve se budeme zabývat tím, jestli se k funkční hodnotě dají vstupní data rekonstruovat jednoznačně (prostá funkce). Pokud ano, představíme si pravidlo, které toto přiřazení vstupních dat k výsledku po aplikaci funkce dokáže realizovat (inverzní funkce). A na závěr si ukážeme metodu, jak při řešení rovnic (resp. počítat funkční hodnoty inverzních funkcí) využít derivaci. To vede k velmi rychlé a velmi obecné metodě numerického řešení (Newtonova metoda).
 
 ## Prostá funkce
 
@@ -529,7 +535,14 @@ Rovnici $$x=\cos x$$ nejprve přepíšeme do tvaru $$x-\cos x=0$$ a hledáme vla
 
 \egroup
 
-Vidíme, že proces opravdu neuvěřitelně rychle konverguje k\ řešení rovnice. Rychlost konvergence je důležitá, pokud je výpočet funkční hodnoty "drahý". Například při modelování namáhání dřevěné konstrukce s nelineární charakteristikou aproximujeme rovnici pomocí konečných diferencí soustavou rovnic, která má desítky tisíc proměnných. Každé kolo iterační metody vyžaduje mnoho výpočtů a rychlost konvergence je zásadní. 
+Vidíme, že proces opravdu neuvěřitelně rychle konverguje k\ řešení rovnice.
+Rychlost konvergence je důležitá, pokud je výpočet funkční hodnoty "drahý".
+Například při modelování namáhání dřevěné konstrukce s nelineární
+charakteristikou aproximujeme rovnici pomocí konečných diferencí soustavou
+rovnic, která má desítky tisíc proměnných. Každé kolo iterační metody vyžaduje
+mnoho výpočtů a rychlost konvergence je zásadní. 
+
+[Python skript](https://gist.github.com/robert-marik/7eb864d3bc5d995772164baf13299e79)
 
 **Příklad.**
 Někdy je možné použít ad hoc iterační techniku. Například rovnici $$x^4+7x-7=0$$ můžeme přepsat do tvaru $$x=\frac 17 (7-x^4)$$ a iterační vzorec
