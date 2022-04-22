@@ -29,6 +29,8 @@ S využitím aparátu derivací jsme v minulé přednášce poznali a naučili
 
 https://youtu.be/uKO6IZwraOQ
 
+manimp:Chyby|Derivace ukazuje, jak citlivě funkční hodnoty reagují na změny ve vstupních datech. Pokud jsou například vstupní data pro funkci produktem nějakého měření, zjistíme, jak se nepřesnosti v tomto měření projeví na nepřesnostech vypočtených funkčních hodnot.
+
 Derivace v bodě, pokud ji nahlížíme z hlediska citlivosti reakce
 funkce na změnu vstupních dat, udává, jaký vliv má jednotková změna ve
 vstupních datech na změnu funkční hodnoty funkce. Pokud změna ve
@@ -121,6 +123,7 @@ rotací v rovině. Mnoho důležitých aplikací těchto vzorců ve fyzice je na
 
 ## Lineární aproximace v některých fyzikálních zákonech
 
+
 \iffalse
 
 <div class='obtekat'>
@@ -164,6 +167,8 @@ a využitím lineární aproximace získáme
 a po zavedení nových konstant
 $$ V\approx V_0+ g h,$$
 kde $g=G \frac{M}{R^2}$.
+
+manimp:Linearni_aproximace|Lineární aproximace může pomoci zjednodušit komplikované funkční vztahy v případě, kdy vstupní data nejsou příliš variabilní.
 
 Podobně
 aproximací přesných vztahů plynoucích z\ Einsteinovy teorie relativity získáme složku energie související s pohybem, tj. kinetickou energii

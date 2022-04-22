@@ -626,6 +626,8 @@ model vedení tepla nemá jak naformulovat. Tyto zákony je potřeba matematice 
 teplotnímu rozdílu a teplo teče z místa v větší teplotou do místa s menší teplotou.
 * Teplota se zvyšuje dodáním tepla. Změna teploty je úměrná dodanému teplu.
 
+manim:Heat|1tbe5YUvoqg|Rovnice vedení tepla. Animace jak se chová teplo při jednorozměrném transportu a odvození rovnice vedení tepla.
+
 \iffalse
 
 <div class='obtekat'>
