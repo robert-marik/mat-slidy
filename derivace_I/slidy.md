@@ -237,13 +237,7 @@ Podobně jako spojitost funkce jedné proměnné je definována spojitost funkc�
 : Na jeho odhalení stačí zvolit toleranci v definici spojitosti menší, než je výška skoku. Například $f(x)=\frac{|x|+x}{2x}$ je jednotkový skok v nule.
 >
 **odstranitelná nespojitost**
-: Tato nespojitost nás zajímá nejvíce. Je to nespojitost, která zmizí pokud vhodně dodefinujeme funkční hodnotu v bodě nespojitosti. Například funkce $$f(x)=
-\begin{cases}
-  \frac {\sin x}{x}& x\neq 0\\
-  1& x=0
-\end{cases}
-$$
-je spojitá funkce. Vznikla doplněním jedné funkční hodnoty do definice funkce $\frac{\sin x}x$, která má odstranitelnou nespojitost v bodě $x=0$.
+: Tato nespojitost nás zajímá nejvíce. Je to nespojitost, která zmizí pokud vhodně dodefinujeme funkční hodnotu v bodě nespojitosti. Například funkce $$f(x)= \begin{cases}   \frac {\sin x}{x}& x\neq 0\\   1& x=0 \end{cases} $$ je spojitá funkce. Vznikla doplněním jedné funkční hodnoty do definice funkce $\frac{\sin x}x$, která má odstranitelnou nespojitost v bodě $x=0$.
 >
 > [Grafy.](https://sagecell.sagemath.org/?z=eJxL06jQtNWo0NZITCoGMjU19TWMtCo0ebnSQRLFmXlASr-ClyvA0DZNryAnv0RDo0JH11THVBOoJsDINh1VUEchOT8nv8hWvSg1RR2kwlA7wAgAMsAaHQ==&lang=sage)
 
@@ -251,13 +245,7 @@ je spojitá funkce. Vznikla doplněním jedné funkční hodnoty do definice fun
 
 Definici limity opřeme o pojem spojitosti. V podstatě pod limitu skryjeme buď funkční hodnotu spojité funkce (pokud existuje), nebo hodnotu, která danou funkci učiní spojitou. Můžeme tedy limitu považovat za  "nejlepší rozumnou náhradu" funkční hodnoty v tom smyslu, že po předefinování jedné funkční hodnoty se funkce stane spojitou, tj. relativně pěknou. 
 
-> Definice (limita). Nechť $f$ je funkce definovaná v okolí bodu $x_0$, s případnou výjimkou bodu $x_0$. Řekneme, že funkce $f$ má v bodě $x_0$ *limitu* rovnu číslu $L$, jestliže funkce $g(x)$ definovaná vztahem $$ g(x)=
-\begin{cases}
-  L& x=x_0\\
-  f(x)& \text{jinak,}
-\end{cases}
-$$
-je spojitá v bodě $x_0$. Píšeme $$\lim_{x\to x_0}f(x)=L.$$
+> Definice (limita). Nechť $f$ je funkce definovaná v okolí bodu $x_0$, s případnou výjimkou bodu $x_0$. Řekneme, že funkce $f$ má v bodě $x_0$ *limitu* rovnu číslu $L$, jestliže funkce $g(x)$ definovaná vztahem $$g(x)= \begin{cases}   L& x=x_0\\ f(x)& \text {jinak,}\end{cases}$$ je spojitá v bodě $x_0$. Píšeme $$\lim_{x\to x_0}f(x)=L.$$
 
 Velmi stručně řečeno: pokud se nedá nějaké číslo do funkce dosadit přímo, mohlo by to jít pomocí limity. Například funkce $$\frac{\sin x}{x}$$ není definována v nule. V okolí nuly se však chová v jistém smyslu pěkně: má funkční hodnoty prakticky nerozlišitelné od jedničky, viz graf v odstavci věnovanému spojitosti. Proto platí $$\lim_{x\to 0}\frac{\sin x}{x}=1.$$
 
@@ -290,6 +278,14 @@ $f'$, $f'(x)$ nebo $\frac{\mathrm df}{\mathrm dx}$. Zápis $\frac{\mathrm df}{\m
 
 \fi
 
+<div class='obtekat'>
+
+![Souvislost mezi chováním funkce a derivací této funkce](derivace.png)
+
+</div>
+
+manimp:PrubehFunkce|Derivace je ideální nástroj pro popis toho, jak rychle rostou nebo klesají funkční hodnoty funkce.
+
 Interpretace derivace v nematematických disciplínách je okamžitá
 rychlost s jakou veličina $f$ reaguje na změny veličiny $x$. Často
 studujeme veličiny závislé na čase s v tomto případě jde tedy o
@@ -312,6 +308,27 @@ Obecně, ať již je nezávislou proměnnou čas či jiná veličina, se derivac
 >
 * Má-li funkce $f$ kladnou derivaci na intervalu $I$, je na tomto intervalu rostoucí.
 * Má-li funkce $f$ zápornou derivaci na intervalu $I$, je na tomto intervalu klesající.
+
+
+|Derivace funkce |Chování funkce |
+|:---|:---|
+|Derivace je nulová.|Funkce je konstantní. Sledovaná veličina se nemění při změně vstupních dat.|
+|Derivace je kladná.|Funkce roste. Pokud data na vstupu rostou, sledovaná veličina také roste.|
+|Derivace je záporná.|Funkce klesá. Pokud data na vstupu rostou, sledovaná veličina klesá.|
+|Derivace je numericky malá (blízká k nule).|Funkce se mění pomalu. Sledovaná veličina reaguje na změny ve vstupních datech pouze málo.|
+|Derivace je numericky velká (hodně kladná nebo hodně záporná).|Funkce se mění rychle. Malá změna na vstupu má velký vliv na sledovanou veličinu.|
+|Derivace je konstantní.|Funkce je lineární. Klesá nebo roste pořád stejně rychle. Pokud vstup roste aritmetickou řadou (po stejných skocích), sledovaná veličina roste nebo klesá také aritmetickou řadou.|
+|Derivace roste.|Funkce je nelineární a roste stále rychleji. Pokud je funkce kladná, rostoucí derivace znamená, že růst se stále zrychluje.|
+|Derivace klesá k nule.|Funkce je nelineární a přibližuje se k vodorovné asymptotě. Pokud je funkce kladná, k nule klesající derivace znamená, že růst se stále zpomaluje a zastaví se.|
+
+<style>
+
+td {padding:10px; text-align: center;}
+tr:nth-child(even) {color:green; background: #E9E9E9;}
+table {border-collapse: collapse; width:80%; margin:auto;}
+th {color:white; background: #555;}
+
+</style>
 
 # Aplikace derivací 1: Jak rychle? (změna v čase)
 
