@@ -438,6 +438,8 @@ sílu. Ovšem jenom v extrémně pěkných případech.
 
 https://youtu.be/iKG-4g864Q4
 
+manimp:UrcityIntegral|Určitý integrál dokáže nahradit součin v případě, že koeficeint násobící měnící se veličinu není konstantní.
+
 <div class='obtekat'>
 
 ![Obsah pod konstantní funkcí.](1.png)
