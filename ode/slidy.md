@@ -403,12 +403,6 @@ křivka. Má-li každá počáteční úloha jediné řešení (což bude pro n�
 velice častý případ), znamená to, že integrální křivky se *nikde
 neprotínají*.
 
-Křivky s\ konstantní hodnotou $\varphi(x,y)$ mají tu vlastnost, že je
-všechna řešení protínají pod stejným úhlem, měřeným od kladné části
-osy $x$. Například v bodech kde platí $\varphi(x,y)=0$ míří všechny
-integrální křivky vodorovně. Proto se křivky, kde je $\varphi(x,y)$
-konstantní, nazývají **izokliny**.
-
 
 <!--
 # Numerické řešení IVP
@@ -478,6 +472,7 @@ výstupem metody bude aproximace integrální křivky pomocí lomené čáry.
 
 </div>
 
+
 \fi
 
 Naučíme se vyjadřovat diferenciální rovnici v jiných proměnných tak,
@@ -503,6 +498,12 @@ Výše uvedené výpočty je možno shrnout do pravidla v následující poznám
 > Poznámka (transformace diferenciální rovnice do jiných jednotek). Pro $Y=k_1(y-y_0)$ a $X=k_2 x$ platí   $$  \frac{\mathrm d Y}{\mathrm d X} =   \frac{\mathrm d \Bigl(k_1(y-y_0)\Bigr)}{\mathrm d (k_2 x)} = \frac{k_1}{k_2} \frac{\mathrm dy}{\mathrm dx}$$ a podobně (všimněte si druhé mocniny u $k_2$ díky druhé derivaci) $$  \frac{\mathrm d^2 Y}{\mathrm d X^2} = \frac{k_1}{k_2^2} \frac{\mathrm d^2y}{\mathrm dx^2}.$$   Výraz nalevo neobsahuje konstanty, které jsou ve výrazu   napravo. Tyto konstanty jsou v definici nových veličin $X$ a $Y$. 
 
 Navíc vzorec z poznámky silně připomíná klasické počítání se   zlomky. Proto máme Leibnizův tvar zápisu derivací $\frac{\mathrm   dy}{\mathrm dx}$ při studiu diferenciálních rovnic více v oblibě, než zápis Lagrangeův, $y'$.
+
+\iffalse
+
+manimp:ODE_transformace|Vhodnou transformací je možno zredukovat počet parametrů v rovnici a tím usnadnit numerické simulace. Nematematická cesta k transformaci je vhodná volba jednotek pro sledované veličiny.
+
+\fi
 
 **Příklad.** Diferenciální rovnice tepelné výměny $$\frac{\mathrm dT}{\mathrm dt}=-k(T-T_\infty), \quad T(0)=T_0\tag{*}$$ obsahuje tři parametry: teplotu okolního protředí $T_\infty$, počáteční teplotu $T_0$ a konstantu $k$ související s\ fyzikálními vlastnostmi prostředí. Postupně můžeme posunout  teplotní stupnici tak, aby teplota okolí byla nula a počáteční teplota jedna, tj. hodnotu $T$ snížíme o $T_\infty$ a upravíme dílek stupnice $(T_0-T_\infty)$-krát
 $$\frac{\mathrm d\left(\frac{T-T_\infty}{T_0-T_\infty}\right)}{\mathrm dt}=-k\frac{T-T_\infty}{T_0-T_\infty}$$
