@@ -48,7 +48,7 @@ probrání Taylorova polynomu, kdy se použije o něco obecnější postup.
 
 **Příklad.** Nosník výšky $h$, šířky $a$ a délky $L$ je uprostřed
   zatížený silou $F$. Průhyb $s$ uprostřed nosníku je dán vztahem
-  $$s=\frac {F L^3}{4Ebh^3},\tag{1}$$ kde $E$ je materiálová
+  $$s=\frac {F L^3}{4Eah^3},\tag{1}$$ kde $E$ je materiálová
   konstanta. Pro $h=20\,\mathrm{cm}$ je průhyb
   $s=10\,\mathrm{cm}$. Zjistěte, jak se průhyb mění při změnách výšky nosníku. Odhadněte, jak se průhyb změní, pokud se $h$ sníží na
   $18\,\mathrm{cm}$?
