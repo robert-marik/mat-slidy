@@ -1,4 +1,9 @@
 rsync="rsync"
+server="cornus.mendelu.cz"
+
+server="kiwi.mendelu.cz"
+rsyncopts=" -oKexAlgorithms=+diffie-hellman-group1-sha1 -oHostKeyAlgorithms=+ssh-rsa "
+
 #rsync="fake"
 
 kde=$1
@@ -35,7 +40,7 @@ echo '<h1>Prezentace z přednášek z Matematiky MTK</h1><h2>Zimní semestr 2022
    done
    echo '</table></div></div></html>' >> index.html
 
-   $rsync -e "ssh -o StrictHostKeyChecking=no" -av index.html cornus.mendelu.cz:html/mtk/mat-slidy/
+   $rsync -e "ssh -o StrictHostKeyChecking=no $rsyncopts " -av index.html $server:html/mtk/mat-slidy/
 fi  
 
 cislo=1
@@ -84,14 +89,14 @@ do
   cd ..
 
 
-  $rsync -e "ssh -o StrictHostKeyChecking=no" -av $i cornus.mendelu.cz:html/mtk/mat-slidy/
+  $rsync -e "ssh -o StrictHostKeyChecking=no $rsyncopts" -av $i $server:html/mtk/mat-slidy/
 done
 
 
 
-$rsync -e "ssh -o StrictHostKeyChecking=no" -av my.css cornus.mendelu.cz:html/mtk/mat-slidy
+$rsync -e "ssh -o StrictHostKeyChecking=no $rsyncopts" -av my.css $server:html/mtk/mat-slidy
 
-#rsync -e "ssh -o StrictHostKeyChecking=no"  -av facebox cornus.mendelu.cz:html/mt/mat-slidy
-#rsync -e "ssh -o StrictHostKeyChecking=no"  -av styles cornus.mendelu.cz:html/mt/mat-slidy
-#rsync -e "ssh -o StrictHostKeyChecking=no"  -av scripts cornus.mendelu.cz:html/mt/mat-slidy
-#rsync -e "ssh -o StrictHostKeyChecking=no"  -av deck cornus.mendelu.cz:html/mt/mat-slidy
+#rsync -e "ssh -o StrictHostKeyChecking=no $rsyncopts"  -av facebox $server:html/mt/mat-slidy
+#rsync -e "ssh -o StrictHostKeyChecking=no $rsyncopts"  -av styles $server:html/mt/mat-slidy
+#rsync -e "ssh -o StrictHostKeyChecking=no $rsyncopts"  -av scripts $server:html/mt/mat-slidy	
+#rsync -e "ssh -o StrictHostKeyChecking=no $rsyncopts"  -av deck $server:html/mt/mat-slidy
