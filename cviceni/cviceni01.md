@@ -86,9 +86,11 @@ $$
 
 _Upraveno podle Stewart, Day: Biocalculus. Calculus for the life siences. V tomto příkladě se setkáváme s klasickou interpretací derivace jako rychlosti změny, tj. hodnoty o kterou se změní závislá veličina, když se nezávislá veličina změní o jednotku._
 
-<div class=reseni> Jednotkou derivace je $\left[\frac{\mathrm dl}{\mathrm dt}\right]=\mathrm{cm}/\mathrm{rok}$, tj. centimetr za rok. Derivace udává (v centimetrech za rok) jaká je okamžitá rychlost růstu ryby. Přesněji je touto rychlostí růstu je myšlena rychlost, s jakou roste délka ryby v čase.
+<div class=reseni> Jednotka derivace délky podle věku je stejná, jako bychom délku dělili věkem. Tedy $\left[\frac{\mathrm dl}{\mathrm dt}\right]=\mathrm{cm}/\mathrm{rok}$, tj. centimetr za rok. 
 
-Závislost délky na čase je vyjádřena polynomem. Použitím pravidel pro derivování je snadné ukázat, že pro derivaci délky podle času platí
+Derivace je rychlost změny. Pokud derivujeme délku ryby podle času, je derivace rychlost s jakou se mění délka ryby v čase. Převedeno do srozumitelnějšího jazyka to je možné elegantněji vyjádřit tak, že derivace udává (v centimetrech za rok) okamžitou rychlost růstu ryby, přičemž velikost ryby vyjadřujeme její délkou (a ne například hmotností).
+
+Zadaná funkce vyjadřující závislost délky na čase je polynom. Použitím pravidel pro derivování je snadné ukázat, že pro derivaci délky podle času platí
 $$
     \frac{\mathrm dl}{\mathrm dt} =3\cdot 0.03937 t^2 - 2\cdot 0.945 t + 10.033 =
     0.11811 t^2 -1.89 t + 10.033 
@@ -123,8 +125,8 @@ _Zpracováno podle Monteith, Unsworth: Principles of Environmental Physics. Tady
 <div class=reseni>
 Pro výpočet si stačí uvědomit, že funkce je konstantním násobkem mocninné funkce a umíme ji tedy zderivovat podle pravidla pro derivaci konstantního násobku a pravidla pro derivaci mocninné funkce. 
 Derivace je $$\frac {\mathrm dM}{\mathrm dW}=\frac {\mathrm d}{\mathrm dW}(AW^n)=nAW^{n-1}$$ podle pravidla pro
-derivaci konstantního násobku a pro derivaci mocniny. Jednotka je watt
-na kilogram, tj.
+derivaci konstantního násobku a pro derivaci mocniny. Jednotka derivace je stejná, jako bychom místo derivování dělili, tj. watt
+na kilogram, 
 $$\left[\frac {\mathrm dM}{\mathrm dW}\right]=\frac{\mathrm W}{\mathrm
   {kg}}.$$ Derivace udává rychlost, s jakou se projeví změna hmotnosti na bazálním metabolismu. Je to nárůst bazálního metabolismu způsobený nárůstem hmotnosti a přepočtený na jednotkovou změnu hmotnosti. Přibližně také změna bazálního metabolismu ve wattech při změně hmotnosti o kilogram u velkých živočichů nebo v miliwatech při změně hmotnosti o gram u drobných živočichů. Například u malých ptáčků nemá smysl uvažovat nárůst hmotnosti o kilogram a pro interpretaci raději přejdeme k jednotkám tisíckrát menším.
 </div>

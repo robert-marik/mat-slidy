@@ -2,7 +2,7 @@
 % Robert Mařík
 % květen 2020
 
-Sránka obsahuje dva způsoby shrnutí. Jednak z hlediska aplikací a jednak z hlediska matematického aparátu.
+Stránka obsahuje dva způsoby shrnutí. Jednak z hlediska aplikací a jednak z hlediska matematického aparátu.
 
 <style>
 h2 {clear:both;}

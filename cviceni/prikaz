@@ -1,3 +1,6 @@
+target="cornus.mendelu.cz:html/mtk/mat-slidy/cviceni/"
+#target="um.mendelu.cz:~/html/mtk/mat-slidy/cviceni/"
+
 for i in `ls cviceni*.md`
 do
    echo $i
@@ -34,4 +37,4 @@ do
 
 done
 
-scp cviceni*html  cornus.mendelu.cz:html/mtk/mat-slidy/cviceni/
+scp cviceni*html  $target

@@ -1,6 +1,6 @@
 % Cvičení matematika
 % Robert Mařík
-% 2019—2021
+% 2019—2022
 
 
 <style>
@@ -18,7 +18,7 @@
 }
 </style>
 
-Zde jsou příklady pro cvičení k mým přednáškám na Lesnické a dřevařské fakultě pro bakalářské studium v zimním semestru 2021/2022. 
+Zde jsou příklady pro cvičení k mým přednáškám na Lesnické a dřevařské fakultě pro bakalářské studium v zimním semestru 2022/2023. 
 Verze k tisku je <a href="cviceni.pdf">zde.</a> V seznamu níže si můžete tisknout materiály po jednotlivých kapitolách.
 
 

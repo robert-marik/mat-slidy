@@ -4,8 +4,10 @@ for i in cviceni*md
 do
    cp $i temp.md
    sed -i 's/<div class=reseni>/\\reseni/' temp.md
-   pandoc temp.md --template cviceni.latex --filter remove_figures.py -o tex/$i.tex -s
-   pandoc temp.md --filter remove_figures.py -o tex/$i.standalone.tex 
+#   pandoc temp.md --template cviceni.latex --filter remove_figures.py -o tex/$i.tex -s
+#   pandoc temp.md --filter remove_figures.py -o tex/$i.standalone.tex 
+   pandoc temp.md --template cviceni.latex -o tex/$i.tex -s
+   pandoc temp.md -o tex/$i.standalone.tex 
 done
 
 rm tex/*14*
