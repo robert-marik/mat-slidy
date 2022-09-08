@@ -1,6 +1,6 @@
 % Derivace funkce
 % Robert Mařík
-% 2020,2021
+% 2020,2021, 2022
 
 
 > **Motivace**.
