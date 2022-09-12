@@ -12,8 +12,9 @@ do
   fi
 
   cd $i
-  pandoc --template ../default.latex slidy.md -o slidy.tex
-  pandoc slidy.md -o $jj.tex
+  	
+  sed 's/^manim.*//' slidy.md | pandoc --template ../default.latex -o slidy.tex
+  sed 's/^manim.*//' slidy.md | pandoc - -o $jj.tex
   vlna slidy.tex
   vlna $jj.tex
   sed -i 's/♣/\\ensuremath{\\clubsuit}/g' slidy.tex
