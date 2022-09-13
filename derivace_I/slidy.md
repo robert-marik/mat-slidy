@@ -209,6 +209,8 @@ opřít o pojem spojitost, který je přece jenom intuitivnější.
 
 ## Spojitost
 
+manimp:Spojitost|Díky limitě a spojitosti se naučíme dělit nulou a budeme moci počítat okamžitou rychlost pomocí rychlosti průměrné.
+
 Definice spojitosti zavádí jakousi třídu funkcí, které jsou v jistém smyslu pěkné a můžeme pro ně použít postupy, které pro obecné funkce nefungují. Jsou zde funkce, jejichž funkční hodnoty se mění plynule a nemůžou se změnit skokově. Malá změna ve vstupních datech vyvolá malou změnu ve funkčních hodnotách.  
 
 Buď $f\colon \mathbb R\to\mathbb R$ funkce jedné proměnné.
