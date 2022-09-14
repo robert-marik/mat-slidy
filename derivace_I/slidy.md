@@ -274,6 +274,18 @@ $f'$, $f'(x)$ nebo $\frac{\mathrm df}{\mathrm dx}$. Zápis $\frac{\mathrm df}{\m
 * Podíl, tj. $\frac{f(x+h)-f(x)}h$ je změna veličiny $f$ na intervalu $[x,x+h]$ přepočítaná na jednotku veličiny $x$, tj. v jistém smyslu průměrná rychlost na tomto intervalu. Často označujeme též $\frac{\Delta f}{\Delta x}$.
 * Limita v definici derivace stahuje délku intervalu, na kterém počítáme průměrnou rychlost, k nule. Tím se z průměrné rychlosti stane okamžitá rychlost.
 
+
+
+|Část definičního vztahu|Slovní interpretace|
+|:---|:---|
+|$f(x)$|funkční hodnota v bodě|
+|$f(x+h)$|funkční hodnota ve vedlejším bodě|
+|$f(x+h)-f(x)$|změna funkce na intervalu $[x,x+h]$|
+|$\displaystyle\frac{f(x+h)-f(x)}{h}$|průměrná rychlost změny funkce na intervalu $[x,x+h]$|
+|$\displaystyle\lim_{h\to 0}\cdots$|limita pro redukci průměrné rychlosti na okamžitou|
+|$\displaystyle\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}$|okamžitá rychlost změny funkce v bodě $x$, derivace|
+
+
 \iffalse
 
 `ww2:problems/derivace_pouziti/definice_derivace.pg`
@@ -689,10 +701,23 @@ kde $c$ je měrná tepelná kapacita a $\rho$ je hustota. (V tomto případě js
   * Například pokles $-\frac{\partial q}{\partial x}=2\,\mathrm{J}/(\mathrm{min}\,\mathrm{cm})$ toku $q=10\,\mathrm{J}/\mathrm{min}$ znamená, že o centimetr dál ve směru osy $x$ proteče průřezem směrem doprava už nikoliv deset, ale pouze osm joulů za minutu. Tedy každou minutu se v jenom centimetru délky od toku "odpojí" energie o velikosti dva jouly a ta se "uloží" do materiálu. Navenek se to projeví ohřevem, přičemž hrají roli fyzikální vlastnosti materiálu.
 * Rovnice odvozená v předchozím kroku se nazývá **rovnice vedení tepla** a dokáže modelovat například prostup tepla stěnou domu. Tato rovnice zachycuje matematicky to, jak funguje vedení tepla. 
 
+
 **Shrnutí.** V odvození vidíme, že rovnice vedení tepla je vlastně
-bilance toku tepla. Rozdíl o kolik se v daném místě snižuje tok tepla
+bilance toku tepla. Hodnota o kolik se v daném místě snižuje tok tepla
 udává, kolik tepla se v daném místě spotřebovalo. Tato spotřeba tepla
 se projeví zvýšením teploty v daném bodě.
+
+|Část rovnice vedení tepla|Slovní interpretace|
+|:---|:---|
+|$\color{red}\displaystyle\frac{\partial T}{\partial t}$|Rychlost s jakou roste v daném místě teplota jako funkce času.|
+|$\displaystyle\frac{\partial T}{\partial x}$|Rychlost s jakou roste v daném okamžiku teplota podél tyče.|
+|$\displaystyle-\frac{\partial T}{\partial x}$|Rychlost s jakou klesá v daném okamžiku teplota podél tyče. Záporně  vzatá rychlost růstu.|
+|$\displaystyle-k\frac{\partial T}{\partial x}$|Tok tepla. Podle Fourierova zákona je úměrný rychlosti s jakou klesá teplota.|
+|$\displaystyle\frac{\partial}{\partial x}\left(-k\frac{\partial T}{\partial x}\right)$|Rychlost s jakou roste tok tepla podél tyče.|
+|$\displaystyle-\frac{\partial}{\partial x}\left(-k\frac{\partial T}{\partial x}\right)$|Rychlost s jakou klesá tok tepla podél tyče. Toto teplo zůstává v daném místě tyče a projeví se nárůstem teploty v tomto místě.|
+|$\color{red}\displaystyle\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)$|Upravený výraz z předchozího řádku. Rychlost s jakou klesá tok tepla podél tyče.|
+|Rovnice vedení tepla|Červené výrazy jsou si úměrné.|
+
 
 **Poznámka.** Vyřešit rovnici vedení tepla je bohužel možné jenom v poměrně speciálních případech, které jsou z praktického hlediska málo významné. Existuje však řada numerických metod jak tuto rovnici vyřešit přibližnými metodami. Tato rovnice je potom "schována" například v softwarech umožňujících vizualizovat tepelné namáhání v okolí kritických prvků staveb, jako jsou okna. Všimněte si univerzálnosti této rovnice. Stejná rovnice, jakou můžeme použít pro posouzení teplotního komfortu ve stavbě, dokáže modelovat například vliv stromu na tepelnou pohodu v městském prostředí nebo prostup tepla do dřeva při jeho tepelné modifikaci.
 

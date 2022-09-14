@@ -473,7 +473,11 @@ pro rovnici popisující vedení tepla na stranách 88 a 89.
 
 V této rovnici není zahrnut případ, kdy se veličina přenáší ještě i prouděním hmotného prostředí (konvekce).
 
+\iffalse
+
 `ww2:problems/difuzni_rce/interpretace_clenu.pg`
+
+\fi
 
 # Rovnice mělké vody
 
@@ -607,7 +611,11 @@ $${\varrho c\frac{\partial T}{\partial t}=  \nabla\cdot\bigl(D\nabla T\bigr)}$$
 
 \fi
 
+\iffalse
+
 `ww2:problems/difuzni_rce/vedeni_tepla_vypocet.pg`
+
+\fi
 
 Tato rovnice je zobecnění rovnice vedení tepla v jedné dimenzi, kterou jsme
 odvodili primitivními prostředky (jenom pomocí parciálních derivací, bez gradientu a divergence) ve tvaru
@@ -788,9 +796,11 @@ a pokud máte před sebou podobnou rovnici, ve které některý člen chybí, zn
 * Jsou všechny difuzní koeficienty stejné (například $D$), nebo jsou odlišeny (například indexy $D_x$, $D_y$, $D_z$)? Pokud jsou stejné, jedná se o _izotropní_ materiál a rovnice dokáže popsat pouze materiál mající ve všech směrech stejné vlastnosti. Pokud jsou difuzní koeficienty odlišeny, jedná se o _anizotropní_ nebo _ortotropní_ materiál a dokážeme s ní popsat i materiály mající díky své struktuře jiné vlastnosti v jednotlivých směrech.
 * Jsou difuzní koeficienty uvnitř derivací ve členech typu $$\frac{\partial }{\partial x}\left(D_x\frac{\partial u}{\partial x}\right)$$ nebo jsou difuzní členy zjednodušeny do tvaru $$D_x\frac{\partial ^2 u}{\partial x^2}$$ s druhými derivacemi? Pokud jsou zjednodušeny do druhého tvaru se součinem difuzního koeficientu a druhé derivace, znamená to, že rovnice je sice jednodušší, ale rovnice je schopna popsat pouze materiál, který je _homogenní_ a konstitutivní zákon v tomto materiálu je _lineární_. V opačném případě (nehomogenita materiálu, nelinearita materiálu, případně obojí) necháváme difuzní koeficienty uvnitř derivace, tak jak to je v obecném případě. Rovnice je komplikovanější, ale umožňuje práci s obecnějšími materiály.
 
+\iffalse
 
 `ww2:problems/difuzni_rce/predpoklady.pg`
 
+\fi
 
 # Shrnutí, hlavní myšlenky
 
