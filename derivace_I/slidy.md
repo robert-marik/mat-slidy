@@ -58,12 +58,12 @@ Na řadu použití stačí intuitivní chápání funkce i jejích vlastností. 
 
 ## Přímá a nepřímá úměrnost
 
-Je to až k nevíře, ale k popisu obrovského množství dějů stačí čtyři základní operace: sčítání, odčítání, násobení a dělení. Vzhledem k požadavku na konzistenci fyzikálních jednotek se nejčastěji setkáváme s násobením a dělením a proto funkce pracující s těmito operacemi mají výsadní postavení. Takový, že si vysloužili pojmenování běžně užívané i mezi nematematiky: přímá a nepřímá úměrnost.
+Je to až k nevíře, ale k popisu obrovského množství dějů stačí čtyři základní operace: sčítání, odčítání, násobení a dělení. Vzhledem k požadavku na konzistenci fyzikálních jednotek se nejčastěji setkáváme s násobením a dělením a proto funkce pracující s těmito operacemi mají výsadní postavení. Takový, že si vysloužili pojmenování běžně užívané i mezi nematematiky: přímá a nepřímá úměrnost. Je to formální popis situace, kdy souvislost mezi dvěma veličinami je zprostředkována násobením konstantou (přímá úměrnost), nebo kdy je násobením konstantou zprostředkována souvislosts mezi jednou veličinou a převrácenou hodnotou druhé veličiny.
 
 > Definice (přímá a nepřímá úměrnost). Veličina $y$ je *přímo úměrná* veličině $x$ jestliže existuje konstanta $k$ taková, že platí $$y=kx.$$ 
 Veličina $y$ je *nepřímo úměrná* veličině $x$ jestliže existuje konstanta $k$ taková, že platí $$y=\frac kx.$$
 
-**Poznámka.** Je-li veličina $y$ úměrná veličině $x$, píšeme $$y\sim x\text{ nebo }y\propto x.$$ Je-li navíc konstanta úměrnosti blízká jedničce, tj. $x$ a $y$ jsou blízké, píšeme $$y\approx x.$$ Pro nepřímou úměrnost píšeme podobně $y\sim \frac 1x$, $y\propto \frac 1x$ a $y\approx \frac 1x.$
+**Poznámka.** Je-li veličina $y$ úměrná veličině $x$, píšeme $$y\sim x\text{ nebo }y\propto x.$$ Je-li navíc konstanta úměrnosti blízká jedničce, tj. $x$ a $y$ jsou blízké, píšeme $$y\approx x.$$ Pro nepřímou úměrnost píšeme podobně $y\sim \frac 1x$, $y\propto \frac 1x$ a $y\approx \frac 1x$ s využitím toho, že nepřímá úměrnost je vlastně přímá úměrnost pro převrácenou hodnotu.
 
 \iffalse
 
@@ -281,7 +281,7 @@ $f'$, $f'(x)$ nebo $\frac{\mathrm df}{\mathrm dx}$. Zápis $\frac{\mathrm df}{\m
 |$f(x)$|funkční hodnota v bodě|
 |$f(x+h)$|funkční hodnota ve vedlejším bodě|
 |$f(x+h)-f(x)$|změna funkce na intervalu $[x,x+h]$|
-|$\displaystyle\frac{f(x+h)-f(x)}{h}$|průměrná rychlost změny funkce na intervalu $[x,x+h]$|
+|$\displaystyle\frac{f(x+h)-f(x)}{h}$|průměrná rychlost změny funkce na intervalu $[x,x+h]$, též změna funkce po přepočtu na interval jednotkové délky|
 |$\displaystyle\lim_{h\to 0}\cdots$|limita pro redukci průměrné rychlosti na okamžitou|
 |$\displaystyle\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}$|okamžitá rychlost změny funkce v bodě $x$, derivace|
 
@@ -339,7 +339,7 @@ Obecně, ať již je nezávislou proměnnou čas či jiná veličina, se derivac
 
 td {padding:10px; text-align: center;}
 tr:nth-child(even) {color:green; background: #E9E9E9;}
-table {border-collapse: collapse; width:80%; margin:auto;}
+table {border-collapse: collapse; width:80%; margin:auto; margin-top:20px; margin-bottom:20px;}
 th {color:white; background: #555;}
 
 </style>
