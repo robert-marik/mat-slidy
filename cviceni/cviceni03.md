@@ -188,7 +188,11 @@ $\left(1-\frac 0K\right)=1$. V okolí $x=0$ je první součinitel lineární a v
 
 # Numerické derivování a závislost tepelné vodivosti mědi na teplotě
 
+\iffalse 
+
 ![pixabay.com](medene_nadobi.jpg)
+
+\fi
 
 Tabulka udává závislost koeficientu tepelné vodivosti mědi na teplotě, $\lambda=\lambda(T)$. Odhadněte pomocí centrální diference derivaci funkce $\lambda$ pro $T=400K$ (cca $127^\circ \mathrm C$). Určete i fyzikální jednotku derivace $\frac{\mathrm d\lambda}{\mathrm dT}$ a slovní interpretaci vypočtené hodnoty.
 
@@ -218,7 +222,11 @@ Pokusíme se trošku slovně ilustrovat, co nám vlastně vyšlo. Při teplotě 
 
 # Iterační metoda
 
+\iffalse 
+
 ![pixabay.com](sun_house.jpg)
+
+\fi
 
 Úlohy s tepelnou bilancí (např. osluněná stěna) často vedou na rovnice obsahující čtvrtou mocninu  a první mocninu neznámé veličiny. Toto je dáno tím, že vyzařování tepla souvisí podle Stefanova-Bolzmannova zákona se čtvrtou mocninou teploty  a přenos tepla prouděním nebo vedením souvisí s první mocninou teploty.
 Koeficient u první mocniny bývá větší než u čtvrté mocniny, protože konstanta ze Stefanova-Bolzmannova zákona je velmi malá. Typickým představitelem by mohla být rovnice $$x^4-8x+6=0.$$

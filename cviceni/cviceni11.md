@@ -2,7 +2,11 @@
 
 # Difuzní rovnice ve 2D
 
+\iffalse 
+
 ![Difuzní rovnice dokáže například objasnit i modelování chemických rekací s přihlédnutím k prostorovému rozložení reagujících látek a jejich koncentrací. Jednou z aplikací je vysvětlení toho, proč jednotný mechanismus tvorby vzorů na srsti savců vede jednou k pruhům a jednou ke skvrnám na srsti. Dokážeme tak například lépe pochopit proces, jakým se geny přepisují do viditelných znaků. Podrobněji Murray: Mathematical biology nebo How the leopard gets its spots. Obrázek: pixabay.com](tigr.jpg)
+
+\fi 
 
 Rozepište difuzní rovnici
 $$\frac{\partial u}{\partial t}=\sigma+\nabla\cdot (D\nabla u)$$
@@ -96,7 +100,11 @@ krajích stěny.
 
 # Stacionární vedení tepla v žebru chladiče
 
+\iffalse 
+
 ![pixabay.com](chladic.jpg)
+
+\fi 
 
 Výjimečně jsme nuceni do rovnice vedení tepla zahrnout i zdroje. 
 Modelujte vedení tepla v žebru chladiče. Úlohu uvažujte jako

@@ -7,7 +7,11 @@
 
 # Tepelná výměna podle Newtonova zákona
 
+\iffalse
+
 ![pixabay.com](room.jpg)
+
+\fi
 
 Newtonův zákon ochlazování je možné použít pro tělesa, u nichž teplota je ve všech místech stejná a efekty spojené s vedením tepla jsou zanedbatelné. Takové objekty charakterizujeme nízkým Biotovým číslem (naučíte se v navazujících předmětech jako Fyzikální vlastnosti dřeva). Předpokládejme, že nevytápěná místnost tyto podmínky splňuje.
 
@@ -108,7 +112,12 @@ Všimněte si, že poslední dvě podmínky se liší znaménkem u $T$. To proto
 
 # Model růstu úměrného velikosti chybějícího množství
 
+
+\iffalse
+
 ![Model popsaný v této úloze se často používá například při studiu růstu ryb. Obrázek: pixabay.com, PublicDomainImages](pstruh.jpg)
+
+\fi
 
 Mnoho
 živočichů roste tak, že mohou dorůstat jisté maximální délky a
@@ -130,7 +139,11 @@ $$\frac{\mathrm dL}{\mathrm dt}=k (L_{\max}-L).$$
 
 # Kontaminace a čištění
 
+\iffalse
+
 ![pixabay.com](kontaminace.jpg)
+
+\fi
 
 Znečišťující látky se v kontaminované oblasti rozkládají tak, že za den se samovolně rozloží 
 $8\%$ aktuálního znečištění. Kromě toho pracovníci odstraňují látky rychlostí $30$
@@ -149,7 +162,11 @@ $$\frac{\mathrm dy}{\mathrm dt}=-0.08y-30.$$
 
 # Logistická rovnice: model využívání přírodních zdrojů
 
+\iffalse
+
 ![pixabay.com](lov.jpg)
+
+\fi 
 
 Při modelování růstu populace o velikosti $x(t)$ často pracujeme s populací žijící v prostředí s omezenou úživností (nosnou kapacitou). Často používáme model
 $$\frac{\mathrm d x}{\mathrm dt}=rx\left(1-\frac xK\right),$$
@@ -173,7 +190,11 @@ Funkce $f_h(x)=rx\left(1-\frac xK\right)-h$ vznikne posunutím funkce $f(x)=rx\l
 
 # Populace jelenů
 
+\iffalse
+
 ![pixabay.com, autor Free-Photos](deer.jpg)
+
+\fi
 
 Populace jelenů v národním parku přibývá rychlostí 10\% za
 rok. Správa parku každý rok odebere 50 jedinců. Napište
@@ -207,7 +228,11 @@ $$\frac{\mathrm dy}{\mathrm dt}=ky(M-y).$$
 
 # Ropná skvrna
 
+\iffalse
+
 ![pixabay.com](olej.jpg)
+
+\fi
 
 Kruhová ropná skvrna na hladině se rozšiřuje
 tak, že její poloměr jako funkce času roste rychlostí, která je

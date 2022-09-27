@@ -434,8 +434,6 @@ Takovým způsobem můžeme u materiálu se známou strukturou odhadnout fyziká
 
 [Online výpočet a obrázek.](https://gist.github.com/robert-marik/e53bfb4b0bf91809c489780ddcff447c)
 
-
-
 \fi
 
 # Řešení rovnic
@@ -549,8 +547,11 @@ mnoho výpočtů a rychlost konvergence je zásadní.
 
 [Python skript](https://gist.github.com/robert-marik/7eb864d3bc5d995772164baf13299e79)
 
-**Příklad.**
-Někdy je možné použít ad hoc iterační techniku. Například rovnici $$x^4+7x-7=0$$ můžeme přepsat do tvaru $$x=\frac 17 (7-x^4)$$ a iterační vzorec
+> Poznámka (ad hoc iterace).
+Newtonovu metodu je možné chápat také tak, že rovnici $$f(x)=0$$ přepíšeme do ekvivalentního tvaru $$x = x - \frac{f(x)}{f'(x)} \tag{*}$$ a poté hledáme iteracemi 
+$$x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}$$ takové $x$, kdy se levá strana rovná pravé. Někdy je možné použít analogickou iterační techniku, kdy však zadanou rovnici převedeme do jiného tvaru, než (*). Zpravidla snížíme šance, že proces konverguje a snížíme rychlost konvergence, ale i tak to může být výhodné, protože nemusíme počítat derivaci funkce. Ad hoc iterace použijeme například při odvození Jacobiho metody pro iterační řešení soustavy lineárních rovnic.
+
+**Příklad (ad hoc iterace).** Například rovnici $$x^4+7x-7=0$$ můžeme přepsat do tvaru $$x=\frac 17 (7-x^4)$$ a iterační vzorec
 $$x_{n+1}=\frac 17 (7-x_n^4)$$ s počátečním odhadem $x=1$ dává po deseti iteracích [tři desetinná místa shodná](https://sagecell.sagemath.org/?z=eJxTVqiIM9E2r9A1tzXg5VJWqLA11DdX0DDXBQpr8nLxcgEFeLnS8osUMhUy8xSKEvPSUzVMDTSteLkUgKDCNk8DqEELqkETIlpQlJlXoqCRqVOhCQAgthZa&lang=sage&interacts=eJyLjgUAARUAuQ==).
 
 ~~~
@@ -576,7 +577,6 @@ Vidíme konvergenci a iterační vzorec jsme našli s minimálním úsilím. Ryc
 4 0.904417592352745
 ~~~
 
-Ad hoc iterace použijeme například při odvození Jacobiho metody pro iterační řešení soustavy diferenciálních rovnic.
 
 
 # Shrnutí, hlavní myšlenky

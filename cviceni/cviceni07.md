@@ -43,7 +43,11 @@ _Umění najít řešení diferenciální rovnice je sympatické a naučíme se 
 
 # Tloušťka ledu
 
+\iffalse 
+
 ![pixabay.com](ledni_medved.jpg)
+
+\fi 
 
 Takzvaný Stefanův zákon (J. Stefan, \"Uber die Theorie der Eisbildung, insbesondere \"uber die Eisbildung im Polarmeere, 1891) vyjadřuje že tloušťka ledu na hladině moře roste ve
 stabilních podmínkách rychlostí nepřímo úměrnou této tloušťce. Zapište
@@ -68,7 +72,11 @@ $$
 
 # Model vypouštění nádrže
 
+\iffalse 
+
 ![www.rodovystatek.cz](voda_plastovky.jpg)
+
+\fi 
 
 Z fyziky je známo, že rychlost s jakou
 vytéká tekutina otvorem u dna nádoby je úměrná odmocnině výšky hladiny
@@ -115,7 +123,11 @@ $$\frac {\mathrm dh}{\mathrm dt}=-kh^{-3/2}.$$
 
 # Problematika jednoznačnosti v modelu vypouštění nádrže
 
+\iffalse 
+
 ![www.rodovystatek.cz](voda_plastovky.jpg)
+
+\fi 
 
 Dříve jsme odvodili rovnici
 $$\frac{\mathrm dh}{\mathrm dt}=-k\sqrt h$$
@@ -165,7 +177,11 @@ Je-li $h(t_0)=0$, může to být proto, že voda v čase $t_0$ právě vytekla, 
 
 # Stavebniny vedle čebínského nádraží: model
 
+\iffalse 
+
 ![vlastní](pokros.jpg)
+
+\fi 
 
 Hromada sypkého materiálu má tvar kužele. Úhel u vrcholu je
 konstantní, daný mechanickými vlastnostmi materiálu a je nezávislý na
@@ -192,7 +208,11 @@ kde $r$ a $k=k_0k_1$ jsou konstanty.
 
 # Stavebniny vedle čebínského nádraží: stabilita řešení
 
+\iffalse 
+
 ![vlastní](pokros.jpg)
+
+\fi 
 
 Hromada sypkého materiálu má tvar kužele. Úhel u vrcholu je konstantní, daný
 mechanickými vlastnostmi materiálu a je nezávislý na
