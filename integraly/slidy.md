@@ -228,7 +228,7 @@ Integrování si také můžete procvičit v následujících cvičeních.
 
 
 
-*Teplota klesá rychlostí $\frac{\mathrm dT}{\mathrm dt}=-0.1 e^{-0.01
+*Uvažujme těleso, jehož teplota klesá známou rychlostí. Derivace teploty podle času je $\frac{\mathrm dT}{\mathrm dt}=-0.1 e^{-0.01
 t} \,{}^\circ \mathrm C/\mathrm{min}.$ Cílem je najít teplotu jako
 funkci času. Dodatečná informace je, že počáteční teplota je $28
 ^\circ \mathrm{C}$.*
@@ -250,7 +250,7 @@ t}\right)\,{}^\circ \mathrm C.$$
 > Poznámka (veličina vypočtená z rychlosti své změny). Pokud se veličina $f(t)$ mění v čase rychlostí $r(t)$, platí $$f(t)=\int r(t)\,\mathrm dt,$$ přičemž pravá strana je dána jednoznačně až na aditivní konstantu. To koresponduje s pozorováním, že rychlost změn k jednoznačné identifikaci časového průběhu měnící se veličiny nestačí. Je potřeba mít zadán ještě výchozí stav.
 
 
-**Příklad.** Na jednom z předchozích slidů jsme viděli, že křivka,
+**Příklad.** V úvodu přednášky jsme viděli, že křivka,
 která je přirozená pro nosné lano zavěšeného mostu, splňuje rovnici
 $$y'=\frac{\mu g}{T}x.$$ Pouze za této podmínky bude lano namáháno ve
 směru své nejvyšší pevnosti, tj. v podélném směru, ve směru své
@@ -298,9 +298,9 @@ $$
 
 ## Změna funkce z rychlosti změny (časová změna teploty)
 
-*Teplota klesá rychlostí
+*Uvažujme těleso, jehož teplota klesá známou rychlostí. Derivace teploty podle času je 
 $\frac{\mathrm dT}{\mathrm dt}=-0.1 e^{-0.01 t} \,{}^\circ \mathrm
-C/\mathrm{min}.$ Cílem je určit pokles teploty za první hodinu a pokles teploty za druhou hodinu.*
+C/\mathrm{min}.$ Chceme určit pokles teploty za první hodinu a pokles teploty za druhou hodinu.*
 
 Neurčitý integrál
 $$\int - 0.1 e^{-0.01t} \,\mathrm dt=10 e^{-0.01t}+C$$
