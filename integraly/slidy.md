@@ -2,7 +2,6 @@
 % Robert Mařík
 % 2019-2021
 
-
 https://youtu.be/w2qTl73CsnI
 
 Naučili jsme se pracovat s derivacemi, tedy s rychlostí změny.
@@ -80,6 +79,9 @@ Závislá proměnná|Derivace podle času|
 
 \fi
 
+
+<div class=shorten data-text="Ukázka úlohy vedoucí na problém nalézt funkci, mající známou derivaci.">
+
 ## Motivace: Jak z derivace křivky získat rovnici křivky?
 
 \iffalse
@@ -135,6 +137,8 @@ redukuje na případ pohybu konstantní rychlostí ($s=vt$) a na střední
 ($s=\frac 12 at^2$). Nyní stojíme před úkolem, jak si poradit v
 případě obecné rychlosti, měnící se libovolně. Přesně to je úkol pro
 neurčitý integrál.
+
+</div>
 
 # Neurčitý integrál
 
@@ -250,7 +254,7 @@ t}\right)\,{}^\circ \mathrm C.$$
 > Poznámka (veličina vypočtená z rychlosti své změny). Pokud se veličina $f(t)$ mění v čase rychlostí $r(t)$, platí $$f(t)=\int r(t)\,\mathrm dt,$$ přičemž pravá strana je dána jednoznačně až na aditivní konstantu. To koresponduje s pozorováním, že rychlost změn k jednoznačné identifikaci časového průběhu měnící se veličiny nestačí. Je potřeba mít zadán ještě výchozí stav.
 
 
-**Příklad.** V úvodu přednášky jsme viděli, že křivka,
+**Příklad.** V úvodu přednášky je popsáno, že křivka,
 která je přirozená pro nosné lano zavěšeného mostu, splňuje rovnici
 $$y'=\frac{\mu g}{T}x.$$ Pouze za této podmínky bude lano namáháno ve
 směru své nejvyšší pevnosti, tj. v podélném směru, ve směru své
@@ -349,6 +353,8 @@ Slovní úlohy kde se hledaná veličina mění nekonstantní rychlostí jsou v 
 \fi
 
 
+<div class="shorten" data-text="Tato ukázka demonstruje převod rychlosti změny teploty v prostoru na změnu teploty mezi dvěma místy.">
+
 ## Změna funkce z rychlosti změny (prostorová změna teploty)
 
 \iffalse
@@ -386,6 +392,8 @@ později.
 Stejný princip funguje pro libovolné ustálené proudění radiálním směrem při konstantní materiálové charakteristice. Stejný přístup je možné použít pro proudění podzemní vody popsané Darcyho zákonem (namísto Fourierova zákona) pro zvodeň namísto izolace (zvodeň je prostor kde se nachází a teče podzemní voda, tj. něco jako podzemní rybník nebo řeka zasypaná pískem nasáklým vodou) a piezometrickou výšku $h$ namísto teploty (piezometrická výška udává, jak vysoko vystoupá voda ve zkušebním vrtu). Pokud máme zvodeň s napjatou hladinou (voda je pod tlakem sevřena mezi dvěma nepropustnými vrstvami), je vodivost konstantní. Rovnice popisující tuto situaci má tvar $$h-h_0=\frac{Q}{2\pi T}\ln \frac r{r_0}$$ a nazývá se [Thiemova rovnice](https://en.wikipedia.org/wiki/Aquifer_test#Steady-state_Thiem_solution).
 
 Pokud sledujeme prostup tepla izolací, jejíž teplotní vodivost se mění s teplotou, není veličina $k$ konstantní a proto výše uvedený postup není možné realizovat a odvozený vzorec pro takový případ neplatí. Stejná situace nastává u podzemní vody a proudění s volnou hladinou (není horní nepropustná vrstva zvodně). Takové úlohy vedou na jinou problematiku, kterou se naučíme řešit v kapitole s diferenciálními rovnicemi.
+
+</div>
 
 > Poznámka (změna veličiny vypočtená pomocí gradientu). Pokud se veličina $f$ mění podél přímky v závislosti na veličině $x$ na intervalu od $x=a$ do $x=b$ rychlostí $r(x)$ (tj. $r(x)=\frac{\mathrm df(x)}{\mathrm dx}$), je změna veličiny $f$ na intervalu $[a,b]$ rovna $$\Delta f=f(b)-f(a)=\int_a^b r(x)\,\mathrm dx.$$
 
@@ -511,6 +519,8 @@ následující přednášce.
    okamžik pohybu, platí $$s=\int_a^b v(t)\,\mathrm dt.$$
 
 
+<div class="shorten" data-text="Zde je ukázáno, jak vypočítat tlak na plochu, která je rozložena přes celý interval hloubky. Na každém místě totiž působí jiný tlak a příspěvky přes všechny hodnoty hloubky je nutné posčítat integrálem.">
+
 ## Nasčítání příspěvků k celkové síle na přehradu
 
 \iffalse
@@ -562,9 +572,11 @@ označíme $H$.
    působila tlaková síla vyvolaná tlakem $\frac 12 H\rho g$,
    tj. tlakem v poloviční hloubce.
 
+</div>
+
+<div class="shorten" data-text="Ukázka demonstruje, jak stanovit tok trubkou. Pokud by v celém průřezu byla stejná rychlost, počítal by se tok násobením. Protože v reálném proudění rychlost směrem ke stěnám trubky klesá, je nutné celkový tok určit jako příspěvky z jednotlivých míst trubky a všechno posčítat integrálem.">
 
 ## Nasčítání příspěvků k celkovému toku potrubím
-
 
 \iffalse
 
@@ -608,6 +620,9 @@ trubice. Proto je $\frac {v_{max}}2$ nazývána střední profilová rychlost pr
 
 (Volně podle Dana Říhová a Jana Marková, Poznámky k přednáškám z Hydrauliky, přednáška č. 3.)
 
+</div>
+
+<div class="shorten" text="Volitelná ukázka aplikace (výpočet momentu setrvačnosti pomocí integrálu)">
 
 ## Nasčítání příspěvků k celkovému momentu setrvačnosti tyče
 
@@ -683,6 +698,7 @@ integrálem, ale závisí na poloze tyče vzhledem k ose otáčení.
   Wallenda](https://en.wikipedia.org/wiki/Nik_Wallenda#Canyon_walk)).
 
 
+</div>
 
 # Shrnutí, hlavní myšlenky
 

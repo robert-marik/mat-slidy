@@ -1,4 +1,5 @@
 rsync="rsync"
+#rsync="echo"
 server="cornus.mendelu.cz"
 #server="kiwi.mendelu.cz"
 #server="um.mendelu.cz"

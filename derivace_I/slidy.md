@@ -131,6 +131,8 @@ nerovnice jsou záporné) apod. Takových situací je mnoho a protože není
 v lidských silách si všechny pamatovat, stačí je míst spojeny s
 definicí rostoucí a klesající funkce.
 
+<div class="shorten" data-text="Využití monotonie k práci s nerovnostmi">
+
 **Příklad (užitečnost monotonie při práci s nerovnicemi).** Funkce $\ln x$ a $\sqrt x$ jsou rostoucí a proto z nerovnic $$\ln x>\ln 6$$ a $$\sqrt x>\sqrt 6$$ plyne $$x>6.$$ Zejména v druhém případě je nutné si uvědomit, že používáme definici rostoucí funkce a skutečnost, že nezápornost obou stran nerovnice zajišťuje, že pracujeme na intervalu kladných hodnot $x$, kde je druhé mocnina rostoucí funkce. Nestačí říct, že umocňujeme obě strany nerovnice, jak by někdo mohl tento krok dezinterpretovat. Umocněním obou stran nerovnice se obecně může změnit obor pravdivosti, proto tato operace u nerovnic není povolena. Na celém svém definičním oboru totiž druhá mocnina rostoucí není. 
 
 **Příklad (nerovnice obsahující nemonotonní funkce).** Funkce $\frac 1x$ a $y=x^2$ nejsou ani rostoucí ani klesající a proto z žádné z nerovností
@@ -143,6 +145,7 @@ plyne
 $$\sqrt x\geq 5=\sqrt {25}.$$ 
 Druhá mocnina je na intervalu $(5,\infty)$ rostoucí a proto odsud plyne dále $$x\geq 25.$$
 
+</div>
 
 # Přípravné úvahy pro zavedení derivace
 
@@ -512,6 +515,8 @@ Derivování si také můžete procvičit v následujících cvičeních. Se zá
 
 \fi
 
+<div class="shorten" data-text="Využití derivace k odvození vztahu mezi rychlostmi změn veličin ze vztahu mezi těmito veličinami. ">
+
 ## Vztah mezi rychlostmi měnících se veličin
 
 \iffalse
@@ -560,7 +565,7 @@ Elektrický odpor dřeva a mnoha dalších stavebních materiálů souvisí s vl
 $$\frac{\mathrm dU}{\mathrm dt}=\frac 1C \frac{\mathrm dQ}{\mathrm dt}.$$
 Veličina $\frac{\mathrm dQ}{\mathrm dt}$ je nabíjecí proud. Ten dokážeme určit analýzou elektrického obvodu, jak si ukážeme v přednášce o diferenciálních rovnicích. Tím budeme znát derivaci $\frac{\mathrm dU}{\mathrm dt}$ a najít napětí jako funkci času z derivace se naučíme v přednášce o integrálech. Důležitým prvním krokem při analýze uvažovaného elektrického zapojení je však souvislost časové změny napětí a časové změny náboje, tj. derivace dvou souvisejících veličin.
 
-
+</div>
 
 
 # Funkce více proměnných

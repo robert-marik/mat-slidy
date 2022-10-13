@@ -187,6 +187,7 @@ https://youtu.be/UaSCLmV_g4o
   radioaktivního uhlíku pod měřitelnou úroveň. Proto se
   v tomto případě používají látky s\ delším poločasem rozpadu.
 
+<div class="shorten" data-text="Některé další modely založené na diferenciálních rovnicích.">
 
 ## Rovnice samočištění jezer
 
@@ -313,7 +314,7 @@ RC obvod jako takový má však důležité místo i dnes. Dokáže například 
 
 Ve skutečnosti žádná elektronická součástka nemá ideální vlastnosti a proto se v obvodu projevují i nežádoucí parazitní charakteristiky. Pokud by toto bylo limitující, je možné obvod nahradit podobně se chovajícím zapojením s [operačním zesilovačem](https://cs.wikipedia.org/wiki/Zapojen%C3%AD_s_opera%C4%8Dn%C3%ADm_zesilova%C4%8Dem#Integra%C4%8Dn%C3%AD_zesilova%C4%8D) (odkazovaná stránka pracuje s rovnicí v integrálním tvaru).
 
-
+</div>
 
 ## Vývoj populace a její ekologický lov
 
@@ -349,6 +350,7 @@ Ve skutečnosti žádná elektronická součástka nemá ideální vlastnosti a 
 
 \iffalse
 
+<div class="shorten" data-text="Čeští hledači meteoritů a diferenciální rovnice.">
 
 ## Lovci meteoritů z ČSSR a ČR
 
@@ -371,6 +373,8 @@ Meteority s vystopovaným původem jsou extrémně vzácné (do roku 2000 jenom 
 Použité metody jsou popsány například v článku *Ceplecha, Revelle: Fragmentation model of meteoroid motion, mass loss, and radiation in the atmosphere, Meteoritics & Planetary Science 40, Nr 1, 35–54 (2005).* Například ztráta rychlosti třením v atmosféře je modelována rovnicí $$\frac{\mathrm dv}{\mathrm dt}=-K\rho m^{-1/3}v^{2}$$ a ztráta hmotnosti vypařováním 
 $$\frac{\mathrm dm}{\mathrm dt}=-K\sigma \rho m^{2/3}v^3.$$
 Jedná se o diferenciální rovnice, kde zrychlení (derivace rychlosti) a časová změna hmotnosti (derivace hmotnosti podle času, rychlost, s jakou ubývá hmotnost)  je úměrná vhodným mocninám těchto veličin.
+
+</div>
 
 \fi
 
@@ -799,6 +803,7 @@ Počáteční úloha má jediné řešení, pokud má pravá strana ohraničenou
 
 > Věta (existence a jednoznačnost řešení Cauchyovy úlohy pro rovnici se separovanými proměnnými). Je-li $g(y_0)\neq 0$, má počáteční úloha $$\frac{\mathrm dy}{\mathrm dx}=f(x)g(y),\qquad y(x_0)=y_0$$ právě jedno řešení definované v nějakém okolí počáteční podmínky.
 
+<div class="shorten" data-text="Příklad ukazuje, že i u modelů přírodních procesů může být více než jedno řešení. A že to není v rozporu s tím, jak chápeme fyziku a její kauzalitu.">
 
 ## Diferenciální rovnice růstu vodní kapky
 
@@ -849,6 +854,8 @@ zbavili poté, co se omezilo topení uhlím. My dnes spíše známe
 přechlazenou tekutinu ve formě hřejících polštářků, kde se po lupnutí
 plíškem spustí přeměna skupenství na pevné spojená s\ intenzivním
 uvolněním tepla.
+
+</div>
 
 # Diferenciální rovnice vyšších řádů
 
