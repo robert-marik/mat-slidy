@@ -256,6 +256,8 @@ $$\frac{\mathrm dL}{\mathrm dt}=k (L_{\max}-L).$$
 </div>
 
 
+<div class="shorten" data-text="Volitelně další derivace.">
+
 
 \def\der #1#2.#3.{$#1(#2)=#3$}
 # Výpočet derivace
@@ -295,3 +297,4 @@ _V tomto příkladě se učíme mimo jiné derivovat i podle jiné proměnné ne
 </div>
 
 
+</div>

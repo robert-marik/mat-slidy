@@ -558,6 +558,8 @@ mnoho výpočtů a rychlost konvergence je zásadní.
 
 [Python skript](https://gist.github.com/robert-marik/7eb864d3bc5d995772164baf13299e79)
 
+<div class="shorten" data-text="Někdy je možné použít místo Newtonova iteračního vzorce i jednodušší iterace, které například nemusí tak rychle konvergovat, ale zase není nutné znát derivace funkce.">
+
 > Poznámka (ad hoc iterace).
 Newtonovu metodu je možné chápat také tak, že rovnici $$f(x)=0$$ přepíšeme do ekvivalentního tvaru $$x = x - \frac{f(x)}{f'(x)} \tag{*}$$ a poté hledáme iteracemi 
 $$x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}$$ takové $x$, kdy se levá strana rovná pravé. Někdy je možné použít analogickou iterační techniku, kdy však zadanou rovnici převedeme do jiného tvaru, než (*). Zpravidla snížíme šance, že proces konverguje a snížíme rychlost konvergence, ale i tak to může být výhodné, protože nemusíme počítat derivaci funkce. Ad hoc iterace použijeme například při odvození Jacobiho metody pro iterační řešení soustavy lineárních rovnic.
@@ -588,7 +590,7 @@ Vidíme konvergenci a iterační vzorec jsme našli s minimálním úsilím. Ryc
 4 0.904417592352745
 ~~~
 
-
+</div>
 
 # Shrnutí, hlavní myšlenky
 

@@ -80,7 +80,7 @@ Závislá proměnná|Derivace podle času|
 \fi
 
 
-<div class=shorten data-text="Ukázka úlohy vedoucí na problém nalézt funkci, mající známou derivaci.">
+<div class="shorten" data-text="Ukázka úlohy vedoucí na problém nalézt funkci, mající známou derivaci.">
 
 ## Motivace: Jak z derivace křivky získat rovnici křivky?
 

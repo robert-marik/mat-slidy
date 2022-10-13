@@ -120,6 +120,7 @@ $$\frac {\mathrm dh}{\mathrm dt}=-kh^{-3/2}.$$
 </div>
 
 
+<div class="shorten" data-text="Příklad ukazuje, že nemusí být vždy jednoznačně určené řešení a že to není fyzikální nesmysl. Zde není jednoznačnost při prodlužování zpětně v čase.">
 
 # Problematika jednoznačnosti v modelu vypouštění nádrže
 
@@ -172,7 +173,7 @@ Je-li $h(t_0)=0$, může to být proto, že voda v čase $t_0$ právě vytekla, 
 </div>
 
 
-
+</div>
 
 
 # Stavebniny vedle čebínského nádraží: model

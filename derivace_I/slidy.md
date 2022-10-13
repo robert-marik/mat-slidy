@@ -147,9 +147,14 @@ Druhá mocnina je na intervalu $(5,\infty)$ rostoucí a proto odsud plyne dále 
 
 </div>
 
+
+
 # Přípravné úvahy pro zavedení derivace
 
 https://youtu.be/e4bnDYi5nkc
+
+
+<div class="shorten" data-text="Níže si představíme nástroje, které používáme při definici derivace a vysvětlujeme si, jak je derivace zavedena. Pokud tomu nepotřebujete rozumět, nerozklikávejte tento odkaz a pokračujte na derivaci. Pokud v definici derivace něco nebude jasné a budete tomu chtít rozumět, můžete se sem vrátit.">
 
 
 \iffalse
@@ -253,6 +258,8 @@ Definici limity opřeme o pojem spojitosti. V podstatě pod limitu skryjeme buď
 > Definice (limita). Nechť $f$ je funkce definovaná v okolí bodu $x_0$, s případnou výjimkou bodu $x_0$. Řekneme, že funkce $f$ má v bodě $x_0$ *limitu* rovnu číslu $L$, jestliže funkce $g(x)$ definovaná vztahem $$g(x)= \begin{cases}   L& x=x_0\\ f(x)& \text {jinak,}\end{cases}$$ je spojitá v bodě $x_0$. Píšeme $$\lim_{x\to x_0}f(x)=L.$$
 
 Velmi stručně řečeno: pokud se nedá nějaké číslo do funkce dosadit přímo, mohlo by to jít pomocí limity. Například funkce $$\frac{\sin x}{x}$$ není definována v nule. V okolí nuly se však chová v jistém smyslu pěkně: má funkční hodnoty prakticky nerozlišitelné od jedničky, viz graf v odstavci věnovanému spojitosti. Proto platí $$\lim_{x\to 0}\frac{\sin x}{x}=1.$$
+
+</div>
 
 # Derivace
 

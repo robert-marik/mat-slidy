@@ -188,8 +188,9 @@ použít přímo lichoběžníkové pravidlo.
 </div>
 
 
+<div class="shorten" data-text="Trošku náročnější aplikace integrálu. Je zadána rychlost růstu populace a zajímá nás cílový stav. Tohoto cílového stavu se však dožije z každé kohorty jenom určité procento jedinců.">
 
-# Růst populace a jejich přežívání
+# Růst populace a přežívání jedinců
 
 \iffalse 
 
@@ -241,6 +242,10 @@ kde i tento integrál se dá vypočítat přímou integrací pomocí vzorce.
 
 </div>
 
+</div>
+
+
+<div class="shorten" data-text="Další trošku náročnější aplikace integrálu. Jak je v úlohách na integrál obvyklé, potřebujeme posčítat příspěvky k aditivní veličině, jejíž hodnota nás zajímá. V tomto pčípadě potřebujeme posčítat příspěvky z kruhové oblasti okolo stromu.">
 
 
 
@@ -278,6 +283,8 @@ Obsah $S=\pi r^2$
 roste s poloměrem, $\frac {\mathrm dS}{\mathrm dr}=2\pi r$. Po dosazení této derivace a po dosazení za $D$ a vyjádření toho, co znamená integrál přes kruh o poloměru $R$ získáme integrál
 $$N=\int _0^R D_0e^{-r^2}2\pi r\,\mathrm dr,$$
 který můžeme vypočítat pomocí substituce $-r^2=t$.
+
+</div>
 
 </div>
 

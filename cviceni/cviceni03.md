@@ -128,6 +128,7 @@ $$\frac {ax}{b+x}\approx 0+\frac ab (x-0)=\frac ab x.$$
 </div>
 
 
+<div class="shorten" data-text="Často zběhlejší počtáři lineární aproximaci prostě poznají hned ze zápisu funkce. Jedna z technik je popsána v tomto příkladě.">
 
 # Lineární aproximace kvalifikovaným odhadem
 
@@ -184,6 +185,7 @@ $\left(1-\frac 0K\right)=1$. V okolí $x=0$ je první součinitel lineární a v
 
 </div>
 
+</div>
 
 
 # Numerické derivování a závislost tepelné vodivosti mědi na teplotě
