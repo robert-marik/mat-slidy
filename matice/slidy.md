@@ -123,6 +123,8 @@ Další informace: [Wikipedia, Path integration](https://en.wikipedia.org/wiki/P
 
 <!-- YTB qbnZ4wDYYDQ -->
 
+
+
 ## Lineární kombinace
 
 > Definice (lineární kombinace).
@@ -145,6 +147,7 @@ Výpočet lineární kombinace si můžete vyzkoušet online.
 
 \fi
 
+<div class="shorten" data-text="Lineární kombinace jsou pro nás zejména cestou k zavedení maticového součinu. Mají však mnoho aplikací i samy o sobě, což je popsáno v následujícím textu.">
 
 <div class='obtekat'>
 
@@ -230,7 +233,7 @@ znát rozložení populace po $k$ letech, situace se komplikuje. Dostali
 bychom rekurentní vzorec, který je nutno stále opakovat. Pro
 odstranění tohoto nepohodlí se zavádí pojem matice, viz níže.
 
-
+</div>
 
 ## Lineární závislost a nezávislost vektorů
 
@@ -440,6 +443,8 @@ Výpočet operací s maticemi je nejlepší se naučit při výpočtu konkrétn�
 
 https://youtu.be/4jqBoskZ9Ak
 
+<div class="shorten" data-text="Níže jsou popsány triválnější aplikace maticového součinu, jako jsou například populační model s věkovou strukturou. ODvážnější mohou přeskočit a pokračovat na to nejdůležitější, kdy matici chápeme jako zobrazení vektorů na vektory.">
+
 ## Derivace diskrétní funkce
 
 V metodě konečných diferencí jsme si ukázali a v předcházejícím textu připomněli, že derivace umíme aproximovat výrazy, které jsou lineární kombinací po sobě jdoucích funkčních hodnot hledané funkce na pravidelné mřížce délky $h$. Toto je možné vyjádřit pomocí maticového součinu. Pro konkrétnost, pro druhou derivaci aproximujeme pomocí tří po sobě jdoucích hodnot v ekvidistantních krocích vzorcem 
@@ -582,6 +587,8 @@ však adaptovat na populaci obecně.
 Další informace:
 
 * [Z. Pospíšil, Maticové populační modely](http://portal.matematickabiologie.cz/index.php?pg=analyza-a-modelovani-dynamickych-biologickych-dat--maticove-populacni-modely--prolog--leslieho-model-rustu-populace#pro14)
+
+</div>
 
 # Matice jako zobrazení
 
@@ -896,10 +903,12 @@ hydrodynamických a disperzních jevů, kap. 3.3.
 
 [Obrázky a online výpočty.](https://sagecell.sagemath.org/?z=eJxtks-OmzAQxu-R8g4We1izOATYpodqXYm2UrWHXNrcEIoc8G6sBRsZJy28wz5BT3mAfQryYB3-iGWVIIHs8W--b2bMDfJd9EvVLxlLkdrxRHJkNJPlk9I5SziSDCmjEi4FYqiscm60SF7UYUqJ-ewGBe86I3apJWpltCpALWGlAcmUHwUzSsNiFJvPjrXSFcWRR7yYRP7w9eHruSviu5_bVb-HM3s-C2nOwPIvjiIXcDdYday3Igs3iDtiQ0O3K6dQJccQ-baFQikOnXBjL4N2z_rAYgi0ISiYdmCbm0DeMrgTKZdGmGo7eAadGHTSk4suq02HjtAaCYmiKCTWd541p7FPbkGFvSWxQtAbpwbQ-bU5lYagQsHwz69cNm-Ao6jTJ9bvK2idn__BgM2R6cPAQhXEehwm3rwNaE9WH0ionVg_4Cqa0_QuWtf4y3yG4FE7zeqKRngdebFzOQL77sgTSMbCRm3fou27u8e4F3hc_6SFEtLgXoqgRGVK01vN01uCSlFz-smznUJl1bOS1ymWFXtG4SewnUxIfg2y3-3gdXrLrpDRZOR32YFfJvT-Q8qTyDK60Qc-Mb-aX-7VH7w3eYath33w1XLWkR871sOy3dgTCGHZDZGgVDwLU9L76SmGGsCqLGCaW82MUNS_5qBb0f--3Dmp&lang=sage&interacts=eJyLjgUAARUAuQ==)
 
-
 # Rozložení teploty na tepelně vodivé desce
 
 https://youtu.be/xV46lYgdHSQ
+
+<div class="shorten" data-text="Následující text je motivační příklad ukazující aplikaci soustav lineárních rovnic na problém vedení tepla, souvislost s maticovým počtem a zejména přirozenou numerickou metodu řešení soustavy rovnic. SLouží jako motivace a bude pokryto v následující přednášce.">
+
 
 <!-- YTB YJEydfa_mHI -->
 
@@ -1006,6 +1015,7 @@ hlavní diagonále větší číslo, než je součet zbylých čísel v tomto
 
 [Online výpočet rovnicemi.](https://sagecell.sagemath.org/?z=eJxdj81qwzAQhO8Gv8NALlJtqPVzKvhhVEdJRM3KyKqr-Om7JiYxWZjDMszsfkW1RbfFtMWih-7ag4ATpji47AcKIDdnt3gKdXWJCQGBkBxdPYTu5Fddgaco6kmoT_shVNforim6KVZKbF3Lndt8BsXlPtyQ_TTGvOf0M8chyznVFCPl7pqnax7uo3V37fGmec--AHv-jheWYVnafvod48pMmFLE2Y0zY2Wf3MCUdTXf4p8Qh4YN5IQ1fie3hsxA8-jP_ucflI1XEg==&lang=sage&interacts=eJyLjgUAARUAuQ==)
 
+</div>
 
 # Shrnutí, hlavní myšlenky
 
