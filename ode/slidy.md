@@ -861,6 +861,10 @@ uvolněním tepla.
 
 https://youtu.be/ahkeA6fopaQ
 
+
+<div class="shorten" data-text="Diferenciální rovnice obsahující druhé derivace se vyskytují v problémech z mechaniky. Kromě počátečních podmínek je s nimi spojen ještě jiný druh podmínek, okrajové podmínky. Tyto úlohy je možné řešit aproximací derivace centrální diferencí a převodem diferenciální rovnice na soustavu lineárních rovnic. Ovšem soustavu obrovskou.">
+
+
 \iffalse
 
 <div class='obtekat'>
@@ -951,6 +955,7 @@ Pro analogickou úlohu se vzpěrnou tlakovou pevností dřeva viz
 též A. Požgaj, Štruktúra a vlastnosti dreva str. 359.
 
 
+</div>
 
 # Shrnutí, hlavní myšlenky
 
