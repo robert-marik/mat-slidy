@@ -1,6 +1,6 @@
 % Diferenciální rovnice 
 % Robert Mařík
-% 2019-2020
+% 2019-2022
 
 https://youtu.be/gU6ClJwLFs0
 
@@ -73,13 +73,9 @@ vyjadřuje počáteční podmínka, uvedená v následující definici.
 
 
 **Příklad.** Rovnice $$y'=y\tag{3}$$ má řešení $y=e^x$, což nahlédneme
-  snadno, protože exponenciální funkce se nemění
-  derivováním. Dosazením je možné ukázat, že má dokonce řešení
-  $$y=Ce^x,\tag{4}$$ kde $C$ je libovolné číslo.
+  snadno, protože exponenciální funkce se nemění derivováním. Dosazením je možné ukázat, že má dokonce řešení $$y=Ce^x,\tag{4}$$ kde $C$ je libovolné číslo.
 
-**Příklad.** Řešení počáteční úlohy $$y'=y, \quad y(x_0)=y_0$$ najdeme tak, že využijeme řešení (4) a zařídíme, aby byla splněna počáteční podmínka. Tj. řešením počáteční úlohy je
-  $$y=  (y_0 e^{-x_0}) e^x.$$ Vidíme, že toto řešení existuje pro každou počáteční podmínku a proto vzorec (4) popisuje dokonce **všechna** řešení rovnice (3).
-
+**Příklad.** Řešení počáteční úlohy $$y'=y, \quad y(x_0)=y_0$$ najdeme tak, že využijeme řešení (4) a zařídíme, aby byla splněna počáteční podmínka. Tj. řešením počáteční úlohy je $$y=  (y_0 e^{-x_0}) e^x.$$ Vidíme, že toto řešení existuje pro každou počáteční podmínku a proto vzorec (4) popisuje dokonce **všechna** řešení rovnice (3).
 
 
 ## Obecné a partikulární řešení
@@ -476,7 +472,13 @@ výstupem metody bude aproximace integrální křivky pomocí lomené čáry.
 
 <div class='obtekat'>
 
-![Letecký snímek údolí Vajont krátce po katastrofě. [Video](https://youtu.be/BK5uwnVCeCw?t=2185) ukazuje, že při modelování procesu ve zmenšeném měřítku je nutné transformovat ostatní veličiny, například čas. Pro nás klíčová slova v čase 3706 dokumentu jsou "tým techniků odhaduje nejvyšší možnou reálnou rychlost sesuvu půdy na jednuminutu, kterou pro simulaci přepočítají na čtyři sekundy". Čas ve zmenšeném modelu ubíhá jinou rychlostí než čas v reálném ději. Foto: Wikipedia.](Vajont.jpg)
+![Letecký snímek údolí Vajont krátce po katastrofě. [Video](https://youtu.be/BK5uwnVCeCw?t=2185) ukazuje, že při modelování procesu ve zmenšeném měřítku je nutné transformovat ostatní veličiny, například čas. Pro nás klíčová slova v čase 37:06 dokumentu jsou "tým techniků odhaduje nejvyšší možnou reálnou rychlost sesuvu půdy na jednu minutu, kterou pro simulaci přepočítají na čtyři sekundy". Čas ve zmenšeném modelu ubíhá jinou rychlostí než čas v reálném ději. Foto: Wikipedia.](Vajont.jpg)
+
+![Model přehrady v údolí Vajont. Byl zdařilý, ale jeho použití s nesprávnými vstupními daty (podcenění odhadu rychlosti sesuvu hory) vedlo k tomu, že závěry nebyly relevantní. Vpravo tři postavy sledující pokus pomůžou s odhadem rozměrů. Zdroj: záběr z dokumentu Tsunami v horách a z filmu Vajont - šílenství mužů.](vajont_model.png)
+
+![Model [Janáčkovy koncertní síně](https://www.irozhlas.cz/kultura/desetkrat-mensi-akusticky-dokonaly-model-janackovo-centrum_2107300010_btk) pro Brno. Desetkrát menší a proto s desetkrát většími frekvencemi. Zdroj: Tomáš Kemr, Český rozhlas.](janackova_sin.jpg)
+
+
 
 </div>
 
@@ -686,7 +688,7 @@ má tedy pravá strana derivaci různou od nuly, poznáme stabilitu z\ monotonie
 </div>
 
 **Příklad.** Teplotní bilanci Země je možno vyjádřit [rovnicí](http://user.mendelu.cz/marik/wiki/doku.php?id=ode)
-$$\frac{\mathrm dT}{\mathrm dt}=R_{\text{in}}(T)-R_{\text{out}}(T),$$ kde $R_{\text{in}}$ a $R_{\text{out}}$ jsou funkce dané na obrázku. Vidíme tři průsečíky, tj. tři stacionární body. Uvažujme stacionární bod nejvíce napravo. Malá výchylka nahoru k větší teplotě nás posune do oblasti, kde převažuje vyzařování energie, $R_{\text{out}}$ je vetší než $R_{\text{in}}$, pravá strana je záporná a teplota klesá zpět do stacionárního stavu. Podobně, malá výchylka směrem dolů způsobí nároůst a opět návrat do stacionárního stavu. Stacionární stav zcela vpravo je tedy stabilní. Podobně ukážeme, že stacionární stav odpovídající průsečíku zcela vlevo je také stabilní. Naopak, stacionární stav uprostřed je nestabilní, libovolná výchylka z tohoto stavu způsobí přechod systému do některého ze stabilních stavů.
+$$\frac{\mathrm dT}{\mathrm dt}=R_{\text{in}}(T)-R_{\text{out}}(T),$$ kde $R_{\text{in}}$ a $R_{\text{out}}$ jsou funkce dané na obrázku. Vidíme tři průsečíky, tj. tři stacionární body. Uvažujme stacionární bod nejvíce napravo. Malá výchylka nahoru k větší teplotě nás posune do oblasti, kde převažuje vyzařování energie, $R_{\text{out}}$ je vetší než $R_{\text{in}}$, pravá strana je záporná a teplota klesá zpět do stacionárního stavu. Podobně, malá výchylka směrem dolů způsobí nárůst a opět návrat do stacionárního stavu. Stacionární stav zcela vpravo je tedy stabilní. Podobně ukážeme, že stacionární stav odpovídající průsečíku zcela vlevo je také stabilní. Naopak, stacionární stav uprostřed je nestabilní, libovolná výchylka z tohoto stavu způsobí přechod systému do některého ze stabilních stavů.
 
 \iffalse
 
