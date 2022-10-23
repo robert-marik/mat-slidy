@@ -387,7 +387,7 @@ https://youtu.be/OgzYhnGj34I
 
 ## Geometrická interpretace ODE
 
-manimp:Slope_field|Směrové pole diferenciální rovni ce dává představu a chování řešení.
+manimp:Slope_field|Směrové pole diferenciální rovnice dává představu o chování řešení této rovnice.
 
 <div class='obtekat'>
 
@@ -920,7 +920,7 @@ v praxi vyskytují v poměrně komplikovaných situacích (posuzování ne
 jednoho nosníku, ale celé konstrukce) a proto se zpravidla řeší
 přibližně a převádí se na řešení soustav lineárních rovnic. 
 
-**Poznámka** Při odvození rovnice nosníku se vychází z rovnice $$\frac 1R = \frac{M}{EI},$$ kde $R$ je poloměr oskulační kružnice (jeho převrácená hodnota je křivost), $M$ je ohybový moment a $E$ a $I$ jsou konstanty související s materiálem a tvarem nosníku. Je-li osa podél nosníku $x$ a osa $y$ kolmo, je křivost dána pomocí druhé a první derivace vztahem 
+**Poznámka** Při odvození rovnice udávající deformaci zatíženého nosníku se vychází z rovnice $$\frac 1R = \frac{M}{EI},$$ kde $R$ je poloměr oskulační kružnice (jeho převrácená hodnota je křivost), $M$ je ohybový moment a $E$ a $I$ jsou konstanty související s materiálem a tvarem nosníku. Je-li osa podél nosníku $x$ a osa $y$ kolmo, je křivost dána pomocí druhé a první derivace vztahem 
 $$\frac 1R = \frac{\frac{\mathrm d^2y}{\mathrm dx^2}}{\sqrt{\left(1+\left(\frac{\mathrm dy}{\mathrm dx}\right)^2\right)^3}}.$$ Toto vede na velmi komplikovanou rovnici. Pro malé deformace je první derivace blízká k nule a pokud využijeme lineární aproximaci 
 $$\frac{\alpha}{\sqrt{(1+x^2)^3}}= \alpha (1+x^2)^{-3/2}\approx \alpha ,$$
 dostáváme $$\frac 1R \approx \frac{\mathrm d^2y}{\mathrm dx^2},$$ což veškeré výpočty značně zjednodušuje.
