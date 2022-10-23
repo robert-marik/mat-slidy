@@ -40,12 +40,13 @@ modelovaného děje.
 
 **Příklad.**  Najděte všechny funkce splňující $y'=2xy$. (Naučíme se řešit později.)
 
-Diferenciální rovnice mateamtickým modelem kvantifikujícím scénář
-vývoje systému. Řešením jsou všechny možnosti, jak se tento systém
-může vyvjíjet. K\ jednoznačnému předpovězení budoucího stavu je ovšem
-nutno znát také stav počáteční, který ze všech teoreticky možných
-průběhů vybere průběh odpovídající modelované situaci. Tento stav
-vyjadřuje počáteční podmínka, uvedená v následující definici.
+Diferenciální rovnice bývá v aplikacích matematickým modelem
+kvantifikujícím scénář vývoje systému. Řešením jsou všechny možnosti,
+jak se tento systém může vyvjíjet. K\ jednoznačnému předpovězení
+budoucího stavu je ovšem nutno znát také stav počáteční, který ze
+všech teoreticky možných průběhů vybere průběh odpovídající modelované
+situaci. Tento stav vyjadřuje počáteční podmínka, uvedená v
+následující definici.
 
 > Definice (počáteční podmínka, Cauchyova úloha). Nechť $x_0$, $y_0$ jsou reálná čísla. Úloha najít
 > řešení rovnice  
@@ -386,6 +387,8 @@ https://youtu.be/OgzYhnGj34I
 
 ## Geometrická interpretace ODE
 
+manimp:Slope_field|Směrové pole diferenciální rovni ce dává představu a chování řešení.
+
 <div class='obtekat'>
 
 ![Směrové pole diferenciálni rovnice, integrální křivky, isokliny](smerove_pole_2.png)
@@ -591,6 +594,8 @@ Excel](https://support.microsoft.com/en-us/help/78113/floating-point-arithmetic-
 
 https://youtu.be/SVDLZMIfW8Y
 
+manimp:Stabilita|Stabilitu autonomní diferenciální rovnice můžeme posoudit ze znaménka pravé strany. S minimem informací dokážeme poznat, jak se bude řešení chovat z hlediska konvergence ke stacionárnímu stavu.
+
 Rovnice $$\frac{\mathrm dy}{\mathrm dx}=f(y)\tag{♣}$$ se nazývá
 *autonomní*, nebo též nezávislá na čase. Je speciálním případem rovnice
 se separovanými proměnnými, která je uvedena na dalším slidu a naučíme
@@ -663,6 +668,8 @@ proto můžeme udělat následující závěr.
 Pro grafickou intepretaci je vhodné připomenout, že funkce s kladnou
 derivací jsou rostoucí a funkce se zápornou derivací klesající. Pokud
 má tedy pravá strana derivaci různou od nuly, poznáme stabilitu z\ monotonie pravé strany.
+
+manimp:Logistic|U logistické rovnice s lovem dochází v závislosti na velikosti lovu buď ke snížení nebo k zániku stabilního stacionárního stavu.
 
 **Příklad.** Logistická diferenciální rovnice s konstantním lovem
   $h$, tj. rovnice
@@ -912,6 +919,11 @@ na vyšších harmonických frekvencích). Úlohy s\ okrajovými podmínkami se
 v praxi vyskytují v poměrně komplikovaných situacích (posuzování ne
 jednoho nosníku, ale celé konstrukce) a proto se zpravidla řeší
 přibližně a převádí se na řešení soustav lineárních rovnic. 
+
+**Poznámka** Při odvození rovnice nosníku se vychází z rovnice $$\frac 1R = \frac{M}{EI},$$ kde $R$ je poloměr oskulační kružnice (jeho převrácená hodnota je křivost), $M$ je ohybový moment a $E$ a $I$ jsou konstanty související s materiálem a tvarem nosníku. Je-li osa podél nosníku $x$ a osa $y$ kolmo, je křivost dána pomocí druhé a první derivace vztahem 
+$$\frac 1R = \frac{\frac{\mathrm d^2y}{\mathrm dx^2}}{\sqrt{\left(1+\left(\frac{\mathrm dy}{\mathrm dx}\right)^2\right)^3}}.$$ Toto vede na velmi komplikovanou rovnici. Pro malé deformace je první derivace blízká k nule a pokud využijeme lineární aproximaci 
+$$\frac{\alpha}{\sqrt{(1+x^2)^3}}= \alpha (1+x^2)^{-3/2}\approx \alpha ,$$
+dostáváme $$\frac 1R \approx \frac{\mathrm d^2y}{\mathrm dx^2},$$ což veškeré výpočty značně zjednodušuje.
 
 # Diferenciální rovnice metodou konečných diferencí
 
