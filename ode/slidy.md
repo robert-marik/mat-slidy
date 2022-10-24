@@ -7,7 +7,46 @@ https://youtu.be/gU6ClJwLFs0
 > V této přednášce se seznámíme s diferenciálními rovnicemi. To není nic jiného, než správný název pro to, čemu jsme dříve říkali matematické modely formulované pomocí derivace. Viděli jsme že tyto modely jsou v některých případech přirozeným matematickým aparátem pro popis reálně probíhajících dějů v přírodě. V přednášce se seznámíme se základním názvoslovím spojeným s touto problematikou, seznámíme se s metodami identifikace některých kvalitativních vlastností a u rovnic se separovanými proměnnými se naučíme hledat i analytické řešení. Protože se často setkáváme s modely nezávislými na čase, budeme se problematice těchto modelů věnovat podrobněji. Tyto modely mají tu vlastnost, že se ohraničená řešení po čase ustálí okolo stabilní hodnoty. Naučíme se hledat hodnoty odpovídající ustáleným řešením a z nich vybrat ty stabilní, k nimž systém může konvergovat, nebo nestabilní, které oddělují oblasti, ze kterých systém dospívá k jednotlivým stabilním stavům.
 
 
+# Motivace
+
+\iffalse
+
+
+<div class='obtekat'>
+
+![Planeta Neptun. Její existence byla matematicky předpovězena na základě jinak nevysvětlitelných poruch v dráze planety Uran. Ještě týž den byl Neptun nalezen na obloze a následující den bylo potvrzeno, že se jedná o planetu. www.publicdomainpictures.net](planet-neptune.jpg)
+
+![Analogové počítače využívaly toho, že různé děje mohou být popisovány stejnými diferenciálními rovnicemi. V SSSR se používaly do 80-tých let vzhledem k nedostatku polovodičů a politické definici kybernetiky jako buržoazní pavědy. https://un-sci.com/ru/2020/01/10/vodyanoj-kompyuter-gidrointegrator-lukyanova/](vodyanoj-kompyuterfoto7.webp)
+
+</div>
+
+\fi
+
+
+Diferenciální rovnice jsou jakýmsi zlatým grálem modelování. V historii byly matematické modely založené na těchto rovnicích přímou motivací k rozvoji diferenicálního počtu (aby bylo možno tyto rovnice formulovat) a integrálního počtu (aby bylo možno tyto rovnice řešit). Od té doby dosáhla trojice derivace+integrál+diferenciální rovnice na obrovskou řadu úspěchů napříč mnoha obory.
+
+* Odvození [Keplerových zákonů](https://en.wikipedia.org/wiki/Kepler%27s_laws_of_planetary_motion) pohybu planet matematickou cestou a tím potvrzení gravitačního zákona (Newton).
+* Matematický aparát pro statické výpočty a výpočty [nosníků](https://cs.wikipedia.org/wiki/Bernoulliho%E2%80%93Navierova_hypot%C3%A9za) (Euler, Bernoulli, Timoshenko).
+* Objev planety [Neptun](https://cs.wikipedia.org/wiki/Neptun_(planeta)) předpovězením existence této planety na základě jinak nevysvětlitelných poruch v dráze planety Uran (Verrier).
+* Teorie rovnováhy populací na ostrovech (MacArthur, Wilson).
+* Teorie epidemií (Kermack, McKendrick).
+* [Chemické oscilátory](https://cs.wikipedia.org/wiki/Brusel%C3%A1tor) (Prigogine), Nobelova cena za nerovnovážnou termodynamiku.
+* Modely konkurence živočišných druhů, [princip konkurenčního vyloučení](https://cs.wikipedia.org/wiki/Konkuren%C4%8Dn%C3%AD_vylou%C4%8Den%C3%AD) (Gause).
+* Modely [predace](https://cs.wikipedia.org/wiki/Pred%C3%A1tor) živočišných druhů, oscilace v systému dravce a kořisti (Lotka, Volterra, Holling).
+* Vysvětlení podstaty periodického přemnožování *[Choristoneura fumiferana](https://en.wikipedia.org/wiki/Choristoneura_fumiferana)* v kanadských lesích (Ludwig, Jones, Holling).
+* Systémová biologie, výzkum složitých interakcí mezi enzymy, geny a proteiny v živých organismech (Alon).
+* Výzkum meteoritů s rodokmenem ([Zdeněk Ceplecha](https://cs.wikipedia.org/wiki/Zden%C4%9Bk_Ceplecha), [Pavel Spurný](https://cs.wikipedia.org/wiki/Pavel_Spurn%C3%BD)), výpočet jejich místa dopadu a místa, odkud meteorit přiletěl. Nesmírně cenný zdroj studijního materiálu.
+* Zaměřovače pro řízení protiletecké obrany ([Antonín Svoboda](https://historiepocitacu.cz/prukopnik-pocitacu-antonin-svoboda.html), český kybernetik). Svoboda  později konstruoval výkonnější zaměřovače, získal prestižní vyznamenání námořnictva USA, jeho práce pomohla rozhodnout válku v tichomoří. 
+
+
+Někdy je nutné znát řešení rovnice, někdy stačí znát rovnici řídící studovaný proces a i bez znalosti řešení je možné získat užitečné informace.
+
+* Chování řešení při změně rozměrů systému. Využívá se například v aerodynamických tunelech, kdy se rozměrné objekty testují na zmenšeninách. Dále se využívá tam, kde rovnici nedokážeme vyřešit, například model sesuvu hory do přehrady a následná tsunami v údolí Vajont nebo akustika v Janáčkově hudební síni.
+* Náhrada jednoho problému jiným, který se chová stejně, ale je možné jej modelovat. Zahrnuje sestavování mechanických pčítačů (zaměřovače prof. Svobody) nebo vodních počítačů ([Moniac](https://en.wikipedia.org/wiki/MONIAC) sestavený v roce 1949 pro model ekonomiky Nového Zélandu, [vodní integrátor](https://en.wikipedia.org/wiki/Water_integrator) používaný Ruskem do 80-tých let)
+
+
 # Obyčejná diferenciální rovnice prvního řádu
+
 
 https://youtu.be/GSjgp7FGvVw
 
