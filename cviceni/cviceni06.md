@@ -253,7 +253,7 @@ kde i tento integrál se dá vypočítat přímou integrací pomocí vzorce.
 
 \iffalse 
 
-![https://slp.czu.cz](strom.jpg)
+![publicdomainpictures.net](zaludy.jpg)
 
 \fi 
 
@@ -269,9 +269,7 @@ Napište jenom příslušný integrál a okomentujte, jakou metodou bychom
 ho počítali. Vlastní výpočet provádět nemusíte.
 
 _(Volně přeformulováno podle L. Edestein--Keshet: Differential calculus
-for the life sciences. Strom na obrázku je rodičovský strom ekotypu
-Posázavského smrku ztepilého. Slouží k záchraně genových zdrojů
-lesních dřevin.)_
+for the life sciences. Příklad je použitelný pro stromy s velkými semeny, například dub. Pro jiné stromy musí semena sbírat stromolezci.)_
 
 <div class=reseni> Množství semen na metr čtvereční závisí na vzdálenosti od
 stromu, je to tedy podobná úloha jako úloha s prouděním tekutiny
