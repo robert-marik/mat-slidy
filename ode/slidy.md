@@ -42,7 +42,7 @@ Diferenciální rovnice jsou jakýmsi zlatým grálem modelování. V historii b
 Někdy je nutné znát řešení rovnice, někdy stačí znát rovnici řídící studovaný proces a i bez znalosti řešení je možné získat užitečné informace.
 
 * Chování řešení při změně rozměrů systému. Využívá se například v aerodynamických tunelech, kdy se rozměrné objekty testují na zmenšeninách. Dále se využívá tam, kde rovnici nedokážeme vyřešit, například model sesuvu hory do přehrady a následná tsunami v údolí Vajont nebo akustika v Janáčkově hudební síni.
-* Náhrada jednoho problému jiným, který se chová stejně, ale je možné jej modelovat. Zahrnuje sestavování mechanických pčítačů (zaměřovače prof. Svobody) nebo vodních počítačů ([Moniac](https://en.wikipedia.org/wiki/MONIAC) sestavený v roce 1949 pro model ekonomiky Nového Zélandu, [vodní integrátor](https://en.wikipedia.org/wiki/Water_integrator) používaný Ruskem do 80-tých let)
+* Náhrada jednoho problému jiným, který se chová stejně, ale je možné jej modelovat. Zahrnuje sestavování mechanických počítačů (zaměřovače prof. Svobody) nebo vodních počítačů ([Moniac](https://en.wikipedia.org/wiki/MONIAC) sestavený v roce 1949 pro model ekonomiky Nového Zélandu, [vodní integrátor](https://en.wikipedia.org/wiki/Water_integrator) používaný Ruskem do 80-tých let)
 
 
 # Obyčejná diferenciální rovnice prvního řádu

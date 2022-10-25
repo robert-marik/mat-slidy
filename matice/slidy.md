@@ -1,8 +1,13 @@
 % Lineární algebra (operace s vektory a maticemi)
 % Robert Mařík
-% 2.4.2019
+% 2019-2022
 
-> **Motivace**.
+> **Motivace (stručně).**
+>
+> * Naučíme se efektivně pracovat s libovolně velkými soustavami rovnic.
+> * Naučíme se zobrazovat vektory na vektory, které nemusí mířit stejným směrem.
+>
+> **Motivace (podrobněji).**
 >
 > * V předchozích přednáškách jsme se seznámili s derivacemi, s nástroji umožňující převést fyzikální představu o procesech v materiálu do kvantitativní podoby, kdy dokážeme studované jevy kvantifikovat. V praxi však je analytické řešení těchto fyzikálních modelů realizovatelné pouze v nejjednodušších případech. Pro netriviální příklady používáme numerický přístup, který je v mnoha případech nakonec redukován na řešení soustavy rovnic. Tyto soustavy mají typicky obrovské množství rovnic a neznámých (řádově i v jednoduchých aplikacích řádově desetitisíce nebo statisíce rovnic) a proto je nutné mít k dispozici nástroje, umožňující práci s takto obrovskými soustavami rovnic. V této přednášce si představíme nové objekty, matice, se kterými je libovolně velkou soustavu rovnic možno zapsat jako jeden součin tvaru $$AX=B.$$
 > * V úvodní přednášce jsme naformulovali [rovnici vedení tepla](https://user.mendelu.cz/marik/mtk/mat-slidy/derivace_I/#rovnice-veden%C3%AD-tepla-v-1d) jako rovnici, popisující fyzikální podstatu přenosu tepla v materiálu. Tento popis je ve vícerozměrných úlohách nutno zobecnit na dvourozměrný nebo trojrozměrný případ. Potom však u materiálu, který má v různých směrech různé vlastnosti, dochází k tomu, že odezva nemá stejný směr jako podnět. Například u vedení tepla je tok tepla dán směrem poklesu teploty jenom částečně. Vlivem vysoké vodivosti v podélném směru ve srovnání s příčným směrem však je tok tepla odkloněný částečně do podélného směru. Pro popis takového procesu tedy potřebujeme zobrazení, které dokáže změnit nejenom délku, ale i směr vektoru. Toto zobrazení je možné realizovat pomocí matic.
@@ -252,7 +257,7 @@ $\begin{bmatrix} 4\\3 \end{bmatrix}_{e_1,e_2}$. Pro bázové vektory $\vec \vare
 \varepsilon_2=(0,1)$ platí
 $$\vec v=(4,3)=2(2,1)+1(0,1)=2\vec \varepsilon_1+\vec \varepsilon_2$$
 a souřadnice vektoru $\vec v=(4,3)$ v nové bázi jsou $\begin{bmatrix} 2\\1 \end{bmatrix} _{\varepsilon_1,\varepsilon_2}$. Tady vidíme
-výhodu "pěkné volby" bázových vektorů.
+výhodu "pěkné volby" bázových vektorů v prvním případě. Tam jsou souřadnicemi přímo komponenty vektoru.
 
 Aby použití souřadnic mělo smysl, musí existovat jediná možnost jak daný vektor vyjádřit pomocí lineární kombinace zadaných bázových vektorů. Tato úloha se dá redukovat na úlohu, zda taková jednoznačnost existuje u nulového vektoru. Tím je motivována následující úvaha a z ní vyplývající definice.
 
@@ -590,7 +595,7 @@ Další informace:
 
 </div>
 
-# Matice jako zobrazení
+# Aplikace maticového součinu: matice jako zobrazení
 
 https://youtu.be/7NH8p323zxo
 
@@ -598,6 +603,9 @@ Nyní se na zobrazení pomocí matice podíváme očima geometra a poté očima 
 
 
 ## Matice jako zobrazení v geometrii
+
+
+manimp:MatrixMultiplication|Nejdůležitější rolí matic v materiálovém inženýrství je jejich schopnost jistým způsobem transformovat vektory (body) prostoru. Přesněji, zobrazení zachovává rovnoběžnost a dělící poměr. Rovnomerně rozmístěná mřížka se zobrazí zase na rovnoměrně rozmístěnou mřížku. (První část prezentace).
 
 <div class='obtekat'>
 
@@ -612,6 +620,7 @@ Nyní se na zobrazení pomocí matice podíváme očima geometra a poté očima 
 ![Transformace 3D objektu do roviny pomocí matice. Koeficienty matice můžou realizovat libovolné natočení.](domecek.png)
 
 </div>
+
 
 
 Je-li $A$ čtvercová matice, můžeme každému vektoru $\vec q$ přiřadit vektor
