@@ -722,6 +722,9 @@ vlastní hodnotě.
 
 </div>
 
+manim:Eigenvectors|vfzT25D6Zz8|Vlastní směry z hlediska materiálového inženýrství pro ortotropní materiály.
+
+
 \fi
 
 
