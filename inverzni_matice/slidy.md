@@ -98,6 +98,9 @@ https://youtu.be/uOmV6DGMPbw
 
 \iffalse
 
+manimp:MatrixMultiplication|Pomocí maticového násobení můžeme snadno přecházet od jedné soustavy souřadnic k jiné. (Poslední část prezentace).
+
+
 <div class='obtekat'>
 
 ![Matice rotace a maticové násobení umožňuje vyjáření souřadnic v různých vzájemně pootočených souřadných soustavách.](souradnice.png)
@@ -227,7 +230,8 @@ Stejným způsobem se transformují i fyzikální veličiny veličiny popisovan�
 
 \iffalse
 
-[Ukázka](https://sagecell.sagemath.org/?z=eJytkU1v2zAMhu8G_B8INEWkRM3ioOlNB5-GHQb4sJuRFYqtzmoV0ZNlr_Gw_z469ryP9lJgBkzT4ks9fMFUnlTw5pnl-V7sDiLfUTxwuAI6N4WOo-y3InnXfPWB7bm42f1Kh5b5eBbQFZvglWtqbDTjMN8HtddFhWULJUJjnrBzGo6q1xBHVxAUHWA7FSihioFGg1NtYU4aKqtLFaDGvtSPJo7iqKnwG7AqnCzzy0Uqr5uFgEU2fJfXzKqgn1nKxZhknB6apVelcqbr0Z8ly7diSy6SKSYUt5u9SDZ3Qzb-U43_y8o-f79JfqQTagSwbGNcp_1gmq_SVTbyJu8dOOwudi-jv5n_P1YRR3j0qj_LPFt1ugjomeHwgB4MGAeXmQ5x9OHje1mjcYGNcgEFWvRy6XW5FLSgXsvbLV_XaM9f0L2uUraulCQzfG2N06-J-Iiidz3iLgPMgFl7tK3-WzxyJ_mDsVZ-8q3-A_qid1gfo2bSNDVZv_e0FpQJ_wkl8e8J&lang=sage&interacts=eJyLjgUAARUAuQ==)
+* [Ukázka Sage](https://sagecell.sagemath.org/?z=eJytkU1v2zAMhu8G_B8INEWkRM3ioOlNB5-GHQb4sJuRFYqtzmoV0ZNlr_Gw_z469ryP9lJgBkzT4ks9fMFUnlTw5pnl-V7sDiLfUTxwuAI6N4WOo-y3InnXfPWB7bm42f1Kh5b5eBbQFZvglWtqbDTjMN8HtddFhWULJUJjnrBzGo6q1xBHVxAUHWA7FSihioFGg1NtYU4aKqtLFaDGvtSPJo7iqKnwG7AqnCzzy0Uqr5uFgEU2fJfXzKqgn1nKxZhknB6apVelcqbr0Z8ly7diSy6SKSYUt5u9SDZ3Qzb-U43_y8o-f79JfqQTagSwbGNcp_1gmq_SVTbyJu8dOOwudi-jv5n_P1YRR3j0qj_LPFt1ugjomeHwgB4MGAeXmQ5x9OHje1mjcYGNcgEFWvRy6XW5FLSgXsvbLV_XaM9f0L2uUraulCQzfG2N06-J-Iiidz3iLgPMgFl7tK3-WzxyJ_mDsVZ-8q3-A_qid1gfo2bSNDVZv_e0FpQJ_wkl8e8J&lang=sage&interacts=eJyLjgUAARUAuQ==)
+* [Ukázka Python](https://sagecell.sagemath.org/?z=eJyNUk2umzAQ3iNxhxFvAwhogpTuWHADFlU30WvlBCs4gMe1DS25Qw_SQ3TVHqxjQvJI36vUjTU_33zfNyM_gegVagutFA2OXIIcejUBg56pDm0nDr63QJaOAanutZ7ZBZapyUWurzrre08gmbGMKAUozY1EYwXxKkKzo6uOvObHloNESwUCCbDCtAM0WFPN96TKDLefqSEtKitQmpCojsJQWOwSMINy1Kb4oAceOc0SztyZEkR4wYNmF1LyvbIgLipr8S3c73dJ_pzsc3qf56FqNeT4SX-AGsGIFkfJ4UAs4ICWUQGHpUEBdQQYWoENR9FzaDpeM0s7Xmp-Jt3qQXf7zm30RdtwFyVpvsqcnXVzjSSTmdVMGoWGhxGQk_kiYVAWQVJG97SitJoX-ri2Lt46CdSCnVCyzl2HLqDHdoJe9EgrsHHVH-BsaFGlWUsMBJJDR__kRfRTmG6juIxn9Ti-ZeTD98YL6unhBJtkQ7tul3dL7ybbJdvsvYuuOfUeN_a92fVUlPFMeGfOoYDqVrti8hsodyj6iJn7lGFMHpjWbArnZpQEKQYJdOzAuyKosee_v_M2iN4cuTL_NTMX4TrZDv-YvDqhSUzT1ahFUpO_fsJ_Cb-en6VvLD8afGWj4ycu63DJTlrcY9Pg1zD6A0mFUhA=&lang=python&interacts=eJyLjgUAARUAuQ==)
 
 \fi
 
@@ -253,7 +257,7 @@ napětí vyjádřen v anatomických směrech dřeva. Úloha je v knize vyřešen
 $(x_1,x_2)$ označíme $(x,y)$, osa $x$ směřuje vodorovně vpravo (v obrázku $x_2$) a osa $y$ nahoru (v obrázku $x_1$). Tenzor napětí je $A=
 \begin{pmatrix}
   0 & 0\\0& 10
-\end{pmatrix}$ (tah pouze ve směru osy $y$). Souřadnice je nutno pootočit o $30$ stupňů po směru hodinových ručiček, tj. v záporném směru. [Nový tenzor napětí](https://sagecell.sagemath.org/?z=eJx9ULtuwzAM3A34HwhkiCzIrVwXQRcPSZYODVB4NTIorhArsSVDD6PJH_U7-mOVH6mRoQUX8ng83HEBb0JypqUAVh_5QTMCrVJWldxDClIKxrpWOo-Cabh28JqHQcc0WtqKW7aMwiDPGma1-ERFUSqDBjwisRFy6vekmAcyc_Z7f72brymhnkpJQoeNq3idxSl9TF4obkUYtFpIC0gilD8Yd5hksrgnRhHe4Xt8hCOv1NcC3tX1yE59wEaVYoijuktZwVl5e47ASUh2hmunai6_v0CZSxho9pG1orcQBuv7oGlKsV-PiVZj7_3309PzvIJf4pBq84_I7WxSWf0psp1FktvXxqdJtMZbvIl-AGVpkmc=&lang=sage&interacts=eJyLjgUAARUAuQ==) je $$R(30^\circ)AR(-30^\circ)=
+\end{pmatrix}$ (tah pouze ve směru osy $y$). Souřadnice je nutno pootočit o $30$ stupňů po směru hodinových ručiček, tj. v záporném směru. Nový tenzor napětí (viz [Sage](https://sagecell.sagemath.org/?z=eJx9ULtuwzAM3A34HwhkiCzIrVwXQRcPSZYODVB4NTIorhArsSVDD6PJH_U7-mOVH6mRoQUX8ng83HEBb0JypqUAVh_5QTMCrVJWldxDClIKxrpWOo-Cabh28JqHQcc0WtqKW7aMwiDPGma1-ERFUSqDBjwisRFy6vekmAcyc_Z7f72brymhnkpJQoeNq3idxSl9TF4obkUYtFpIC0gilD8Yd5hksrgnRhHe4Xt8hCOv1NcC3tX1yE59wEaVYoijuktZwVl5e47ASUh2hmunai6_v0CZSxho9pG1orcQBuv7oGlKsV-PiVZj7_3309PzvIJf4pBq84_I7WxSWf0psp1FktvXxqdJtMZbvIl-AGVpkmc=&lang=sage&interacts=eJyLjgUAARUAuQ==) nebo [Python](https://sagecell.sagemath.org/?z=eJxVjj0OwyAMhXck7sBoIoioulXKEbKwogyooQpScRA_Unv7koih8fQ--z3bPsQ9FYY1xC-zmWGkhJK6ufeEcUx29RYzyLviR391L6ahbK5Y_qCEtUqu1IQtNwZbkv-AMU0_99xtQjbMHjsuwlxYXMzLcp6Zp_91SqiWUuKm-jgmjwU0yONNPsyDhlPxHzCvP64=&lang=python&interacts=eJyLjgUAARUAuQ==)) je $$R(30^\circ)AR(-30^\circ)=
 \begin{pmatrix}
    2.5 & -4.3\\
 -4.3&  7.5
@@ -276,7 +280,9 @@ Stejný výpočet používáme, pokud se snažíme transformovat působící nap
 
 \fi
 
-Úloha na transformaci tenzoru, kterou jsme řešili na v minulém odstavci je
+<div class='shorten' data-text="Někdy je výhodné odvodit obecné rovnice pro složky tenzoru v otočených souřadnicích. Díky tomu napříkald můžeme zkoumat, kdy jsou mimodiagonální prvky nulové, kdy jsou maximální, kdy jsou maximální diagonální prvky a podobně.">
+
+Úloha na transformaci tenzoru, kterou jsme řešili v minulém odstavci je
 v aplikacích velmi důležitá. Proto existuje řada grafických nebo
 inženýrských metod na řešení tohoto úkolu. Tyto metody jsou důvtipné a názorné, například metoda Mohrovy kružnice, oproti lineární algebře však mají zásadní nevýhodu: uživatel se musí stále učit něco nového a dostává návod "jak", nikoliv "proč". Použitím aparátu lineární algebry, stejně jako dokážeme v pootočených souřadnicích vyjádřit libovolné zobrazení, dokážeme vyjádřit v pootočených souřadnicích i libovolný tenzor. Vzorce jsou stejné a navíc při otočení v rovině je matice rotace ortogonální, tj. inverzní matice je maticí transponovanou. Pro symetrický tenzor $A=
 \begin{pmatrix}
@@ -382,6 +388,7 @@ složek ve třetím řádku tento koeficient naopak figuruje. Je proto
 potřeba dávat pozor na to, s jakými komponentami je tenzor malých
 deformací uvažován.
 
+</div>
 
 # Role vlastních vektorů při transformaci matic
 
@@ -428,7 +435,7 @@ pozitivní odpověď na tuto otázku udávají věty na následujícím slidu.
 
 <div class='obtekat'>
 
-![Pokud je tenzor spojený s materiálovou chrakteristikou v diagonálním tvaru, redukuje se složitost problému. Podobná redukce složitosti je i při jiných příležitostech, například při skládání Rubikovy kostky pomocí metody [Human Thistlethwaite Algorithm](https://www.speedsolving.com/wiki/index.php/Human_Thistlethwaite_Algorithm). V této metodě se úloha nejprve redukuje na jednodušší úlohu, kdy každá barva je buď ve svojí straně nebo protilehlé. Tak je možné složit kostku buď bez nepříjemného učení se umělých algoritmů (člověk), nebo do 20 tahů (stroj a nejlepší lidé).](rubik.svg)
+![Pokud je tenzor spojený s materiálovou charakteristikou v diagonálním tvaru, redukuje se složitost problému. Podobná redukce složitosti je i při jiných příležitostech, například při skládání Rubikovy kostky pomocí metody [Human Thistlethwaite Algorithm](https://www.speedsolving.com/wiki/index.php/Human_Thistlethwaite_Algorithm). V této metodě se úloha nejprve redukuje na jednodušší úlohu, kdy každá barva je buď ve svojí straně nebo protilehlé. Tak je možné složit kostku buď bez nepříjemného učení se umělých algoritmů (člověk), nebo do 20 tahů (stroj a nejlepší lidé).](rubik.svg)
 
 </div>
 
@@ -653,6 +660,8 @@ snadno, o kolik se souřadná soustava otáčí a v jakém směru.
 
 # Hookův zákon, matice tuhosti a poddajnosti
 
+<div class="shorten" data-text="Hookův zákon je jedním ze základních stavebních kamenů teorie pružnosti a pevnosti. V jiných než izotropních materiálech však k nalezení souvislosti mezi stavem napjatosti tělesa a jeho deformací musíme použít matice (tenzory).">
+
 V minulé přednášce jsme odvodili tvar tenzoru malých deformací pro popis deformace tuhého tělesa ve tvaru
 $$\begin{pmatrix}
         \frac{\partial u_{1}}{\partial x_{1}} & \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}+\frac{\partial u_{2}}{\partial x_{1}}\right)\\
@@ -741,6 +750,8 @@ Matice $S^{-1}$ se nazývá *matice tuhosti* a označuje $C$.
 Souvislostí vlastních vektorů matice tuhosti a matice poddajnosti
 (nebo obecněji souvislostí vlastních vektorů matice a matice inverzní)
 se budeme zabývat na následujícím slidu.
+
+</div>
 
 # Vlastní vektory matice a matice inverzní
 

@@ -43,7 +43,7 @@ Diferenciální rovnice jsou jakýmsi zlatým grálem modelování. V historii b
 Někdy je nutné znát řešení rovnice, někdy stačí znát rovnici řídící studovaný proces a i bez znalosti řešení je možné získat užitečné informace.
 
 * Chování řešení při změně rozměrů systému. Využívá se například v aerodynamických tunelech, kdy se rozměrné objekty testují na zmenšeninách. Dále se využívá tam, kde rovnici nedokážeme vyřešit, například model sesuvu hory do přehrady a následná tsunami v údolí Vajont nebo akustika v Janáčkově hudební síni.
-* Náhrada jednoho problému jiným, který se chová stejně, ale je možné jej modelovat. Zahrnuje sestavování mechanických pčítačů (zaměřovače prof. Svobody) nebo vodních počítačů ([Moniac](https://en.wikipedia.org/wiki/MONIAC) sestavený v roce 1949 pro model ekonomiky Nového Zélandu, [vodní integrátor](https://en.wikipedia.org/wiki/Water_integrator) používaný Ruskem do 80-tých let)
+* Náhrada jednoho problému jiným, který se chová stejně, ale je možné jej modelovat. Zahrnuje sestavování mechanických počítačů (zaměřovače prof. Svobody) nebo vodních počítačů ([Moniac](https://en.wikipedia.org/wiki/MONIAC) sestavený v roce 1949 pro model ekonomiky Nového Zélandu, [vodní integrátor](https://en.wikipedia.org/wiki/Water_integrator) používaný Ruskem do 80-tých let)
 
 </div>
 
@@ -430,12 +430,6 @@ https://youtu.be/OgzYhnGj34I
 
 manimp:Slope_field|Směrové pole diferenciální rovnice dává představu o chování řešení této rovnice.
 
-<div class='obtekat'>
-
-![Směrové pole diferenciálni rovnice, integrální křivky, isokliny](smerove_pole_2.png)
-
-</div>
-
 Protože derivace funkce v bodě udává směrnici tečny ke grafu funkce
 v tomto bodě, lze rovnici $$\frac{\mathrm dy}{\mathrm dx}=\varphi(x,y)\tag{1}$$ chápat jako předpis, který
 každému bodu v rovině přiřadí směrnici tečny k integrální křivce,
@@ -553,11 +547,6 @@ Výše uvedené výpočty je možno shrnout do pravidla v následující poznám
 
 Navíc vzorec z poznámky silně připomíná klasické počítání se   zlomky. Proto máme Leibnizův tvar zápisu derivací $\frac{\mathrm   dy}{\mathrm dx}$ při studiu diferenciálních rovnic více v oblibě, než zápis Lagrangeův, $y'$.
 
-\iffalse
-
-manimp:ODE_transformace|Vhodnou transformací je možno zredukovat počet parametrů v rovnici a tím usnadnit numerické simulace. Nematematická cesta k transformaci je vhodná volba jednotek pro sledované veličiny.
-
-\fi
 
 **Příklad.** Diferenciální rovnice tepelné výměny $$\frac{\mathrm dT}{\mathrm dt}=-k(T-T_\infty), \quad T(0)=T_0\tag{*}$$ obsahuje tři parametry: teplotu okolního protředí $T_\infty$, počáteční teplotu $T_0$ a konstantu $k$ související s\ fyzikálními vlastnostmi prostředí. Postupně můžeme posunout  teplotní stupnici tak, aby teplota okolí byla nula a počáteční teplota jedna, tj. hodnotu $T$ snížíme o $T_\infty$ a upravíme dílek stupnice $(T_0-T_\infty)$-krát
 $$\frac{\mathrm d\left(\frac{T-T_\infty}{T_0-T_\infty}\right)}{\mathrm dt}=-k\frac{T-T_\infty}{T_0-T_\infty}$$
@@ -572,6 +561,13 @@ jednodušší. Přesto je v ní obsažena veškerá informace obsažená v
 rovnici (*). Tuto informaci je však nutno interpretovat v kontextu
 definice nových proměnných. Například to, že všechna řešení rovnice (**) konvergují k nule
 znamená, že všechna řešení rovnice (*) konvergují k $T_0$. To, že řešení rovnice (**) klesne na poloviční hodnotu za čas $\ln 2$ znamená, že vzdálenost řešení rovnice (*) od rovnovážného stavu se na polovinu zmenší za čas $\frac 1k \ln 2$.
+
+\iffalse
+
+manimp:ODE_transformace|Vhodnou transformací je možno zredukovat počet parametrů v rovnici a tím usnadnit numerické simulace. Nematematická cesta k transformaci je vhodná volba jednotek pro sledované veličiny.
+
+\fi
+
 
 > Poznámka (nondimenzinalizace, rozměrová analýza).  Proces eliminace parametrů z modelu popsaného diferenciální rovnicí se nazývá nondimenzionalizace nebo rozměrová analýza modelu, protože eliminaci parametrů je vhodné provádět tak, aby výsledné nové veličiny vycházely bez fyzikálních jednotek. K tomu se provádí rozbor jednotek jednotlivých veličin. V jednoduchých případech však stačí primitivní postup popsaný v odstavcích výše a ukázaný na příkladu. V tomto příkladě veličina $x$ nemá fyzikální jednotku, protože je součinem konstanty $k$ (s jednotkou $\mathrm s^{-1}$) a času $t$ (s jednotkou $\mathrm s$). Je možné ji považovat za *bezrozměrný čas*. Veličina $y$ také nemá fyzikální jednotku, protože je podílem dvou teplot a je možné ji považovat za *bezrozměrnou teplotu*. 
 >
@@ -652,7 +648,7 @@ Excel](https://support.microsoft.com/en-us/help/78113/floating-point-arithmetic-
 
 https://youtu.be/SVDLZMIfW8Y
 
-manimp:Stabilita|Stabilitu autonomní diferenciální rovnice můžeme posoudit ze znaménka pravé strany. S minimem informací dokážeme poznat, jak se bude řešení chovat z hlediska konvergence ke stacionárnímu stavu.
+manim:Stabilita|Siu5ZgEA59s|Stabilitu autonomní diferenciální rovnice můžeme posoudit ze znaménka pravé strany. S minimem informací dokážeme poznat, jak se bude řešení chovat z hlediska konvergence ke stacionárnímu stavu.
 
 Rovnice $$\frac{\mathrm dy}{\mathrm dx}=f(y)\tag{♣}$$ se nazývá
 *autonomní*, nebo též nezávislá na čase. Je speciálním případem rovnice
@@ -727,7 +723,7 @@ Pro grafickou intepretaci je vhodné připomenout, že funkce s kladnou
 derivací jsou rostoucí a funkce se zápornou derivací klesající. Pokud
 má tedy pravá strana derivaci různou od nuly, poznáme stabilitu z\ monotonie pravé strany.
 
-manimp:Logistic|U logistické rovnice s lovem dochází v závislosti na velikosti lovu buď ke snížení nebo k zániku stabilního stacionárního stavu.
+manim:Logistic|NyLkjOTYzVQ|U logistické rovnice s lovem dochází v závislosti na velikosti lovu buď ke snížení nebo k zániku stabilního stacionárního stavu.
 
 **Příklad.** Logistická diferenciální rovnice s konstantním lovem
   $h$, tj. rovnice

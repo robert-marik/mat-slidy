@@ -245,7 +245,7 @@ kde i tento integrál se dá vypočítat přímou integrací pomocí vzorce.
 </div>
 
 
-<div class="shorten" data-text="Další trošku náročnější aplikace integrálu. Jak je v úlohách na integrál obvyklé, potřebujeme posčítat příspěvky k aditivní veličině, jejíž hodnota nás zajímá. V tomto pčípadě potřebujeme posčítat příspěvky z kruhové oblasti okolo stromu.">
+<div class="shorten" data-text="Další trošku náročnější aplikace integrálu. Jak je v úlohách na integrál obvyklé, potřebujeme posčítat příspěvky k aditivní veličině, jejíž hodnota nás zajímá. V tomto případě potřebujeme posčítat příspěvky z kruhové oblasti okolo stromu.">
 
 
 
