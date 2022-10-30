@@ -593,6 +593,34 @@ Další informace:
 
 * [Z. Pospíšil, Maticové populační modely](http://portal.matematickabiologie.cz/index.php?pg=analyza-a-modelovani-dynamickych-biologickych-dat--maticove-populacni-modely--prolog--leslieho-model-rustu-populace#pro14)
 
+## Analýza sítí a toků v sítích
+
+<div class='obtekat'>
+
+![Jednoduchý potravní řetezec. Zdroj: https://linearalgebraapplications19.wordpress.com/2019/04/29/food-webs/](food-web.png)
+
+</div>
+
+Matice je možné použít k analýze sítí a toků v sítích, kdy sítí rozumíme například potravní řetězec, kaskádu chemických a biochemických reakcí představujících metabolismus živého organismu a podobně. Matice umožňují hledat v sítích zákonitosti a vazby, umožňují modelovat toky mezi uzly v sítích, umožňují provádění experimentů v počítači namísto laboratoře. To zrychluje, zlevňuje a zefektivňuje práci a umožňuje automatizaci a hlubší studium.
+
+Jednoduchá ukázka potravní sítě je na obrázku a tato síť by se dala charakterizovat maticí 
+$$A=\begin{pmatrix}
+0&1&0&0&0&0&0\\
+0&0&0&0&0&0&0\\
+0&1&0&0&0&0&0\\
+0&1&1&0&1&0&0\\
+0&1&1&0&0&0&0\\
+1&0&0&1&0&0&0\\
+1&0&0&0&1&1&0
+\end{pmatrix}$$
+Je-li například vektor $v$ sloupcový vektor ze samých jedniček, potom vektor $Av$ udává počet přímých potravních zdrojů pro každý druh v řetězci. Podobně, vektor $A^2v$ udává počet nepřímých potravních zdrojů přes jednoho zprostředkovatele. Více viz [blogový zápisek Food Webs.](https://linearalgebraapplications19.wordpress.com/2019/04/29/food-webs/)
+
+Analogicky bývají studovány metabolické sítě, kde místo vztahů jsou chemické reakce a prvky matice označují, které produkty v jakém množství vstupují do těchto reakcí (stoichiometrické koeficienty). Je-li $X$ sloupcový vektor označující množství jednotlivých metabolitů, $v$ sloupcový vektor označující rychlosti jednotlivých reakcí a $A$ matice stoichiometrických koeficientů, platí
+$$\frac{\mathrm dX}{\mathrm dt}=Av,$$
+kde derivaci  vektoru chápeme po složkách jako vektor sestavený z derivací jednotlivých komponent. Viz například [Basic concepts and principles of stoichiometric modeling of metabolic networks](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4671265/)
+ 
+Reálné sítě mají tisíce uzlů a tisíce vztahů mezi nimi a není možné je studovat jinak, než matematickými metodami. Například [model *Escherichia Coli*](http://bigg.ucsd.edu/models/iJO1366), hojně studované bakerie, obsahuje 1805 metabolitů, 2583 reakcí a 1367 genů. Matice umožňují studovat nejenom vztahy ale i intenzitu toku mezi jednotlivými metabolity a umožní studovat vliv vnějších zásahů, například knokautování některých genů nebo umístění bakerie do anaerobního prostředí. V příkladě s potravním řetězcem například můžeme (po dodání dalších informací do modelu) určit, jakým procentem se jednotlivé složky potravy podílí na celkovém jídelníčku a jak se toto složení změní při odstranění nějaké složky potravy. 
+
 </div>
 
 # Aplikace maticového součinu: matice jako zobrazení
@@ -605,7 +633,7 @@ Nyní se na zobrazení pomocí matice podíváme očima geometra a poté očima 
 ## Matice jako zobrazení v geometrii
 
 
-manimp:MatrixMultiplication|Nejdůležitější rolí matic v materiálovém inženýrství je jejich schopnost jistým způsobem transformovat vektory (body) prostoru. Přesněji, zobrazení zachovává rovnoběžnost a dělící poměr. Rovnomerně rozmístěná mřížka se zobrazí zase na rovnoměrně rozmístěnou mřížku. (První část prezentace).
+manimp:MatrixMultiplication|Nejdůležitější rolí matic v materiálovém inženýrství je jejich schopnost jistým způsobem transformovat vektory (body) prostoru. Přesněji, zobrazení zachovává rovnoběžnost a dělící poměr. Rovnoměrně rozmístěná mřížka se zobrazí zase na rovnoměrně rozmístěnou mřížku. (První část prezentace).
 
 <div class='obtekat'>
 
@@ -751,6 +779,7 @@ Zda umíte použít součin matice a vektoru k ověření toho, zda je vektor vl
 
 \fi
 
+manimp:PumpkinTransform|Popis transformace je jednodušší, pokud jsou osy současně i vlastními směry této transformace.
 
 **Příklad.** Stacionární stav Markovova řetězce je vlastním vektorem
 matice, která tento řetězec reprezentuje. Příslušná vlastní hodnota je
@@ -761,7 +790,7 @@ zajímavé.
 **Příklad.** Vlastní hodnoty a vektory jsou jedním z hlavních
   stavebních kamenů
   [algoritmu](https://cs.wikipedia.org/wiki/PageRank), kterým Google
-  provádí hodnocení důležitosti webových stránek. Vlatní vektory se
+  provádí hodnocení důležitosti webových stránek. Vlastní vektory se
   počítají iteračně, odpovídá to vlastně modelu, kdy Markovův řetězec
   začneme v libovolném výchozím stavu a postupným iterováním se
   dostaneme do stacionárního stavu reprezentovaného vlastním vektorem.
@@ -919,7 +948,7 @@ hydrodynamických a disperzních jevů, kap. 3.3.
 
 https://youtu.be/xV46lYgdHSQ
 
-<div class="shorten" data-text="Následující text je motivační příklad ukazující aplikaci soustav lineárních rovnic na problém vedení tepla, souvislost s maticovým počtem a zejména přirozenou numerickou metodu řešení soustavy rovnic. SLouží jako motivace a bude pokryto v následující přednášce.">
+<div class="shorten" data-text="Následující text je motivační příklad ukazující aplikaci soustav lineárních rovnic na problém vedení tepla, souvislost s maticovým počtem a zejména přirozenou numerickou metodu řešení soustavy rovnic. Slouží jako motivace a bude pokryto v následující přednášce.">
 
 
 <!-- YTB YJEydfa_mHI -->
