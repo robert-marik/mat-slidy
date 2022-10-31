@@ -30,27 +30,17 @@ každý vektor musí mít opačný prvek.
 
 
 > Definice (vektory, vektorový prostor).
-> Množinu $V$ uspořádaných $n$-tic  $(a_1,
-  a_2,\dots, a_n)$ s operacemi sčítání a násobení reálným číslem
+> Množinu $V$ uspořádaných $n$-tic  $(a_1, a_2,\dots, a_n)$ s operacemi sčítání a násobení reálným číslem
   definovanými
-  $$
-  \begin{gathered}
-    (a_1, a_2,\dots, a_n)+(b_1, b_2,\dots, b_n)=(a_1+b_1,
-    a_2+b_2,\dots, a_n+b_n)\\
-    c\cdot (a_1, a_2,\dots, a_n)=(c\cdot a_1, c\cdot a_2,\dots,c\cdot a_n)
-  \end{gathered}
-  $$
-  pro všechna $c\in\mathbb R$ a $(a_1, a_2,\dots, a_n),(b_1, b_2,\dots,
-  b_n)\in V$ nazýváme *vektorovým
-    prostorem*. Prvky tohoto prostoru nazýváme *vektory*. Prvky $a_1, \dots,
-  a_n$ nazýváme *složky vektoru* $(a_1,a_2,\dots, a_n)$. Číslo
+  $$\begin{gathered}  (a_1, a_2,\dots, a_n)+(b_1, b_2,\dots, b_n)=(a_1+b_1, a_2+b_2,\dots, a_n+b_n)\\    c\cdot (a_1, a_2,\dots, a_n)=(c\cdot a_1, c\cdot a_2,\dots,c\cdot a_n)  \end{gathered}$$
+  pro všechna $c\in\mathbb R$ a $(a_1, a_2,\dots, a_n),(b_1, b_2,\dots, b_n)\in V$ nazýváme *vektorovým
+    prostorem*. Prvky tohoto prostoru nazýváme *vektory*. Prvky $a_1, \dots, a_n$ nazýváme *složky vektoru* $(a_1,a_2,\dots, a_n)$. Číslo
   $n$ nazýváme *dimenze prostoru $V$*.
 
 Vektorový prostor, jehož komponenty jsou uspořádané $n$-tice reálých čísel označujeme $\mathbb R^n$.
 
 Často pracujeme se sloupcovými vektory. Zápis je potom přehlednější.
-$$
-\begin{pmatrix}
+$$\begin{pmatrix}
   1\\-2\\1
 \end{pmatrix}
 +
