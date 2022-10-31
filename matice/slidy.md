@@ -405,10 +405,6 @@ Maticový součin
 Můžeme tedy měnit uzávorkování, můžeme
 roznásobovat závorky, nesmíme však měnit pořadí matic při násobení.
 
-> Poznámka (aplikace maticového součinu, tenzor). Nejdůležitější aplikací maticového součinu je to, že pomocí maticového součinu je  možné vyjádřit zobrazení, kde na vstupu i na výstupu jsou vektorové veličiny. To umožní rozšířit fyzikální zákony na anizotropní látky (různé vlastnosti v různých směrech, například dřevo nebo obecně látky vykazující uspořádanou strukturu). Kromě fyzikálních veličin, které mají číselnou hodnotu (skaláry) nebo číselnou hodnotu a směr (vektory) tak získáváme další fyzikální veličiny, tenzory. Více viz níže a též podkapitola "Matice jako zobrazení v materiálovém inženýrství".
->
-> Je-li druhá matice v součinu sloupcový vektor $\vec u$, je výsledkem maticového součinu matice $A$ a tohoto vektoru opět sloupcový vektor $A\vec u$. Matici je tedy možné chápat jako zobrazení, kdy vektoru $\vec u$ je přiřazen vektor $\vec v$ vztahem $$\vec v = A\vec u.$$ Tento vztah je možné chápat jako přímé rozšíření vztahu pro přímou úměrnost mezi veličinami. Zobecnění je v tom, že obě veličiny mezi nimiž je vztah úměrnosti jsou vektorovými veličinami a konstanta úměrnosti je matice. Ve fyzice tato matice mívá ještě některé speciální vlastnosti související například s tím, že fyzikální zákony nezávisí na volbě souřadné soustavy a proto se takové matice nazývají **tenzory** (přesněji tenzory druhého řádu). Používáme je pro popis zobrazení mezi vektory, které nezachovává směr vektoru. Například studium transportních dějů v anizotropních materiálech (tj. například vedení tepla ve dřevě nebo difuze ve dřevě).
-
 
 ## Neutrální prvek maticového součinu
 
@@ -448,7 +444,15 @@ Výpočet operací s maticemi je nejlepší se naučit při výpočtu konkrétn�
 
 
 
-# Aplikace maticového součinu
+# Aplikace maticového součinu 1/3
+
+Nejdůležitější aplikací maticového součinu je to, že pomocí maticového součinu je  možné vyjádřit zobrazení, kde na vstupu i na výstupu jsou vektorové veličiny. To umožní rozšířit fyzikální zákony na anizotropní látky (různé vlastnosti v různých směrech, například dřevo nebo obecně látky vykazující uspořádanou strukturu). Kromě fyzikálních veličin, které mají číselnou hodnotu (skaláry) nebo číselnou hodnotu a směr (vektory) tak získáváme další fyzikální veličiny, tenzory. Více viz níže a též podkapitola "Matice jako zobrazení v materiálovém inženýrství".
+
+Je-li druhá matice v součinu sloupcový vektor $\vec u$, je výsledkem maticového součinu matice $A$ a tohoto vektoru opět sloupcový vektor $A\vec u$. Matici je tedy možné chápat jako zobrazení, kdy vektoru $\vec u$ je přiřazen vektor $\vec v$ vztahem $$\vec v = A\vec u.$$ Tento vztah je možné chápat jako přímé rozšíření vztahu pro přímou úměrnost mezi veličinami. Zobecnění je v tom, že obě veličiny mezi nimiž je vztah úměrnosti jsou vektorovými veličinami a konstanta úměrnosti je matice. Ve fyzice tato matice mívá ještě některé speciální vlastnosti související například s tím, že fyzikální zákony nezávisí na volbě souřadné soustavy a proto se takové matice nazývají **tenzory** (přesněji tenzory druhého řádu). Používáme je pro popis zobrazení mezi vektory, které nezachovává směr vektoru. Například studium transportních dějů v anizotropních materiálech (tj. například vedení tepla ve dřevě nebo difuze ve dřevě).
+
+
+# Aplikace maticového součinu 2/3
+
 
 https://youtu.be/4jqBoskZ9Ak
 
@@ -627,7 +631,7 @@ Reálné sítě mají tisíce uzlů a tisíce vztahů mezi nimi a není možné 
 
 </div>
 
-# Aplikace maticového součinu: matice jako zobrazení, tenzory
+# Aplikace maticového součinu 3/3: matice jako zobrazení, tenzory
 
 https://youtu.be/7NH8p323zxo
 
@@ -728,7 +732,7 @@ Výše popsané chování pozorujeme i u proudění podzemní vody, kde hnací s
 
 **Matematický prostředek, který umožňuje snadno vektoru změnit velikost nebo i směr je právě tenzor (matice) a maticový součin.**
 
-> Poznámka (tenzor). Pod pojmem tenzor si můžeme představit veličinu, která figuruje v nějakém fyzikálním zákoně spojujícím dvě vektorové veličiny (podnět a odezvu na podnět) a násobení tenzorem udává vztah mezi nimi. Pokud jsou podnětem a odezvou vektory, které mají stejný směr, stačí toto násobení provést pomocí skalární veličiny. Pokud však směr vektoru udávajícího odezvu není stejný jako směr vektoru udávajícího podnět, je nutné použít postup, který si s jiným směrem vektoru na vstupu a na výstupu poradí. A tímto postupem je právě maticový součin. Zatímco tedy například tok tepla v izotropních materiálech můžeme studovat pomocí skalárních materiálových charakteristik, tok tepla v anizotropních materiálech už musíme popisovat pomocí tenzorových materiálových charakteristik. Proto například u vedení tepla ve dřevě udáváme součinitele vedení tepla $\lambda_L$, $\lambda_R$ a $\lambda_T$ pro každý anatomický směr samostatně a z těchto veličin poté sestavujeme tenzor tepelné vodivosti $$\begin{pmatrix}\lambda_L &0&0 \cr 0&\lambda_R&0\cr 0&0&\lambda_T\end{pmatrix}.$$ 
+> Poznámka (tenzor). Pod pojmem tenzor si můžeme představit veličinu, která figuruje v nějakém fyzikálním zákoně spojujícím dvě vektorové veličiny (podnět a odezvu na podnět) a násobení tenzorem definuje vztah mezi nimi. Pokud jsou podnětem a odezvou vektory, které mají stejný směr, stačí toto násobení provést pomocí skalární veličiny. Pokud však směr vektoru udávajícího odezvu není stejný jako směr vektoru udávajícího podnět, je nutné použít postup, který si s jiným směrem vektoru na vstupu a na výstupu poradí. A tímto postupem je právě maticový součin. Zatímco tedy například tok tepla v izotropních materiálech můžeme studovat pomocí skalárních materiálových charakteristik, tok tepla v anizotropních materiálech už musíme popisovat pomocí tenzorových materiálových charakteristik. Proto například u vedení tepla ve dřevě udáváme součinitele vedení tepla $\lambda_L$, $\lambda_R$ a $\lambda_T$ pro každý anatomický směr samostatně a z těchto veličin poté sestavujeme tenzor tepelné vodivosti $$\begin{pmatrix}\lambda_L &0&0 \cr 0&\lambda_R&0\cr 0&0&\lambda_T\end{pmatrix}.$$ 
 
 # Vlastní čísla a vlastní vektory
 
@@ -1078,5 +1082,5 @@ hlavní diagonále větší číslo, než je součet zbylých čísel v tomto
 * Seznámili jsme se s vektory. S objekty, které umožňují pracovat s veličinami mající kromě numerické hodnoty i směr. 
 * Seznámili jsme se s maticemi, s objekty, které umožní pracovat se zobrazením vektorů na vektory, kdy směr vzoru a obrazu nemusí být (na rozdíl od násobení reálným číslem) stejný. Díky tomu dokážeme popsat reakci materiálu na podněty v případě, kdy má materiál v různých směrech různé vlastnosti. 
 * Matice umožňují kompaktní zápis soustavy libovolného počtu lineárních rovnic jedinou rovnicí $$AX=B.$$
-* V materiálovém inženýrství pomocí matic umíme popsat materiály, mající v různých směrech různé vlastnosti. 
+* V materiálovém inženýrství pomocí matic (přesněji pomocí tenzorů) umíme popsat materiály, mající v různých směrech různé vlastnosti. V takových materiálech je různý směr vnějšího podnětu a odezvy na vnější podnět a bez matic jenom s použitím skalárních veličin není možné se závislostmi takového typu pracovat. Pokud chceme zobrazení, které mění směr vektorů (a má některé další rozumné vlastnosti), používáme matice. Přesněji, používáme tenzory, které mají v souřadnicích podobu matic.
 
