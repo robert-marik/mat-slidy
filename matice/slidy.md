@@ -40,23 +40,7 @@ každý vektor musí mít opačný prvek.
 Vektorový prostor, jehož komponenty jsou uspořádané $n$-tice reálých čísel označujeme $\mathbb R^n$.
 
 Často pracujeme se sloupcovými vektory. Zápis je potom přehlednější.
-$$\begin{pmatrix}
-  1\\-2\\1
-\end{pmatrix}
-+
-3
-\begin{pmatrix}
-  -1\\5\\2
-\end{pmatrix}
-=
-\begin{pmatrix}
-  1-3\\-2+15\\1+6
-\end{pmatrix}
-=
-\begin{pmatrix}
-  -2\\13\\7
-\end{pmatrix}
-$$
+$$\begin{pmatrix}   1\\-2\\1 \end{pmatrix} + 3 \begin{pmatrix}   -1\\5\\2 \end{pmatrix} = \begin{pmatrix}   1-3\\-2+15\\1+6 \end{pmatrix} = \begin{pmatrix}   -2\\13\\7 \end{pmatrix} $$ 
 
 Neutrálním prvkem vzhledem ke sčítání vektorů je *nulový vektor* $\vec o$, jehož
 všechny komponenty jsou nulové. Vektor, ke kterému přičteme nulový
