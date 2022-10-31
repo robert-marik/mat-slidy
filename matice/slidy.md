@@ -39,8 +39,7 @@ každý vektor musí mít opačný prvek.
 
 Vektorový prostor, jehož komponenty jsou uspořádané $n$-tice reálých čísel označujeme $\mathbb R^n$.
 
-Často pracujeme se sloupcovými vektory. Zápis je potom přehlednější.
-$$\begin{pmatrix}   1\cr-2\cr1 \end{pmatrix} + 3 \begin{pmatrix}   -1\cr5\cr2 \end{pmatrix} = \begin{pmatrix}   1-3\cr-2+15\cr1+6 \end{pmatrix} = \begin{pmatrix}   -2\cr13\cr7 \end{pmatrix}$$ 
+Často pracujeme se sloupcovými vektory. Zápis je potom přehlednější. $$\begin{pmatrix}   1\cr-2\cr1 \end{pmatrix} + 3 \begin{pmatrix}   -1\cr5\cr2 \end{pmatrix} = \begin{pmatrix}   1-3\cr-2+15\cr1+6 \end{pmatrix} = \begin{pmatrix}   -2\cr13\cr7 \end{pmatrix}$$ 
 
 Neutrálním prvkem vzhledem ke sčítání vektorů je *nulový vektor* $\vec o$, jehož
 všechny komponenty jsou nulové. Vektor, ke kterému přičteme nulový
