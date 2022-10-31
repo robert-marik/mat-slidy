@@ -40,7 +40,7 @@ každý vektor musí mít opačný prvek.
 Vektorový prostor, jehož komponenty jsou uspořádané $n$-tice reálých čísel označujeme $\mathbb R^n$.
 
 Často pracujeme se sloupcovými vektory. Zápis je potom přehlednější.
-$$\begin{pmatrix}   1\\-2\\1 \end{pmatrix} + 3 \begin{pmatrix}   -1\\5\\2 \end{pmatrix} = \begin{pmatrix}   1-3\\-2+15\\1+6 \end{pmatrix} = \begin{pmatrix}   -2\\13\\7 \end{pmatrix} $$ 
+$$\begin{pmatrix}   1\\-2\\1 \end{pmatrix} + 3 \begin{pmatrix}   -1\\5\\2 \end{pmatrix} = \begin{pmatrix}   1-3\\-2+15\\1+6 \end{pmatrix} = \begin{pmatrix}   -2\\13\\7 \end{pmatrix}$$ 
 
 Neutrálním prvkem vzhledem ke sčítání vektorů je *nulový vektor* $\vec o$, jehož
 všechny komponenty jsou nulové. Vektor, ke kterému přičteme nulový
@@ -63,11 +63,7 @@ takovou orientovanou úsečkou, že komponenty vektoru označují změnu
 polohy v jednotlivých směrech. Sčítání vektorů 
 odpovídá posunutí počátečního bodu druhého vektoru do koncového bodu
 prvního vektoru a nahrazení dvou částečných posunutí jedním
-celkovým. Je přirozené zavést délku vektoru $\vec u=
-\begin{pmatrix}
-  u_1\\u_2
-\end{pmatrix}$ pomocí Pythaghorovy věty vzorcem $|\vec
-u|=\sqrt{u_1^2+u_2^2}$. Násobení vektoru kladným číslem odpovídá
+celkovým. Je přirozené zavést délku vektoru $\vec u= \begin{pmatrix}   u_1\\u_2 \end{pmatrix}$ pomocí Pythaghorovy věty vzorcem $|\vec u|=\sqrt{u_1^2+u_2^2}$. Násobení vektoru kladným číslem odpovídá
 změně délky vektoru. Násobení záporným číslem odpovídá změně délky a
 otočení směru.
 
