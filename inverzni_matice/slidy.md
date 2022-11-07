@@ -270,6 +270,9 @@ Stejný výpočet používáme, pokud se snažíme transformovat působící nap
 
 # Obecné vzorce pro transformaci tenzoru
 
+
+<div class='shorten' data-text="Někdy je výhodné odvodit obecné rovnice pro složky tenzoru v otočených souřadnicích. Díky tomu napříkald můžeme zkoumat, kdy jsou mimodiagonální prvky nulové, kdy jsou maximální, kdy jsou maximální diagonální prvky a podobně.">
+
 \iffalse
 
 <div class='obtekat'>
@@ -280,7 +283,6 @@ Stejný výpočet používáme, pokud se snažíme transformovat působící nap
 
 \fi
 
-<div class='shorten' data-text="Někdy je výhodné odvodit obecné rovnice pro složky tenzoru v otočených souřadnicích. Díky tomu napříkald můžeme zkoumat, kdy jsou mimodiagonální prvky nulové, kdy jsou maximální, kdy jsou maximální diagonální prvky a podobně.">
 
 Úloha na transformaci tenzoru, kterou jsme řešili v minulém odstavci je
 v aplikacích velmi důležitá. Proto existuje řada grafických nebo
