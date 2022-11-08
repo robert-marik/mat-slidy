@@ -571,16 +571,16 @@ manimp:ODE_transformace|Vhodnou transformací je možno zredukovat počet parame
 
 > Poznámka (nondimenzinalizace, rozměrová analýza).  Proces eliminace parametrů z modelu popsaného diferenciální rovnicí se nazývá nondimenzionalizace nebo rozměrová analýza modelu, protože eliminaci parametrů je vhodné provádět tak, aby výsledné nové veličiny vycházely bez fyzikálních jednotek. K tomu se provádí rozbor jednotek jednotlivých veličin. V jednoduchých případech však stačí primitivní postup popsaný v odstavcích výše a ukázaný na příkladu. V tomto příkladě veličina $x$ nemá fyzikální jednotku, protože je součinem konstanty $k$ (s jednotkou $\mathrm s^{-1}$) a času $t$ (s jednotkou $\mathrm s$). Je možné ji považovat za *bezrozměrný čas*. Veličina $y$ také nemá fyzikální jednotku, protože je podílem dvou teplot a je možné ji považovat za *bezrozměrnou teplotu*. 
 >
->V úloze s ochlayzovním tělesa bylo zavedení nových veličin přirozené. I u méně zřejmých úloh zkušenosti ukazují, že je vhodné volit transformaci tak, aby vznikly veličiny bezrozměrné, které nemají fyzikální jednotku. Například v
+>V úloze s ochlazováním tělesa bylo zavedení nových veličin přirozené. I u méně zřejmých úloh zkušenosti ukazují, že je vhodné volit transformaci tak, aby vznikly veličiny bezrozměrné, které nemají fyzikální jednotku. Například v
 *Horáček, Fyzikální a mechanické vlastnosti dřeva I* je zavedena [bezrozměrná vlhkost, bezrozměrný čas a bezrozměrná vzdálenost](https://is.mendelu.cz/eknihovna/opory/zobraz_cast.pl?cast=9180;lang=cz) na straně 61 pro rovnici popisující difuzi a [charakteristická délka, Biotovo číslo (bezrozměrná tepelná vodivost) a bezrozměrná teplota, bezrozměrný čas a bezrozměrná vzdálenost](https://is.mendelu.cz/eknihovna/opory/zobraz_cast.pl?cast=9182;lang=cz) pro rovnici popisující vedení tepla na stranách 88 a 89.
 >
 > Obecné výhody transformace diferenciálních rovnic jsou následující.
 >
 >  * Po transformaci obsahuje rovnice v nových veličinách menší množství parametrů.
 >  * Nové veličiny jsou bez fyzikální jednotky a tudíž vhodné pro numerické simulace, kdy se zpravidla o jednotky nestaráme.
->  * Nové veličiny zpravidla nabývají hodnot řádově srovnatelných s jedničkou. Nejedná se ani o tisíce ani o tisícíny. 
+>  * Nové veličiny zpravidla nabývají hodnot řádově srovnatelných s jedničkou. Nejedná se ani o tisíce ani o tisíciny. 
 >
-> Všechny tři uvdené skutečnosti vedou k tomu, že s transformovanými rovnicemi se lépe pracuje v numerických modelech.
+> Všechny tři uvedené skutečnosti vedou k tomu, že s transformovanými rovnicemi se lépe pracuje v numerických modelech.
 
 
 
@@ -674,8 +674,8 @@ se budou řešení chovat.
   stacionárním bodu.*
 
 Následující věta umožní odlišit stabilní a nestabilní stacionární
-body. Protože v přírodě dochází k drobným perturbacím nustále, udává
-vlastně, které stacioární stavy jsou realizovatelné a můžeme je v
+body. Protože v přírodě dochází k drobným perturbacím neustále, udává
+vlastně, které stacionární stavy jsou realizovatelné a můžeme je v
 přírodě pozorovat a které jsou prakticky nerealizovatelné.
 
 <!--
