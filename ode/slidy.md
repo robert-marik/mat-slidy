@@ -584,7 +584,7 @@ manimp:ODE_transformace|Vhodnou transformací je možno zredukovat počet parame
 
 
 
-**Příklad.** Diferenciální rovnice logistického růstu s lovem konstantní intenzity $$\frac{\mathrm dx}{\mathrm dt}=rx\left(1-\frac xK\right)-h$$ je možno přepsat do tvaru 
+**Příklad.** Diferenciální rovnici logistického růstu s lovem konstantní intenzity $$\frac{\mathrm dx}{\mathrm dt}=rx\left(1-\frac xK\right)-h$$ je možno přepsat do tvaru 
 $$\frac{\mathrm d\frac xK}{\mathrm d(rt)}=\frac xK\left(1-\frac xK\right)-\frac{h}{rK}$$
 a po zavedení bezrozměrné velikosti populace $X=\frac xK$, bezrozměrného času $T=rt$ a bezrozměrné intenzity lovu $H=\frac{h}{rK}$ má model tvar
 $$\frac{\mathrm dX}{\mathrm dT}=X\left(1-X\right)-H.$$ Jinými slovy, chování modelu například z hlediska konvergence řešení k nenulové hodnotě závisí na parametru $\frac{h}{rK}.$ Pokud se sníží nosná kapacita prostředí o dvacet procent, je nutné pro udržení stejného chování rovnice snížit lov nebo zvýšit koeficient $r$ tak, aby poměr $\frac{h}{rK}$ zůstal zachován. 
