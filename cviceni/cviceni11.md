@@ -56,7 +56,7 @@ pro $T=T(x)$ a $k\in \mathbb R^+$.
 
 _Poznámka: Výsledek se dá použít i pro stěnu složenou z různých vrstev. Postupuje se tak, že se jednotlivé vrstvy nahradí ekvivalentními vrstvami z jednoho materiálu. Například vrstva z materiálu s polovičním koeficientem tepelné vodivosti se nahradí vrstvou, která je dvojnásobně silná._
 
-_Poznámka: Na stejnou úlohu se stejnou rovnicí a stejným řešením vede například {\bfseries proudění podzemní vody ve zvodni s napjatou hladinou} (představou může být podzemní voda protékající půdou a shora i zdola ohraničená nepropustnou vrstvou)._
+_Poznámka: Na stejnou úlohu se stejnou rovnicí a stejným řešením vede například proudění podzemní vody ve zvodni s napjatou hladinou (představou může být podzemní voda protékající půdou a shora i zdola ohraničená nepropustnou vrstvou)._
 
 <div class=reseni>
 
@@ -81,7 +81,7 @@ pro $T=T(x)$ a $k=a+bT$, $a,b\in \mathbb R$.
 
 _Poznámka: Výpočet necháme kvalitativní abychom viděli, že teplotní profil ve stěně není lineární. Pro užitečnost v inženýrských aplikacích je vhodné přidat okrajové podmínky a vyjádřit řešení pomocí parametrů v těchto okrajových podmínkách. To jsou typicky teploty na jednotlivých stranách stěny._
 
-_Poznámka: Na stejnou úlohu se stejnou rovnicí a stejným řešením, pouze pro $a=0$, vede například proudění podzemní vody ve zvodni s volnou hladinou  na rozdíl od předchozího příkladu chybí horní nepropustná vrstva)._
+_Poznámka: Na stejnou úlohu se stejnou rovnicí a stejným řešením, pouze pro $a=0$, vede například proudění podzemní vody ve zvodni s volnou hladinou. Na rozdíl od předchozího příkladu chybí horní nepropustná vrstva)._
 
 <div class=reseni>
 Po zintegrování dostáváme
