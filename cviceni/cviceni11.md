@@ -121,7 +121,7 @@ $$0=-h(T-T_0)+\frac{\mathrm d}{\mathrm dx}\left(\lambda \frac{\mathrm dT}{\mathr
 
 Homogenita a nezávislost $\lambda$ na teplotě umožňují použít druhou derivaci namísto kvaziderivace.
 
-$$0=-h(T-T_0)+\lambda \frac{\mathrm d^2 T}{\mathrm dx}$$
+$$0=-h(T-T_0)+\lambda \frac{\mathrm d^2 T}{\mathrm dx^2}$$
 
 Ke stejnému závěru je možné dojít i přesnou analýzou ve 3D, viz Cengel, Heat transfer, kapitola 3–6 Heat transfer from finned surfaces.
 

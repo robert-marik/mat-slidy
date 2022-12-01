@@ -25,7 +25,7 @@ Vektorem rozumíme uspořádanou $n$-tici objektů, pro které má smysl
 operace sčítání a násobení číslem. Počet komponent v této $n$-tici se
 nazývá dimenze vektoru. Tyto komponenty jsou zpravidla čísla nebo
 skalární funkce. Aby se s vektory dalo rozumně pracovat, musí tvořit
-vhodnou strukturu. Například každý vektor musí mít neutrální prvek a
+vhodnou strukturu. Například operace musí mít neutrální prvek a
 každý vektor musí mít opačný prvek.
 
 
