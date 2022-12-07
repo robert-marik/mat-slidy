@@ -109,9 +109,9 @@ krajích stěny.
 Výjimečně jsme nuceni do rovnice vedení tepla zahrnout i zdroje. 
 Modelujte vedení tepla v žebru chladiče. Úlohu uvažujte jako
 jednorozměrnou, materiál homogenní izotropní s konstantní tepelnou
-vodivostí. Kolem chladiče proudí vzduch a teplotě $T_0$ a chladič
+vodivostí. Kolem chladiče proudí vzduch o teplotě $T_0$ a chladič
 ztrácí teplo rychlostí úměrnou rozdílu teploty žebra v daném místě a
-teploty okolního vzduchu. (Koeficient úměrnosti je dán koeficient přestupu tepla a šířkou žebra). Uvažujte stacionární děj.
+teploty okolního vzduchu. (Koeficient úměrnosti je dán koeficientem přestupu tepla a šířkou žebra). Uvažujte stacionární děj.
 
 <div class=reseni>
 
