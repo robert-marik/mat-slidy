@@ -109,9 +109,9 @@ krajích stěny.
 Výjimečně jsme nuceni do rovnice vedení tepla zahrnout i zdroje. 
 Modelujte vedení tepla v žebru chladiče. Úlohu uvažujte jako
 jednorozměrnou, materiál homogenní izotropní s konstantní tepelnou
-vodivostí. Kolem chladiče proudí vzduch a teplotě $T_0$ a chladič
+vodivostí. Kolem chladiče proudí vzduch o teplotě $T_0$ a chladič
 ztrácí teplo rychlostí úměrnou rozdílu teploty žebra v daném místě a
-teploty okolního vzduchu. (Koeficient úměrnosti je dán koeficient přestupu tepla a šířkou žebra). Uvažujte stacionární děj.
+teploty okolního vzduchu. (Koeficient úměrnosti je dán koeficientem přestupu tepla a šířkou žebra). Uvažujte stacionární děj.
 
 <div class=reseni>
 
@@ -121,7 +121,7 @@ $$0=-h(T-T_0)+\frac{\mathrm d}{\mathrm dx}\left(\lambda \frac{\mathrm dT}{\mathr
 
 Homogenita a nezávislost $\lambda$ na teplotě umožňují použít druhou derivaci namísto kvaziderivace.
 
-$$0=-h(T-T_0)+\lambda \frac{\mathrm d^2 T}{\mathrm dx}$$
+$$0=-h(T-T_0)+\lambda \frac{\mathrm d^2 T}{\mathrm dx^2}$$
 
 Ke stejnému závěru je možné dojít i přesnou analýzou ve 3D, viz Cengel, Heat transfer, kapitola 3–6 Heat transfer from finned surfaces.
 
