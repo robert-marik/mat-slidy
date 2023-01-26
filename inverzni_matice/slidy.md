@@ -664,7 +664,7 @@ snadno, o kolik se souřadná soustava otáčí a v jakém směru.
 
 <div class="shorten" data-text="Hookův zákon je jedním ze základních stavebních kamenů teorie pružnosti a pevnosti. V jiných než izotropních materiálech však k nalezení souvislosti mezi stavem napjatosti tělesa a jeho deformací musíme použít matice (tenzory).">
 
-V minulé přednášce jsme odvodili tvar tenzoru malých deformací pro popis deformace tuhého tělesa ve tvaru
+V minulé přednášce jsme odvodili tvar tenzoru malých deformací pro popis deformace tělesa ve tvaru
 $$\begin{pmatrix}
         \frac{\partial u_{1}}{\partial x_{1}} & \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}+\frac{\partial u_{2}}{\partial x_{1}}\right)\\
         \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}+\frac{\partial u_{2}}{\partial x_{1}}\right)& \frac{\partial u_{2}}{\partial x_{2}}
