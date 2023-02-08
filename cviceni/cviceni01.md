@@ -4,7 +4,7 @@
 >  * Naučíte se derivovat jednoduché funkce (mocninné funkce, další základní elementární funkce a složené funkce). Nejsou nutné žádné přdchozí znalosti, budete potřebovat pouze vzorce pro derivování a spoustu cviku.
 >  * Naučíte se interpretovat derivaci jako rychlost růstu v různých kontextech, kdy veličina závisí na čase, příapdně na jiné veličině.
 >  * Naučíte se ze známého vzorce mezi dvěma veličinami odvodit vzorec dávající do souvislosti rychlosti změn těchto veličin.
-
+>  * [Zde jsou numerické výpočty](https://gist.github.com/robert-marik/9807f45acd8e4c522472749d73bb5b46) k některým příkladům v jazyce Python.
 
 ## Základní vzorce.
 
@@ -80,7 +80,7 @@ Biologové navrhli funkci
 $$
     l=0.03937 t^3 - 0.945 t^2 + 10.033 t + 3.073
   $$
-  jako model délky jistého druhu ryby, kde $l$ je délka ryby v centimetrech, a $t$ je věk v letech.  Vypočtěte derivaci
+  jako model délky jistého druhu ryby, kde $l$ je délka ryby v centimetrech a $t$ je věk v letech.  Vypočtěte derivaci
   $\frac{\mathrm{d}l}{\mathrm {d}t}$. Určete jednotku této derivace a
   slovní interpretaci hodnoty derivace v bodě $t=12$.
 
