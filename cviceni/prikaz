@@ -37,4 +37,4 @@ do
 
 done
 
-scp cviceni*html  $target
+# scp cviceni*html  $target

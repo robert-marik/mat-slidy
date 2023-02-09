@@ -1,0 +1,315 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>Parciální derivace, rovnice vedení tepla</title>
+  <style type="text/css">code{white-space: pre;} body {  font-family: "Open Sans", Sans-Serif;}
+h1,h2 {clear:both;}
+  </style>
+
+  <!---
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+--->
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+  <script type="text/javascript">
+        function cislo(kolik)
+    {
+	if (kolik==-1) {return "00";}
+	if (kolik==0) {return "00";}
+	if (kolik>=13) {return "13";}
+	if (kolik==12) {return "12";}
+	if (kolik==10) {return "10";}
+	if (kolik==11) {return "11";}
+	return "0"+kolik;
+    };
+
+
+    function    myFunction()
+    {
+        //jQuery(".reseni").slideToggle();
+	jQuery(event.target).next().slideToggle();
+    }
+    
+    
+ </script>
+
+    <link rel="stylesheet" href="../my.css" type="text/css" />
+  <link rel="stylesheet" href="cviceni.css" type="text/css" />
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+  
+
+      
+  
+</head>
+<body>
+
+  <div class="container_">
+
+  
+  <div class='menu-obalka'>
+    <a class='menu menu4' href='../../'>Matematika</a><a class='menu menu4' href='../'>Přednáška</a><a class='menu menu4 ACTIVE' href='../cviceni'>Cvičení</a><a class='menu menu4' href='https://um.mendelu.cz/'>WeBWorK</a>
+  </div>
+	
+<div class='menu-obalka'><a class='menu' href='cviceni00.md.html'>0</a><a class='menu' href='cviceni01.md.html'>1</a><a class='menu' href='cviceni02.md.html'>2</a><a class='menu' href='cviceni03.md.html'>3</a><a class='menu' href='cviceni04.md.html'>4</a><a class='menu' href='cviceni05.md.html'>5</a><a class='menu' href='cviceni06.md.html'>6</a><a class='menu' href='cviceni07.md.html'>7</a><a class='menu' href='cviceni08.md.html'>8</a><a class='menu' href='cviceni09.md.html'>9</a><a class='menu' href='cviceni10.md.html'>10</a><a class='menu ACTIVE' href='cviceni11.md.html'>11</a><a class='menu' href='cviceni12.md.html'>12</a><a class='menu' href='cviceni13.md.html'>13</a></div>
+
+<div class="container">
+<!-- <div class="links"><a href="cviceni00.md.html">Začátek</a><a class="prev-a">Předchozí cvičení</a><a class="next-a">Další cvičení</a><a href="cviceni13.md.html">Konec</a></div>  -->
+
+  <p>
+<a class="PDF"> Stáhnout ve formátu PDF </a>
+  </p>
+<div id="header">
+<h1 class="title">Parciální derivace, rovnice vedení tepla</h1>
+</div>
+
+<div style='background-color: #E41F1F; display:inline-div;width:300px; color:lightgray; text-align:center; font-weight:bold; float:left; margin-right:10px; border-color:#E41F1F; border-style:solid;' ><a href='https://youtu.be/rMYvafCY0Js' style='text-decoration:none; color:lightgray;'><img src='https://img.youtube.com/vi/rMYvafCY0Js/mqdefault.jpg' style='width:100%; max-width:100%;'>Youtube cvičení</a></div>
+
+<div id="TOC">
+<ul>
+<li><a href="#difuzní-rovnice-ve-2d"><span class="toc-section-number">1</span> Difuzní rovnice ve 2D</a></li>
+<li><a href="#stacionární-vedení-tepla-lineární-materiál"><span class="toc-section-number">2</span> Stacionární vedení tepla, lineární materiál</a></li>
+<li><a href="#stacionární-vedení-tepla-nelineární-materiál"><span class="toc-section-number">3</span> Stacionární vedení tepla, nelineární materiál</a></li>
+<li><a href="#stacionární-vedení-tepla-v-žebru-chladiče"><span class="toc-section-number">4</span> Stacionární vedení tepla v žebru chladiče</a></li>
+<li><a href="#výpočet-parciálních-derivací"><span class="toc-section-number">5</span> Výpočet parciálních derivací</a></li>
+<li><a href="#rovnice-vedení-tepla-v-dvourozměrném-materiálu"><span class="toc-section-number">6</span> Rovnice vedení tepla v dvourozměrném materiálu</a></li>
+<li><a href="#poznámky-k-online-výuce"><span class="toc-section-number">7</span> Poznámky k online výuce</a></li>
+</ul>
+</div>
+
+<div style="clear:both;"></div>
+
+<h1 id="difuzní-rovnice-ve-2d"><span class="header-section-number">1</span> Difuzní rovnice ve 2D</h1>
+
+<figure>
+<img src="tigr.jpg" alt="Difuzní rovnice dokáže například objasnit i modelování chemických rekací s přihlédnutím k prostorovému rozložení reagujících látek a jejich koncentrací. Jednou z aplikací je vysvětlení toho, proč jednotný mechanismus tvorby vzorů na srsti savců vede jednou k pruhům a jednou ke skvrnám na srsti. Dokážeme tak například lépe pochopit proces, jakým se geny přepisují do viditelných znaků. Podrobněji Murray: Mathematical biology nebo How the leopard gets its spots. Obrázek: pixabay.com" /><figcaption>Difuzní rovnice dokáže například objasnit i modelování chemických rekací s přihlédnutím k prostorovému rozložení reagujících látek a jejich koncentrací. Jednou z aplikací je vysvětlení toho, proč jednotný mechanismus tvorby vzorů na srsti savců vede jednou k pruhům a jednou ke skvrnám na srsti. Dokážeme tak například lépe pochopit proces, jakým se geny přepisují do viditelných znaků. Podrobněji Murray: Mathematical biology nebo How the leopard gets its spots. Obrázek: pixabay.com</figcaption>
+</figure>
+
+<p>Rozepište difuzní rovnici <span class="math display">\[\frac{\partial u}{\partial t}=\sigma+\nabla\cdot (D\nabla u)\]</span> ve dvourozměrném případě do kartézských souřadnic za předpokladu, že souřadné osy jsou ve vlastních směrech difuzní matice.</p>
+<p>Okomentujte, jak předpoklady o vlastnostech materiálu a o modelovaném procesu (stacionárnost, existence či neexistence zdrojů, homogenita materiálu, stejné chování v různých směrech apod.) ovlivní výslednou rovnici.</p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p>Difuzní rovnice ve 2D v kartézských souřadnicích má tvar <span class="math display">\[\frac{\partial u}{\partial t}
+=\sigma +
+\frac{\partial }{\partial x}\left(D_x \frac{\partial u}{\partial x}\right)
++
+\frac{\partial }{\partial y}\left(D_y \frac{\partial u}{\partial y}\right)
+\]</span> Toto je nejobecnější tvar a bohužel také nejsložitější. Kdykoliv to jde, zjednodušujeme co se dá. To se dá ovšem udělat pouze v případě některých speciálních vlastností studovaného systému.</p>
+<ul>
+<li>Obecný tvar má schopnosti zachytit i nestacionární děj, děj probíhající v různé časové okamžiky jinou intenzitou. Pokud nás zajímá jenom stacionární stav kdy je hodnota stavové veličiny konstantní, můžeme rovnici zjednodušit předpokladem <span class="math display">\[\frac{\partial u}{\partial t}=0\]</span> do tvaru <span class="math display">\[0=\sigma +\frac{\partial }{\partial x}\left(D_x \frac{\partial u}{\partial x}\right) + \frac{\partial }{\partial y}\left(D_y \frac{\partial u}{\partial y}\right).\]</span></li>
+<li>Obecný tvar má díky přitomnosti zdrojů schopnosti zachytit i proces vzniku či zániku stavové veličiny. Pokud k tomuto nedochází, je rovnice bezzdrojová a můžeme ji zjednodušit předpokladem <span class="math display">\[\sigma=0\]</span> do tvaru <span class="math display">\[\frac{\partial u}{\partial t} =\frac{\partial }{\partial x}\left(D_x \frac{\partial u}{\partial x}\right) + \frac{\partial }{\partial y}\left(D_y \frac{\partial u}{\partial y}\right).\]</span></li>
+<li>Obecný tvar má díky přitomnosti dvou různých difuzních koeficientů <span class="math inline">\(\displaystyle D_x\)</span> a <span class="math inline">\(\displaystyle D_y\)</span> schopnosti zachytit chování materiálu, který má odlišné vlastnosti v odlišných směrech, anizotropii či ortotropii. Vždy však toto není potřeba. Někdy je materiál izotropní, tj. má ve všech směrech stejné vlastnosti. V tomto případě stačí uvažovat jediný difuzní koeficient <span class="math display">\[D=D_x=D_y,\]</span> což rovnici zjednodušuje do tvaru <span class="math display">\[\frac{\partial u}{\partial t} =\sigma + \frac{\partial }{\partial x}\left(D \frac{\partial u}{\partial x}\right) + \frac{\partial }{\partial y}\left(D \frac{\partial u}{\partial y}\right).\]</span></li>
+<li>Pro konstantní difuzní koeficient je možno difuzní členy zjednodušit pomocí pravidla pro derivaci konstantního násobku, tj. <span class="math display">\[ \frac{\partial }{\partial x}\left(D_x \frac{\partial u}{\partial x}\right) = D_x \frac{\partial^2 u}{\partial x^2} \]</span> a analogicky pro další proměnné. Výraz na levé straně se nazývá kvaziderivace, výraz napravo je násobkem druhé derivace. Tento matematický předpoklad prakticky odpovídá homogennímu materiálu ve kterém je lineární konstitutivní zákon. Rovnice poté má tvar <span class="math display">\[\frac{\partial u}{\partial t} =\sigma + D_x \frac{\partial^2 u}{\partial x^2} + D_y \frac{\partial^2 u}{\partial y^2}.\]</span></li>
+</ul>
+<p>Jednotlivé varianty je pochopitelně možné kombinovat. Například stacionární rovnice v homogenním izotropním prostředí má derivaci podle času nulovou, stejné difuzní koeficienty v obou směrech a díky homogenitě a linearitě je možné kvaziderivace napsat jako druhé derivace, tj. rovnice má tvar <span class="math display">\[0 =\sigma + D \frac{\partial^2 u}{\partial x^2} + D \frac{\partial^2 u}{\partial y^2}.\]</span></p>
+</div>
+<h1 id="stacionární-vedení-tepla-lineární-materiál"><span class="header-section-number">2</span> Stacionární vedení tepla, lineární materiál</h1>
+<p>Najděte rozložení teploty v homogenní stěně při stacionárním vedení tepla a v materiálu s lineární materiálovou odezvou (koeficient tepelné vodivosti je konstantní). Jinými slovy, najděte všechny funkce splňující <span class="math display">\[\frac{\partial}{\partial x} \left(k \frac{\partial T}{\partial x}\right)=0\]</span> pro <span class="math inline">\(\displaystyle T=T(x)\)</span> a <span class="math inline">\(\displaystyle k\in \mathbb R^+\)</span>.</p>
+<p><em>Poznámka: Výsledek se dá použít i pro stěnu složenou z různých vrstev. Postupuje se tak, že se jednotlivé vrstvy nahradí ekvivalentními vrstvami z jednoho materiálu. Například vrstva z materiálu s polovičním koeficientem tepelné vodivosti se nahradí vrstvou, která je dvojnásobně silná.</em></p>
+<p><em>Poznámka: Na stejnou úlohu se stejnou rovnicí a stejným řešením vede například proudění podzemní vody ve zvodni s napjatou hladinou (představou může být podzemní voda protékající půdou a shora i zdola ohraničená nepropustnou vrstvou).</em></p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p>Rovnici můžeme vydělit konstantou <span class="math inline">\(\displaystyle k\)</span></p>
+<p>Po zintegrování dostáváme <span class="math display">\[ \frac{\partial T}{\partial x}=C_1\]</span> a po dalším zintegrování <span class="math display">\[T=C_1x+C_2.\]</span> Teplota se mění lineárně. Dvě konstanty se určí pomocí dvou teplot na hranicích stěny.</p>
+</div>
+<h1 id="stacionární-vedení-tepla-nelineární-materiál"><span class="header-section-number">3</span> Stacionární vedení tepla, nelineární materiál</h1>
+<p>Najděte rozložení teploty v homogenní stěně při stacionárním vedení tepla a v materiálu s nelineární materiálovou odezvou (koeficient tepelné vodivosti není konstantní). Použijte lineární závislost koeficientu tepelné vodivosti na teplotě. Jinými slovy, najděte všechny funkce splňující <span class="math display">\[\frac{\partial}{\partial x} \left(k \frac{\partial T}{\partial x}\right)=0\]</span> pro <span class="math inline">\(\displaystyle T=T(x)\)</span> a <span class="math inline">\(\displaystyle k=a+bT\)</span>, <span class="math inline">\(\displaystyle a,b\in \mathbb R\)</span>.</p>
+<p><em>Poznámka: Výpočet necháme kvalitativní abychom viděli, že teplotní profil ve stěně není lineární. Pro užitečnost v inženýrských aplikacích je vhodné přidat okrajové podmínky a vyjádřit řešení pomocí parametrů v těchto okrajových podmínkách. To jsou typicky teploty na jednotlivých stranách stěny.</em></p>
+<p><em>Poznámka: Na stejnou úlohu se stejnou rovnicí a stejným řešením, pouze pro <span class="math inline">\(\displaystyle a=0\)</span>, vede například proudění podzemní vody ve zvodni s volnou hladinou. Na rozdíl od předchozího příkladu chybí horní nepropustná vrstva).</em></p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p>Po zintegrování dostáváme <span class="math display">\[(a+bT)\frac{\partial T}{\partial x}=C_1\]</span> a rovnici řešíme jako diferenciální rovnici se separovanými proměnnými. Odseparováním získáme <span class="math display">\[(a+bT)\mathrm dT=C_1\mathrm dx\]</span> a po zintegrování <span class="math display">\[aT+\frac 12bT^2 = C_1x+C_2.\]</span> Řešením je parabola otočená naležato. Dvě konstanty se určí pomocí teplot na hranicích stěny. Pro správný profil je nutné si vybrat správnou část paraboly tak, aby teplota zůstala mezi teplotami na krajích stěny.</p>
+</div>
+<h1 id="stacionární-vedení-tepla-v-žebru-chladiče"><span class="header-section-number">4</span> Stacionární vedení tepla v žebru chladiče</h1>
+
+<figure>
+<img src="chladic.jpg" alt="pixabay.com" /><figcaption>pixabay.com</figcaption>
+</figure>
+
+<p>Výjimečně jsme nuceni do rovnice vedení tepla zahrnout i zdroje. Modelujte vedení tepla v žebru chladiče. Úlohu uvažujte jako jednorozměrnou, materiál homogenní izotropní s konstantní tepelnou vodivostí. Kolem chladiče proudí vzduch o teplotě <span class="math inline">\(\displaystyle T_0\)</span> a chladič ztrácí teplo rychlostí úměrnou rozdílu teploty žebra v daném místě a teploty okolního vzduchu. (Koeficient úměrnosti je dán koeficientem přestupu tepla a šířkou žebra). Uvažujte stacionární děj.</p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p>Pokud použijeme předpoklad stacionárnosti a to, že zdroje jsou záporné a jejich výkon je úměrný rozdílu teplot, má rovnice následující tvar.</p>
+<p><span class="math display">\[0=-h(T-T_0)+\frac{\mathrm d}{\mathrm dx}\left(\lambda \frac{\mathrm dT}{\mathrm dx}\right)\]</span></p>
+<p>Homogenita a nezávislost <span class="math inline">\(\displaystyle \lambda\)</span> na teplotě umožňují použít druhou derivaci namísto kvaziderivace.</p>
+<p><span class="math display">\[0=-h(T-T_0)+\lambda \frac{\mathrm d^2 T}{\mathrm dx^2}\]</span></p>
+<p>Ke stejnému závěru je možné dojít i přesnou analýzou ve 3D, viz Cengel, Heat transfer, kapitola 3–6 Heat transfer from finned surfaces.</p>
+</div>
+<h1 id="výpočet-parciálních-derivací"><span class="header-section-number">5</span> Výpočet parciálních derivací</h1>
+<ol type="1">
+<li><span class="math inline">\(\displaystyle \frac{\partial }{\partial x}(x^2y+2xy^3+x+1)\)</span></li>
+<li><span class="math inline">\(\displaystyle \frac{\partial }{\partial y}(x^2y+2xy^3+x+1)\)</span></li>
+<li><span class="math inline">\(\displaystyle \frac{\partial }{\partial x}(5x^4y^3-3xy^5+x^2)\)</span></li>
+<li><span class="math inline">\(\displaystyle \frac{\partial }{\partial y}(5x^4y^3-3xy^5+x^2)\)</span></li>
+</ol>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<ol type="1">
+<li><span class="math inline">\(\displaystyle \frac{\partial }{\partial x}(x^2y+2xy^3+x+1)=2x\cdot y+2y^3+1+0=2xy+2y^3+1\)</span></li>
+<li><span class="math inline">\(\displaystyle \frac{\partial }{\partial y}(x^2y+2xy^3+x+1)=x^2+2x\cdot 3y^2+0+0=x^2+6xy^2\)</span></li>
+<li><span class="math inline">\(\displaystyle \frac{\partial }{\partial x}(5x^4y^3-3xy^5+x^2)=20x^3y^3-3y^5+2x\)</span></li>
+<li><span class="math inline">\(\displaystyle \frac{\partial }{\partial y}(5x^4y^3-3xy^5+x^2)=15x^4y^2-15xy^4+0=15x^4y^2-15xy^4\)</span></li>
+</ol>
+</div>
+<!--
+%## Gradient, anizotropní vedení tepla
+
+%![pixabay.com](teplo_deska.png)
+-->
+<h1 id="rovnice-vedení-tepla-v-dvourozměrném-materiálu"><span class="header-section-number">6</span> Rovnice vedení tepla v dvourozměrném materiálu</h1>
+<!--
+%sage: x,y = var('x,y')
+%sage: contour_plot((x+2*y)^2+x^3, (x,0,10), (y,0,10), contours=15, cmap="coolwa%rm", plot_points=150, colorbar=True)
+-->
+<p>Teplota ve dvourozměrné desce pro <span class="math inline">\(\displaystyle 0\leq x\leq 10\)</span> a <span class="math inline">\(\displaystyle 0\leq y\leq 10\)</span> zachycené v určitém okamžiku termokamerou je popsána rovnicí <span class="math display">\[T(x,y)=2y^2+x^3.\]</span> Rozměry jsou v centimetrech, teplota ve stupních Celsia. (Formálně to nevychází, ale ke každému členu můžeme dodat konstantu, která rozměr opraví tak, aby výsledek opravdu vycházel ve stupních Celsia. Pro jednoduchost tuto komplikaci vynecháme.)</p>
+<ol type="1">
+<li>Vypočtěte gradient <span class="math inline">\(\displaystyle \nabla T\)</span> a tok tepla <span class="math inline">\(\displaystyle -\lambda \cdot \nabla T.\)</span> Součinitel tepelné vodivosti (pro jednoduchost s celými čísly a bez jednotky) je <span class="math inline">\(\displaystyle \lambda=  \begin{pmatrix}  5 &amp; 1\\1&amp;2  \end{pmatrix}.\)</span></li>
+<li>Určete, zda na levém okraji desky (<span class="math inline">\(\displaystyle x=0\)</span>) teče teplo dovnitř desky nebo z desky ven.</li>
+<li>Vypočtěte divergenci toku tepla, tj. <span class="math inline">\(\displaystyle \nabla\cdot(-\lambda \cdot \nabla T).\)</span></li>
+<li>V desce nejsou zdroje tepla. Ochlazuje se deska uprostřed, nebo otepluje?</li>
+</ol>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<ol type="1">
+<li>Parciální derivace jsou <span class="math display">\[
+\begin{aligned}
+  \frac{\partial T}{\partial x}&amp;=3x^2,\\
+  \frac{\partial T}{\partial y}&amp;=4y.\\
+\end{aligned}
+\]</span> Odsud dostáváme gradient <span class="math display">\[\nabla T=
+\begin{pmatrix}
+  3x^2 \\ 4y
+\end{pmatrix}
+\]</span> a tok tepla <span class="math display">\[
+\vec q=-\lambda \nabla T=-(3x^2)
+\begin{pmatrix}
+  5 \\ 1
+\end{pmatrix}
+-4y
+\begin{pmatrix}
+1\\2  
+\end{pmatrix}
+=
+\begin{pmatrix}
+  -15 x^2 -4y\\-3x^2-8y
+\end{pmatrix}
+.
+\]</span></li>
+<li>Pro <span class="math inline">\(\displaystyle x=0\)</span> a <span class="math inline">\(\displaystyle y&gt;0\)</span> je první komponenta toku záporná a teplo teče doleva, tj. ven z desky.</li>
+<li>Divergence je <span class="math display">\[\nabla \cdot\vec q=\frac{ \partial}{\partial x} (-15x^2-4y)+\frac{\partial }{\partial y}(-3x^2-8y) = -30x-8.\]</span></li>
+<li>Pro <span class="math inline">\(\displaystyle x&gt;0\)</span> je tato divergence záporná a tok tepla slábne. To znamená, že se deska ohřívá. V každém místě a tedy i uprostřed.</li>
+</ol>
+</div>
+<h1 id="poznámky-k-online-výuce"><span class="header-section-number">7</span> Poznámky k online výuce</h1>
+<p>Nejzásadnější jsou první a poslední příklad.</p>
+<ul>
+<li>V prvním příkladě se trénuje rozepsání rovnice do souřadnic a posouzení, jestli je stacionární, se zdroji atd. To není vlastně žádná matematika ani počítání a dá se to odhalit na první pohled. Toto je také většinou jediné, co člověk s rovnicí dělá. Kromě toho ji už jenom “nacpe” do výpočetního prostředí.</li>
+<li>Druhý a třetí příklad jsou jenom reformulace příkladů, kterým jsme se věnovali ve cvičení s integrálem. Nyní to stejné jenom s jiným názvoslovím a aparátem difuzní rovnice. Abychom viděli, že to stejné “vypadne” i z obecného modelu.</li>
+<li>Čtvrtý příklad je ukázka, že i když je náš svět trojrozměrný, někdy je možné dimenzi úloh redukovat. Třeba i tak, že se nějaká věc započítá méně přirozeným způsobem. Modelový příklad je žebro chladiče. Doj nebo trojrozměrné (podle toho bereme-li ho jako placku nebo jako těleso). Teplo se předává plochou žebra do okolí. Kdybychom chtěli studovat žebro jednodimenzionálně ve směru od součástky ven, můžeme předávání tepla do okolí modelovat tak, že podél žebra jsou spotřebiče, které teplo z žebra odstraňují. Výkon těchto spotřebičů souvisí s teplotou. Vede to na jednoduchou jednodimenzionální rovnici, se kterou se v numerických výpočtech manipuluje lépe, než s rovnicí dvoudimenzionální.</li>
+<li>Pátý příklad je výpočet jednoduchých derivací, ale tentokrát funkce dvou proměnných. Není to nic nového: proměnnou, přes kterou se nederivuje, považujte za parametr (konstantu). A rovnice s parametrem derivovat umíme.</li>
+<li>Poslední příklad je co do matematického aparátu triviální (derivace polynomu a násobení 2x2 matice se sloupcovým vektorem), ale spojuje spoustu dovedností do řetězce, který už má reálné využití. Ve výpočtech je hlavně nutné neztratit hlavní linii. Nesoustředit se na detaily, ale na to, co se vlastně počítá a jak na to.
+<ul>
+<li>Výpočtem derivací teploty podle prostorových souřadnic vypočítáme, jak se mění teplota podél osy x a podél osy y. Z toho poté určíme vektor (gradient), ukazující, kterým směrem teplota roste a jak intenzivní tento růst je.</li>
+<li>Vynásobením gradientu záporným znamínkem a maticí se součinitelem tepelné vodivost určíme, jakým směrem teče teplo a jak intenzivně. Tuto informaci budeme mít pro všechny body uvažované množiny a dosazením se můžeme podívat, jestli v jednom konkrétním bodě je tok do studované množiny nebo ven.</li>
+<li>Když máme tok, můžeme vypočítat divergenci a v každém bodě budeme mít informaci, zda tok v daném bodě slábne čí zesiluje a jak intenzivně.</li>
+<li>Pokud máme dodatečnou informaci, můžeme říci, na úkor čeho je zeslabování nebo zesilování toku realizováno. Pokud například nejsou zdroj a tok slábne, znamená to, že z toku se teplo “odpojuje a zůstává v materiálu” a to znamená, že v daném místě roste teplota.</li>
+</ul></li>
+</ul>
+
+</div>  <!-- container -->
+
+<div class='menu-obalka'>
+  <a class='menu menu4' href='../../'>Matematika</a><a class='menu menu4' href='../'>Přednáška</a><a class='menu menu4 ACTIVE' href='./'>Cvičení</a><a class='menu menu4' href='https://um.mendelu.cz/'>WeBWorK</a>
+</div>
+<div class='menu-obalka'><a class='menu' href='cviceni00.md.html'>0</a><a class='menu' href='cviceni01.md.html'>1</a><a class='menu' href='cviceni02.md.html'>2</a><a class='menu' href='cviceni03.md.html'>3</a><a class='menu' href='cviceni04.md.html'>4</a><a class='menu' href='cviceni05.md.html'>5</a><a class='menu' href='cviceni06.md.html'>6</a><a class='menu' href='cviceni07.md.html'>7</a><a class='menu' href='cviceni08.md.html'>8</a><a class='menu' href='cviceni09.md.html'>9</a><a class='menu' href='cviceni10.md.html'>10</a><a class='menu ACTIVE' href='cviceni11.md.html'>11</a><a class='menu' href='cviceni12.md.html'>12</a><a class='menu' href='cviceni13.md.html'>13</a></div>
+
+<div class="footer">
+      Copyright by Robert Mařík, content is available under <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>, built with <a href="https://www.pandoc.org" target="_blank" rel="noopener">Pandoc</a>
+</div>
+
+<!-- <div class="links"><a href="cviceni00.md.html">Začátek</a><a class="prev-a">Předchozí cvičení</a><a class="next-a">Další cvičení</a><a href="cviceni13.md.html">Konec</a></div>
+  -->
+
+  <script type="text/javascript">
+
+jQuery(document).ready(function(){
+    var current_path = window.location.pathname.split('/').pop();
+	var d=Number(current_path[7]+current_path[8]);
+	//var next=d+1;
+	//var prev=d-1;
+
+        //nextnum=cislo(next);
+        //prevnum=cislo(prev);
+	//var nextlink="cviceni"+nextnum+".md.html";
+        //var prevlink="cviceni"+prevnum+".md.html";
+
+    //jQuery('.PDF').prop('href', "http://user.mendelu.cz/marik/mtk/Cviceni_"+d+".pdf");
+    //jQuery('.prev-a').prop('href', prevlink);
+    //jQuery('.next-a').prop('href', nextlink);
+});
+  </script>
+  
+
+
+
+
+<style>
+  .shorten {
+      border-left: solid;
+      border-left-color:gray;
+      padding-left:1em;
+      max-height:300px;
+      overflow:hidden;
+      margin-bottom:20px;
+      margin-top:20px;
+          -webkit-mask-image: linear-gradient(180deg, #000 20%, transparent);
+  }
+  .rozbalovatko {
+      color:gray;
+      margin-bottom:30px;
+      display:block;
+      background-color: gainsboro;
+  }
+  .rozbalovatko p {padding:10px; margin-top:0px;}
+  .rozbalovatkoPopisek {
+      color:orangered;
+      background-color:#444;
+      font-weight: bold;
+      display:block;
+      padding:5px;
+      margin-left: -20px;
+      padding-left: 20px;
+  }
+  .rozbalovatko p {
+      color:crimson;
+  }
+</style>
+
+<script>
+
+
+jQuery( document ).ready(function() {
+    jQuery(".shorten").each(function(){
+	popisek = jQuery(this).data("text");
+	if (!popisek) {popisek="";}
+	jQuery(this).prepend("<span class=\"rozbalovatko\"><span class=\"rozbalovatkoPopisek\">Volitelný text. Klikněte pro rozbalení.</span><p>"+popisek+"</p></span>").css("background-color","gainsboro");
+    });
+
+    jQuery(".rozbalovatko").each(function(){
+    	jQuery(this).parent().click(function() {
+            jQuery( this ).css("max-height","100%").css("-webkit-mask-image","none").css("background-color","inherit");
+	    jQuery( this ).children(".rozbalovatko").slideUp();
+	    jQuery( this ).unbind("click");
+	})
+    });
+});
+
+</script>
+
+  
+    </div>
+</body>
+</html>

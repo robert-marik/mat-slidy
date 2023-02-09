@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>Dvojný integrál</title>
+  <style type="text/css">code{white-space: pre;} body {  font-family: "Open Sans", Sans-Serif;}
+h1,h2 {clear:both;}
+  </style>
+
+  <!---
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+--->
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+  <script type="text/javascript">
+        function cislo(kolik)
+    {
+	if (kolik==-1) {return "00";}
+	if (kolik==0) {return "00";}
+	if (kolik>=13) {return "13";}
+	if (kolik==12) {return "12";}
+	if (kolik==10) {return "10";}
+	if (kolik==11) {return "11";}
+	return "0"+kolik;
+    };
+
+
+    function    myFunction()
+    {
+        //jQuery(".reseni").slideToggle();
+	jQuery(event.target).next().slideToggle();
+    }
+    
+    
+ </script>
+
+    <link rel="stylesheet" href="../my.css" type="text/css" />
+  <link rel="stylesheet" href="cviceni.css" type="text/css" />
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+  
+
+      
+  
+</head>
+<body>
+
+  <div class="container_">
+
+  
+  <div class='menu-obalka'>
+    <a class='menu menu4' href='../../'>Matematika</a><a class='menu menu4' href='../'>Přednáška</a><a class='menu menu4 ACTIVE' href='../cviceni'>Cvičení</a><a class='menu menu4' href='https://um.mendelu.cz/'>WeBWorK</a>
+  </div>
+	
+<div class='menu-obalka'><a class='menu' href='cviceni00.md.html'>0</a><a class='menu' href='cviceni01.md.html'>1</a><a class='menu' href='cviceni02.md.html'>2</a><a class='menu' href='cviceni03.md.html'>3</a><a class='menu' href='cviceni04.md.html'>4</a><a class='menu' href='cviceni05.md.html'>5</a><a class='menu' href='cviceni06.md.html'>6</a><a class='menu' href='cviceni07.md.html'>7</a><a class='menu' href='cviceni08.md.html'>8</a><a class='menu' href='cviceni09.md.html'>9</a><a class='menu' href='cviceni10.md.html'>10</a><a class='menu' href='cviceni11.md.html'>11</a><a class='menu ACTIVE' href='cviceni12.md.html'>12</a><a class='menu' href='cviceni13.md.html'>13</a></div>
+
+<div class="container">
+<!-- <div class="links"><a href="cviceni00.md.html">Začátek</a><a class="prev-a">Předchozí cvičení</a><a class="next-a">Další cvičení</a><a href="cviceni13.md.html">Konec</a></div>  -->
+
+  <p>
+<a class="PDF"> Stáhnout ve formátu PDF </a>
+  </p>
+<div id="header">
+<h1 class="title">Dvojný integrál</h1>
+</div>
+
+<div style='background-color: #E41F1F; display:inline-div;width:300px; color:lightgray; text-align:center; font-weight:bold; float:left; margin-right:10px; border-color:#E41F1F; border-style:solid;' ><a href='https://youtu.be/asqKNqxBQEc' style='text-decoration:none; color:lightgray;'><img src='https://img.youtube.com/vi/asqKNqxBQEc/mqdefault.jpg' style='width:100%; max-width:100%;'>Youtube cvičení</a></div>
+
+<div id="TOC">
+<ul>
+<li><a href="#kvadratický-moment-pro-obdélník"><span class="toc-section-number">1</span> Kvadratický moment pro obdélník</a></li>
+<li><a href="#těžiště-trojúhelníku"><span class="toc-section-number">2</span> Těžiště trojúhelníku</a></li>
+<li><a href="#velikost-tlakové-síly-na-hráz-přehrady"><span class="toc-section-number">3</span> Velikost tlakové síly na hráz přehrady</a></li>
+<li><a href="#působiště-tlakové-síly-na-hráz-přehrady"><span class="toc-section-number">4</span> Působiště tlakové síly na hráz přehrady</a></li>
+</ul>
+</div>
+
+<div style="clear:both;"></div>
+
+<h1 id="kvadratický-moment-pro-obdélník"><span class="header-section-number">1</span> Kvadratický moment pro obdélník</h1>
+<p>Vypočtěte integrál <span class="math display">\[
+\begin{aligned}
+ \iint_\Omega y^2\,\mathrm dx \mathrm dy,\\
+\end{aligned}
+\]</span> přes obdélník se stranami podél os, se středem v počátku a délkou stran <span class="math inline">\(\displaystyle a\)</span> a <span class="math inline">\(\displaystyle b\)</span>, tj. přes množinu <span class="math inline">\(\displaystyle \Omega\)</span> danou nerovnostmi <span class="math display">\[
+\begin{aligned}
+  -\frac a2\leq &amp;x\leq \frac a2,\\
+  -\frac b2\leq &amp;y \leq \frac b2.
+\end{aligned}
+\]</span></p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p><span class="math display">\[
+\begin{aligned}
+  \iint_\Omega y^2\,\mathrm dx \mathrm dy
+  = \int_{-\frac a2}^{\frac a2} \,\mathrm dx \times \int_{-\frac b2}^{\frac b2}y^2\,\mathrm dy=a\times \left[\frac 13 y^3\right]_{-\frac b2}^{\frac b2}=a\times \left(\frac 13 \times \frac {b^3}{8} + \frac 13 \times \frac {b^3}{8}\right)=
+  \frac 1{12}ab^3
+\end{aligned}
+\]</span></p>
+</div>
+<h1 id="těžiště-trojúhelníku"><span class="header-section-number">2</span> Těžiště trojúhelníku</h1>
+<!-- 
+\Tobrazek{\begin{tikzpicture}[scale=3]
+  \draw[black,fill=green, domain=0:1] (0,0) -- (0,1) -- plot ({\x},{1-\x})--cycle;
+%  \draw[black,domain=0:1.2] plot ({\x},{1-\x}) node[right]{$y=1-x$};
+  \draw[->] (0,0)--(1.5,0) node[right]{$x$};
+  \draw[->] (0,0)--(0,1.5) node[above]{$y$};
+    \begin{scope}
+    \clip (0,0) rectangle (1.5,1.5);
+    \draw[thin, dashed, gray] (0,0) grid (4,3);
+  \end{scope}
+\end{tikzpicture}
+}
+-->
+<p>Vypočtěte integrál <span class="math display">\[  \iint_\Omega x\,\mathrm dx \mathrm dy
+\]</span> přes trojúhelník <span class="math inline">\(\displaystyle \Omega\)</span> s vrcholy v bodech <span class="math inline">\(\displaystyle (0,0)\)</span>, <span class="math inline">\(\displaystyle (1,0)\)</span> a <span class="math inline">\(\displaystyle (0,1)\)</span> a poté vydělením obsahem trojúhleníka najděte <span class="math inline">\(\displaystyle x\)</span>-ovou polohu těžiště.</p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p>Rovnice přímky, ve které leží přepona trojúhelníka, je <span class="math display">\[y=1-x\]</span> a trojúhelník tedy je možno zapsat soustavou nerovností</p>
+<p><span class="math display">\[
+\begin{aligned}
+  0\leq &amp;x\leq 1,\\
+  0\leq &amp;y \leq 1-x.
+\end{aligned}
+\]</span></p>
+<p>Použitím těchto nerovností můžeme dvojný integrál transformovat na dvojnásobný a vypočítat. <span class="math display">\[
+\begin{aligned}
+  \iint_\Omega x\,\mathrm dx\mathrm dy
+  &amp;=\int_0^1 \int_0^{1-x} x\,\mathrm dy\mathrm dx
+  =\int_0^1 \left[xy\right]_0^{1-x}\,\mathrm dx
+  =\int_0^1 x(1-x)\,\mathrm dx
+  \\&amp;=\int_0^1 x-x^2\,\mathrm dx
+  =\left[\frac 12 x^2 - \frac 13 x^3\right]_0^1
+  \\&amp;=\frac 12 -\frac 13 =\frac 1{6}
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[x_T=\frac{\frac 16}{\frac 12}=\frac 13\]</span></p>
+</div>
+<h1 id="velikost-tlakové-síly-na-hráz-přehrady"><span class="header-section-number">3</span> Velikost tlakové síly na hráz přehrady</h1>
+<p>Viz video ke cvičení a text k přednášce.</p>
+<h1 id="působiště-tlakové-síly-na-hráz-přehrady"><span class="header-section-number">4</span> Působiště tlakové síly na hráz přehrady</h1>
+<p>Viz video ke cvičení a text k přednášce.</p>
+
+</div>  <!-- container -->
+
+<div class='menu-obalka'>
+  <a class='menu menu4' href='../../'>Matematika</a><a class='menu menu4' href='../'>Přednáška</a><a class='menu menu4 ACTIVE' href='./'>Cvičení</a><a class='menu menu4' href='https://um.mendelu.cz/'>WeBWorK</a>
+</div>
+<div class='menu-obalka'><a class='menu' href='cviceni00.md.html'>0</a><a class='menu' href='cviceni01.md.html'>1</a><a class='menu' href='cviceni02.md.html'>2</a><a class='menu' href='cviceni03.md.html'>3</a><a class='menu' href='cviceni04.md.html'>4</a><a class='menu' href='cviceni05.md.html'>5</a><a class='menu' href='cviceni06.md.html'>6</a><a class='menu' href='cviceni07.md.html'>7</a><a class='menu' href='cviceni08.md.html'>8</a><a class='menu' href='cviceni09.md.html'>9</a><a class='menu' href='cviceni10.md.html'>10</a><a class='menu' href='cviceni11.md.html'>11</a><a class='menu ACTIVE' href='cviceni12.md.html'>12</a><a class='menu' href='cviceni13.md.html'>13</a></div>
+
+<div class="footer">
+      Copyright by Robert Mařík, content is available under <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>, built with <a href="https://www.pandoc.org" target="_blank" rel="noopener">Pandoc</a>
+</div>
+
+<!-- <div class="links"><a href="cviceni00.md.html">Začátek</a><a class="prev-a">Předchozí cvičení</a><a class="next-a">Další cvičení</a><a href="cviceni13.md.html">Konec</a></div>
+  -->
+
+  <script type="text/javascript">
+
+jQuery(document).ready(function(){
+    var current_path = window.location.pathname.split('/').pop();
+	var d=Number(current_path[7]+current_path[8]);
+	//var next=d+1;
+	//var prev=d-1;
+
+        //nextnum=cislo(next);
+        //prevnum=cislo(prev);
+	//var nextlink="cviceni"+nextnum+".md.html";
+        //var prevlink="cviceni"+prevnum+".md.html";
+
+    //jQuery('.PDF').prop('href', "http://user.mendelu.cz/marik/mtk/Cviceni_"+d+".pdf");
+    //jQuery('.prev-a').prop('href', prevlink);
+    //jQuery('.next-a').prop('href', nextlink);
+});
+  </script>
+  
+
+
+
+
+<style>
+  .shorten {
+      border-left: solid;
+      border-left-color:gray;
+      padding-left:1em;
+      max-height:300px;
+      overflow:hidden;
+      margin-bottom:20px;
+      margin-top:20px;
+          -webkit-mask-image: linear-gradient(180deg, #000 20%, transparent);
+  }
+  .rozbalovatko {
+      color:gray;
+      margin-bottom:30px;
+      display:block;
+      background-color: gainsboro;
+  }
+  .rozbalovatko p {padding:10px; margin-top:0px;}
+  .rozbalovatkoPopisek {
+      color:orangered;
+      background-color:#444;
+      font-weight: bold;
+      display:block;
+      padding:5px;
+      margin-left: -20px;
+      padding-left: 20px;
+  }
+  .rozbalovatko p {
+      color:crimson;
+  }
+</style>
+
+<script>
+
+
+jQuery( document ).ready(function() {
+    jQuery(".shorten").each(function(){
+	popisek = jQuery(this).data("text");
+	if (!popisek) {popisek="";}
+	jQuery(this).prepend("<span class=\"rozbalovatko\"><span class=\"rozbalovatkoPopisek\">Volitelný text. Klikněte pro rozbalení.</span><p>"+popisek+"</p></span>").css("background-color","gainsboro");
+    });
+
+    jQuery(".rozbalovatko").each(function(){
+    	jQuery(this).parent().click(function() {
+            jQuery( this ).css("max-height","100%").css("-webkit-mask-image","none").css("background-color","inherit");
+	    jQuery( this ).children(".rozbalovatko").slideUp();
+	    jQuery( this ).unbind("click");
+	})
+    });
+});
+
+</script>
+
+  
+    </div>
+</body>
+</html>

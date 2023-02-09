@@ -1,0 +1,322 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>Diferenciální rovnice</title>
+  <style type="text/css">code{white-space: pre;} body {  font-family: "Open Sans", Sans-Serif;}
+h1,h2 {clear:both;}
+  </style>
+
+  <!---
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+--->
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+  <script type="text/javascript">
+        function cislo(kolik)
+    {
+	if (kolik==-1) {return "00";}
+	if (kolik==0) {return "00";}
+	if (kolik>=13) {return "13";}
+	if (kolik==12) {return "12";}
+	if (kolik==10) {return "10";}
+	if (kolik==11) {return "11";}
+	return "0"+kolik;
+    };
+
+
+    function    myFunction()
+    {
+        //jQuery(".reseni").slideToggle();
+	jQuery(event.target).next().slideToggle();
+    }
+    
+    
+ </script>
+
+    <link rel="stylesheet" href="../my.css" type="text/css" />
+  <link rel="stylesheet" href="cviceni.css" type="text/css" />
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+  
+
+      
+  
+</head>
+<body>
+
+  <div class="container_">
+
+  
+  <div class='menu-obalka'>
+    <a class='menu menu4' href='../../'>Matematika</a><a class='menu menu4' href='../'>Přednáška</a><a class='menu menu4 ACTIVE' href='../cviceni'>Cvičení</a><a class='menu menu4' href='https://um.mendelu.cz/'>WeBWorK</a>
+  </div>
+	
+<div class='menu-obalka'><a class='menu' href='cviceni00.md.html'>0</a><a class='menu' href='cviceni01.md.html'>1</a><a class='menu' href='cviceni02.md.html'>2</a><a class='menu' href='cviceni03.md.html'>3</a><a class='menu' href='cviceni04.md.html'>4</a><a class='menu' href='cviceni05.md.html'>5</a><a class='menu' href='cviceni06.md.html'>6</a><a class='menu ACTIVE' href='cviceni07.md.html'>7</a><a class='menu' href='cviceni08.md.html'>8</a><a class='menu' href='cviceni09.md.html'>9</a><a class='menu' href='cviceni10.md.html'>10</a><a class='menu' href='cviceni11.md.html'>11</a><a class='menu' href='cviceni12.md.html'>12</a><a class='menu' href='cviceni13.md.html'>13</a></div>
+
+<div class="container">
+<!-- <div class="links"><a href="cviceni00.md.html">Začátek</a><a class="prev-a">Předchozí cvičení</a><a class="next-a">Další cvičení</a><a href="cviceni13.md.html">Konec</a></div>  -->
+
+  <p>
+<a class="PDF"> Stáhnout ve formátu PDF </a>
+  </p>
+<div id="header">
+<h1 class="title">Diferenciální rovnice</h1>
+</div>
+
+<div style='background-color: #E41F1F; display:inline-div;width:300px; color:lightgray; text-align:center; font-weight:bold; float:left; margin-right:10px; border-color:#E41F1F; border-style:solid;' ><a href='https://youtu.be/fcpcCnrDvQU' style='text-decoration:none; color:lightgray;'><img src='https://img.youtube.com/vi/fcpcCnrDvQU/mqdefault.jpg' style='width:100%; max-width:100%;'>Youtube cvičení</a></div>
+
+<div id="TOC">
+<ul>
+<li><a href="#řešení-ode-a-ivp"><span class="toc-section-number">1</span> Řešení ODE a IVP</a></li>
+<li><a href="#tloušťka-ledu"><span class="toc-section-number">2</span> Tloušťka ledu</a></li>
+<li><a href="#model-vypouštění-nádrže"><span class="toc-section-number">3</span> Model vypouštění nádrže</a></li>
+<li><a href="#stavebniny-vedle-čebínského-nádraží-model"><span class="toc-section-number">4</span> Stavebniny vedle čebínského nádraží: model</a></li>
+<li><a href="#stavebniny-vedle-čebínského-nádraží-stabilita-řešení"><span class="toc-section-number">5</span> Stavebniny vedle čebínského nádraží: stabilita řešení</a></li>
+</ul>
+</div>
+
+<div style="clear:both;"></div>
+
+<p><em>Umění najít řešení diferenciální rovnice je sympatické a naučíme se v úvodním příkladě. Není to však nic proti umění sestavit model (naučili jsme se již ve druhém týdnu a připomeneme si v následujícím příkladě s tloušťkou ledu), umění posoudit jednoznačnost řešení (většina modelů se řeší numericky a musíme být přesvědčeni o smysluplnosti takové činnosti) a stabilitu řešení (řešení, která nejsou stabilní, jsou sice v souladu s přírodními zákony, ale pravděpodobnost jejich spontánního výskytu je nulová). Jednoznačnost a zjednodušenou verzi stability řešení (stabilita konstantních řešení) jsme viděli na přednášce a připomeneme v dalších příkladech.</em></p>
+<h1 id="řešení-ode-a-ivp"><span class="header-section-number">1</span> Řešení ODE a IVP</h1>
+<ol type="1">
+<li><span class="math inline">\(\displaystyle \frac{\mathrm dy}{\mathrm dx}=xy^2\)</span></li>
+<li><span class="math inline">\(\displaystyle \frac{\mathrm dy}{\mathrm dt}=te^y\)</span></li>
+<li><span class="math inline">\(\displaystyle \frac{\mathrm dy}{\mathrm dx}=x\sqrt y\)</span></li>
+<li><span class="math inline">\(\displaystyle \frac{\mathrm dy}{\mathrm dx}=x\sqrt y,\ \ y(0)=1\)</span></li>
+<li><span class="math inline">\(\displaystyle \frac{\mathrm dr}{\mathrm dt}=kr^3,\ \ r(0)=r_0&gt;0\)</span></li>
+<li><span class="math inline">\(\displaystyle \frac{\mathrm dm}{\mathrm dt}=m+2,\ \ m(0)=0\)</span></li>
+<li><span class="math inline">\(\displaystyle \frac{\mathrm dm}{\mathrm dt}=m+2,\ \ m(0)=-2\)</span></li>
+</ol>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<ol type="1">
+<li><span class="math inline">\(\displaystyle \frac{\mathrm dy}{\mathrm dx}=x\cdot y^2\)</span>
+<ul>
+<li>Konstantní řešení jsou řešení rovnice <span class="math display">\[ y^2=0,\]</span> tj. je jediné konstantní řešení <span class="math display">\[ y=0.\]</span></li>
+<li>Pro nekonstantní řešení dostaneme po separaci <span class="math display">\[ y^{-2}\mathrm dy=x\mathrm dx \]</span> a integrováním <span class="math display">\[ -\frac 1y=\frac 12 x^2+C.\]</span></li>
+</ul></li>
+<li><span class="math inline">\(\displaystyle \frac{\mathrm dy}{\mathrm dt}=t\cdot e^y\)</span>
+<ul>
+<li>Konstantní řešení jsou řešení rovnice <span class="math display">\[ e^y=0.\]</span> Protože tato rovnice nemá řešení, zadaná diferenciální rovnice nemá konstantní řešení.</li>
+<li>Pro nekonstantní řešení dostaneme po separaci <span class="math display">\[ e^{-y}\mathrm dy= t\mathrm dt\]</span> a integrováním <span class="math display">\[ -e^{-y}=\frac 12 t^2 +C.\]</span></li>
+</ul></li>
+<li><span class="math inline">\(\displaystyle \frac{\mathrm dy}{\mathrm dx}=x\cdot \sqrt y\)</span>
+<ul>
+<li>Konstantní řešení jsou řešení rovnice <span class="math display">\[ \sqrt y=0,\]</span> tj. jediné řešení <span class="math display">\[ y=0.\]</span></li>
+<li>Pro nekonstantní řešení dostaneme po separaci <span class="math display">\[ \frac 1{\sqrt y}\mathrm dy=x\mathrm dx \]</span> a integrováním <span class="math display">\[ 2\sqrt y=\frac 12 x^2+C.\]</span></li>
+</ul></li>
+<li><span class="math inline">\(\displaystyle \frac{\mathrm dy}{\mathrm dx}=x\sqrt y,\ \ y(0)=1\)</span>
+<ul>
+<li>Konstantní řešení <span class="math display">\[y=0\]</span> (viz předchozí příklad) nesplňuje počáteční podmínku a proto jej nemusíme uvažovat</li>
+<li>Obecné řešení <span class="math display">\[ 2\sqrt y=\frac 12x^2 +C\]</span> dává po dosazení <span class="math inline">\(\displaystyle x=0\)</span> a <span class="math inline">\(\displaystyle y=1\)</span> rovnici <span class="math display">\[2\sqrt 1=0+C.\]</span> Odsud dostáváme <span class="math inline">\(\displaystyle C=2\)</span> a řešení zadané počáteční úlohy je <span class="math display">\[2\sqrt y=\frac 12 x^2+2.\]</span></li>
+</ul></li>
+<li><span class="math inline">\(\displaystyle \frac{\mathrm dr}{\mathrm dt}=k\cdot r^3,\ \ r(0)=r_0&gt;0\)</span>
+<ul>
+<li>Konstantní řešení jsou řešení rovnice <span class="math display">\[ r^3=0,\]</span> tj. jediné konstantní řešení je <span class="math display">\[ r=0\]</span> a toto řešení nesplňuje počáteční podmínku.</li>
+<li>Pro nekonstantní řešení dostaneme po separaci <span class="math display">\[ r^{-3}\mathrm dr=k\mathrm dt \]</span> a integrováním <span class="math display">\[ -\frac 12 r^{-2}=kt+C.\]</span> Dosazením počáteční podmínky <span class="math inline">\(\displaystyle t=0\)</span>, <span class="math inline">\(\displaystyle r=r_0\)</span> dostáváme <span class="math display">\[ -\frac 12 r_0^{-2}=C.\]</span> Tím je dána konstanta <span class="math inline">\(\displaystyle C\)</span> a po použití této konstanty v obecném řešení dostáváme řešení počáteční úlohy ve tvaru <span class="math display">\[ -\frac 12 r^{-2}=kt-\frac 12 r_0^{-2}.\]</span></li>
+</ul></li>
+<li><span class="math inline">\(\displaystyle \frac{\mathrm dm}{\mathrm dt}=m+2\)</span>, <span class="math inline">\(\displaystyle m(0)=0\)</span>
+<ul>
+<li>Konstantní řešení jsou řešení rovnice <span class="math display">\[ m+2=0,\]</span> tj. <span class="math display">\[ m=-2\]</span> a toto řešení nesplňuje počáteční podmínku.</li>
+<li>Pro nekonstantní řešení dostaneme po separaci <span class="math display">\[ \frac1{m+2}\mathrm dm=dt \]</span> a integrováním <span class="math display">\[ \ln|m+2|=t+C.\]</span> Po dosazení počáteční podmínky <span class="math inline">\(\displaystyle t=m=0\)</span> dostáváme <span class="math display">\[C=\ln 2\]</span> a počáteční úloha má řešení <span class="math display">\[\ln(m+2)=t+\ln (2).\]</span> (Vzhledem k počáteční podmínce je <span class="math inline">\(\displaystyle m\)</span> kladné a nemusíme psát absolutní hodnotu.)</li>
+</ul></li>
+<li><span class="math inline">\(\displaystyle \frac{\mathrm dm}{\mathrm dt}=m+2\)</span>, <span class="math inline">\(\displaystyle m(0)=-2\)</span>
+<ul>
+<li>Konstantní řešení jsou řešení rovnice <span class="math display">\[ m+2=0,\]</span> tj. <span class="math display">\[ m=-2.\]</span> Toto řešení splňuje počáteční podmínku.</li>
+<li>Pravá strana má ohraničenou (dokonce konstantní) derivaci podle <span class="math inline">\(\displaystyle m\)</span>. Proto je řešení každé počáteční úlohy určeno jednoznačně. Řešení z předchozího bodu je jediné a další nemusíme hledat.</li>
+</ul></li>
+</ol>
+</div>
+<h1 id="tloušťka-ledu"><span class="header-section-number">2</span> Tloušťka ledu</h1>
+
+<figure>
+<img src="ledni_medved.jpg" alt="pixabay.com" /><figcaption>pixabay.com</figcaption>
+</figure>
+
+<p>Takzvaný Stefanův zákon (J. Stefan, "Uber die Theorie der Eisbildung, insbesondere "uber die Eisbildung im Polarmeere, 1891) vyjadřuje že tloušťka ledu na hladině moře roste ve stabilních podmínkách rychlostí nepřímo úměrnou této tloušťce. Zapište tento fakt pomocí vhodného matematického modelu a najděte řešení vzniklé diferenciální rovnice.</p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p><span class="math display">\[
+\begin{aligned}
+\frac{\mathrm dh}{\mathrm dt}&amp;=\frac kh\\
+h\,\mathrm dh&amp;=k\, \mathrm dt\\
+\int h\,\mathrm dh&amp;=\int k\, \mathrm dt\\
+\frac {h^2}{2}&amp;=kt+C\\
+\end{aligned}
+\]</span></p>
+</div>
+<h1 id="model-vypouštění-nádrže"><span class="header-section-number">3</span> Model vypouštění nádrže</h1>
+
+<figure>
+<img src="voda_plastovky.jpg" alt="www.rodovystatek.cz" /><figcaption>www.rodovystatek.cz</figcaption>
+</figure>
+
+<p>Z fyziky je známo, že rychlost s jakou vytéká tekutina otvorem u dna nádoby je úměrná odmocnině výšky hladiny (protože se mění potenciální energie úměrná výšce na kinetickou energii úměrnou druhé mocnině rychlosti). Proto je i rychlost s jakou se zmenšuje objem vody v nádrži úměrná odmocnině výšky hladiny.</p>
+<p>Ukažte, že matematickým popisem procesu je diferenciální rovnice. Napište rovnici pro výšku hladiny vody v nádrži jako funkci času. Uvažujte tři případy: nádrž <em>cylindrického tvaru</em> (válec postavený na podstavu), nádrž ve tvaru <em>kvádru</em> a nádrž ve tvaru <em>kužele</em> otočeného vrcholem dolů (trychtýř).</p>
+<p><em>V tomto příkladě vystupuje derivace jak rychlost, ale po přepisu zadání do modelu máme v rovnici dvě různé veličiny, které se mění: objem vody a výšku hladiny. Musíme ještě najít a použít vztah mezi rychlostmi změn těchto veličin. Fyzikální zákon je formulován pro derivaci objemu a nás zajímá derivace výšky.</em></p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p>Buď <span class="math inline">\(\displaystyle V\)</span> objem vody a <span class="math inline">\(\displaystyle h\)</span> výška hladiny od dna. Podle zadání ve všech případech platí <span class="math display">\[\frac {\mathrm dV}{\mathrm dt}=-k_1\sqrt h\]</span> a musíme derivaci <span class="math inline">\(\displaystyle \frac {\mathrm dV}{\mathrm dt}\)</span> vyjádřit pomocí <span class="math inline">\(\displaystyle \frac {\mathrm dh}{\mathrm dt}\)</span>.</p>
+<p>Pro cylindr, kvádr nebo jakoukoliv nádrž se svislými stěnami je objem úměrný výšce hladiny, <span class="math inline">\(\displaystyle V=k_2 h\)</span>, a proto <span class="math inline">\(\displaystyle \frac {\mathrm dV}{\mathrm dt}=k_2\frac {\mathrm dh}{\mathrm dt}\)</span>. Odsud <span class="math display">\[k_2\frac {\mathrm dh}{\mathrm dt}=\frac {\mathrm dV}{\mathrm dt}=-k_1\sqrt h,\]</span> tj. <span class="math display">\[\frac {\mathrm dh}{\mathrm dt}=-\frac{k_1}{k_2}\sqrt h\]</span> a pro <span class="math inline">\(\displaystyle k=\frac{k_1}{k_2}\)</span> má model tvar <span class="math display">\[\frac {\mathrm dh}{\mathrm dt}=-k\sqrt h.\]</span></p>
+<p>Pro kužel platí díky konstantnímu úhlu u vrcholu vztah <span class="math inline">\(\displaystyle V=k_3h^3\)</span> (díky podobnosti je objem přímo úměrný třetí mocnině libovolného délkového parametru) a proto <span class="math inline">\(\displaystyle \frac {\mathrm dV}{\mathrm dt}=k_3 \times 3h^2 \frac {\mathrm dh}{\mathrm dt}\)</span>. Odsud <span class="math display">\[3k_3 h^2 \frac {\mathrm dh}{\mathrm dt}=\frac {\mathrm dV}{\mathrm dt}=-k_1\sqrt h,\]</span> tj. <span class="math display">\[\frac {\mathrm dh}{\mathrm dt}=-\frac{k_1}{3k_3}h^{-3/2}\]</span> a po přeznačení konstanty má model pro kuželovou nádrž tvar <span class="math display">\[\frac {\mathrm dh}{\mathrm dt}=-kh^{-3/2}.\]</span></p>
+</div>
+<div class="shorten" data-text="Příklad ukazuje, že nemusí být vždy jednoznačně určené řešení a že to není fyzikální nesmysl. Zde není jednoznačnost při prodlužování zpětně v čase.">
+<h1 id="problematika-jednoznačnosti-v-modelu-vypouštění-nádrže"><span class="header-section-number">3</span> Problematika jednoznačnosti v modelu vypouštění nádrže</h1>
+<figure>
+<img src="voda_plastovky.jpg" alt="www.rodovystatek.cz" /><figcaption>www.rodovystatek.cz</figcaption>
+</figure>
+<p>Dříve jsme odvodili rovnici <span class="math display">\[\frac{\mathrm dh}{\mathrm dt}=-k\sqrt h\]</span> popisující úbytek hladiny vody v nádrži tvaru kvádru, ze které vypouštíme vodu.</p>
+<ol type="1">
+<li>Zkontrolujte, že pro <span class="math inline">\(\displaystyle h&gt;0\)</span> má každá počáteční úloha jediné řešení. Interpretujte tento výsledek prakticky.</li>
+<li>Pro <span class="math inline">\(\displaystyle h=0\)</span> by řešení nemuselo být určeno jednoznačně. A opravdu není. Řešením je například <span class="math inline">\(\displaystyle h(t)=0\)</span> nebo <span class="math display">\[h(t)=
+  \begin{cases}
+ \frac 14 k^2 t^2 &amp; t&lt;0\\
+ 0 &amp; t\geq 0.
+  \end{cases}\]</span> Zkontrolujte dosazením (pozor: pro <span class="math inline">\(\displaystyle t&lt;0\)</span> platí <span class="math inline">\(\displaystyle \sqrt {t^2}=|t|=-t\)</span>) a rozmyslete, jestli nejednoznačnost je jenom matematický trik, nebo jestli má fyzikální interpretaci.</li>
+</ol>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p>Ad 1: Nabídneme dvě varianty, pro argumentaci je možno použít kteroukoliv z nich.</p>
+<ul>
+<li><em>Podle obecné věty o jednoznačnosti:</em> Stačí ověřit, že pravá strana má ohraničenou parciální derivaci podle <span class="math inline">\(\displaystyle h\)</span>. Protože platí <span class="math display">\[\frac{\partial }{\partial h}(k\sqrt h)=k\frac 12
+h^{-1/2}=\frac{k}{2\sqrt h}\]</span> a tato derivace je definovaná a ohraničená v nějakém okolí libovolného bodu splňujícího <span class="math inline">\(\displaystyle h&gt;0\)</span>. Podle věty o existenci a jednoznačnosti řešení obecné diferenciální rovnice má počáteční úloha právě jedno řešení.</li>
+<li><em>Podle věty o jednoznačnosti pro rovnici se separovanými proměnnými:</em> Stačí ověřit, že část závislá na <span class="math inline">\(\displaystyle h\)</span> je nenulová. Toto jistě platí, protože pro <span class="math inline">\(\displaystyle h&gt;0\)</span> je <span class="math inline">\(\displaystyle \sqrt{h}\neq 0\)</span>.</li>
+</ul>
+<p>Pokud je tedy v nádrži nějaká voda, je jednoznačně dáno, jak bude vytékat a je možné vypočítat, jaká bude v libovolném okamžiku hladina.</p>
+<p>Ad 2: Pro <span class="math inline">\(\displaystyle h=\frac 14 k^2 t^2\)</span> a <span class="math inline">\(\displaystyle t&lt;0\)</span> dostáváme <span class="math display">\[\begin{aligned}
+      \frac{\mathrm dh}{\mathrm dt}&amp;=\frac 14 k^2 \cdot 2t = \frac 12 k^2 t\\
+      -k\sqrt h&amp;=-k\sqrt{\frac 14 k^2 t^2} = - k \frac 12 |k| \cdot |t| =
+      - k \frac 12 k (-t) = \frac 12 k^2 t
+    \end{aligned}  \]</span> a obě strany rovnice jsou stejné. Pro <span class="math inline">\(\displaystyle h=0\)</span> je dosazení triviální.</p>
+<p>Je-li <span class="math inline">\(\displaystyle h(t_0)=0\)</span>, může to být proto, že voda v čase <span class="math inline">\(\displaystyle t_0\)</span> právě vytekla, nebo proto, že vytekla před hodinou nebo proto, že v nádrži nikdy voda nebyla. Proto je nejednoznačnost přirozená. Například <span class="math inline">\(\displaystyle h(t)=0\)</span> je řešení odpovídající tomu, že voda v nádrži nikdy nebyla. Funkce <span class="math inline">\(\displaystyle h(t)=\frac 14 k^2t^2\)</span> pro <span class="math inline">\(\displaystyle t&lt;0\)</span> odpovídá tomu, že pro <span class="math inline">\(\displaystyle t&lt;0\)</span> v nádrži voda byla a vytekla v čase <span class="math inline">\(\displaystyle t=0\)</span>.</p>
+</div>
+</div>
+<h1 id="stavebniny-vedle-čebínského-nádraží-model"><span class="header-section-number">4</span> Stavebniny vedle čebínského nádraží: model</h1>
+
+<figure>
+<img src="pokros.jpg" alt="vlastní" /><figcaption>vlastní</figcaption>
+</figure>
+
+<p>Hromada sypkého materiálu má tvar kužele. Úhel u vrcholu je konstantní, daný mechanickými vlastnostmi materiálu a je nezávislý na objemu. Předpokládejme, že personál stavebnin přisypává na hromadu materiál konstantní rychlostí (v jednotkách objemu za jednotku času). Tato hromada je však v poměrně otevřené krajině a vítr rozfoukává materiál po okolí. Je rozumné předpokládat, že rozfoukávání (opět v jednotkách objemu za jednotku času) se děje rychlostí úměrnou povrchu návětrné strany pláště. Vyjádřete proces kvantitativně pomocí derivací. Napište rovnici pro derivaci objemu hromady podle času.</p>
+<p><em>Toto je podobný model jako model vypouštění nádrže, ale kratší. Opět máme po přepisu zadání do matematického modelu dvě veličiny měnící se s časem v jedné rovnici. Derivace objemu, která nás zajímá, již v rovnici přítomna naštěstí je. Stačí vyjádřit obsah pomocí objemu, nejlépe pomocí rozměrové analýzy.</em></p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p>Rychlost s jakou se mění objem je <span class="math inline">\(\displaystyle \frac{\mathrm dV}{\mathrm dt}\)</span>, rychlost přisypávání označme <span class="math inline">\(\displaystyle R\)</span>, povrch návětrné strany <span class="math inline">\(\displaystyle S\)</span>. Podle zadání platí <span class="math display">\[  \frac{\mathrm dV}{\mathrm dt} = R - k_0S.\]</span> Protože kužel má stále stejný tvar, objem jednoznačně determinuje rozměry, povrch kužele, nebo i povrch poloviny pláště, tj. povrch návětrné strany. Z rozměrové analýzy na základě Buckinghamova Pi-teorému z přednášky je zřejmé, že musí platit úměrnost mezi takovými mocninami těchto veličin, pro které jednotky “pasují”, Existuje tedy konstanta taková, že <span class="math display">\[S=k_1V^{\frac 23}.\]</span> Spojením těchto dvou vztahů dostáváme <span class="math display">\[  \frac{\mathrm dV}{\mathrm dt} = R - k V^{\frac 23},\]</span> kde <span class="math inline">\(\displaystyle r\)</span> a <span class="math inline">\(\displaystyle k=k_0k_1\)</span> jsou konstanty.</p>
+</div>
+<h1 id="stavebniny-vedle-čebínského-nádraží-stabilita-řešení"><span class="header-section-number">5</span> Stavebniny vedle čebínského nádraží: stabilita řešení</h1>
+
+<figure>
+<img src="pokros.jpg" alt="vlastní" /><figcaption>vlastní</figcaption>
+</figure>
+
+<p>Hromada sypkého materiálu má tvar kužele. Úhel u vrcholu je konstantní, daný mechanickými vlastnostmi materiálu a je nezávislý na objemu. V předchozím příkladě jsme sestavili diferenciální rovnici popisující růst hromady ve tvaru <span class="math display">\[\frac{\mathrm dV}{\mathrm dt}=R-kV^{\frac 23},\]</span> kde <span class="math inline">\(\displaystyle R\)</span> je rychlost přisypávání a <span class="math inline">\(\displaystyle k\)</span> konstanta.</p>
+<ol type="1">
+<li>Existuje konstantní řešení? Pokud ano, je stabilní nebo nestabilní? Zdůvodněte.</li>
+<li>Může hromada skončit i při neustálém přisypávání celá rozfoukaná?</li>
+<li>Mohou pracovníci navršit hromadu do libovolné výšky anebo pro velkou hromadu je již rozfoukávání rychlejší než přisypávání?</li>
+</ol>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p>Označme <span class="math inline">\(\displaystyle f(V)=R-kV^{\frac 23}\)</span>. Konstantní řešení je řešením rovnice <span class="math inline">\(\displaystyle f(V)=0\)</span>, tj. <span class="math display">\[R-kV^{\frac 23}=0.\]</span> Odsud <span class="math display">\[V_0=\left(\frac{R}{k}\right)^{3/2}.\]</span> Protože <span class="math inline">\(\displaystyle f\)</span> klesá v bodě <span class="math inline">\(\displaystyle V_0\)</span>, je toto řešení stabilní.</p>
+<p>Protože <span class="math inline">\(\displaystyle f(0)&gt;0\)</span>, malá hromada vždy roste a proto nemůže skončit celá rozfoukaná. Pro malý objem je přisypávání intenzivnější než rozfoukávání.</p>
+<p>Protože <span class="math inline">\(\displaystyle f\)</span> je pro velké <span class="math inline">\(\displaystyle V\)</span> záporná, pro velkou hromadu objem ubývá (více se rozfouká než přisype) a hromadu není možné navršit libovolně velkou.</p>
+</div>
+
+</div>  <!-- container -->
+
+<div class='menu-obalka'>
+  <a class='menu menu4' href='../../'>Matematika</a><a class='menu menu4' href='../'>Přednáška</a><a class='menu menu4 ACTIVE' href='./'>Cvičení</a><a class='menu menu4' href='https://um.mendelu.cz/'>WeBWorK</a>
+</div>
+<div class='menu-obalka'><a class='menu' href='cviceni00.md.html'>0</a><a class='menu' href='cviceni01.md.html'>1</a><a class='menu' href='cviceni02.md.html'>2</a><a class='menu' href='cviceni03.md.html'>3</a><a class='menu' href='cviceni04.md.html'>4</a><a class='menu' href='cviceni05.md.html'>5</a><a class='menu' href='cviceni06.md.html'>6</a><a class='menu ACTIVE' href='cviceni07.md.html'>7</a><a class='menu' href='cviceni08.md.html'>8</a><a class='menu' href='cviceni09.md.html'>9</a><a class='menu' href='cviceni10.md.html'>10</a><a class='menu' href='cviceni11.md.html'>11</a><a class='menu' href='cviceni12.md.html'>12</a><a class='menu' href='cviceni13.md.html'>13</a></div>
+
+<div class="footer">
+      Copyright by Robert Mařík, content is available under <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>, built with <a href="https://www.pandoc.org" target="_blank" rel="noopener">Pandoc</a>
+</div>
+
+<!-- <div class="links"><a href="cviceni00.md.html">Začátek</a><a class="prev-a">Předchozí cvičení</a><a class="next-a">Další cvičení</a><a href="cviceni13.md.html">Konec</a></div>
+  -->
+
+  <script type="text/javascript">
+
+jQuery(document).ready(function(){
+    var current_path = window.location.pathname.split('/').pop();
+	var d=Number(current_path[7]+current_path[8]);
+	//var next=d+1;
+	//var prev=d-1;
+
+        //nextnum=cislo(next);
+        //prevnum=cislo(prev);
+	//var nextlink="cviceni"+nextnum+".md.html";
+        //var prevlink="cviceni"+prevnum+".md.html";
+
+    //jQuery('.PDF').prop('href', "http://user.mendelu.cz/marik/mtk/Cviceni_"+d+".pdf");
+    //jQuery('.prev-a').prop('href', prevlink);
+    //jQuery('.next-a').prop('href', nextlink);
+});
+  </script>
+  
+
+
+
+
+<style>
+  .shorten {
+      border-left: solid;
+      border-left-color:gray;
+      padding-left:1em;
+      max-height:300px;
+      overflow:hidden;
+      margin-bottom:20px;
+      margin-top:20px;
+          -webkit-mask-image: linear-gradient(180deg, #000 20%, transparent);
+  }
+  .rozbalovatko {
+      color:gray;
+      margin-bottom:30px;
+      display:block;
+      background-color: gainsboro;
+  }
+  .rozbalovatko p {padding:10px; margin-top:0px;}
+  .rozbalovatkoPopisek {
+      color:orangered;
+      background-color:#444;
+      font-weight: bold;
+      display:block;
+      padding:5px;
+      margin-left: -20px;
+      padding-left: 20px;
+  }
+  .rozbalovatko p {
+      color:crimson;
+  }
+</style>
+
+<script>
+
+
+jQuery( document ).ready(function() {
+    jQuery(".shorten").each(function(){
+	popisek = jQuery(this).data("text");
+	if (!popisek) {popisek="";}
+	jQuery(this).prepend("<span class=\"rozbalovatko\"><span class=\"rozbalovatkoPopisek\">Volitelný text. Klikněte pro rozbalení.</span><p>"+popisek+"</p></span>").css("background-color","gainsboro");
+    });
+
+    jQuery(".rozbalovatko").each(function(){
+    	jQuery(this).parent().click(function() {
+            jQuery( this ).css("max-height","100%").css("-webkit-mask-image","none").css("background-color","inherit");
+	    jQuery( this ).children(".rozbalovatko").slideUp();
+	    jQuery( this ).unbind("click");
+	})
+    });
+});
+
+</script>
+
+  
+    </div>
+</body>
+</html>

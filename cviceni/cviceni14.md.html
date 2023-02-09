@@ -1,0 +1,539 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>Archiv</title>
+  <style type="text/css">code{white-space: pre;} body {  font-family: "Open Sans", Sans-Serif;}
+h1,h2 {clear:both;}
+  </style>
+
+  <!---
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+--->
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+  <script type="text/javascript">
+        function cislo(kolik)
+    {
+	if (kolik==-1) {return "00";}
+	if (kolik==0) {return "00";}
+	if (kolik>=13) {return "13";}
+	if (kolik==12) {return "12";}
+	if (kolik==10) {return "10";}
+	if (kolik==11) {return "11";}
+	return "0"+kolik;
+    };
+
+
+    function    myFunction()
+    {
+        //jQuery(".reseni").slideToggle();
+	jQuery(event.target).next().slideToggle();
+    }
+    
+    
+ </script>
+
+    <link rel="stylesheet" href="../my.css" type="text/css" />
+  <link rel="stylesheet" href="cviceni.css" type="text/css" />
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+  
+
+      
+  
+</head>
+<body>
+
+  <div class="container_">
+
+  
+  <div class='menu-obalka'>
+    <a class='menu menu4' href='../../'>Matematika</a><a class='menu menu4' href='../'>Přednáška</a><a class='menu menu4 ACTIVE' href='../cviceni'>Cvičení</a><a class='menu menu4' href='https://um.mendelu.cz/'>WeBWorK</a>
+  </div>
+	
+<div class='menu-obalka'><a class='menu' href='cviceni00.md.html'>0</a><a class='menu' href='cviceni01.md.html'>1</a><a class='menu' href='cviceni02.md.html'>2</a><a class='menu' href='cviceni03.md.html'>3</a><a class='menu' href='cviceni04.md.html'>4</a><a class='menu' href='cviceni05.md.html'>5</a><a class='menu' href='cviceni06.md.html'>6</a><a class='menu' href='cviceni07.md.html'>7</a><a class='menu' href='cviceni08.md.html'>8</a><a class='menu' href='cviceni09.md.html'>9</a><a class='menu' href='cviceni10.md.html'>10</a><a class='menu' href='cviceni11.md.html'>11</a><a class='menu' href='cviceni12.md.html'>12</a><a class='menu' href='cviceni13.md.html'>13</a></div>
+
+<div class="container">
+<!-- <div class="links"><a href="cviceni00.md.html">Začátek</a><a class="prev-a">Předchozí cvičení</a><a class="next-a">Další cvičení</a><a href="cviceni13.md.html">Konec</a></div>  -->
+
+  <p>
+<a class="PDF"> Stáhnout ve formátu PDF </a>
+  </p>
+<div id="header">
+<h1 class="title">Archiv</h1>
+</div>
+
+<!-- YTB -->
+
+<div id="TOC">
+<ul>
+<li><a href="#pokles-hladiny-podzemní-vody-při-ustáleném-rovinném-proudění"><span class="toc-section-number">1</span> Pokles hladiny podzemní vody při ustáleném rovinném proudění</a></li>
+<li><a href="#studna-s-volnou-hladinou"><span class="toc-section-number">2</span> Studna s volnou hladinou</a></li>
+<li><a href="#kužel-s-předepsaným-tvarem"><span class="toc-section-number">3</span> Kužel s předepsaným tvarem</a></li>
+<li><a href="#chemická-směs-chemikálii-rozpouštíme-v-nádrži-tak-že-do"><span class="toc-section-number">4</span> Chemická směs Chemikálii rozpouštíme v nádrži tak, že do</a></li>
+<li><a href="#vysílač-kojál-moravský-vysílač-kojál-nedaleko-vyškova"><span class="toc-section-number">5</span> Vysílač Kojál Moravský vysílač Kojál nedaleko Vyškova</a></li>
+<li><a href="#hmotnost-dřeva-s-proměnnou-vlhkostí.-součástí-mola-je-dřevěný"><span class="toc-section-number">6</span> Hmotnost dřeva s proměnnou vlhkostí. Součástí mola je dřevěný</a></li>
+<li><a href="#mrkev-a-vitamín-a-mrkev-má-tvar-rotačního-tělesa-které"><span class="toc-section-number">7</span> Mrkev a vitamín A Mrkev má tvar rotačního tělesa, které</a></li>
+<li><a href="#pesticidy-a-játra-býložravců-přibližná-hodnota-c-koncentrace"><span class="toc-section-number">8</span> Pesticidy a játra býložravců Přibližná hodnota <span class="math inline">\(\displaystyle C\)</span> koncentrace</a></li>
+<li><a href="#růst-buňky-buňka-ve-tvaru-koule-o-poloměru-r-získává"><span class="toc-section-number">9</span> Růst buňky Buňka ve tvaru koule o poloměru <span class="math inline">\(\displaystyle r\)</span> získává</a></li>
+<li><a href="#konstitutivní-vztahy-při-konstantních-parametrech"><span class="toc-section-number">10</span> Konstitutivní vztahy při konstantních parametrech</a></li>
+<li><a href="#divergence-v-1d-a-snížení-průtoku-při-kapkové-závlaze"><span class="toc-section-number">11</span> Divergence v 1D a snížení průtoku při kapkové závlaze</a></li>
+<li><a href="#rovnice-podzemní-vody"><span class="toc-section-number">12</span> Rovnice podzemní vody</a></li>
+<li><a href="#rovinné-proudění-podzemní-vody-podruhé"><span class="toc-section-number">13</span> Rovinné proudění podzemní vody podruhé</a></li>
+<li><a href="#o-otesánkovi."><span class="toc-section-number">14</span> O Otesánkovi.</a></li>
+<li><a href="#dlouhý-a-bystrozraký.-dlouhý-má-na-ramenou-bystrozrakého-ve-výšce-4-metry.-bystrozraký-hledá-princeznu-a-vzdálenost-na-kterou-vidí-je-dána-vzorcem-pro-vzdálenost-k-horizontu-tj.-hksqrt-h-kde-h-je-vzdálenost-k-horizontu-v-kilometrech-h-je-výška-pozorovatele-nad-povrchem-v-metrech-a-k-je-konstanta."><span class="toc-section-number">15</span> Dlouhý a Bystrozraký.} Dlouhý má na ramenou Bystrozrakého ve výšce <span class="math inline">\(\displaystyle 4\)</span> metry. Bystrozraký hledá princeznu a vzdálenost, na kterou vidí, je dána vzorcem pro vzdálenost k horizontu, tj. <span class="math display">\[H=k\sqrt {h,\]</span> kde <span class="math inline">\(\displaystyle H\)</span> je vzdálenost k horizontu v kilometrech, <span class="math inline">\(\displaystyle h\)</span> je výška pozorovatele nad povrchem v metrech a <span class="math inline">\(\displaystyle k\)</span> je konstanta.</a></li>
+<li><a href="#nábytek-bez-atestu"><span class="toc-section-number">16</span> Nábytek bez atestu</a></li>
+<li><a href="#kontaminovaný-salát-bakterie-na-kontaminovaném-salátu-se-množí-rychlostí-2e0.1ttext-milionů-bakteriíden-kde-t-je-čas-ve-dnech.-pokud-je-to-možné-určete-o-kolik-se-změní-množství-bakterií-za-čtyři-dny.-pokud-není-dost-informací-vysvětlete-jaké-další-informace-potřebujeme."><span class="toc-section-number">17</span> Kontaminovaný salát} Bakterie na kontaminovaném salátu se množí rychlostí <span class="math display">\[2e^{0.1t}\text{ milionů bakterií/den,\]</span> kde <span class="math inline">\(\displaystyle t\)</span> je čas ve dnech. Pokud je to možné, určete, o kolik se změní množství bakterií za čtyři dny. Pokud není dost informací, vysvětlete, jaké další informace potřebujeme.</a></li>
+<li><a href="#nádrž-na-zavlažování"><span class="toc-section-number">18</span> Nádrž na zavlažování</a></li>
+<li><a href="#vlčí-mák"><span class="toc-section-number">19</span> Vlčí mák</a></li>
+<li><a href="#rychlost-zvuku-ve-dřevě"><span class="toc-section-number">20</span> Rychlost zvuku ve dřevě</a></li>
+<li><a href="#růst-ryb"><span class="toc-section-number">21</span> Růst ryb</a></li>
+<li><a href="#termohrnek-z-rozemleté-televize"><span class="toc-section-number">22</span> Termohrnek z rozemleté televize</a></li>
+<li><a href="#odvození-rovnice-vedení-tepla-v-1d"><span class="toc-section-number">23</span> Odvození rovnice vedení tepla v 1D</a></li>
+<li><a href="#kapka-vody-i"><span class="toc-section-number">24</span> Kapka vody I</a></li>
+<li><a href="#kapka-vody-ii"><span class="toc-section-number">25</span> Kapka vody II</a></li>
+<li><a href="#výpočet-pi-pro-nneq--1-vypočtěte-integrály"><span class="toc-section-number">26</span> Výpočet <span class="math inline">\(\displaystyle \pi\)</span> Pro <span class="math inline">\(\displaystyle n\neq -1\)</span> vypočtěte integrály</a></li>
+<li><a href="#tlak-v-pneumatice"><span class="toc-section-number">27</span> Tlak v pneumatice</a></li>
+<li><a href="#kvadratický-moment-kruhu"><span class="toc-section-number">28</span> Kvadratický moment kruhu</a></li>
+<li><a href="#stacionární-vedení-tepla-ve-válcovém-prostředí"><span class="toc-section-number">29</span> Stacionární vedení tepla ve válcovém prostředí</a></li>
+<li><a href="#chemická-reakce"><span class="toc-section-number">30</span> Chemická reakce</a></li>
+<li><a href="#ondatra-v-roce-1905-vysadil-na-svém-panství"><span class="toc-section-number">31</span> Ondatra V roce 1905 vysadil na svém panství</a></li>
+<li><a href="#akumulátor-teplota-studeného-akumulátoru-přeneseného-do-místnosti-o-pokojové-teplotě-roste-rychlostí"><span class="toc-section-number">32</span> Akumulátor Teplota studeného akumulátoru přeneseného do místnosti o pokojové teplotě roste rychlostí</a></li>
+<li><a href="#kmen-stromu"><span class="toc-section-number">33</span> Kmen stromu</a></li>
+</ul>
+</div>
+
+<div style="clear:both;"></div>
+
+<figure>
+<img src="aq.png" alt="http://ecoursesonline.iasri.res.in" /><figcaption>http://ecoursesonline.iasri.res.in</figcaption>
+</figure>
+<h1 id="pokles-hladiny-podzemní-vody-při-ustáleném-rovinném-proudění"><span class="header-section-number">1</span> Pokles hladiny podzemní vody při ustáleném rovinném proudění</h1>
+<p> Stavovou veličinou pro popis podzemní vody je  <span class="math inline">\(\displaystyle h\)</span> měřená v metrech (hrubá představa může být hladina spodní vody nebo, v případě že je shora ohraničení nepropustnou vrstvou, tak hladina, kam by vystoupila voda ve vrtu). Prostor, kde voda teče, se nazývá  (aquifer). Proudění řídí , který vyjadřuje, že  <span class="math inline">\(\displaystyle v_f\)</span> podzemní vody je úměrná sklonu piezometrické hladiny, tj. rychlosti, s jakou klesá piezometrická hladina jako funkce <span class="math inline">\(\displaystyle x\)</span>.</p>
+
+
+<p>()</p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+
+</div>
+<figure>
+<img src="well.png" alt="http://ecoursesonline.iasri.res.in" /><figcaption>http://ecoursesonline.iasri.res.in</figcaption>
+</figure>
+<h1 id="studna-s-volnou-hladinou"><span class="header-section-number">2</span> Studna s volnou hladinou</h1>
+<p>Uvažujme diferenciální rovnici <span class="math display">\[\begin{equation}
+q=-kh\frac{\mathrm dh}{\mathrm dx} \tag{*}\label{*}
+\end{equation}\]</span> odvozenou v  B. Tentokrát budeme studovat studnu s volnou hladinou Je-li studna čerpána konstantní rychlostí <span class="math inline">\(\displaystyle Q\)</span>, je tok na jednotku délky na kružnici o poloměru <span class="math inline">\(\displaystyle x\)</span> roven <span class="math inline">\(\displaystyle q=-\frac {Q}{2\pi x}\)</span> (voda teče dovnitř, tj. ve směru ve kterém klesá <span class="math inline">\(\displaystyle x\)</span>). Dosaďte tento vztah do rovnice  a rovnici vyřešte s počáteční podmínkou <span class="math inline">\(\displaystyle h(R)=H\)</span>, kde <span class="math inline">\(\displaystyle H\)</span> odpovídá hladině vody ve studni a <span class="math inline">\(\displaystyle R\)</span> je poloměr studny (na obrázku <span class="math inline">\(\displaystyle h_w\)</span> a <span class="math inline">\(\displaystyle r_w\)</span>). Dostanete rovnici  čerpané rychlostí <span class="math inline">\(\displaystyle Q\)</span> (depresní křivka). ()</p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p><span class="math display">\[
+\begin{aligned}
+  -\frac{Q}{2\pi x}&amp;=-kh\frac{\mathrm dh}{\mathrm dx}\\
+%  \frac{Q }{2\pi x}\,\mathrm {d}x&amp;=kh\,\mathrm d h\\
+  \frac{Q }{2\pi} \int \frac{\mathrm {d}x}{x}&amp;=k\int h\,\mathrm d h\\
+  \frac{Q }{2\pi}\ln x&amp;=k \frac {h^2}2 +c\\
+\text{obecné řešení: }  \frac{Q }{\pi}\ln x&amp;=k {h^2} +C\\
+\text{z počáteční podmínky: }  \frac{Q }{\pi}\ln R&amp;=k {H^2} +C\\
+  C&amp;=\frac{Q }{\pi}\ln R-k {H^2}\\
+\text{po dosazení do obecného řešení: }   \frac{Q }{\pi}\ln x&amp;=k {h^2} +\frac{Q }{\pi}\ln R-k {H^2}\\
+\text{po úpravě: }  \frac{Q }{k\pi}\ln \frac {x}{R}&amp;={h^2} - {H^2}\\
+\end{aligned}
+\]</span> Tento vztah umožňuje například navrhnout průměr studny, odhadnout vydatnost studny, nebo pomocí odčerpávaného vrtu a menších pomocných vrtů sledujících pokles hladiny v okolí odčerpávaného vrtu stanovit filtrační součinitel <span class="math inline">\(\displaystyle k\)</span>. Využití vzorce <span class="math display">\[
+  \frac{Q }{k\pi}\ln \frac {x}{R}={h^2} - {H^2}
+\]</span> je však mnohem rozmanitější, umožňuje vypočítat poměry ve stavebních jámách a v jejich okolí. To je užitečné například při odhadu, kolik vody se hromadí ve výkopu. Další využití je, že dokážeme odhadnout vliv stavební jámy na hydrologické poměry v okolí a tyto poměry dokážeme měnit a přizpůsobovat našim potřebám. Častou aplikací je například hydraulická clona (soustava prvků rozmístěných a provozovaných tak, aby nedocházelo k šíření kontaminace z chemické výroby do vodárensky využívaných vod).</p>
+</div>
+<p><img src="kluzak.jpg" alt="pixabay.com" /> # Rychlost klesání kluzáku Teplota klesá s výškou o <span class="math inline">\(\displaystyle 2^\circ \mathrm C\)</span> na kilometr. Pilot kluzáku vidí, že teplota v okolí jeho kluzáku roste rychlostí <span class="math inline">\(\displaystyle 10^{-3}{}^\circ \mathrm C/\mathrm{s}\)</span>. Vyjádřete tato pozorování pomocí derivací a určete, jak rychle ztrácí kluzák výšku. Návod: Uvažujte složenou funkci <span class="math inline">\(\displaystyle T(h(t))\)</span> a hledejte její derivaci podle času.</p>
+<p></p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p>Je-li <span class="math inline">\(\displaystyle h\)</span> výška, <span class="math inline">\(\displaystyle T\)</span> teplota a <span class="math inline">\(\displaystyle t\)</span> čas, můžeme zadání přepsat do tvaru <span class="math display">\[
+  \frac{\mathrm dT}{\mathrm dh}=-2^\circ\mathrm C/\mathrm{km}, \quad
+  \frac{\mathrm dT}{\mathrm dt}= 10^{-3}{}^\circ\mathrm C/\mathrm{s}, \quad
+  \frac{\mathrm dh}{\mathrm dt}=?.
+\]</span> Vzorec pro derivaci složené funkce <span class="math inline">\(\displaystyle T(h(t))\)</span> dává <span class="math display">\[
+  \frac{\mathrm dT}{\mathrm dt} = \frac{\mathrm dT}{\mathrm dh} \cdot \frac{\mathrm dh}{\mathrm dt}
+\]</span> a odsud <span class="math display">\[
+  \frac{\mathrm dh}{\mathrm dt} = \frac{\frac{\mathrm dT}{\mathrm dt}}{\frac{\mathrm dT}{\mathrm dh}}
+\]</span> a numericky <span class="math display">\[
+  \frac{\mathrm dh}{\mathrm dt} = -\frac{10^{-3}}{2}=-5\cdot 10^{-4}\, \mathrm{km}\,\mathrm{s^{-1}}=-0.5 \,\mathrm{m}\,\mathrm{s}^{-1}.
+\]</span> Kluzák klesá rychlostí půl metru za sekundu. To odpovídá i “selskému rozumu”, kdy uvažujeme tak, že jeden stupeň Celsia odpovídá půl kilometru, tj. 500 metrů. Za jednu sekundu klesne teplota podle zadání o <span class="math inline">\(\displaystyle 10^{-3}{}^\circ\mathrm{C}\)</span>, což je tisícina z jednoho stupně a tomu odpovídá tisícina z 500 metrů, tedy půl metru. Příklady, které si můžeme alespoň orientačně zkontrolovat výpočtem založeným na “selské logice” jsou obzvlášť cenné, protože nám dávají jistotu nutnou při použití v aplikacích, kde úvaha na provedení výpočtu bez derivací není reálná.</p>
+</div>
+<p><img src="autobus.jpg" alt="pixabay.com" /> ## Změna tlaku a lupání v uších V dopravním prostředku, který se pohybuje do kopce nebo z kopce, se mění tlak. Tím vznikne tlakový rozdíl mezi vnějším tlakem a tlakem ve středním uchu. Vyrovnání tlaku při rychlé změně se projeví lupnutím v uších. Lupnutí tedy nastane, pokud je derivace <span class="math inline">\(\displaystyle \frac {\mathrm d p}{\mathrm dt}\)</span> velká. (Velká v absolutní hodnotě, tj. numericky hodně kladná nebo hodně záporná.) Tuto veličinu však je těžké měřit. Umíme měřit změnu nadmořské výšky <span class="math inline">\(\displaystyle u\)</span> a víme, jak se tlak <span class="math inline">\(\displaystyle p\)</span> mění s nadmořskou výškou. Nechť například <span class="math inline">\(\displaystyle \frac{\mathrm dp}{\mathrm  du}=-0.12\,\mathrm{g}\,\mathrm{cm}^{-2}\mathrm{m}^{-1}\)</span> (údaj meteorologů) a vezměme $ =-3,,^{-1}$. Okomentujte význam toho, že derivace jsou záporné a určete rychlost, s jakou rychlostí se mění tlak vzduchu.</p>
+<p></p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p>Derivace jsou záporné, protože tlak s rostoucí výškou klesá a nadmořská výška klesá s časem (vozidlo jede z kopce). Pomocí derivace složené funkce platí <span class="math display">\[\frac{\mathrm dp}{\mathrm dt}=\frac{\mathrm dp}{\mathrm du} \cdot \frac{\mathrm du}{\mathrm dt}=-0.12
+\,\mathrm{g}\,\mathrm{cm}^{-2}\mathrm{m}^{-1}\times
+(-3\,\mathrm{m}\,\mathrm{s}^{-1})
+=0.36 \,\mathrm{g}\,\mathrm{cm}^{-2}\mathrm{s}^{-1}.
+\]</span> Tlak roste rychlostí <span class="math inline">\(\displaystyle 0.36\)</span> gramů na centimetr čtvereční za sekundu.</p>
+</div>
+<h1 id="kužel-s-předepsaným-tvarem"><span class="header-section-number">3</span> Kužel s předepsaným tvarem</h1>
+<p></p>
+<p>Kužel má poměr poloměru podstavy <span class="math inline">\(\displaystyle r\)</span>, výšky <span class="math inline">\(\displaystyle h\)</span> a délky strany <span class="math inline">\(\displaystyle s\)</span> ve tvaru <span class="math display">\[r:h:s=3:4:5.\]</span> Kužel může měnit velikost, ale tento poměr zůstává zachován. (To odpovídá například skladování sypkého materiálu na hromadě nebo skladování tekutiny v trychtýřovitém zásobníku.) Objem a povrch pláště jsou <span class="math inline">\(\displaystyle V=\frac 13 \pi r^2 h\)</span> a <span class="math inline">\(\displaystyle S=\pi rs\)</span>. Z úvah o podobnosti na přednášce víme, že vzorce pro objem a obsah musí být pro vhodné konstanty <span class="math inline">\(\displaystyle a\)</span>, <span class="math inline">\(\displaystyle b\)</span>, <span class="math inline">\(\displaystyle c\)</span> tvaru <span class="math display">\[V=ar^3,\ S=br^2,\ S=cV^{2/3}.\]</span> Potvrďte tyto obecné závěry pro náš konkrétní případ přímým výpočtem a použitím uvedených vzorců a poté vypočtěte a podejte interpretaci derivací <span class="math display">\[\frac{\mathrm dV}{\mathrm dr},\ \frac{\mathrm dS}{\mathrm dr}.\]</span></p>
+<p></p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p>Ze zadání víme, že platí <span class="math inline">\(\displaystyle s=\frac 53 r\)</span> a <span class="math inline">\(\displaystyle h=\frac 43 r\)</span> a přímým dosazením vidíme <span class="math display">\[V=\frac 13 \pi r^2 \frac 43 r=\frac 49 \pi r^3\]</span> a <span class="math display">\[S=\pi r \frac 53 r=\frac 53 \pi r^2.\]</span> Derivováním dostáváme <span class="math display">\[
+\frac{\mathrm dV}{\mathrm dr}=\frac 43 \pi r^2
+\]</span> a <span class="math display">\[
+\frac{\mathrm dS}{\mathrm dr}=\frac {10}3 \pi r.
+\]</span> Tyto derivace vyjadřují změnu objemu a povrchu pláště kužele, pokud se kužel zvětší tak, že poloměr podstavy vzroste o jednotku.</p>
+<p>Z rovnice pro objem dostáváme <span class="math display">\[r=\left(\frac {9}{4\pi}\right)^{1/3}V^{1/3}\]</span> a po dosazení <span class="math display">\[S=\frac 53 \pi r^2 = \frac 53 \pi \left(\frac {9}{4\pi}\right)^{2/3}V^{2/3}
+=5\pi^{1/3}\left (\frac 3{16}\right)^{1/3} V^{2/3}\]</span></p>
+</div>
+<h1 id="chemická-směs-chemikálii-rozpouštíme-v-nádrži-tak-že-do"><span class="header-section-number">4</span> Chemická směs Chemikálii rozpouštíme v nádrži tak, že do</h1>
+<p>nádrže pumpujeme vodu a směs odčerpáváme. Objem směsi roste podle vztahu <span class="math inline">\(\displaystyle 20+2t\)</span>. Množství chemikálie <span class="math inline">\(\displaystyle y\)</span> klesá rychlostí, která je úměrná <span class="math inline">\(\displaystyle y\)</span> a nepřímo úměrná objemu roztoku v nádrži. Vyjádřete proces kvantitativně pomocí derivací.</p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p><span class="math display">\[\frac{\mathrm dy}{\mathrm dt}=-ky\frac1{20+2t}\]</span></p>
+</div>
+<p>{</p>
+
+<figure>
+<img src="kojal.jpg" alt="Wikipedie" /><figcaption>Wikipedie</figcaption>
+</figure>
+<h1 id="vysílač-kojál-moravský-vysílač-kojál-nedaleko-vyškova"><span class="header-section-number">5</span> Vysílač Kojál Moravský vysílač Kojál nedaleko Vyškova</h1>
+<p>je třetí nejvyšší stavbou v ČR a má přibližně tvar hranolu o výšce 340 metrů. (Jeho dvojče, vysílač Krašov je ještě o dva metry vyšší a od roku 2018 tvoří i hlavní součást největších slunečních hodin na světě. Nejvyšší stavbou v ČR je vysílač Liblice B s 355 metry.)</p>
+<p>Odhadněte hmotnost vzduchového sloupce, který by zaujímal místo vysílače. Pro tyto potřeby budeme vysílač uvažovat jako hranol. Půdorys odhadneme jako rovnostranný trojúhelník o straně tři metry, což je poměrně realistický model (). Hustota vzduchu se mění s výškou <span class="math inline">\(\displaystyle h\)</span> (v metrech) podle vzorce <span class="math display">\[\rho(h)=\rho_0 e^{-\rho_0 g h /p_0},\]</span> kde <span class="math inline">\(\displaystyle \rho_0=1.225 \,\mathrm{kg}\,\mathrm{m}^{-3}\)</span> je hustota vzduchu u země, <span class="math inline">\(\displaystyle p_0=101325\,\mathrm{Pa}\)</span> normální tlak vzduchu a <span class="math inline">\(\displaystyle g=9.81\,\mathrm{kg}\,\mathrm{m}\,\mathrm{s}^{-2}\)</span> je tíhové zrychlení (podle Wikipedie). Porovnejte výsledek s výsledkem, který byste dostali, kdybyste ignorovali změnu hustoty s výškou a použili pro hustotu konstantu <span class="math inline">\(\displaystyle \rho_0.\)</span></p>
+<p>}</p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p>Hmotnost <span class="math inline">\(\displaystyle m\)</span> je dána vztahem <span class="math inline">\(\displaystyle m=\rho V\)</span>, kde <span class="math inline">\(\displaystyle \rho\)</span> je hustota a <span class="math inline">\(\displaystyle V=Sh\)</span> objem hranolu o podstavě <span class="math inline">\(\displaystyle S\)</span> a výšce <span class="math inline">\(\displaystyle h\)</span>. Odsud <span class="math display">\[
+  m=Sh\rho.
+\]</span> Protože <span class="math inline">\(\displaystyle \rho\)</span> se mění s výškou, musíme uvažovat jednotlivé vrstvy o výšce <span class="math inline">\(\displaystyle \Delta h\)</span> samostatně, tj. <span class="math display">\[
+  \Delta m=S\rho \Delta h
+\]</span> a posečítat integrálem od země po výšku vysílače <span class="math inline">\(\displaystyle H=340\)</span>. <span class="math display">\[
+  \begin{aligned}
+  m&amp;=\int _0^{H}S\rho \,\mathrm d h \\&amp;= \int_0^{H}S\rho_0 e^{-\frac {\rho _0 gh}{p_0}}\,\mathrm dh\\&amp;=
+   S\rho_0\left[-\frac {p_0}{\rho _0 g} e^{-\frac {\rho _0 gh}{p_0}}\right]_0^{H}
+ \\&amp;=  S\rho_0\left[-\frac {p_0}{\rho _0 g} e^{-\frac {\rho _0 g H}{p_0}}+\frac {p_0}{\rho _0 g}\right]
+ \\&amp;=  \frac { Sp_0}{ g}\left[1- e^{-\frac {\rho _0 g H}{p_0}}\right]
+\end{aligned}
+\]</span> Protože podstava je rovnostranný trojúhelník, platí <span class="math inline">\(\displaystyle S=\frac 12 \sin(60^\circ) a^2=a^2 \frac{\sqrt 3}{4}\)</span>, kde <span class="math inline">\(\displaystyle a=3\,\mathrm m\)</span> je délka strany. Pro zadané hodnoty vychází <span class="math display">\[
+  m= 1590.85 \,\mathrm kg
+\]</span></p>
+<p>Pokud by se hustota neměnila s výškou a použili bychom hustotu u země, měli bychom <span class="math display">\[
+  m=SH\rho_0=1623.14\,\mathrm{kg}.
+\]</span></p>
+<p>Pro zajímavost, pokud bychom pro výpočet použili bychom hustotu uprostřed, měli bychom <span class="math display">\[
+  m=SH  \rho_0 e^{-\frac {\rho _0 g H}{2p_0}}=1590.75\,\mathrm{kg}
+\]</span> a pokud bychom použili průměr hustoty vzduchu u země a na vrcholku, dostali bychom <span class="math display">\[
+  m=SH\frac 12 \left(  \rho_0 + \rho_0 e^{-\frac {\rho _0 g H}{p_0}}\right)=1591.07\,\mathrm{kg}.
+\]</span> Pokud by závislost hustoty na výšce byla lineární, musely by dva poslední výpočty vycházet stejně, což není náš případ.</p>
+</div>
+<p>% var(‘h’) % p0=101325 % rho0=1.225 % g=9.81 % rho(h)=rho0<em>exp(-rho0</em>g<em>h/p0) % a=3 % H=340 % S=1/4</em>sqrt(3)<em>a^2 % print “Presne:”, n(integrate(S</em>rho(h),(h,0,340))) % print “S hustotu u zeme:”, n(S<em>H</em>rho0) % print “S hustotu uprostred:”, n(S<em>H</em>rho(H/2)) % print “Prumer hustoty nahore a dole”,n( 0.5* ( S<em>H</em>rho0+S<em>H</em>rho(H)) )</p>
+
+<p><img src="molo.jpg" alt="pixabay.com" />[0pt]</p>
+<h1 id="hmotnost-dřeva-s-proměnnou-vlhkostí.-součástí-mola-je-dřevěný"><span class="header-section-number">6</span> Hmotnost dřeva s proměnnou vlhkostí. Součástí mola je dřevěný</h1>
+<p>svislý metrový trám konstantního průřezu. Blízkost hladiny, vlhkost, občasné zašplouchání nebo zanesení kapek vody větrem, vynoření při odlivu a další efekty způsobily, že směrem dolů roste vlhkost a tedy i hustota dřeva. Předpokládejme, že hustota v bodě <span class="math inline">\(\displaystyle h\)</span> (měřeno shora dolů) je dána funkcí <span class="math display">\[\rho(h)=\rho_0(1+kh),\]</span> kde <span class="math inline">\(\displaystyle \rho_0\)</span> je hustota dřeva nahoře (nejdál od hladiny, kde je trám nejsušší) a <span class="math inline">\(\displaystyle k\)</span> je konstanta úměrnosti související s hustotou vody a s tím, jak směrem dolů narůstá vlhkost. Potřebujeme odhadnout hmotnost trámu bez zásahu do mola, tj. nemůžeme vážit na vahách. Určete hmotnost trámu výpočtem.</p>
+<p>{ Napište jenom příslušný integrál a okomentujte, jakou metodou bychom ho počítali. Vlastní výpočet provádět nemusíte. Všimněte si, že úloha je v podstatě stejná jako úloha o vysílači Kojál z minulého cvičení, ale vzhledem k jinému tvaru funkce popisující hustotu tentokrát integrujeme lineární funkci. Pro výpočet integrálu lineární funkce je možné využít střední hodnotu, která je průměrem funkční hodnoty na začátku a na konci oboru integrace (viz přednáška).</p>
+<p>}</p>
+%
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p>% Hmotnost je součin hustoty <span class="math inline">\(\displaystyle \rho\)</span> a objemu, objem je součin obsahu průřeru <span class="math inline">\(\displaystyle S\)</span> a výšky.</p>
+%
+</div>
+
+<figure>
+<img src="mrkev.jpg" alt="pixabay.com" /><figcaption>pixabay.com</figcaption>
+</figure>
+<h1 id="mrkev-a-vitamín-a-mrkev-má-tvar-rotačního-tělesa-které"><span class="header-section-number">7</span> Mrkev a vitamín A Mrkev má tvar rotačního tělesa, které</h1>
+<p>vznikne rotací křivky <span class="math display">\[f(x)=\sqrt{14-x}\]</span> okolo osy <span class="math inline">\(\displaystyle x\)</span> na intervalu <span class="math inline">\(\displaystyle [0,12]\)</span>, kde <span class="math inline">\(\displaystyle x\)</span> je v centimetrech. Koncentrace vitamínu <span class="math inline">\(\displaystyle A\)</span> se mění podle vztahu <span class="math display">\[c(x)=\frac 1{12}e^{-x/12} \,\mathrm{mg}\,\mathrm{cm}^{-3}.\]</span> Jaký je objem mrkve, obsah vitamínu A a průměrná koncentrace vitamínu A v mrkvi?</p>
+<p>Napište jenom potřebné integrály a vztahy, integrály nepočítejte.</p>
+<p></p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p>Pro konstantní <span class="math inline">\(\displaystyle f\)</span> by mrkev byla ve tvaru válce o poloměru <span class="math inline">\(\displaystyle f\)</span> a objem by byl <span class="math inline">\(\displaystyle V=\pi f^2 h\)</span>, kde <span class="math inline">\(\displaystyle h\)</span> je výška válce (délka mrkve). Pokud se <span class="math inline">\(\displaystyle f\)</span> mění s <span class="math inline">\(\displaystyle x\)</span>, musíme místo součinu uvažovat integrál a dostáváme <span class="math display">\[V=\int_0^{12} \pi f^2(x)\,\mathrm dx=\pi\int_0^{12} 14-x\,\mathrm dx.\]</span></p>
+<p>Pokud by koncentrace byla konstantní, stačí pro výpočet množství vitamínu A vynásobit objem koncentrací. Protože se koncentrace mění, musíme ji do součinu započítat ještě před integrací, tj. <span class="math display">\[m=\int_0^{12} \pi c(x)f^2(x)\,\mathrm dx=\pi \frac 1{12}\int_0^{12} (14-x)e^{-x/12}\,\mathrm dx.\]</span></p>
+<p>Průměrná koncentrace je hmotnost dělená objemem a stačí tedy vypočtené hodnoty vydělit.</p>
+</div>
+
+<figure>
+<img src="pesticidy.jpg" alt="Wikipedie" /><figcaption>Wikipedie</figcaption>
+</figure>
+<h1 id="pesticidy-a-játra-býložravců-přibližná-hodnota-c-koncentrace"><span class="header-section-number">8</span> Pesticidy a játra býložravců Přibližná hodnota <span class="math inline">\(\displaystyle C\)</span> koncentrace</h1>
+<p>jistého pesticidu v játrech býložravců (měřená v mikrogramech pesticidu na gram jater) v čase <span class="math inline">\(\displaystyle T\)</span> po zanesení tohoto pesticidu do životního prostředí je dána vztahem <span class="math display">\[C=e^{-0.25T}\int_0^T 0.32 e^{-0.64 t}\,\mathrm dt.\]</span> Vypočtěte hodnotu <span class="math inline">\(\displaystyle C\)</span> jako funkci <span class="math inline">\(\displaystyle T\)</span> a ukažte, že maximální hodnota <span class="math inline">\(\displaystyle C\)</span> je přibližně po dvou letech.</p>
+<p></p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p><span class="math display">\[C=e^{-0.25 T}\left[-\frac{0.32}{0.64}e^{-0.64 t}\right]_0^T=\cdots
+=\frac 12 e^{-0.25T}-\frac 12 e^{-0.89T}\]</span> Odsud <span class="math display">\[\frac{\mathrm dC}{\mathrm dT}=
+\frac 12(-0.25) e^{-0.25T}-\frac 12 (-0.89) e^{-0.89T}\]</span> a maximum je pokud je derivace nulová, tj. pokud <span class="math display">\[
+\frac 12(-0.25) e^{-0.25T}-\frac 12 (-0.89) e^{-0.89T}=0.\]</span> Odsud dále dostáváme <span class="math display">\[e^{0.64 T}=\frac{0.89}{0.25}\]</span> a pomocí inverzní funkce <span class="math display">\[{0.64 T}=\ln \frac{89}{25}\]</span> a <span class="math display">\[{ T}=\frac 1{0.64}\ln \frac{89}{25}\approx 1.98.\]</span></p>
+</div>
+<figure>
+<img src="bunka.jpg" alt="pixabay.com" /><figcaption>pixabay.com</figcaption>
+</figure>
+<h1 id="růst-buňky-buňka-ve-tvaru-koule-o-poloměru-r-získává"><span class="header-section-number">9</span> Růst buňky Buňka ve tvaru koule o poloměru <span class="math inline">\(\displaystyle r\)</span> získává</h1>
+<p>živiny rychlostí úměrnou povrchu a spotřebovává živiny rychlostí úměrnou objemu. Získávání živin a spotřeba živin jsou tedy úměrné po řadě <span class="math inline">\(\displaystyle r^2\)</span> a <span class="math inline">\(\displaystyle r^3\)</span>. Předpokládejme, že rychlost, s jakou roste objem s časem, je úměrná rozdílu mezi příjmem a výdejem. Sestavte diferenciální rovnici pro poloměr buňky, najděte její konstantní řešení a posuďte jeho stabilitu.</p>
+<p></p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p>Budeme používat kladné konstanty úměrnosti a součin několika konstant budeme vždy přeznačovat jako novou konstantu, aby výsledná rovnice byla co nejjednodušší.</p>
+<p>Podle zadání a se zohledněním tvaru koule (objem úměrný třetí mocnině poloměru a povrch úměrný druhé mocnině poloměru) platí <span class="math display">\[
+\begin{aligned}
+  \text{příjem}&amp;=k_1S=\alpha r^2,\\
+  \text{výdej}&amp;=k_2V=\beta r^3,\\
+  \text{rychlost růstu objemu}&amp;=k_3(  \text{příjem}-  \text{výdej}) =
+  k_3(  \alpha r^2 -\beta r^3) =r^2 (A-Br),
+\end{aligned}
+\]</span> kde <span class="math inline">\(\displaystyle A=k_3\alpha\)</span>, <span class="math inline">\(\displaystyle B=k_3\beta\)</span>, <span class="math inline">\(\displaystyle \alpha=4\pi k_1\)</span>, jsou konstanty.</p>
+<p>Podle zadání platí <span class="math display">\[\frac{\mathrm dV}{\mathrm dt}=r^2 (A-Br).\]</span> Pro objem <span class="math inline">\(\displaystyle V=\frac 43 \pi r^3\)</span> platí <span class="math inline">\(\displaystyle \frac {\mathrm dV}{\mathrm dt}=4\pi r^2\frac{\mathrm dr}{\mathrm dt}\)</span> a po dosazení do předchozí rovnice <span class="math display">\[4\pi r^2\frac{\mathrm dr}{\mathrm dt}=  r^2 (A-Br).\]</span> Po vydělení rovnice výrazem <span class="math inline">\(\displaystyle r^2\)</span>, osamostatnění výrazu <span class="math inline">\(\displaystyle \frac{\mathrm dr}{\mathrm dt}\)</span> a přeznačení konstant dostaneme <span class="math display">\[\frac{\mathrm dr}{\mathrm dt}= A_0-B_0r.\]</span> Tato rovnice má jediné konstantní řešení pro <span class="math inline">\(\displaystyle r=\frac{A_0}{B_0}\)</span>. Protože platí <span class="math display">\[\frac{\mathrm d}{\mathrm dr} (A_0-B_0r)=-B_0&lt;0,\]</span> je toto řešení stabilní. Pokud buňka přesáhne tuto hodnotu, je výdej větší než příjem a buňka neudrží vyrovnanou bilanci.</p>
+</div>
+<figure>
+<img src="roury.jpg" alt="http://www.danieldean.com" /><figcaption>http://www.danieldean.com</figcaption>
+</figure>
+<h1 id="konstitutivní-vztahy-při-konstantních-parametrech"><span class="header-section-number">10</span> Konstitutivní vztahy při konstantních parametrech</h1>
+<p>Roura je dlouhá <span class="math inline">\(\displaystyle L=5\,\mathrm m\)</span>, má průměr <span class="math inline">\(\displaystyle d=0.8\,\mathrm m\)</span> a je zanesená pískem. Koeficient filtrace z Darcyho zákona <span class="math display">\[
+  q=-K\frac{\mathrm dh}{\mathrm ds}
+\]</span> má hodnotu <span class="math inline">\(\displaystyle K=3\,\mathrm m/\mathrm{den}\)</span>, kde <span class="math inline">\(\displaystyle q\)</span> je tok na metr čtvereční a <span class="math inline">\(\displaystyle \frac{\mathrm dh}{\mathrm ds}\)</span> hydraulický gradient (rozdíl výšek při atmosférickém tlaku, nebo odpovídající rozdíl tlaků, vztažený na jednotku vodorovné délky). Jedna strana roury je o <span class="math inline">\(\displaystyle h=1.6\,\mathrm{m}\)</span> výše než druhá a roura je na obou koncích zaplavená vodou po horní okraj. Vypočtěte tok vody rourou. Zkrácení vodorovné vzdálenosti konců při šikmém položení roury neuvažujte. ()</p>
+<p>{</p>
+<p>}</p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p>Tok (<span class="math inline">\(\displaystyle Q\)</span>) určíme vynásobením toku jednotkovou plochou (<span class="math inline">\(\displaystyle q\)</span>) s obsahem průřezu roury (<span class="math inline">\(\displaystyle S=\pi \left(\frac d2\right)^2\)</span>). Hydraulický gradient určíme z rozdílu výšek a vodorovné vzdálenosti, tj. <span class="math inline">\(\displaystyle \frac{\mathrm dh}{\mathrm ds}=\frac hL.\)</span> Odsud pro velikost toku dostáváme <span class="math display">\[|Q|= \pi \left(\frac d2\right)^2 K \frac hL=0.48 \,\mathrm{m}^3/\mathrm{den}.\]</span></p>
+</div>
+<figure>
+<img src="kapkova_zavlaha.jpg" alt="https://www.flickr.com/photos/undpeuropeandcis, UNDP in Uzbekistan" /><figcaption>https://www.flickr.com/photos/undpeuropeandcis, UNDP in Uzbekistan</figcaption>
+</figure>
+<h1 id="divergence-v-1d-a-snížení-průtoku-při-kapkové-závlaze"><span class="header-section-number">11</span> Divergence v 1D a snížení průtoku při kapkové závlaze</h1>
+<p>Při kapkové závlaze uvažujme trubici, která má podél své délky otvory a těmito otvory uniká voda k rostlinám. Víme že na úseku 15 metrů se sníží průtok z <span class="math inline">\(\displaystyle 20\)</span> litrů za minutu na <span class="math inline">\(\displaystyle 19\)</span> litrů za minutu. Předpokládejme, že otvory pro zavlažování jsou rovnoměrně rozloženy podél celé délky. Jaká je lineární hustota zdrojů podél trubice? Předpokládejte rovnoměrné rozložení zdrojů.</p>
+<p></p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p>Na úseku <span class="math inline">\(\displaystyle 15\,\mathrm m\)</span> se “ztratí” litr vody za minutu a tento litr se spotřebuje ve spotřebiči, tj. ve zdroji se zápornou vydatností. Vydatnost zdrojů je <span class="math display">\[\sigma = -\frac{1\,\mathrm{l}/\mathrm{min}}{15\,\mathrm m}=-0.067\,\mathrm l \,\mathrm{m}^{-1}\,\mathrm{min}^{-1}.\]</span></p>
+</div>
+<h1 id="rovnice-podzemní-vody"><span class="header-section-number">12</span> Rovnice podzemní vody</h1>
+
+Zapište pomocí vhodných veličin, operátorů a rovnic následující vztahy, zákony nebo pozorování, odpovězte na otázky a splňte úkoly.
+
+<p></p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+
+</div>
+<h1 id="rovinné-proudění-podzemní-vody-podruhé"><span class="header-section-number">13</span> Rovinné proudění podzemní vody podruhé</h1>
+<p>Prozkoumáme podruhé rovinné proudění, kterému jsme se věnovali v příkladě .</p>
+
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+
+</div>
+<h1 id="o-otesánkovi."><span class="header-section-number">14</span> O Otesánkovi.</h1>
+<p>Otesánek se vykrmil do tvaru koule o průměru <span class="math inline">\(\displaystyle 2{,}4\,\mathrm{m}\)</span> a dále baští. Jeho objem roste konstantní rychlostí <span class="math inline">\(\displaystyle 0{,}002 \mathrm{m}^3/\mathrm{hod}\)</span>. Jak tato úloha souvisí s derivacemi a jak rychle roste průměr koule (Otesánka)? <span class="math display">\[V=\frac 16 \pi d^3\]</span></p>
+<h1 id="dlouhý-a-bystrozraký.-dlouhý-má-na-ramenou-bystrozrakého-ve-výšce-4-metry.-bystrozraký-hledá-princeznu-a-vzdálenost-na-kterou-vidí-je-dána-vzorcem-pro-vzdálenost-k-horizontu-tj.-hksqrt-h-kde-h-je-vzdálenost-k-horizontu-v-kilometrech-h-je-výška-pozorovatele-nad-povrchem-v-metrech-a-k-je-konstanta."><span class="header-section-number">15</span> Dlouhý a Bystrozraký.} Dlouhý má na ramenou Bystrozrakého ve výšce <span class="math inline">\(\displaystyle 4\)</span> metry. Bystrozraký hledá princeznu a vzdálenost, na kterou vidí, je dána vzorcem pro vzdálenost k horizontu, tj. <span class="math display">\[H=k\sqrt {h,\]</span> kde <span class="math inline">\(\displaystyle H\)</span> je vzdálenost k horizontu v kilometrech, <span class="math inline">\(\displaystyle h\)</span> je výška pozorovatele nad povrchem v metrech a <span class="math inline">\(\displaystyle k\)</span> je konstanta.</h1>
+<p>Dlouhý roste rychlostí <span class="math inline">\(\displaystyle 0{,}1\,\mathrm{m} \mathrm{s}^{-1}\)</span>. Jak tato úloha souvisí s derivacemi a jak rychle roste vzdálenost na kterou Bystrozraký vidí?</p>
+<h1 id="nábytek-bez-atestu"><span class="header-section-number">16</span> Nábytek bez atestu</h1>
+<p>Formaldehyd se z dřevěného výrobku v malé nevětrané místnosti uvolňuje jenom do dosažení určité rovnovážné koncentrace. Rychlost, s jakou přibývá množství formaldehydu ve vzduchu v místnosti, je úměrná množství, která do této rovnovážné koncentrace chybí. Zapište tento proces pomocí vhodného matematického modelu (diferenciální rovnice).</p>
+<h1 id="kontaminovaný-salát-bakterie-na-kontaminovaném-salátu-se-množí-rychlostí-2e0.1ttext-milionů-bakteriíden-kde-t-je-čas-ve-dnech.-pokud-je-to-možné-určete-o-kolik-se-změní-množství-bakterií-za-čtyři-dny.-pokud-není-dost-informací-vysvětlete-jaké-další-informace-potřebujeme."><span class="header-section-number">17</span> Kontaminovaný salát} Bakterie na kontaminovaném salátu se množí rychlostí <span class="math display">\[2e^{0.1t}\text{ milionů bakterií/den,\]</span> kde <span class="math inline">\(\displaystyle t\)</span> je čas ve dnech. Pokud je to možné, určete, o kolik se změní množství bakterií za čtyři dny. Pokud není dost informací, vysvětlete, jaké další informace potřebujeme.</h1>
+<h1 id="nádrž-na-zavlažování"><span class="header-section-number">18</span> Nádrž na zavlažování</h1>
+Nádrž má tvar válce a je do poloviny naplněna vodou. Máme tři různé úlohy.
+
+<p>Každý děj zapište pomocí vhodného matematického modelu. Zajímá nás hloubka vody v nádrži. Výška nádrže nás nelimituje (nádrž v úloze A nepřeteče).</p>
+<h1 id="vlčí-mák"><span class="header-section-number">19</span> Vlčí mák</h1>
+<p>Vlčí mák je oblíbený letní plevel s obrovskou nadprodukcí semen. Předpokládejme, že rychlost s jakou roste populace vlčího máku je úměrná velikosti populace. Vyjádřete tento růst pomocí vhodné diferenciální rovnice.</p>
+<p>## Ošoupané medaile</p>
+<p>Dana Zátopková vozila svoji zlatou medaili po besídkách a nechávala ji zde kolovat mezi diváky. Tím se medaile otírala a ztrácela hmotnost. Pokusíme se popsat tento děj. Předpokládejme, že s odstupem od olympiády intenzita besídek slábne a rychlost otírání se snižuje. Jaký bude úbytek zlata na medaili za první rok, pokud předpokládáme, že rychlost s jakou se mění hmotnost <span class="math inline">\(\displaystyle m\)</span> medaile je <span class="math inline">\(\displaystyle \frac{\mathrm d m}{\mathrm dt}=-\frac{1}{t+1}\)</span> mikrogramů za týden?</p>
+<pre><code>## Brýle
+
+\begin{enumerate}</code></pre>
+
+Nechť <span class="math inline">\(\displaystyle \varphi=f(a)\)</span> je funkce, která udává jak závisí počet dioptrií <span class="math inline">\(\displaystyle \varphi\)</span> pro korekci krátkozrakosti na vzdálenosti <span class="math inline">\(\displaystyle a\)</span> (v metrech), na kterou ještě oko vidí ostře. V jakých jednotkách bude vyjádřena derivace <span class="math inline">\(\displaystyle \frac{\mathrm d\varphi}{\mathrm da}\)</span> a jaká bude slovní interpretace této derivace?
+
+<p>Funkce z předchozího bodu je <span class="math inline">\(\displaystyle \varphi=-\frac 1a\)</span>. Nechť <span class="math inline">\(\displaystyle a=10\,\mathrm m\)</span> a nechť se <span class="math inline">\(\displaystyle a\)</span> zkracuje rychlostí <span class="math inline">\(\displaystyle 0.1\)</span> metru za rok. Napište, jak souvisí rychlost s jakou se mění <span class="math inline">\(\displaystyle a\)</span> s rychlostí, s jakou se mění <span class="math inline">\(\displaystyle \varphi\)</span> a pro daný případ určete, jak rychle se mění počet dioptrií nutných pro korekci této vady?</p>
+<p>\end{enumerate}</p>
+<h1 id="rychlost-zvuku-ve-dřevě"><span class="header-section-number">20</span> Rychlost zvuku ve dřevě</h1>
+<p>Rychlost zvuku v pevné látce je dána vzorcem <span class="math inline">\(\displaystyle c=\sqrt{\frac E\varrho}\)</span> kde <span class="math inline">\(\displaystyle c\)</span> je rychlost zvuku v metrech za sekundu, <span class="math inline">\(\displaystyle E\)</span> Yougův modul pružnosti v pascalech a <span class="math inline">\(\displaystyle \varrho\)</span> hustota v kilogramech na metr krychlový. U dřeva předpokládejme, že v závislosti na vlhkosti se <span class="math inline">\(\displaystyle \varrho\)</span> může měnit a <span class="math inline">\(\displaystyle E\)</span> je konstantní. Určete derivaci <span class="math inline">\(\displaystyle \frac{\mathrm dc}{\mathrm d\varrho}\)</span>. Pokud například pro břízu <span class="math inline">\(\displaystyle \rho = 640 \,\mathrm{kg}\,\mathrm{m}^{-3}\)</span> je tato derivace číselně rovna hodnotě <span class="math inline">\(\displaystyle -3.3\)</span>, doplňte jednotku a napište slovní interpretaci této derivace.</p>
+<h1 id="růst-ryb"><span class="header-section-number">21</span> Růst ryb</h1>
+<p>Na rozdíl od jiných živočichů jsou malé ryby jsou přibližně zmenšeniny velkých ryb a proto je u nich hmotnost přibližně úměrná třetí mocnině délky. Najděte souvislost mezi rychlostí s jakou roste hmotnost kapra a rychlostí, s jakou roste délka kapra.</p>
+<h1 id="termohrnek-z-rozemleté-televize"><span class="header-section-number">22</span> Termohrnek z rozemleté televize</h1>
+<p>Termohrnek bez atestu, vyrobený z rozemletého plastu ze staré elektroniky, uvolňuje do nápoje zdravotně závadné materiály. Například zpomalovače hoření, BFR. Předpokládejme, že tempo se kterým se BFR vylučuje do nápoje se snižuje s rostoucí kontaminací nápoje a s klesající teplotou nápoje, tj. klesá v čase. Vhodným modelem může být například <span class="math display">\[r(t)=(10-2t) \,\mathrm{\mu g}/\mathrm{hod},\]</span> kde <span class="math inline">\(\displaystyle r(t)\)</span> je rychlost vylučování BFR do nápoje v čase <span class="math inline">\(\displaystyle t\)</span> v mikrogramech za hodinu a <span class="math inline">\(\displaystyle t\)</span> je čas v hodinách. Vypočtěte, jaké množství BFR se do nápoje uvolní za první hodinu a porovnejte s hodnotou, která se uvolní za druhou hodinu.</p>
+<pre><code>## Padání sněhu s proměnnou intenzitou
+
+O půlnoci začal padat sníh rychlostí $6$ centimetrů za hodinu. Intenzita
+slábla a v poledne přestalo sněžit. V tomto období je možné modelovat
+rychlost padání sněhu funkcí $r(t)$, která splňuje $r(0)=6$ a
+$r(12)=0$, kde $t$ je počet hodin od půlnoci v
+hodinách a $r$ je rychlost v centimetrech za hodinu. Kolik sněhu napadalo? Zapište obecně a poté pro nejjednodušší funkci, která splňuje uvedené požadavky, pro funkci $$r(t)=6-\frac 12 t.$$
+(Slunce nesvítilo a bylo pořád pod nulou.)
+
+
+## Vyzařování tepla
+
+\begin{enumerate}
+\item Vyzařování ve wattech na metr čtvereční je dáno Stefanovým-Bolzmanovým zákonem
+  $$Q=\sigma T^4,$$
+  kde $T$ je teplota (v Kelvinech), $\sigma$ konstanta a $Q$ vyzářený výkon ve wattech na metr čtvereční. Vypočtěte derivaci
+  $$\frac{\mathrm dQ}{\mathrm dT}.$$
+\item Derivace z předchozího bodu pro $T=300K$ je číselně rovna $6.12$. Doplňte jednotku a napište slovní interpretaci této derivace.
+\end{enumerate}
+Poznámka: Termodynamická teplota v Kelvinech je teplota ve stupních Celsia zmenšená o hodnotu 273.15.</code></pre>
+<h1 id="odvození-rovnice-vedení-tepla-v-1d"><span class="header-section-number">23</span> Odvození rovnice vedení tepla v 1D</h1>
+Pokračujeme v úloze s vedením tepla v 1D. S využitím výsledků této úlohy zapište kvantitativně následující zákony.
+
+<p>Poté oba zákony spojte do jednoho vztahu a odvodíte rovnici vedení tepla v 1D. Ukažte, že pokud bude tyč homogenní, po nastolení rovnováhy bude teplota lineární funkcí polohy.</p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p>Spojením dostaneme <span class="math display">\[
+-\frac{\partial }{\partial x}
+\left( -k_1\frac {\partial T}{\partial x} \right)  = k_2 \frac{\partial T}{\partial t}  ,
+  \]</span> a po úpravě <span class="math display">\[
+  k_2  \frac{\partial T}{\partial t} = \frac{\partial }{\partial x}
+\left( k_1\frac {\partial T}{\partial x} \right).    
+\]</span> Častěji se tato rovnice píše ve tvaru <span class="math display">\[
+\rho c  \frac{\partial T}{\partial t} = \frac{\partial }{\partial x}
+\left( k_1\frac {\partial T}{\partial x} \right),    
+\]</span> protože konstantu <span class="math inline">\(\displaystyle {k_2}\)</span> můžeme vyjádřit pomocí fyzikálních charakteristik hustota <span class="math inline">\(\displaystyle \rho\)</span> a měrná tepelná kapacita <span class="math inline">\(\displaystyle c\)</span>.</p>
+<p>V rovnovážném stavu je derivace podle času nulová a dostáváme <span class="math display">\[
+\frac{\partial }{\partial x}
+\left( k_1\frac {\partial T}{\partial x} \right)=0
+\]</span> a pro homogenní tyč je <span class="math inline">\(\displaystyle k_1\)</span> konstanta a proto <span class="math display">\[
+k_1 \frac{\partial }{\partial x}
+\left( \frac {\partial T}{\partial x} \right)=0.
+\]</span> Druhá derivace podle <span class="math inline">\(\displaystyle x\)</span> je tedy nulová, což znamená, že <span class="math inline">\(\displaystyle T\)</span> je vzhledem k <span class="math inline">\(\displaystyle x\)</span> lineární.</p>
+</div>
+<p><img src="destnik" alt="pixabay.com" />[-20pt]</p>
+<h1 id="kapka-vody-i"><span class="header-section-number">24</span> Kapka vody I</h1>
+<p>Předpokládejme, že kapka vody má kulovitý tvar a při dešti roste tak, že objem jako funkce času se zvětšuje rychlostí úměrnou povrchu. (Kondenzace vodních par probíhá na povrchu a výsledek této kondenzace, voda, zvětšuje objem.) Přepište tento scénář do matematického modelu a všechny závislé proměnné vyjádřete pomocí objemu.</p>
+<p></p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p>Je-li <span class="math inline">\(\displaystyle V\)</span> objem a <span class="math inline">\(\displaystyle S\)</span> povrch koule, je <span class="math inline">\(\displaystyle \frac{\mathrm dV}{\mathrm dt}\)</span> rychlost s jakou roste objem koule a přepisem zadání do kvantitativních vztahů dostáváme <span class="math display">\[\frac {\mathrm dV}{\mathrm dt}= k_1S, \]</span> kde <span class="math inline">\(\displaystyle k\)</span> je konstanta úměrnosti. Protože díky podobnosti pro kouli platí <span class="math inline">\(\displaystyle S=k_2 V^{2/3}\)</span> kde <span class="math inline">\(\displaystyle k_2\)</span> je vhodná konstanta, dostáváme <span class="math display">\[\frac{\mathrm dV}{\mathrm dt}=k_1k_2 V^{2/3}.\]</span> Spojením obou konstant do jediné <span class="math inline">\(\displaystyle k=k_1k_2\)</span> obdržíme výsledný model <span class="math display">\[\frac{\mathrm dV}{\mathrm dt}=kV^{2/3}.\]</span></p>
+</div>
+<p><img src="destnik" alt="pixabay.com" />[-20pt]</p>
+<h1 id="kapka-vody-ii"><span class="header-section-number">25</span> Kapka vody II</h1>
+<p>Předpokládejme jako v předchozím příkladě, že kapka vody má kulovitý tvar a při dešti roste tak, že objem jako funkce času se zvětšuje rychlostí úměrnou povrchu. Ukažte, že poloměr jako funkce času roste konstantní rychlostí.</p>
+<p></p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p>Je-li <span class="math inline">\(\displaystyle V=\frac 43 \pi r^3\)</span> objem kulovité kapky, platí (derivováním) <span class="math display">\[\frac {\mathrm dV}{\mathrm dt}=4\pi r^2\frac{\mathrm dr}{\mathrm dt}\]</span> a (přepisem zadání do řeči derivací a s využitím vzorce pro povrch koule) <span class="math display">\[\frac {\mathrm dV}{\mathrm dt}= k 4\pi r^2, \]</span> kde <span class="math inline">\(\displaystyle k\)</span> je konstanta úměrnosti. Odsud <span class="math display">\[4\pi r^2\frac{\mathrm dr}{\mathrm dt}=k 4\pi r^2\]</span> a <span class="math display">\[\frac{\mathrm dr}{\mathrm dt}=k.\]</span> Napravo je konstanta, poloměr tedy roste konstantní rychlostí.</p>
+</div>
+<h1 id="výpočet-pi-pro-nneq--1-vypočtěte-integrály"><span class="header-section-number">26</span> Výpočet <span class="math inline">\(\displaystyle \pi\)</span> Pro <span class="math inline">\(\displaystyle n\neq -1\)</span> vypočtěte integrály</h1>
+<p><span class="math display">\[\int_0^1 x^n\,\mathrm dx \qquad \text{a} \qquad \int_0^1
+\frac{1}{1+x^2}\,\mathrm dx.\]</span></p>
+<p> Vzorec pro součet geometrické řady s kvocientem <span class="math inline">\(\displaystyle -x^2\)</span> je <span class="math display">\[\frac{1}{1+x^2}=1-x^2+x^4-x^6+\cdots\]</span> po integrování (a po zapojení teorie nekonečných řad, která ospravedlní integrování člen po členu a to, že v horní mezi je <span class="math inline">\(\displaystyle x=1\)</span>, přestože řada pro <span class="math inline">\(\displaystyle x=1\)</span> nekonverguje) dává <span class="math display">\[
+\int_0^1 \frac{1}{1+x^2}\,\mathrm dx
+=
+\int_0^1 1\,\mathrm dx
+-
+\int_0^1 x^2\,\mathrm dx
++
+\int_0^1 x^4\,\mathrm dx
+-
+\int_0^1 x^6\,\mathrm dx
++\cdots .
+\]</span> Po zintegrování vlevo dostaneme veličinu obsahující <span class="math inline">\(\displaystyle \pi\)</span> a vpravo součet racionálních čísel. Tím je možné odhadnout hodnotu <span class="math inline">\(\displaystyle \pi\)</span>. Tato technika, používaná v jistých obměnách v 17. a 18. století, je mnohem efektivnější pro výpočet <span class="math inline">\(\displaystyle \pi\)</span>, než starší metoda pravidelných mnohoúhelníků vepsaných do kružnice. Dnes máme k dispozici řady, které k hodnotě <span class="math inline">\(\displaystyle \pi\)</span> konvergují mnohem rychleji.</p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p>Platí <span class="math display">\[\int_0^1 \frac {1}{x^2+1}\,\mathrm dx=\left [\mathop{\mathrm{arctg}} x\right]_0^1=\mathop{\mathrm{arctg}} 1 - \mathop{\mathrm{arctg}} 0 = \frac \pi 4\]</span> a <span class="math display">\[\int_0^1 x^n \,\mathrm dx=\left[\frac 1{n+1} x^{n+1}\right]_0^1=\frac 1{n+1}.\]</span> Proto integrováním vztahu <span class="math display">\[\frac{1}{1+x^2}=1-x^2+x^4-x^6+\cdots\]</span> dostaneme <span class="math display">\[\frac{\pi}{4}=1-\frac 13 +\frac 15 - \frac 17+\cdots\]</span> a vyjádření <span class="math inline">\(\displaystyle \pi\)</span> pomocí řady je <span class="math display">\[\pi=4-\frac 43 +\frac 45 - \frac 47+\cdots .\]</span> Čím více členů započítáme, tím je aproximace čísla <span class="math inline">\(\displaystyle \pi\)</span> přesnější.</p>
+</div>
+<figure>
+<img src="pneumatika.jpg" alt="pixabay.com" /><figcaption>pixabay.com</figcaption>
+</figure>
+<h1 id="tlak-v-pneumatice"><span class="header-section-number">27</span> Tlak v pneumatice</h1>
+<p>Tlakem v pneumatice rozumíme ve skutečnosti přetlak vůči atmosférickému tlaku. Poškozená pneumatika ztrácí vzduch tak, že množství vzduchu v pneumatice klesá rychlostí, která je úměrná tomuto tlaku. Tlak v pneumatice a množství vzduchu v pneumatice jsou také navzájem úměrné. Napište matematický model popisující pokles tlaku v čase.</p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p>Je-li <span class="math inline">\(\displaystyle m\)</span> hmotnost vzduchu v pneumatice a <span class="math inline">\(\displaystyle p\)</span> tlak, z úměrnosti mezi oběma veličinami plyne <span class="math display">\[\frac{\mathrm dm}{\mathrm dt}=k_1\frac{\mathrm dp}{\mathrm dt}.\]</span> Podle zadání platí <span class="math display">\[\frac{\mathrm dm}{\mathrm dt}=-k_2p.\]</span> Odsud <span class="math display">\[\frac{\mathrm dp}{\mathrm dt}=-kp,\]</span> kde <span class="math inline">\(\displaystyle k\)</span> je konstanta, která vznikne sloučením konstant <span class="math inline">\(\displaystyle k_1\)</span> a <span class="math inline">\(\displaystyle k_2\)</span>.</p>
+</div>
+<h1 id="kvadratický-moment-kruhu"><span class="header-section-number">28</span> Kvadratický moment kruhu</h1>
+<h1 id="stacionární-vedení-tepla-ve-válcovém-prostředí"><span class="header-section-number">29</span> Stacionární vedení tepla ve válcovém prostředí</h1>
+<h1 id="chemická-reakce"><span class="header-section-number">30</span> Chemická reakce</h1>
+<p>Při chemické reakci se spotřebovává enzym tak, že spolu za přítomnosti katalyzátoru reagují dvě molekuly tohoto enzymu. V důsledku toho rychlost s jakou se snižuje množství enzymu je úměrná druhé mocnině koncentrace a tedy i druhé mocnině množství tohoto enyzmu. Napište diferenciální rovnici popisující tento děj.</p>
+<h1 id="ondatra-v-roce-1905-vysadil-na-svém-panství"><span class="header-section-number">31</span> Ondatra V roce 1905 vysadil na svém panství</h1>
+<p>hrabě Colloredo-Mansfeld několik párů ondatry, které dovezl z Ameriky. Ondatra se díky absenci přirozených nepřátel rychle rozšířila po celé Evropě. Předpokládejme, že oblast zasažená rozšířením ondatry má tvar kruhu o poloměru <span class="math inline">\(\displaystyle 230\, \mathrm{km}\)</span> a tento poloměr roste rychlostí <span class="math inline">\(\displaystyle 30 \,\mathrm{km}/\mathrm{rok}\)</span>. Jak rychle roste plocha kruhu? Jak rychle roste obvod kruhu?</p>
+<h1 id="akumulátor-teplota-studeného-akumulátoru-přeneseného-do-místnosti-o-pokojové-teplotě-roste-rychlostí"><span class="header-section-number">32</span> Akumulátor Teplota studeného akumulátoru přeneseného do místnosti o pokojové teplotě roste rychlostí</h1>
+<p><span class="math display">\[
+     \frac 12e^{-t}\  {}^\circ\mathrm{C}/\mathrm{hod}
+  \]</span> kde <span class="math inline">\(\displaystyle t\)</span> je čas v hodinách. Najděte změnu teploty akumulátoru za prvních pět hodin.</p>
+<h1 id="kmen-stromu"><span class="header-section-number">33</span> Kmen stromu</h1>
+<p>Kmen můžeme v určitých částech stromu primitivně modelovat válcem. Uvažujme délkový metr kmene, tj. válec o výšce 1m a poloměru <span class="math inline">\(\displaystyle r\)</span>. Hmotnost válce je <span class="math display">\[
+m=V\rho =\pi \rho
+r^2,
+\]</span> kde <span class="math inline">\(\displaystyle \rho=700 \mathrm{kg/m^3}\)</span> je hustota dřeva. Poloměr kmene roste rychlostí <span class="math inline">\(\displaystyle 0{,}01\,\mathrm{m/rok}\)</span>. Najděte vztah mezi rychlostí růstu poloměru válce a rychlostí růstu hmotnosti válce. Určete rychlost s jakou roste hmotnost v okamžiku, kdy poloměr kmene je <span class="math inline">\(\displaystyle r=0{,}20\,\mathrm{m}\)</span>.</p>
+
+</div>  <!-- container -->
+
+<div class='menu-obalka'>
+  <a class='menu menu4' href='../../'>Matematika</a><a class='menu menu4' href='../'>Přednáška</a><a class='menu menu4 ACTIVE' href='./'>Cvičení</a><a class='menu menu4' href='https://um.mendelu.cz/'>WeBWorK</a>
+</div>
+<div class='menu-obalka'><a class='menu' href='cviceni00.md.html'>0</a><a class='menu' href='cviceni01.md.html'>1</a><a class='menu' href='cviceni02.md.html'>2</a><a class='menu' href='cviceni03.md.html'>3</a><a class='menu' href='cviceni04.md.html'>4</a><a class='menu' href='cviceni05.md.html'>5</a><a class='menu' href='cviceni06.md.html'>6</a><a class='menu' href='cviceni07.md.html'>7</a><a class='menu' href='cviceni08.md.html'>8</a><a class='menu' href='cviceni09.md.html'>9</a><a class='menu' href='cviceni10.md.html'>10</a><a class='menu' href='cviceni11.md.html'>11</a><a class='menu' href='cviceni12.md.html'>12</a><a class='menu' href='cviceni13.md.html'>13</a></div>
+
+<div class="footer">
+      Copyright by Robert Mařík, content is available under <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>, built with <a href="https://www.pandoc.org" target="_blank" rel="noopener">Pandoc</a>
+</div>
+
+<!-- <div class="links"><a href="cviceni00.md.html">Začátek</a><a class="prev-a">Předchozí cvičení</a><a class="next-a">Další cvičení</a><a href="cviceni13.md.html">Konec</a></div>
+  -->
+
+  <script type="text/javascript">
+
+jQuery(document).ready(function(){
+    var current_path = window.location.pathname.split('/').pop();
+	var d=Number(current_path[7]+current_path[8]);
+	//var next=d+1;
+	//var prev=d-1;
+
+        //nextnum=cislo(next);
+        //prevnum=cislo(prev);
+	//var nextlink="cviceni"+nextnum+".md.html";
+        //var prevlink="cviceni"+prevnum+".md.html";
+
+    //jQuery('.PDF').prop('href', "http://user.mendelu.cz/marik/mtk/Cviceni_"+d+".pdf");
+    //jQuery('.prev-a').prop('href', prevlink);
+    //jQuery('.next-a').prop('href', nextlink);
+});
+  </script>
+  
+
+
+
+
+<style>
+  .shorten {
+      border-left: solid;
+      border-left-color:gray;
+      padding-left:1em;
+      max-height:300px;
+      overflow:hidden;
+      margin-bottom:20px;
+      margin-top:20px;
+          -webkit-mask-image: linear-gradient(180deg, #000 20%, transparent);
+  }
+  .rozbalovatko {
+      color:gray;
+      margin-bottom:30px;
+      display:block;
+      background-color: gainsboro;
+  }
+  .rozbalovatko p {padding:10px; margin-top:0px;}
+  .rozbalovatkoPopisek {
+      color:orangered;
+      background-color:#444;
+      font-weight: bold;
+      display:block;
+      padding:5px;
+      margin-left: -20px;
+      padding-left: 20px;
+  }
+  .rozbalovatko p {
+      color:crimson;
+  }
+</style>
+
+<script>
+
+
+jQuery( document ).ready(function() {
+    jQuery(".shorten").each(function(){
+	popisek = jQuery(this).data("text");
+	if (!popisek) {popisek="";}
+	jQuery(this).prepend("<span class=\"rozbalovatko\"><span class=\"rozbalovatkoPopisek\">Volitelný text. Klikněte pro rozbalení.</span><p>"+popisek+"</p></span>").css("background-color","gainsboro");
+    });
+
+    jQuery(".rozbalovatko").each(function(){
+    	jQuery(this).parent().click(function() {
+            jQuery( this ).css("max-height","100%").css("-webkit-mask-image","none").css("background-color","inherit");
+	    jQuery( this ).children(".rozbalovatko").slideUp();
+	    jQuery( this ).unbind("click");
+	})
+    });
+});
+
+</script>
+
+  
+    </div>
+</body>
+</html>

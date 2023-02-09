@@ -1,0 +1,413 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>Výpočet derivací, lineární aproximace</title>
+  <style type="text/css">code{white-space: pre;} body {  font-family: "Open Sans", Sans-Serif;}
+h1,h2 {clear:both;}
+  </style>
+
+  <!---
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+--->
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+  <script type="text/javascript">
+        function cislo(kolik)
+    {
+	if (kolik==-1) {return "00";}
+	if (kolik==0) {return "00";}
+	if (kolik>=13) {return "13";}
+	if (kolik==12) {return "12";}
+	if (kolik==10) {return "10";}
+	if (kolik==11) {return "11";}
+	return "0"+kolik;
+    };
+
+
+    function    myFunction()
+    {
+        //jQuery(".reseni").slideToggle();
+	jQuery(event.target).next().slideToggle();
+    }
+    
+    
+ </script>
+
+    <link rel="stylesheet" href="../my.css" type="text/css" />
+  <link rel="stylesheet" href="cviceni.css" type="text/css" />
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+  
+
+      
+  
+</head>
+<body>
+
+  <div class="container_">
+
+  
+  <div class='menu-obalka'>
+    <a class='menu menu4' href='../../'>Matematika</a><a class='menu menu4' href='../'>Přednáška</a><a class='menu menu4 ACTIVE' href='../cviceni'>Cvičení</a><a class='menu menu4' href='https://um.mendelu.cz/'>WeBWorK</a>
+  </div>
+	
+<div class='menu-obalka'><a class='menu' href='cviceni00.md.html'>0</a><a class='menu' href='cviceni01.md.html'>1</a><a class='menu' href='cviceni02.md.html'>2</a><a class='menu ACTIVE' href='cviceni03.md.html'>3</a><a class='menu' href='cviceni04.md.html'>4</a><a class='menu' href='cviceni05.md.html'>5</a><a class='menu' href='cviceni06.md.html'>6</a><a class='menu' href='cviceni07.md.html'>7</a><a class='menu' href='cviceni08.md.html'>8</a><a class='menu' href='cviceni09.md.html'>9</a><a class='menu' href='cviceni10.md.html'>10</a><a class='menu' href='cviceni11.md.html'>11</a><a class='menu' href='cviceni12.md.html'>12</a><a class='menu' href='cviceni13.md.html'>13</a></div>
+
+<div class="container">
+<!-- <div class="links"><a href="cviceni00.md.html">Začátek</a><a class="prev-a">Předchozí cvičení</a><a class="next-a">Další cvičení</a><a href="cviceni13.md.html">Konec</a></div>  -->
+
+  <p>
+<a class="PDF"> Stáhnout ve formátu PDF </a>
+  </p>
+<div id="header">
+<h1 class="title">Výpočet derivací, lineární aproximace</h1>
+</div>
+
+<div style='background-color: #E41F1F; display:inline-div;width:300px; color:lightgray; text-align:center; font-weight:bold; float:left; margin-right:10px; border-color:#E41F1F; border-style:solid;' ><a href='https://youtu.be/Gv_wO3H441Q' style='text-decoration:none; color:lightgray;'><img src='https://img.youtube.com/vi/Gv_wO3H441Q/mqdefault.jpg' style='width:100%; max-width:100%;'>Youtube cvičení</a></div>
+
+<div id="TOC">
+<ul>
+<li><a href="#výpočet-derivace-součinu-a-podílu"><span class="toc-section-number">1</span> Výpočet derivace součinu a podílu</a></li>
+<li><a href="#základní-lineární-aproximace"><span class="toc-section-number">2</span> Základní lineární aproximace</a></li>
+<li><a href="#lineární-aproximace"><span class="toc-section-number">3</span> Lineární aproximace</a></li>
+<li><a href="#kinetika-chemických-reakcích-pro-malé-koncentrace"><span class="toc-section-number">4</span> Kinetika chemických reakcích pro malé koncentrace</a></li>
+<li><a href="#numerické-derivování-a-závislost-tepelné-vodivosti-mědi-na-teplotě"><span class="toc-section-number">5</span> Numerické derivování a závislost tepelné vodivosti mědi na teplotě</a></li>
+<li><a href="#iterační-metoda"><span class="toc-section-number">6</span> Iterační metoda</a></li>
+</ul>
+</div>
+
+<div style="clear:both;"></div>
+
+<blockquote>
+<ul>
+<li>Naučíme se derivovat součin a podíl funkcí. Jedná se o použití vzorců, nejsou nutné předchozí znalosti, je nutné mít pouze k dispozici vzorce.</li>
+<li>Naučíme se používat vzorec pro lineární aproximaci funkce. Naučíme se nahrazovat komplikované funkční závislosti závislostmi jednoduššími.</li>
+<li>Naučíme se další triky získané díky lineární a polynomiální aproximaci: numerické derivování a numerické řešení rovnic.</li>
+</ul>
+</blockquote>
+<h1 id="výpočet-derivace-součinu-a-podílu"><span class="header-section-number">1</span> Výpočet derivace součinu a podílu</h1>
+<p>Určete derivace následujících funkcí, kde <span class="math inline">\(\displaystyle a,b,\mu\in\mathbb{R}\)</span>.</p>
+<ol type="1">
+<li><span class="math inline">\(\displaystyle f(x)=x\ln x\)</span></li>
+<li><span class="math inline">\(\displaystyle f(x)=x\sqrt{x^2+1}\)</span></li>
+<li><span class="math inline">\(\displaystyle f(x)=\frac {x}{ax+b}\)</span></li>
+<li><span class="math inline">\(\displaystyle f(t)=\frac{t}{t^2+6}\)</span></li>
+<li><span class="math inline">\(\displaystyle f(x)=\frac{ax^2}{x^2+1}\)</span></li>
+<li><span class="math inline">\(\displaystyle f(x)=\frac {2x^3}{x^2+1}\)</span></li>
+<li><span class="math inline">\(\displaystyle f(x)=\frac {ax}{(x-1)^2}\)</span></li>
+</ol>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<ol type="1">
+<li><span class="math inline">\(\displaystyle f&#39;(x)=1\cdot \ln x+x\frac 1x=1+\ln x\)</span></li>
+<li><span class="math inline">\(\displaystyle f&#39;(x)=\sqrt{x^2+a}+x\frac{x}{\sqrt{x^2+1}}\)</span></li>
+<li><span class="math inline">\(\displaystyle f&#39;(x)=\frac{1\cdot (ax+b)-x\cdot a}{(ax+b)^2}=\frac b{(ax+b)^2}\)</span></li>
+<li><span class="math inline">\(\displaystyle f&#39;(t)=\frac{(t^2+6)-t2t}{(t^2+6)^2}=\frac{6-t^2}{(t^2+6)^2}\)</span></li>
+<li><span class="math inline">\(\displaystyle f&#39;(x)=\frac {2ax(x^2+1)-ax^22x}{(x^2+1)^2}=\frac {2ax}{(x^2+1)^2}\)</span></li>
+<li><span class="math inline">\(\displaystyle f&#39;(x)=\frac {6x^2(x^2+1)-2x^32x}{(x^2+1)^2}\)</span></li>
+<li><span class="math inline">\(\displaystyle f&#39;(x)=\frac{a(x-1)^2-ax2(x-1)}{(x-1)^4}= \frac{a(x-1)-ax2}{(x-1)^3}=\cdots\)</span></li>
+</ol>
+</div>
+<h1 id="základní-lineární-aproximace"><span class="header-section-number">2</span> Základní lineární aproximace</h1>
+<p>Najděte lineární aproximace funkcí <span class="math inline">\(\displaystyle \sin x\)</span>, <span class="math inline">\(\displaystyle \cos x\)</span> a <span class="math inline">\(\displaystyle {(1+x)^n}\)</span> v okolí nuly. Tím dokážete platnost následujících přibližných vzorců platných pro <span class="math inline">\(\displaystyle x\)</span> blízko nuly. <span class="math display">\[
+\begin{aligned}
+\sin x&amp;\approx  x\\
+\cos x&amp;\approx  1\\
+(1+x)^n&amp;\approx  1+nx
+\end{aligned}
+\]</span></p>
+<p><em>První dvě aproximace využijeme později pro odvození tvaru matice malých rotací, což je důležité při studiu deformace materiálů. Poslední můžeme využít například pro to, abychom z relativistického vzorce pro celkovou energii extrahovali část závislou na rychlosti, tj. kinetickou energii (na přednášce).</em></p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p><span class="math inline">\(\displaystyle f(x)\approx f(x_0)+f&#39;(x_0)(x-x_0)\)</span></p>
+<ol type="1">
+<li><span class="math inline">\(\displaystyle f(x)=\sin x\)</span>, <span class="math inline">\(\displaystyle x_0=0\)</span>, <span class="math inline">\(\displaystyle f(0)=\sin 0=0\)</span>, <span class="math inline">\(\displaystyle f&#39;(x)=(\sin(x))&#39;=\cos x\)</span>, <span class="math inline">\(\displaystyle f&#39;(0)=\cos (0)=1\)</span> <span class="math display">\[\sin(x)\approx 0+1\cdot (x-0)=x\]</span></li>
+<li><span class="math inline">\(\displaystyle f(x)=\cos x\)</span>, <span class="math inline">\(\displaystyle x_0=0\)</span>, <span class="math inline">\(\displaystyle f(0)=\cos 0=1\)</span>, <span class="math inline">\(\displaystyle f&#39;(x)=(\cos(x))&#39;=-\sin x\)</span>, <span class="math inline">\(\displaystyle f&#39;(0)=-\sin (0)=0\)</span> <span class="math display">\[\cos(x)\approx 1+0\cdot (x-0)=1\]</span></li>
+<li><span class="math inline">\(\displaystyle f(x)=(1+x)^n\)</span>, <span class="math inline">\(\displaystyle x_0=0\)</span>, <span class="math inline">\(\displaystyle f(0)=(1+0)^n=1\)</span>, <span class="math inline">\(\displaystyle f&#39;(x)=((1+x)^n)&#39;=n(1+x)^{n-1}\)</span>, <span class="math inline">\(\displaystyle f&#39;(0)=n(1+0)^{n-1}=n\)</span> <span class="math display">\[(1+x)^n\approx 1+n\cdot (x-0)=1+nx\]</span></li>
+</ol>
+</div>
+<h1 id="lineární-aproximace"><span class="header-section-number">3</span> Lineární aproximace</h1>
+<p>Veličina <span class="math inline">\(\displaystyle y\)</span> je funkce proměnné <span class="math inline">\(\displaystyle x\)</span>. Najděte její lineární aproximaci v okolí zadaného bodu.</p>
+<ol type="1">
+<li><span class="math inline">\(\displaystyle y=xe^x\)</span> v okolí bodu <span class="math inline">\(\displaystyle x=0\)</span></li>
+<li><span class="math inline">\(\displaystyle y=rx\left(1-\frac xK\right)\)</span> v okolí bodu <span class="math inline">\(\displaystyle x=0\)</span></li>
+<li><span class="math inline">\(\displaystyle y=rx\left(1-\frac xK\right)\)</span> v okolí bodu <span class="math inline">\(\displaystyle x=K\)</span></li>
+<li><span class="math inline">\(\displaystyle y=\sqrt x\)</span> v okolí bodu <span class="math inline">\(\displaystyle x=1\)</span></li>
+<li><span class="math inline">\(\displaystyle y=\frac 1{\sqrt x}\)</span> v okolí bodu <span class="math inline">\(\displaystyle x=1\)</span></li>
+</ol>
+<p><em>Ve druhém a třetím příkladě aproximujeme funkci modelující růst populace v prostředí s nosnou kapacitou <span class="math inline">\(\displaystyle K\)</span>. Aproximace v okolí bodu <span class="math inline">\(\displaystyle x=0\)</span> odpovídá velmi malé populaci. Proto se konstanta úměrnosti ze získané lineární aproximace nazývá <em>invazní parametr</em>.</em></p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<ol type="1">
+<li><span class="math inline">\(\displaystyle f(x)=xe^x\)</span>, <span class="math inline">\(\displaystyle x_0=0\)</span>, <span class="math inline">\(\displaystyle f(0)=0e^0=0\)</span>, <span class="math inline">\(\displaystyle f&#39;(x)=(xe^x)&#39;=e^x+x e^x\)</span>, <span class="math inline">\(\displaystyle f&#39;(0)=e^0+0e^0=e^0=1\)</span> <span class="math display">\[xe^x\approx 0+1\cdot (x-0)=x\]</span></li>
+<li><span class="math inline">\(\displaystyle f(x)=rx \left(1-\frac xK\right)\)</span>, <span class="math inline">\(\displaystyle x_0=0\)</span>, <span class="math inline">\(\displaystyle f(0)=r0 \left(1-\frac 0K\right)=0\)</span>, <span class="math inline">\(\displaystyle f&#39;(x)= \left(rx-r\frac 1K x^2\right)&#39; =r-\frac{2r}K x\)</span>, <span class="math inline">\(\displaystyle f&#39;(0)=r-\frac{2r}{K} \cdot 0=r\)</span> <span class="math display">\[rx\left(1-\frac xK\right)\approx 0+r(x-0)=rx\]</span></li>
+<li><span class="math inline">\(\displaystyle f(x)=rx\left(1-\frac xK\right)\)</span>, <span class="math inline">\(\displaystyle x_0=K\)</span>, <span class="math inline">\(\displaystyle f(K)=rK\left(1-\frac KK\right)=rK(1-1)=0\)</span>, <span class="math inline">\(\displaystyle f&#39;(x)=\left(rx-r\frac 1K x^2\right)&#39;=r-\frac{2r}K x\)</span>, <span class="math inline">\(\displaystyle f&#39;(K)=r-\frac{2r}{K} \cdot K=r-2r=-r\)</span> <span class="math display">\[rx\left(1-\frac xK\right)\approx 0-r(x-K)=-r(x-K)=r(K-x)\]</span> Poslední aproximaci je možno přepsat do tvaru <span class="math display">\[rx\left(1-\frac xK\right)\approx  rK\left(1-\frac xK\right)\]</span></li>
+<li><span class="math inline">\(\displaystyle f(x)=\sqrt x\)</span>, <span class="math inline">\(\displaystyle x_0=1\)</span>, <span class="math inline">\(\displaystyle f(1)=\sqrt 1=1\)</span>, <span class="math inline">\(\displaystyle f&#39;(x)=\left(x^{\frac 12}\right)&#39;=\frac 12 x^{-\frac 12}\)</span>, <span class="math inline">\(\displaystyle f&#39;(1)=\frac 12\)</span> <span class="math display">\[\sqrt x \approx 1+\frac 12 (x-1)\]</span></li>
+<li><span class="math inline">\(\displaystyle f(x)=\frac 1{\sqrt x}\)</span>, <span class="math inline">\(\displaystyle x_0=1\)</span>, <span class="math inline">\(\displaystyle f(1)=\frac 1{\sqrt 1}=1\)</span>, <span class="math inline">\(\displaystyle f&#39;(x)=\left(x^{-\frac 12}\right)&#39;=-\frac 12 x^{-\frac 32}\)</span>, <span class="math inline">\(\displaystyle f&#39;(1)=-\frac 12\)</span> <span class="math display">\[\frac 1{\sqrt x} \approx 1-\frac 12 (x-1)\]</span></li>
+</ol>
+</div>
+<h1 id="kinetika-chemických-reakcích-pro-malé-koncentrace"><span class="header-section-number">4</span> Kinetika chemických reakcích pro malé koncentrace</h1>
+<p>Rychlost mnoha chemických reakcí je dána vzorcem <span class="math display">\[
+  f(x)=\frac {ax}{b+x},
+\]</span> kde <span class="math inline">\(\displaystyle x\)</span> je koncentrace substrátu a <span class="math inline">\(\displaystyle a\)</span>, <span class="math inline">\(\displaystyle b\)</span> jsou parametry (konstanty). Tento vzorec se nazývá kinetika Michaelise a Mentenové. Ukažte, že platí <span class="math display">\[
+  \frac{\mathrm df}{\mathrm dx}=\frac{ab}{(b+x)^2}.
+\]</span> Použijte tento výpočet k lineární aproximaci funkce <span class="math display">\[
+  f(x)=\frac {ax}{b+x},
+\]</span> pro malá <span class="math inline">\(\displaystyle x\)</span>.</p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p>Přímým dosazením dostáváme <span class="math inline">\(\displaystyle f(0)=\frac {a0}{b+0}=0\)</span>, <span class="math inline">\(\displaystyle f&#39;(0)=\frac{ab}{(b+0)^2}=\frac {ab}{b^2}=\frac ab\)</span> a odsud <span class="math display">\[\frac {ax}{b+x}\approx 0+\frac ab (x-0)=\frac ab x.\]</span></p>
+</div>
+<div class="shorten" data-text="Často zběhlejší počtáři lineární aproximaci prostě poznají hned ze zápisu funkce. Jedna z technik je popsána v tomto příkladě.">
+<h1 id="lineární-aproximace-kvalifikovaným-odhadem"><span class="header-section-number">4</span> Lineární aproximace kvalifikovaným odhadem</h1>
+<p>Pokud je v součinu výraz, který je blízký nule, ovlivní tento výraz výsledný součin více, než zbylé součinitele. Postavíme toto pozorování na solidnější základy.</p>
+<p>Ukažte, že pokud platí <span class="math inline">\(\displaystyle f(x)=g(x)h(x)\)</span> a <span class="math inline">\(\displaystyle g(x_0)=0\neq h(x_0)\)</span>, má lineární aproximace funkce <span class="math inline">\(\displaystyle g\)</span> tvar <span class="math display">\[g(x)\approx g&#39;(x_0)(x-x_0)\]</span> a lineární aproximace funkce <span class="math inline">\(\displaystyle f\)</span> tvar <span class="math display">\[f(x)\approx \Bigl[g&#39;(x_0) (x-x_0)\Bigr]h(x_0),\]</span> kde v hranaté závorce je lineární aproximace funkce <span class="math inline">\(\displaystyle g\)</span> a tato aproximace je vynásobena hodnotou funkce <span class="math inline">\(\displaystyle h\)</span> v bodě <span class="math inline">\(\displaystyle x_0\)</span>.</p>
+<p>Situace je jednoduchá zejména v případě, kdy funkce <span class="math inline">\(\displaystyle g\)</span> je lineární a je sama svojí lineární aproximací. Ukažte, že s uvedenou výbavou je možno napsat lineární aproximace prvních tří funkcí z příkladu  přímo a bez výpočtu. Ukažte, že výpočet není nutný a výsledek se dá kvalifikovaně odhadnout i v předchozím příkladě s kinetikou Michaelise a Mentenové. Pro tyto účely použijte triviální identitu <span class="math display">\[
+  \frac {ax}{b+x}=x\cdot\frac {a}{b+x}.
+\]</span></p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p>Obecný vzorec je <span class="math display">\[f(x)\approx f(x_0)+f&#39;(x_0)(x-x_0).\]</span></p>
+<p>Vztah <span class="math display">\[g(x)\approx g&#39;(x_0)(x-x_0)\]</span> z něj plyne okamžitě použitím funkce <span class="math inline">\(\displaystyle g\)</span> a podmínky <span class="math inline">\(\displaystyle g(x_0)=0\)</span>.</p>
+<p>Pro funkci <span class="math inline">\(\displaystyle f(x)=g(x)h(x)\)</span> v našem případě máme <span class="math display">\[
+\begin{aligned}
+f(x_0)&amp;=g(x_0)h(x_0)=0\cdot  h(x_0)=0\\
+f&#39;(x_0)&amp;=g&#39;(x_0)h(x_0)+g(x_0)h&#39;(x_0)=g&#39;(x_0)h(x_0)+0\cdot h&#39;(x_0)=g&#39;(x_0)h(x_0)\\
+\end{aligned}
+\]</span> a přímým dosazením <span class="math display">\[f(x)\approx 0+g&#39;(x_0)h(x_0)(x-x_0)=\Bigl[g&#39;(x_0)(x-x_0)\Bigr]h(x_0)\]</span></p>
+<ol type="1">
+<li>Funkce <span class="math inline">\(\displaystyle f(x)=xe^x\)</span> má v <span class="math inline">\(\displaystyle x=0\)</span> první součinitel nulový a druhý součinitel nenulový a platí <span class="math inline">\(\displaystyle e^0=1\)</span>. V okolí <span class="math inline">\(\displaystyle x=0\)</span> je první součinitel lineární. Proto v okolí <span class="math inline">\(\displaystyle x=0\)</span> platí <span class="math display">\[xe^x\approx xe^0=x\cdot 1=x.\]</span></li>
+<li>Funkce <span class="math inline">\(\displaystyle f(x)=rx\left(1-\frac xK\right)\)</span> má v <span class="math inline">\(\displaystyle x=0\)</span> první součinitel <span class="math inline">\(\displaystyle rx\)</span> nulový a<br />
+druhý součinitel <span class="math inline">\(\displaystyle \left(1-\frac xK\right)\)</span> nenulový a platí <span class="math inline">\(\displaystyle \left(1-\frac 0K\right)=1\)</span>. V okolí <span class="math inline">\(\displaystyle x=0\)</span> je první součinitel lineární a v okolí <span class="math inline">\(\displaystyle x=0\)</span> platí <span class="math display">\[rx\left(1-\frac xK\right)\approx rx\left(1-\frac 0K\right)=rx.\]</span></li>
+<li>Funkce <span class="math inline">\(\displaystyle f(x)=rx\left(1-\frac xK\right)\)</span> má v bodě <span class="math inline">\(\displaystyle x=K\)</span> první součinitel <span class="math inline">\(\displaystyle rx\)</span> nenulový roven <span class="math inline">\(\displaystyle rK\)</span> a druhý součinitel <span class="math inline">\(\displaystyle \left(1-\frac xK\right)\)</span> nulový. Druhý součinitel je lineární. Proto v okolí <span class="math inline">\(\displaystyle x=K\)</span> platí <span class="math display">\[rx\left(1-\frac xK\right)\approx rK\left(1-\frac xK\right)=r(K-x).\]</span></li>
+<li>Funkce <span class="math inline">\(\displaystyle f(x)=x\frac {a}{b+x}\)</span> má v bodě <span class="math inline">\(\displaystyle x=0\)</span> první součinitel <span class="math inline">\(\displaystyle x\)</span> nulový a druhý součinitel <span class="math inline">\(\displaystyle \frac {a}{b+x}\)</span> nenulový a roven <span class="math inline">\(\displaystyle \frac ab\)</span>. První součinitel je lineární. Proto v okolí <span class="math inline">\(\displaystyle x=0\)</span> platí <span class="math display">\[x\frac a{b+x}\approx x\frac ab.\]</span></li>
+</ol>
+</div>
+</div>
+<h1 id="numerické-derivování-a-závislost-tepelné-vodivosti-mědi-na-teplotě"><span class="header-section-number">5</span> Numerické derivování a závislost tepelné vodivosti mědi na teplotě</h1>
+
+<figure>
+<img src="medene_nadobi.jpg" alt="pixabay.com" /><figcaption>pixabay.com</figcaption>
+</figure>
+
+<p>Tabulka udává závislost koeficientu tepelné vodivosti mědi na teplotě, <span class="math inline">\(\displaystyle \lambda=\lambda(T)\)</span>. Odhadněte pomocí centrální diference derivaci funkce <span class="math inline">\(\displaystyle \lambda\)</span> pro <span class="math inline">\(\displaystyle T=400K\)</span> (cca <span class="math inline">\(\displaystyle 127^\circ \mathrm C\)</span>). Určete i fyzikální jednotku derivace <span class="math inline">\(\displaystyle \frac{\mathrm d\lambda}{\mathrm dT}\)</span> a slovní interpretaci vypočtené hodnoty.</p>
+<p><em>Poznámka: Teplota v Kelvinech (termodynamická teplota) je teplota ve stupních Celsia posunutá tak, aby teplota <span class="math inline">\(\displaystyle -273{,}15^\circ\mathrm C\)</span> odpovídala <span class="math inline">\(\displaystyle 0\,\mathrm K\)</span>. Dílky a tedy i změny teploty jsou na obou stupnicích identické.</em></p>
+<table>
+<caption>Zdroj: Cengel, Mass and heat transfer.</caption>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(\displaystyle T/\mathrm K\)</span></th>
+<th><span class="math inline">\(\displaystyle \lambda\Bigm/ \mathrm {W}/(\mathrm{m}\,\mathrm{K})\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>200</td>
+<td>413</td>
+</tr>
+<tr class="even">
+<td>400</td>
+<td>393</td>
+</tr>
+<tr class="odd">
+<td>600</td>
+<td>379</td>
+</tr>
+<tr class="even">
+<td>800</td>
+<td>366</td>
+</tr>
+</tbody>
+</table>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p>Teploty jsou v ekvidistantních krocích po <span class="math inline">\(\displaystyle 200\)</span> kelvinech. Vezmeme od výchozí hodnoty <span class="math inline">\(\displaystyle 400\)</span> kelvinů nejbližší nižší (<span class="math inline">\(\displaystyle 200\,\mathrm K\)</span>) a nejbližší vyšší (<span class="math inline">\(\displaystyle 600\,\mathrm K\)</span>) teplotu, najdeme v tabulce odpovídající koeficienty tepelné vodivosti, rozdílem určíme změnu v tomto koeficientu a podílem přepočteme změnu na jeden Kelvin. <span class="math display">\[\frac{\mathrm d\lambda}{\mathrm dT}(400) \approx \frac{(379 -413) \mathrm {W}/(\mathrm m\,\mathrm K)}{2\cdot 200\mathrm K}=-0.085\,\mathrm W \,\mathrm m^{-1}\,\mathrm K^{-2}\]</span> Při teplotě <span class="math inline">\(\displaystyle T=400 K\)</span> hodnota koeficientu tepelné vodivosti s rostoucí teplotou klesá. S každým stupněm Celsia (s každým Kelvinem) nad danou teplotu klesne koeficient tepelné vodivosti o <span class="math inline">\(\displaystyle 0.085\,\mathrm W \,\mathrm m^{-1}\,\mathrm K^{-1}\)</span>.</p>
+<p>Pokusíme se trošku slovně ilustrovat, co nám vlastně vyšlo. Při teplotě <span class="math inline">\(\displaystyle 400\,\mathrm K\)</span> a teplotním gradientu jeden stupeň Celsia na metr délky prochází mědí tepelný výkon <span class="math inline">\(\displaystyle 393\)</span> wattů na metr čtvereční, tj. za sekundu se plochou metru čtverečního přenese <span class="math inline">\(\displaystyle 393\)</span> joulů. S každým stupněm Celsia navíc tato hodnota malinko poklesne: o <span class="math inline">\(\displaystyle 0.085\)</span> joulu. Odsud je patrné, že při změně teploty řádově o desítky stupňů se koeficent změní o malé jednotky procent a v těchto situacích nebude závislost na teplotě významná.</p>
+</div>
+<h1 id="iterační-metoda"><span class="header-section-number">6</span> Iterační metoda</h1>
+
+<figure>
+<img src="sun_house.jpg" alt="pixabay.com" /><figcaption>pixabay.com</figcaption>
+</figure>
+
+<p>Úlohy s tepelnou bilancí (např. osluněná stěna) často vedou na rovnice obsahující čtvrtou mocninu a první mocninu neznámé veličiny. Toto je dáno tím, že vyzařování tepla souvisí podle Stefanova-Bolzmannova zákona se čtvrtou mocninou teploty a přenos tepla prouděním nebo vedením souvisí s první mocninou teploty. Koeficient u první mocniny bývá větší než u čtvrté mocniny, protože konstanta ze Stefanova-Bolzmannova zákona je velmi malá. Typickým představitelem by mohla být rovnice <span class="math display">\[x^4-8x+6=0.\]</span> Napište iterační vzorec pro řešení této rovnice Newtonovou metodou a proveďte několik iterací s vhodnou celočíselnou počáteční aproximací. Poté porovnejte s postupem, kdy v rovnici osamostatníte <span class="math inline">\(\displaystyle x\)</span> z lineární části a z takové rovnice sestavíte iterační vzorec.</p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p>Newtonova metoda: Využitím funkčního předpisu <span class="math inline">\(\displaystyle f(x)=x^4-8x+6\)</span> a derivace <span class="math inline">\(\displaystyle f&#39;(x)=4x^3-8\)</span> dostáváme iterační vzorec <span class="math display">\[x_{n+1}=x_n-\frac{x_n^4-8x_n+6}{4x_n^3-8},\]</span> který konverguje velmi rychle.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Iterace</th>
+<th style="text-align: left;">Hodnota</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\displaystyle x_0\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\displaystyle 1.000000000000000\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(\displaystyle x_1\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\displaystyle 0.750000000000000\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\displaystyle x_2\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\displaystyle 0.800123762376238\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(\displaystyle x_3\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\displaystyle 0.801613150991155\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\displaystyle x_4\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\displaystyle 0.801614587354561\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(\displaystyle x_5\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\displaystyle 0.801614587355901\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\displaystyle x_6\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\displaystyle 0.801614587355901\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://sagecell.sagemath.org/?z=eJyrsDXk5UrLL1LIVMjMUyhKzEtP1TA00LTi5VIAggrbPI0KXY2KOBNdC60KbTNNfQ0TrYo4Y10LTU2IioKizLwSBY0KTQC3JxJK&amp;lang=sage&amp;interacts=eJyLjgUAARUAuQ==">Sage.</a></p>
+<p>Ad hoc iterace: Rovnici převedeme na tvar <span class="math display">\[x=\frac{x^4+6}{8}\]</span> a zkusíme iterace <span class="math display">\[x_{n+1}=\frac{x_n^4+6}{8}.\]</span> Konergenci pozorujeme, ale je pomalá.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Iterace</th>
+<th style="text-align: left;">Hodnota</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\displaystyle x_0\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\displaystyle 1.000000000000000\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(\displaystyle x_1\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\displaystyle 0.875000000000000\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\displaystyle x_2\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\displaystyle 0.823272705078125\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(\displaystyle x_3\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\displaystyle 0.807422868167514\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\displaystyle x_4\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\displaystyle 0.803126865733812\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(\displaystyle x_5\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\displaystyle 0.802005182967586\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\displaystyle x_6\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\displaystyle 0.801715260030858\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://sagecell.sagemath.org/?z=eJyrsDXk5UrLL1LIVMjMUyhKzEtP1TA00LTi5VIAggrbPA2NijgTbTNNfQ0LTU2IaEFRZl6JgkaFJgDh9g8K&amp;lang=sage&amp;interacts=eJyLjgUAARUAuQ==">Sage.</a></p>
+</div>
+
+</div>  <!-- container -->
+
+<div class='menu-obalka'>
+  <a class='menu menu4' href='../../'>Matematika</a><a class='menu menu4' href='../'>Přednáška</a><a class='menu menu4 ACTIVE' href='./'>Cvičení</a><a class='menu menu4' href='https://um.mendelu.cz/'>WeBWorK</a>
+</div>
+<div class='menu-obalka'><a class='menu' href='cviceni00.md.html'>0</a><a class='menu' href='cviceni01.md.html'>1</a><a class='menu' href='cviceni02.md.html'>2</a><a class='menu ACTIVE' href='cviceni03.md.html'>3</a><a class='menu' href='cviceni04.md.html'>4</a><a class='menu' href='cviceni05.md.html'>5</a><a class='menu' href='cviceni06.md.html'>6</a><a class='menu' href='cviceni07.md.html'>7</a><a class='menu' href='cviceni08.md.html'>8</a><a class='menu' href='cviceni09.md.html'>9</a><a class='menu' href='cviceni10.md.html'>10</a><a class='menu' href='cviceni11.md.html'>11</a><a class='menu' href='cviceni12.md.html'>12</a><a class='menu' href='cviceni13.md.html'>13</a></div>
+
+<div class="footer">
+      Copyright by Robert Mařík, content is available under <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>, built with <a href="https://www.pandoc.org" target="_blank" rel="noopener">Pandoc</a>
+</div>
+
+<!-- <div class="links"><a href="cviceni00.md.html">Začátek</a><a class="prev-a">Předchozí cvičení</a><a class="next-a">Další cvičení</a><a href="cviceni13.md.html">Konec</a></div>
+  -->
+
+  <script type="text/javascript">
+
+jQuery(document).ready(function(){
+    var current_path = window.location.pathname.split('/').pop();
+	var d=Number(current_path[7]+current_path[8]);
+	//var next=d+1;
+	//var prev=d-1;
+
+        //nextnum=cislo(next);
+        //prevnum=cislo(prev);
+	//var nextlink="cviceni"+nextnum+".md.html";
+        //var prevlink="cviceni"+prevnum+".md.html";
+
+    //jQuery('.PDF').prop('href', "http://user.mendelu.cz/marik/mtk/Cviceni_"+d+".pdf");
+    //jQuery('.prev-a').prop('href', prevlink);
+    //jQuery('.next-a').prop('href', nextlink);
+});
+  </script>
+  
+
+
+
+
+<style>
+  .shorten {
+      border-left: solid;
+      border-left-color:gray;
+      padding-left:1em;
+      max-height:300px;
+      overflow:hidden;
+      margin-bottom:20px;
+      margin-top:20px;
+          -webkit-mask-image: linear-gradient(180deg, #000 20%, transparent);
+  }
+  .rozbalovatko {
+      color:gray;
+      margin-bottom:30px;
+      display:block;
+      background-color: gainsboro;
+  }
+  .rozbalovatko p {padding:10px; margin-top:0px;}
+  .rozbalovatkoPopisek {
+      color:orangered;
+      background-color:#444;
+      font-weight: bold;
+      display:block;
+      padding:5px;
+      margin-left: -20px;
+      padding-left: 20px;
+  }
+  .rozbalovatko p {
+      color:crimson;
+  }
+</style>
+
+<script>
+
+
+jQuery( document ).ready(function() {
+    jQuery(".shorten").each(function(){
+	popisek = jQuery(this).data("text");
+	if (!popisek) {popisek="";}
+	jQuery(this).prepend("<span class=\"rozbalovatko\"><span class=\"rozbalovatkoPopisek\">Volitelný text. Klikněte pro rozbalení.</span><p>"+popisek+"</p></span>").css("background-color","gainsboro");
+    });
+
+    jQuery(".rozbalovatko").each(function(){
+    	jQuery(this).parent().click(function() {
+            jQuery( this ).css("max-height","100%").css("-webkit-mask-image","none").css("background-color","inherit");
+	    jQuery( this ).children(".rozbalovatko").slideUp();
+	    jQuery( this ).unbind("click");
+	})
+    });
+});
+
+</script>
+
+  
+    </div>
+</body>
+</html>
