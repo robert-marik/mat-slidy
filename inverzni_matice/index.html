@@ -1,0 +1,586 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Robert Mařík" />
+  <title>Inverzní matice, determinanty</title>
+  <style type="text/css">code{white-space: pre;} body {  font-family: "Open Sans", Sans-Serif;}</style>
+<link href="../lity/dist/lity.css" rel="stylesheet">
+  <link rel="stylesheet" href="../my.css?123" type="text/css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="../lity/dist/lity.js"></script>
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+  
+
+ <script type="text/javascript">
+
+function otevrit(co)
+   {
+       seed=Math.round(Math.random()*1000);
+       window.open('http://um.mendelu.cz/webwork2/html2xml?&answersSubmitted=0&sourceFilePath='+co+'&problemSeed='+seed+'&displayMode=MathJax&courseID=daemon&userID=demon&course_password=demonek&outputformat=simpleM&language=cs_CZ', '_blank');
+   };
+
+function    myFunctionYTB()
+    {
+        //jQuery(".reseni").slideToggle();
+	jQuery(".Ycontainer").slideToggle();
+    }
+        
+
+  </script>
+
+</head>
+<body>
+
+  <div class='menu-obalka'>
+    <a class='menu menu4' href='../../'>Matematika</a><a class='menu menu4 ACTIVE' href='../'>Přednáška</a><a class='menu menu4' href='../cviceni'>Cvičení</a><a class='menu menu4' href='https://um.mendelu.cz/'>WeBWorK</a>
+  </div>
+	
+ <div class='menu-obalka'><a class='menu' href='../intro'>0</a><a class='menu  ' href='../derivace_I'>1</a><a class='menu  ' href='../derivace_II'>2</a><a class='menu  ' href='../derivace_III'>3</a><a class='menu  ' href='../integraly'>4</a><a class='menu  ' href='../integraly2'>5</a><a class='menu  ' href='../ode'>6</a><a class='menu  ' href='../matice'>7</a><a class='menu ACTIVE ' href='../inverzni_matice'>8</a><a class='menu  ' href='../soustavy'>9</a><a class='menu  ' href='../vektorove_pole'>10</a><a class='menu  ' href='../dvojny_integral'>11</a><a class='menu  ' href='../numerika'>12</a><a class='menu  ' href='../shrnuti'>13</a> </div> 
+
+<div class="container">
+<div id="header">
+<h1 class="title">Inverzní matice, determinanty</h1>
+<h2 class="author">Robert Mařík</h2>
+<h3 class="date">2020-2021</h3>
+</div>
+
+<!-- YTB -->
+
+
+<div>
+<button onclick="myFunctionYTB()">Videa on/off</button>
+<button onclick="jQuery('.shorten').css('display','none');">Volitelné části off</button>
+</div>
+
+
+<div id="TOC">
+<ul>
+<li><a href="#inverzní-matice">Inverzní matice</a><ul>
+<li><a href="#inverzní-matice-k-matici-popisující-rotaci-v-rovině">Inverzní matice k matici popisující rotaci v rovině</a></li>
+<li><a href="#ortogonální-matice">Ortogonální matice</a></li>
+</ul></li>
+<li><a href="#matice-přechodu">Matice přechodu</a></li>
+<li><a href="#zobrazení-v-různých-soustavách-souřadnic">Zobrazení v různých soustavách souřadnic</a></li>
+<li><a href="#praktická-aplikace-transformace-tenzoru">Praktická aplikace: transformace tenzoru</a></li>
+<li><a href="#obecné-vzorce-pro-transformaci-tenzoru">Obecné vzorce pro transformaci tenzoru</a></li>
+<li><a href="#role-vlastních-vektorů-při-transformaci-matic">Role vlastních vektorů při transformaci matic</a></li>
+<li><a href="#transformace-symetrické-matice-na-diagonální-tvar">Transformace symetrické matice na diagonální tvar</a></li>
+<li><a href="#determinant-matice">Determinant matice</a></li>
+<li><a href="#determinant-matice-2times-2-křížové-pravidlo">Determinant matice <span class="math inline">\(2\times 2\)</span> (křížové pravidlo)</a></li>
+<li><a href="#determinant-matice-3times-3-sarusovo-pravidlo">Determinant matice <span class="math inline">\(3\times 3\)</span> (Sarusovo pravidlo)</a></li>
+<li><a href="#determinant-matice-ve-schodovitém-tvaru">Determinant matice ve schodovitém tvaru</a></li>
+<li><a href="#souvislost-některých-pojmů">Souvislost některých pojmů</a></li>
+<li><a href="#hookův-zákon-matice-tuhosti-a-poddajnosti">Hookův zákon, matice tuhosti a poddajnosti</a></li>
+<li><a href="#vlastní-vektory-matice-a-matice-inverzní">Vlastní vektory matice a matice inverzní</a></li>
+<li><a href="#shrnutí-hlavní-myšlenky">Shrnutí, hlavní myšlenky</a></li>
+</ul>
+</div>
+
+<blockquote><p><strong>Motivace</strong>.</p>
+<ul>
+<li>Chování libovolného systému nezávisí na souřadné soustavě, ve které tento systém popisujeme. Opravdu, dřevo neví, jak jsme si zvolili osy soustavy souřadnic. Ani, zda používáme pravoúhlou soustavu či jinou. Už vůbec dřevo nepozná, zda úlohu řešíme v pravotočivé či levotočivé soustavě souřadnic. Vhodná volba souřadné soustavy přirozeně neovlivní chování systému. Může ale značně usnadnit výpočty. Proto například při studiu obdélníkového objektu volíme osy ve směru hran. Proto například při studiu dřeva volíme souřadné osy v anatomických směrech dřeva. Tyto dva požadavky jsou částečně proti sobě v případě, že studujeme obdélníkový materiál s hranami jdoucími jiným směrem, než jsou anatomické směry dřeva. Naučíme se s tímto probléme vypořádat. Naučíme se používat matice k přechodu mezi souřadnými soustavami. Naučíme se transformovat fyzikální vlastnosti popsané maticemi z jedné soustavy do druhé.</li>
+<li>Ukázali jsme si, že soustavu lineárních rovnic je možné zapsat pomocí maticového násobení ve tvaru <span class="math inline">\(AX=B\)</span>. Pokud by veličiny v této rovnici byla reálná čísla, řešitelnost je značně ovlivněna nulovostí či nenulovostí veličiny <span class="math inline">\(A\)</span>. Ukážeme si zobecnění této vlastnosti i pro matice a soustavy rovnic. K tomu si představíme nový pojem - determinant matice.</li>
+</ul>
+</blockquote>
+<h1 id="inverzní-matice">Inverzní matice</h1>
+<div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/udDtFU4pxkY"></iframe> </div>
+<a href='https://youtu.be/odf4e4fJHAU' data-lity><div class=motivace><img src='https://img.youtube.com/vi/odf4e4fJHAU/mqdefault.jpg'><div class=popisek>YTB</div></div></a>
+<p>U reálných čísel máme doplňkové operace ke sčítání a násobení. Jsou to odečítání a dělení. Odečítání matic můžeme implementovat jako sčítání matice s maticí vynásobenou minus jedničkou: <span class="math inline">\(A-B=A+(-B)\)</span>. Oproti tomu operace dělení matic vůbec není implementována. U reálných čísel lze dělení nahradit násobením převrácenou hodnotou: <span class="math inline">\(\frac {a}{b}=ab^{-1}\)</span>. Tuto proceduru částečně rozšíříme pro matice. Připomeňme ještě, že roli neutrálního prvku při násobení matic hraje jednotková matice. Například pro matice <span class="math inline">\(3\times 3\)</span> je jednotková matice <span class="math display">\[
+ I=
+ \begin{pmatrix}
+   1&amp;0&amp;0\\
+   0&amp;1&amp;0\\
+   0&amp;0&amp;1
+ \end{pmatrix}
+.
+\]</span></p>
+<blockquote class="definice"><p class="definicename">Definice (inverzní matice).</p><p> Buď <span class="math inline">\(A\in\mathbb R^{n\times n}\)</span> čtvercová matice řádu <span class="math inline">\(n\)</span>. Jestliže existuje čtvercová matice <span class="math inline">\(A^{-1}\)</span> řádu <span class="math inline">\(n\)</span>, splňující vztahy <span class="math display">\[A^{-1}A=I=A A^{-1},\]</span> nazýváme matici <span class="math inline">\(A^{-1}\)</span> <em>inverzní maticí k matici <span class="math inline">\(A\)</span></em>.</p>
+</blockquote>
+<p><strong>Poznámka.</strong> Předchozí definice nezaručuje existenci inverzní matice. K některým čtvercovým maticím inverzní matice existuje, k některým ne. Později uvidíme, že existuje jednoduchá charakterizace matic, ke kterým inverzní matice existuje, pomocí determinantu matice.</p>
+<blockquote class="veta"><p class="vetaname">Věta (inverze maticového součinu).</p><p> Inverzní matice k součinu dvou matic je součinem jednotlivých inverzních matic, ale v opačném pořadí, tj. <span class="math display">\[(AB)^{-1}=B^{-1}A^{-1}.\]</span></p>
+</blockquote>
+
+<div class="obtekat">
+<figure>
+<img src="rubik.jpg" alt="Klasickým permutačním hlavolamem je Rubikova kostka. Na něm si můžeme vyzkoušet některé vlastnosti maticového součinu jako nekomutativita nebo nutnost změny pořadí při invertování maticového součinu. Zdroj: congerdesign, pixabay.com." /><figcaption>Klasickým permutačním hlavolamem je Rubikova kostka. Na něm si můžeme vyzkoušet některé vlastnosti maticového součinu jako nekomutativita nebo nutnost změny pořadí při invertování maticového součinu. Zdroj: congerdesign, pixabay.com.</figcaption>
+</figure>
+</div>
+<p><strong>Příklad.</strong> Pomocí matic a jejich součinu je možné zapsat libovolnou permutaci konečněprvkové množiny. Známým permutačním hlavolamem je Rubikova kostka. Na ní snadno vidíme, že pokud kostku zamícháme ze složeného stavu tahem v horní stěně a poté v pravé stěně, pro opětovné složení musíme vracet tahy v opačném pořadí, tj. nejdřív vrátit tah v pravé stěně a poté ve stěně horní. Pěkně to jde vidět na <a href="https://alg.cubing.net/?alg=R_U_%0A%2F%2F_dva_tahy,_ka%C5%BEd%C3%BD_je_mo%C5%BEn%C3%A9_reprezentovat_matic%C3%AD_permutace_%0AU-_R-_%0A%2F%2F_vr%C3%A1cen%C3%AD_tah%C5%AF_v_opa%C4%8Dn%C3%A9m_po%C5%99ad%C3%AD_slo%C5%BE%C3%AD_kostku_zp%C4%9Bt">následující animaci</a>, kterou můžete spustit nebo přehrávat po jednotlivých krocích. Na druhou stranu, tato vlastnost se dá využít k vyřešení Rubikovy kostky naprosto bez algoritmů, protože při vhodně zvolených tazích ovlivníme jenom málo kostiček, například <a href="https://alg.cubing.net/?alg=R-_D-_R___%2F%2F_TAH1:_roh_z_horn%C3%AD_steny_presuneme_dolu%0AU___%2F%2F_TAH_2:_pootoceni_horni_steny%0AR-_D_R__%2F%2F_vratime_TAH1%0AU-_%2F%2F_vratime_TAH2">jenom tři</a>.</p>
+
+<h2 id="inverzní-matice-k-matici-popisující-rotaci-v-rovině">Inverzní matice k matici popisující rotaci v rovině</h2>
+<p>Pro matici rotace <span class="math display">\[R_\theta=\begin{pmatrix}
+  \cos\theta &amp; -\sin \theta\\
+  \sin\theta &amp; \cos\theta
+\end{pmatrix}\]</span> z minulé přednášky platí <span class="math display">\[(R_\theta)^{-1}=R_{-\theta} =  \begin{pmatrix}   \cos(-\theta) &amp; -\sin (-\theta)\\   \sin(-\theta) &amp; \cos(-\theta) \end{pmatrix} =
+\begin{pmatrix}   \cos\theta &amp; \sin \theta\\   -\sin\theta &amp; \cos\theta \end{pmatrix}\]</span> což je přirozené pokud si uvědomíme, že inverzní operací k pootočení roviny o úhel <span class="math inline">\(\theta\)</span> je pootočení roviny o úhel opačný.</p>
+<p>Odsud mimo jiné vidíme, že platí <span class="math display">\[(R_\theta)^{-1}=\begin{pmatrix}   \cos\theta &amp; -\sin \theta\\   \sin\theta &amp; \cos\theta \end{pmatrix}^{-1}=\begin{pmatrix}   \cos\theta &amp; \sin \theta\\   -\sin\theta &amp; \cos\theta \end{pmatrix} =\begin{pmatrix}   \cos\theta &amp; -\sin \theta\\   \sin\theta &amp; \cos\theta \end{pmatrix}^T=(R_\theta)^T,\]</span> tj. že inverzní a transponovaná matice jsou v případě matice rotace stejné. To je velká náhoda, ale přesto matice s touto vlastností hrají tak důležitou roli, že si vysloužily vlastní název představený v následujícím odstavci.</p>
+<h2 id="ortogonální-matice">Ortogonální matice</h2>
+<blockquote class="definice"><p class="definicename">Definice (ortogonální matice).</p><p> <em>Ortogonální matice</em> je matice, jejíž transponovaná matice je současně maticí inverzní.</p>
+</blockquote>
+<p>Řádky ortogonální matice jsou tvořeny navzájem kolmými vektory jednotkové délky. Má-li například symetrická čtvercová matice <span class="math inline">\(A\)</span> řádu <span class="math inline">\(n\)</span> celkem <span class="math inline">\(n\)</span> lineárně nezávislých jednotkových vlastních vektorů, potom matice vytvořená tak, že sloupce nebo řádky matice jsou tyto vektory, je ortogonální.</p>
+<h1 id="matice-přechodu">Matice přechodu</h1>
+<div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/uOmV6DGMPbw"></iframe> </div>
+<a href='https://youtu.be/AdbMMzTfR00' data-lity><div class=motivace><img src='https://img.youtube.com/vi/AdbMMzTfR00/mqdefault.jpg'><div class=popisek>YTB</div></div></a>
+
+<div class="obtekat"><figure><a href="/marik/manim/MatrixMultiplication" target=_blank><img src="/marik/manim/thumbs/MatrixMultiplication.jpg"></a><figcaption>Pomocí maticového násobení můžeme snadno přecházet od jedné soustavy souřadnic k jiné. (Poslední část prezentace). <a href="/marik/manim/MatrixMultiplication" class=but-prez target=_blank>Otevřít prezentaci</a></figcaption></figure></div>
+<div class="obtekat">
+<figure>
+<img src="souradnice.png" alt="Matice rotace a maticové násobení umožňuje vyjáření souřadnic v různých vzájemně pootočených souřadných soustavách." /><figcaption>Matice rotace a maticové násobení umožňuje vyjáření souřadnic v různých vzájemně pootočených souřadných soustavách.</figcaption>
+</figure>
+</div>
+
+<p>Ukážeme si, že pomocí matic je možné přepočítávat souřadnice mezi jednotlivými souřadnými soustavami. Praktické využití je studium ortotropních materiálů v situace, kdy pro matematický popis jsou výhodné směry os, ale roviny symetrie neodpovídají souřadným rovinám. Například dřevěný kvádr je vhodné studovat tak, že hrany kvádru jsou rovnoběžné se souřadnými osami. Materiálové vlastnosti jsou známy v anatomických směrech dřeva. Pokud tyto směry nejsou nejsou rovnoběžné s osami (kvádr je nařezaný našikmo), je potřeba mezi souřadnými soustavami přecházet. To se dá elegantně udělat pomocí maticového násobení a inverzní matice.</p>
+<p>Předpokládejme, že v rovině jsou dány dvě kartézské soustavy souřadnic <span class="math inline">\(\mathcal B\)</span> a <span class="math inline">\(\mathcal B&#39;\)</span>, které jsou vzájemně pootočené o úhel <span class="math inline">\(\theta\)</span>. V těchto soustavách budou souřadnice <span class="math inline">\((x,y)^T\)</span> a <span class="math inline">\((x&#39;,y&#39;)^T\)</span>. Je-li soustava <span class="math inline">\(\mathcal B&#39;\)</span> otočená oproti soustavě <span class="math inline">\(\mathcal B\)</span> o úhel <span class="math inline">\(\theta\)</span> proti směru hodinových ručiček, má (viz obrázek) jednotkový vektor ve směru osy <span class="math inline">\(x&#39;\)</span> v bázi <span class="math inline">\(\mathcal B\)</span> souřadnice <span class="math inline">\((\cos(\theta),\sin(\theta))^T\)</span> a jednotkový vektor ve směru osy <span class="math inline">\(y&#39;\)</span> má v bázi <span class="math inline">\(\mathcal B\)</span> souřadnice <span class="math inline">\((-\sin(\theta),\cos(\theta))^T\)</span>. Proto je vztah mezi souřadnicemi dán maticovým součinem <span class="math display">\[\begin{pmatrix}x\\y\end{pmatrix}_{\mathcal B}=
+\begin{pmatrix}
+  \cos\theta &amp; -\sin \theta\\
+  \sin\theta &amp; \cos\theta
+\end{pmatrix}\begin{pmatrix}x&#39;\\y&#39;\end{pmatrix}_{\mathcal B&#39;}.
+\]</span> Matice <span class="math display">\[R=\begin{pmatrix}
+  \cos\theta &amp; -\sin \theta\\
+  \sin\theta &amp; \cos\theta
+\end{pmatrix}\]</span> je matice, kterou jsme poznali jako matici rotace. Je to matice, která svým působením pootočí vektor který ji násobí zprava o úhel <span class="math inline">\(\theta\)</span> proti směru hodinových ručiček. Ve výše uvedením kontextu se tato matice nazývá maticí přechodu mezi oběma uvažovanými souřadnými systémy. Matice přechodu umožňuje najít souřadnice vektoru v jedné souřadné soustavě pomocí souřadnic vektoru v souřadné soustavě vzniklé pootočením díky vztahu <span class="math display">\[\begin{pmatrix}x\\y\end{pmatrix}_{\mathcal B}=
+R\begin{pmatrix}x&#39;\\y&#39;\end{pmatrix}_{\mathcal B&#39;}.
+\]</span> Tato matice má inverní matici a proto evidentně můžeme mezi souřadnicemi přecházet i v opačném směru vztahem <span class="math display">\[R^{-1}\begin{pmatrix}x\\y\end{pmatrix}_{\mathcal B}
+=
+\begin{pmatrix}x&#39;\\y&#39;\end{pmatrix}_{\mathcal B&#39;}.
+\]</span></p>
+<p>V inženýrských problémech je častou aplikací lineární algebry transformace úlohy do vhodných souřadnic, ve kterých je popis jednodušší. Zpravidla se jedná o prosté otočení. Toto se používá při studiu dřeva, které má anatomicky význačné směry, při studiu vrstvených materiálů, při studiu chování vodorovně uložených geologických vrstev. Nemusí však vždy jít jenom o materiál s charakteristickými směry. Transformace mezi souřadnicemi se používá například v letectví, kdy je jedna souřadná soustava spojena s trupem a další dvě jsou pootočené ve směru křídel šípovitě připojených k trupu.</p>
+<p>Matici transformace popisující otočení souřadnic budeme zkráceně označovat <span class="math inline">\(R\)</span>, pokud budeme potřebovat zdůraznit velikost úhlu, použijeme <span class="math inline">\(R(\theta)\)</span> a pokud budeme potřebovat matici rozepsat ve složkách, budeme zkracovat výrazy <span class="math inline">\(\cos\theta\)</span> a <span class="math inline">\(\sin\theta\)</span> na <span class="math inline">\(C\)</span> a <span class="math inline">\(S\)</span> a psát <span class="math display">\[R=
+\begin{pmatrix}
+  C &amp; -S \\ S &amp; C
+\end{pmatrix}.
+\]</span> Potom například platí <span class="math display">\[R^{-1}=
+\begin{pmatrix}
+  C &amp; S \\ -S &amp; C
+\end{pmatrix}.
+\]</span></p>
+<h1 id="zobrazení-v-různých-soustavách-souřadnic">Zobrazení v různých soustavách souřadnic</h1>
+<p>Ukážeme si důležité využití matice přechodu. Předpokládejme, že máme zobrazení <span class="math inline">\(f\colon X\to Y\)</span>, které je možno charakterizovat maticemi. Na vstupu i výstupu je tedy vektor. Může se jednat třeba o zobrazení, které působícím silám přiřadí deformaci tělesa, což uvidíme v Hookově zákoně později. Může se jednat také o zobrazení, které vektoru charakterizujícímu změnu tlaku v podzemní vodě nebo změnu koncentrace vody ve dřevě přiřadí směr proudění. (Směr podnětu a výsledného proudění si nemusí odpovídat, protože voda je poháněna rozdílem tlaků ve směru největšího poklesu tlaku nebo rozdílem koncentrací ve směru největšího poklesu koncentrace, ale současně si v anizotropním prostředí hledá cestu nejmenšího odporu).</p>
+<p>Nechť je naše zobrazení vyjádřeno v nějaké souřadné soustavě <span class="math inline">\(\mathcal B\)</span> maticí <span class="math inline">\(A\)</span>, tj. <span class="math display">\[Y=AX,\]</span> kde <span class="math inline">\(X\)</span> a <span class="math inline">\(Y\)</span> jsou souřadnice vzoru a obrazu v souřadné soustavě <span class="math inline">\(\mathcal B\)</span>. Budeme chtít toto zobrazení vyjádřit v jiné soustavě. Například v soustavě <span class="math inline">\(\mathcal B&#39;\)</span> takové, že platí <span class="math inline">\(X=PX&#39;\)</span> a <span class="math inline">\(Y=PY&#39;\)</span>, kde čárkovaná písmena jsou souřadnice v čárkované souřadné soustavě <span class="math inline">\(\mathcal B&#39;\)</span>. Dosazením získáme <span class="math display">\[PY&#39;=APX&#39;\]</span> a po vynásobení inverzní maticí <span class="math display">\[P^{-1}(PY&#39;)=P^{-1}(APX&#39;),\]</span> tj <span class="math display">\[Y&#39;=(P^{-1}AP)X&#39;.\]</span> V pootočených souřadnicích <span class="math inline">\(\mathcal B&#39;\)</span> je tedy zobrazení charakterizováno maticí <span class="math inline">\(P^{-1}AP\)</span>. Pro vhodně zvolenou matici <span class="math inline">\(P\)</span> může být matice v nové bázi podstatně jednodušší než matice v bázi původní.</p>
+<!-- 
+V následujícím příkladě si ukážeme, že vhodně zvolenou maticí $P$
+můžeme dosáhnout toho, že $P^{-1}AP$ je diagonální matice. Na dalším
+slidu již rovnou zvolíme vhodnou bázi a matice, která bude sice
+impozantních rozměrů $6\times 6$, bude plná nul a proto relativně pěkná. 
+
+**Příklad.**
+Pro matice $A=
+\begin{pmatrix}
+  1 & 0 \\ 1 &2
+\end{pmatrix}$
+a $P=
+\begin{pmatrix}
+  0& -1 \\ 1 &1
+\end{pmatrix}$
+platí (po chvilce počítání)
+$$  P^{-1}AP=
+\begin{pmatrix}
+  2& 0 \\ 0 & 1
+\end{pmatrix}.
+$$
+Odsud vidíme, že v souřadnicích ke kterým bychom přešli pomocí matice
+$P$ je vyjádření zobrazení matice $A$ mnohem jednodušší, protože matice
+$P^{-1}AP$ je diagonální.
+
+-->
+<p>Častým úkolem je zapsat vztahy mezi veličinami tak, aby byly co nejjednodušší a proto jeden z častých úkolů v lineární algebře bývá takovou šikovnou bázi nalézt. Nastíníme neoptimističtější variantu postupu, případné detaily a řešení zádrhelů je možné najít v odborné literatuře. Zpravidla vyjadřujeme zobrazení v bázi tvořené ortonormálními vlastními vektory matice <span class="math inline">\(A\)</span>. Sloupce matice <span class="math inline">\(P\)</span> jsou vlastní vektory matice <span class="math inline">\(A\)</span>. Pokud je matice <span class="math inline">\(A\)</span> symetrická, je matice <span class="math inline">\(P\)</span> navíc ortogonální, její inverze je tedy matice transponovaná. Tomuto procesu se říká diagonalizace matice, protože <span class="math inline">\(P^{-1}AP\)</span> vychází diagonální a v diagonále vychází právě vlastní čísla matice.</p>
+<p>Stejným způsobem se transformují i fyzikální veličiny veličiny popisované maticemi, nazývané tenzory.</p>
+
+<ul>
+<li><a href="https://sagecell.sagemath.org/?z=eJytkU1v2zAMhu8G_B8INEWkRM3ioOlNB5-GHQb4sJuRFYqtzmoV0ZNlr_Gw_z469ryP9lJgBkzT4ks9fMFUnlTw5pnl-V7sDiLfUTxwuAI6N4WOo-y3InnXfPWB7bm42f1Kh5b5eBbQFZvglWtqbDTjMN8HtddFhWULJUJjnrBzGo6q1xBHVxAUHWA7FSihioFGg1NtYU4aKqtLFaDGvtSPJo7iqKnwG7AqnCzzy0Uqr5uFgEU2fJfXzKqgn1nKxZhknB6apVelcqbr0Z8ly7diSy6SKSYUt5u9SDZ3Qzb-U43_y8o-f79JfqQTagSwbGNcp_1gmq_SVTbyJu8dOOwudi-jv5n_P1YRR3j0qj_LPFt1ugjomeHwgB4MGAeXmQ5x9OHje1mjcYGNcgEFWvRy6XW5FLSgXsvbLV_XaM9f0L2uUraulCQzfG2N06-J-Iiidz3iLgPMgFl7tK3-WzxyJ_mDsVZ-8q3-A_qid1gfo2bSNDVZv_e0FpQJ_wkl8e8J&amp;lang=sage&amp;interacts=eJyLjgUAARUAuQ==">Ukázka Sage</a></li>
+<li><a href="https://sagecell.sagemath.org/?z=eJyNUk2umzAQ3iNxhxFvAwhogpTuWHADFlU30WvlBCs4gMe1DS25Qw_SQ3TVHqxjQvJI36vUjTU_33zfNyM_gegVagutFA2OXIIcejUBg56pDm0nDr63QJaOAanutZ7ZBZapyUWurzrre08gmbGMKAUozY1EYwXxKkKzo6uOvObHloNESwUCCbDCtAM0WFPN96TKDLefqSEtKitQmpCojsJQWOwSMINy1Kb4oAceOc0SztyZEkR4wYNmF1LyvbIgLipr8S3c73dJ_pzsc3qf56FqNeT4SX-AGsGIFkfJ4UAs4ICWUQGHpUEBdQQYWoENR9FzaDpeM0s7Xmp-Jt3qQXf7zm30RdtwFyVpvsqcnXVzjSSTmdVMGoWGhxGQk_kiYVAWQVJG97SitJoX-ri2Lt46CdSCnVCyzl2HLqDHdoJe9EgrsHHVH-BsaFGlWUsMBJJDR__kRfRTmG6juIxn9Ti-ZeTD98YL6unhBJtkQ7tul3dL7ybbJdvsvYuuOfUeN_a92fVUlPFMeGfOoYDqVrti8hsodyj6iJn7lGFMHpjWbArnZpQEKQYJdOzAuyKosee_v_M2iN4cuTL_NTMX4TrZDv-YvDqhSUzT1ahFUpO_fsJ_Cb-en6VvLD8afGWj4ycu63DJTlrcY9Pg1zD6A0mFUhA=&amp;lang=python&amp;interacts=eJyLjgUAARUAuQ==">Ukázka Python</a></li>
+</ul>
+
+<h1 id="praktická-aplikace-transformace-tenzoru">Praktická aplikace: transformace tenzoru</h1>
+<div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/7Oi3ruVNUzI"></iframe> </div>
+<div class="obtekat">
+<figure>
+<img src="pozgaj.jpg" alt="Úloha na transformaci tenzoru napětí do anatomických směrů dřeva. Znázorněná krychlička je jenom reprezentující element většího tělesa. Zdroj: A. Požgaj a kol., Štruktúra a vlastnosti drevá." /><figcaption>Úloha na transformaci tenzoru napětí do anatomických směrů dřeva. Znázorněná krychlička je jenom reprezentující element většího tělesa. Zdroj: A. Požgaj a kol., Štruktúra a vlastnosti drevá.</figcaption>
+</figure>
+<figure>
+<img src="kytara_leta.png" alt="Stejná úloha jako výše (leta ve dřevě jdou pod úhlem 30 stupňů a transformujeme do tohoto směru) méně inženýrským přístupem." /><figcaption>Stejná úloha jako výše (leta ve dřevě jdou pod úhlem 30 stupňů a transformujeme do tohoto směru) méně inženýrským přístupem.</figcaption>
+</figure>
+<figure>
+<img src="spoj_drevo_sikmy.jpg" alt="U šikmého lepeného spoje se používá transformace do roviny spoje k posouzení únosnosti tohoto spoje. Lepidlo má definovanou pevnost spoje při normálovém a smykovém namáhání a transformace nám prozradí, jak se předpokládané namáhání projeví v těchto směrech a zda lepidlo spoj udrží." /><figcaption>U šikmého lepeného spoje se používá transformace do roviny spoje k posouzení únosnosti tohoto spoje. Lepidlo má definovanou pevnost spoje při normálovém a smykovém namáhání a transformace nám prozradí, jak se předpokládané namáhání projeví v těchto směrech a zda lepidlo spoj udrží.</figcaption>
+</figure>
+</div>
+<p>V knize A. Požgaj a kol., Štruktúra a vlastnosti drevá, je následující úloha (str. 322, vydání 1997, ISBN 80-07-00960-4). Dřevo v konfiguraci podle obrázku je namáháno pouze tahovou silou svisle, tedy tenzor napětí má jenom jednu nenulovou složku. Naším cílem je pootočit souřadnou soustavu tak, aby byl tenzor napětí vyjádřen v anatomických směrech dřeva. Úloha je v knize vyřešena pomocí směrových kosinů. Ukážeme si alternativní způsob, který je výhodný v tom, že využívá pouze základní aparát lineární algebry. Původní souřadnice <span class="math inline">\((x_1,x_2)\)</span> označíme <span class="math inline">\((x,y)\)</span>, osa <span class="math inline">\(x\)</span> směřuje vodorovně vpravo (v obrázku <span class="math inline">\(x_2\)</span>) a osa <span class="math inline">\(y\)</span> nahoru (v obrázku <span class="math inline">\(x_1\)</span>). Tenzor napětí je <span class="math inline">\(A= \begin{pmatrix}  0 &amp; 0\\0&amp; 10 \end{pmatrix}\)</span> (tah pouze ve směru osy <span class="math inline">\(y\)</span>). Souřadnice je nutno pootočit o <span class="math inline">\(30\)</span> stupňů po směru hodinových ručiček, tj. v záporném směru. Nový tenzor napětí (viz <a href="https://sagecell.sagemath.org/?z=eJx9ULtuwzAM3A34HwhkiCzIrVwXQRcPSZYODVB4NTIorhArsSVDD6PJH_U7-mOVH6mRoQUX8ng83HEBb0JypqUAVh_5QTMCrVJWldxDClIKxrpWOo-Cabh28JqHQcc0WtqKW7aMwiDPGma1-ERFUSqDBjwisRFy6vekmAcyc_Z7f72brymhnkpJQoeNq3idxSl9TF4obkUYtFpIC0gilD8Yd5hksrgnRhHe4Xt8hCOv1NcC3tX1yE59wEaVYoijuktZwVl5e47ASUh2hmunai6_v0CZSxho9pG1orcQBuv7oGlKsV-PiVZj7_3309PzvIJf4pBq84_I7WxSWf0psp1FktvXxqdJtMZbvIl-AGVpkmc=&amp;lang=sage&amp;interacts=eJyLjgUAARUAuQ==">Sage</a> nebo <a href="https://sagecell.sagemath.org/?z=eJxVjj0OwyAMhXck7sBoIoioulXKEbKwogyooQpScRA_Unv7koih8fQ--z3bPsQ9FYY1xC-zmWGkhJK6ufeEcUx29RYzyLviR391L6ahbK5Y_qCEtUqu1IQtNwZbkv-AMU0_99xtQjbMHjsuwlxYXMzLcp6Zp_91SqiWUuKm-jgmjwU0yONNPsyDhlPxHzCvP64=&amp;lang=python&amp;interacts=eJyLjgUAARUAuQ==">Python</a>) je <span class="math display">\[R(30^\circ)AR(-30^\circ)=
+\begin{pmatrix}
+   2.5 &amp; -4.3\\
+-4.3&amp;  7.5
+\end{pmatrix}.\]</span> V nových souřadnicích je směr <span class="math inline">\(y&#39;\)</span> podélný a proto <span class="math inline">\(\sigma_{RR}=2.5\)</span> a <span class="math inline">\(\sigma_{LL}=7.5\)</span>. Mimodiagonální složka udává komponentu <span class="math inline">\(\sigma_{RL}=-4.3\)</span>, smykové napětí. Tento výsledek je stejný, jako výsledek získaný jiným postupem v knize, pomocí směrových kosinů. Použili jsme však jenom základní nástroje lineární algebry.</p>
+<p>Výše uvedený výpočet se používá, když chceme najít deformaci vyvolanou působícím napětím. Protože konstanty udávající materiálovou odezvu máme změřeny v anatomických směrech dřeva, je nutno nejprve zjistit, jaké namáhání je v těchto směrech, pomocí materiálových konstant zjistíme, jaká je deformace v těchto směrech a poté zpětnou transformací přepočítáme tuto deformaci do původních souřadnic.</p>
+<p>Stejný výpočet používáme, pokud se snažíme transformovat působící napětí při posouzení, jaké smykové a jaké normálové napětí působí na šikmý lepený spoj. Pokud je spoj pod úhlem <span class="math inline">\(30\)</span> stupňů a v ose <span class="math inline">\(y\)</span> působí tahové napětí <span class="math inline">\(10\,\mathrm{MPa}\)</span>, potom normálové napětí namáhající tento spoj je <span class="math inline">\(7.5\,\mathrm{MPa}\)</span> a smykové napětí <span class="math inline">\(4.3\,\mathrm{MPa}\)</span>.</p>
+<h1 id="obecné-vzorce-pro-transformaci-tenzoru">Obecné vzorce pro transformaci tenzoru</h1>
+<div class="shorten" data-text="Někdy je výhodné odvodit obecné rovnice pro složky tenzoru v otočených souřadnicích. Díky tomu napříkald můžeme zkoumat, kdy jsou mimodiagonální prvky nulové, kdy jsou maximální, kdy jsou maximální diagonální prvky a podobně.">
+<div class="obtekat">
+<figure>
+<img src="jatawood.jpg" alt="Schopnost transformovat tenzory napětí nebo deformace je důležitá u studia vrstvených materiálů. Ty umožní anizotropii potlačit (překližka) nebo zvýraznit (lyže, luk). Někdy vrstvíme jen tak, pro krásu. Na obrázku Jatawood, pro výrobu rukojetí nožů. Zdroj: jatagan.eu" /><figcaption>Schopnost transformovat tenzory napětí nebo deformace je důležitá u studia vrstvených materiálů. Ty umožní anizotropii potlačit (překližka) nebo zvýraznit (lyže, luk). Někdy vrstvíme jen tak, pro krásu. Na obrázku Jatawood, pro výrobu rukojetí nožů. Zdroj: jatagan.eu</figcaption>
+</figure>
+</div>
+<p>Úloha na transformaci tenzoru, kterou jsme řešili v minulém odstavci je v aplikacích velmi důležitá. Proto existuje řada grafických nebo inženýrských metod na řešení tohoto úkolu. Tyto metody jsou důvtipné a názorné, například metoda Mohrovy kružnice, oproti lineární algebře však mají zásadní nevýhodu: uživatel se musí stále učit něco nového a dostává návod “jak”, nikoliv “proč”. Použitím aparátu lineární algebry, stejně jako dokážeme v pootočených souřadnicích vyjádřit libovolné zobrazení, dokážeme vyjádřit v pootočených souřadnicích i libovolný tenzor. Vzorce jsou stejné a navíc při otočení v rovině je matice rotace ortogonální, tj. inverzní matice je maticí transponovanou. Pro symetrický tenzor <span class="math inline">\(A= \begin{pmatrix}  a_{11} &amp; a_{12} \\ a_{12} &amp; a_{22} \end{pmatrix}\)</span> dostáváme v souřadnicích otočených o úhel <span class="math inline">\(\theta\)</span> proti směru hodinových ručiček <span class="math display">\[\begin{pmatrix}
+  a&#39;_{11} &amp; a&#39;_{12} \\ a&#39;_{12} &amp; a&#39;_{22}
+\end{pmatrix}
+=
+\begin{pmatrix}
+  C&amp;S\\-S&amp;C
+\end{pmatrix}
+\begin{pmatrix}
+  a_{11} &amp; a_{12} \\ a_{12} &amp; a_{22}
+\end{pmatrix}
+\begin{pmatrix}
+  C&amp;-S\\S&amp;C
+\end{pmatrix},
+\]</span> kde <a href="https://sagecell.sagemath.org/?z=eJyFUMGKgzAQvQv-Q_DSKImsHhc8FI8LPZi9qbukRWlAJxJTWfv1O7Fsa2WXDZkkvMl7M_MmaejOnhsriUwSjJTINCVHB-RE7ELf870i66U16ouWZc64qFkpWF7XmNs_Mkhnjo9ZPBmqLD98bzAKLKHBu5Ewttr0epIwE9vAVZvXCvivK0DuIaO0iK3jDXpsaBhG-6gI41H1Q6fa-bO9dB0N7yUOj2dQwZvuBw0N2HlTJFgxypca9xpIatybH8nzJBXcZ5EnUAQ9UKfmz1F4QHChwsJaefmRMoGRRiLKnan4dhj_AThezAWiHLNoqFO6N7LobWYGa3QniYKpMVfQo_2_vecmfe-mG4-X40hFxkUY3Qptff8GTrag5g==&amp;lang=sage&amp;interacts=eJyLjgUAARUAuQ==">po výpočtu</a> <span class="math display">\[
+\begin{aligned}
+a&#39;_{11}&amp;=C^2a_{11}  + S^2a_{22} + 2CSa_{12},\\
+a&#39;_{22}&amp;=S^2a_{11}  + C^2a_{22} - 2CSa_{12},\\
+a&#39;_{12}&amp;=-CSa_{11} + CSa_{22} + (C^2 - S^2)a_{12}.
+\end{aligned}\tag{*}
+\]</span> Tento vztah je lineání vzhledem ke všem komponentám a je možné jej zapsat pomocí maticového násobení <span class="math display">\[
+\begin{pmatrix}
+  a&#39;_{11}\\a&#39;_{22}\\a&#39;_{12}
+\end{pmatrix}
+=
+\begin{pmatrix}
+  C^2 &amp; S^2 &amp; 2CS\\
+  S^2 &amp; C^2 &amp; -2CS\\
+  -CS  &amp; CS &amp; C^2-S^2
+\end{pmatrix}
+\begin{pmatrix}
+  a_{11}\\a_{22}\\a_{12}
+\end{pmatrix}.
+\]</span> Tento vztah je uveden i v literatuře A. Požgaj a kol., Štruktúra a vlastnosti drevá, a v e-opoře <a href="https://is.mendelu.cz/eknihovna/opory/zobraz_cast.pl?cast=9178">Fyzikální a mechanické vlastnosti dřeva</a>. Zde je také uvedena jedna z aplikací, transformace tenzoru deformací naměřených při bobtnání dřeva. V této úloze je nutno tenzor deformací transformovat do anatomických směrů dřeva. To je možné udělat po změření sklonu vláken a pootočení tenzoru o příslušný úhel.</p>
+<!-- Získáme diagonální tenzor, který má v diagonále deformace v
+anatomických osách dřeva. Jednodušší alternativou je určení vlastních hodnot
+tenzoru deformace pomocí charakteristického polynomu, což je v tomto
+případě polynom kvadratický. Která vlastní hodnota patří ke kterému
+směru určíme ze znalosti uspořádání koeficientů bobtnání dřeva v
+jednotlivých směrech podle velikosti. Při použití vlastních hodnot je
+výhodou, že používáme standardní nástroje lineární algebry a metoda je
+použitelná bez znalosti úhlu, který svírají vlákna dřeva s osami
+soustavy, ve které určujeme tenzor deformace. -->
+<p>Inverzní operací je pootočení o úhel <span class="math inline">\(-\theta\)</span> a proto je snadné najít inverzní transformaci: vzhledem k sudosti funkce <span class="math inline">\(\cos\)</span> a lichosti funkce <span class="math inline">\(\sin\)</span> stačí změnit znaménko u členů s <span class="math inline">\(S\)</span>, tj. <span class="math display">\[
+\begin{pmatrix}
+  a_{11}\\a_{22}\\a_{12}
+\end{pmatrix}
+=
+\begin{pmatrix}
+  C^2 &amp; S^2 &amp; -2CS\\
+  S^2 &amp; C^2 &amp; 2CS\\
+  CS  &amp; -CS &amp; C^2-S^2
+\end{pmatrix}
+\begin{pmatrix}
+  a&#39;_{11}\\a&#39;_{22}\\a&#39;_{12}
+\end{pmatrix}.
+\]</span></p>
+<p><strong>Poznámka.</strong> Pokud vypočteme derivaci členů <span class="math inline">\(a&#39;_{11}\)</span> a <span class="math inline">\(a&#39;_{22}\)</span> podle <span class="math inline">\(\theta\)</span>, dostaneme použitím <span class="math display">\[\frac{\mathrm d}{\mathrm d\theta}C^2=\frac{\mathrm d}{\mathrm d\theta}\cos^2\theta=2\cos\theta(-\sin\theta)=-2CS,\]</span> a analogicky <span class="math inline">\(\frac{\mathrm d}{\mathrm d\theta}S^2=2SC\)</span>, <span class="math inline">\(\frac{\mathrm d}{\mathrm d\theta}CS=-S^2+C^2\)</span> derivace <span class="math display">\[
+\begin{aligned}
+  \frac{\mathrm d a&#39;_{11}}{\mathrm d\theta}&amp;=
+  -2CSa_{11}+2SCa_{22}+2(C^2-S^2)a_{12}=2a&#39;_{12},\\
+  \frac{\mathrm d a&#39;_{22}}{\mathrm d\theta}&amp;=
+  2SCa_{11}-2CSa_{22}+2(S^2-C^2)a_{12}=-2a&#39;_{12}.\\
+\end{aligned}
+\]</span> To znamená, že lokální extrémy diagonálních prvků nastávají v okamžiku, kdy jsou prvky mimo diagonálu nulové. Toto pozorování perfektně ladí s výsledky, které známe v lineární algebře i bez hledání lokálních extrémů a bez derivací. Náznak tohoto konceptu si představíme na dalších stránkách. Budeme potřebovat vlastní vektory matice.</p>
+<p><strong>Pozor.</strong> V případě tenzoru deformace se někdy se namísto mimodiagonální komponenty bere její dvojnásobek, protože ten má názorný význam jako úhel smyku. Proto se někdy v literatuře uvádí transformační vzorec pro deformace v upraveném tvaru, kdy u složek se součinem <span class="math inline">\(CS\)</span> ve třetím sloupci není koeficient <span class="math inline">\(2\)</span> a u odpovídajících složek ve třetím řádku tento koeficient naopak figuruje. Je proto potřeba dávat pozor na to, s jakými komponentami je tenzor malých deformací uvažován.</p>
+</div>
+<h1 id="role-vlastních-vektorů-při-transformaci-matic">Role vlastních vektorů při transformaci matic</h1>
+<div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/yqjaeqQu0bE"></iframe> </div>
+<div class="obtekat">
+<figure>
+<img src="eigenvectors.png" alt="Eigenvectors (red) do not change direction when a linear transformation (e.g. scaling) is applied to them. Other vectors (yellow) do. Zdroj: http://www.visiondummy.com." /><figcaption>Eigenvectors (red) do not change direction when a linear transformation (e.g. scaling) is applied to them. Other vectors (yellow) do. Zdroj: http://www.visiondummy.com.</figcaption>
+</figure>
+</div>
+<p>Budeme zkoumat, kdy platí <span class="math display">\[P^{-1}AP=D\]</span> pro čtvercové matice <span class="math inline">\(P\)</span>, <span class="math inline">\(A\)</span> a diagonální čtvercovou matici <span class="math inline">\(D\)</span>. Vynásobením maticí <span class="math inline">\(P\)</span> zleva dostaneme <span class="math display">\[AP=PD.\]</span> Ve cvičení jsme násobili čtvercovou matici s maticí diagonální a není těžké vidět obecný princip, že matice <span class="math inline">\(PD\)</span> má za sloupce násobky sloupců matice <span class="math inline">\(P\)</span> s odpovídajícím číslem z hlavní diagonály matice <span class="math inline">\(D\)</span>. Například pro první sloupec matice <span class="math inline">\(P\)</span> a první číslo v hlavní diagonále matice <span class="math inline">\(D\)</span>, které označíme <span class="math inline">\(\vec p_1\)</span> a <span class="math inline">\(\lambda_1\)</span>, dostáváme <span class="math display">\[A\vec p_1=\lambda_1 \vec p_1,\]</span> tj. (viz předchozí přednášky) <span class="math inline">\(p_1\)</span> je vlastní vektor matice <span class="math inline">\(A\)</span> příslušný vlastní hodnotě <span class="math inline">\(\lambda_1\)</span>. Podobný princip platí pro všechny sloupce. Je otázkou, jestli vlastních hodnot a vlastních vektorů je tolik, kolik pro diagonalizaci “potřebujeme”. Částečně pozitivní odpověď na tuto otázku udávají věty na následujícím slidu.</p>
+<h1 id="transformace-symetrické-matice-na-diagonální-tvar">Transformace symetrické matice na diagonální tvar</h1>
+<blockquote class="veta"><p class="vetaname">Věta (vlastní čísla symetrické matice).</p><p> Symetrická čtvercová matice <span class="math inline">\(A\)</span> řádu <span class="math inline">\(n\)</span> má <span class="math inline">\(n\)</span> reálných vlastních čísel (počítáno i s případnou násobností).</p>
+</blockquote>
+<blockquote class="veta"><p class="vetaname">Věta (diagonalizace symetrické matice).</p><p> Nechť má symetrická čtvercová matice <span class="math inline">\(A\)</span> řádu <span class="math inline">\(n\)</span> celkem <span class="math inline">\(n\)</span> reálných různých vlastních čísel <span class="math inline">\(\lambda_i\)</span>. Označme odpovídající vlastní vektory jednotkové délky <span class="math inline">\(\vec v_i\)</span>.</p>
+<ul>
+<li>Matice <span class="math inline">\(P\)</span> sestavená tak, že sloupce této matice jsou tvořeny vektory <span class="math inline">\(\vec v_i\)</span> je ortogonální.</li>
+<li>Matice <span class="math inline">\(D\)</span> definovaná vztahem <span class="math display">\[D=P^TAP\]</span> je diagonální.</li>
+<li>Diagonální prvky matice <span class="math inline">\(D\)</span> jsou právě vlastní čísla <span class="math inline">\(\lambda_i\)</span> a jsou ve stejném pořadí jako odpovídající vlastní vektory v matici <span class="math inline">\(P\)</span>.</li>
+</ul>
+</blockquote>
+<blockquote class="poznamka"><p class="poznamkaname">Poznámka (diagonální tvar materiálových vlastností dřeva).</p><p> Typickým ortotropním materiálem je dřevo. Pokud transformujeme tenzor difuzní matice pro dřevo na diagonální tvar, jsou diagonální prvky v poměru přibližně <span class="math inline">\(D_L:D_R:D_T=35:3:2\)</span> (P. Horáček, Fyzikální a mechanické vlastnosti dřeva, 2008 , str. 65). Ortotropní charakter má však nejenom transport tekutin, ale i sesychání a bobtnání. V tomto případě však naopak v podélném směru dřevo bobtná nejméně a tenzor popisující bobtnání má po transformaci na diagonální tvar v diagonále prvky v poměru přibližně <span class="math inline">\(\alpha_T:\alpha_R:\alpha_L=20:10:1\)</span> (P. Horáček, Fyzikální a mechanické vlastnosti dřeva, 2008 , str. 38).</p>
+</blockquote>
+
+<div class="obtekat">
+<figure>
+<img src="rubik.svg" alt="Pokud je tenzor spojený s materiálovou charakteristikou v diagonálním tvaru, redukuje se složitost problému. Podobná redukce složitosti je i při jiných příležitostech, například při skládání Rubikovy kostky pomocí metody Human Thistlethwaite Algorithm. V této metodě se úloha nejprve redukuje na jednodušší úlohu, kdy každá barva je buď ve svojí straně nebo protilehlé. Tak je možné složit kostku buď bez nepříjemného učení se umělých algoritmů (člověk), nebo do 20 tahů (stroj a nejlepší lidé)." /><figcaption>Pokud je tenzor spojený s materiálovou charakteristikou v diagonálním tvaru, redukuje se složitost problému. Podobná redukce složitosti je i při jiných příležitostech, například při skládání Rubikovy kostky pomocí metody <a href="https://www.speedsolving.com/wiki/index.php/Human_Thistlethwaite_Algorithm">Human Thistlethwaite Algorithm</a>. V této metodě se úloha nejprve redukuje na jednodušší úlohu, kdy každá barva je buď ve svojí straně nebo protilehlé. Tak je možné složit kostku buď bez nepříjemného učení se umělých algoritmů (člověk), nebo do 20 tahů (stroj a nejlepší lidé).</figcaption>
+</figure>
+</div>
+
+<p>Matice transformace <span class="math inline">\(P\)</span> z předchozí věty je ortogonální (její transponovaná matice je současně její inverzní matice) a její determinant (veličina, se kterou se seznámíme vzápětí) je roven <span class="math inline">\(1\)</span> nebo <span class="math inline">\(-1\)</span>. Pokud je determinant kladný, reprezentuje matice pootočení soustavy souřadnic. Pokud je determinant záporný, jedná se o pootočení spojené se zrcadlením jedné osy. Protože tento případ většinou z fyzikálních důvodů nepreferujeme, sestavujeme matici transformace tak, aby měla determinant kladný. V případě záporného determinantu stačí prohodit dva vektory (sloupce matice transformace) mezi sebou, nebo jeden vynásobit faktorem <span class="math inline">\(-1\)</span>.</p>
+<p>Pro kontrolu je zajímavé vědět, že determinant matice se pootočením nemění a je tedy stejný pro původní i transformovanou matici. Totéž platí pro součet prvků v hlavní diagonále (v lineární algebře se nazývá stopa matice), pro charakteristický polynom a pro vlastní hodnoty. Tenzor, jak jej uvažujeme v tomto textu, je matice, která má navíc fyzikální význam a vzhledem ke své povaze pro ni platí speciální transformační pravidla. Nicméně je to mimo jiné i matice a proto vše výše uvedené platí i pro tenzory.</p>
+<p>Transformace tenzorů je užitečná a důležitá činnosti. Bohužel však vzorce s touto transformací spojené nejsou natolik zapamatovatelné, aby bylo obvyklé s nimi pracovat. Možnosti jsou v zásadě tři.</p>
+<ul>
+<li>Mít vzorce v psané podobě po ruce a pouze do nich dosazovat.</li>
+<li>Mít k dispozici jednoduše zapamatovatelný postup, jak s transformacemi pracovat. Takový postup existuje, nazývá se <a href="https://cs.wikipedia.org/wiki/Mohrova_kru%C5%BEnice">Mohrova kružnice</a> a po zapracování se jedná o efektivní grafickou metodu pro transforamci tenzorů. Zpravidla je v literatuře popsána pro tenzor napětí, funguje však obecně.</li>
+<li>Pracovat pouze s elementárními prostředky lineární algebry. Narozdíl od předchozích bodů máme přehled o tom, co a proč děláme (oproti vzorcům) a nemusíme se učit další metodu (oproti Mohrově kružnici).</li>
+</ul>
+<h1 id="determinant-matice">Determinant matice</h1>
+<div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/XMyzmN3cq-Q"></iframe> </div>
+<blockquote class="definice"><p class="definicename">Definice (determinant).</p><p> Buď <span class="math inline">\(A\in\mathbb R^{n\times n}\)</span> čtvercová matice řádu <span class="math inline">\(n\)</span>. <em>Determinant matice <span class="math inline">\(A\)</span></em> je reálné číslo <span class="math inline">\({\det A}\)</span> přiřazené matici <span class="math inline">\(A\)</span> následujícím způsobem:</p>
+<ul>
+<li>Je-li <span class="math inline">\(A\)</span> matice řádu <span class="math inline">\(1\)</span>, tj. <span class="math inline">\(A=(a_{11})\)</span>, je <span class="math inline">\(\det A=a_{11}\)</span>.</li>
+<li>Máme-li definován determinant z matice řádu <span class="math inline">\((n-1)\)</span> označme symbolem <span class="math inline">\(M_{ij}\)</span> determinant matice řádu <span class="math inline">\((n-1)\)</span>, která vznikne z matice <span class="math inline">\(A\)</span> vynecháním <span class="math inline">\(i\)</span>-tého řádku a <span class="math inline">\(j\)</span>-tého sloupce. Definujme <em>algebraický doplněk</em> <span class="math inline">\(A_{ij}\)</span> prvku <span class="math inline">\(a_{ij}\)</span> jako součin <span class="math inline">\(A_{ij}=(-1)^{i+j}M_{ij}\)</span>.</li>
+<li>Konečně, definujme determinant řádu <span class="math inline">\(n\)</span> následovně: zvolíme libovolný index <span class="math inline">\(i\in\{1,2,\dots n\}\)</span> a definujeme <span class="math display">\[
+\det A= a_{i1}A_{i1}+ a_{i2}A_{i2}+\cdots+ a_{in}A_{in}.
+\]</span></li>
+</ul>
+</blockquote>
+<p>Uff. Zacházejme vyjímečně s touto definicí stejně jako s definicí limity: vezmeme na vědomí, že nějaká korektní definice existuje, ale učit se ji nebudeme. Není to totiž tak úplně potřeba. bude nám stačit naučit se několik málo speciálních případů.</p>
+<p>Determinant matice <span class="math inline">\(A\)</span> označujeme též <span class="math inline">\(|A|\)</span>. Je-li <span class="math inline">\(A=(a_{ij})\)</span> píšeme zkráceně <span class="math inline">\(|a_{ij}|\)</span> místo <span class="math inline">\(|(a_{ij})|\)</span>. K záměně s absolutní hodnotou může dojít jedině v případě, že matice <span class="math inline">\(A\)</span> je řádu jedna. V praxi se však obvykle s maticemi řádu jedna nepracuje.</p>
+<blockquote class="definice"><p class="definicename">Definice (regulární a singulární matice).</p><p> Buď <span class="math inline">\(A\)</span> čtvercová matice. Je-li <span class="math inline">\(\det A=0\)</span>, říkáme, že matice <span class="math inline">\(A\)</span> je <em>singulární</em>, v opačném případě říkáme, že je <em>regulární</em>.</p>
+</blockquote>
+<h1 id="determinant-matice-2times-2-křížové-pravidlo">Determinant matice <span class="math inline">\(2\times 2\)</span> (křížové pravidlo)</h1>
+<p><span class="math display">\[
+    \begin{vmatrix}
+      a &amp;b\\ c&amp; d
+    \end{vmatrix}
+=ad-bc
+\]</span></p>
+<p>Tento determinant je roven nule právě tehdy, když je jeden řádek matice násobkem druhého a to bude právě tehdy když je jeden sloupec matice násobkem druhého.</p>
+<h1 id="determinant-matice-3times-3-sarusovo-pravidlo">Determinant matice <span class="math inline">\(3\times 3\)</span> (Sarusovo pravidlo)</h1>
+<p><span class="math display">\[
+    \begin{vmatrix}
+      a&amp;b&amp;c\\
+      i&amp;j&amp;k\\
+      x&amp;y&amp;z
+    \end{vmatrix}
+ =ajz+bkx+ciy-(cjx+biz+aky)
+\]</span></p>
+<p><em>Mnemotechnická pomůcka:</em> opsat první dva řádky pod determinant, vynásobit hlavní diagonálu a dvě diagonály pod tím, potom vynásobit vedlejší diagonálu a dvě diagonály pod tím. Příspěvky od hlavní diagonály a dvou šikmých řad pod ní se sčítají, příspěvky od vedlejší diagonály a dvou šikmých řad pod ní se odečítají.</p>
+<h1 id="determinant-matice-ve-schodovitém-tvaru">Determinant matice ve schodovitém tvaru</h1>
+<blockquote class="definice"><p class="definicename">Definice (schodovitý tvar).</p><p> Řekneme, že matice <span class="math inline">\(A\)</span> je ve <em>schodovitém tvaru</em>, jestliže případné nulové řádky jsou uspořádány na konci matice a nenulové jsou uspořádány tak, že každý následující řádek začíná větším počtem nul než řádek předchozí.</p>
+</blockquote>
+<p><strong>Příklad.</strong> Matice <span class="math display">\[
+\begin{pmatrix}
+  4&amp; 7 &amp;0\\
+  0 &amp; -2 &amp; 1\\
+  0&amp; 0&amp; 5
+\end{pmatrix}
+\]</span> je ve schodovitém tvaru.</p>
+<blockquote class="veta"><p class="vetaname">Věta (determinant matice ve schodovitém tvaru).</p><p> Determinant matice, která je ve schodovitém tvaru je roven součinu prvků v hlavní diagonále.</p>
+</blockquote>
+<p>Totéž platí zejména pro matice diagonální, které mají nenulové prvky jenom v hlavní diagonále a tedy jsou ve schodovitém tvaru.</p>
+<p><strong>Příklad.</strong> Platí <span class="math display">\[
+\begin{vmatrix}
+  4&amp; 7 &amp;0\\
+  0 &amp; -2 &amp; 1\\
+  0&amp; 0&amp; 5
+\end{vmatrix}=4\cdot (-2)\cdot 5=-40.
+\]</span></p>
+<h1 id="souvislost-některých-pojmů">Souvislost některých pojmů</h1>
+<p>Pojmy lineární algebry spolu krásně souvisí.</p>
+<blockquote class="veta"><p class="vetaname">Věta.</p><p> Buď <span class="math inline">\(A\)</span> čtvercová matice řádu <span class="math inline">\(n\)</span>. Následující výroky jsou ekvivalentní:</p>
+<ol type="1">
+<li>K matici <span class="math inline">\(A\)</span> existuje matice inverzní <span class="math inline">\(A^{-1}\)</span>.</li>
+<li>Matice <span class="math inline">\(A\)</span> je regulární, tj. <span class="math inline">\(\det A\neq 0\)</span>.</li>
+<li>Soustava lineárních rovnic <span class="math display">\[AX=B\]</span> má pro libovolnou pravou stranu <span class="math inline">\(B\)</span> jediné řešení.</li>
+<li>Homogenní soustava lineárních rovnic <span class="math display">\[AX=0\]</span> má pouze nulové řešení.</li>
+<li>Každý vektor z <span class="math inline">\(\mathbb R^n\)</span> lze vyjádřit jako lineární kombinaci vektorů tvořených řádky (sloupci) matice <span class="math inline">\(A\)</span>, a to jednoznačně, až na pořadí.</li>
+</ol>
+</blockquote>
+<p>Například je-li <span class="math inline">\(\vec q\)</span> vlastním vektorem matice <span class="math inline">\(A\)</span> příslušným vlastní hodnotě <span class="math inline">\(\lambda\)</span>, platí <span class="math display">\[A\vec q=\lambda \vec q.\]</span> Odsud <span class="math display">\[\begin{aligned}A\vec q-\lambda \vec q&amp;=0\\ A\vec q-(\lambda I )\vec q &amp;=0\\ (A-\lambda I )\vec q &amp;=0\end{aligned}.\]</span> Pokud chápeme poslední rovnost jako soustavu rovnic s koeficienty <span class="math inline">\((A-\lambda I)\)</span>, nulovou pravou stranou a nenulovým řešením <span class="math inline">\(\vec q\)</span> (tj. bod 4 předchozí věty neplatí), musí být determinant matice <span class="math inline">\(A-\lambda I\)</span> nulový (tj. bod 2 předchozí věty neplatí). Tím je motivována následující definice a dokázána následující věta.</p>
+<blockquote class="definice"><p class="definicename">Definice (charakteristická rovnice, charakteristický polynom).</p><p> Rovnice <span class="math display">\[\det (A-\lambda I)=0\]</span> s neznámou <span class="math inline">\(\lambda\)</span> se nazývá <em>charakteristická rovnice</em> matice <span class="math inline">\(A\)</span>. Výraz na levé straně této rovnice je polynom proměnné <span class="math inline">\(\lambda\)</span> a nazývá se <em>charakteristický polynom</em> matice <span class="math inline">\(A\)</span>.</p>
+</blockquote>
+<blockquote class="veta"><p class="vetaname">Důsledek (vlastní čísla).</p><p> Vlastní čísla matice <span class="math inline">\(A\)</span> jsou právě řešení charakteristické rovnice. Vlastní vektor <span class="math inline">\(\vec u\)</span> příslušný vlastnímu číslu <span class="math inline">\(\lambda\)</span> je nenulové řešení homogenní soustavy rovnic <span class="math display">\[(A-\lambda I)\vec u=0.\]</span></p>
+</blockquote>
+<!--
+
+# Transformace matice na diagonální tvar
+
+Ukážeme si postup na jednoduchém příkladě. Pro srovnání je možno postup založený na dosazování do vzorců  shlédnout na [https://www.youtube.com/watch?v=xdxVpC856ms](https://www.youtube.com/watch?v=xdxVpC856ms). V průběhu počítání vyřešíme soustavu dvou rovnic o dvou neznámých. To je úloha známá ze střední školy. Jak opostupovat v komplikovanějších případech, kdy je rovnic více, si ukážeme v další přednášce. V té se budeme zabívat libovolně velkými soustavami rovnic.
+
+
+**Příklad.**
+Odvodíme diagonální tvar tenzoru napětí
+$$A=
+\begin{pmatrix}
+  20 & 30 \\ 30 & -10
+\end{pmatrix}.
+$$
+Tím najdeme maximální hodnotu normálového napětí a směr, ve kterém působí.
+Charakteristický polynom této matice je
+\dm$$\det(A-\lambda I)= \begin{vmatrix}   20-\lambda & 30 \\ 30 & -10-\lambda \end{vmatrix}= (20-\lambda)(-10-\lambda)-30^2=\lambda^2-10\lambda-1100 $$
+s kořeny $\lambda_1\approx 38.54$ a $\lambda_2\approx -28.54$. To
+budou prvky v hlavní diagonále po transformaci tenzoru.
+
+Pokud budeme chtít vědět, jak jsou nové osy orientovány vůči osám původním, musíme najít i vlastní vektory. Vlastní vektor příslušný hodnotě
+$\lambda_1$ je řešením soustavy s maticí soustavy
+$$
+A-\lambda_1 I\approx
+\begin{pmatrix}
+  -18.54 & 30 \\
+  30  & -48.54
+\end{pmatrix}
+$$
+a nulami vpravo.
+Přibližným řešením je vektor $\vec u_1=
+\begin{pmatrix}
+  30 \\ 18.54
+\end{pmatrix}$. (Toto plyne z první rovnice, druhá rovnice musí být splněna automaticky, protože jsme použili vlastní hodnotu a soustava musí mít nenulové řešení. Nicméně výpočet je zatížen zaokrouhlovací chybou.) Po vydělení normou vektoru dostáváme
+$\begin{pmatrix}
+  0.851 \\ 0.526
+\end{pmatrix}$.
+Druhý vlastní vektor je kolmý, tj. $\begin{pmatrix}
+  -0.526 \\ 0.851 
+\end{pmatrix}$.
+Po transformaci maticí $P=
+\begin{pmatrix}
+  0.851 & -0.526 \\ 0.526 & 0.851
+\end{pmatrix}$ [dostáváme (na dvě desetiná místa)](https://sagecell.sagemath.org/?z=eJxtkF1rgzAUhu8F_0OgN4n4kVg2ykCG7A94tV6IjEyzmlkTSeLR_vtZXUthg8DJ4bzvcz52qHVusC9JMk1TfNGjGz9FXOs-mbir21fI5mZ-H94OT8-99b0867kzcsZlmdJwT6uw3NMwYrSqCEI7tFRlLXzvmOWxkCehQNROG_th5Kl1mPgesEzhY8mq66ObazCgJIIzt-4aRbdYViWwBFistOnxIlyVAnSDFEffolHadRr0iBpx7sbFkK5o-ohuzNhe_qLTLII0gfTO_hd9Jxf3tYGFkFYkdoYrO2grNvOafi0sXi9tblewrZ5wQX4_CnMrFY6KbUISsANNBkludYSLRywJ8qBA5Ac7KIR8&lang=sage&interacts=eJyLjgUAARUAuQ==)
+$$P^{T}\begin{pmatrix}
+  20 & 30 \\ 30 & -10
+\end{pmatrix}
+P=\begin{pmatrix}
+  38.54 & 0 \\ 0 & -28.54
+\end{pmatrix}.
+$$
+To vlastně ani nemusíme počítat, věta v úvodu tohoto slidu zaručuje,
+že výsledná matice bude diagonální a bude obsahovat vlastní hodnoty.
+Z matice $P$ vidíme sinus a kosinus úhlu pootočení a odsud určíme
+snadno, o kolik se souřadná soustava otáčí a v jakém směru.
+
+-->
+<h1 id="hookův-zákon-matice-tuhosti-a-poddajnosti">Hookův zákon, matice tuhosti a poddajnosti</h1>
+<div class="shorten" data-text="Hookův zákon je jedním ze základních stavebních kamenů teorie pružnosti a pevnosti. V jiných než izotropních materiálech však k nalezení souvislosti mezi stavem napjatosti tělesa a jeho deformací musíme použít matice (tenzory).">
+<p>V minulé přednášce jsme odvodili tvar tenzoru malých deformací pro popis deformace tělesa ve tvaru <span class="math display">\[\begin{pmatrix}
+        \frac{\partial u_{1}}{\partial x_{1}} &amp; \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}+\frac{\partial u_{2}}{\partial x_{1}}\right)\\
+        \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}+\frac{\partial u_{2}}{\partial x_{1}}\right)&amp; \frac{\partial u_{2}}{\partial x_{2}}
+      \end{pmatrix}\]</span></p>
+<div class="obtekat">
+<figure>
+<img src="napeti.png" alt="Složky tenzoru napětí charakterizují sílu způsobující deformaci. Zdroj: Wikiepdie." /><figcaption>Složky tenzoru napětí charakterizují sílu způsobující deformaci. Zdroj: Wikiepdie.</figcaption>
+</figure>
+</div>
+<p>Toto můžeme zapsat symbolicky <span class="math display">\[\varepsilon_{ij}=\frac 12\left(\frac{\partial u_{i}}{\partial x_{j}}+\frac{\partial u_{j}}{\partial x_{i}}\right).\tag{*}\]</span> Pro deformaci v prostoru máme nikoliv dvě, ale tři souřadnice a tenzor deformací je tedy <span class="math inline">\(3\times 3\)</span> symetrická matice, tj. matice, která má šest nezávislých komponent. (Zbylé tři komponenty dostaneme ze symetrie.) Tyto komponenty dostaneme postupnou volbou indexů ve vzorci (*) a můžeme je sestavit do sloupcového vektoru <span class="math display">\[(\varepsilon_{11},\varepsilon_{22},\varepsilon_{33},\varepsilon_{23},\varepsilon_{13},\varepsilon_{12})^T\]</span> Podobně, působící sílu můžeme rozdělit podle působení v jednotlivých směrech a tím dostaneme tenzor napětí, šest veličin charakterizujících napětí. (Zbylé tři jsou dány podmínkou, že se deformované těleso nepohybuje.) Pro další úvahy složky tenzoru napětí uspořádáme do sloupcového vektoru <span class="math display">\[(\sigma_{11},\sigma_{22},\sigma_{33},\sigma_{23},\sigma_{13},\sigma_{12})^T.\]</span></p>
+<p>Následující poučka je fyzikálně ověřený fakt, že vztah mezi složkami tenzoru napětí a tenzoru deformace je lineární. To nás nepřekvapí, protože z přednášek o derivacích na začátku semestru víme, že <strong>jakákoliv</strong> funkční závislost se dá linearizovat. Podstatné zde však je, že interval, na kterém má linearizace smysl, není příliš malý, tj. že tato linearizace platí pro prakticky významné případy.</p>
+<blockquote><p><strong>Hookův zákon deformace (volná slovní formulace).</strong> Do určité hranice zatížení je libovolná složka tenzoru deformace úměrná libovolné složce tenzoru napětí.</p>
+</blockquote>
+<p>K tomu si přidejme, že příspěvky k deformaci, způsobené různými složkami tenzoru napětí, se přirozeně sčítají. Matematicky vyjádřeno proto platí <span class="math display">\[
+\begin{pmatrix}\varepsilon_{11}\\\varepsilon_{22}\\\varepsilon_{33}\\\varepsilon_{23}\\\varepsilon_{13}\\\varepsilon_{12}\end{pmatrix}
+    =
+    S
+\begin{pmatrix}\sigma_{11}\\\sigma_{22}\\\sigma_{33}\\\sigma_{23}\\\sigma_{13}\\\sigma_{12}\end{pmatrix},
+\]</span> kde <span class="math inline">\(S\)</span> je čtvercová <span class="math inline">\(6\times 6\)</span> matice.</p>
+<div class="obtekat">
+<figure>
+<img src="wood.jpg" alt="Ortotropie dřeva. Zdroj: researchgate.net, Mathew Legg." /><figcaption>Ortotropie dřeva. Zdroj: researchgate.net, Mathew Legg.</figcaption>
+</figure>
+</div>
+<p>Fyzikální úvahy ukazují, že matice <span class="math inline">\(S\)</span> je určitě symetrická a obsahuje celkem ne 36, ale jenom 21 nezávislých veličin. Nazývá se <em>matice poddajnosti</em>. V obecném případě tedy musíme pro popis deformace mít celkem 21 materiálových konstant. Tento počet se však výrazně redukuje, pokud je materiál například izotropní nebo ortotropní. Například ortotropní materiál jakým je dřevo, můžeme umístit do soustavy souřadnic tak, aby byl invariantní vůči symetrii podle jednotlivých průměten. Poté je <a href="https://en.wikipedia.org/wiki/Orthotropic_material#Stiffness_and_compliance_matrices_in_orthotropic_elasticity">možné odvodit</a>, že nejobecnější možný tvar matice <span class="math inline">\(S\)</span> je <span class="math display">\[ S=
+   \begin{pmatrix}
+  S_{11} &amp; S_{12} &amp; S_{13} &amp; 0 &amp; 0 &amp; 0 \\
+S_{12} &amp; S_{22} &amp; S_{23} &amp; 0 &amp; 0 &amp; 0  \\
+S_{13} &amp; S_{23} &amp; S_{33} &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0  &amp; S_{44} &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0  &amp; 0 &amp; S_{55} &amp; 0\\
+0 &amp; 0 &amp; 0  &amp; 0 &amp; 0 &amp; S_{66} \end{pmatrix},\]</span> tj. tvar, obsahující jenom devět materiálových konstant. Odsud vidíme, že v takovém materiálu se smykové napětí projeví jenom na jedné komponentě tenzoru deformace, protože poslední tři sloupce, které udávají složky jednotlivých deformací způsobených napětími <span class="math inline">\(\sigma_{23}\)</span>, <span class="math inline">\(\sigma_{13}\)</span> a <span class="math inline">\(\sigma_{12}\)</span> mají jenom jednu nenulovou složku.</p>
+<p>Pokud bychom použili k popisu obecnou soustavu souřadnic, nebylo by možné se na symetrii odvolávat. Matice <span class="math inline">\(S\)</span> by obsahovala všechny prvky a bylo by nutné hledat bázi, v níž je její vyjádření nejjednodušší. U dřeva je však snadné rozpoznat význačné směry. Když soustavu souřadnic zvolíme tak, aby byla v souladu s těmito význačnými směry, docílíme tohot, že obdržíme matici <span class="math inline">\(S\)</span> již přímo ve tvaru s co nejvíce nulami.</p>
+<p>Někdy je vhodné umět určit napětí pomocí deformací. K tomu stačí Hookův zákon vynásobit maticí <span class="math inline">\(S^{-1}\)</span> a obdržíme <span class="math display">\[
+\begin{pmatrix}\sigma_{11}\\\sigma_{22}\\\sigma_{33}\\\sigma_{23}\\\sigma_{13}\\\sigma_{12}\end{pmatrix}=
+S^{-1}
+\begin{pmatrix}\varepsilon_{11}\\\varepsilon_{22}\\\varepsilon_{33}\\\varepsilon_{23}\\\varepsilon_{13}\\\varepsilon_{12}\end{pmatrix}.
+\]</span> Matice <span class="math inline">\(S^{-1}\)</span> se nazývá <em>matice tuhosti</em> a označuje <span class="math inline">\(C\)</span>.</p>
+<p>Souvislostí vlastních vektorů matice tuhosti a matice poddajnosti (nebo obecněji souvislostí vlastních vektorů matice a matice inverzní) se budeme zabývat na následujícím slidu.</p>
+</div>
+<h1 id="vlastní-vektory-matice-a-matice-inverzní">Vlastní vektory matice a matice inverzní</h1>
+<p>Fyzikální úvaha snadno vede k závěru, že matice a matice inverzní mají stejné vlastní vektory. To proto, že pokud v některém směru je materiálová odezva násobkem podnětu, je i opačně podnět násobkem materiálové odezvy. To, že matice <span class="math inline">\(A\)</span> a <span class="math inline">\(A^{-1}\)</span> mají stejné vlastní vektory plyne i z toho, že pokud definiční vztah pro vlastní vektor matice <span class="math inline">\(A\)</span>, tj. vztah <span class="math display">\[A\vec u=\lambda\vec u,\]</span> vynásobíme zleva maticí <span class="math inline">\(\frac 1\lambda A^{-1}\)</span>, dostaneme vzhledem k identitě <span class="math inline">\(\frac 1\lambda A^{-1}A \vec u=\frac 1\lambda I \vec u =\frac 1\lambda \vec u\)</span> rovnici <span class="math display">\[\frac 1\lambda \vec u=A^{-1}\vec u,\]</span> která vyjadřuje, že <span class="math inline">\(\vec u\)</span> je vlastním vektorem matice <span class="math inline">\(A^{-1}\)</span> s vlastním číslem <span class="math inline">\(\frac 1\lambda.\)</span></p>
+<h1 id="shrnutí-hlavní-myšlenky">Shrnutí, hlavní myšlenky</h1>
+
+<div class="obtekat">
+<figure>
+<img src="../message.jpg" alt="A jaká je hlavní message? Zdroj: pixabay.com" /><figcaption>A jaká je hlavní message? Zdroj: pixabay.com</figcaption>
+</figure>
+</div>
+
+<ul>
+<li>Přestože maticový součin nemá všechny vlastnosti na které jsme zvyklí u součinu čísel, jedna vlastnost zůstává: existence “převrácené hodnoty”. V případě matic je zobecnění převrácené hodnoty reprezentováno inverzní maticí.</li>
+<li>Pomocí matic je možné transformovat souřadnice bodů, vektorů a tenzorů z jedné soustavy souřadnic do jiné. Inverzní matice poté představuje zpětnou transformaci.</li>
+<li>Při transormaci tenzorů se snažíme o to, aby po transformaci byl tenzor co nejjednodušší. Pokud použijeme souřadnou soustavu s osami ve vlastních směrech (jsou kolmé a tedy je tato volba smysluplná), je tento tenzor je diagonální s vlastními čísly v diagonále.</li>
+<li>Pro identifikaci vlastních vektorů matice <span class="math inline">\(A\)</span> je nutné řešit soustavu rovnic <span class="math display">\[(A-\lambda I)v=0,\]</span> ve které figuruje jistým i vlastní číslo <span class="math inline">\(\lambda\)</span>. Toto umožňuje definovat podmínku na vlastní čísla: uvažovaná soustava musí mít nenulové řešení.</li>
+<li>Existence nenulového řešení rovnice z předchozího bodu úzce souvisí s pojmem determinantu matice. Přesněji, aby soustava z předchozího bodu měla nenulové řešení, musí mít matice <span class="math inline">\(A-\lambda I\)</span> nulový determinant.</li>
+</ul>
+
+</div>  <!-- container -->
+
+
+
+  <div class='menu-obalka'>
+    <a class='menu menu4' href='../../'>Matematika</a><a class='menu menu4 ACTIVE' href='../'>Přednáška</a><a class='menu menu4' href='../cviceni'>Cvičení</a><a class='menu menu4' href='https://um.mendelu.cz/'>WeBWorK</a>
+  </div>
+	
+ <div class='menu-obalka'><a class='menu' href='../intro'>0</a><a class='menu  ' href='../derivace_I'>1</a><a class='menu  ' href='../derivace_II'>2</a><a class='menu  ' href='../derivace_III'>3</a><a class='menu  ' href='../integraly'>4</a><a class='menu  ' href='../integraly2'>5</a><a class='menu  ' href='../ode'>6</a><a class='menu  ' href='../matice'>7</a><a class='menu ACTIVE ' href='../inverzni_matice'>8</a><a class='menu  ' href='../soustavy'>9</a><a class='menu  ' href='../vektorove_pole'>10</a><a class='menu  ' href='../dvojny_integral'>11</a><a class='menu  ' href='../numerika'>12</a><a class='menu  ' href='../shrnuti'>13</a> </div> 
+
+
+<div class="footer">
+      Copyright by Robert Mařík, content is available under <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>, built with <a href="https://www.pandoc.org" target="_blank" rel="noopener">Pandoc</a>
+   </div>
+
+
+
+<style>
+  .shorten {
+      border-left: solid;
+      border-left-color:gray;
+      padding-left:1em;
+      max-height:300px;
+      overflow:hidden;
+      margin-bottom:20px;
+      margin-top:20px;
+          -webkit-mask-image: linear-gradient(180deg, #000 20%, transparent);
+  }
+  .rozbalovatko {
+      color:gray;
+      margin-bottom:30px;
+      display:block;
+      background-color: gainsboro;
+  }
+  .rozbalovatko p {padding:10px; margin-top:0px;}
+  .rozbalovatkoPopisek {
+      color:orangered;
+      background-color:#444;
+      font-weight: bold;
+      display:block;
+      padding:5px;
+      margin-left: -20px;
+      padding-left: 20px;
+  }
+  .rozbalovatko p {
+      color:crimson;
+  }
+</style>
+
+<script>
+
+
+jQuery( document ).ready(function() {
+    jQuery(".shorten").each(function(){
+	popisek = jQuery(this).data("text");
+	if (!popisek) {popisek="";}
+	jQuery(this).prepend("<span class=\"rozbalovatko\"><span class=\"rozbalovatkoPopisek\">Volitelný text. Klikněte pro rozbalení.</span><p>"+popisek+"</p></span>").css("background-color","gainsboro");
+    });
+
+    jQuery(".rozbalovatko").each(function(){
+    	jQuery(this).parent().click(function() {
+            jQuery( this ).css("max-height","100%").css("-webkit-mask-image","none").css("background-color","inherit");
+	    jQuery( this ).children(".rozbalovatko").slideUp();
+	    jQuery( this ).unbind("click");
+	})
+    });
+});
+
+</script>
+
+  
+</body>
+</html>
